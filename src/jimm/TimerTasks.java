@@ -30,14 +30,16 @@ public class TimerTasks extends TimerTask
 
 	private Action action;
 
-	boolean wasError = false;
-	boolean canceled = false;
+	private boolean wasError = false;
+	private boolean canceled = false;
 
 	private Object flashDispl;
 	private String flashText, flashOldText;
 	private int flashCounter;
 
+	//#sijapp cond.if target is "MIDP2" | target is "SIEMENS2"#
 	public static long currData = Util.createCurrentDate(false, true);
+	//#sijapp cond.end#
 
 	public TimerTasks(Action action)
 	{
@@ -111,7 +113,9 @@ public class TimerTasks extends TimerTask
 						if (e.isCritical()) cancel();
 					}
 				}
+				//#sijapp cond.if target isnot "MIDP2"#
 				System.gc();
+				//#sijapp cond.end#
 				//#sijapp cond.if target="MIDP2" | target is "SIEMENS2"#
 				if (currData != Util.createCurrentDate(false, true)) NoticeOnBirthDay.refreshBday();
 				//#sijapp cond.end#
@@ -163,6 +167,7 @@ public class TimerTasks extends TimerTask
 							}
 							break;
 					}
+					if (Options.getBoolean(Options.OPTION_AUTO_KEYLOCK)) SplashCanvas.lockScreen();
 				}
 				else
 				{
@@ -217,7 +222,9 @@ public class TimerTasks extends TimerTask
 			Options.safe_save();
 			Icq.setOnlineStatus(status);
 			// if (ContactList.getVisibleContactListRef().isActive()) // проверка открыт ли список...
-			ContactList.tree.setCapImage(ContactList.imageList.elementAt(JimmUI.getStatusImageIndex(Icq.getCurrentStatus())));
+			int imageIndex = JimmUI.getStatusImageIndex(Icq.getCurrentStatus());
+			ContactList.tree.setCapImage(ContactList.imageList.elementAt(imageIndex));
+			SplashCanvas.setStatusToDraw(imageIndex);
 		}
 		catch (JimmException e)
 		{

@@ -1,9 +1,107 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "b5b22b517746cda5eb9526aa1afa56e3395711cc09daad7799d2f219986ee5fb",
+  "rebuilt_sha256": "9e7639e6f90be5e3bb72bd830200bc0818cc8e546ff6e20f1aa682a2f023f1f1",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
+    {
+      "reference": "at.<init>(Laa;)V",
+      "source": "jimm/TimerTasks.<init>(Ljimm/comm/Action;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 15,
+      "source_instructions": 15,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "b2e6c6e84ac1a23961e2dddc030437eb773cf6cd06db2ff83469f7b4781aaf6b",
+      "source_normalized_sha256": "b2e6c6e84ac1a23961e2dddc030437eb773cf6cd06db2ff83469f7b4781aaf6b"
+    },
+    {
+      "reference": "at.<init>(I)V",
+      "source": "jimm/TimerTasks.<init>(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 15,
+      "source_instructions": 15,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "3c0b061b548a2172a6bd4177da4556a3947e53e0ee5059b332e6c131bd0b9038",
+      "source_normalized_sha256": "3c0b061b548a2172a6bd4177da4556a3947e53e0ee5059b332e6c131bd0b9038"
+    },
+    {
+      "reference": "at.<init>(Ljava/lang/Object;Ljava/lang/String;II)V",
+      "source": "jimm/TimerTasks.<init>(Ljava/lang/Object;Ljava/lang/String;II)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 33,
+      "source_instructions": 33,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "da0b1ea1c8708bd4d15484f7393adf615e6cb2620cb2147329a740df6a171728",
+      "source_normalized_sha256": "8094902264fc52f462bfd25f2a534535da4eee12f24844872b12450a4050f5b6"
+    },
+    {
+      "reference": "at.<clinit>()V",
+      "source": "jimm/TimerTasks.<clinit>()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 13,
+      "source_instructions": 13,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "6f648672efb98fe63a7de929fe31e55e48e47053379f39dd6b9c711e3f94e7c9",
+      "source_normalized_sha256": "0c7181f532663a67bb3f8764c5cc9b86cc8d386e7171669d72eed594e2cdcc14"
+    },
+    {
+      "reference": "at.a()V",
+      "source": "jimm/TimerTasks.setStatusTimer()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 37,
+      "source_instructions": 37,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "fe921f274355f1c144bab5da21c18f7443e46531d2c973c3c9d7c2069b00bb43",
+      "source_normalized_sha256": "eb82871242187471ddccb896848f6445a711d8a9ac86d789dd5946ba2680ec2a"
+    },
+    {
+      "reference": "at.a(I)V",
+      "source": "jimm/TimerTasks.statusChange(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 23,
+      "source_instructions": 21,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "aebc3347a591c5eeb48710c9722d48ef07c572516c86dbcd3a20cd47a59f7d64",
+      "source_normalized_sha256": "cfd3213f87cacbdd016c9bc1a3902dbada363124679f6257a38679dfdeadc1ad"
+    },
+    {
+      "reference": "at.b()Z",
+      "source": "jimm/TimerTasks.checkFlashControlIsActive()Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 40,
+      "source_instructions": 40,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "157436e66af87d25d59abf1731ca7ea65059b75d3631d4aa1faa5f386dfab2cd",
+      "source_normalized_sha256": "7251160f54aace1f933dc1d8c45e2fbf4a95616a373167b083a2d8c221ac0629"
+    },
     {
       "reference": "cg.<init>()V",
       "source": "jimm/OptionsForm.<init>()V",
@@ -239,7 +337,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "358a20c7f79d63f2c80d42d2492077f7882c74bc775afe8783fe80f9d7511d34",
+      "reference_normalized_sha256": "f04731a4c3dbf09f9c3d62379694ace31281eb18d716183b6511958708f5e8a4",
       "source_normalized_sha256": "4b3fc7dc4c6741e5e50f18f0f358e6ac3f3fd2df4b40cccf6d1bcc96b5ac14a3"
     },
     {
@@ -3851,7 +3949,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "7c8b76975ad500bdf3d9d07f2a1a4ce8564b1c3b90f8a63b3e204975038d2319",
+      "reference_normalized_sha256": "62be3fbb2d0fa92ff20d42e20ce1e1e5853b9a7eb86532b478739b786b6e8c02",
       "source_normalized_sha256": "42eaba5cc3e47c3aab10e5c23406bf390868b6719510082f581466405f2debe6"
     },
     {
@@ -4071,12 +4169,12 @@
       "static_modifier_verified": true,
       "synchronized_modifier_verified": true,
       "reference_instructions": 199,
-      "source_instructions": 196,
+      "source_instructions": 199,
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "4cf43cb5c13ecf2b253ac687af66499369bbdbbd1865bb1301d1b113752af7aa",
-      "source_normalized_sha256": "8f8b1e6940fcdcf24077bdc7c1fcc5b1034cf7fac924a010e664e45ac75d187f"
+      "reference_normalized_sha256": "9757f69ad9d83a46ac8e8853fcb18084741f0322af29adccb770d5f79f402d12",
+      "source_normalized_sha256": "708a166b118fb4832c256fc1e450ce4ca7cc1f07fe6ed90989a743c42e6c27c7"
     },
     {
       "reference": "ay.a(Ljava/lang/String;)V",

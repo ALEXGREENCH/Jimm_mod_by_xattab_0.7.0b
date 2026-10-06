@@ -481,7 +481,39 @@ SYMBOLS.update({
     'ar.a Ljavax/microedition/lcdui/Font;': 'jimm/ColorChooser.font Ljavax/microedition/lcdui/Font;',
 })
 
+SYMBOLS.update({
+    'at.b I': 'jimm/TimerTasks.oldStatus I',
+    'at.a I': 'jimm/TimerTasks.delay I',
+    'at.a Ljava/util/Timer;': 'jimm/TimerTasks.timer Ljava/util/Timer;',
+    'at.a Laa;': 'jimm/TimerTasks.action Ljimm/comm/Action;',
+    'at.a Ljava/lang/Object;': 'jimm/TimerTasks.flashDispl Ljava/lang/Object;',
+    'at.a Ljava/lang/String;': 'jimm/TimerTasks.flashText Ljava/lang/String;',
+    'at.b Ljava/lang/String;': 'jimm/TimerTasks.flashOldText Ljava/lang/String;',
+    'at.d I': 'jimm/TimerTasks.flashCounter I',
+    'at.a J': 'jimm/TimerTasks.currData J',
+    'at.a()V': 'jimm/TimerTasks.setStatusTimer()V',
+    'at.a(I)V': 'jimm/TimerTasks.statusChange(I)V',
+    'at.a()Z': 'jimm/TimerTasks.isCanceled()Z',
+    'at.a()I': 'jimm/TimerTasks.getType()I',
+    'at.b()Z': 'jimm/TimerTasks.checkFlashControlIsActive()Z',
+    'at.b()V': 'jimm/TimerTasks.flashRestoreOldCaption()V',
+    'cv.n()V': 'jimm/SplashCanvas.lockScreen()V',
+    'cv.a(I)V': 'jimm/SplashCanvas.setStatusToDraw(I)V',
+    'cf.a(J)I': 'jimm/JimmUI.getStatusImageIndex(J)I',
+    'r.a(I)V': 'jimm/comm/Icq.setOnlineStatus(I)V',
+    'ag.a Z': 'jimm/MainMenu.haveToRestoreStatus Z',
+})
+
 METHODS = [
+    # Accessors and flashRestoreOldCaption are inlined in this optimized source JAR;
+    # their behavior is checked against unoptimized source by TimerProbe.
+    ('at', '<init>', '(Laa;)V', '<init>'),
+    ('at', '<init>', '(I)V', '<init>'),
+    ('at', '<init>', '(Ljava/lang/Object;Ljava/lang/String;II)V', '<init>'),
+    ('at', '<clinit>', '()V', '<clinit>'),
+    ('at', 'a', '()V', 'setStatusTimer'),
+    ('at', 'a', '(I)V', 'statusChange'),
+    ('at', 'b', '()Z', 'checkFlashControlIsActive'),
     ('cg', '<init>', '()V', '<init>'),
     ('cg', 'a', '()V', 'callColorSchemeOptions'),
     ('cg', 'a', '(Ljava/lang/String;IZ)Ljava/lang/String;', 'getHotKeyActName'),
