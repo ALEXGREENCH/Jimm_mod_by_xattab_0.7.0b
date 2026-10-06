@@ -37,7 +37,7 @@ public class MainMenu implements CommandListener
 	private static final int TAG_DELETE_GROUPS = 3;
 	private static final int TAG_CL = 4;
 
-	public static MainMenu _this;
+	private static MainMenu _this;
 
 	/* Static constants for menu actios */
 	private static final int MENU_CONNECT        =  1;
@@ -83,7 +83,7 @@ public class MainMenu implements CommandListener
 	static private int[] groupIds;
 
 	/* VirtualForm for the adding users dialog */
-	static public VirtualForm textBoxForm;
+	static private VirtualForm textBoxForm;
 
 	/* Text box for adding users to the contact list */
 	static private TextField uinTextField;
@@ -262,14 +262,16 @@ public class MainMenu implements CommandListener
 	}
 
 	/* Show form for adding user */
-	static public void showTextBoxForm(String caption, String label, String text, int fieldType)
+	static private void showTextBoxForm(String caption, String label, String text)
 	{
 		textBoxForm = new VirtualForm(ResourceBundle.getString(caption));
-		uinTextField = new TextField(ResourceBundle.getString(label), text, 16, fieldType);
+		textBoxForm.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
+		uinTextField = new TextField(ResourceBundle.getString(label), text, 16, TextField.ANY);
+		textBoxForm.clear();
 		textBoxForm.append(uinTextField);
 		
-		textBoxForm.addCommand(sendCommand);
-		textBoxForm.addCommand(JimmUI.cmdCancel);
+		textBoxForm.addCommandEx(sendCommand, VirtualList.MENU_LEFT_BAR);
+		textBoxForm.addCommandEx(JimmUI.cmdCancel, VirtualList.MENU_RIGHT_BAR);
 		textBoxForm.setCommandListener(_this);
 		textBoxForm.activate(Jimm.display);
 	}
@@ -309,31 +311,40 @@ public class MainMenu implements CommandListener
 	}
 	// #sijapp cond.end#
 
-	private static void initStatusList()
+	public static void initStatusList()
 	{
-		statusList = new TextList(ResourceBundle.getString("set_status"));
-		JimmUI.setColorScheme(statusList, false);
-		statusList.setMode(TextList.MODE_TEXT);
-		statusList.setCyclingCursor(true);
-
-		statusList.lock();
-		JimmUI.addTextListItem(statusList, "status_online", ContactList.imageList.elementAt(7), ContactList.STATUS_ONLINE, true);
-		JimmUI.addTextListItem(statusList, "status_chat", ContactList.imageList.elementAt(1), ContactList.STATUS_CHAT, true);
-		JimmUI.addTextListItem(statusList, "status_evil", ContactList.imageList.elementAt(8), ContactList.STATUS_EVIL, true);
-		JimmUI.addTextListItem(statusList, "status_depression", ContactList.imageList.elementAt(9), ContactList.STATUS_DEPRESSION, true);
-		JimmUI.addTextListItem(statusList, "status_home", ContactList.imageList.elementAt(10), ContactList.STATUS_HOME, true);
-		JimmUI.addTextListItem(statusList, "status_work", ContactList.imageList.elementAt(11), ContactList.STATUS_WORK, true);
-		JimmUI.addTextListItem(statusList, "status_lunch", ContactList.imageList.elementAt(12), ContactList.STATUS_LUNCH, true);
-		JimmUI.addTextListItem(statusList, "status_away", ContactList.imageList.elementAt(0), ContactList.STATUS_AWAY, true);
-		JimmUI.addTextListItem(statusList, "status_na", ContactList.imageList.elementAt(4), ContactList.STATUS_NA, true);
-		JimmUI.addTextListItem(statusList, "status_occupied", ContactList.imageList.elementAt(5), ContactList.STATUS_OCCUPIED, true);
-		JimmUI.addTextListItem(statusList, "status_dnd", ContactList.imageList.elementAt(2), ContactList.STATUS_DND, true);
-		JimmUI.addTextListItem(statusList, "status_invisible", ContactList.imageList.elementAt(3), ContactList.STATUS_INVISIBLE, true);
-		if (getPrivateStatusImage() == null)
+		haveToRestoreStatus = false;
+		if (statusList == null)
 		{
-			JimmUI.addTextListItem(statusList, "status_invis_all", ContactList.imageList.elementAt(13), ContactList.STATUS_INVIS_ALL, true);
+			statusList = new TextList(ResourceBundle.getString("set_status"));
+			JimmUI.setColorScheme(statusList, false);
+			statusList.setMode(TextList.MODE_TEXT);
+			statusList.setCyclingCursor(true);
+
+			statusList.lock();
+			JimmUI.addTextListItem(statusList, "status_online", ContactList.imageList.elementAt(7), ContactList.STATUS_ONLINE, true);
+			JimmUI.addTextListItem(statusList, "status_chat", ContactList.imageList.elementAt(1), ContactList.STATUS_CHAT, true);
+			JimmUI.addTextListItem(statusList, "status_evil", ContactList.imageList.elementAt(8), ContactList.STATUS_EVIL, true);
+			JimmUI.addTextListItem(statusList, "status_depression", ContactList.imageList.elementAt(9), ContactList.STATUS_DEPRESSION, true);
+			JimmUI.addTextListItem(statusList, "status_home", ContactList.imageList.elementAt(10), ContactList.STATUS_HOME, true);
+			JimmUI.addTextListItem(statusList, "status_work", ContactList.imageList.elementAt(11), ContactList.STATUS_WORK, true);
+			JimmUI.addTextListItem(statusList, "status_lunch", ContactList.imageList.elementAt(12), ContactList.STATUS_LUNCH, true);
+			JimmUI.addTextListItem(statusList, "status_away", ContactList.imageList.elementAt(0), ContactList.STATUS_AWAY, true);
+			JimmUI.addTextListItem(statusList, "status_na", ContactList.imageList.elementAt(4), ContactList.STATUS_NA, true);
+			JimmUI.addTextListItem(statusList, "status_occupied", ContactList.imageList.elementAt(5), ContactList.STATUS_OCCUPIED, true);
+			JimmUI.addTextListItem(statusList, "status_dnd", ContactList.imageList.elementAt(2), ContactList.STATUS_DND, true);
+			JimmUI.addTextListItem(statusList, "status_invisible", ContactList.imageList.elementAt(3), ContactList.STATUS_INVISIBLE, true);
+			if (getPrivateStatusImage() == null)
+			{
+				JimmUI.addTextListItem(statusList, "status_invis_all", ContactList.imageList.elementAt(13), ContactList.STATUS_INVIS_ALL, true);
+			}
+			statusList.unlock();
+			statusList.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
+			statusList.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
+			statusList.setCommandListener(_this);
 		}
-		statusList.unlock();
+		statusList.selectTextByIndex((int)Options.getLong(Options.OPTION_ONLINE_STATUS));
+		statusList.activate(Jimm.display);
 	}
 
 	/* Command listener */
@@ -352,6 +363,8 @@ public class MainMenu implements CommandListener
 			{
 				Icq.getIcq().setPrivateStatus((byte)privateStatusActList.getCurrTextIndex());
 				actionMMCLAct();
+				ContactList.justConnected = true;
+				ContactList.afterConnect(false);
 			}
 			else if (c == JimmUI.cmdBack) activate();
 			return;
@@ -369,7 +382,7 @@ public class MainMenu implements CommandListener
 			if (c == JimmUI.cmdOk)
 			{
 				String groupName = ContactList.getGroupById(groupIds[JimmUI.getLastSelIndex()]).getName(); 
-				showTextBoxForm("rename_group", "group_name", groupName, TextField.ANY);
+				showTextBoxForm("rename_group", "group_name", groupName);
 			}
 			else activate();
 		} 
@@ -412,7 +425,7 @@ public class MainMenu implements CommandListener
 			selector = null;
 		}
 
-		else if ((c == sendCommand) && (textBoxForm.isActive()) && (textBoxForm != null))
+		else if ((c == sendCommand) && JimmUI.isControlActive(textBoxForm))
 		{
 			Action act = null;
 
@@ -446,7 +459,7 @@ public class MainMenu implements CommandListener
 			SplashCanvas.addTimerTask("wait", act, false);
 		}
 
-		else if ((c == JimmUI.cmdCancel) && (textBoxForm.isActive()))
+		else if ((c == JimmUI.cmdCancel) && JimmUI.isControlActive(textBoxForm))
 		{
 			activate();
 			textBoxForm = null;
@@ -481,13 +494,7 @@ public class MainMenu implements CommandListener
 				break;
 
 			case MENU_STATUS: /* Set status */
-				haveToRestoreStatus = false;
 				initStatusList();
-				statusList.selectTextByIndex((int)Options.getLong(Options.OPTION_ONLINE_STATUS));
-				statusList.setCommandListener(_this);
-				statusList.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
-				statusList.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
-				statusList.activate(Jimm.display);
 				break;
 
 			case MENU_XSTATUS: /* Set XStatus */
@@ -495,24 +502,7 @@ public class MainMenu implements CommandListener
 				break;
 
 			case MENU_PRIVATE_STATUS:
-				privateStatusActList = new TextList(ResourceBundle.getString("private_status"));
-				JimmUI.setColorScheme(privateStatusActList, false);
-				privateStatusActList.setMode(TextList.MODE_TEXT);
-				privateStatusActList.setCyclingCursor(true);
-
-				privateStatusActList.lock();
-				JimmUI.addTextListItem(privateStatusActList, "ps_all",               ContactList.psIcons.elementAt(0), OtherAction.PSTATUS_ALL,           true);
-				JimmUI.addTextListItem(privateStatusActList, "ps_visible_list",      ContactList.psIcons.elementAt(1), OtherAction.PSTATUS_VISIBLE_ONLY,  true);
-				JimmUI.addTextListItem(privateStatusActList, "ps_exclude_invisible", ContactList.psIcons.elementAt(2), OtherAction.PSTATUS_NOT_INVISIBLE, true);
-				JimmUI.addTextListItem(privateStatusActList, "ps_contact_list",      ContactList.psIcons.elementAt(3), OtherAction.PSTATUS_CL_ONLY,       true);
-				JimmUI.addTextListItem(privateStatusActList, "ps_none",              ContactList.psIcons.elementAt(4), OtherAction.PSTATUS_NONE,          true);
-				privateStatusActList.unlock();
-
-				privateStatusActList.setCommandListener(_this);
-				privateStatusActList.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
-				privateStatusActList.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
-				privateStatusActList.selectTextByIndex(Options.getInt(Options.OPTION_PRIVATE_STATUS));
-				privateStatusActList.activate(Jimm.display);
+				showPrivateStatus();
 				break;
 
 			case MENU_GROUPS:
@@ -603,13 +593,21 @@ public class MainMenu implements CommandListener
 			userSelectStatus();
 		}
 
-		else if ((d == statusMessage) && (c == JimmUI.cmdSelect))
+		else if (d == statusMessage)
 		{
-			int onlineStatus = (int)Options.getLong(Options.OPTION_ONLINE_STATUS);
-
-			Options.setString(statusMsgIdxSelector(onlineStatus), statusMessage.getString());
-			Options.safe_save();
-			setOnlineStatus(onlineStatus);
+			if (c == JimmUI.cmdOk)
+			{
+				int onlineStatus = statusList.getCurrTextIndex();
+				Options.setLong(Options.OPTION_ONLINE_STATUS, onlineStatus);
+				Options.setString(statusMsgIdxSelector(onlineStatus), statusMessage.getString());
+				Options.safe_save();
+				setOnlineStatus(onlineStatus);
+				statusList = null;
+			}
+			//#sijapp cond.if modules_SMILES is "true"#
+			else if (c == JimmUI.cmdInsertEmo) Emotions.selectEmotion(statusMessage, statusMessage);
+			//#sijapp cond.end#
+			else if (c == JimmUI.cmdBack) initStatusList();
 		}
 		
 		/* Contact list management group */
@@ -621,28 +619,31 @@ public class MainMenu implements CommandListener
 	
 	private void userSelectStatus()
 	{
-		boolean activateMenu = false;
 		int onlineStatus = statusList.getCurrTextIndex();
-		Options.setLong(Options.OPTION_ONLINE_STATUS, onlineStatus);
-
 		if ((onlineStatus != ContactList.STATUS_INVISIBLE) && (onlineStatus != ContactList.STATUS_INVIS_ALL)
 				&& (onlineStatus != ContactList.STATUS_ONLINE) && (onlineStatus != ContactList.STATUS_CHAT))
 		{
-			statusMessage = new TextBox(ResourceBundle.getString("status_message"), Options.getString(statusMsgIdxSelector(onlineStatus)), 255, TextField.ANY);
-
-			statusMessage.addCommand(JimmUI.cmdSelect);
+			int constraints = TextField.ANY;
+			if (Options.getBoolean(Options.OPTION_TEXT_ABC)) constraints |= TextField.INITIAL_CAPS_SENTENCE;
+			statusMessage = new TextBox(ResourceBundle.getString("status_message"), Options.getString(statusMsgIdxSelector(onlineStatus)), 255, constraints);
+			statusMessage.addCommand(JimmUI.cmdOk);
+			statusMessage.addCommand(JimmUI.cmdBack);
+			//#sijapp cond.if modules_SMILES is "true"#
+			statusMessage.addCommand(JimmUI.cmdInsertEmo);
+			//#sijapp cond.end#
 			statusMessage.setCommandListener(_this);
 			Jimm.display.setCurrent(statusMessage);
 		}
-		else activateMenu = true;
-
-		Options.safe_save();
-		statusList = null;
-		
-		if (activateMenu) setOnlineStatus(onlineStatus);
+		else
+		{
+			Options.setLong(Options.OPTION_ONLINE_STATUS, onlineStatus);
+			Options.safe_save();
+			setOnlineStatus(onlineStatus);
+			statusList = null;
+		}
 	}
 
-	private void setOnlineStatus(int status)
+	private static void setOnlineStatus(int status)
 	{
 		if ((status == ContactList.STATUS_INVISIBLE))
 		{
@@ -665,11 +666,12 @@ public class MainMenu implements CommandListener
 				if (e.isCritical()) return;
 			}
 		}
+		SplashCanvas.setStatusToDraw(JimmUI.getStatusImageIndex(Icq.getCurrentStatus()));
 		/* Active MM/CL */
 		actionMMCLAct();
 	}
 
-	private int statusMsgIdxSelector(int status)
+	private static int statusMsgIdxSelector(int status)
 	{
 		int statusMsgIdx = Options.OPTION_STATUS_MESSAGE_AWAY;
 
@@ -725,7 +727,7 @@ public class MainMenu implements CommandListener
 
 			case 1: /* Add group */
 				status = STATUS_ADD_GROUP;
-				showTextBoxForm("add_group", "group_name", null, TextField.ANY);
+				showTextBoxForm("add_group", "group_name", null);
 				break;
 
 			case 2: /* Rename group */
@@ -782,6 +784,28 @@ public class MainMenu implements CommandListener
 		{
 			XStatusForm.activate(xstIndex);
 		}
+	}
+
+	public static void showPrivateStatus()
+	{
+		privateStatusActList = new TextList(ResourceBundle.getString("private_status"));
+		JimmUI.setColorScheme(privateStatusActList, false);
+		privateStatusActList.setMode(TextList.MODE_TEXT);
+		privateStatusActList.setCyclingCursor(true);
+
+		privateStatusActList.lock();
+		JimmUI.addTextListItem(privateStatusActList, "ps_all",               ContactList.psIcons.elementAt(0), OtherAction.PSTATUS_ALL,           true);
+		JimmUI.addTextListItem(privateStatusActList, "ps_visible_list",      ContactList.psIcons.elementAt(1), OtherAction.PSTATUS_VISIBLE_ONLY,  true);
+		JimmUI.addTextListItem(privateStatusActList, "ps_exclude_invisible", ContactList.psIcons.elementAt(2), OtherAction.PSTATUS_NOT_INVISIBLE, true);
+		JimmUI.addTextListItem(privateStatusActList, "ps_contact_list",      ContactList.psIcons.elementAt(3), OtherAction.PSTATUS_CL_ONLY,       true);
+		JimmUI.addTextListItem(privateStatusActList, "ps_none",              ContactList.psIcons.elementAt(4), OtherAction.PSTATUS_NONE,          true);
+		privateStatusActList.unlock();
+
+		privateStatusActList.setCommandListener(_this);
+		privateStatusActList.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
+		privateStatusActList.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
+		privateStatusActList.selectTextByIndex(Options.getInt(Options.OPTION_PRIVATE_STATUS));
+		privateStatusActList.activate(Jimm.display);
 	}
 
 	private static void actionMMCLAct()

@@ -504,7 +504,67 @@ SYMBOLS.update({
     'ag.a Z': 'jimm/MainMenu.haveToRestoreStatus Z',
 })
 
+# Main-menu members read directly from the May class, independent of decompiler aliases.
+SYMBOLS.update({
+    'ag.a Lag;': 'jimm/MainMenu._this Ljimm/MainMenu;',
+    'ag.a Ljavax/microedition/lcdui/Command;': 'jimm/MainMenu.sendCommand Ljavax/microedition/lcdui/Command;',
+    'ag.b Ljavax/microedition/lcdui/Command;': 'jimm/MainMenu.exitCommand Ljavax/microedition/lcdui/Command;',
+    'ag.a Lbi;': 'jimm/MainMenu.statusList LDrawControls/TextList;',
+    'ag.b Lbi;': 'jimm/MainMenu.privateStatusActList LDrawControls/TextList;',
+    'ag.c Lbi;': 'jimm/MainMenu.groupActList LDrawControls/TextList;',
+    'ag.d Lbi;': 'jimm/MainMenu.list LDrawControls/TextList;',
+    'ag.a I': 'jimm/MainMenu.status I',
+    'ag.a Laf;': 'jimm/MainMenu.selector Ljimm/util/Selector;',
+    'ag.a [I': 'jimm/MainMenu.groupIds [I',
+    'ag.a Ld;': 'jimm/MainMenu.textBoxForm LDrawControls/VirtualForm;',
+    'ag.a Ljavax/microedition/lcdui/TextField;': 'jimm/MainMenu.uinTextField Ljavax/microedition/lcdui/TextField;',
+    'ag.a Ljavax/microedition/lcdui/TextBox;': 'jimm/MainMenu.statusMessage Ljavax/microedition/lcdui/TextBox;',
+    'ag.a()Le;': 'jimm/MainMenu.getXStatusImage()LDrawControls/Icon;',
+    'ag.b()Le;': 'jimm/MainMenu.getPrivateStatusImage()LDrawControls/Icon;',
+    'ag.a()V': 'jimm/MainMenu.build()V',
+    'ag.b()V': 'jimm/MainMenu.activate()V',
+    'ag.c()V': 'jimm/MainMenu.initStatusList()V',
+    'ag.d()V': 'jimm/MainMenu.showXStatusSelector()V',
+    'ag.e()V': 'jimm/MainMenu.showPrivateStatus()V',
+    'ag.a(I)V': 'jimm/MainMenu.setOnlineStatus(I)V',
+    'ag.a(I)I': 'jimm/MainMenu.statusMsgIdxSelector(I)I',
+    'ag.b(I)V': 'jimm/MainMenu.CLManagementItemSelected(I)V',
+    'ag.f()V': 'jimm/MainMenu.actionMMCLAct()V',
+})
+
+SYMBOLS.update({
+    'jimm/Jimm.a Ljavax/microedition/lcdui/Display;': 'jimm/Jimm.display Ljavax/microedition/lcdui/Display;',
+    'ai.a(Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/ResourceBundle.getString(Ljava/lang/String;)Ljava/lang/String;',
+    'bj.a(I)Le;': 'jimm/comm/XStatus.getStatusImage(I)LDrawControls/Icon;',
+    'm.e Lf;': 'jimm/ContactList.psIcons LDrawControls/ImageList;',
+    'm.b Lf;': 'jimm/ContactList.menuIcons LDrawControls/ImageList;',
+    'f.a(I)Le;': 'DrawControls/ImageList.elementAt(I)LDrawControls/Icon;',
+    'cd.b(Ljavax/microedition/lcdui/Display;)V': 'DrawControls/VirtualList.activate(Ljavax/microedition/lcdui/Display;)V',
+    'cd.b(I)V': 'DrawControls/VirtualList.setFontSize(I)V',
+    'cf.a(Ljava/lang/Object;)V': 'jimm/JimmUI.setLastScreen(Ljava/lang/Object;)V',
+    'r.c()Z': 'jimm/comm/Icq.isConnected()Z',
+    'm.a()V': 'jimm/ContactList.activate()V',
+    'd.a()V': 'DrawControls/VirtualForm.clear()V',
+    'd.a(Ljavax/microedition/lcdui/Item;)V': 'DrawControls/VirtualForm.append(Ljavax/microedition/lcdui/Item;)V',
+})
+
 METHODS = [
+    ('ag', '<init>', '()V', '<init>'),
+    ('ag', '<clinit>', '()V', '<clinit>'),
+    ('ag', 'a', '()Le;', 'getXStatusImage'),
+    ('ag', 'b', '()Le;', 'getPrivateStatusImage'),
+    ('ag', 'a', '(Z)Le;', 'getSoundImage'),
+    ('ag', 'a', '()V', 'build'),
+    ('ag', 'b', '()V', 'activate'),
+    ('ag', 'a', '(Ljava/lang/String;)V', 'activate'),
+    ('ag', 'a$78a4d1d0', '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V', 'showTextBoxForm'),
+    ('ag', 'c', '()V', 'initStatusList'),
+    # showPrivateStatus is inlined in this source build; MenuProbe checks the real controller.
+    ('ag', 'a', '(I)V', 'setOnlineStatus'),
+    ('ag', 'a', '(I)I', 'statusMsgIdxSelector'),
+    ('ag', 'b', '(I)V', 'CLManagementItemSelected'),
+    ('ag', 'f', '()V', 'actionMMCLAct'),
+    ('ag', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
     # Accessors and flashRestoreOldCaption are inlined in this optimized source JAR;
     # their behavior is checked against unoptimized source by TimerProbe.
     ('at', '<init>', '(Laa;)V', '<init>'),
@@ -838,6 +898,12 @@ def normalized(code):
         opcode, separator, operand = instruction.partition(' ')
         if operand in SYMBOLS:
             instruction = opcode + separator + SYMBOLS[operand]
+        elif opcode in ('187', '189', '192', '193') and operand in CLASSES:
+            instruction = opcode + separator + CLASSES[operand]
+        elif opcode == '183' and '.<init>(' in operand:
+            owner, constructor = operand.split('.', 1)
+            if owner in CLASSES:
+                instruction = opcode + separator + CLASSES[owner] + '.' + constructor
         for before, after in CLASSES.items():
             instruction = instruction.replace('L' + before + ';', 'L' + after + ';')
         result.append(instruction)
@@ -857,6 +923,9 @@ def normalized_handlers(handlers):
 
 
 def main():
+    signatures = [(owner, name, desc) for owner, name, desc, source in METHODS]
+    if len(signatures) != len(set(signatures)):
+        raise AssertionError('Duplicate reference method in audit inventory')
     recover.bootstrap()
     OUT.mkdir(parents=True, exist_ok=True)
     cp = recover.cp([recover.CACHE / n for n in recover.ASM])
