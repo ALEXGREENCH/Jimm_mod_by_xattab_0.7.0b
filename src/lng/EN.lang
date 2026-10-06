@@ -163,8 +163,8 @@
   "cost"                        "Cost"
   "contact_list"                "Contacts"
   "cp1251"                      "Use Win1251 coding"
-  "cpd"                         "Cost per 1 Mb"
-  "cpp"                         "Cost per packet (cent)"
+  "cpd"                           "Cost per day"
+  "cpp"                           "Cost per 1 Mb"
   "creeping_line"               "Creeping line"
   "currect_contact"             "Current contact"
   "currency"                    "Currency"
@@ -541,8 +541,6 @@
 
   // MOTOROLA strings
   //#sijapp cond.if target is "MOTOROLA"#
-  "backlight_timeout"           "Backlight timeout (sec)"
-  "backlight_manual"            "Manual backlight (* key)"
   "exit_button"                 "Exit"
   "menu_button"                 "Menu"
   "flash_backlight"             "Flash LEDs"
@@ -714,3 +712,7 @@
   "update_nick" "Update nick"
   "want_exit" "Want to exit?"
   "xstatus_right" "Ext. status on right"
+  "from_file"                     "External file"
+  "font_plain_desc"               "Normal"
+  "backlight_timeout"           "Backlight timeout (sec)"
+  "backlight_manual"            "Manual backlight"

@@ -1,8 +1,6 @@
   // Labels
   // MOTOROLA formatted buttons
   // #sijapp cond.if target is "MOTOROLA"#
-  "backlight_timeout"           "Durata iluminării (secunde)"
-  "backlight_manual"            "Iluminare manuală (*)"
   "exit_button"                 "Ieşire"
   "menu_button"                 "Meniu"
   "flash_backlight"             "Licărirea luminiţelor"
@@ -181,8 +179,8 @@
   "cost"                        "Cost"
   "contact_list"                "Lista contactelor"
   "cp1251"                      "Win1251 codificare"
-  "cpd"                         "Cost pe 1 Mb"
-  "cpp"                         "Preţul pachetului"
+  "cpd"                           "Cost pe zi"
+  "cpp"                           "Cost pe 1 Mb"
   "creeping_line"               "Text târâtor la mesaj de intrare"
   "currect_contact"             "Acest contact"
   "currency"                    "Valută"
@@ -715,3 +713,7 @@
   "update_nick" "Update nick"
   "want_exit" "Ieşire din program?"
   "xstatus_right" "Ext. status on right"
+  "from_file"                     "Din fişier"
+  "font_plain_desc"               "Normal"
+  "backlight_timeout"           "Durata iluminării (secunde)"
+  "backlight_manual"            "Iluminare manuală"

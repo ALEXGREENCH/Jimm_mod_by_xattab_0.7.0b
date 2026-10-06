@@ -48,8 +48,9 @@ public class JimmUI implements CommandListener, VirtualListCommands
 	
 	public static void backToLastScreen()
 	{
+		if (Options.getBoolean(Options.OPTION_CLEAR_HEAP)) System.gc();
 		selectScreen(lastScreen);
-		//#sijapp cond.if target is "MOTOROLA"#
+		//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
 		LightControl.flash(false);
 		//#sijapp cond.end#
 	}
@@ -177,10 +178,9 @@ public class JimmUI implements CommandListener, VirtualListCommands
 	}
 	
 	// Place "object = null;" code here:
-	private static void clearAll()
+	public static void clearAll()
 	{
-		aboutTextList = null;
-		System.gc();
+		messageTextbox = null;
 	}
 	
 	private boolean chatExists(ContactItem item)
@@ -780,13 +780,10 @@ public class JimmUI implements CommandListener, VirtualListCommands
 	
 	static public void setColorScheme(boolean changeColors)
 	{
-		if (changeColors)
-		{
-			// #sijapp cond.if modules_HISTORY is "true" #
-			HistoryStorage.setColorScheme();
-			// #sijapp cond.end#
-			ChatHistory.setColorScheme();
-		}
+		// #sijapp cond.if modules_HISTORY is "true" #
+		HistoryStorage.setColorScheme();
+		// #sijapp cond.end#
+		ChatHistory.setColorScheme();
 		setColorScheme((VirtualList)ContactList.getVisibleContactListRef(), Options.getBoolean(Options.OPTION_FULL_SCREEN));
 	}
     

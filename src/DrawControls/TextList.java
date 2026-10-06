@@ -406,6 +406,11 @@ public class TextList extends VirtualList
 		return getTextByIndex(offset, wholeText, getCurrTextIndex());
 	}
 
+	public int getTextIndex(int index)
+	{
+		return getLine(index).bigTextIndex;
+	}
+
 	public int getCurrTextIndex()
 	{
 		int currItemIndex = getCurrIndex();

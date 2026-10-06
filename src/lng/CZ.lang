@@ -162,8 +162,8 @@
   "cost"                        "Cena"
   "contact_list"                "Seznam"
   "cp1251"                      "Text kód. Win1251"
-  "cpd"                         "Cena za 1Mb"
-  "cpp"                         "Cena za paket"
+  "cpd"                           "Cena za den"
+  "cpp"                           "Cena za 1Mb"
   "creeping_line"               "Rolující text v horní liště"
   "currect_contact"             "Tento kontakt"
   "currency"                    "Měna"
@@ -538,8 +538,6 @@
 
   // MOTOROLA strings
   //#sijapp cond.if target is "MOTOROLA"#
-  "backlight_timeout"           "Čas podsvícení (sec)"
-  "backlight_manual"            "Ruční podsvícení (kláv. *)"
   "exit_button"                 "Konec"
   "menu_button"                 "Menu"
   "flash_backlight"             "Rozsvítit displej"
@@ -711,3 +709,7 @@
   "update_nick" "Obnovit nick"
   "want_exit" "Opravdu ukončit?"
   "xstatus_right" "Status rozšířený vpravo"
+  "from_file"                     "Ze souboru"
+  "font_plain_desc"               "Normální"
+  "backlight_timeout"           "Čas podsvícení (sec)"
+  "backlight_manual"            "Ruční podsvícení"

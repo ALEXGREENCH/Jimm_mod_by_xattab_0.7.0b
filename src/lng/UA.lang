@@ -1,8 +1,6 @@
   // Labels
   // MOTOROLA formatted buttons
   // #sijapp cond.if target is "MOTOROLA"#
-  "backlight_timeout"		"Час пiдсвiчування (сек)"
-  "backlight_manual"		"Ручне пiдсвiчування (*)"
   "exit_button"			"Вихiд"
   "menu_button"			"Меню"
   "flash_backlight"		"Блимання св-діодів"
@@ -181,8 +179,8 @@
   "cost"			"Вартість"
   "contact_list"		"Список контактів"
   "cp1251"			"Win1251 кодування"
-  "cpd"				"Вартість 1 Мб"
-  "cpp"				"Вартість пакету"
+  "cpd"                           "Вартість в день"
+  "cpp"                           "Вартість 1 Мб"
   "creeping_line"		"Рядок, що біжить"
   "currect_contact"		"Цього контакту"
   "currency"			"Валюта"
@@ -713,3 +711,8 @@
   "update_nick" "Оновити нік"
   "want_exit" "Бажаєте вийти?"
   "xstatus_right" "X-статус праворуч"
+
+  "font_plain_desc"               "Звичайне"
+  "from_file"                     "З файлу"
+  "backlight_timeout"		"Час пiдсвiчування (сек)"
+  "backlight_manual"		"Ручне пiдсвiчування"

@@ -30,7 +30,7 @@ public class SourceSmokeTest {
    Display.getDisplay((MIDlet)midlet).callSerially(new Runnable(){public void run(){try {
    opts.getMethod("editOptions").invoke(null);Object controller=opts.getField("optionsForm").get(null);Object menu=field(controller,"optionsMenu");
    menu.getClass().getMethod("selectTextByIndex",int.class).invoke(menu,index);
-   command(controller,select);command(controller,field(controller,"saveCommand"));
+   command(controller,select);command(controller,ui.getField("cmdSave").get(null));
    } catch(Throwable error) { failure[0]=error; } finally { done.countDown(); } }});
    if(!done.await(10,TimeUnit.SECONDS))throw new AssertionError("UI timeout " + index);
    if(failure[0]!=null)throw new AssertionError("options panel " + index, failure[0]);
