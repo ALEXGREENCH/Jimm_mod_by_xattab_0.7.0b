@@ -59,9 +59,6 @@ public class Templates implements VirtualListCommands, CommandListener
 	
 	private static Vector templates = new Vector();
 
-	private static final int TMPL_DEL = 1;
-	private static final int TMPL_CLALL = 2;
-
 	private static Object lastScreen;
 	private static TextBox textBox;
 	private static int caretPos;
@@ -169,30 +166,30 @@ public class Templates implements VirtualListCommands, CommandListener
 		
 		if (c == clearCommand)
 		{
-			JimmUI.messageBox(ResourceBundle.getString("attention"), ResourceBundle.getString("clear") + "?", JimmUI.MESBOX_YESNO, _this, TMPL_CLALL);
+			VirtualAlert alert = new VirtualAlert(JimmUI.getCurrentScreen(),
+				ResourceBundle.getString("clear") + "?", VirtualAlert.TAG_CLEAR_TEMPLATES);
+			alert.addCommandEx(JimmUI.cmdYes, VirtualList.MENU_LEFT_BAR);
+			alert.activate(Jimm.display);
 		}
 		
-		if (JimmUI.getCommandType(c, TMPL_CLALL) == JimmUI.CMD_YES)
+
+	}
+
+	public static void clearTemplates()
 		{
 			templates.removeAllElements();
-			save();
-			JimmUI.selectScreen(lastScreen);
-		}
-
-		if (JimmUI.getCommandType(c, TMPL_CLALL) == JimmUI.CMD_NO)
-		{
-			templateList.activate(Jimm.display);
-		}
+		refresh();
+		removeContextCommand();
 	}
 
 	private void select()
 	{
-		String selectedTemplate = null;
-		if (templateList.getSize() != 0) selectedTemplate = getTemlate();
+		if (templateList.getSize() == 0) return;
+		String selectedTemplate = getTemlate();
 		sort();
 		templateList = null;
 		JimmUI.selectScreen(lastScreen);
-		if (selectedTemplate != null) textBox.insert(selectedTemplate, caretPos);
+		textBox.insert(selectedTemplate, caretPos);
 	}
 
 	private void sort()
@@ -291,7 +288,7 @@ public class Templates implements VirtualListCommands, CommandListener
 		templateList.removeCommandEx(clearCommand);
 	}
 
-	private void refresh()
+	private static void refresh()
 	{
 		save();
 		refreshList();

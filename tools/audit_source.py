@@ -12,7 +12,9 @@ import recover
 
 ROOT = recover.ROOT
 OUT = ROOT / 'build/source-audit'
-CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'}
+CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem',
+           'ci': 'DrawControls/VirtualAlert', 'cf': 'jimm/JimmUI',
+           'ag': 'jimm/MainMenu', 'aq': 'jimm/Templates'}
 SYMBOLS = {
     'co.a([BIIZ)Ljava/lang/String;': 'jimm/comm/Util.byteArrayToString([BIIZ)Ljava/lang/String;',
     'co.a(Ljava/lang/String;Z)[B': 'jimm/comm/Util.stringToByteArray(Ljava/lang/String;Z)[B',
@@ -26,6 +28,15 @@ SYMBOLS = {
     'z.b(I)Z': 'jimm/ContactItem.hasCapability(I)Z',
     'z.b(I)I': 'jimm/ContactItem.getIntValue(I)I',
     'z.c(I)Z': 'jimm/ContactItem.isMessageAvailable(I)Z',
+    'cf.a(Ljavax/microedition/lcdui/Command;I)I': 'jimm/JimmUI.getCommandType(Ljavax/microedition/lcdui/Command;I)I',
+    'cf.b(Ljava/lang/Object;)V': 'jimm/JimmUI.selectScreen(Ljava/lang/Object;)V',
+    'cf.c Ljavax/microedition/lcdui/Command;': 'jimm/JimmUI.cmdBack Ljavax/microedition/lcdui/Command;',
+    'cf.a I': 'jimm/JimmUI.curScreenTag I',
+    'ci.a Ljava/lang/Object;': 'DrawControls/VirtualAlert.previousScreen Ljava/lang/Object;',
+    'ag.a(ZZ)V': 'jimm/MainMenu.doExit(ZZ)V',
+    'aq.a()V': 'jimm/Templates.clearTemplates()V',
+    'cf.e()V': 'jimm/JimmUI.menuRemoveContactSelected()V',
+    'cf.f()V': 'jimm/JimmUI.menuRemoveMeSelected()V',
 }
 METHODS = [
     ('co', 'c', '([BII)Ljava/lang/String;', 'detectClientVersion'),
@@ -34,6 +45,9 @@ METHODS = [
     ('cj', 'a', '(Ljava/io/DataInputStream;)V', 'readOptions'),
     ('cj', 'a', '(Ljava/io/DataOutputStream;)V', 'writeOptions'),
     ('z', 'a', '(I)I', 'getSortWeight'),
+    ('ci', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
+    ('ag', 'a', '(ZZ)V', 'doExit'),
+    ('aq', 'a', '()V', 'clearTemplates'),
 ]
 
 

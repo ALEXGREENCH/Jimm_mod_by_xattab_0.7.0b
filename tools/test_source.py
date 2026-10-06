@@ -59,6 +59,13 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Client detection/status mismatch: compare build/source-tests/reference.txt and source.txt')
     report['detector_cases'] = len(ref_output.read_text().splitlines())
     report['detector_differences'] = 0
+    popup_ref, popup_src = TEST / 'popup-reference.txt', TEST / 'popup-source.txt'
+    run([*java, 'PopupProbe', original, 'reference', popup_ref], 'popup-reference')
+    report['popups'] = run([*java, 'PopupProbe', test_jar, 'source', popup_src], 'popup-source')
+    if popup_ref.read_bytes() != popup_src.read_bytes():
+        raise AssertionError('Popup mismatch: compare build/source-tests/popup-reference.txt and popup-source.txt')
+    report['popup_observations'] = len(popup_ref.read_text().splitlines())
+    report['popup_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

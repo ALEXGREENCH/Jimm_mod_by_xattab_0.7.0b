@@ -443,12 +443,15 @@ public abstract class VirtualList
 	{
 		return textColor;
 	}
-/*
 	public int getCapBkCOlor()
 	{
 		return capBkCOlor;
 	}
-*/
+
+	protected int getBackgroundColor()
+	{
+		return bkgrndColor;
+	}
 	//! Returns number of visibled lines of text which fits in screen 
 	public int getVisCount()
 	{

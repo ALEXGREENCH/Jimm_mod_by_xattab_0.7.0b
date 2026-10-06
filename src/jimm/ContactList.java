@@ -1620,13 +1620,12 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 			case -8:
 				if (item != null)
 				{
-					JimmUI.removeContactMessageBox = JimmUI.showMessageBox
-					(
-						item,
-						ResourceBundle.getString("remove"), 
+					JimmUI.clciContactMenu = item;
+					VirtualAlert alert = new VirtualAlert(JimmUI.getCurrentScreen(),
 						ResourceBundle.getString("remove") + " " + item.name + "?", 
-						JimmUI.MESBOX_OKCANCEL
-					);
+						VirtualAlert.TAG_REMOVE_CONTACT);
+					alert.addCommandEx(JimmUI.cmdYes, VirtualList.MENU_LEFT_BAR);
+					alert.activate(Jimm.display);
 				}
 				return;
 			//#sijapp cond.if target is "MIDP2"#

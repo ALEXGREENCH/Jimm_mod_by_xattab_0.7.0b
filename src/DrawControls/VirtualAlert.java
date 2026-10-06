@@ -2,11 +2,18 @@ package DrawControls;
 
 import javax.microedition.lcdui.*;
 import jimm.JimmUI;
+import jimm.MainMenu;
 import jimm.Options;
+import jimm.Templates;
 
 /** Scrollable popup painted over the screen from which it was opened. */
 public class VirtualAlert extends VirtualList implements CommandListener
 {
+    public static final int TAG_EXIT = 1;
+    public static final int TAG_CLEAR_TEMPLATES = 2;
+    public static final int TAG_REMOVE_CONTACT = 3;
+    public static final int TAG_REMOVE_ME = 4;
+
     public String text;
     private TextList lines;
     private final Object previousScreen;
@@ -62,10 +69,10 @@ public class VirtualAlert extends VirtualList implements CommandListener
         }
         int x = getWidth() / 2 - popupWidth / 2 - 2;
         int y = (getHeight() << 1) / 5 - popupHeight / 2;
-        int captionColor = Options.getInt(Options.OPTION_COLOR_CAP);
+        int captionColor = lines.getCapBkCOlor();
         g.setColor(captionColor);
         g.fillRoundRect(x, y - 2, popupWidth, popupHeight + 10, 4, 4);
-        g.setColor(Options.getInt(Options.OPTION_COLOR_BACK));
+        g.setColor(lines.getBackgroundColor());
         g.fillRect(x + 3, y + 3, popupWidth - 6, popupHeight - 6);
         int offset = Options.getBoolean(Options.OPTION_SWAP_SOFT_KEY) ? popupWidth - 15 : 0;
         int right = x + popupWidth - offset;
@@ -136,7 +143,15 @@ public class VirtualAlert extends VirtualList implements CommandListener
 
     public void commandAction(Command command, Displayable displayable)
     {
-        if (command == JimmUI.cmdBack) JimmUI.selectScreen(previousScreen);
+        if (JimmUI.getCommandType(command, TAG_EXIT) == JimmUI.CMD_OK)
+            MainMenu.doExit(false, true);
+        else if (JimmUI.getCommandType(command, TAG_CLEAR_TEMPLATES) == JimmUI.CMD_YES)
+            Templates.clearTemplates();
+        else if (JimmUI.getCommandType(command, TAG_REMOVE_CONTACT) == JimmUI.CMD_YES)
+            JimmUI.menuRemoveContactSelected();
+        else if (JimmUI.getCommandType(command, TAG_REMOVE_ME) == JimmUI.CMD_YES)
+            JimmUI.menuRemoveMeSelected();
+        else if (command == JimmUI.cmdBack) JimmUI.selectScreen(previousScreen);
         JimmUI.curScreenTag = -1;
     }
 }

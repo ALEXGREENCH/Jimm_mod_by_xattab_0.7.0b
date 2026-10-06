@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "b09ea10fb1fadabc72c30fba41df1d1bcb6ff880f515cd82842e3993dc73ab01",
+  "rebuilt_sha256": "3e633dfd35dd7169a4bb3c8a4af22b68175f54c325fde6f205e1a9de6fe63894",
   "reference_classes": 101,
   "rebuilt_classes": 101,
   "methods": [
@@ -63,6 +63,36 @@
       "same_normalized_instructions": false,
       "reference_normalized_sha256": "ef1807de08e3d8eaeb03f730cf9922c3a4dd2a38a464b34a248b84923eeb3d12",
       "source_normalized_sha256": "b21ab6086841f4a0d190f4b84f0418fabfdf5b2930f793212c966ae12c836ee3"
+    },
+    {
+      "reference": "ci.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "DrawControls/VirtualAlert.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_verified": true,
+      "reference_instructions": 39,
+      "source_instructions": 39,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "830f58cc857d4968f0ce9d8ae3a58aa4b7e32ed87d298283e52e91c6c74029c4",
+      "source_normalized_sha256": "830f58cc857d4968f0ce9d8ae3a58aa4b7e32ed87d298283e52e91c6c74029c4"
+    },
+    {
+      "reference": "ag.a(ZZ)V",
+      "source": "jimm/MainMenu.doExit(ZZ)V",
+      "signature_verified": true,
+      "reference_instructions": 50,
+      "source_instructions": 49,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "f3dc1ab06b7d9ac8285ce34d909661cf3189b8176fabb4b8b650f49f8dae10f2",
+      "source_normalized_sha256": "9cb77cb370664246c0b790649095c391181a84e3aa14c23767678679c9bbc38b"
+    },
+    {
+      "reference": "aq.a()V",
+      "source": "jimm/Templates.clearTemplates()V",
+      "signature_verified": true,
+      "reference_instructions": 5,
+      "source_instructions": 5,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "b83d47aa477d0ec90ddf42106f69c1ddc5083202c8835421a5a3b14e85c9cd8c",
+      "source_normalized_sha256": "d244e57a26d313217e60f10f4d28a18d84ba2c6de3765beb1195baf27f9d5517"
     }
   ],
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."

@@ -32,7 +32,7 @@ import jimm.util.*;
 
 public class MainMenu implements CommandListener
 {
-	private static final int TAG_EXIT = 1;
+
 	private static final int TAG_RENAME_GROUPS = 2;
 	private static final int TAG_DELETE_GROUPS = 3;
 	private static final int TAG_CL = 4;
@@ -274,26 +274,24 @@ public class MainMenu implements CommandListener
 		textBoxForm.activate(Jimm.display);
 	}
 
-	private void doExit(boolean anyway)
+	public static void doExit(boolean confirm, boolean anyway)
 	{
-		if (!anyway && (ContactList.getUnreadMessCount() > 0 || Options.getBoolean(Options.OPTION_CONFIRM_EXIT)))
+		if (confirm || (!anyway && ContactList.getUnreadMessCount() > 0))
 		{
-			JimmUI.messageBox(ResourceBundle.getString("attention"), ResourceBundle.getString(ContactList.getUnreadMessCount() > 0 ? "have_unread_mess" : "want_exit"), JimmUI.MESBOX_YESNO, _this, TAG_EXIT);
+			String text = ResourceBundle.getString("want_exit");
+			if (ContactList.getUnreadMessCount() > 0)
+				text = ResourceBundle.getString("have_unread_mess") + " " + text;
+			VirtualAlert alert = new VirtualAlert(JimmUI.getCurrentScreen(), text, VirtualAlert.TAG_EXIT);
+			alert.addCommandEx(JimmUI.cmdOk, VirtualList.MENU_LEFT_BAR);
+			alert.activate(Jimm.display);
 		}
 		else
 		{
 			Icq.disconnect();
-			try
-			{
-				Thread.sleep(500);
-			}
-			catch (InterruptedException e1) {}
-			/* Exit app */
-			try
-			{
-				Jimm.jimm.destroyApp(true);
-			}
-			catch (MIDletStateChangeException e) {}
+			try { Thread.sleep(500); }
+			catch (InterruptedException e) { }
+			try { Jimm.jimm.destroyApp(true); }
+			catch (MIDletStateChangeException e) { }
 		}
 	}
 	
@@ -344,7 +342,7 @@ public class MainMenu implements CommandListener
 		/* Exit by soft button */
 		if (c == exitCommand)
 		{
-			doExit(false);
+			doExit(Options.getBoolean(Options.OPTION_CONFIRM_EXIT), false);
 			return;
 		}
 		
@@ -452,19 +450,6 @@ public class MainMenu implements CommandListener
 		{
 			activate();
 			textBoxForm = null;
-		}
-
-
-		/* User select OK in exit questiom message box */
-		else if (JimmUI.getCommandType(c, TAG_EXIT) == JimmUI.CMD_YES)
-		{
-			doExit(true);
-		}
-
-		/* User select CANCEL in exit questiom message box */
-		else if (JimmUI.getCommandType(c, TAG_EXIT) == JimmUI.CMD_NO)
-		{
-			ContactList.activate();
 		}
 
 		/* Menu item has been selected */
@@ -613,7 +598,7 @@ public class MainMenu implements CommandListener
 				break;
 				
 			case MENU_EXIT: /* Exit */
-				doExit(false);
+				doExit(Options.getBoolean(Options.OPTION_CONFIRM_EXIT), false);
 				break;
 			}
 		}

@@ -40,7 +40,6 @@ public class JimmUI implements CommandListener
 	// Last screen constants
 	public static Object lastScreen;
 	
-	static private VirtualAlert msgBoxList;
 
 	public static void setLastScreen(Object screen)
 	{
@@ -133,7 +132,6 @@ public class JimmUI implements CommandListener
 	public final static Command cmdVisitCite = new Command(ResourceBundle.getString("visit_site"),   Command.ITEM,   5);
 	public final static Command cmdVisitForum = new Command(ResourceBundle.getString("visit_forum"), Command.ITEM,   6);
 
-
 	static private CommandListener listener;
 	static private Hashtable commands = new Hashtable();
 	static private JimmUI _this;
@@ -177,7 +175,6 @@ public class JimmUI implements CommandListener
 	// Place "object = null;" code here:
 	private static void clearAll()
 	{
-		msgForm = null;
 		aboutTextList = null;
 		System.gc();
 	}
@@ -240,15 +237,6 @@ public class JimmUI implements CommandListener
 			}
 		}
 
-		else if (isControlActive(removeContactMessageBox))
-		{
-			if (c == cmdOk) menuRemoveContactSelected();
-			else
-			{
-				backToLastScreen();
-				removeContactMessageBox = null;
-			}
-		}
 		
 		else if ((renameTextbox != null) && (d == renameTextbox))
 		{
@@ -260,15 +248,7 @@ public class JimmUI implements CommandListener
 			}
 		}
 		
-		else if (isControlActive(removeMeMessageBox))
-		{
-			if (c == cmdOk) menuRemoveMeSelected();
-			else
-			{
-				backToLastScreen();
-				removeMeMessageBox = null;
-			}
-		}
+
 		
 		else if (isControlActive(tlContactMenu))
 		{
@@ -555,13 +535,6 @@ public class JimmUI implements CommandListener
 			}
 		}
 
-		// Message box
-		else if ((msgForm != null) && msgForm.isActive())
-		{
-			listener.commandAction(c, d);
-			msgForm = null;
-			curScreenTag = -1;
-		}
 	}
 
 	private static void resetLstSelector()
@@ -607,8 +580,6 @@ public class JimmUI implements CommandListener
 	
 	public static int getCurScreenTag()
 	{
-		if ((msgForm != null) && (msgForm.isActive())) return curScreenTag;
-		if (isControlActive(msgBoxList)) return curScreenTag;
 		if (isControlActive(lstSelector)) return curScreenTag;
 		return -1;
 	}
@@ -618,63 +589,11 @@ public class JimmUI implements CommandListener
 	//     Message Box     //
 	//                     //
 	/////////////////////////
-	static private VirtualAlert msgForm;
 	public static int curScreenTag = -1;
 
 	public static int getCommandType(Command testCommand, int testTag)
 	{
 		return (curScreenTag == testTag) ? getCommandIdx(testCommand) : -1;
-	}
-
-	final public static int MESBOX_YESNO    = 1;
-	final public static int MESBOX_OKCANCEL = 2;
-
-	static public void messageBox(String cap, String text, int type, CommandListener listener, int tag)
-	{
-		clearAll();
-		
-		curScreenTag = tag;
-		msgForm = new VirtualAlert(getCurrentScreen(), text, tag);
-        msgForm.removeCommandEx(cmdBack);
-		
-		switch (type)
-		{
-		case MESBOX_YESNO:
-			msgForm.addCommandEx(cmdYes, VirtualList.MENU_LEFT_BAR);
-			msgForm.addCommandEx(cmdNo, VirtualList.MENU_RIGHT_BAR);
-			break;
-			
-		case MESBOX_OKCANCEL:
-			msgForm.addCommandEx(cmdOk, VirtualList.MENU_LEFT_BAR);
-			msgForm.addCommandEx(cmdCancel, VirtualList.MENU_RIGHT_BAR);
-			break;
-		}
-
-		JimmUI.listener = listener;
-		msgForm.setCommandListener(_this);
-		msgForm.activate(Jimm.display);
-	}
-	
-	public static VirtualAlert showMessageBox(ContactItem contact, String cap, String text, int type)
-	{
-        msgBoxList = new VirtualAlert(getCurrentScreen(), text, -1);
-        msgBoxList.removeCommandEx(cmdBack);
-		switch (type)
-		{
-		case MESBOX_YESNO:
-			msgBoxList.addCommandEx(cmdYes, TextList.MENU_LEFT_BAR);
-			msgBoxList.addCommandEx(cmdNo, TextList.MENU_RIGHT_BAR);
-			break;
-
-		case MESBOX_OKCANCEL:
-			msgBoxList.addCommandEx(cmdOk, TextList.MENU_LEFT_BAR);
-			msgBoxList.addCommandEx(cmdCancel, TextList.MENU_RIGHT_BAR);
-			break;
-		}
-		clciContactMenu = contact;
-		msgBoxList.setCommandListener(_this);
-		msgBoxList.activate(Jimm.display);
-		return msgBoxList; 
 	}
 
 	//////////////////////////////////////////////////////////////////////////////
@@ -868,7 +787,6 @@ public class JimmUI implements CommandListener
     /*****************************************************************************/
     /*****************************************************************************/
     /*****************************************************************************/
-
 
     // Waits until contact listupdate is completed
     public static class GetVersionInfoTimerTask extends TimerTask
@@ -1529,9 +1447,7 @@ public class JimmUI implements CommandListener
 		
 		if (index == 0)
 		{
-			Alert alert = new Alert("", ResourceBundle.getString("no_availible_groups"), null, AlertType.INFO );
-			alert.setTimeout(Alert.FOREVER);
-			Jimm.display.setCurrent(alert);
+			new VirtualAlert(getCurrentScreen(), ResourceBundle.getString("no_availible_groups"), -1).activate(Jimm.display);
 			return null;
 		}
 		
@@ -1920,8 +1836,6 @@ public class JimmUI implements CommandListener
 
 	private static TextList tlContactMenu;
 	public  static ContactItem clciContactMenu;
-	public  static VirtualAlert removeContactMessageBox;
-	private static VirtualAlert removeMeMessageBox;
 	private static TextBox renameTextbox;
 	private static TextList serverLists;
 
@@ -2127,23 +2041,19 @@ public class JimmUI implements CommandListener
 				break;
 
 			case USER_MENU_USER_REMOVE:
-				removeContactMessageBox = showMessageBox
-				(
-					clciContactMenu,
-					ResourceBundle.getString("remove"), 
+				VirtualAlert removeContact = new VirtualAlert(getCurrentScreen(),
 					ResourceBundle.getString("remove") + " " + clciContactMenu.name + "?", 
-					JimmUI.MESBOX_OKCANCEL
-				);
+					VirtualAlert.TAG_REMOVE_CONTACT);
+				removeContact.addCommandEx(cmdYes, VirtualList.MENU_LEFT_BAR);
+				removeContact.activate(Jimm.display);
 				break;
 
-			case USER_MENU_REMOVE_ME: /* Remove me from other users contact list */
-				removeMeMessageBox = showMessageBox
-				(
-					clciContactMenu,
-					ResourceBundle.getString("remove_me"),
+			case USER_MENU_REMOVE_ME:
+				VirtualAlert removeMe = new VirtualAlert(getCurrentScreen(),
 					ResourceBundle.getString("remove_me_from") + clciContactMenu.name + "?", 
-					JimmUI.MESBOX_OKCANCEL
-				); 
+					VirtualAlert.TAG_REMOVE_ME);
+				removeMe.addCommandEx(cmdYes, VirtualList.MENU_LEFT_BAR);
+				removeMe.activate(Jimm.display);
 				break;
 
 			case USER_MENU_RENAME:
@@ -2265,7 +2175,7 @@ public class JimmUI implements CommandListener
 		JimmUI.showInfoTextList(tlist);
 	}
 
-	private static void menuRemoveContactSelected()
+	public static void menuRemoveContactSelected()
 	{
 		String uin = clciContactMenu.getUinString();
 		ChatHistory.chatHistoryDelete(uin);
@@ -2278,7 +2188,7 @@ public class JimmUI implements CommandListener
 		//#sijapp cond.end#
 	}
 
-	private static void menuRemoveMeSelected()
+	public static void menuRemoveMeSelected()
 	{
 		RemoveMeAction remAct = new RemoveMeAction(clciContactMenu.getUinString());
 
@@ -2353,49 +2263,46 @@ public class JimmUI implements CommandListener
 	static public void showPopupWindow(String uin, String name, String text)
 	{
 		if (SplashCanvas.locked()) return;
+		int mode = Options.getInt(Options.OPTION_POPUP_WIN);
+		if (mode == 0) return;
+		Object previousScreen = getCurrentScreen();
+		if (previousScreen == null) return;
 		
 		boolean haveToShow = false;
 		boolean chatVisible = ChatHistory.chatHistoryShown(uin);
 		boolean uinEquals = uin.equals(ContactItem.currentUin);
-		boolean textBoxExists = (messageTextbox != null);
-
-		switch (Options.getInt(Options.OPTION_POPUP_WIN))
+		boolean textBoxExists = messageTextbox != null;
+		switch (mode)
 		{
-			case 0: return;
 			case 1:
 				if (textBoxExists)
-				{
-					haveToShow = !chatVisible && uinEquals && messageTextbox.isShown();
-				}
+				haveToShow = !chatVisible && uinEquals
+					&& (messageTextbox.isShown() || previousScreen instanceof VirtualAlert);
 				break;
 			case 2:
 				haveToShow = !chatVisible || (chatVisible && !uinEquals);
 				break;
 		}
-
 		if (!haveToShow) return;
 
 		//#sijapp cond.if target is "MIDP2"#
-		String oldText = (Jimm.is_phone_SE() && textBoxExists && messageTextbox.isShown()) ? messageTextbox.getString() : null;
+		String oldText = Jimm.is_phone_SE() && textBoxExists && messageTextbox.isShown()
+			? messageTextbox.getString() : null;
 		//#sijapp cond.end#
-
 		String textToAdd = "[" + name + "]\n" + text;
-		
-		if (Jimm.display.getCurrent() instanceof Alert)
+		if (previousScreen instanceof VirtualAlert)
 		{
-			Alert currAlert = (Alert)Jimm.display.getCurrent();
-			if (currAlert.getImage() != null) currAlert.setImage(null);
-			currAlert.setString(currAlert.getString() + "\n\n" + textToAdd);
-			return;
+			VirtualAlert alert = (VirtualAlert)previousScreen;
+			alert.text += "\n\n" + textToAdd;
+			alert.updateText(true);
+			alert.activate(Jimm.display);
 		}
-
-		Alert alert = new Alert(ResourceBundle.getString("message"), textToAdd, null, null);
-		alert.setTimeout(Alert.FOREVER);
-		
-		Jimm.display.setCurrent(alert);
-		
+		else
+		{
+			new VirtualAlert(previousScreen, textToAdd, -1).activate(Jimm.display);
 		//#sijapp cond.if target is "MIDP2"#
 		if (oldText != null) messageTextbox.setString(oldText);
 		//#sijapp cond.end#
 	}
+}
 }
