@@ -1,9 +1,443 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "56744ee8eacba0b74a33cdaa5a5ee483aa63cd27948ea9b80d177560da712486",
+  "rebuilt_sha256": "cda12a68816c844ffeb564c4fb479353ce2ae49f6ba40c96f2ce739d42bf0a0c",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
+    {
+      "reference": "bi.<init>(Ljava/lang/String;)V",
+      "source": "DrawControls/TextList.<init>(Ljava/lang/String;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 14,
+      "source_instructions": 14,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "25cab26c2c34f30e6620da72c8cba7ba9168f42fcaa3ce4cfa4be9b6886884ec",
+      "source_normalized_sha256": "25cab26c2c34f30e6620da72c8cba7ba9168f42fcaa3ce4cfa4be9b6886884ec"
+    },
+    {
+      "reference": "bi.a()I",
+      "source": "DrawControls/TextList.getSize()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 23,
+      "source_instructions": 23,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "1d9c99133e989e73f59b9c1c2205b98264e679d733fac096233e8a12f52b8af3",
+      "source_normalized_sha256": "1d9c99133e989e73f59b9c1c2205b98264e679d733fac096233e8a12f52b8af3"
+    },
+    {
+      "reference": "bi.a(I)Lbm;",
+      "source": "DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 6,
+      "source_instructions": 6,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "0923e3c6cb4ba0b06d3ec981de344652d35e9bb8dd091af1c5400649e331f50d",
+      "source_normalized_sha256": "0923e3c6cb4ba0b06d3ec981de344652d35e9bb8dd091af1c5400649e331f50d"
+    },
+    {
+      "reference": "bi.a(I)Z",
+      "source": "DrawControls/TextList.isItemSelected(I)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 30,
+      "source_instructions": 30,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "79d16b03ad5258b987aa3fd964eaa9e8353b94805fc46cadf6ace1e169152c81",
+      "source_normalized_sha256": "79d16b03ad5258b987aa3fd964eaa9e8353b94805fc46cadf6ace1e169152c81"
+    },
+    {
+      "reference": "bi.a(ILcn;)V",
+      "source": "DrawControls/TextList.get(ILDrawControls/ListItem;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 34,
+      "source_instructions": 34,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "29edaefe05773e9084afdb1892fa1665199e270821cf6e5ea4b5eaf53097feb1",
+      "source_normalized_sha256": "dbf03b3b892ac4c0e1c8e7c8d0507fa1e40047fd4d1732ca2c5a19b98615d20d"
+    },
+    {
+      "reference": "bi.a()V",
+      "source": "DrawControls/TextList.clear()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 12,
+      "source_instructions": 12,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "37388cd904e768d4de20fea99cc2e2be067182f1e9352ad3ddc1f0325d7a1d20",
+      "source_normalized_sha256": "37388cd904e768d4de20fea99cc2e2be067182f1e9352ad3ddc1f0325d7a1d20"
+    },
+    {
+      "reference": "bi.a(Ljava/lang/String;IIIZC)V",
+      "source": "DrawControls/TextList.internAdd$51eb0c58(Ljava/lang/String;IIIZC)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 73,
+      "source_instructions": 73,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "5853eb530fffd75ff9acd3c9f44a92369fb1fde59dd7bc93c1f12dd3973cc5e7",
+      "source_normalized_sha256": "5853eb530fffd75ff9acd3c9f44a92369fb1fde59dd7bc93c1f12dd3973cc5e7"
+    },
+    {
+      "reference": "bi.a(I)I",
+      "source": "DrawControls/TextList.getItemHeight(I)I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 22,
+      "source_instructions": 22,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "9e8c68193a06b61c7fb584380eb4a682b77ceb2fdc8c757f8cf97d4a0da6b6dd",
+      "source_normalized_sha256": "23a9cf0c1e5c12a9c8131d1b8167d076f57bbc6ce1bc8a51ddb6466615020318"
+    },
+    {
+      "reference": "bi.a(Ljavax/microedition/lcdui/Graphics;IIIIII)V",
+      "source": "DrawControls/TextList.drawItemData(Ljavax/microedition/lcdui/Graphics;IIIIII)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 26,
+      "source_instructions": 26,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "a4f9638101f14406a10717934865a292a4288b1a8f4e47acdaf49f8dc409fb92",
+      "source_normalized_sha256": "6d12abf96ee517c22622dbef58851ce7f51d3e1735f5ce700048a346ab2f992f"
+    },
+    {
+      "reference": "bi.a(IZ)V",
+      "source": "DrawControls/TextList.moveCursor(IZ)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 96,
+      "source_instructions": 96,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "97c25dcbac80630f70bf7263077ca5e87a41193ad97f7fbcc81abc33d1ecab61",
+      "source_normalized_sha256": "b29d11bd091dbc42b41206741cab02b073e2aec0d3a246be920fdaae979962ac"
+    },
+    {
+      "reference": "bi.a(IZI)Ljava/lang/String;",
+      "source": "DrawControls/TextList.getTextByIndex(IZI)Ljava/lang/String;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 69,
+      "source_instructions": 69,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "846ff4440205c5500082ca94e26952f944b9d8c257933f0ddb4ff7ed2ad1b1a5",
+      "source_normalized_sha256": "9097a9d81871b1b4f7cb528d571b84200d7185dadf9217bd53419453fb018038"
+    },
+    {
+      "reference": "bi.a(I)V",
+      "source": "DrawControls/TextList.selectTextByIndex(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 26,
+      "source_instructions": 26,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "0870d6c75789938334d6501cfefd6aeeea52fee9f6824d677f85126f9818e4fa",
+      "source_normalized_sha256": "11164dacb76b54419b54a71fc8eb2c19302a9d933aec97624cadc099b6c0256d"
+    },
+    {
+      "reference": "bi.a(IZ)Ljava/lang/String;",
+      "source": "DrawControls/TextList.getCurrText(IZ)Ljava/lang/String;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 7,
+      "source_instructions": 7,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "022fd2a232c6dba1356f787550726e798428bb7f8dc03ef0aa9f8150fe33b70b",
+      "source_normalized_sha256": "022fd2a232c6dba1356f787550726e798428bb7f8dc03ef0aa9f8150fe33b70b"
+    },
+    {
+      "reference": "bi.b()I",
+      "source": "DrawControls/TextList.getCurrTextIndex()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 17,
+      "source_instructions": 17,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "70f20497cd048a2918247d3ece32a1f3a568b0501b5a86d986f072cf27f5dfac",
+      "source_normalized_sha256": "70f20497cd048a2918247d3ece32a1f3a568b0501b5a86d986f072cf27f5dfac"
+    },
+    {
+      "reference": "bi.a(IIII)V",
+      "source": "DrawControls/TextList.setColors(IIII)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 7,
+      "source_instructions": 7,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "1bcb371c5ed42d8d579c79bf57294017c2ab94001adaa3c6f14059e6df584209",
+      "source_normalized_sha256": "4f1d3636ae98c86a8dd0c72b6695e585fb57d79cefb74cfa50c3fdd030574312"
+    },
+    {
+      "reference": "bi.a(I)Lbi;",
+      "source": "DrawControls/TextList.doCRLF(I)LDrawControls/TextList;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 23,
+      "source_instructions": 23,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "530a15d8974ca6084e79dc70099baca62ce930c225ceb00fa559a368dc0fceb4",
+      "source_normalized_sha256": "530a15d8974ca6084e79dc70099baca62ce930c225ceb00fa559a368dc0fceb4"
+    },
+    {
+      "reference": "bi.a(Le;Ljava/lang/String;I)Lbi;",
+      "source": "DrawControls/TextList.addImage(LDrawControls/Icon;Ljava/lang/String;I)LDrawControls/TextList;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 52,
+      "source_instructions": 52,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "96ee5ba379b73ec16251533f5452820bd1a50ca343d09383647d029fb00e74da",
+      "source_normalized_sha256": "9ae4b965523bbbc771e601767b83468055e3afb3fa4a734306854715bea0806c"
+    },
+    {
+      "reference": "bi.m()I",
+      "source": "DrawControls/TextList.getTextAreaWidth()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 10,
+      "source_instructions": 10,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "aad52c1421665494d3a6362f6407e76e8914373ed086325b220ce42f57e43a8f",
+      "source_normalized_sha256": "034ac14997b7ebd6c9220046a5764765c524efc21bbf3542cf4ce4d5ff1afb3b"
+    },
+    {
+      "reference": "bi.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+      "source": "DrawControls/TextList.replace(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 33,
+      "source_instructions": 33,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "8deb741b4b5b68f679378c938a585df59e3239eaf7e06b8aaaaf4c90c7f322d0",
+      "source_normalized_sha256": "9f0ccb9de19c25957fbc60d1e2b2aee92774cb1da9e1b528f2a435ab92d7a9a6"
+    },
+    {
+      "reference": "bi.a(Ljava/lang/String;IIII)V",
+      "source": "DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 300,
+      "source_instructions": 294,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "6c709a789e8f0e83214387aa1478af2a2eb9d03caeef52c1158f8dfcde41af7f",
+      "source_normalized_sha256": "91ff5026918d9b69e94872cab0504d4719b7f4d2c9649aada704736139d3b40f"
+    },
+    {
+      "reference": "bi.a(Ljava/lang/String;III)Lbi;",
+      "source": "DrawControls/TextList.addBigText(Ljava/lang/String;III)LDrawControls/TextList;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 12,
+      "source_instructions": 12,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "1645709e1d99ca2b423042d71d5f5ff518d5b064907c686f3da30939ee90569e",
+      "source_normalized_sha256": "1645709e1d99ca2b423042d71d5f5ff518d5b064907c686f3da30939ee90569e"
+    },
+    {
+      "reference": "bc.<init>()V",
+      "source": "DrawControls/TextItem.<init>()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "0a70958682c8643b91ad80c4049b6890d40a51f17b5a349a90768e11bb5ca6ad",
+      "source_normalized_sha256": "0a70958682c8643b91ad80c4049b6890d40a51f17b5a349a90768e11bb5ca6ad"
+    },
+    {
+      "reference": "bc.a(I)I",
+      "source": "DrawControls/TextItem.getHeight(I)I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 39,
+      "source_instructions": 39,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "06c28409a5803f6e4d8abf0fd2b256f75150125df31274ac081b1c1b87e077c9",
+      "source_normalized_sha256": "06c28409a5803f6e4d8abf0fd2b256f75150125df31274ac081b1c1b87e077c9"
+    },
+    {
+      "reference": "bc.b(I)I",
+      "source": "DrawControls/TextItem.getWidth(I)I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 45,
+      "source_instructions": 45,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "934ba097987d34a0762ad44870b4fc2f77df1ba89e92afca83ebf5949e4d7a4f",
+      "source_normalized_sha256": "934ba097987d34a0762ad44870b4fc2f77df1ba89e92afca83ebf5949e4d7a4f"
+    },
+    {
+      "reference": "bm.<init>()V",
+      "source": "DrawControls/TextLine.<init>()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 14,
+      "source_instructions": 14,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "148c9f787bb25bf4176ae80bc39981edbbb79e072d412b3f33f75cfa34d0dcc8",
+      "source_normalized_sha256": "148c9f787bb25bf4176ae80bc39981edbbb79e072d412b3f33f75cfa34d0dcc8"
+    },
+    {
+      "reference": "bm.a(I)Lbc;",
+      "source": "DrawControls/TextLine.elementAt(I)LDrawControls/TextItem;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 6,
+      "source_instructions": 6,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "8c8dce21ee74097738c5696e6e46290db653d5fda57e9df09befee1c7ce35647",
+      "source_normalized_sha256": "8c8dce21ee74097738c5696e6e46290db653d5fda57e9df09befee1c7ce35647"
+    },
+    {
+      "reference": "bm.a(Lbc;)V",
+      "source": "DrawControls/TextLine.add(LDrawControls/TextItem;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 5,
+      "source_instructions": 5,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "d2c058a889f87720519f287f32694a9c8354ce01edd9f6668426380a67484616",
+      "source_normalized_sha256": "d2c058a889f87720519f287f32694a9c8354ce01edd9f6668426380a67484616"
+    },
+    {
+      "reference": "bm.a(I)I",
+      "source": "DrawControls/TextLine.getHeight(I)I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 33,
+      "source_instructions": 33,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "c0f7415c10d9c18ac148c2f01765cfc48b4233c84e00a2c2acaf7fe928b4652e",
+      "source_normalized_sha256": "7903ba0d086341694bd705d4baf9e1dd938bd878c955a4cdfccc7dfcc93cc660"
+    },
+    {
+      "reference": "bm.b(I)I",
+      "source": "DrawControls/TextLine.getWidth(I)I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 22,
+      "source_instructions": 22,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "ae0ed5a7d731a741885bf7410d39dbad57a7705148bdef878b1b914745d0b368",
+      "source_normalized_sha256": "461218721bc1792d61ef2e38eaaca2edc2924a64c8573f09567b8605443dc703"
+    },
+    {
+      "reference": "bm.a(IILjavax/microedition/lcdui/Graphics;ILcd;)V",
+      "source": "DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 71,
+      "source_instructions": 71,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "d946e25a6f310da8cebf4b1be4fa9d1ef9e1b65341a577bd1124d211019bd6f4",
+      "source_normalized_sha256": "a54d76727b05d05b63c1542adc7aa27d394e97bc01184f930b6a841ba7e6ab2a"
+    },
+    {
+      "reference": "bm.a(Ljava/lang/StringBuffer;)V",
+      "source": "DrawControls/TextLine.readText(Ljava/lang/StringBuffer;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 17,
+      "source_instructions": 17,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "f059705180fc4046937271f11edb65c25a9564e34652753c40d6947b9a80e0ed",
+      "source_normalized_sha256": "350eaee39f89c583e4db19d02c6bcd8fa9875d5d08f7913e4463b4d31ff8bc91"
+    },
     {
       "reference": "d.<init>(Ljava/lang/String;)V",
       "source": "DrawControls/VirtualForm.<init>(Ljava/lang/String;)V",
@@ -390,10 +824,10 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 16,
       "source_instructions": 16,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "70cef15dd568036532090392c1e63c8dd3e391e2fe2864c19df1b5ef5d40673d",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "60b00f03f553ffb39581bc34e077a8f5c809e8bc085d23570c83894383b26339",
       "source_normalized_sha256": "60b00f03f553ffb39581bc34e077a8f5c809e8bc085d23570c83894383b26339"
     },
     {
@@ -477,7 +911,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "8343cf25f2561c54282d0eeb4a87b73bd8c7e1377f1c2f05e512c44baed8dd52",
+      "reference_normalized_sha256": "a1c8af9d214e8bb1025b78e9b308542e1d01e44ca930a31fae124dc722d752e0",
       "source_normalized_sha256": "945cf210fea1f604502741094496aa1a860cdd1cd9ee6b6a40d9c5fff7421a7d"
     },
     {
@@ -558,10 +992,10 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 36,
       "source_instructions": 36,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "bd96fd02fbbfecc613b5a5548356d86d2b14011ec3cbee68727ae1a11cb3f349",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "a53c3bd3794104f77febe7c11b40586448593030a78bed575fced0ecb037a369",
       "source_normalized_sha256": "a53c3bd3794104f77febe7c11b40586448593030a78bed575fced0ecb037a369"
     },
     {
@@ -642,10 +1076,10 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 13,
       "source_instructions": 13,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "f82d37d137aede3b65f158c15e67932203c73711913ce49be1118c72f382f547",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "3ec3662d7b1bc7bb5eeb08668b9acdb08477310b26bec3f6df25af4bcfd521ea",
       "source_normalized_sha256": "3ec3662d7b1bc7bb5eeb08668b9acdb08477310b26bec3f6df25af4bcfd521ea"
     },
     {
@@ -1121,7 +1555,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "ae6f74412e15e581d326fa57849d3da1b08cba4a643e3974f2c709aa13ec92d0",
+      "reference_normalized_sha256": "31909df322ef27224b9aa6f977cea4f62b9ed1a890eb74e7a1b823efb64bb61d",
       "source_normalized_sha256": "82bf5df3c6c5bc33a628396b6db3f49c20f2d46c28af54ca2722ea684ce52aba"
     },
     {
@@ -1149,7 +1583,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "bd95c0a69b4d18d6c9aa46234b5557bf36e823e41ba87ab362d8b15a28676612",
+      "reference_normalized_sha256": "2d3f2640111693c1d33800945842cf1b6cdd17b964964c0d8d7d1e34b418212b",
       "source_normalized_sha256": "40df6de8ca3c1b497a12554d69df64063be3d4feecdeb7fbbe2cd006521d04bd"
     },
     {
@@ -1247,7 +1681,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "a00f817bab30f2ad1dbe8bd178ea4d4a9f8e6fd91ee970a60dee90defdfe3dd4",
+      "reference_normalized_sha256": "c9a828de401a509dbddb92c49312f06345ec51a98e88da3a5b0562c6672c9388",
       "source_normalized_sha256": "c560f84a83df1087d917ce08845f154439652d8fdde5a46278c106945dad7b2d"
     },
     {
@@ -1751,7 +2185,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e03de96aaa1ca83a57a583145114fd44dc672bf1f4beadf7edcf40d64d06a616",
+      "reference_normalized_sha256": "24b94a2b3efe92976820ce8453d331bf06803c960cffa1c28c2837b219c56b17",
       "source_normalized_sha256": "1acb9c193bd4729d9e6c3957875c1ae358b87e7006831af5a3f4b9f73ef72cd6"
     },
     {
@@ -1779,7 +2213,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "454783a189d99424252de7354e94e691afd3a6d073df1e889079c09f9d8fb409",
+      "reference_normalized_sha256": "63257be0766d775f04515d3101bd110a45e5c494dec30f01c695cbd360d18a56",
       "source_normalized_sha256": "9fa950a47f76f3fc590d518d17a3dad06e12d60d6a7322caa5bd5c53310cee93"
     },
     {
@@ -1905,7 +2339,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e7e5b87b1bbb09cf4ccc10e6fe63408f3bc0bca5f2fe24d24a93529f16c59afa",
+      "reference_normalized_sha256": "204431d0fcf7bf0139b800948b08005a25ec11997e28ab6db134b10b683403ec",
       "source_normalized_sha256": "e81565e1f9042345f1b741590c06b02ff359f91d5e23a7bb2461ebb8b4cc1f04"
     },
     {
@@ -1961,7 +2395,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "bf5c5d495bee97369461ed6159daf64d3adce40d67d23154c81b51ecce5dcddc",
+      "reference_normalized_sha256": "67c2a9d4dfc1a3b43c866828feda3b6473eb0f3da2bcd2ba72a4c2223f13fd49",
       "source_normalized_sha256": "af46e1fdfbbd5ef38b3521148603a71b1d41bc4a25929e03496a945a663d0eda"
     },
     {
@@ -2157,7 +2591,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "26e390504af2ee06a5073227ab484288dc04874197b6e8cd51a92b958f9ba3c7",
+      "reference_normalized_sha256": "b9a786d6e144215ffa87491e321db1e98d034cf2c7e113d7afeb58b4fb1c925c",
       "source_normalized_sha256": "a65075b7911f2a931d21f712b47238db1bbd94ea8ad0c36d4a7dea3f04e92979"
     },
     {
@@ -2185,7 +2619,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "99fd892469d7d382063ae80df852d2ebc78c1c1c621fe079070b05327c1bf3b9",
+      "reference_normalized_sha256": "c2e6b7947eb164ea46849946cef8ee00efbe5e97f78d28824db4dfaa00ef666f",
       "source_normalized_sha256": "3436fa4d4afa37eb66eb006c4e5c9c820ae59bda4ff3105a18caf7ce1dccb1a5"
     },
     {
@@ -2199,7 +2633,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "25bb6b16808b802ca8acb007b77ef83eab664d1a48e94615c4d58dc06626948e",
+      "reference_normalized_sha256": "9c2ceae749d74eb275b907b7eef2b85aedf546cc26b7c0e057afa4a843f8b443",
       "source_normalized_sha256": "50ed03e7c03771206edc1a9798750f90039c1c97ba6a66644be8db4fa3089a0d"
     },
     {
@@ -2325,7 +2759,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "c1f96bace9eb3f7f3bc951d408f66d6ebc5b33272b74e55f950cc9fe0408830e",
+      "reference_normalized_sha256": "1dc71931f62549ee4dce592fbd3171cd2d9d65adf36fc11ab72cc8d9bd5318b1",
       "source_normalized_sha256": "0509b183b9068667c5cb8165c3f626693640009e267cd5fd26c599e2ac467db4"
     },
     {
@@ -2367,7 +2801,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e6d8e9c4535dc8b0e3878328910766d1db01b6d94d0943232fb6278e581d29ba",
+      "reference_normalized_sha256": "cefd8aa02e755d60f350623054bb44cc58ce1662b25eeaf5dee88164a6a1026b",
       "source_normalized_sha256": "5e2e88818b48f370c04071b8cf76ea442e4014b23b9296118affa6b17a8abcd0"
     },
     {
@@ -2476,10 +2910,10 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 5,
       "source_instructions": 5,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "5c279d60f5d41202c53637fd1a04dc2e7bf79980c2ded3c586c076206366c5ba",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "fa127e4cf9706da9745db0de6569240be4d47f7935e9cbe913133d6ecfef748a",
       "source_normalized_sha256": "fa127e4cf9706da9745db0de6569240be4d47f7935e9cbe913133d6ecfef748a"
     },
     {
@@ -2661,7 +3095,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "0cc590ed200e4db4db3a5bca9be96198ee1f036ae8d5ffecf4d75076eb7e55dd",
+      "reference_normalized_sha256": "0e7976c4f63f0ed5f08b098903099eec18dc18f46d5768f61bebe8aad1dc5b87",
       "source_normalized_sha256": "045a4588bcc9f017c76378a2b7f0ddb4badef9ae0b80611097b78c63a318d21b"
     },
     {
@@ -2812,10 +3246,10 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 56,
       "source_instructions": 56,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "b8e946af435975c040e4c8656c863028b74580a777cf4794620f59e2a0ae997a",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "01a8342dbcd9a4571776c7c2a1753b28567acfefc9c0e7a40f757eef53a3a5e2",
       "source_normalized_sha256": "01a8342dbcd9a4571776c7c2a1753b28567acfefc9c0e7a40f757eef53a3a5e2"
     },
     {
@@ -2885,7 +3319,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "57b3d630f460f96a8dc0d0eba092cc2087e56067b14dc782a7242299c2a423da",
+      "reference_normalized_sha256": "465900252db13fd03af1054b2b3c4500a26c38cffb68ca848568047ee56b1d04",
       "source_normalized_sha256": "bcff8f8461d8fb3ec8b8efda0d2fd77f5ab2f9ca24ee414a0d7f1268db6c83c1"
     },
     {
@@ -2913,7 +3347,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "860750ce312a58980f461accb435771e0026207349938fc3d83d2a64d1ad766a",
+      "reference_normalized_sha256": "020ce65effecc16f19275e0b24d75e3cb53e48d9f51502a02c2bc712cbd12d79",
       "source_normalized_sha256": "1c43c956cd7e20e10786d7fa15b006ec56257b524acceb1ecccae73c3ac65e6c"
     },
     {
@@ -2938,10 +3372,10 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 7,
       "source_instructions": 7,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "16320dfafcef8f81761be3e24dcc390291db684fd1726303f126a6bc7cc8bafb",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "5b19e8f0c38d867e9f3a03f54c787e7363ba516cd90a997987adc601f94cea4d",
       "source_normalized_sha256": "5b19e8f0c38d867e9f3a03f54c787e7363ba516cd90a997987adc601f94cea4d"
     },
     {
@@ -3053,7 +3487,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "83710abaf4c53529ce5996ada6f0c1e33c5ac8e9364b1fbbd36b7754397d5740",
+      "reference_normalized_sha256": "102af7dc923d860fd9aaebdb0c5d0273ce30333c62feadc1313274860beea154",
       "source_normalized_sha256": "fd15cef0f5aa7ba093daca598597d4c25e3d08e74c35ece9a92d48eb24077dca"
     },
     {
@@ -3067,7 +3501,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "b84c12e6929a7cb10e04046c0bad0f7f11ebe04394419b4d13dedb3142e1fd8b",
+      "reference_normalized_sha256": "2f130ff4c65f170961eaf4ee92806fb5e95ea29a5fadb7fed8d57a7168b0984e",
       "source_normalized_sha256": "030cc904df05894ea8547c27c8d57adb49d643160f0b10673212ef029c45835e"
     },
     {
@@ -3291,7 +3725,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "1dfcbe6d5fcf423fbf84d151cf22103313bdb04540548faef73f5af92444ee45",
+      "reference_normalized_sha256": "37d063fe7065c46e7d72bb551158bbe3d532f2a2a3727f94c9f03a568f5f87a9",
       "source_normalized_sha256": "98d3c06882845a9d2818e7c8a2d6e6e2e0d9fb7e955728846239943121dfe464"
     },
     {
@@ -3375,7 +3809,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "489e76b296cc21c5de4aecdcfe1c16de67e595b00facac066b96defdc0cb7eb3",
+      "reference_normalized_sha256": "7900970e38d3603eece43bef96e4a5a032524bebd2e851c1e419084f709b6848",
       "source_normalized_sha256": "a23de3bdc559d555834c1fb34588ed973fc075ccb3b91c0a8831aa74c61fc804"
     },
     {
@@ -3473,7 +3907,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "9d7bc9a5406a3265b660b0906a933f7713358f7c98728dd005cf0e1e053124e2",
+      "reference_normalized_sha256": "08e4c4efebd05e8134201d64d0439699495e404602d705d1cddca65aa435f849",
       "source_normalized_sha256": "8096d4236b50ddcd9a2fe6fbb05f1eaccf56c6cfe84517f29e026443f5d52771"
     },
     {
@@ -3655,7 +4089,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "1b12657d3501285572204ccf9d5e71089f133ef3b30ace091c3294763c4c8e3a",
+      "reference_normalized_sha256": "5ce4890ecc3f403136a9229f9919813bf70f159a2e64bcce960db68763cd1bda",
       "source_normalized_sha256": "cc08c71c09535cb2025b3b3b28bc1d3c7244bc0252ddb20c3fa988d06a15aae3"
     },
     {
@@ -4845,7 +5279,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "6e4aede692e5992c8b909045c990edb1d99a95b8e3e46c010cda9c3d6e058fcf",
+      "reference_normalized_sha256": "27b3b5b5411a4628302abb150a6f84768522e378e7b8de16dda0e1ca63271c49",
       "source_normalized_sha256": "7e49b532fdeb8222d8dcb20dbf23593e12aad57286fa191f151af13b1b5adf9f"
     },
     {
@@ -5069,7 +5503,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "023ff4c4da9819b3ba3945009bb75da75c91bcea1ac5065eb97fc724142b4382",
+      "reference_normalized_sha256": "fc7516749a0eef3e95c06b5d8020eb938b55e6bc915fe5587b98f9ad4327cfda",
       "source_normalized_sha256": "4e39db8dc176916aa468504c43170a80c17f04d87328e93aff85e63734284552"
     },
     {
@@ -5097,7 +5531,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "480532e59e326d27e113dc49b9293fafeb55dbbba8ee8d79ee49859da969d387",
+      "reference_normalized_sha256": "ab9596042bb1ec0d3c515610ffd2d41d6c49bf57df68d0188155c44f5ea1a030",
       "source_normalized_sha256": "6f9a25af70f637a3c5d0e3431690e2a3609fdd10129377224ca60ec68cca47ad"
     },
     {
@@ -5111,7 +5545,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "84f9960b083ff2b38d08e329e882bdbb35c49dec61b9d9aaa395296d52c7339e",
+      "reference_normalized_sha256": "a86febc7b9f120589fe4c2abe903403a501372609b93a89a75e166ce05b6f107",
       "source_normalized_sha256": "31004b28eb30abd3f0c7f84e3a1154f84fe82072856176bb30e06d123fa8e8ab"
     },
     {
@@ -5251,7 +5685,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "13225d69ccc30810232faeeba94cc596b0a81f9767b3d770bbc49ad7bc3e4b3f",
+      "reference_normalized_sha256": "b5676197060f4b2848333f0ecefaf45decbe9528d0f9b39a8e5103137aa11e38",
       "source_normalized_sha256": "7f02d2e8f88a60a625b53f45dab5fe4e80bc39101ef085f4e93a4a3effb67cff"
     },
     {
@@ -5265,7 +5699,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "23feed0b0421a88a3b2e8905974e0cba7b89b1e5d3fb69e74fd34baf731484d7",
+      "reference_normalized_sha256": "339c79caf7e28cadce1a24dea15941a496bf9e0f619d08fabe9e735b14a1a8ce",
       "source_normalized_sha256": "66cf7ead7be2a293710615e479ce33a66898394cac32d151ff19872a18274118"
     },
     {
@@ -5279,7 +5713,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "dcfb1a3f651a19097216be5083b6bea41ef0c76ded685102b48c442b9adcee92",
+      "reference_normalized_sha256": "9bbb121e3de16072238104acc37a164f0fef1a63c9cb584f3389edd4c5962431",
       "source_normalized_sha256": "7713cb9b36722fac3caf991d074a025b8e2122c797e33ce328e1a1895fdf16b6"
     },
     {
@@ -5363,7 +5797,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "d153ed16862e06c2f8ed57f2510846a0fca2a64840cb9c19e84cd269300ef5d5",
+      "reference_normalized_sha256": "3a6b7d86903a3704f87d8521abfc4d7ea5cf96a129a9ff7f13a6ca1586f7148f",
       "source_normalized_sha256": "1ed1cc56e2edd8bacfaa966d98c0a007e26d802243d10275b27cbb4756c4126c"
     },
     {

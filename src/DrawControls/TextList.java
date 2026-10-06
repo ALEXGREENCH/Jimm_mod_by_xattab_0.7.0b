@@ -167,9 +167,8 @@ class TextLine
 				//#sijapp cond.if target is "MOTOROLA"#
 				if (fontSize != TextList.LARGE_FONT) {
 				//#sijapp cond.end#
-				g.setColor(item.getColor());
 				g.setFont(vl.getQuickFont(item.getFontStyle()));
-				g.drawString(item.text, xpos, drawYPos, Graphics.TOP | Graphics.LEFT);
+				VirtualList.drawString(g, item.text, xpos, drawYPos, Graphics.TOP | Graphics.LEFT, item.getColor());
 				//#sijapp cond.if target is "MOTOROLA"#
 				} else TPropFont.font.drawString(g, xpos, drawYPos, item.text, item.getColor());
 				//#sijapp cond.end#
