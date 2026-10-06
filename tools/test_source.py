@@ -109,6 +109,13 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Login/roster mismatch: compare build/source-tests/login-reference.txt and login-source.txt')
     report['login_observations'] = len(login_ref.read_text().splitlines())
     report['login_differences'] = 0
+    roster_ref, roster_src = TEST / 'roster-reference.txt', TEST / 'roster-source.txt'
+    for mode, output in [('reference', roster_ref), ('source', roster_src)]:
+        report['roster_' + mode] = run([*java, 'RosterProbe', TEST / ('login-' + mode + '.jar'), mode, output], 'roster-' + mode)
+    if roster_ref.read_bytes() != roster_src.read_bytes():
+        raise AssertionError('Roster transaction mismatch: compare build/source-tests/roster-reference.txt and roster-source.txt')
+    report['roster_observations'] = len(roster_ref.read_text().splitlines())
+    report['roster_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

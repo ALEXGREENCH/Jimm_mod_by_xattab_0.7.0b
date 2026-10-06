@@ -1351,56 +1351,15 @@ public class Util
 
 	// #sijapp cond.end #
 	
-	// Create a random id which is not used yet
+	// Create a random roster id
 	public static int createRandomId()
 	{
-		// Max value is probably 0x7FFF, lowest value is unknown.
-		// We use range 0x1000-0x7FFF.
-		// From miranda source
-		GroupItem[] gItems = ContactList.getGroupItems();
-		ContactItem[] cItems = ContactList.getContactItems();
-		int randint;
-		boolean found;
-
+		ContactList.getGroupItems();
+		ContactList.getContactItems();
 		Random rand = new Random(System.currentTimeMillis());
-		randint = rand.nextInt();
-		if (randint < 0) randint = randint * (-1);
-		randint = randint % 0x6FFF + 0x1000;
-		
-		do
-		{
-			found = false;
-			if (Icq.getIcq().getPrivateStatusId() == randint)
-			{
-				found = true;
-			}
-			else
-			{
-				for (int i = 0; i < gItems.length; i++)
-				{
-					if (gItems[i].getId() == randint)
-					{
-						found = true;
-						break;
-					}
-				}
-			}
-			if (!found) 
-				for (int j = 0; j < cItems.length; j++)
-				{
-					if ((cItems[j].getIntValue(ContactItem.CONTACTITEM_ID) == randint)
-						// Privacy Lists begining
-						|| (cItems[j].getIgnoreId() == randint) || (cItems[j].getVisibleId() == randint)
-						|| (cItems[j].getInvisibleId() == randint)) 
-						// Privacy Lists ending
-					{
-						found = true;
-						break;
-					}
-				}
-		}
-		while (found);
-		return randint;
+		int randint = rand.nextInt();
+		if (randint < 0) randint = -randint;
+		return randint % 0x6FFF + 0x1000;
 	}
 	
 	// Check is data array utf-8 string

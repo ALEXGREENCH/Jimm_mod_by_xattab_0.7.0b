@@ -23,6 +23,10 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'an': 'jimm/comm/Packet', 'ct': 'jimm/comm/UpdateContactListAction',
            'bq': 'jimm/comm/OtherAction'}
 SYMBOLS = {
+    'co.a I': 'jimm/comm/Util.counter I',
+    'ct.a I': 'jimm/comm/UpdateContactListAction.state I',
+    'ct.c I': 'jimm/comm/UpdateContactListAction.errorCode I',
+    'ct.a J': 'jimm/comm/UpdateContactListAction.lastActivity J',
     'co.a([BIIZ)Ljava/lang/String;': 'jimm/comm/Util.byteArrayToString([BIIZ)Ljava/lang/String;',
     'co.a(Ljava/lang/String;Z)[B': 'jimm/comm/Util.stringToByteArray(Ljava/lang/String;Z)[B',
     'co.a([B)[B': 'jimm/comm/Util.decipherPassword([B)[B',
@@ -96,6 +100,12 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('co', 'b', '()I', 'createRandomId'),
+    ('co', 'a', '()I', 'getCounter'),
+    ('ct', 'a', '()V', 'init'),
+    ('ct', 'a', '(Lan;)Z', 'forward'),
+    ('ct', 'a', '()Z', 'isCompleted'),
+    ('ct', 'b', '()Z', 'isError'),
     ('z', 'a', '(I[B)V', 'setIPValue'),
     ('z', 'a', '(I)[B', 'getIPValue'),
     ('ct', 'a', '(Lz;I)[B', 'packRosterItem'),

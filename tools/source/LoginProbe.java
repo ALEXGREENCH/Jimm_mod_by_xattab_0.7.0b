@@ -147,7 +147,9 @@ public class LoginProbe extends NetworkStateProbe {
     }
     public static void main(String[] args){try{run(args);System.exit(0);}catch(Throwable e){e.printStackTrace();System.exit(1);}}
     static Class<?> load(String a,String b)throws Exception{return Class.forName(n(a,b),true,loader);}
-    static void run(String[] args)throws Exception{
+    interface Exercise {void run()throws Exception;}
+    static void run(String[] args)throws Exception{run(args,new Exercise(){public void run()throws Exception{exercise();}});}
+    static void run(String[] args,final Exercise exercise)throws Exception{
         ref=args[1].equals("reference");Headless h=new Headless();Field ef=Headless.class.getDeclaredField("emulator");ef.setAccessible(true);
         Common emulator=(Common)ef.get(h);ArrayList<String> params=new ArrayList<String>();Collections.addAll(params,"--rms","memory",args[0]);
         emulator.initParams(params,new DeviceEntry("Default",null,"org/microemu/device/default/device.xml",true,false),J2SEDevice.class);emulator.initMIDlet(true);
@@ -156,7 +158,7 @@ public class LoginProbe extends NetworkStateProbe {
         action=load("n","jimm.comm.ConnectAction");contact=load("z","jimm.ContactItem");list=load("m","jimm.ContactList");item=load("bs","jimm.ContactListItem");
         update=load("ct","jimm.comm.UpdateContactListAction");packet=load("an","jimm.comm.Packet");http=load("ay","jimm.comm.Icq$HTTPConnection");io=load("LoginIO","LoginIO");
         out=new PrintWriter(new OutputStreamWriter(new FileOutputStream(args[2]),"UTF-8"));final Throwable[] failure=new Throwable[1];final CountDownLatch done=new CountDownLatch(1);
-        Display.getDisplay(midlet).callSerially(new Runnable(){public void run(){try{exercise();}catch(Throwable e){failure[0]=e;}finally{done.countDown();}}});
+        Display.getDisplay(midlet).callSerially(new Runnable(){public void run(){try{exercise.run();}catch(Throwable e){failure[0]=e;}finally{done.countDown();}}});
         if(!done.await(30,TimeUnit.SECONDS))throw new AssertionError("Login probe timeout");out.close();if(failure[0]!=null)throw new AssertionError("Login probe failed",failure[0]);
         System.out.println("PASS probe: "+observations+" login/roster observations");
     }

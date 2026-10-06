@@ -173,6 +173,11 @@ public class RunnableImpl implements Runnable
 		callSerially(TYPE_UPDATE_CL_CAPTION);
 	}
 
+	static public void addContactSerially(ContactItem contact)
+	{
+		callSerially(TYPE_ADDCONTACT, contact);
+	}
+
 	static public void addMessageSerially(Message message)
 	{
 		if (!ActionListener.isSpam(message))

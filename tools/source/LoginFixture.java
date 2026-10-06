@@ -18,12 +18,13 @@ public class LoginFixture implements Opcodes {
         boolean ref=args[2].equals("reference");error=ref?"bv":"jimm/JimmException";
         String login=ref?"n":"jimm/comm/ConnectAction",base=ref?"ap":"jimm/comm/Icq$Connection",icq=ref?"r":"jimm/comm/Icq";
         String packet=ref?"an":"jimm/comm/Packet",http=ref?"ay":"jimm/comm/Icq$HTTPConnection",runnable=ref?"l":"jimm/RunnableImpl",message=ref?"ac":"jimm/comm/Message";
+        String roster=ref?"ct":"jimm/comm/UpdateContactListAction",util=ref?"co":"jimm/comm/Util";
         try(JarFile in=new JarFile(args[0]);JarOutputStream out=new JarOutputStream(Files.newOutputStream(Paths.get(args[1])))){
             Enumeration<JarEntry> entries=in.entries();
             while(entries.hasMoreElements()){
                 JarEntry entry=entries.nextElement();byte[] bytes=in.getInputStream(entry).readAllBytes();
                 String owner=entry.getName().replace(".class","");
-                if(owner.equals(login)||owner.equals(http)||owner.equals(runnable)){
+                if(owner.equals(login)||owner.equals(http)||owner.equals(runnable)||owner.equals(roster)||owner.equals(util)){
                     ClassWriter w=new ClassWriter(0);
                     new ClassReader(bytes).accept(new ClassVisitor(ASM9,w){
                         public MethodVisitor visitMethod(int access,String name,String desc,String sig,String[] exceptions){
@@ -36,7 +37,13 @@ public class LoginFixture implements Opcodes {
                             if(owner.equals(runnable)&&name.equals(ref?"a":"addMessageSerially")&&desc.equals("(L"+message+";)V")){
                                 m.visitCode();m.visitVarInsn(ALOAD,0);m.visitMethodInsn(INVOKESTATIC,"LoginIO","message","(Ljava/lang/Object;)V",false);m.visitInsn(RETURN);m.visitMaxs(1,1);m.visitEnd();return null;
                             }
-                            if(!owner.equals(login))return m;
+                            if(owner.equals(runnable)&&name.equals(ref?"a":"callSerially")&&desc.equals("(ILjava/lang/Object;)V")){
+                                return new MethodVisitor(ASM9,m){public void visitCode(){super.visitCode();
+                                    visitVarInsn(ILOAD,0);visitIntInsn(BIPUSH,8);Label other=new Label();visitJumpInsn(IF_ICMPNE,other);
+                                    visitVarInsn(ALOAD,1);visitMethodInsn(INVOKESTATIC,"LoginIO","contact","(Ljava/lang/Object;)V",false);visitInsn(RETURN);visitLabel(other);
+                                }};
+                            }
+                            if(!owner.equals(login)&&!owner.equals(roster)&&!owner.equals(util))return m;
                             return new MethodVisitor(ASM9,m){public void visitMethodInsn(int op,String owner,String name,String desc,boolean itf){
                                 if(owner.equals("java/lang/System")&&name.equals("currentTimeMillis"))super.visitMethodInsn(INVOKESTATIC,"LoginIO","time",desc,false);
                                 else if(owner.equals("java/lang/Thread")&&name.equals("sleep"))super.visitMethodInsn(INVOKESTATIC,"LoginIO","sleep",desc,false);

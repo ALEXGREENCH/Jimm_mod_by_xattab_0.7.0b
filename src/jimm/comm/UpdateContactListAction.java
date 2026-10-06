@@ -145,7 +145,7 @@ public class UpdateContactListAction extends Action
 				int groupId = cItem.getIntValue(ContactItem.CONTACTITEM_GROUP);
 				gItem = ContactList.getGroupById(groupId);
 				cItem.setIntValue(ContactItem.CONTACTITEM_ID, Util.createRandomId());
-				ContactList.addContactItem(cItem);
+				RunnableImpl.addContactSerially(cItem);
 				buf = packRosterItem(cItem, groupId);
 				if (action == ACTION_REQ_AUTH) state = STATE_ADD1;
 				else state = STATE_ADD2;
