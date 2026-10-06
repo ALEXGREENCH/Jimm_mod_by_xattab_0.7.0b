@@ -715,4 +715,16 @@ public class TextList extends VirtualList
 			top += paintList.getLine(line).getHeight(fontSize);
 		}
 	}
+
+	static public void showText(Graphics g, String s, int x, int y, int width, int fontSize, int fontStyle, int textColor)
+	{
+		TextList paintList = new TextList(null);
+		paintList.setFontSize(fontSize);
+		paintList.addBigTextInternal(s, textColor, fontStyle, -1, width);
+		for (int line = 0; line < paintList.getSize(); line++)
+		{
+			paintList.getLine(line).paint(x, y, g, fontSize, paintList);
+			y += paintList.getLine(line).getHeight(fontSize);
+		}
+	}
 }

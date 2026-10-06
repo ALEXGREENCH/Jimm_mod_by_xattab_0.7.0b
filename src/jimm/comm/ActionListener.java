@@ -752,7 +752,7 @@ public class ActionListener
                         // #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
                         // #sijapp cond.if modules_FILES is "true"#
                         // File transfer message
-                        if (plugin.equals("File") && Jimm.jimm.getSplashCanvasRef().isShown())
+                        if (plugin.equals("File") && Jimm.jimm.getSplashCanvasRef().isActive())
                         {
                          if (ackType == 2)
                          {

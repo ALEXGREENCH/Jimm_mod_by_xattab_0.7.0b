@@ -1497,9 +1497,11 @@ public abstract class VirtualList
         }
     }
 
+    private static int fontView;
+
     public static void drawString(Graphics g, String text, int x, int y, int anchor, int color)
     {
-        if (Options.getInt(Options.OPTION_FONT_VIEW) == 1)
+        if (fontView == 1)
         {
             g.setColor(0x7F7F7F);
             g.drawString(text, x + 1, y, anchor);
@@ -1760,6 +1762,7 @@ public abstract class VirtualList
 
 	public static void assignSoftKeys()
 	{
+        fontView = Options.getInt(Options.OPTION_FONT_VIEW);
 		if (Options.getBoolean(Options.OPTION_SWAP_SOFT_KEY))
 		{
 			MENU_LEFT_BAR  = MENU_TYPE_RIGHT_BAR;
@@ -1911,6 +1914,11 @@ public abstract class VirtualList
 		return menuBarFont.getHeight() + 2;
 	}
 	
+	protected boolean hasSoftKeys()
+	{
+		return leftMenu != null || rightMenu != null;
+	}
+
 	protected boolean hasBothSoftKeys()
 	{
 		return leftMenu != null && rightMenu != null;

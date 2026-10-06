@@ -1042,7 +1042,7 @@ public class JimmUI implements CommandListener
 			if ((actionNum == Options.HOTKEY_LOCK) && (diff > 900))
 			{
 				lockPressedTime = -1;
-				SplashCanvas.lock();
+				SplashCanvas.lockScreen();
 			}
 		}
 	}

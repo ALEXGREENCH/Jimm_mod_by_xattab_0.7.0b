@@ -8,7 +8,7 @@ import DrawControls.*;
 import jimm.comm.*;
 import jimm.util.*;
 
-public class TimerTasks extends TimerTask implements CommandListener
+public class TimerTasks extends TimerTask
 {
 	public static final int SC_AUTO_REPAINT = 1;
 
@@ -183,7 +183,7 @@ public class TimerTasks extends TimerTask implements CommandListener
 			cancel();
 			action.onEvent(Action.ON_COMPLETE);
 		}
-		else if (action.isError())
+		else if (action.isError() && !canceled)
 		{
 			wasError = true;
 			cancel();
@@ -252,14 +252,5 @@ public class TimerTasks extends TimerTask implements CommandListener
 	public void flashRestoreOldCaption()
 	{
 		JimmUI.setCaption(flashDispl, flashOldText);
-	}
-
-	public void commandAction(Command c, Displayable d)
-	{
-		if (c == SplashCanvas.cancelCommnad)
-		{
-			action.onEvent(Action.ON_CANCEL);
-			cancel();
-		}
 	}
 }

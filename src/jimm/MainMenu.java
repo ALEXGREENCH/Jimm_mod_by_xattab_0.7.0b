@@ -477,7 +477,7 @@ public class MainMenu implements CommandListener
 				break;
 
 			case MENU_KEYLOCK: /* Enable keylock */
-				SplashCanvas.lock();
+				SplashCanvas.lockScreen();
 				break;
 
 			case MENU_STATUS: /* Set status */

@@ -202,7 +202,7 @@ public class Jimm extends MIDlet
 		// Create splash canvas object
 		this.sc = new SplashCanvas(ResourceBundle.getString("loading"));
 
-		Display.getDisplay(this).setCurrent(this.sc);
+		this.sc.activate(Display.getDisplay(this));
 
 		// Get display object
 		Jimm.display = Display.getDisplay(this);

@@ -76,6 +76,16 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Lifecycle mismatch: compare build/source-tests/network-reference.txt and network-source.txt')
     report['network_observations'] = len(network_ref.read_text().splitlines())
     report['network_differences'] = 0
+    splash_ref, splash_src = TEST / 'splash-reference.txt', TEST / 'splash-source.txt'
+    for path, mode, output in [(original, 'reference', splash_ref), (test_jar, 'source', splash_src)]:
+        fixture = TEST / ('splash-' + mode + '.jar')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'SplashFixture', path, fixture, mode], 'splash-fixture-' + mode)
+        report['splash_' + mode] = run([*java, 'SplashProbe', fixture, mode, output], 'splash-' + mode)
+    if splash_ref.read_bytes() != splash_src.read_bytes():
+        raise AssertionError('Splash mismatch: compare build/source-tests/splash-reference.txt and splash-source.txt')
+    report['splash_observations'] = len(splash_ref.read_text().splitlines())
+    report['splash_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

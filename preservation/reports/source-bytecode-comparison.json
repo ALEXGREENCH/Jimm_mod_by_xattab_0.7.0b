@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "c3310860cdcaeae7745f71d9e2039e9278d1abbb8bef1a5060d66d61cd93d363",
+  "rebuilt_sha256": "71ba482db01fc40f3894648043260eef26ff355f41f6ac6d505ec98077ec55ee",
   "reference_classes": 101,
   "rebuilt_classes": 101,
   "methods": [
@@ -89,7 +89,7 @@
       "reference_instructions": 50,
       "source_instructions": 50,
       "same_normalized_instructions": false,
-      "reference_normalized_sha256": "f3dc1ab06b7d9ac8285ce34d909661cf3189b8176fabb4b8b650f49f8dae10f2",
+      "reference_normalized_sha256": "3b3ed16a55f0445c60cf72056bc1321926c807a3b37d84bf2d4990ef6b4186a0",
       "source_normalized_sha256": "359e48dd6c2175a873057b7fc49a5430f413b3b524ac3c9f1d820dda4bfd1da4"
     },
     {
@@ -232,8 +232,184 @@
       "reference_instructions": 77,
       "source_instructions": 67,
       "same_normalized_instructions": false,
-      "reference_normalized_sha256": "05cbb7200462df0fc9cde92d1c436f94eb321c8afb95f4b43af21a4849bd6352",
+      "reference_normalized_sha256": "22a1aafffdad0845e26bdc620e1e2bf59534cfebbabf58a46bbeb3452127ab56",
       "source_normalized_sha256": "42eaba5cc3e47c3aab10e5c23406bf390868b6719510082f581466405f2debe6"
+    },
+    {
+      "reference": "cv.a(Ljava/lang/String;)V",
+      "source": "jimm/SplashCanvas.setMessage(Ljava/lang/String;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 8,
+      "source_instructions": 8,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "12e345ff09ea63a0da994eda7d830ca79ceddf108835578f3392322a7a460bed",
+      "source_normalized_sha256": "12e345ff09ea63a0da994eda7d830ca79ceddf108835578f3392322a7a460bed"
+    },
+    {
+      "reference": "cv.a(I)V",
+      "source": "jimm/SplashCanvas.setStatusToDraw(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 3,
+      "source_instructions": 3,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "5a91d6a5b3bde6e29f972d00fb80a85cb8fd3f46dba6de190886d18a76fd7dae",
+      "source_normalized_sha256": "5a91d6a5b3bde6e29f972d00fb80a85cb8fd3f46dba6de190886d18a76fd7dae"
+    },
+    {
+      "reference": "cv.f(Le;)V",
+      "source": "jimm/SplashCanvas.setXStatusToDraw(LDrawControls/Icon;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 3,
+      "source_instructions": 3,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "b7b073db096e2173155c7beb329a4a8b947f5c74b4dfc696a6eb66512659a0d7",
+      "source_normalized_sha256": "b7b073db096e2173155c7beb329a4a8b947f5c74b4dfc696a6eb66512659a0d7"
+    },
+    {
+      "reference": "cv.l(I)V",
+      "source": "jimm/SplashCanvas.setProgress(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "5237954ca095ca97eaf403ba9959ae7c58e2d43ac5241ebf09978b215a3a6797",
+      "source_normalized_sha256": "5237954ca095ca97eaf403ba9959ae7c58e2d43ac5241ebf09978b215a3a6797"
+    },
+    {
+      "reference": "cv.b(Ljavax/microedition/lcdui/Command;)V",
+      "source": "jimm/SplashCanvas.addCmd(Ljavax/microedition/lcdui/Command;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 5,
+      "source_instructions": 5,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "7d036494a8311cf24e17def5bdb1201065f753ff29dd93be975b717838ac9d98",
+      "source_normalized_sha256": "7d036494a8311cf24e17def5bdb1201065f753ff29dd93be975b717838ac9d98"
+    },
+    {
+      "reference": "cv.c(Ljavax/microedition/lcdui/Command;)V",
+      "source": "jimm/SplashCanvas.removeCmd(Ljavax/microedition/lcdui/Command;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 4,
+      "source_instructions": 4,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "265aa00788977db99a5e9ad7f2ee7847c56b6d6f09fff2271760d1961e457388",
+      "source_normalized_sha256": "265aa00788977db99a5e9ad7f2ee7847c56b6d6f09fff2271760d1961e457388"
+    },
+    {
+      "reference": "cv.b(Ljavax/microedition/lcdui/CommandListener;)V",
+      "source": "jimm/SplashCanvas.setCmdListener(Ljavax/microedition/lcdui/CommandListener;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 4,
+      "source_instructions": 4,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "a231791ec29c546e501816e1520512c42e25a0c9e54d0a19d91746399c895c57",
+      "source_normalized_sha256": "a231791ec29c546e501816e1520512c42e25a0c9e54d0a19d91746399c895c57"
+    },
+    {
+      "reference": "cv.d()Z",
+      "source": "jimm/SplashCanvas.locked()Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "69b05329668e4cd228db1218b4bae505ea7d3b4c3409113c3fd6e067bc100f97",
+      "source_normalized_sha256": "69b05329668e4cd228db1218b4bae505ea7d3b4c3409113c3fd6e067bc100f97"
+    },
+    {
+      "reference": "cv.o()V",
+      "source": "jimm/SplashCanvas.messageAvailable()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "15a94b803f2631008870825a9763d9c24ad94cba06b00b0fc56a110f3000a65f",
+      "source_normalized_sha256": "15a94b803f2631008870825a9763d9c24ad94cba06b00b0fc56a110f3000a65f"
+    },
+    {
+      "reference": "cv.n()V",
+      "source": "jimm/SplashCanvas.lockScreen()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 38,
+      "source_instructions": 38,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "efc4af828d6288bf969ac4e47006db0adeda6861d34b03c64ab01534465aeb38",
+      "source_normalized_sha256": "e3b032c513e2da38d0495ca46d83a0ac9974c451efbf35382056b8b22c0103d7"
+    },
+    {
+      "reference": "cv.d(Z)V",
+      "source": "jimm/SplashCanvas.unlock(Z)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 14,
+      "source_instructions": 14,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "959bb5dc46e1f115b93caa26f7146877a1c013f6c1a063b36aa8af6917b56056",
+      "source_normalized_sha256": "6eccebb6bb0a6920aae9e91b54c93da8c822cb0ba49fb6568769814fa52b5d05"
+    },
+    {
+      "reference": "cv.a(Ljava/lang/String;Laa;Z)V",
+      "source": "jimm/SplashCanvas.addTimerTask(Ljava/lang/String;Ljimm/comm/Action;Z)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 42,
+      "source_instructions": 42,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "7d72860f47c12bb8c02f73e9068e6295a1e39a12bba8ae266cd6a6a5a803bd08",
+      "source_normalized_sha256": "0615d0a1a86e11537ac6d631ae670707e76ca16bb31019842093d261af3ac15c"
+    },
+    {
+      "reference": "cv.r()V",
+      "source": "jimm/SplashCanvas.cancelActionTimer()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 12,
+      "source_instructions": 12,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "ce7e0b33ef8f6bf458a3f1934430142207d10a60258503fec14e00570444129f",
+      "source_normalized_sha256": "ce7e0b33ef8f6bf458a3f1934430142207d10a60258503fec14e00570444129f"
+    },
+    {
+      "reference": "cv.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/SplashCanvas.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 10,
+      "source_instructions": 10,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "2eeaceb304c3f43ee97905259eca4301eb47f646cbd9a84f086c9bf1322dd0a1",
+      "source_normalized_sha256": "2eeaceb304c3f43ee97905259eca4301eb47f646cbd9a84f086c9bf1322dd0a1"
+    },
+    {
+      "reference": "at.cancel()Z",
+      "source": "jimm/TimerTasks.cancel()Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 6,
+      "source_instructions": 6,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "da4ce73918f8eb8c247412ff24fc9cbd51e700bef6b959bff2377332a5a89631",
+      "source_normalized_sha256": "da4ce73918f8eb8c247412ff24fc9cbd51e700bef6b959bff2377332a5a89631"
+    },
+    {
+      "reference": "at.run()V",
+      "source": "jimm/TimerTasks.run()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "reference_instructions": 199,
+      "source_instructions": 196,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "8a4ff3d1ab3c961020c512553a60ee48a1a3972ccc5e222ddac9a5c4dce7b150",
+      "source_normalized_sha256": "8f8b1e6940fcdcf24077bdc7c1fcc5b1034cf7fac924a010e664e45ac75d187f"
     }
   ],
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."

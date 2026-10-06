@@ -25,7 +25,7 @@ package jimm;
 
 import jimm.comm.*;
 import jimm.util.*;
-//#sijapp cond.if target is "MOTOROLA"#
+//#sijapp cond.if target is "MOTOROLA" | target is "MIDP2"#
 import DrawControls.*;
 //#sijapp cond.end#
 
@@ -33,26 +33,19 @@ import java.util.*;
 import javax.microedition.lcdui.*;
 import javax.microedition.midlet.MIDletStateChangeException;
 
-public class EnterPassword extends Form implements CommandListener 
+public class EnterPassword implements CommandListener
 {
     /** Creates a new instance of EnterPassword */
     private EnterPassword(Displayable previousForm) 
     {
-        super(null);
         _PreviousForm = previousForm;
         passwordTextField.setTitle(ResourceBundle.getString("enter_password"));
-        passwordTextField.addCommand(okCommand);
-        passwordTextField.addCommand(cancelCommand);
+        passwordTextField.addCommand(JimmUI.cmdOk);
+        passwordTextField.addCommand(JimmUI.cmdCancel);
         passwordTextField.setCommandListener(this);
     }
     
     private TextBox passwordTextField = new TextBox("", "", 20, TextField.PASSWORD);
-    private Command okCommand           = new Command(ResourceBundle.getString("ok"), Command.OK, 1);
-    //#sijapp cond.if target is "MIDP2"#
-    private Command cancelCommand       = new Command(ResourceBundle.getString("cancel"), Jimm.is_smart_SE() ? Command.CANCEL : Command.BACK, 2);
-    //#sijapp cond.else#
-    private Command cancelCommand       = new Command(ResourceBundle.getString("cancel"), Command.BACK, 2);
-    //#sijapp cond.end#
     private Displayable _PreviousForm;
 
     private void showPasswordForm()
@@ -61,7 +54,7 @@ public class EnterPassword extends Form implements CommandListener
         {
 			passwordTextField.setString("");
 			Jimm.display.setCurrent(passwordTextField);
-			//#sijapp cond.if target is "MOTOROLA"#
+			//#sijapp cond.if target is "MOTOROLA" | target is "MIDP2"#
 			LightControl.flash(true); // включение постоянной подстветки...
 			//#sijapp cond.end#
 		}
@@ -99,14 +92,15 @@ public class EnterPassword extends Form implements CommandListener
         }
         else
         {
-            MainMenu.activate();
+            SplashCanvas.unlock(false);
+            SplashCanvas.poundPressTime = 0;
         }
     }
 
 
     public void commandAction(Command command, Displayable displayable) 
     {
-        if (command == okCommand) 
+        if (command == JimmUI.cmdOk)
         {
             if (Options.getString(Options.OPTION_ENTER_PASSWORD).equals(passwordTextField.getString()))
             {
@@ -125,7 +119,7 @@ public class EnterPassword extends Form implements CommandListener
         }
         else 
         {
-            if (Icq.isNotConnected())
+            if (Icq.isNotConnected() && !SplashCanvas.locked())
             {
                 try
                 {

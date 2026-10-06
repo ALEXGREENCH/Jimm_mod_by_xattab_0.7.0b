@@ -314,9 +314,13 @@ public class Options
 	// Options form
 	static public OptionsForm optionsForm;
 	
-	static public int blinkColor, cursorColor;
+	static public int blinkColor, cursorColor, fontStyle;
 
-	/* Private constructor prevent to create instances of Options class */ 
+	public static void updateFontStyle()
+	{
+		fontStyle = getInt(OPTION_CL_FONT_STYLE) == Font.STYLE_ITALIC ? Font.STYLE_ITALIC : Font.STYLE_PLAIN;
+	}
+
 	public Options()
 	{
 		// Try to load option values from record store and construct options form
@@ -351,6 +355,7 @@ public class Options
 		// Initialize colors
 		blinkColor = getInt(OPTION_COLOR_BLINK); // Initialize blinkig color
 		cursorColor = getInt(OPTION_COLOR_CURSOR); // Initialize cursor color
+		updateFontStyle();
 	}
 
 	/* Set default values. This is done before loading because older saves may not contain all new values */
@@ -2196,6 +2201,7 @@ class OptionsForm implements CommandListener, ItemStateListener
 					boolean newHideOffline = choiceContactList.isSelected(idx++);
 					Options.setInt(Options.OPTION_CL_FONT_SIZE, clFontSizeChoiceGroup.getSelectedIndex());
 					Options.setInt(Options.OPTION_CL_FONT_STYLE, clFontStyleChoiceGroup.getSelectedIndex());
+					Options.updateFontStyle();
 					Options.setInt(Options.OPTION_CL_SORT_BY, newSortMethod);
 					Options.setBoolean(Options.OPTION_CL_HIDE_OFFLINE, newHideOffline);
 					Options.setBoolean(Options.OPTION_CL_HIDE_OFFLINE_ALL, choiceContactList.isSelected(idx++));

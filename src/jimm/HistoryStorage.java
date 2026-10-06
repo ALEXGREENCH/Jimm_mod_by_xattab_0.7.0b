@@ -296,7 +296,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		cp1251 = Options.getBoolean(Options.OPTION_CP1251_HACK);
 		SplashCanvas.setMessage(ResourceBundle.getString("exporting", ResourceBundle.FLAG_ELLIPSIS));
 		SplashCanvas.setProgress(0);
-		Jimm.display.setCurrent(Jimm.jimm.getSplashCanvasRef());
+		Jimm.jimm.getSplashCanvasRef().activate(Jimm.display);
 		if (citems == null)
 		{
 			citems = ContactList.getContactItems();
