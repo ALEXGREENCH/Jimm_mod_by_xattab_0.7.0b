@@ -20,7 +20,8 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'cv': 'jimm/SplashCanvas', 'cd': 'DrawControls/VirtualList',
            'aa': 'jimm/comm/Action', 'at': 'jimm/TimerTasks', 'e': 'DrawControls/Icon',
            'ay': 'jimm/comm/Icq$HTTPConnection', 'cb': 'jimm/comm/Icq$SOCKSConnection',
-           'an': 'jimm/comm/Packet'}
+           'an': 'jimm/comm/Packet', 'ct': 'jimm/comm/UpdateContactListAction',
+           'bq': 'jimm/comm/OtherAction'}
 SYMBOLS = {
     'co.a([BIIZ)Ljava/lang/String;': 'jimm/comm/Util.byteArrayToString([BIIZ)Ljava/lang/String;',
     'co.a(Ljava/lang/String;Z)[B': 'jimm/comm/Util.stringToByteArray(Ljava/lang/String;Z)[B',
@@ -95,6 +96,13 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('z', 'a', '(I[B)V', 'setIPValue'),
+    ('z', 'a', '(I)[B', 'getIPValue'),
+    ('ct', 'a', '(Lz;I)[B', 'packRosterItem'),
+    ('n', 'a', '()V', 'init'),
+    ('n', 'a', '(Lan;)Z', 'forward'),
+    ('r', 'b', '(I)V', 'setXStatus'),
+    ('bq', 'a', '(Z)V', 'setStandartUserInfo'),
     ('co', 'c', '([BII)Ljava/lang/String;', 'detectClientVersion'),
     ('co', 'a', '(I)I', 'translateStatusSend'),
     ('co', 'a', '(ILz;)I', 'translateStatusReceived'),

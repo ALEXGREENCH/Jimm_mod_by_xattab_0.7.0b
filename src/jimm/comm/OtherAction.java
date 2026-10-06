@@ -107,7 +107,6 @@ public class OtherAction
                       break; //ICQ 5.1
             case 15: guids.addElement(CAP_XTRAZ_CHAT);
                       guids.addElement(new GUID(Util.CAP_RICHTEXT));
-                      guids.addElement(new GUID(Util.CAP_AVATAR));
                       guids.addElement(CAP_TZERS);
                       guids.addElement(new GUID(Util.CAP_ICQ6));
                       guids.addElement(CAP_ICQLITE);
@@ -166,11 +165,10 @@ public class OtherAction
     }
    /*********************************************************************************************************/
 
-    public static void setStandartUserInfo() throws JimmException 
+    public static void setStandartUserInfo(boolean statusOnly) throws JimmException
     {
         GUID[] standart = new GUID[]
         {
-            new GUID(Util.CAP_AIM_SERVERRELAY),
             new GUID(Util.CAP_DIRECT),
             CAP_UNKNOWN
         };
@@ -206,6 +204,7 @@ public class OtherAction
         guids.copyInto(result);
         System.arraycopy(standart, 0, result, guids.size(), standart.length);
         setUserInfo(result);
+        if (!statusOnly) Icq.setXStatus(Options.getInt(Options.OPTION_XSTATUS));
     }
 
     // CLI_SETSTATUS packet data
@@ -246,7 +245,7 @@ public class OtherAction
         setClientId();
         Util.putDWord(CLI_SETSTATUS_DATA, 4, status);
         Icq.c.sendPacket(new SnacPacket(SnacPacket.SERVICE_FAMILY, SnacPacket.CLI_SETSTATUS_COMMAND, 0, new byte[0], CLI_SETSTATUS_DATA));
-        if (extendedStatus || extendedStatusSent) setStandartUserInfo();
+        if (extendedStatus || extendedStatusSent) setStandartUserInfo(true);
     }
 
 	public static final byte PSTATUS_ALL           = 0x01;

@@ -46,9 +46,9 @@ public class ConnectAction extends Action
 	public static final int STATE_CLI_ACKOFFLINEMSGS_SENT = 10;
 
 	// Privacy Lists begining
-	private static Hashtable ignoreList;
-	private static Hashtable invisibleList;
-	private static Hashtable visibleList;
+	private Hashtable ignoreList = new Hashtable();
+	private Hashtable invisibleList = new Hashtable();
+	private Hashtable visibleList = new Hashtable();
 	// Privacy Lists ending
 
 	private boolean cancel = false;
@@ -112,7 +112,7 @@ public class ConnectAction extends Action
 	private int state;
 
 	// Last activity
-	private long lastActivity = 0;
+	private long lastActivity = System.currentTimeMillis();
 	private boolean active;
 
 	// Temporary variables
@@ -166,15 +166,6 @@ public class ConnectAction extends Action
 	protected void init() throws JimmException
 	{
 		state = STATE_INIT;
-
-		// Privacy Lists begining
-		ignoreList    = new Hashtable();
-		invisibleList = new Hashtable();
-		visibleList   = new Hashtable();
-		// Privacy Lists ending
-
-		// Init activity timestamp
-		lastActivity = System.currentTimeMillis();
 
 		// Check parameters
 		if ((uin.length() == 0) || (password.length() == 0))
@@ -586,6 +577,7 @@ public class ConnectAction extends Action
 							// Normal contact
 							if ((type == 0x0000) || ((type == 0x0019 || type == 0x001B) && Options.getBoolean(Options.OPTION_CACHE_CONTACTS)))
 							{
+								ByteArrayOutputStream rosterData = new ByteArrayOutputStream();
 								// Get nick
 								String nick = new String(name);
 								
@@ -603,6 +595,12 @@ public class ConnectAction extends Action
 									{
 										noAuth = true;
 									}
+									else if (tlvType == 0x006D || tlvType == 0x015C || tlvType == 0x015D)
+									{
+										Util.writeWord(rosterData, tlvType, true);
+										Util.writeWord(rosterData, tlvData.length, true);
+										Util.writeByteArray(rosterData, tlvData);
+									}
 									
 									len -= 4;
 									len -= tlvData.length;
@@ -614,6 +612,7 @@ public class ConnectAction extends Action
 								try
 								{
 									ContactItem item = new ContactItem(id, group, name, nick, noAuth, true);
+									item.setIPValue(ContactItem.CONTACTITEM_ROSTER_DATA, rosterData.size() != 0 ? rosterData.toByteArray() : null);
 									items.addElement(item);
 
 									if ((type == 0x0019 || type == 0x001B))
@@ -715,7 +714,7 @@ public class ConnectAction extends Action
 						for (int i = 0; i < ContactList.cItems.size(); i++)
 						{
 							ContactItem contact = (ContactItem)ContactList.cItems.elementAt(i);
-							ConnectAction.setPrivacyMarks(contact);
+							setPrivacyMarks(contact);
 						}
 						// Privacy Lists ending
 
@@ -730,7 +729,7 @@ public class ConnectAction extends Action
 
 						// Send a CLI_SETUSERINFO packet
 						// Set version information to this packet in our capability
-						OtherAction.setStandartUserInfo();
+						OtherAction.setStandartUserInfo(false);
 
 						byte[] tmp_packet;
 
@@ -949,7 +948,7 @@ public class ConnectAction extends Action
 	}
 
 	// Privacy Lists begining
-	public static void setPrivacyMarks(ContactItem cItem)
+	private void setPrivacyMarks(ContactItem cItem)
 	{
 		String uin = cItem.getUinString();
 		Integer iid = (Integer)invisibleList.get(uin);

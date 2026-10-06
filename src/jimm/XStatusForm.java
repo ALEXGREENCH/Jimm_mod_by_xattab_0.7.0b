@@ -115,7 +115,7 @@ public class XStatusForm implements CommandListener
 				ContactList.activate();
                 try 
                 {
-                    OtherAction.setStandartUserInfo();
+                    OtherAction.setStandartUserInfo(false);
 
                     if (happyFlag != Options.getBoolean(Options.OPTION_FLAG_HAPPY))
 						OtherAction.setStatus(Icq.setWebAware() | (int)Options.getLong(Options.OPTION_ONLINE_STATUS));

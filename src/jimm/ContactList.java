@@ -1196,7 +1196,6 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		}
 		cItems.addElement(cItem);
 
-		ConnectAction.setPrivacyMarks(cItem);
 
 		cItem.setBooleanValue(ContactItem.CONTACTITEM_IS_TEMP, true);
 		return cItem;

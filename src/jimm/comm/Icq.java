@@ -2058,6 +2058,34 @@ public class Icq implements Runnable
 		Options.safe_save();
 	}
 
+    public static void setXStatus(int xStatus) throws JimmException
+    {
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        byte[] description = Util.stringToByteArray(Options.getString(Options.OPTION_XTRAZ_TITLE)
+                + " " + Options.getString(Options.OPTION_XTRAZ_MESSAGE), true);
+        if (xStatus != 255)
+        {
+            Util.writeWord(stream, 0x001D, true);
+            String mood = xStatus != XStatus.XSTATUS_NONE ? "icqmood" + xStatus : "";
+            Util.writeWord(stream, 0, true);
+            Util.writeWord(stream, 2, true);
+            Util.writeByte(stream, 4);
+            Util.writeByte(stream, description.length + 4);
+            Util.writeWord(stream, description.length, true);
+            Util.writeByteArray(stream, description);
+            Util.writeWord(stream, 0, true);
+            Util.writeWord(stream, 14, true);
+            Util.writeLenAndString(stream, mood, false);
+        }
+        if (stream.size() != 0)
+        {
+            byte[] data = stream.toByteArray();
+            Util.putWord(data, 2, data.length - 4);
+            c.sendPacket(new SnacPacket(SnacPacket.SERVICE_FAMILY, SnacPacket.CLI_SETSTATUS_COMMAND,
+                    SnacPacket.CLI_SETSTATUS_COMMAND, new byte[0], data));
+        }
+    }
+
     private int privateId = 0;
     public void setPrivateStatusId(int id)
     {

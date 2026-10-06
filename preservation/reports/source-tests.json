@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "b3f7744e417a1109d5ced159aeb7e086607c800a5076297c4748601d5edfcd1d",
+  "source_jar_sha256": "09c7f5d304704a3c245a82376961936ae38f7cd4e849f528aae0e938d796e748",
   "pure_logic": "PASS: 75837 May-reference differential checks (client versions, outgoing statuses, options streams)",
   "detector": "PASS probe: 3159 detector/status cases",
   "detector_cases": 3159,
@@ -20,6 +20,10 @@
   "transport_source": "PASS probe: 110 HTTP/SOCKS observations",
   "transport_observations": 110,
   "transport_differences": 0,
+  "login_reference": "PASS probe: 399 login/roster observations",
+  "login_source": "PASS probe: 399 login/roster observations",
+  "login_observations": 399,
+  "login_differences": 0,
   "ui": "PASS: MIDP2 startup and 10 options panels opened/saved with memory RMS",
   "limitations": [
     "MicroEmulator does not play all original sound formats.",
@@ -29,77 +33,77 @@
     {
       "target": "MIDP2",
       "language": "RU",
-      "sha256": "b3f7744e417a1109d5ced159aeb7e086607c800a5076297c4748601d5edfcd1d"
+      "sha256": "09c7f5d304704a3c245a82376961936ae38f7cd4e849f528aae0e938d796e748"
     },
     {
       "target": "MIDP2",
       "language": "UA",
-      "sha256": "6d85ec03c456dba5e08e689187572504ac8e7393a03c1189b34b53008733cfc8"
+      "sha256": "341de5dff822c3d0116f518a7dd049db0cc387e9b6a397a4edb7a22db69a8b69"
     },
     {
       "target": "MIDP2",
       "language": "RO",
-      "sha256": "983871f775fc476773ce979676ed5da7921acf561f3705aa7d6b2b2e6beb0d8d"
+      "sha256": "9d3ac1c874bfc9c54615e92a1a507ae67aaa9aa4aca2d0f74942b3bf79fd8480"
     },
     {
       "target": "MIDP2",
       "language": "EN",
-      "sha256": "774f913202df851f3c778008ac1954628b5f4058f7493764a170d35c4a6d97d9"
+      "sha256": "c278c0b563b47785642d0d429c38905780905a3e86a037cd2bbd7ec0119f651a"
     },
     {
       "target": "MIDP2",
       "language": "CZ",
-      "sha256": "4a746dee96d658934237fb2aca88ed7d17115359ca94b2ba827a86da5fd7ec35"
+      "sha256": "0d144cf500694b193a229bcc17b5ea92a9218ed43e3dfeb770b0eb4130a81009"
     },
     {
       "target": "MOTOROLA",
       "language": "RU",
-      "sha256": "94f8c4b4c6ce5f2385faf75e02d6606df8420b2d81a242c13fc7289fa191f07c"
+      "sha256": "953e088f6f268d578b0baecd6f4962e44761e5690353234156c111b75a8a4bd7"
     },
     {
       "target": "MOTOROLA",
       "language": "UA",
-      "sha256": "501e9fd426fa8cad85120d0f68f31b43212782a84c6fb552ec51e9a95c3d1a6d"
+      "sha256": "069ab4466f060e0010638047c0b9e90cf36cf7ea5aa504be36e2e09e1ada921d"
     },
     {
       "target": "MOTOROLA",
       "language": "RO",
-      "sha256": "78792bd6d34eaba2f26c8ba0e2b9d1679c880fab20a1d4411c285d4ebc9a2416"
+      "sha256": "564938cf925a5d7d0a376717414afc23b7d1f400c04c107357ec2c4a6efc5c4d"
     },
     {
       "target": "MOTOROLA",
       "language": "EN",
-      "sha256": "fd979457f05a4a6ce313399f1749d28d64733b41fd1bd636706bbc36ac2b42d1"
+      "sha256": "057e4c8c028d8e4e8243d225d4d5e829967709ea5a2c00e003f4cd0c1d9c067d"
     },
     {
       "target": "MOTOROLA",
       "language": "CZ",
-      "sha256": "f297216e66ac9dc7eb6d182b828e0ec60681852fcc40e35687a769c9c4dc0dda"
+      "sha256": "0e41980a58c60ad046d4a9dc0b90bc728d0abf896d3a88df2dd2afab5e1c737a"
     },
     {
       "target": "SIEMENS2",
       "language": "RU",
-      "sha256": "eca6b1d639a89f305693c668385869da33d4697cf1637868f22d8dcfe5e997f9"
+      "sha256": "5a6dd020adcc19d225bf9fdff13deba65b4b34db255575e19ca83f2f157b9b22"
     },
     {
       "target": "SIEMENS2",
       "language": "UA",
-      "sha256": "406ba996042cb49ee1c0ef17f64bacb176b9b7d6d971ca7f801dddaf5ee7ee96"
+      "sha256": "e7f0f0434e3f21d2bd20ef44943466fcf7c7e944ccb38cf49950a91efc613029"
     },
     {
       "target": "SIEMENS2",
       "language": "RO",
-      "sha256": "5de0b2bb95761ec10f816af4a5a939ed784e3bc6215e658fc10544ef8bf4cffb"
+      "sha256": "3a1eb5ac3d2adec2e487ed9e695e636aa6f47cb38eb9df4560151b8013152f7b"
     },
     {
       "target": "SIEMENS2",
       "language": "EN",
-      "sha256": "bf092b9c2347abc188d4d219286066b57b3936c1da43524bdb318db75ebb0ee4"
+      "sha256": "c70ffcf41245e3b7ad205eda8ec0be103f1fbd8bb5c975e92020ddfb1ee6ee37"
     },
     {
       "target": "SIEMENS2",
       "language": "CZ",
-      "sha256": "5c80ea276ef42e600679fad54c992504937d1773a1b168c0dd95b9d848443aa7"
+      "sha256": "0e6e5e301be2ff24429e1729cbf24e8d244a19e622b6c99f7f3eecde20155887"
     }
   ],
   "minimal_modules": [

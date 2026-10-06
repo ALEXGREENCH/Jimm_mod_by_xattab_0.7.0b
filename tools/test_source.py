@@ -39,7 +39,7 @@ def main(matrix=False, skip_build=False):
          '-d', TEST, *helpers], 'compile-tests')
     # No invokedynamic in the fixture classes loaded by MicroEmulator's legacy ASM.
     run([os.environ.get('JAVAC', 'javac'), '-source', '7', '-target', '7', '-encoding', 'UTF-8',
-         '-cp', recover.cp(runtime), '-d', TEST, ROOT / 'tools/source/TransportIO.java'], 'compile-transport-io')
+         '-cp', recover.cp(runtime), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java'], 'compile-transport-io')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
     original = ROOT / 'preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar'
@@ -99,6 +99,16 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Transport mismatch: compare build/source-tests/transport-reference.txt and transport-source.txt')
     report['transport_observations'] = len(transport_ref.read_text().splitlines())
     report['transport_differences'] = 0
+    login_ref, login_src = TEST / 'login-reference.txt', TEST / 'login-source.txt'
+    for path, mode, output in [(original, 'reference', login_ref), (test_jar, 'source', login_src)]:
+        fixture = TEST / ('login-' + mode + '.jar')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'LoginFixture', path, fixture, mode, TEST], 'login-fixture-' + mode)
+        report['login_' + mode] = run([*java, 'LoginProbe', fixture, mode, output], 'login-' + mode)
+    if login_ref.read_bytes() != login_src.read_bytes():
+        raise AssertionError('Login/roster mismatch: compare build/source-tests/login-reference.txt and login-source.txt')
+    report['login_observations'] = len(login_ref.read_text().splitlines())
+    report['login_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

@@ -524,6 +524,9 @@ public class UpdateContactListAction extends Action
 			Util.writeLenAndString(addData, cItem.getStringValue(ContactItem.CONTACTITEM_NAME), true);
 		}
 
+		byte[] rosterData = cItem.getIPValue(ContactItem.CONTACTITEM_ROSTER_DATA);
+		if (rosterData != null) Util.writeByteArray(addData, rosterData);
+
 		/* TLV(0x0066) - you are awaiting authorization for this buddy */
 		if (action == ACTION_REQ_AUTH)
 		{

@@ -2472,7 +2472,7 @@ class OptionsForm implements CommandListener, ItemStateListener
 		{
 			try
 			{
-				OtherAction.setStandartUserInfo();
+				OtherAction.setStandartUserInfo(false);
 				OtherAction.setStatus(Icq.setWebAware() | (int)Options.getLong(Options.OPTION_ONLINE_STATUS));
 			}
 			catch (Exception e) {}

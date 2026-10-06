@@ -264,12 +264,23 @@ public class ContactItem implements ContactListItem
 		       (((int)array[3] & 0xFF) <<24);
 	}
 
+	//#sijapp cond.end #
+	//#sijapp cond.end #
+
+	private byte[] rosterData;
+	public static final int CONTACTITEM_ROSTER_DATA = 227;
+
 	synchronized public void setIPValue(int key, byte[] value)
 	{
 		switch (key)
 		{
+		//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
+		//#sijapp cond.if modules_FILES is "true"#
 		case CONTACTITEM_INTERNAL_IP: intIP = arrayToLongIP(value); break;
 		case CONTACTITEM_EXTERNAL_IP: extIP = arrayToLongIP(value); break;
+		//#sijapp cond.end#
+		//#sijapp cond.end#
+		case CONTACTITEM_ROSTER_DATA: rosterData = value; break;
 		}
 	}
 	
@@ -277,13 +288,16 @@ public class ContactItem implements ContactListItem
 	{
 		switch (key)
 		{
+		//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
+		//#sijapp cond.if modules_FILES is "true"#
 		case CONTACTITEM_INTERNAL_IP: return longIPToByteAray(intIP);
 		case CONTACTITEM_EXTERNAL_IP: return longIPToByteAray(extIP);
+		//#sijapp cond.end#
+		//#sijapp cond.end#
+		case CONTACTITEM_ROSTER_DATA: return rosterData;
 		}
 		return null;
 	}
-	//#sijapp cond.end #
-	//#sijapp cond.end #
 	
 	public void saveToStream(DataOutputStream stream) throws IOException
 	{
@@ -297,6 +311,12 @@ public class ContactItem implements ContactListItem
         stream.writeInt(getInvisibleId());
         stream.writeInt(getIgnoreId());
         // Privacy lists ending
+        if (rosterData != null)
+        {
+            stream.writeShort(rosterData.length);
+            stream.write(rosterData);
+        }
+        else stream.writeShort(0);
 	}
 	
 	public void loadFromStream(DataInputStream stream) throws IOException
@@ -310,6 +330,13 @@ public class ContactItem implements ContactListItem
         setInvisibleId(stream.readInt());
         setIgnoreId(stream.readInt());
         // Privacy lists ending
+        int length = stream.readShort();
+        if (length != 0)
+        {
+            rosterData = new byte[length];
+            stream.read(rosterData);
+        }
+        else rosterData = null;
 	}
 
 	/* Variable keys */

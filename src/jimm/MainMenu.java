@@ -762,7 +762,7 @@ public class MainMenu implements CommandListener
 			{
 				try 
 				{
-					OtherAction.setStandartUserInfo();
+					OtherAction.setStandartUserInfo(false);
 				} 
 				catch (JimmException e) 
 				{
