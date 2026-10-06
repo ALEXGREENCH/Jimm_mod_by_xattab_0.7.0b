@@ -191,6 +191,7 @@ public class Options
 	public static final int OPTION_STRING_VERSION            =  31; /* String  */
 	public static final int OPTION_PROT_VERSION              =  98; /* int     */
 	public static final int OPTION_ENTER_PASSWORD            =  38; /* String  */
+	public static final int OPTION_ABOUT_NOTICE              =  39; /* String  */
 	public static final int OPTION_IMG_PATH                  =  34; /* String  */
 	public static final int OPTION_ANTISPAM_MSG              =  35; /* String  */
 	public static final int OPTION_ANTISPAM_HELLO            =  36; /* String  */
@@ -377,6 +378,7 @@ public class Options
         setBoolean(OPTION_TRANSLITERATE, false);
         setBoolean(OPTION_XSTATUS_RIGHT, false);
         setBoolean(OPTION_CONFIRM_EXIT, false);
+        setString(OPTION_ABOUT_NOTICE, emptyString);
 
 	    setString (Options.OPTION_UIN1,               emptyString);
 		setString (Options.OPTION_PASSWORD1,          emptyString);

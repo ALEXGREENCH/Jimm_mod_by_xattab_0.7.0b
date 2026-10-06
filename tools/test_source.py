@@ -39,7 +39,7 @@ def main(matrix=False, skip_build=False):
          '-d', TEST, *helpers], 'compile-tests')
     # No invokedynamic in the fixture classes loaded by MicroEmulator's legacy ASM.
     run([os.environ.get('JAVAC', 'javac'), '-source', '7', '-target', '7', '-encoding', 'UTF-8',
-         '-cp', recover.cp(runtime), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java'], 'compile-transport-io')
+         '-cp', recover.cp(runtime), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java'], 'compile-transport-io')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
     original = ROOT / 'preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar'
@@ -147,6 +147,16 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Profile mismatch: compare build/source-tests/profile-reference.txt and profile-source.txt')
     report['profile_observations'] = len(profile_ref.read_text().splitlines())
     report['profile_differences'] = 0
+    about_ref, about_src = TEST / 'about-reference.txt', TEST / 'about-source.txt'
+    for mode, output in [('reference', about_ref), ('source', about_src)]:
+        fixture = TEST / ('about-' + mode + '.jar')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'AboutFixture', TEST / ('login-' + mode + '.jar'), fixture, mode, TEST], 'about-fixture-' + mode)
+        report['about_' + mode] = run([*java, 'AboutProbe', fixture, mode, output], 'about-' + mode)
+    if about_ref.read_bytes() != about_src.read_bytes():
+        raise AssertionError('About/version mismatch: compare build/source-tests/about-reference.txt and about-source.txt')
+    report['about_observations'] = len(about_ref.read_text().splitlines())
+    report['about_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

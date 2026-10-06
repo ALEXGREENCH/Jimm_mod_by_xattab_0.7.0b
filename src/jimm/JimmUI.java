@@ -135,8 +135,6 @@ public class JimmUI implements CommandListener, VirtualListCommands
 
 	public final static Command cmdClearText = new Command(ResourceBundle.getString("clear"),       Command.ITEM,   12);
 
-	public final static Command cmdVisitCite = new Command(ResourceBundle.getString("visit_site"),   Command.ITEM,   5);
-	public final static Command cmdVisitForum = new Command(ResourceBundle.getString("visit_forum"), Command.ITEM,   6);
 
 	static private CommandListener listener;
 	static private Hashtable commands = new Hashtable();
@@ -450,22 +448,29 @@ public class JimmUI implements CommandListener, VirtualListCommands
 				aboutTextList = null;
 			}
 
-			else if (c == cmdVisitCite)
+			else if (c == cmdSelect)
 			{
-				try
+				String url = null;
+				switch (aboutTextList.getCurrTextIndex())
 				{
-					Jimm.jimm.platformRequest("http://jimm.im/wap");
+					case 1000:
+						url = Util.byteArrayToString(Util.URL_HOME, 0, Util.URL_HOME.length);
+						break;
+					case 1001:
+						url = "http://wapland.org/forum";
+						break;
+					case 1002:
+						url = Util.byteArrayToString(Util.URL_ADVERTISEMENT, 0, Util.URL_HOME.length);
+						break;
 				}
-				catch (Exception e) {}
-			}
-
-			else if (c == cmdVisitForum)
-			{
-				try
+				if (url != null)
 				{
-					Jimm.jimm.platformRequest("http://wapland.org/forum");
+					try
+					{
+						Jimm.jimm.platformRequest(url);
+					}
+					catch (Exception e) {}
 				}
-				catch (Exception e) {}
 			}
 		}
 
@@ -609,73 +614,56 @@ public class JimmUI implements CommandListener, VirtualListCommands
     
     // String for recent version
     static private String version;
+    static private String aboutNotice;
     
 	static public void about(Displayable lastDisplayable_)
 	{
 		System.gc();
 		long freeMem = Runtime.getRuntime().freeMemory() / 1024;
-
 		if (aboutTextList == null) aboutTextList = new TextList(null);
-		
 		aboutTextList.lock();
 		aboutTextList.clear();
 		aboutTextList.setMode(TextList.MODE_TEXT);
 		setColorScheme(aboutTextList, false);
-/*
-		aboutTextList.setColors
-		(
-			Options.getInt(Options.OPTION_COLOR_TEXT),
-			Options.getInt(Options.OPTION_COLOR_CAP),
-			Options.getInt(Options.OPTION_COLOR_BACK),
-			Options.getInt(Options.OPTION_COLOR_BLUE)
-		);
-*/
-		// #sijapp cond.if target is "MOTOROLA"#
+		aboutTextList.setCaption(ResourceBundle.getString("about"));
+		//#sijapp cond.if target is "MOTOROLA"#
 		aboutTextList.setFontSize(Font.SIZE_MEDIUM);
 		//#sijapp cond.else#
 		aboutTextList.setFontSize(Font.SIZE_SMALL);
 		//#sijapp cond.end#
 
-		aboutTextList.setCaption(ResourceBundle.getString("about"));
-		
-		String commaAndSpace = ", "; 
-	    
+		String commaAndSpace = ", ";
+		Icon linkImage = ContactList.imageList.elementAt(15);
+		int style = Options.fontStyle;
+		int color = aboutTextList.getTextColor();
+		aboutNotice = Options.getString(Options.OPTION_ABOUT_NOTICE);
+		if ((aboutNotice != null) && (aboutNotice.length() > 5))
+			addTextListItem(aboutTextList, aboutNotice, linkImage, 1002, false, false);
+
 		StringBuffer str = new StringBuffer();
-		str.append(" ").append(ResourceBundle.getString("about_info")).append("\n")
-		
-		   .append(ResourceBundle.getString("midp_info")).append(": \n")
-		   .append(Jimm.microeditionPlatform);
-		
+		str.append(" ").append(ResourceBundle.getString("about_info"));
+		aboutTextList.addBigText(str.toString(), color, style, -1);
+		addTextListItem(aboutTextList, " http://www.jimm.im", linkImage, 1000, false, false);
+		addTextListItem(aboutTextList, " http://wapland.org", linkImage, 1001, false, false);
+		str = new StringBuffer();
+		str.append("\n").append(ResourceBundle.getString("midp_info")).append(": \n").append(Jimm.microeditionPlatform);
 		if (Jimm.microeditionProfiles != null) str.append(commaAndSpace).append(Jimm.microeditionProfiles);
-		
 		String locale = System.getProperty("microedition.locale");
 		if (locale != null) str.append(commaAndSpace).append(locale);
-		
-		str.append("\n\n")
-		   .append(ResourceBundle.getString("free_heap")).append(": ")
-		   .append(freeMem).append("kb\n")
-		   .append(ResourceBundle.getString("total_mem")).append(": ")
-		   .append(Runtime.getRuntime().totalMemory() / 1024)
-		   .append("kb\n\n")
-		   .append(ResourceBundle.getString("latest_ver")).append(": ");
-		
+		//#sijapp cond.if target is "MIDP2"#
+		if (Jimm.sonyEricssonPlatform != null) str.append(commaAndSpace).append(Jimm.sonyEricssonPlatform.toUpperCase());
+		//#sijapp cond.end#
+		str.append("\n\n").append(ResourceBundle.getString("free_heap")).append(": ").append(freeMem).append("kb\n")
+			.append(ResourceBundle.getString("total_mem")).append(": ").append(Runtime.getRuntime().totalMemory() / 1024)
+			.append("kb\n\n").append(ResourceBundle.getString("latest_ver")).append(": ");
 		if (version != null) str.append(version);
 		else str.append("...");
-		
-		try
-		{
-			aboutTextList.doCRLF(-1).addBigText(str.toString(), Options.getInt(Options.OPTION_COLOR_TEXT), Font.STYLE_PLAIN, -1);
-			aboutTextList.addCommandEx(cmdMenu, VirtualList.MENU_LEFT_BAR);
-			aboutTextList.addCommandEx(cmdBack, VirtualList.MENU_RIGHT_BAR);
-			aboutTextList.addCommandEx(cmdVisitCite, VirtualList.MENU_LEFT);
-			aboutTextList.addCommandEx(cmdVisitForum, VirtualList.MENU_LEFT);
-			aboutTextList.setCommandListener(_this);
-		}
-		catch (Exception e) {}
-
+		aboutTextList.addBigText(str.toString(), color, style, -1);
+		aboutTextList.addCommandEx(cmdSelect, VirtualList.MENU_DEFAULT);
+		aboutTextList.addCommandEx(cmdBack, VirtualList.MENU_RIGHT_BAR);
+		aboutTextList.setCommandListener(_this);
 		aboutTextList.unlock();
 		aboutTextList.activate(Jimm.display);
-
 		if (version == null) Jimm.getTimerRef().schedule(new GetVersionInfoTimerTask(), 2000);
 	}
 
@@ -818,41 +806,52 @@ public class JimmUI implements CommandListener, VirtualListCommands
     /*****************************************************************************/
     /*****************************************************************************/
 
-    // Waits until contact listupdate is completed
-    public static class GetVersionInfoTimerTask extends TimerTask
-    {
-        // Try to get current Jimm version from Jimm server
-        HttpConnection httemp;
-        InputStream istemp;
-        
-        // Timer routine
-        public void run()
-        {
-            try
-            {
-                httemp = (HttpConnection) Connector.open("http://jimm.im/last");
-                if (httemp.getResponseCode() != HttpConnection.HTTP_OK) throw new IOException();
-                istemp = httemp.openInputStream();
-                byte[] version_ = new byte[(int)httemp.getLength()];
-                istemp.read(version_,0,version_.length);
-                version = new String(version_);
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            	version = "Error: " + e.getMessage();
-            }
-            
-            synchronized(_this)
-            {
-            	if ((aboutTextList != null) && aboutTextList.isActive())
-            	{
-            		aboutTextList.addBigText(version, aboutTextList.getTextColor(), Font.STYLE_PLAIN, -1);
-            	}
-            }
-        }
-    }
-    
+	// Loads the version and announcement shown on the About screen.
+	public static class GetVersionInfoTimerTask extends TimerTask
+	{
+		private HttpConnection httemp;
+		private InputStream istemp;
+
+		public void run()
+		{
+			Thread.yield();
+			Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
+			try
+			{
+				String url = Util.byteArrayToString(Util.URL_VERSION, 0, Util.URL_VERSION.length);
+				httemp = (HttpConnection)Connector.open(url);
+				httemp.setRequestProperty("X-Jimm-Version", "0.7b");
+				if (httemp.getResponseCode() != HttpConnection.HTTP_OK) throw new IOException();
+				istemp = httemp.openInputStream();
+				byte[] data = new byte[(int)httemp.getLength()];
+				int remaining = data.length;
+				int offset = 0;
+				while (remaining > 0)
+				{
+					int count = istemp.read(data, offset, remaining);
+					if (count == -1) return;
+					offset += count;
+					remaining -= count;
+				}
+				version = new String(data, 0, 10);
+				aboutNotice = Util.byteArrayToString(data, 11, data.length - 11, true);
+			}
+			catch (Exception e)
+			{
+				version = "Error: " + e.getMessage();
+			}
+			synchronized (_this)
+			{
+				if ((aboutTextList != null) && aboutTextList.isActive())
+				{
+					aboutTextList.addBigText(version, aboutTextList.getTextColor(), Options.fontStyle, -1);
+					Options.setString(Options.OPTION_ABOUT_NOTICE, aboutNotice);
+					Options.safe_save();
+				}
+			}
+		}
+	}
+
     /************************************************************************/
     /************************************************************************/
     /************************************************************************/
@@ -1502,7 +1501,12 @@ public class JimmUI implements CommandListener, VirtualListCommands
 	
 	public static void addTextListItem(TextList list, String text, Icon image, int value, boolean translate)
 	{
-		list.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) * 8);
+        addTextListItem(list, text, image, value, translate, true);
+	}
+
+	public static void addTextListItem(TextList list, String text, Icon image, int value, boolean translate, boolean setFont)
+	{
+		if (setFont) list.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
 		if (image != null) list.addImage(image, null, value);
 		String textToAdd = translate ? ResourceBundle.getString(text) : text;
 		list.addBigText(textToAdd, list.getTextColor(), Options.getInt(Options.OPTION_CL_FONT_STYLE), value);

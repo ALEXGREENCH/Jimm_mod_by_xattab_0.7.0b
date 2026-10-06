@@ -32,6 +32,10 @@ import jimm.util.*;
 
 public class Util
 {
+    public static final byte[] URL_VERSION = explodeToBytes("68,74,74,70,3A,2F,2F,6A,69,6D,6D,2E,69,6D,2F,76,65,72", ',', 16);
+    public static final byte[] URL_HOME = explodeToBytes("68,74,74,70,3A,2F,2F,6A,69,6D,6D,2E,69,6D,2F,77,61,70", ',', 16);
+    public static final byte[] URL_ADVERTISEMENT = explodeToBytes("68,74,74,70,3A,2F,2F,6A,69,6D,6D,2E,69,6D,2F,61,64,76", ',', 16);
+
 	// Client CAPS
 	public static final byte[] CAP_AIM_SERVERRELAY = explodeToBytes("09,46,13,49,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
 	public static final byte[] CAP_UTF8 = explodeToBytes("09,46,13,4E,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
