@@ -154,6 +154,11 @@
   "selector_observations": 14190,
   "selector_differences": 0,
   "selector_raster_frames": 612,
+  "file_browser_reference": "PASS probe: 1501 login/roster observations",
+  "file_browser_source": "PASS probe: 1501 login/roster observations",
+  "file_browser_observations": 1501,
+  "file_browser_differences": 0,
+  "file_browser_raster_frames": 160,
   "ui": "PASS: MIDP2 startup and 10 options panels opened/saved with memory RMS",
   "limitations": [
     "MicroEmulator does not play all original sound formats.",
@@ -242,5 +247,6 @@
     "SIEMENS2"
   ],
   "resources": "PASS resources: 15 builds, 380 exact asset files, 8343 decoded language entries",
-  "graphics": "PASS graphics: 3 platforms, 75974 observations, 4551 frames\nPASS graphics bytecode: 73 signatures, 58 identical normalized instructions/handlers"
+  "graphics": "PASS graphics: 3 platforms, 75974 observations, 4551 frames\nPASS graphics bytecode: 73 signatures, 58 identical normalized instructions/handlers",
+  "filesystems": "PASS filesystems: 4 device paths, 1224 observations\nPASS filesystems bytecode: 32 signatures, 20 identical normalized instructions/handlers"
 }

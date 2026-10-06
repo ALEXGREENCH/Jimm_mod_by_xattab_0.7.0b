@@ -53,11 +53,15 @@ python tools/audit_source.py
 python tools/audit_resources.py
 python tools/test_graphics.py
 python tools/audit_graphics.py
+python tools/test_filesystems.py
+python tools/audit_filesystems.py
 ```
 
 Первая команда собирает 15 сочетаний платформ и языков, проверяет конфигурации без модулей, выполняет сравнения поведения с майским JAR, сверку ресурсов и графических компонентов трёх платформ. Вторая сравнивает выбранные сигнатуры и инструкции байткода. Третья позволяет отдельно повторить проверку ресурсов уже собранных 15 JAR: файлы сравниваются побайтово, локализации — по восстановленным именам и декодированным значениям. `test_graphics.py` собирает три русских варианта и сравнивает значки, анимации и шрифт Motorola; `--skip-build` использует уже собранные полные RU-варианты. `audit_graphics.py` повторяет отдельную сверку их сигнатур и инструкций.
 
-Отчёты: [функциональные проверки](../preservation/reports/source-tests.json), [сравнение байткода](../preservation/reports/source-bytecode-comparison.json), [ресурсы/локализации](../preservation/reports/source-resources.json), [графические компоненты](../preservation/reports/source-graphics.json) и [их байткод](../preservation/reports/source-graphics-bytecode.json). Область проверок и ограничения приведены в [описании восстановления](SOURCE-RECOVERY.md). Все сочетания модулей и поведение на реальных телефонах не проверены.
+Файловый браузер проверяется в общей функциональной серии. `test_filesystems.py` собирает три RU-варианта и отдельно сравнивает файловые адаптеры, включая JSR75 и собственный API Motorola; `--skip-build` использует уже собранные полные RU-варианты. `audit_filesystems.py` сверяет их сохранившиеся после оптимизации сигнатуры и инструкции. Эти проверки также входят в общую команду `--matrix`.
+
+Отчёты: [функциональные проверки](../preservation/reports/source-tests.json), [сравнение байткода](../preservation/reports/source-bytecode-comparison.json), [ресурсы/локализации](../preservation/reports/source-resources.json), [графические компоненты](../preservation/reports/source-graphics.json) и [их байткод](../preservation/reports/source-graphics-bytecode.json), [файловые адаптеры](../preservation/reports/source-filesystems.json) и [их байткод](../preservation/reports/source-filesystems-bytecode.json). Область проверок и ограничения приведены в [описании восстановления](SOURCE-RECOVERY.md). Все сочетания модулей и поведение на реальных телефонах не проверены.
 
 ## Историческая сборка Ant
 

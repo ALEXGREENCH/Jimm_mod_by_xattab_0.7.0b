@@ -41,7 +41,7 @@ def main(matrix=False, skip_build=False):
          '-d', TEST, *helpers], 'compile-tests')
     # No invokedynamic in the fixture classes loaded by MicroEmulator's legacy ASM.
     run([os.environ.get('JAVAC', 'javac'), '-source', '7', '-target', '7', '-encoding', 'UTF-8',
-         '-cp', recover.cp([TEST, *runtime]), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java', ROOT / 'tools/source/CameraIO.java', ROOT / 'tools/source/BlinkIO.java', ROOT / 'tools/source/OptionsIO.java', ROOT / 'tools/source/TimerIO.java', ROOT / 'tools/source/MenuIO.java'], 'compile-transport-io')
+         '-cp', recover.cp([TEST, *runtime]), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java', ROOT / 'tools/source/FileSystemIO.java', ROOT / 'tools/source/CameraIO.java', ROOT / 'tools/source/BlinkIO.java', ROOT / 'tools/source/OptionsIO.java', ROOT / 'tools/source/TimerIO.java', ROOT / 'tools/source/MenuIO.java'], 'compile-transport-io')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
     original = ROOT / 'preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar'
@@ -189,7 +189,7 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('File transfer mismatch: compare build/source-tests/file-transfer-reference.txt and file-transfer-source.txt')
     report['file_transfer_observations'] = len(file_ref.read_text().splitlines())
     report['file_transfer_differences'] = 0
-    for prefix, fixture_class, probe in [('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe'), ('list_menu', 'ListMenuFixture', 'ListMenuProbe'), ('list_menu_italic', 'ListMenuFixture', 'ListMenuProbe'), ('contact_tree', 'ContactTreeFixture', 'ContactTreeProbe'), ('tree', 'VirtualListFixture', 'TreeProbe'), ('form', 'FormFixture', 'FormProbe'), ('text_list', 'VirtualListFixture', 'TextListProbe'), ('alert', 'VirtualListFixture', 'AlertProbe'), ('templates', 'TemplatesFixture', 'TemplatesProbe'), ('templates_smart', 'TemplatesFixture', 'TemplatesProbe'), ('selector', 'SelectorFixture', 'SelectorProbe')]:
+    for prefix, fixture_class, probe in [('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe'), ('list_menu', 'ListMenuFixture', 'ListMenuProbe'), ('list_menu_italic', 'ListMenuFixture', 'ListMenuProbe'), ('contact_tree', 'ContactTreeFixture', 'ContactTreeProbe'), ('tree', 'VirtualListFixture', 'TreeProbe'), ('form', 'FormFixture', 'FormProbe'), ('text_list', 'VirtualListFixture', 'TextListProbe'), ('alert', 'VirtualListFixture', 'AlertProbe'), ('templates', 'TemplatesFixture', 'TemplatesProbe'), ('templates_smart', 'TemplatesFixture', 'TemplatesProbe'), ('selector', 'SelectorFixture', 'SelectorProbe'), ('file_browser', 'VirtualListFixture', 'FileBrowserProbe')]:
         reference_output, source_output = TEST / (prefix + '-reference.txt'), TEST / (prefix + '-source.txt')
         for mode, output in [('reference', reference_output), ('source', source_output)]:
             fixture = TEST / (prefix + '-' + mode + '.jar')
@@ -202,7 +202,7 @@ def main(matrix=False, skip_build=False):
             raise AssertionError(prefix + ' mismatch: compare build/source-tests/' + prefix + '-{reference,source}.txt')
         report[prefix + '_observations'] = len(reference_output.read_text().splitlines())
         report[prefix + '_differences'] = 0
-        if prefix in ['vlist', 'list_menu', 'list_menu_italic', 'tree', 'form', 'text_list', 'alert', 'templates', 'templates_smart', 'selector']:
+        if prefix in ['vlist', 'list_menu', 'list_menu_italic', 'tree', 'form', 'text_list', 'alert', 'templates', 'templates_smart', 'selector', 'file_browser']:
             report[prefix + '_raster_frames'] = int(reference_output.read_text().splitlines()[-1].split(':')[1])
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
@@ -231,6 +231,7 @@ def main(matrix=False, skip_build=False):
         report['minimal_modules'] = ['MIDP2', 'MOTOROLA', 'SIEMENS2']
         report['resources'] = run([sys.executable, ROOT / 'tools/audit_resources.py'], 'resource-audit')
         report['graphics'] = run([sys.executable, ROOT / 'tools/test_graphics.py', '--skip-build'], 'graphics-audit')
+        report['filesystems'] = run([sys.executable, ROOT / 'tools/test_filesystems.py', '--skip-build'], 'filesystems-audit')
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False, indent=2))
 

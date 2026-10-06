@@ -310,7 +310,7 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_class_jar_sha256": "1cf9da4fde961461713a4a2b701f0455877a6067b323f878a4c631b782a5345a",
+      "source_class_jar_sha256": "504ec51cefc501e81c34490251955b10f2dfaa0f450853401df2d982f3c0d731",
       "methods": [
         {
           "reference": "e.<init>(Ljavax/microedition/lcdui/Image;IIII)V",
@@ -668,7 +668,7 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_class_jar_sha256": "8b40c35af005596d8fef6e300feac16055c3b64077cb363c6481bc1472508250",
+      "source_class_jar_sha256": "46be7d9e2966cc1797e1356dbbcc333000639482e8bbe3c66a336baca157a006",
       "methods": [
         {
           "reference": "e.<init>(Ljavax/microedition/lcdui/Image;IIII)V",

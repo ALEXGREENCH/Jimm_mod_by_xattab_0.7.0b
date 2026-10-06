@@ -11,10 +11,12 @@ public class FileTransferIO extends TransportIO {
     public static Vector serials=new Vector(),progress=new Vector(),messages=new Vector();
     public static int starts,saves,collections,fileFailure,fileCloses,inputCloses,outputCloses,flushes;
     public static StringBuffer fileLog=new StringBuffer();
-    public static void resetFiles(){reset();files.clear();directories.clear();serials.removeAllElements();progress.removeAllElements();messages.removeAllElements();starts=saves=collections=fileFailure=fileCloses=inputCloses=outputCloses=flushes=0;fileLog.setLength(0);}
+    public static String[] rootEntries={"card/"};
+    public static long capacity=1048576L;
+    public static void resetFiles(){reset();files.clear();directories.clear();serials.removeAllElements();progress.removeAllElements();messages.removeAllElements();starts=saves=collections=fileFailure=fileCloses=inputCloses=outputCloses=flushes=0;fileLog.setLength(0);rootEntries=new String[]{"card/"};capacity=1048576L;}
     public static void file(String path,byte[] body){files.put(path,body);}
     public static void directory(String path,String[] entries){directories.put(path,entries);}
-    public static Enumeration roots(){return enumeration(new String[]{"card/"});}
+    public static Enumeration roots(){if(fileFailure==12)throw new IllegalStateException("file-roots");return enumeration(rootEntries);}
     static Enumeration enumeration(String[] strings){Vector v=new Vector();if(strings!=null)for(int i=0;i<strings.length;i++)v.addElement(strings[i]);return v.elements();}
     public static Connection open(String url)throws IOException{return open(url,3);}
     public static Connection open(String url,int mode)throws IOException{
@@ -35,7 +37,7 @@ public class FileTransferIO extends TransportIO {
             if(name.equals("canRead")||name.equals("canWrite")||name.equals("isOpen"))return Boolean.TRUE;
             if(name.equals("isHidden"))return Boolean.FALSE;
             if(name.equals("list")){if(fileFailure==2)throw new IOException("file-list");return enumeration((String[])directories.get(path));}
-            if(name.equals("totalSize")||name.equals("availableSize")||name.equals("usedSize"))return new Long(1048576L);
+            if(name.equals("totalSize")||name.equals("availableSize")||name.equals("usedSize")){if(fileFailure==11)throw new IOException("file-capacity");return new Long(capacity);}
             if(name.equals("fileSize")){if(fileFailure==3)throw new IOException("file-size");byte[] b=(byte[])files.get(path);return new Long(b==null?0:b.length);}
             if(name.equals("getName"))return path.substring(path.lastIndexOf('/')+1);
             if(name.equals("getPath"))return path.substring(0,path.lastIndexOf('/')+1);

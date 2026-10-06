@@ -1,0 +1,46 @@
+{
+  "scope": "Real filesystem bodies and Motorola factory dispatch; scripted Connector, root listings and JSR75 support predicate. The test MIDlet isolates application startup. Vendor FileConnection declarations are included in test fixtures only. This is not a physical-device, permissions or storage-durability test.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "jsr75_supported": true,
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_jar_sha256": "6409eb7b1b9c83e1cf2c10a9956da6c5c178fe9299c9d1ad50b46f7f9ac6f419",
+      "source_unoptimized_class_jar_sha256": "9459d24939cb611070092ec2754690b5c3d1de5f7dc18b0dd39f110ec7e6f8e9",
+      "source_unoptimized_with_resources_sha256": "bcea5bcaaca069a9156d13027672997d2369ddcd67f517fa4d9dbf3f58335c21",
+      "observations": 319,
+      "differences": 0
+    },
+    {
+      "target": "MOTOROLA",
+      "jsr75_supported": true,
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_jar_sha256": "a646d09f401355411d19d8848bb50a32b9c3f0a7b7c7b8b125b4b61436c78243",
+      "source_unoptimized_class_jar_sha256": "5dce29dfc251e547f594a045b59a0cbea20c02fd10c0d4e937f0fb16771b4f8c",
+      "source_unoptimized_with_resources_sha256": "9cf24413c3f16938589e70cbc3e2ad3a7f846ccb5a86b6f8efb2b756de8a8ebf",
+      "observations": 293,
+      "differences": 0
+    },
+    {
+      "target": "MOTOROLA",
+      "jsr75_supported": false,
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_jar_sha256": "a646d09f401355411d19d8848bb50a32b9c3f0a7b7c7b8b125b4b61436c78243",
+      "source_unoptimized_class_jar_sha256": "5dce29dfc251e547f594a045b59a0cbea20c02fd10c0d4e937f0fb16771b4f8c",
+      "source_unoptimized_with_resources_sha256": "9cf24413c3f16938589e70cbc3e2ad3a7f846ccb5a86b6f8efb2b756de8a8ebf",
+      "observations": 293,
+      "differences": 0
+    },
+    {
+      "target": "SIEMENS2",
+      "jsr75_supported": true,
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "source_jar_sha256": "c96b406905cb6537065bc9e8ff1198cc37d7ffa9988fef6933b3a67d69d35e9b",
+      "source_unoptimized_class_jar_sha256": "860e93d9df9272076eee90fcf447eec6ac21b12e7ce69bb893ef68be21e43812",
+      "source_unoptimized_with_resources_sha256": "5a90f3c7498a3cf8948eafd6b92c2a458f03ff08d5d42842d2f648c4bf702996",
+      "observations": 319,
+      "differences": 0
+    }
+  ],
+  "bytecode": "PASS filesystems bytecode: 32 signatures, 20 identical normalized instructions/handlers"
+}
