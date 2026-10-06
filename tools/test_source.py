@@ -189,7 +189,7 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('File transfer mismatch: compare build/source-tests/file-transfer-reference.txt and file-transfer-source.txt')
     report['file_transfer_observations'] = len(file_ref.read_text().splitlines())
     report['file_transfer_differences'] = 0
-    for prefix, fixture_class, probe in [('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe')]:
+    for prefix, fixture_class, probe in [('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe')]:
         reference_output, source_output = TEST / (prefix + '-reference.txt'), TEST / (prefix + '-source.txt')
         for mode, output in [('reference', reference_output), ('source', source_output)]:
             fixture = TEST / (prefix + '-' + mode + '.jar')

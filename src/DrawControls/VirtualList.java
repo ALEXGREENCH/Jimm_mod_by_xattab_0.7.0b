@@ -143,7 +143,6 @@ class VirtualCanvas extends Canvas implements Runnable
 	
 	protected void pointerReleased(int x, int y)
 	{
-		if (currentControl != null) currentControl.pointerReleased(x, y);
 	}
 	//#sijapp cond.end#
 }
@@ -213,6 +212,7 @@ public abstract class VirtualList
 	private boolean fullScreen = false;
 
 	private Icon capImage, capXstImage, capPrivateImage, capHappyImage, capSoundImage;
+	private int captionStatusEnd, captionXStatusEnd, captionPrivateEnd, captionSoundStart;
 
 	private static int leftOffset, rightOffset;
 //	private static final int clientImgWidth;
@@ -241,9 +241,9 @@ public abstract class VirtualList
 	static
 	{
 		//#sijapp cond.if target is "MIDP2" | target is "SIEMENS2"#
-		capFont = Font.getFont(Font.FACE_PROPORTIONAL, Font.STYLE_BOLD, Font.SIZE_SMALL);
+		capFont = Font.getFont(Font.FACE_PROPORTIONAL, Font.STYLE_BOLD + Options.fontStyle, Font.SIZE_SMALL);
 		//#sijapp cond.else#
-		capFont = Font.getFont(Font.FACE_PROPORTIONAL, Font.STYLE_PLAIN, Font.SIZE_SMALL);
+		capFont = Font.getFont(Font.FACE_PROPORTIONAL, Options.fontStyle, Font.SIZE_SMALL);
 		//#sijapp cond.end#
 		scrollerWidth = 4;
 		paintedItem = new ListItem();
@@ -1035,7 +1035,6 @@ public abstract class VirtualList
 	}
 
 	//#sijapp cond.if target is "MIDP2"#
-	private static long lastPointerTime = 0;
 	protected static int lastPointerYCrd = -1;
 //	private static int lastPointerXCrd = -1;
 	protected static int lastPointerTopItem = -1;
@@ -1069,41 +1068,29 @@ public abstract class VirtualList
 
 	protected void pointerPressed(int x, int y)
 	{
-		ContactList.enterContactMenu = false;
-
-		// is pointing on scroller
-		if (x >= getNonScrollerArea())
+		if (y < getCapHeight())
 		{
-			if ((srcollerY1 <= y) && (y < srcollerY2))
-			{
-				lastPointerYCrd = y;
-				lastPointerTopItem = topItem;
-				return;
-			}
+			if (!ContactList.tree.isActive()) return;
+			if (x < captionStatusEnd) MainMenu.initStatusList();
+			else if (x < captionXStatusEnd) MainMenu.showXStatusSelector();
+			else if (x < captionPrivateEnd) MainMenu.showPrivateStatus();
+			else if ((captionSoundStart != 0) && (x > captionSoundStart)) ContactList.changeSoundMode(true);
+			return;
+		}
+		ContactList.enterContactMenu = false;
+		if ((x >= getNonScrollerArea()) && (y < getHeightInternal() - getMenuBarHeight()))
+		{
+			lastPointerYCrd = y;
+			lastPointerTopItem = topItem;
+			return;
 		}
 		lastPointerTopItem = -1;
-		
-//		int mode = DMS_CLICK;
-
-		lastPointerTime = System.currentTimeMillis();
-//		if (((time - lastPointerTime) < 500) && (abs(x - lastPointerXCrd) < 10) && (abs(y - lastPointerYCrd) < 10))
-//			mode = DMS_DBLCLICK;
-		
+		System.currentTimeMillis();
 		if (bDIimage == null) bDIimage = Image.createImage(getWidthInternal(), getHeightInternal());
 		paintAllOnGraphics(bDIimage.getGraphics(), DMS_CLICK, x, y);
-		
-//		lastPointerXCrd = x;
 		lastPointerYCrd = y;
-//		lastPointerTime = time;
 	}
 
-	protected void pointerReleased(int x, int y)
-	{
-		if (((System.currentTimeMillis() - lastPointerTime) > 250) && (x < getNonScrollerArea()))
-		{
-			paintAllOnGraphics(bDIimage.getGraphics(), DMS_DBLCLICK, x, y);
-		}
-	}
 	//#sijapp cond.end#
 
 	//! Set caption text for list
@@ -1158,7 +1145,7 @@ public abstract class VirtualList
 			int imgHeight = capImage.getHeight() + 1; 
 			if (imgHeight > capHeight) capHeight = imgHeight;
 		}
-		return capHeight + 1;
+		return capHeight;
 	}
 
 	protected int drawCaption(Graphics g, int mode, int curX, int curY)
@@ -1170,10 +1157,11 @@ public abstract class VirtualList
 
 		if (mode != DMS_DRAW) return getCapHeight();
 
+		captionStatusEnd = captionXStatusEnd = captionPrivateEnd = captionSoundStart = 0;
 		int width = getWidthInternal();
 		g.setFont(capFont);
 		int height = getCapHeight();
-		drawGradient(g, capBkCOlor, transformColorLight(capBkCOlor, -48), 0, 0, width, height - 2, Options.captionAlpha);
+		drawGradient(g, capBkCOlor, transformColorLight(capBkCOlor, -48), 0, 0, width, height, Options.captionAlpha);
 /*
 		// Диаграмма свободного хипа...
 		g.setColor(0xFFFFFF);
@@ -1181,8 +1169,11 @@ public abstract class VirtualList
 		g.setColor(0x000077);
 		g.fillRect(width - 30, 1, (int)((Runtime.getRuntime().freeMemory() * 30) / Runtime.getRuntime().totalMemory()) + 1, 2);
 */
-		g.setColor(transformColorLight(capBkCOlor, -128));
-		g.drawLine(0, height - 1, width, height - 1);
+		if (Options.captionAlpha > 170)
+		{
+			g.setColor(transformColorLight(capBkCOlor, -128));
+			g.drawLine(0, height - 1, width, height - 1);
+		}
 
 		int x = leftOffset;
 
@@ -1190,6 +1181,7 @@ public abstract class VirtualList
 		{
 			capImage.drawByLeft(g, x, height / 2);
 			x += capImage.getWidth() + 1;
+			captionStatusEnd = x;
 		}
 
 		if (Options.getBoolean(Options.OPTION_SHOW_XST_ICON) && (capXstImage != null)
@@ -1197,12 +1189,14 @@ public abstract class VirtualList
 		{
 			capXstImage.drawByLeft(g, x, height / 2);
 			x += capXstImage.getWidth() + 1;
+			captionXStatusEnd = x;
 		}
 
 		if (Options.getBoolean(Options.OPTION_SHOW_PRST_ICON) && capPrivateImage != null)
 		{
 			capPrivateImage.drawByLeft(g, x, height / 2);
 			x += capPrivateImage.getWidth() + 1;
+			captionPrivateEnd = x;
 		}
 
 		if (Options.getBoolean(Options.OPTION_SHOW_HAPPY_ICON) && capHappyImage != null)
@@ -1223,7 +1217,9 @@ public abstract class VirtualList
 
 		if (Options.getBoolean(Options.OPTION_SHOW_SND_ICON) && capSoundImage != null)
 		{
-			capSoundImage.drawByRight(g, width - rightOffset, height / 2);
+			int soundX = width - rightOffset;
+			capSoundImage.drawByRight(g, soundX, height / 2);
+			captionSoundStart = soundX - capSoundImage.getWidth();
 		}
 
 		return height;
@@ -1252,13 +1248,13 @@ public abstract class VirtualList
 //		g.fillRect(width + 1, topY, scrollerWidth - 1, height - topY);
 
 		g.setColor(transformColorLight(color, -96));
-		g.drawLine(width, topY, width, height);
+		g.drawLine(width, topY, width, height - 1);
 		g.setColor(transformColorLight(color, -64));
-		g.drawLine(width + 1, topY, width + 1, height);
+		g.drawLine(width + 1, topY, width + 1, height - 1);
 		g.setColor(transformColorLight(color, -32));
-		g.drawLine(width + 2, topY, width + 2, height);
+		g.drawLine(width + 2, topY, width + 2, height - 1);
 		g.setColor(color);
-		g.drawLine(width + 3, topY, width + 3, height);
+		g.drawLine(width + 3, topY, width + 3, height - 1);
 
 		if (haveToShowScroller)
 		{
@@ -1356,18 +1352,6 @@ public abstract class VirtualList
 
 		if (mode == DMS_DRAW)
 		{
-			// Fill background
-			g.setColor(bkgrndColor);
-			g.fillRect(0, top_y, itemWidth, height);
-
-			// Display background image
-			Image image = getBackGroundImage();
-			if (image != null)
-			{
-				g.drawImage(image, getWidth() / 2, getHeight() / 2, Graphics.HCENTER | Graphics.VCENTER);
-			}
-
-			// Draw cursor
 			y = top_y;
 			for (i = topItem; i < size; i++)
 			{
@@ -1381,12 +1365,14 @@ public abstract class VirtualList
 				if (y >= bottomY) break;
 			}
 
+			g.setClip(0, 0, getWidthInternal(), getHeightInternal() - menuBarHeight);
 			if (grCursorY1 != -1)
 			{
 				if (Options.cursorAlpha > 10)
 				{
 					drawGradient(g, transformColorLight(Options.cursorColor, -32), Options.cursorColor, 1, grCursorY1 + 1, itemWidth - 1, grCursorY2, Options.cursorAlpha);
 				}
+				else g.setStrokeStyle(Graphics.DOTTED);
 				g.setColor(transformColorLight(Options.cursorColor, -48));
 				boolean isCursorUpper = (topItem >= 1) ? isItemSelected(topItem - 1) : false;
 				if (!isCursorUpper) g.drawLine(1, grCursorY1, itemWidth - 2, grCursorY1);
@@ -1418,23 +1404,14 @@ public abstract class VirtualList
 			{
 				if ((y1 < curY) && (curY < y2) && (x1 < curX) && (curX < x2))
 				{
-					switch (mode)
+					boolean alreadySelected = (currItem == i);
+					if (!alreadySelected)
 					{
-					case DMS_CLICK:
-						if (currItem != i)
-						{
-							currItem = i;
-							if (vlCommands != null) vlCommands.vlCursorMoved(this);
-							invalidate();
-						}
-						break;
-						
-					case DMS_DBLCLICK:
-						itemSelected();
-						break;
+						currItem = i;
+						if (vlCommands != null) vlCommands.vlCursorMoved(this);
+						invalidate();
 					}
-
-					pointerPressedOnUtem(i, curX-x1, curY-y1, mode);
+					if (!pointerPressedOnUtem(i, curX - x1, curY - y1, mode) && alreadySelected) itemSelected();
 					return true;
 				}
 			}
@@ -1443,6 +1420,7 @@ public abstract class VirtualList
 			y += itemHeight;
 			if (y >= bottomY) break;
 		}
+		g.setClip(0, 0, getWidthInternal(), getHeightInternal());
 		return false;
 	}
 
@@ -1573,6 +1551,11 @@ public abstract class VirtualList
 		switch (mode)
 		{
 		case DMS_DRAW:
+			int width = getWidthInternal(), height = getHeightInternal();
+			graphics.setColor(bkgrndColor);
+			graphics.fillRect(0, 0, width, height);
+			if (bgimage != null) graphics.drawImage(bgimage, width / 2, height / 2, Graphics.HCENTER | Graphics.VCENTER);
+			drawCaption(graphics, mode, curX, curY);
 			drawItems(graphics, y, getFontHeight(), menuBarHeight, mode, curX, curY);
 			drawScroller(graphics, y, getWidthInternal(), visCount, menuBarHeight);
 			if (menuBarHeight != 0) drawMenuBar(graphics, menuBarHeight, mode, curX, curY);
@@ -1581,7 +1564,6 @@ public abstract class VirtualList
 			
 		//#sijapp cond.if target is "MIDP2"#
 		case DMS_CLICK:
-		case DMS_DBLCLICK:
 			boolean clicked;
 			if (menuBarHeight != 0)
 			{
@@ -1596,7 +1578,6 @@ public abstract class VirtualList
 			break;
 		//#sijapp cond.end#
 		}
-		drawCaption(graphics, mode, curX, curY); // тут ниче не было...
 	}
 
 	static private Image bDIimage = null;
@@ -1783,8 +1764,8 @@ public abstract class VirtualList
 	}
 
 	// Font for painting menu bar
-	private static Font menuBarFont = Font.getFont(Font.FACE_PROPORTIONAL, Font.STYLE_BOLD, Font.SIZE_SMALL);
-	private static Font menuItemsFont = Font.getFont(Font.FACE_PROPORTIONAL, Font.STYLE_PLAIN, Font.SIZE_SMALL);
+	private static Font menuBarFont = Font.getFont(Font.FACE_PROPORTIONAL, Font.STYLE_BOLD + Options.fontStyle, Font.SIZE_SMALL);
+	private static Font menuItemsFont = Font.getFont(Font.FACE_PROPORTIONAL, Options.fontStyle, Font.SIZE_SMALL);
 
 	private Command leftMenu;
 	private Command rightMenu;
@@ -1878,8 +1859,11 @@ public abstract class VirtualList
 			g.drawLine(hCenter, vCenter + 5, hCenter + 6, vCenter - 1);
 		}
 
-		g.setColor(transformColorLight(capBkCOlor, -128));
-		g.drawLine(0, y1, width, y1);
+		if (Options.softbarAlpha > 170)
+		{
+			g.setColor(transformColorLight(capBkCOlor, -128));
+			g.drawLine(0, y1, width, y1);
+		}
 		return false;
 	}
 	

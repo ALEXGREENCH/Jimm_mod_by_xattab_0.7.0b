@@ -1,9 +1,191 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "3f98b612dc56ac7e4df1f63423684a932c31f5fb686f976dd7e0d7345ec5e152",
+  "rebuilt_sha256": "c3d0325ec5d8ec8ade021947d454ec3584bbd8ba499997b6a324b62022b86e18",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
+    {
+      "reference": "cd.g()I",
+      "source": "DrawControls/VirtualList.getNonScrollerArea()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 7,
+      "source_instructions": 5,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "c2dd393975e3a659108cbf44878cf5ec9c930ff5e5ca7d33f1ae3cd8e002b265",
+      "source_normalized_sha256": "f73b99126d4f5e12bb57bb5d56f861f66a05a2eb608fc7264b5b19c916f796eb"
+    },
+    {
+      "reference": "cd.i(I)V",
+      "source": "DrawControls/VirtualList.pointerDragged$255f295(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 53,
+      "source_instructions": 53,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "1121a2ee1b1c466c541d5d74a7b3c154ee0521366592413f518bde243d7767cc",
+      "source_normalized_sha256": "1121a2ee1b1c466c541d5d74a7b3c154ee0521366592413f518bde243d7767cc"
+    },
+    {
+      "reference": "cd.a(IIII)Z",
+      "source": "DrawControls/VirtualList.pointerPressedOnUtem(IIII)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b",
+      "source_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b"
+    },
+    {
+      "reference": "cd.b(II)V",
+      "source": "DrawControls/VirtualList.pointerPressed(II)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 78,
+      "source_instructions": 80,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "c0c2266a104caa9032816cbdc25dc8f4796192403febd938933062cf81325f14",
+      "source_normalized_sha256": "733d3041f965671e443f1b0fb1501628f037f1c6654a7707b0014d11f3a7f466"
+    },
+    {
+      "reference": "cd.m()I",
+      "source": "DrawControls/VirtualList.getCapHeight()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 26,
+      "source_instructions": 26,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "beff05f775044a73618f632b8b4a4a67117c86420d78eac0a1e1b4beb9624772",
+      "source_normalized_sha256": "af89b935194a8d342c89c3cea4343dec4af55386bdcf19a37d4b2bf423bb1cfb"
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIII)V",
+      "source": "DrawControls/VirtualList.drawScroller(Ljavax/microedition/lcdui/Graphics;IIII)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 203,
+      "source_instructions": 198,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "36985ec34ffb87eeab00c6970ee0dc4fdb1cd6df90d8ad1fe166592a98f3bb88",
+      "source_normalized_sha256": "5fade25f950abc0568190fe35b71aed38168d2278bbada2f86e5df53b3ed29b8"
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIIIII)Z",
+      "source": "DrawControls/VirtualList.drawItems(Ljavax/microedition/lcdui/Graphics;IIIIII)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 270,
+      "source_instructions": 264,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "9182a10a30e153494918104f58576e6f74600dc0fedcaeec7d93eefa25f93e33",
+      "source_normalized_sha256": "40f9cc3c962cc7887704c5cd403184031b0db4e3a9c76fa36366f4353a9cad1b"
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;III)V",
+      "source": "DrawControls/VirtualList.paintAllOnGraphics(Ljavax/microedition/lcdui/Graphics;III)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 330,
+      "source_instructions": 346,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "9633c1a888c56930899d01b8c12ebd22f408129a7be40f6dfa5fefea70055e7b",
+      "source_normalized_sha256": "1acb9c193bd4729d9e6c3957875c1ae358b87e7006831af5a3f4b9f73ef72cd6"
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;)V",
+      "source": "DrawControls/VirtualList.paint(Ljavax/microedition/lcdui/Graphics;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 44,
+      "source_instructions": 44,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "d47fdfffe9050a9ffd52452b233d113359cd5690b301f8d46d8cf7adfc9edde3",
+      "source_normalized_sha256": "eb9471de4241cf58246e6f823a7b66cf90f5692a542c383a24b4c3cb939f5824"
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIII)Z",
+      "source": "DrawControls/VirtualList.drawMenuBar(Ljavax/microedition/lcdui/Graphics;IIII)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 269,
+      "source_instructions": 283,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "5c0d966a75cf623116be1d5210b0dc5f2bc570f559751f7bad7eaf63d713e5da",
+      "source_normalized_sha256": "a242d7a97c6ccaee6735d76d65ca681577913b2af0f7608a26303871aae02c5c"
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIIIIII)V",
+      "source": "DrawControls/VirtualList.drawGradient(Ljavax/microedition/lcdui/Graphics;IIIIIII)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 301,
+      "source_instructions": 251,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "acdc16a72ffd2f51291a7b7ea2021acb0da17b9e4b4324d24d033b00800511b2",
+      "source_normalized_sha256": "a4943fbab334b5ed8b232c7413a5fc453ee8dcaca28b5363a27e6d4e2e59870e"
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIII)V",
+      "source": "DrawControls/VirtualList.drawString(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIII)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 34,
+      "source_instructions": 34,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "9db574ddd0beccd2de7b55ec0f60316605bee81d7e92d6cf3cdd13a788668874",
+      "source_normalized_sha256": "cb6f5268cfabb5b149cc9f66a490d54103a51eedf9953e044fba58f9d052643d"
+    },
+    {
+      "reference": "am.pointerReleased(II)V",
+      "source": "DrawControls/VirtualCanvas.pointerReleased(II)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 1,
+      "source_instructions": 1,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "8cd2510271575d8430c05368315a87b9c4784c7389a47496080c1e615a2a00b6",
+      "source_normalized_sha256": "8cd2510271575d8430c05368315a87b9c4784c7389a47496080c1e615a2a00b6"
+    },
     {
       "reference": "ag.<init>()V",
       "source": "jimm/MainMenu.<init>()V",
@@ -207,12 +389,12 @@
       "static_modifier_verified": true,
       "synchronized_modifier_verified": true,
       "reference_instructions": 624,
-      "source_instructions": 699,
+      "source_instructions": 621,
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "9e688850fb6d9ec5d5e2b1af592492fa0d41fea52d9ac3725971ca3d80b920b0",
-      "source_normalized_sha256": "bdcebbb169d84f8011fbc914d7418b9191d68aca1dabafb0cf6005a5d3ab91ee"
+      "source_normalized_sha256": "e410a67c0b6ac47fd61aea70d475235e82bbc5bb1746c968f5616b942716ff56"
     },
     {
       "reference": "at.<init>(Laa;)V",
@@ -295,7 +477,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "8cc3661e3339fcb51779efe46fc723690f320fe1f2e65e58edddf63f2b317da4",
+      "reference_normalized_sha256": "c7b7038ff2ceb216305dbb861040c56a210ee1c8c826c5ee00a6a2ab5d2ef508",
       "source_normalized_sha256": "cfd3213f87cacbdd016c9bc1a3902dbada363124679f6257a38679dfdeadc1ad"
     },
     {
@@ -547,7 +729,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "5758b1face68340a5c03be31204407a7ff3c0ae6c4ae1cc4a3d0f1e922767717",
+      "reference_normalized_sha256": "ae26de1697e06b12ba93b5251844b44a2cc7cbe1b120ced0df0ec2fdde0be0c2",
       "source_normalized_sha256": "4b3fc7dc4c6741e5e50f18f0f358e6ac3f3fd2df4b40cccf6d1bcc96b5ac14a3"
     },
     {
@@ -715,7 +897,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "4b17c46c40757f4f1369ed0df14685826524396f4dd3d2e3efaf6e4699cdf19f",
+      "reference_normalized_sha256": "7c327600d77d771f05f96a9fd3cf2d96450d1eb8d09b5473072b82579fe1b1ce",
       "source_normalized_sha256": "dd3e42737c6d9b0013023682875ff15527e70d140c766292f9492c1c64e9c5e6"
     },
     {
@@ -1037,7 +1219,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "3d6e837776f20eb69223ab3ad9ca5a027901858578c2caabeabcc29b2e505c38",
+      "reference_normalized_sha256": "e401ba4bd92535f10445b44fc29793975dea4efb07c8b87cf8cef1c2a5934753",
       "source_normalized_sha256": "2034b7f426bd226c49330c38fe833630ce4c118b58a8c59b9caf12a10594bda6"
     },
     {
@@ -1233,7 +1415,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "04b72a16d5646140e0d406bf0b55c201569af9e08915fabc8af7adc8e30535ea",
+      "reference_normalized_sha256": "d73087cacedab4ff86eeaeadb12439a21900effd1f08575fb123e5cd1c5f91f0",
       "source_normalized_sha256": "3d29fa05525a64e71eb23bc67884e5c247f560a96e9c06484f72ea551feb2b95"
     },
     {
@@ -1247,7 +1429,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "6c835bcf2e821d020d82a2153f384f5e420860fe58d111d4924c816bc221a0f5",
+      "reference_normalized_sha256": "9569a4af71d2ab9b9c420f8eb37ecc32ae633f33675dd19536ce95247c5b348c",
       "source_normalized_sha256": "030cc904df05894ea8547c27c8d57adb49d643160f0b10673212ef029c45835e"
     },
     {
@@ -1328,10 +1510,10 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 9,
       "source_instructions": 9,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "d438653eeab1464b1bd03cbfe67e7c2c7f8b2e27201dc4362f7e6fdd8717aa77",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "a591f07813789ab99ef5ace437fa8f8fbef75e284aa876177e41ce18724d3958",
       "source_normalized_sha256": "a591f07813789ab99ef5ace437fa8f8fbef75e284aa876177e41ce18724d3958"
     },
     {
@@ -1457,7 +1639,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "a06fec510ffde82b0e5ffa6422ee4906ec2a239598c07ccb3b28325d5545e9b2",
+      "reference_normalized_sha256": "93bcf9c3bcb07d739d61859a8d7c2a0594e241dfe8d584f03d306f9f654ad7cf",
       "source_normalized_sha256": "f5e2e908f832cac2b8389e51c50836c315f20ad2e54c018df9c7ba6ad98266bf"
     },
     {
@@ -2815,7 +2997,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "c9ea19d8563c87c37514c324502d6f4246065e78e33f0703f35bb84e1839dfc3",
+      "reference_normalized_sha256": "70e48d31b2d4cc86938fe08353d0355f1b43fc132fdc3cb98d871bedc027bc31",
       "source_normalized_sha256": "6e51796887b739ea519f5a9c8e45eab2bf40847db961b6bbc08e0d768d35d58f"
     },
     {
@@ -2843,7 +3025,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "a9c4ae6dc2fc1278598edcf1217390f50c1bf91ca451d9f79b07299d4dc5bb0a",
+      "reference_normalized_sha256": "1e4a7c5595e992594899d567edcd4f991fc21472c863707f2d80e6312da886c3",
       "source_normalized_sha256": "14fcfec9906696a76e33fd536739e60e254d411012eb0d38e021a10d67f55871"
     },
     {
@@ -3011,7 +3193,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "ee94153d2869834f846c0b698a4a43d2abe635c38755f035576a2fce3d234a60",
+      "reference_normalized_sha256": "a7735420997314d25fdc2f7cceef66af3fe40fd8fe2cf815664f4431f7aaa1e9",
       "source_normalized_sha256": "8abd3baa827560be283e330cfc8cf09f7af31e75ced90b1a05e7bea1a63bcc87"
     },
     {
@@ -3291,7 +3473,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "0d477b9c55cde7070e42ba6f8099c707548995fa9a2867bd60cd676407121d1b",
+      "reference_normalized_sha256": "dc98e0f67cf7981345a307438c659e68e16376753abf9be2764c50a5e29e3bbb",
       "source_normalized_sha256": "31004b28eb30abd3f0c7f84e3a1154f84fe82072856176bb30e06d123fa8e8ab"
     },
     {
@@ -3431,7 +3613,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "875a2b055c7136fbec863bdd585c66bcdf52aee6bca871a5a6295154ed9c6244",
+      "reference_normalized_sha256": "32f8123558f16308b038bc4771a1418f588c946e5447eeb73d5a0e308d5b2834",
       "source_normalized_sha256": "7f02d2e8f88a60a625b53f45dab5fe4e80bc39101ef085f4e93a4a3effb67cff"
     },
     {
@@ -3599,7 +3781,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "47a5dae14f51256cd05c8938e9d72b89253a7f2f60ef6ad363ef1ec363b72963",
+      "reference_normalized_sha256": "7212af41cbd968e160ff212947b06e48a1255ce6455d0e46134b6f8616da1a08",
       "source_normalized_sha256": "549a182aa2567c7c2be17817c5eee4aacaf07bf90c286f72cd68d861be68c88f"
     },
     {
@@ -3613,7 +3795,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "fa89248ec25312fb78104055cb7b183e4c3bc0f9bfc7db451cbedf000ecf7f82",
+      "reference_normalized_sha256": "cb5c570464408fe43e84b8bafee00a106a92a25f43fbe7473dade6739629844b",
       "source_normalized_sha256": "bbc974baa70d816c271ab47a4636e32ff9f316ed42d27ce1af1a1eb118e5440c"
     },
     {
@@ -3655,7 +3837,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "8323be69d803c29143a6fc7ed49ca8df79f9fef084a690e9a8f8b0a342bd11aa",
+      "reference_normalized_sha256": "a2fa68b799d1f7883f294af10561f562317caffdd41ee00b579ded5ece820199",
       "source_normalized_sha256": "64786d0eb0fa52d2cb90760f3952ca01601aaef900a237cde3c2f6bb07d4c513"
     },
     {
