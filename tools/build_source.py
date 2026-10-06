@@ -20,7 +20,7 @@ def write_jar(path, entries):
             jar.writestr(info, data)
 
 
-def build(target='MIDP2', language='RU', modules=MODULES, compile_only=False):
+def build(target='MIDP2', language='RU', modules=MODULES, compile_only=False, smile_pack='big'):
     recovery.bootstrap()
     dest = ROOT / 'build/source' / (target + '-' + language)
     if dest.exists():
@@ -79,15 +79,20 @@ def build(target='MIDP2', language='RU', modules=MODULES, compile_only=False):
         for path in directory.rglob('*'):
             if path.is_file() and 'lib' not in path.relative_to(directory).parts:
                 entries[path.name] = path.read_bytes()
-    module_dirs = {'FILES': 'FILES', 'SMILES': 'SMILES_SMALL',
-                   'ANISMILES': 'ANISMILES_SMALL', 'GIFSMILES': 'GIFSMILES'}
-    for module in modules.split(','):
-        if module not in module_dirs:
-            continue
-        directory = ROOT / 'res/MODULES' / module_dirs[module]
+    selected = set(modules.split(','))
+    module_dirs = ['FILES'] if 'FILES' in selected else []
+    if selected & {'SMILES', 'ANISMILES', 'GIFSMILES'}:
+        packs = {'big': 'SMILES_BIG', 'small': 'SMILES_SMALL',
+                 'animated-big': 'ANISMILES_BIG', 'animated-small': 'ANISMILES_SMALL', 'gif': 'GIFSMILES'}
+        required = 'ANISMILES' if smile_pack.startswith('animated-') else 'GIFSMILES' if smile_pack == 'gif' else None
+        if required and required not in selected:
+            raise ValueError(smile_pack + ' requires module ' + required)
+        module_dirs.append(packs[smile_pack])
+    for module_dir in module_dirs:
+        directory = ROOT / 'res/MODULES' / module_dir
         for path in directory.rglob('*'):
             if path.is_file():
-                name = path.relative_to(directory).as_posix() if module in ('ANISMILES', 'GIFSMILES') else path.name
+                name = path.name if module_dir == 'FILES' else path.relative_to(directory).as_posix()
                 entries[name] = path.read_bytes()
     for path in resources.iterdir():
         if path.is_file():
@@ -116,5 +121,6 @@ if __name__ == '__main__':
     parser.add_argument('--language', choices=['RU', 'UA', 'RO', 'EN', 'CZ'], default='RU')
     parser.add_argument('--modules', default=MODULES)
     parser.add_argument('--compile-only', action='store_true')
+    parser.add_argument('--smile-pack', choices=['big', 'small', 'animated-big', 'animated-small', 'gif'], default='big')
     args = parser.parse_args()
-    build(args.target, args.language, args.modules, args.compile_only)
+    build(args.target, args.language, args.modules, args.compile_only, args.smile_pack)

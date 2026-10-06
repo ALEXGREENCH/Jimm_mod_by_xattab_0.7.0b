@@ -189,12 +189,13 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('File transfer mismatch: compare build/source-tests/file-transfer-reference.txt and file-transfer-source.txt')
     report['file_transfer_observations'] = len(file_ref.read_text().splitlines())
     report['file_transfer_differences'] = 0
-    for prefix, fixture_class, probe in [('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe')]:
+    for prefix, fixture_class, probe in [('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe')]:
         reference_output, source_output = TEST / (prefix + '-reference.txt'), TEST / (prefix + '-source.txt')
         for mode, output in [('reference', reference_output), ('source', source_output)]:
             fixture = TEST / (prefix + '-' + mode + '.jar')
+            extra = [original if mode == 'reference' else test_jar] if prefix == 'chat' else []
             run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']), fixture_class,
-                 TEST / ('file-transfer-' + mode + '.jar'), fixture, mode, TEST], prefix + '-fixture-' + mode)
+                 TEST / ('file-transfer-' + mode + '.jar'), fixture, mode, TEST, *extra], prefix + '-fixture-' + mode)
             report[prefix + '_' + mode] = run([*java, probe, fixture, mode, output], prefix + '-' + mode)
         if reference_output.read_bytes() != source_output.read_bytes():
             raise AssertionError(prefix + ' mismatch: compare build/source-tests/' + prefix + '-{reference,source}.txt')
@@ -213,8 +214,12 @@ def main(matrix=False, skip_build=False):
                 jar = ROOT / 'dist/source' / ('Jimm-' + target + '-' + language + '.jar')
                 with zipfile.ZipFile(jar) as z:
                     assert language + '.lng' in z.namelist()
-                    assert all(n in z.namelist() for n in ['forms.png', 'groups.png', 'smiles.txt'])
+                    assert all(n in z.namelist() for n in ['forms.png', 'groups.png', 'fs.png', 'smiles.txt'])
                     assert not any(n.startswith(('javax/', 'com/')) and n.endswith('.class') for n in z.namelist())
+                    # The May releases ship the static 22x22 pack with animation support still compiled in.
+                    assert 'smiles/animate.bin' not in z.namelist()
+                    with zipfile.ZipFile(ROOT / 'preservation/wayback-originals' / ('Jimm_' + {'MIDP2': 'MIDP2', 'MOTOROLA': 'Moto', 'SIEMENS2': 'Siemens2'}[target] + '_' + language) / 'Jimm.jar') as reference:
+                        assert all(z.read(n) == reference.read(n) for n in ['smiles.png', 'smiles.txt'])
                 report['builds'].append({'target': target, 'language': language, 'sha256': recover.sha(jar)})
                 print('PASS build:', target, language, flush=True)
         for target in ['MIDP2', 'MOTOROLA', 'SIEMENS2']:

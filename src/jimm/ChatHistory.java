@@ -69,9 +69,8 @@ class MessData
 
 class ChatTextList implements VirtualListCommands, CommandListener
 {
-	// UI modes
-	final public static int UI_MODE_NONE = 0;
-	final public static int UI_MODE_DEL_CHAT = 1;
+	// Screen tags
+	final public static int TAG_DEL_CHAT = 1;
 	
 	// Chat
 	TextList textList;
@@ -114,7 +113,6 @@ class ChatTextList implements VirtualListCommands, CommandListener
 
 	private Vector messData = new Vector();
 	private int messTotalCounter = 0;
-	private static int currentUiMode; 
 	
 	ChatTextList(String name, ContactItem contact)
 	{
@@ -191,26 +189,27 @@ class ChatTextList implements VirtualListCommands, CommandListener
 	public void commandAction(Command c, Displayable d)
 	{
 		/* User selected chat to delete */
-		if ((currentUiMode == UI_MODE_DEL_CHAT) && (c == JimmUI.cmdOk))
+		if (JimmUI.getCurScreenTag() == TAG_DEL_CHAT)
 		{
-			int delType = -1;
-
-			switch (JimmUI.getLastSelIndex())
+			if (c == JimmUI.cmdOk)
 			{
-			case 0:
-				delType = ChatHistory.DEL_TYPE_CURRENT;
-				break;
-			case 1:
-				delType = ChatHistory.DEL_TYPE_ALL_EXCEPT_CUR;
-				break;
-			case 2:
-				delType = ChatHistory.DEL_TYPE_ALL;
-				break;
+				int delType = -1;
+				switch (JimmUI.getLastSelIndex())
+				{
+				case 0:
+					delType = ChatHistory.DEL_TYPE_CURRENT;
+					break;
+				case 1:
+					delType = ChatHistory.DEL_TYPE_ALL_EXCEPT_CUR;
+					break;
+				case 2:
+					delType = ChatHistory.DEL_TYPE_ALL;
+					break;
+				}
+				ChatHistory.chatHistoryDelete(contact.getUinString(), delType);
+				ContactList.activate();
 			}
-
-			ChatHistory.chatHistoryDelete(contact.getUinString(), delType);
-			ContactList.activate();
-			return;
+			else activate(false, false);
 		}
 
 		/* Write new message */
@@ -231,8 +230,7 @@ class ChatTextList implements VirtualListCommands, CommandListener
 		/* Delete current chat */
 		else if (c == cmdDelChat)
 		{
-			currentUiMode = UI_MODE_DEL_CHAT;
-			JimmUI.showSelector("delete_chat", JimmUI.stdSelector, this, UI_MODE_DEL_CHAT, true);
+			JimmUI.showSelector("delete_chat", JimmUI.stdSelector, this, TAG_DEL_CHAT, true);
 		}
 
 		/* Copy selected text to clipboard */
@@ -406,13 +404,12 @@ class ChatTextList implements VirtualListCommands, CommandListener
 		{
 			// #sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
 			case -8:
-				currentUiMode = UI_MODE_DEL_CHAT;
 				//#sijapp cond.if target is "MOTOROLA"#
 				if (type == VirtualList.KEY_RELEASED)
 				//#sijapp cond.else#
 				if (type == VirtualList.KEY_PRESSED)
 				//#sijapp cond.end#
-					JimmUI.showSelector("delete_chat", JimmUI.stdSelector, this, UI_MODE_DEL_CHAT, true);
+					JimmUI.showSelector("delete_chat", JimmUI.stdSelector, this, TAG_DEL_CHAT, true);
 				return;
 			// #sijapp cond.end#
 
@@ -500,7 +497,7 @@ class ChatTextList implements VirtualListCommands, CommandListener
 
 		if (messHeader.length() != 0)
 		{
-			textList.addBigText(messHeader.toString(), getInOutColor(red), Font.STYLE_BOLD, messTotalCounter);
+			textList.addBigText(messHeader.toString(), getInOutColor(red), Font.STYLE_BOLD + Options.fontStyle, messTotalCounter);
 
 			// new line after MessHeader
 			if (!offline && !xTraz) textList.doCRLF(messTotalCounter);
@@ -511,7 +508,7 @@ class ChatTextList implements VirtualListCommands, CommandListener
 		
 		if (url.length() > 0)
 		{
-			textList.addBigText(ResourceBundle.getString("url") + ": " + url, 0x00FF00, Font.STYLE_PLAIN, messTotalCounter);
+			textList.addBigText(ResourceBundle.getString("url") + ": " + url, 0x00FF00, Options.fontStyle, messTotalCounter);
 		}
 
 		JimmUI.addMessageText(textList, message, !xTraz ? textList.getTextColor() : getInOutColor(red), messTotalCounter);
@@ -534,10 +531,8 @@ class ChatTextList implements VirtualListCommands, CommandListener
 	
 	public void activate(boolean initChat, boolean resetText)
 	{
-		currentUiMode = UI_MODE_NONE;
 		textList.activate(Jimm.display);
 		JimmUI.setLastScreen(textList);
-		ChatHistory.currentChat = this;
 		contact.resetUnreadMessages();
 	}
 }
@@ -830,15 +825,15 @@ public class ChatHistory
 				(
 					"[" + rec.from + " " + rec.date + "]", 
 					ChatTextList.getInOutColor(rec.type == 0),
-					Font.STYLE_PLAIN,
+					Options.fontStyle,
 					-1
 				);
 				chatForm.textList.doCRLF(-1);
 				
 				//#sijapp cond.if modules_SMILES is "true" #
-				Emotions.addTextWithEmotions(chatForm.textList, rec.text, Font.STYLE_PLAIN, 0x808080, -1);
+				Emotions.addTextWithEmotions(chatForm.textList, rec.text, Options.fontStyle, 0x808080, -1);
 				//#sijapp cond.else#
-				chatForm.textList.addBigText(rec.text, 0x808080, Font.STYLE_PLAIN, -1);
+				chatForm.textList.addBigText(rec.text, 0x808080, Options.fontStyle, -1);
 				//#sijapp cond.end#
 				chatForm.textList.doCRLF(-1);
 			}
@@ -896,13 +891,6 @@ public class ChatHistory
 			chat.activate(false, false);
 		}
 		return (chat != null);
-	}
-	
-	static ChatTextList currentChat;
-	
-	public static ChatTextList getCurrent()
-	{
-		return currentChat;
 	}
 	
 	public static void removeAuthCommands(ContactItem item)

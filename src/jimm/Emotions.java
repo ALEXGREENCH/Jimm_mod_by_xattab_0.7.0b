@@ -30,6 +30,7 @@ import javax.microedition.lcdui.*;
 import java.io.*;
 
 import jimm.util.*;
+import jimm.comm.Util;
 import DrawControls.*;
 
 public class Emotions implements VirtualListCommands, CommandListener
@@ -64,46 +65,21 @@ public class Emotions implements VirtualListCommands, CommandListener
 
 		try
 		{
-			StringBuffer strBuffer = new StringBuffer();
-			boolean eof = false, clrf = false;
-			
-			// Read icon size
-			readStringFromStream(strBuffer, dos);
-			iconsSize = Integer.parseInt(strBuffer.toString());
-
-			for (;;)
+			iconsSize = Integer.parseInt(readLineFromStream(dos));
+			String line;
+			while ((line = readLineFromStream(dos)) != null)
 			{
-				// Read smile index
-				readStringFromStream(strBuffer, dos);
-				Integer currIndex = Integer.valueOf(strBuffer.toString());
-				
-				// Read smile name
-				readStringFromStream(strBuffer, dos);
-				String smileName = strBuffer.toString();
-				
-				// Read smile strings
-				for (int i = 0;; i++)
+				String[] fields = Util.explode(line, ',');
+				if (fields.length < 3) continue;
+				Integer currIndex = Integer.valueOf(fields[0]);
+				String smileName = fields[1];
+				for (int i = 2; i < fields.length; i++)
 				{
-					try
-					{
-						clrf = readStringFromStream(strBuffer, dos);
-					}
-					catch (EOFException eofExcept)
-					{
-						eof = true;
-					}
-					
-					String word = new String(strBuffer).trim();
-
-					// Add pair (word, integer) to textCorr
-					if (word.length() != 0) insertTextCorr(textCorr, word, currIndex);
-					
-					// Add triple (index, word, name) to selEmotions  
-					if (i == 0) selEmotions.addElement(new Object[] {currIndex, word, smileName});
-
-					if (clrf || eof) break;
+					if (fields[i].length() == 0) continue;
+					String word = fields[i].trim();
+					insertTextCorr(textCorr, word.toLowerCase(), currIndex);
+					if (i == 2) selEmotions.addElement(new Object[] {currIndex, word, smileName});
 				}
-				if (eof) break;
 			}
 
 			stream.close();
@@ -193,20 +169,24 @@ public class Emotions implements VirtualListCommands, CommandListener
 		textCorr.addElement(data);
 	}
 
-	// Reads simple word from stream. Used in Emotions(). 
-	// Returns "true" if break was found after word
-	static boolean readStringFromStream(StringBuffer buffer, DataInputStream stream) throws IOException, EOFException
+	// Read a UTF-8 line; tab-separated smile definitions remain supported.
+	private static String readLineFromStream(DataInputStream stream)
 	{
-		byte chr;
-		buffer.setLength(0);
-		for (;;)
+		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+		boolean read = false;
+		try
 		{
-			chr = stream.readByte();
-			if ((chr == ',') || (chr == '\n') || (chr == '\t')) break;
-			// if (chr == '_') chr = ' ';
-			if (chr >= ' ') buffer.append((char)chr);
+			byte chr;
+			while ((chr = stream.readByte()) != -1)
+			{
+				read = true;
+				if (chr == '\n') break;
+				if (chr == '\t') chr = ',';
+				if (chr != '\r') buffer.write(chr);
+			}
 		}
-		return (chr == '\n');
+		catch (Exception e) {}
+		return read ? Util.byteArrayToString(buffer.toByteArray(), true) : null;
 	}
 
 	static private void findEmotionInText(String text, String emotion, int index, int startIndex, int recIndex)
@@ -230,6 +210,7 @@ public class Emotions implements VirtualListCommands, CommandListener
 			return;
 		}
 
+		String lowerText = text.toLowerCase();
 		for (int i = emoFinded.length-1; i >= 0; i--) emoFinded[i] = true;
 
 		int startIndex = 0;
@@ -240,7 +221,7 @@ public class Emotions implements VirtualListCommands, CommandListener
 			int size = textCorrWords.length;
 			for (int i = 0; i < size; i++)
 			{
-				findEmotionInText(text, textCorrWords[i], textCorrIndexes[i], startIndex, i);  
+				findEmotionInText(lowerText, textCorrWords[i], textCorrIndexes[i], startIndex, i);
 			}
 
 			if (findedEmotions.isEmpty()) break;
@@ -289,7 +270,7 @@ public class Emotions implements VirtualListCommands, CommandListener
 		Emotions.caretPos = textBox.getCaretPosition();
 		Emotions.textBox = textBox;
 
-		selector = new Selector(0, Options.getBoolean(Options.OPTION_REMEMBER_SMILE) ? lastSelectedEmotion : 0);
+		selector = new Selector(0, lastSelectedEmotion);
 
 		JimmUI.setColorScheme(selector, false);
 		selector.setCyclingCursor(true);
@@ -307,7 +288,7 @@ public class Emotions implements VirtualListCommands, CommandListener
 		{
 			JimmUI.selectScreen(lastScreen);
 			selector = null;
-			//#sijapp cond.if target is "MOTOROLA"#
+			//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
 			LightControl.flash(true);
 			//#sijapp cond.end#
 		}
@@ -320,17 +301,17 @@ public class Emotions implements VirtualListCommands, CommandListener
 		select();
 	}
 
-	static public void select()
+	static private void select()
 	{
-		// #sijapp cond.if target is "MOTOROLA"#
+		lastSelectedEmotion = Options.getBoolean(Options.OPTION_REMEMBER_SMILE) ? selector.getCurrSelectedIdx() : 0;
+		//#sijapp cond.if target is "MOTOROLA"#
 		caretPos = textBox.getString().length();
-		// #sijapp cond.end#
-		lastSelectedEmotion = selector.getCurrSelectedIdx();
+		//#sijapp cond.end#
 		textBox.insert(" " + Emotions.getSelectedEmotion() + " ", caretPos);
 		JimmUI.selectScreen(lastScreen);
 		selector = null;
 		System.gc();
-		//#sijapp cond.if target is "MOTOROLA"#
+		//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
 		LightControl.flash(true);
 		//#sijapp cond.end#
 	}

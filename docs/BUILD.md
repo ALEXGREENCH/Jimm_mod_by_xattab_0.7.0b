@@ -20,8 +20,11 @@ python tools/build_source.py --target SIEMENS2 --language UA
 | `--language` | `RU`, `UA`, `RO`, `EN`, `CZ` | `RU` |
 | `--modules` | Список модулей через запятую | `SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES` |
 | `--compile-only` | Только компиляция, без упаковки MIDlet | Выключен |
+| `--smile-pack` | `big`, `small`, `animated-big`, `animated-small`, `gif` | `big` |
 
 Результат полной сборки — `dist/source/Jimm-<TARGET>-<LANG>.jar` и соответствующий `.jad`. Промежуточные файлы находятся в `build/source/<TARGET>-<LANG>`.
+
+Стандартный набор `big` — статические смайлы 22×22 из майских сборок. Код поддержки анимации остаётся включённым, как в оригинале. Старые альтернативные ресурсы сохранены: например, `--smile-pack animated-small` выбирает набор из `res/MODULES/ANISMILES_SMALL` и требует модуля `ANISMILES`; `gif` требует `GIFSMILES`. Эти наборы не являются стандартными ресурсами майского JAR.
 
 ## Модули
 

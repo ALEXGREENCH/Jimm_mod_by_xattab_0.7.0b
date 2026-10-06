@@ -1372,10 +1372,10 @@ public class JimmUI implements CommandListener, VirtualListCommands
 	static public void addMessageText(TextList textList, String text, int color, int messTotalCounter)
 	{
 		//#sijapp cond.if modules_SMILES is "true" #
-		Emotions.addTextWithEmotions(textList, text, Font.STYLE_PLAIN, color, messTotalCounter);
+		Emotions.addTextWithEmotions(textList, text, Options.fontStyle, color, messTotalCounter);
 
 		//#sijapp cond.else#
-		textList.addBigText(text, textList.getTextColor(), Font.STYLE_PLAIN, messTotalCounter);
+		textList.addBigText(text, textList.getTextColor(), Options.fontStyle, messTotalCounter);
 		//#sijapp cond.end#
 		textList.doCRLF(messTotalCounter);
 	}
