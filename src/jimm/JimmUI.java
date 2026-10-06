@@ -2127,7 +2127,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		Search search = new Search(true);
 		String[] data = new String[Search.LAST_INDEX];
 		data[Search.UIN] = contact.getUinString();
-		SearchAction action = new SearchAction(search, data, SearchAction.CALLED_BY_ADDUSER);
+		SearchAction action = new SearchAction(search, data);
 		try
 		{
 			Icq.requestAction(action);
@@ -2139,28 +2139,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		SplashCanvas.addTimerTask("wait", action, false);
 	}
 
-	public static void checkStatus(String uin, boolean act)
-	{
-		int length = uin.length();
-		byte[] uinRaw = Util.stringToByteArray(uin);
-		byte[] buf = new byte[length + 4 + 1];
-		Util.putWord(buf, 0, 0x0000);
-		Util.putWord(buf, 2, 0x0005);
-		Util.putByte(buf, 4, length);
-		System.arraycopy(uinRaw, 0, buf, 5, uinRaw.length);
-		SnacPacket packet = new SnacPacket(0x0002, 0x0015, 0, new byte[0], buf);
 
-		try
-		{
-			Icq.c.sendPacket(packet);
-		}
-		catch (JimmException e) {}
-
-		if (act)
-		{
-			ContactList.activate();
-		}
-	}
 
 	private static void showClientInfo(ContactItem cItem)
 	{

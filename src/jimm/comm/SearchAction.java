@@ -23,14 +23,10 @@
 
 package jimm.comm;
 
-import javax.microedition.lcdui.Alert;
 
-import jimm.Jimm;
 import jimm.JimmException;
-import jimm.MainMenu;
 import jimm.Options;
 import jimm.Search;
-import jimm.util.ResourceBundle;
 
 import java.io.ByteArrayOutputStream;
 
@@ -58,10 +54,6 @@ public class SearchAction extends Action
 	public static final int TLV_TYPE_ONLYONLINE          = 0x3002; // UINT8 (1 byte:  1 - search online, 0 - search all)
 	public static final int TLV_TYPE_AGE                 = 0x6801; // 
 
-	// Search action was called by
-	public static final int CALLED_BY_SEARCHUSER         = 0;
-	public static final int CALLED_BY_ADDUSER            = 1;
-
 	// Timeout
 	public static final int TIMEOUT = 60 * 1000; // milliseconds
 
@@ -81,7 +73,7 @@ public class SearchAction extends Action
 	// "---", "13-17", "18-22", "23-29", "30-39", "40-49", "50-59", "> 60"
 	private final int[] ages = {0, 99, 13, 17, 18, 22, 23, 29, 30, 39, 40, 49, 50, 59, 60, 99};
 
-	public SearchAction(Search cont, String[] search, int _calledBy)
+	public SearchAction(Search cont, String[] search)
 	{
 		super(false, true);
 		this.search = search;
@@ -223,8 +215,6 @@ public class SearchAction extends Action
 
 					if (this.state == STATE_LASTRESULT_RECEIVED)
 					{
-						marker += 2;
-						long foundleft = Util.getDWord(data, marker, false);
 						this.state = STATE_SEARCH_FINISHED;
 					}
 				}

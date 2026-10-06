@@ -105,14 +105,10 @@ public class Search
 	public class SearchForm implements CommandListener, VirtualListCommands
 	{
 		/* Commands */
-		private Command backCommand;
 		private Command searchCommand;
 		private Command addCommand;
-		private Command previousCommand;
-		private Command nextCommand;
 		private Command cmdSendMessage;
 		private Command cmdShowInfo;
-		private Command cmdCheckStatus;
 
 		/* Forms for results and query */
 		private VirtualForm searchForm;
@@ -120,7 +116,7 @@ public class Search
 		private TextList screen;
 
 		/* List for group selection */
-		private List groupList;
+		private FormChoiceGroup groupList;
 
 		/* Textboxes for search */
 		private TextField uinSearchTextBox;
@@ -130,12 +126,12 @@ public class Search
 		private TextField emailSearchTextBox;
 		private TextField citySearchTextBox;
 		private TextField keywordSearchTextBox;
-		private ChoiceGroup chgrAge;
+		private FormChoiceGroup chgrAge;
 
 		/* Choice boxes for gender and online choice */
-		private ChoiceGroup gender;
+		private FormChoiceGroup gender;
 
-		private ChoiceGroup onlyOnline;
+		private FormChoiceGroup onlyOnline;
 
 		/* Selectet index in result screen */
 		int selectedIndex;
@@ -145,20 +141,13 @@ public class Search
 		{
 			/* Commands */
 			searchCommand = new Command(ResourceBundle.getString("user_search"), Command.OK, 1);
-			//#sijapp cond.if target is "MIDP2"#
-			backCommand = new Command(ResourceBundle.getString("back"), Jimm.is_smart_SE() ? Command.CANCEL : Command.BACK, 2);
-			//#sijapp cond.else#
-			backCommand = new Command(ResourceBundle.getString("back"), Command.BACK, 2);
-			//#sijapp cond.end#
 			addCommand = new Command(ResourceBundle.getString("add_to_list"), Command.ITEM, 1);
-			cmdCheckStatus = new Command(ResourceBundle.getString("check_status"), Command.ITEM, 2);
-			nextCommand = new Command(ResourceBundle.getString("next"), Command.ITEM, 3);
-			previousCommand = new Command(ResourceBundle.getString("prev"), Command.ITEM, 4);
 			cmdSendMessage = new Command(ResourceBundle.getString("send_message"), Command.ITEM, 6);
 			cmdShowInfo = new Command(ResourceBundle.getString("info"), Command.ITEM, 7);
 
 			/* VirtualForm */
 			searchForm = new VirtualForm(ResourceBundle.getString("search_user"));
+			searchForm.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
 
 			/* TextFields */
 			uinSearchTextBox = new TextField(ResourceBundle.getString("uin"), "", 32, TextField.NUMERIC);
@@ -169,7 +158,7 @@ public class Search
 			citySearchTextBox = new TextField(ResourceBundle.getString("city"), "", 32, TextField.ANY);
 			keywordSearchTextBox = new TextField(ResourceBundle.getString("keyword"), "", 32, TextField.ANY);
 
-			chgrAge = new FormChoiceGroup(ResourceBundle.getString("age"), ChoiceGroup.POPUP, Util.explode("---|13-17|18-22|23-29|30-39|40-49|50-59|> 60", '|'), null);
+			chgrAge = new FormChoiceGroup(ResourceBundle.getString("age"), Util.explode("---|13-17|18-22|23-29|30-39|40-49|50-59|> 60", '|'));
 
 			/* Choice Groups */
 			gender = new FormChoiceGroup(ResourceBundle.getString("gender"), Choice.POPUP);
@@ -186,9 +175,9 @@ public class Search
 			searchForm.append(lastnameSearchTextBox);
 			searchForm.append(citySearchTextBox);
 			searchForm.append(gender);
+			searchForm.append(chgrAge);
 			searchForm.append(emailSearchTextBox);
 			searchForm.append(keywordSearchTextBox);
-			searchForm.append(chgrAge);
 			searchForm.setCommandListener(this);
 
 			/* Result Screen */
@@ -202,10 +191,9 @@ public class Search
 			else
 			{
 				screen.addCommandEx(JimmUI.cmdMenu, VirtualList.MENU_LEFT_BAR);
-				screen.addCommandEx(previousCommand, VirtualList.MENU_LEFT);
-				screen.addCommandEx(nextCommand, VirtualList.MENU_LEFT);
+				screen.addCommandEx(JimmUI.prevCmd, VirtualList.MENU_LEFT);
+				screen.addCommandEx(JimmUI.nextCmd, VirtualList.MENU_LEFT);
 				screen.addCommandEx(addCommand, VirtualList.MENU_LEFT);
-				screen.addCommandEx(cmdCheckStatus, VirtualList.MENU_LEFT);
 				screen.addCommandEx(cmdSendMessage, VirtualList.MENU_LEFT);
 				screen.addCommandEx(cmdShowInfo, VirtualList.MENU_LEFT);
 			}
@@ -229,17 +217,15 @@ public class Search
 				break;
 				
 			case ACTIV_JUST_SHOW:
-				searchForm.addCommand(searchCommand);
-				searchForm.addCommand(backCommand);
+				searchForm.addCommandEx(searchCommand, VirtualList.MENU_LEFT_BAR);
+				searchForm.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
 				searchForm.activate(Jimm.display);
 				break;
 				
 			case ACTIV_SHOW_NORESULTS:
-				searchForm.addCommand(searchCommand);
-				searchForm.addCommand(backCommand);
-            	Alert alert = new Alert(null, ResourceBundle.getString("no_results"), null, null);
-            	alert.setTimeout(Alert.FOREVER);
-	searchForm.activate(Jimm.display, alert);
+				searchForm.addCommandEx(searchCommand, VirtualList.MENU_LEFT_BAR);
+				searchForm.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
+				new VirtualAlert(searchForm, ResourceBundle.getString("no_results"), -1).activate(Jimm.display);
 				break;
 			}
 		}
@@ -253,8 +239,8 @@ public class Search
 			{
 				if (Search.this.size() == 1)
 				{
-					screen.removeCommandEx(nextCommand);
-					screen.removeCommandEx(previousCommand);
+					screen.removeCommandEx(JimmUI.nextCmd);
+					screen.removeCommandEx(JimmUI.prevCmd);
 				}
 
 				screen.lock();
@@ -273,7 +259,7 @@ public class Search
 				screen.unlock();
 			}
 
-			screen.addCommandEx(backCommand, VirtualList.MENU_RIGHT_BAR);
+			screen.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
 
 			screen.setCommandListener(this);
 		}
@@ -324,23 +310,22 @@ public class Search
 
 		public void commandAction(Command c, Displayable d)
 		{
-			if (c == backCommand)
+			if (c == JimmUI.cmdBack)
 			{
 				if (JimmUI.isControlActive(screen) && !liteVersion)
 				{
 					activate(Search.SearchForm.ACTIV_JUST_SHOW);
-					//#sijapp cond.if target is "MOTOROLA"#
+					//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
 					LightControl.flash(true);
 					//#sijapp cond.end#
 				}
-				else if (searchForm.isActive())
+				else if (JimmUI.isControlActive(searchForm))
 				{
 					searchForm = null;
 					MainMenu.activate();
 				}
 				else
 				{
-					if (d != groupList) searchForm = null;
 					JimmUI.backToLastScreen(/*false*/);
 				}
 			}
@@ -361,7 +346,7 @@ public class Search
 				data[Search.ONLY_ONLINE] = onlyOnline.isSelected(0) ? "1" : "0";
 				data[Search.AGE] = Integer.toString(chgrAge.getSelectedIndex());
 
-				SearchAction act = new SearchAction(Search.this, data, SearchAction.CALLED_BY_SEARCHUSER);
+				SearchAction act = new SearchAction(Search.this, data);
 				try
 				{
 					Icq.requestAction(act);
@@ -381,10 +366,10 @@ public class Search
 			}
 			
 			/* "Next" command */
-			else if (c == nextCommand) nextOrPrev(true);
+			else if (c == JimmUI.nextCmd) nextOrPrev(true);
 			
 			/* "Previous" command */
-			else if (c == previousCommand) nextOrPrev(false);
+			else if (c == JimmUI.prevCmd) nextOrPrev(false);
 
 			else if ((c == addCommand) && JimmUI.isControlActive(screen))
 			{
@@ -397,19 +382,22 @@ public class Search
 				else
 				{
 					/* Show list of groups to select which group to add to */
-					groupList = new List(ResourceBundle.getString("whichgroup"), List.EXCLUSIVE);
+					groupList = new FormChoiceGroup(null, Choice.EXCLUSIVE);
 					for (int i = 0; i < ContactList.getGroupItems().length; i++)
 					{
 						groupList.append(ContactList.getGroupItems()[i].getName(), null);
 					}
-					groupList.addCommand(backCommand);
-					groupList.addCommand(addCommand);
-					groupList.setCommandListener(this);
-					JimmUI.setLastScreen(screen); // задаем объект, куда возвратиться по команде Назад...
-					Jimm.display.setCurrent(groupList);
+					VirtualForm groupForm = new VirtualForm(ResourceBundle.getString("whichgroup"));
+					groupForm.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
+					groupForm.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
+					groupForm.addCommandEx(addCommand, VirtualList.MENU_LEFT_BAR);
+					groupForm.append(groupList);
+					groupForm.setCommandListener(this);
+					JimmUI.setLastScreen(screen);
+					groupForm.activate(Jimm.display);
 				}
 			}
-			else if (c == addCommand && d == groupList)
+			else if (c == addCommand)
 			{
 				searchForm = null;
 				String[] resultData = getResult(selectedIndex);
@@ -439,11 +427,7 @@ public class Search
 				JimmUI.setLastScreen(screen); // задаем объект, куда возвратиться по команде Назад...
 			}
 
-			else if (c == cmdCheckStatus)
-			{
-				String[] resultData = getResult(selectedIndex);
-				JimmUI.checkStatus(resultData[JimmUI.UI_UIN_LIST], false);
-			}
+
 		}
 	} /* end "class SearchForm" */
 }

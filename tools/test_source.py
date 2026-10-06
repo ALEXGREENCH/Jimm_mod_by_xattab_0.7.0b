@@ -167,6 +167,16 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Contact menu mismatch: compare build/source-tests/contact-menu-reference.txt and contact-menu-source.txt')
     report['contact_menu_observations'] = len(contact_ref.read_text().splitlines())
     report['contact_menu_differences'] = 0
+    search_ref, search_src = TEST / 'search-reference.txt', TEST / 'search-source.txt'
+    for mode, output in [('reference', search_ref), ('source', search_src)]:
+        fixture = TEST / ('search-' + mode + '.jar')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'SearchFixture', TEST / ('message-' + mode + '.jar'), fixture, mode], 'search-fixture-' + mode)
+        report['search_' + mode] = run([*java, 'SearchProbe', fixture, mode, output], 'search-' + mode)
+    if search_ref.read_bytes() != search_src.read_bytes():
+        raise AssertionError('Search mismatch: compare build/source-tests/search-reference.txt and search-source.txt')
+    report['search_observations'] = len(search_ref.read_text().splitlines())
+    report['search_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

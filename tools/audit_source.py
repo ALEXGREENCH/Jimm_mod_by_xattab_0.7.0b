@@ -24,8 +24,18 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'bq': 'jimm/comm/OtherAction', 'ae': 'jimm/comm/ActionListener',
            'ac': 'jimm/comm/Message', 'ah': 'jimm/util/MagicEye', 'br': 'jimm/EditInfo', 'as': 'jimm/comm/SaveInfoAction',
            'ce': 'jimm/comm/RequestInfoAction', 'bi': 'DrawControls/TextList',
-           'g': 'jimm/JimmUI$GetVersionInfoTimerTask', 'm': 'jimm/ContactList'}
+           'g': 'jimm/JimmUI$GetVersionInfoTimerTask', 'm': 'jimm/ContactList', 'cp': 'jimm/Search',
+           'cr': 'jimm/Search$SearchForm', 'o': 'jimm/comm/SearchAction'}
 SYMBOLS = {
+    'o.a I': 'jimm/comm/SearchAction.state I',
+    'o.a J': 'jimm/comm/SearchAction.lastActivity J',
+    'o.a [Ljava/lang/String;': 'jimm/comm/SearchAction.search [Ljava/lang/String;',
+    'o.a Lcp;': 'jimm/comm/SearchAction.cont Ljimm/Search;',
+    'o.a [I': 'jimm/comm/SearchAction.ages [I',
+    'cp.a Ljava/util/Vector;': 'jimm/Search.results Ljava/util/Vector;',
+    'cp.a Z': 'jimm/Search.liteVersion Z',
+    'cp.a Lcr;': 'jimm/Search.searchForm Ljimm/Search$SearchForm;',
+
     'as.a I': 'jimm/comm/SaveInfoAction.packetCounter I',
     'as.b I': 'jimm/comm/SaveInfoAction.errorCounter I',
     'as.a Ljava/util/Date;': 'jimm/comm/SaveInfoAction.init Ljava/util/Date;',
@@ -114,6 +124,23 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('cp', '<init>', '(Z)V', '<init>'),
+    ('cp', 'a', '(I)[Ljava/lang/String;', 'getResult'),
+    ('cp', 'a', '()Lcr;', 'getSearchForm'),
+    ('cr', '<init>', '(Lcp;)V', '<init>'),
+    ('cr', 'a', '(I)V', 'activate'),
+    ('cr', 'a', '(Z)V', 'nextOrPrev'),
+    ('cr', 'a', '(Lcd;II)V', 'vlKeyPress'),
+    ('cr', 'a', '(Lcd;)V', 'vlCursorMoved'),
+    ('cr', 'b', '(Lcd;)V', 'vlItemClicked'),
+    ('cr', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
+    ('o', '<init>', '(Lcp;[Ljava/lang/String;)V', '<init>'),
+    ('o', 'a', '()V', 'init'),
+    ('o', 'a', '(Lan;)Z', 'forward'),
+    ('o', 'a', '(I)V', 'onEvent'),
+    ('o', 'a', '()Z', 'isCompleted'),
+    ('o', 'b', '()Z', 'isError'),
+
     ('cf', 'a', '(Lz;)V', 'showContactMenu'),
     ('cf', 'b', '(Lz;)V', 'addUser'),
     ('cf', 'c', '(Lz;)V', 'showClientInfo'),
@@ -219,8 +246,10 @@ METHODS = [
 def normalized(code):
     result = []
     for instruction in code:
-        for before, after in SYMBOLS.items():
-            instruction = instruction.replace(before, after)
+        # A short obfuscated owner (e.g. o) must not match the suffix of co.
+        opcode, separator, operand = instruction.partition(' ')
+        if operand in SYMBOLS:
+            instruction = opcode + separator + SYMBOLS[operand]
         for before, after in CLASSES.items():
             instruction = instruction.replace('L' + before + ';', 'L' + after + ';')
         result.append(instruction)
