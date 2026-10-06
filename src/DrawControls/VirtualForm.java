@@ -17,10 +17,11 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
     private final ImageList formImages = ImageList.load("/forms.png");
     private ItemStateListener itemStateListener;
     private boolean firstItem = true;
+    private FormItem currentDrawItem;
     private final Command editOk = new Command(ResourceBundle.getString("ok"),
-        swapEditorKeys() ? Command.BACK : Command.OK, 1);
-    private final Command editCancel = new Command(ResourceBundle.getString("cancel"),
-        swapEditorKeys() ? Command.STOP : Command.CANCEL, 14);
+        swapEditorKeys() ? Command.CANCEL : Command.OK, 1);
+    private final Command editCancel = new Command(ResourceBundle.getString("back"),
+        swapEditorKeys() ? Command.ITEM : Command.BACK, 14);
 
     private static boolean swapEditorKeys()
     {
@@ -62,34 +63,6 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
     {
         addNode(null, new FormItem(null, null, -1,
             new Icon(image, 0, 0, image.getWidth(), image.getHeight())));
-    }
-
-    public void activate(Display display)
-    {
-        refreshItems(getRoot());
-        super.activate(display);
-    }
-
-    private void refreshItems(TreeNode parent)
-    {
-        for (int i = 0; i < parent.size(); i++)
-        {
-            TreeNode node = parent.elementAt(i);
-            if (node.getData() instanceof FormItem)
-            {
-                FormItem row = (FormItem)node.getData();
-                if (row.item instanceof FormChoiceGroup && row.choiceIndex >= 0)
-                {
-                    FormChoiceGroup choices = (FormChoiceGroup)row.item;
-                    row.text = choices.getString(row.choiceIndex);
-                    row.image = choiceImage(choices, row.choiceIndex);
-                    setExpandFlag(node, choices.isSelected(row.choiceIndex));
-                }
-                else if (row.item instanceof TextField) row.text = getItemText(row.item);
-                else if (row.item instanceof Gauge) ((FormIcon)row.image).setValue(((Gauge)row.item).getValue());
-            }
-            refreshItems(node);
-        }
     }
 
     public void append(Item item)
@@ -138,7 +111,8 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
         if (data == null) return;
         if (data instanceof FormItem)
         {
-            FormItem item = (FormItem)data;
+            currentDrawItem = (FormItem)data;
+            FormItem item = currentDrawItem;
             row.image = item.image;
             row.text = item.text;
             if (item.item instanceof FormChoiceGroup && item.choiceIndex < 0)
@@ -177,7 +151,7 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
             vlItemClicked(this);
             return super.pointerPressedOnUtem(index, x, y, mode);
         }
-        moveCursor(1, false);
+        moveCursor(1);
         return true;
     }
     //#sijapp cond.end#
@@ -188,7 +162,7 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
         TreeNode node = getCurrentItem();
         if (node == null) return;
         Object data = node.getData();
-        if (key == Canvas.KEY_STAR && data instanceof FormItem)
+        if (key == Canvas.KEY_STAR && data != null)
         {
             FormItem item = (FormItem)data;
             String text = item.item instanceof TextField || item.item instanceof Gauge
@@ -215,15 +189,15 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
         }
         else if (key == Canvas.KEY_NUM1 || key == Canvas.KEY_NUM3)
         {
-            moveCursor(1, false);
+            moveCursor(1);
         }
         else
         {
             try
             {
                 int action = getGameAction(key);
-                if (action == Canvas.UP) moveCursor(-1, false);
-                if (action == Canvas.DOWN) moveCursor(1, false);
+                if (action == Canvas.UP) moveCursor(-1);
+                if (action == Canvas.DOWN) moveCursor(1);
             }
             catch (Exception e) { }
         }
@@ -334,10 +308,13 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
     private static String fieldText(TextField field)
     {
         String text = field.getString();
-        if (field.getConstraints() != TextField.PASSWORD) return text;
-        StringBuffer masked = new StringBuffer(text.length());
-        for (int i = text.length() - 1; i >= 0; i--) masked.append('*');
-        return masked.toString();
+        StringBuffer result = new StringBuffer(text.length());
+        if (field.getConstraints() != TextField.PASSWORD) result.append(text);
+        else
+        {
+            for (int i = text.length() - 1; i >= 0; i--) result.append('*');
+        }
+        return result.toString();
     }
 
     private String fitField(TextField field, Font font)
@@ -366,14 +343,13 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
             return item.item instanceof TextField ? fieldText((TextField)item.item) : item.text;
         }
         if (data instanceof TextField) return fitField((TextField)data, getQuickFont(Font.STYLE_PLAIN));
-        if (data instanceof StringItem) return nonNull(((StringItem)data).getLabel()) + nonNull(((StringItem)data).getText());
         if (data instanceof Item) return nonNull(((Item)data).getLabel());
         return data instanceof String ? (String)data : null;
     }
 
-    public void deleteAll()
+    public void clear()
     {
-        clear();
+        super.clear();
         firstItem = true;
     }
 }

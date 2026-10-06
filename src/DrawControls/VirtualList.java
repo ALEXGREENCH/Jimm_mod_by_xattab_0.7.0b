@@ -622,6 +622,11 @@ public abstract class VirtualList
 		if ((lastCurrItem != currItem) && (vlCommands != null)) vlCommands.vlCursorMoved(this);
 	}
 
+	public void moveCursor(int step)
+	{
+		moveCursor(step, false);
+	}
+
 	protected void moveCursor(int step, boolean moveTop)
 	{
 		storelastItemIndexes();
@@ -1794,8 +1799,6 @@ public abstract class VirtualList
 		int textY = (y1 + y2 - menuBarFont.getHeight()) / 2 + 1;
 		
 		boolean menuItemsVisible = false;
-
-		g.setColor(getInverseColor(capBkCOlor));
 
 		if (leftMenu != null)
 		{

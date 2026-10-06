@@ -13,7 +13,9 @@ final class FormIcon extends Icon
 
     FormIcon(int width, int height, int value, int maximum, boolean gauge)
     {
-        super(null, 0, 0, width, height);
+        super(null, 0, 0, 0, 0);
+        this.width = width;
+        this.height = height;
         this.value = value;
         this.maximum = maximum;
         stepWidth = width / maximum;

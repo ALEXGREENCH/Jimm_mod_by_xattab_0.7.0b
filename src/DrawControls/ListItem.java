@@ -25,6 +25,7 @@ package DrawControls;
 
 import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Image;
+import jimm.Options;
 
 /* Data for list item */
 /* All members of class are made as public in order to easy access */
@@ -37,7 +38,7 @@ public class ListItem
 
 	ListItem()
 	{
-		fontStyle = Font.STYLE_PLAIN;
+		fontStyle = Options.fontStyle;
 	}
 
 	/* Set all member to default values */
@@ -54,6 +55,6 @@ public class ListItem
 		clientImg = null;
 		color = 0;
 		horizOffset = 0;
-		fontStyle = Font.STYLE_PLAIN;
+		fontStyle = Options.fontStyle;
 	}
 }
