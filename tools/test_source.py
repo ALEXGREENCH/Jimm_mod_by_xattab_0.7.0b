@@ -56,6 +56,7 @@ def main(matrix=False, skip_build=False):
     write_jar(test_jar, entries)
     report = {'reference_sha256': recover.sha(original), 'source_jar_sha256': recover.sha(built)}
     report['pure_logic'] = run([*java, 'SourceDifferentialTest', original, source / 'classes', CACHE], 'differential')
+    report['packets'] = run([sys.executable, ROOT / 'tools/test_packets.py'], 'packets-audit')
     fixtures = TEST / 'capabilities.bin'
     ref_output, src_output = TEST / 'reference.txt', TEST / 'source.txt'
     run([*java, 'DetectorProbe', original, 'reference', fixtures, ref_output], 'detector-reference')

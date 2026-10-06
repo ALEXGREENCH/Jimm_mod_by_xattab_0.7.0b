@@ -52,6 +52,7 @@ python tools/test_source.py --matrix
 python tools/audit_source.py
 python tools/audit_resources.py
 python tools/test_languages.py
+python tools/test_packets.py
 python tools/test_graphics.py
 python tools/audit_graphics.py
 python tools/test_filesystems.py
@@ -65,6 +66,8 @@ python tools/audit_light.py
 Файловый браузер проверяется в общей функциональной серии. `test_filesystems.py` собирает три RU-варианта и отдельно сравнивает файловые адаптеры, включая JSR75 и собственный API Motorola; `--skip-build` использует уже собранные полные RU-варианты. `audit_filesystems.py` сверяет их сохранившиеся после оптимизации сигнатуры и инструкции. Эти проверки также входят в общую команду `--matrix`.
 
 `test_languages.py` использует уже собранные пять MIDP2-вариантов и свежий отчёт `audit_resources.py`: исполняет настоящий загрузчик языков, проверяет все значения и ошибки словарей. Общая серия `--matrix` запускает его после сверки ресурсов. Загрузчик смайлов и их редактор дополнительно проверяются в общей функциональной серии `emotions`.
+
+`test_packets.py` использует готовые полные MIDP2-RU классы и исполняет настоящие конструкторы, парсеры и сериализаторы FLAP/SNAC/TLV, включая повреждённые буферы и коды ошибок. Отдельный [отчёт пакетов](../preservation/reports/source-packets.json) входит в функциональную серию `test_source.py`; сетевой вход не выполняется.
 
 `test_light.py` собирает RU-варианты MIDP2 и Motorola и сравнивает контроллер подсветки: аппаратные вызовы, состояние, задачи таймера и первоначальный таймаут. `--skip-build` использует готовые полные RU-сборки, `--seed 10` запускает один начальный таймаут. `audit_light.py` отдельно сверяет сохранившиеся после оптимизации сигнатуры и инструкции. Полная серия подсветки входит в `--matrix`; Siemens не содержит этого контроллера.
 
