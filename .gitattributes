@@ -8,6 +8,8 @@ tools/**/*.java text eol=lf
 *.zip binary
 *.rar binary
 *.lng binary
+*.mp3 binary
+res/ALL_TARGETS/text/replaces.txt text eol=lf
 *.patch -whitespace
 reconstruction/resources/** binary
 reconstruction/resources/**/*.json text diff eol=lf

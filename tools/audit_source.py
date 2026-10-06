@@ -695,7 +695,98 @@ SYMBOLS.update({
     'aw.a(Lax;I)V': 'DrawControls/VirtualTree.deleteChild(LDrawControls/TreeNode;I)V',
 })
 
+CLASSES['az'] = 'DrawControls/VirtualTreeCommands'
+SYMBOLS.update({
+    'aw.a Ljava/util/Vector;': 'DrawControls/VirtualTree.drawItems Ljava/util/Vector;',
+    'aw.b Z': 'DrawControls/VirtualTree.isChanged Z',
+    'aw.o I': 'DrawControls/VirtualTree.stepSize I',
+    'aw.c Z': 'DrawControls/VirtualTree.autoExpand Z',
+    'aw.a Laz;': 'DrawControls/VirtualTree.commands LDrawControls/VirtualTreeCommands;',
+    'aw.b Lax;': 'DrawControls/VirtualTree.lastNode LDrawControls/TreeNode;',
+    'ax.a Ljava/util/Vector;': 'DrawControls/TreeNode.items Ljava/util/Vector;',
+    'ax.a I': 'DrawControls/TreeNode.level I',
+    'az.a(Lax;Lax;)I': 'DrawControls/VirtualTreeCommands.vtCompareNodes(LDrawControls/TreeNode;LDrawControls/TreeNode;)I',
+    'az.a(Lax;Lcn;)V': 'DrawControls/VirtualTreeCommands.vtGetItemDrawData(LDrawControls/TreeNode;LDrawControls/ListItem;)V',
+    'cd.k()V': 'DrawControls/VirtualList.lock()V',
+    'cd.l()V': 'DrawControls/VirtualList.unlock()V',
+    'cd.c()V': 'DrawControls/VirtualList.afterUnlock()V',
+})
+
+SYMBOLS['aw.a(I)Lax;'] = 'DrawControls/VirtualTree.getDrawItem(I)LDrawControls/TreeNode;'
+SYMBOLS['aw.a()V'] = 'DrawControls/VirtualTree.checkToRebuildTree()V'
+SYMBOLS['aw.a(I)V'] = 'DrawControls/VirtualTree.setStepSize(I)V'
+SYMBOLS['aw.a()Lax;'] = 'DrawControls/VirtualTree.getCurrentItem()LDrawControls/TreeNode;'
+SYMBOLS['aw.a(Lax;)V'] = 'DrawControls/VirtualTree.setCurrentItem(LDrawControls/TreeNode;)V'
+SYMBOLS['aw.a(Ljava/util/Vector;Lax;Lax;)Z'] = 'DrawControls/VirtualTree.buildNodePath(Ljava/util/Vector;LDrawControls/TreeNode;LDrawControls/TreeNode;)Z'
+SYMBOLS['aw.a()Z'] = 'DrawControls/VirtualTree.itemSelected()Z'
+SYMBOLS['aw.a(IIII)Z'] = 'DrawControls/VirtualTree.pointerPressedOnUtem(IIII)Z'
+SYMBOLS['aw.a()I'] = 'DrawControls/VirtualTree.getSize()I'
+SYMBOLS['aw.n()V'] = 'DrawControls/VirtualTree.rebuildTreeIntItems()V'
+SYMBOLS['aw.b(Lax;I)V'] = 'DrawControls/VirtualTree.fillTreeIntItems(LDrawControls/TreeNode;I)V'
+SYMBOLS['aw.a(ILcn;)V'] = 'DrawControls/VirtualTree.get(ILDrawControls/ListItem;)V'
+SYMBOLS['aw.a(Ljavax/microedition/lcdui/Graphics;IIIIII)V'] = 'DrawControls/VirtualTree.drawItemData(Ljavax/microedition/lcdui/Graphics;IIIIII)V'
+SYMBOLS['aw.a(Lax;Ljava/lang/Object;)Lax;'] = 'DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;'
+SYMBOLS['aw.a(Lax;Lax;)Lax;'] = 'DrawControls/VirtualTree.findParent(LDrawControls/TreeNode;LDrawControls/TreeNode;)LDrawControls/TreeNode;'
+SYMBOLS['aw.a(Lax;)Z'] = 'DrawControls/VirtualTree.removeNode(LDrawControls/TreeNode;)Z'
+SYMBOLS['aw.b(Lax;)V'] = 'DrawControls/VirtualTree.sortNode(LDrawControls/TreeNode;)V'
+SYMBOLS['aw.a(Lax;Lax;I)V'] = 'DrawControls/VirtualTree.insertChild(LDrawControls/TreeNode;LDrawControls/TreeNode;I)V'
+SYMBOLS['aw.a(Lax;I)V'] = 'DrawControls/VirtualTree.deleteChild(LDrawControls/TreeNode;I)V'
+SYMBOLS['aw.b(Lax;Lax;)I'] = 'DrawControls/VirtualTree.getIndexOfChild(LDrawControls/TreeNode;LDrawControls/TreeNode;)I'
+SYMBOLS['aw.a(Lax;Z)V'] = 'DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V'
+SYMBOLS['aw.b()V'] = 'DrawControls/VirtualTree.clear()V'
+SYMBOLS['aw.o()V'] = 'DrawControls/VirtualTree.storeLastNode()V'
+SYMBOLS['aw.c()V'] = 'DrawControls/VirtualTree.afterUnlock()V'
+SYMBOLS['aw.p()V'] = 'DrawControls/VirtualTree.restoreLastNode()V'
+SYMBOLS['ax.a()V'] = 'DrawControls/TreeNode.clear()V'
+SYMBOLS['ax.a()Z'] = 'DrawControls/TreeNode.getExpanded()Z'
+SYMBOLS['ax.a()I'] = 'DrawControls/TreeNode.size()I'
+SYMBOLS['ax.a(I)Lax;'] = 'DrawControls/TreeNode.elementAt(I)LDrawControls/TreeNode;'
+SYMBOLS['ax.a(Lax;)Lax;'] = 'DrawControls/TreeNode.addItem(LDrawControls/TreeNode;)LDrawControls/TreeNode;'
+SYMBOLS['ax.a(Lax;I)V'] = 'DrawControls/TreeNode.insertChild(LDrawControls/TreeNode;I)V'
+SYMBOLS['ax.a(I)V'] = 'DrawControls/TreeNode.removeItem(I)V'
+SYMBOLS['ax.a(Lax;)I'] = 'DrawControls/TreeNode.findItem(LDrawControls/TreeNode;)I'
+SYMBOLS['ax.a(Ljava/util/Vector;Lax;Laz;)I'] = 'DrawControls/TreeNode.getInsertionPos(Ljava/util/Vector;LDrawControls/TreeNode;LDrawControls/VirtualTreeCommands;)I'
+SYMBOLS['ax.a(Laz;)V'] = 'DrawControls/TreeNode.sort(LDrawControls/VirtualTreeCommands;)V'
+
 METHODS = [
+    ('aw', '<init>', '(Ljava/lang/String;Z)V', '<init>'),
+    ('aw', 'a', '(I)Lax;', 'getDrawItem'),
+    ('aw', 'a', '()V', 'checkToRebuildTree'),
+    ('aw', 'a', '(I)V', 'setStepSize'),
+    ('aw', 'a', '()Lax;', 'getCurrentItem'),
+    ('aw', 'a', '(Lax;)V', 'setCurrentItem'),
+    ('aw', 'a', '(Ljava/util/Vector;Lax;Lax;)Z', 'buildNodePath'),
+    ('aw', 'a', '()Z', 'itemSelected'),
+    ('aw', 'a', '(IIII)Z', 'pointerPressedOnUtem'),
+    ('aw', 'a', '()I', 'getSize'),
+    ('aw', 'n', '()V', 'rebuildTreeIntItems'),
+    ('aw', 'b', '(Lax;I)V', 'fillTreeIntItems'),
+    ('aw', 'a', '(ILcn;)V', 'get'),
+    ('aw', 'a', '(Ljavax/microedition/lcdui/Graphics;IIIIII)V', 'drawItemData'),
+    ('aw', 'a', '(Lax;Ljava/lang/Object;)Lax;', 'addNode'),
+    ('aw', 'a', '(Lax;Lax;)Lax;', 'findParent'),
+    ('aw', 'a', '(Lax;)Z', 'removeNode'),
+    ('aw', 'b', '(Lax;)V', 'sortNode'),
+    ('aw', 'a', '(Lax;Lax;I)V', 'insertChild'),
+    ('aw', 'a', '(Lax;I)V', 'deleteChild'),
+    ('aw', 'b', '(Lax;Lax;)I', 'getIndexOfChild'),
+    ('aw', 'a', '(Lax;Z)V', 'setExpandFlag'),
+    ('aw', 'b', '()V', 'clear'),
+    ('aw', 'o', '()V', 'storeLastNode'),
+    ('aw', 'c', '()V', 'afterUnlock'),
+    ('aw', 'p', '()V', 'restoreLastNode'),
+    ('ax', '<init>', '(Ljava/lang/Object;)V', '<init>'),
+    ('ax', 'a', '()V', 'clear'),
+    ('ax', 'a', '()Z', 'getExpanded'),
+    ('ax', 'a', '()I', 'size'),
+    ('ax', 'a', '(I)Lax;', 'elementAt'),
+    ('ax', 'a', '(Lax;)Lax;', 'addItem'),
+    ('ax', 'a', '(Lax;I)V', 'insertChild'),
+    ('ax', 'a', '(I)V', 'removeItem'),
+    ('ax', 'a', '(Lax;)I', 'findItem'),
+    ('ax', 'a', '(Ljava/util/Vector;Lax;Laz;)I', 'getInsertionPos'),
+    ('ax', 'a', '(Laz;)V', 'sort'),
+
     ('m', 'a', '(Lax;Lax;)I', 'vtCompareNodes'),
     ('m', 'i', '()V', 'sortAll'),
     ('m', 'j', '()V', 'buildTree'),

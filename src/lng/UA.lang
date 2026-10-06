@@ -235,7 +235,7 @@
   "font_medium"			"Середній"
   "font_small"			"Маленький"
   //#sijapp cond.if target is "MOTOROLA"#
-  "font_large"			"Крупний"
+  "font_large"			"Графічний"
   //#sijapp cond.else#
   "font_large"			"Крупний"
   //#sijapp cond.end#
@@ -715,4 +715,8 @@
   "font_plain_desc"               "Звичайне"
   "from_file"                     "З файлу"
   "backlight_timeout"		"Час пiдсвiчування (сек)"
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_manual"		"Ручне пiдсвiчування (*)"
+  //#sijapp cond.else#
   "backlight_manual"		"Ручне пiдсвiчування"
+  //#sijapp cond.end#

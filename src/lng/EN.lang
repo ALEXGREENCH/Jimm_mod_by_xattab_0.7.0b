@@ -35,7 +35,7 @@
   "interest_24"				"Mail Order Catalog"
   "interest_25"				"Movies and TV"
   "interest_26"				"Collections"
-  "interest_27"				"Travel"
+  "interest_27"				"Computers"
   "interest_28"				"Space"
   "interest_29"				"Health and Beauty"
   "interest_30"				"Culture"
@@ -219,7 +219,7 @@
   "font_medium"                 "Medium"
   "font_small"                  "Small"
   //#sijapp cond.if target is "MOTOROLA"#
-  "font_large"                  "Large"
+  "font_large"                  "Graphic"
   //#sijapp cond.else#
   "font_large"                  "Large"
   //#sijapp cond.end#
@@ -340,7 +340,7 @@
   "onl_notification"            "Notice for upcoming contact"
   "onl_sound_file_name"         "Online Sound File"
   "only_online"                 "Show only online contacts"
-  "open"                        "80's"
+  "open"                        "Open"
   "option"                      "Options"
   "options_lng"                 "Options"
   "options_account"             "Account"
@@ -385,7 +385,7 @@
   "rem_ignore_list"             "From ignore list"
   "rename"                      "Rename"
   "rename_group"                "Rename group"
-  "reply"                       "Wednesday"
+  "reply"                       "Reply"
   "requauth"                    "Request auth"
   "reqstatmsg"                  "Status message"
   "req"                         "yes"
@@ -715,4 +715,8 @@
   "from_file"                     "External file"
   "font_plain_desc"               "Normal"
   "backlight_timeout"           "Backlight timeout (sec)"
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_manual"            "Manual backlight (*)"
+  //#sijapp cond.else#
   "backlight_manual"            "Manual backlight"
+  //#sijapp cond.end#

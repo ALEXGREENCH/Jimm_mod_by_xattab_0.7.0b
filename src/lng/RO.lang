@@ -235,7 +235,7 @@
   "font_medium"                 "Mediu"
   "font_small"                  "Mic"
   //#sijapp cond.if target is "MOTOROLA"#
-  "font_large"                  "Mare"
+  "font_large"                  "grafic"
   //#sijapp cond.else#
   "font_large"                  "Mare"
   //#sijapp cond.end#
@@ -716,4 +716,8 @@
   "from_file"                     "Din fişier"
   "font_plain_desc"               "Normal"
   "backlight_timeout"           "Durata iluminării (secunde)"
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_manual"            "Iluminare manuală (*)"
+  //#sijapp cond.else#
   "backlight_manual"            "Iluminare manuală"
+  //#sijapp cond.end#

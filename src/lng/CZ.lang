@@ -34,7 +34,7 @@
   "interest_24"				"Objednávat z katalogu"
   "interest_25"				"Kino & TV"
   "interest_26"				"Sběratelství"
-  "interest_27"				"Cestování"
+  "interest_27"				"Počítače"
   "interest_28"				"Vesmír"
   "interest_29"				"Zdraví & Krása"
   "interest_30"				"Kultura"
@@ -218,7 +218,7 @@
   "font_medium"                 "Střední"
   "font_small"                  "Malé"
   //#sijapp cond.if target is "MOTOROLA"#
-  "font_large"                  "Velké"
+  "font_large"                  "Graphic"
   //#sijapp cond.else#
   "font_large"                  "Velké"
   //#sijapp cond.end#
@@ -337,7 +337,7 @@
   "onl_notification"            "Oznámení příchozího kontaktu"
   "onl_sound_file_name"         "Zvuk pro online"
   "only_online"                 "Ukázat jen online kontakty"
-  "open"                        "80 léta"
+  "open"                        "Otevřít"
   "option"                      "Volby"
   "options_lng"                 "Nastavení"
   "options_account"             "Účet"
@@ -382,7 +382,7 @@
   "rem_ignore_list"             "Ze seznamu Ignorace"
   "rename"                      "Přejmenovat"
   "rename_group"                "Přejmenovat skupinu"
-  "reply"                       "Středa"
+  "reply"                       "Odpověď"
   "requauth"                    "Autorizační požadavek"
   "reqstatmsg"                  "Vyžádat zprávu o stavu"
   "req"                         "ano"
@@ -711,5 +711,13 @@
   "xstatus_right" "Status rozšířený vpravo"
   "from_file"                     "Ze souboru"
   "font_plain_desc"               "Normální"
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_timeout"           "Čas podsvícení (sek)"
+  //#sijapp cond.else#
   "backlight_timeout"           "Čas podsvícení (sec)"
+  //#sijapp cond.end#
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_manual"            "Ruční podsvícení (*)"
+  //#sijapp cond.else#
   "backlight_manual"            "Ruční podsvícení"
+  //#sijapp cond.end#

@@ -75,7 +75,7 @@ def build(target='MIDP2', language='RU', modules=MODULES, compile_only=False, sm
     recovery.run([recovery.java(), '-jar', CACHE / 'proguard.jar', '@' + str(dest / 'build.pro')])
     # Use source-owned resources; the preserved reference JAR is never an input here.
     entries = {}
-    for directory in [ROOT / 'res/ALL_TARGETS', ROOT / 'res' / target]:
+    for directory in [ROOT / 'res/ALL_TARGETS']:
         for path in directory.rglob('*'):
             if path.is_file() and 'lib' not in path.relative_to(directory).parts:
                 entries[path.name] = path.read_bytes()
@@ -94,6 +94,11 @@ def build(target='MIDP2', language='RU', modules=MODULES, compile_only=False, sm
             if path.is_file():
                 name = path.name if module_dir == 'FILES' else path.relative_to(directory).as_posix()
                 entries[name] = path.read_bytes()
+    # Phone-specific graphics/sounds override shared module resources (notably Siemens fs.png).
+    directory = ROOT / 'res' / target
+    for path in directory.rglob('*'):
+        if path.is_file() and 'lib' not in path.relative_to(directory).parts:
+            entries[path.name] = path.read_bytes()
     for path in resources.iterdir():
         if path.is_file():
             entries[path.name] = path.read_bytes()
