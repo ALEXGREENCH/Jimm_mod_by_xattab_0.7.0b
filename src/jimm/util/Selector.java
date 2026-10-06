@@ -103,6 +103,7 @@ public class Selector extends VirtualList implements VirtualListCommands
 		{
 			showCurrName();
 			invalidate();
+			return true;
 		}
 		return false;
 	}
@@ -141,8 +142,9 @@ public class Selector extends VirtualList implements VirtualListCommands
 			{
 				if (Options.cursorAlpha > 10)
 				{
-					VirtualList.drawGradient(g, transformColorLight(Options.cursorColor, -32), Options.cursorColor, xa + 1, y1 + 1, xb - 1, y2 - 1, Options.cursorAlpha);
+					VirtualList.drawGradient(g, transformColorLight(Options.cursorColor, -48), Options.cursorColor, xa, y1, xb, y1 + itemHeight, Options.cursorAlpha);
 				}
+				else g.setStrokeStyle(Graphics.DOTTED);
 				g.setColor(transformColorLight(jimm.Options.cursorColor, -48));
 				g.drawRect(xa, y1, itemHeight - 1, y2 - y1 - 1);
 			}
@@ -166,6 +168,11 @@ public class Selector extends VirtualList implements VirtualListCommands
 					g.fillRect(xa + 2, y1 + 2, itemHeight - 4, itemHeight - 4);
 					break;
 				}
+			}
+			if ((selectorType == 2) && isSelected && (i == curCol))
+			{
+				g.setColor(getInverseColor(colorTable[startIdx]));
+				g.fillRect(xa + 5, y1 + 5, itemHeight - 10, itemHeight - 10);
 			}
 			xa = xb;
 		}
