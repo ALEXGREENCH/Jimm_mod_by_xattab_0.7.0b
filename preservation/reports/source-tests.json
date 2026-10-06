@@ -227,15 +227,5 @@
     "SIEMENS2"
   ],
   "resources": "PASS resources: 15 builds, 380 exact asset files, 8343 decoded language entries",
-  "focused_reruns": [
-    {
-      "probe": "FormProbe",
-      "fixture": "FormFixture",
-      "reason": "Separate Canvas softkey swap (143) and native editor command swap (174).",
-      "source_input_sha256": "f654118f2dc74d458b8d6bd26585dfa121cc4680bf390b4c6d6f81beddc85cd2",
-      "observations": 6149,
-      "raster_frames": 2562,
-      "differences": 0
-    }
-  ]
+  "graphics": "PASS graphics: 3 platforms, 75974 observations, 4551 frames\nPASS graphics bytecode: 73 signatures, 58 identical normalized instructions/handlers"
 }

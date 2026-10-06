@@ -230,6 +230,7 @@ def main(matrix=False, skip_build=False):
                  '--modules', '', '--compile-only'], 'minimal-' + target)
         report['minimal_modules'] = ['MIDP2', 'MOTOROLA', 'SIEMENS2']
         report['resources'] = run([sys.executable, ROOT / 'tools/audit_resources.py'], 'resource-audit')
+        report['graphics'] = run([sys.executable, ROOT / 'tools/test_graphics.py', '--skip-build'], 'graphics-audit')
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
