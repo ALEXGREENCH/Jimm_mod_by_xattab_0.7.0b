@@ -101,7 +101,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 	//private static Command cmdFindOk;
 	//private static Command cmdFindCancel;
 	private static TextField tfldFind;
-	private static ChoiceGroup chsFind;
+	private static FormChoiceGroup chsFind;
 	
 	// Constructor
 	public HistoryStorageList()
@@ -213,7 +213,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		return null;
 	}
 
-	public void export(String uin)
+	private void export(String uin)
 	{
 		exportUin = uin;
 		try
@@ -255,16 +255,16 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 					.getStringValue(ContactItem.CONTACTITEM_NAME) : uin;
 			SplashCanvas.setMessage(nick);
 			SplashCanvas.setProgress(0);
-			StringBuffer str_buf = new StringBuffer().append("\r\n").append('\t').append(ResourceBundle.getString("message_history_with")).append(nick)
-					.append(" (").append(uin).append(")\r\n").append('\t').append(ResourceBundle.getString("export_date")).append(Util.getDateString(false, true))
-					.append("\r\n\r\n");
+			StringBuffer str_buf = new StringBuffer().append(ResourceBundle.getString("message_history_with")).append(nick)
+					.append(" (").append(uin).append(")\r\n").append(ResourceBundle.getString("export_date")).append(Util.getDateString(false, true))
+					.append("\r\n");
 			os.write(Util.stringToByteArray(str_buf.toString(), !cp1251));
 			for (int i = 0; i < max; i++)
 			{
 				record = HistoryStorage.getRecord(uin, i);
 				os.write(Util.stringToByteArray("\r\n" + ((record.type == 0) ? 
-					"------------------------------------<<<-\r\n " + nick : 
-					"------------------------------------>>>-\r\n " + Icq.myNick) 
+					"----------------------------<<<-\r\n " + nick :
+					"---------------------------->>>-\r\n " + Icq.myNick)
 					+ " (" + record.date + "):\r\n", !cp1251));
 
 				String curr_msg_text = record.text.trim();
@@ -304,7 +304,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		}
 	}
 
-	public void startExport(ContactItem[] citems)
+	private void startExport(ContactItem[] citems)
 	{
 		cp1251 = Options.getBoolean(Options.OPTION_CP1251_HACK);
 		SplashCanvas.setMessage(ResourceBundle.getString("exporting", ResourceBundle.FLAG_ELLIPSIS));
@@ -324,7 +324,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 //		Jimm.display.setCurrent(ok);
 	}
 
-	public FileSystem openFile(String fileName)
+	private static FileSystem openFile(String fileName)
 	{
 		try
 		{
@@ -364,7 +364,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 			URLList.setCommandListener(this);
 			for (int i = 0 ; i < urls.size() ; i++)
 			{
-				URLList.addBigText((String)urls.elementAt(i), getTextColor(), Font.STYLE_PLAIN, i).doCRLF(i);
+				URLList.addBigText((String)urls.elementAt(i), getTextColor(), Options.fontStyle, i).doCRLF(i);
 			}
 			JimmUI.showInfoTextList(URLList);
 		}
@@ -384,7 +384,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		if (c == JimmUI.cmdBack)
 		{
 			// back to messages list
-			if (JimmUI.isControlActive(messText) || (frmFind.isActive()))
+			if (JimmUI.isControlActive(messText) || JimmUI.isControlActive(frmFind))
 			{
 				messText = null;
 				JimmUI.backToLastScreen(/*false*/);
@@ -460,7 +460,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		else if ((c == JimmUI.cmdCopyText) || (c == JimmUI.cmdCopyAppend))
 		{
 			copyText(c == JimmUI.cmdCopyText);
-	}
+		}
 		
 		// next message command
 		else if (c == cmdMsgNext)
@@ -474,32 +474,33 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 			moveInList(-1);
 		}
 		
-		// user select find command in message list
+		// Open the search form from the list, or search using the current form.
 		else if (c == JimmUI.cmdFind)
 		{
-			if (frmFind == null)
+			if (JimmUI.isControlActive(HistoryStorage.list))
 			{
-				frmFind = new VirtualForm( ResourceBundle.getString("find") );
-				tfldFind = new TextField(ResourceBundle.getString("text_to_find"), "", 64, TextField.ANY);
-
-				chsFind = new FormChoiceGroup(ResourceBundle.getString("option"), Choice.MULTIPLE);
-				chsFind.append(ResourceBundle.getString("find_backwards"), null);
-				chsFind.append(ResourceBundle.getString("find_case_sensitiv"), null);
-				chsFind.setSelectedIndex(0, true);
-
-				frmFind.addCommand(JimmUI.cmdOk);
-				frmFind.addCommand(JimmUI.cmdBack);
-				frmFind.append(tfldFind);
-				frmFind.append(chsFind);
-				frmFind.setCommandListener(this);
+				if (frmFind == null)
+				{
+					frmFind = new VirtualForm(ResourceBundle.getString("find"));
+					frmFind.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
+					tfldFind = new TextField(ResourceBundle.getString("text_to_find"), "", 64, TextField.ANY);
+					chsFind = new FormChoiceGroup(null, Choice.MULTIPLE);
+					chsFind.append(ResourceBundle.getString("find_backwards"), null);
+					chsFind.append(ResourceBundle.getString("find_case_sensitiv"), null);
+					chsFind.setSelectedIndex(0, true);
+					frmFind.addCommandEx(JimmUI.cmdFind, TextList.MENU_LEFT_BAR);
+					frmFind.addCommandEx(JimmUI.cmdBack, TextList.MENU_RIGHT_BAR);
+					frmFind.clear();
+					frmFind.append(tfldFind);
+					frmFind.append(chsFind);
+					frmFind.setCommandListener(this);
+				}
+				frmFind.activate(Jimm.display);
 			}
-			frmFind.activate(Jimm.display);
-		}
-		
-		// user select OK command in find screen
-		else if (c == JimmUI.cmdOk)
-		{
-			HistoryStorage.find(currUin, tfldFind.getString(), chsFind.isSelected(1), chsFind.isSelected(0));
+			else
+			{
+				HistoryStorage.find(currUin, tfldFind.getString(), chsFind.isSelected(1), chsFind.isSelected(0));
+			}
 		}
 
 		// commands info
@@ -509,19 +510,10 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 			
 			try
 			{
-				Alert alert = new Alert
-				(
-					ResourceBundle.getString("history_info"),
-					(new StringBuffer())
-						.append(ResourceBundle.getString("hist_cur")).append(": ").append(getSize()).append("\n")
-						.append(ResourceBundle.getString("hist_size")).append(": ").append(rs.getSize()/1024).append("\n")
-						.append(ResourceBundle.getString("hist_avail")).append(": ").append(rs.getSizeAvailable()/1024).append("\n")
-						.toString(),
-					null,
-					AlertType.INFO 
-				);
-				alert.setTimeout(Alert.FOREVER);
-				Jimm.display.setCurrent(alert);
+				String text = ResourceBundle.getString("hist_cur") + ": " + HistoryStorage.getRecordCount(currUin) + "\n"
+					+ ResourceBundle.getString("hist_size") + ": " + rs.getSize() / 1024 + "\n"
+					+ ResourceBundle.getString("hist_avail") + ": " + rs.getSizeAvailable() / 1024 + "\n";
+				new VirtualAlert(JimmUI.getCurrentScreen(), text, -1).activate(Jimm.display);
 			}
 			catch (Exception e) {}
 		}
@@ -549,13 +541,13 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		CachedRecord record = HistoryStorage.getRecord(currUin, this.getCurrIndex()); 
 		
 		messText.clear();
-		messText.addBigText(record.date + ":" , messText.getTextColor(), Font.STYLE_BOLD, -1);
+		messText.addBigText(record.date + ":" , messText.getTextColor(), Font.STYLE_BOLD + Options.fontStyle, -1);
 		messText.doCRLF(-1);
 		
 		//#sijapp cond.if modules_SMILES is "true" #
-		Emotions.addTextWithEmotions(messText, record.text, Font.STYLE_PLAIN, messText.getTextColor(), -1);
+		Emotions.addTextWithEmotions(messText, record.text, Options.fontStyle, messText.getTextColor(), -1);
 		//#sijapp cond.else#
-		messText.addBigText(record.text, messText.getTextColor(), Font.STYLE_PLAIN, -1);
+		messText.addBigText(record.text, messText.getTextColor(), Options.fontStyle, -1);
 		//#sijapp cond.end#
 		
 		//#sijapp cond.if target is "SIEMENS2" | target is "MOTOROLA" | target is "MIDP2"#
@@ -892,23 +884,8 @@ public class HistoryStorage
 	static void find(String uin, String text, boolean case_sens, boolean back)
 	{
 		if (list == null) return;
-		boolean result = find_intern(uin, text, case_sens, back);
-		if (result == true) return;
-		
-		Alert alert = new Alert
-		(
-			ResourceBundle.getString("find"),
-			(new StringBuffer())
-				.append(text)
-			    .append("\n")
-				.append(ResourceBundle.getString("not_found"))
-				.toString(),
-			null,
-			AlertType.INFO
-		);
-		
-		alert.setTimeout(Alert.FOREVER);
-		list.activate(Jimm.display, alert);
+		if (find_intern(uin, text, case_sens, back)) return;
+		new VirtualAlert(JimmUI.getCurrentScreen(), text + " " + ResourceBundle.getString("not_found"), -1).activate(Jimm.display);
 	}
 	
 	// Clears all records for all uins

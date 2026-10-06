@@ -9,9 +9,9 @@ import javax.microedition.lcdui.Display;
 public class FileTransferIO extends TransportIO {
     public static Hashtable files=new Hashtable(),directories=new Hashtable();
     public static Vector serials=new Vector(),progress=new Vector(),messages=new Vector();
-    public static int starts,saves,collections,fileFailure,fileCloses,inputCloses;
+    public static int starts,saves,collections,fileFailure,fileCloses,inputCloses,outputCloses,flushes;
     public static StringBuffer fileLog=new StringBuffer();
-    public static void resetFiles(){reset();files.clear();directories.clear();serials.removeAllElements();progress.removeAllElements();messages.removeAllElements();starts=saves=collections=fileFailure=fileCloses=inputCloses=0;fileLog.setLength(0);}
+    public static void resetFiles(){reset();files.clear();directories.clear();serials.removeAllElements();progress.removeAllElements();messages.removeAllElements();starts=saves=collections=fileFailure=fileCloses=inputCloses=outputCloses=flushes=0;fileLog.setLength(0);}
     public static void file(String path,byte[] body){files.put(path,body);}
     public static void directory(String path,String[] entries){directories.put(path,entries);}
     public static Enumeration roots(){return enumeration(new String[]{"card/"});}
@@ -19,7 +19,7 @@ public class FileTransferIO extends TransportIO {
     public static Connection open(String url)throws IOException{return open(url,3);}
     public static Connection open(String url,int mode)throws IOException{
         if(!url.startsWith("file:"))return TransportIO.open(url,mode);
-        String path=url.substring("file://localhost".length());while(path.startsWith("//"))path=path.substring(1);
+        String path=url.substring(url.startsWith("file://localhost")?"file://localhost".length():"file://".length());while(path.startsWith("//"))path=path.substring(1);
         fileLog.append("open:").append(path).append(':').append(mode).append(';');if(fileFailure==1)throw new IOException("file-open");
         return (Connection)Proxy.newProxyInstance(FileTransferIO.class.getClassLoader(),new Class[]{FileConnection.class},new FileHandler(path));
     }
@@ -29,7 +29,7 @@ public class FileTransferIO extends TransportIO {
             String name=method.getName();
             if(name.equals("toString"))return path;if(name.equals("hashCode"))return new Integer(System.identityHashCode(proxy));if(name.equals("equals"))return Boolean.valueOf(proxy==args[0]);
             fileLog.append(name).append(':').append(path).append(';');
-            if(name.equals("close")){fileCloses++;return null;}
+            if(name.equals("close")){fileCloses++;if(fileFailure==10)throw new IOException("file-close");return null;}
             if(name.equals("isDirectory"))return Boolean.valueOf(path.endsWith("/"));
             if(name.equals("exists"))return Boolean.valueOf(files.containsKey(path)||directories.containsKey(path));
             if(name.equals("canRead")||name.equals("canWrite")||name.equals("isOpen"))return Boolean.TRUE;
@@ -40,6 +40,17 @@ public class FileTransferIO extends TransportIO {
             if(name.equals("getName"))return path.substring(path.lastIndexOf('/')+1);
             if(name.equals("getPath"))return path.substring(0,path.lastIndexOf('/')+1);
             if(name.equals("getURL"))return "file://localhost"+path;
+            if(name.equals("create")){if(fileFailure==5)throw new IOException("file-create");files.put(path,new byte[0]);return null;}
+            if(name.equals("delete")){if(fileFailure==9)throw new IOException("file-delete");files.remove(path);return null;}
+            if(name.equals("openOutputStream")||name.equals("openDataOutputStream")){
+                if(fileFailure==6)throw new IOException("file-output");
+                OutputStream out=new OutputStream(){
+                    final ByteArrayOutputStream bytes=new ByteArrayOutputStream();
+                    public void write(int value)throws IOException{if(fileFailure==7)throw new IOException("file-write");bytes.write(value);files.put(path,bytes.toByteArray());}
+                    public void flush()throws IOException{flushes++;if(fileFailure==8)throw new IOException("file-flush");}
+                    public void close(){outputCloses++;}
+                };return name.equals("openDataOutputStream")?new DataOutputStream(out):out;
+            }
             if(name.equals("openInputStream")||name.equals("openDataInputStream")){
                 if(fileFailure==4)throw new IOException("file-input");byte[] body=(byte[])files.get(path);if(body==null)throw new IOException("missing fixture file");
                 InputStream in=new ByteArrayInputStream(body){public void close(){inputCloses++;}};return name.equals("openDataInputStream")?new DataInputStream(in):in;
