@@ -283,6 +283,7 @@ public class Jimm extends MIDlet
 		JimmUI.setColorScheme(true);
 
 		DrawControls.VirtualList.setDisplay(Jimm.display);
+		Options.updateAlpha();
 
 		EnterPassword.activate(Jimm.display.getCurrent());
 

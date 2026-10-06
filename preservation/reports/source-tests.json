@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "4e5f3003e0e57ddf17d7748f5e335e0605c61fd292b5715d8ef7c9fc8bc60ad7",
+  "source_jar_sha256": "c0194c6ec0a090ff09dbeb020db7686d1ef394aeb6baf6d1f1eba9ef4a668490",
   "pure_logic": "PASS: 75837 May-reference differential checks (client versions, outgoing statuses, options streams)",
   "detector": "PASS probe: 3159 detector/status cases",
   "detector_cases": 3159,
@@ -104,6 +104,14 @@
   "vlist_source": "PASS probe: 1992 login/roster observations",
   "vlist_observations": 1992,
   "vlist_differences": 0,
+  "list_menu_reference": "PASS probe: 4053 login/roster observations",
+  "list_menu_source": "PASS probe: 4053 login/roster observations",
+  "list_menu_observations": 4053,
+  "list_menu_differences": 0,
+  "list_menu_italic_reference": "PASS probe: 4053 login/roster observations",
+  "list_menu_italic_source": "PASS probe: 4053 login/roster observations",
+  "list_menu_italic_observations": 4053,
+  "list_menu_italic_differences": 0,
   "ui": "PASS: MIDP2 startup and 10 options panels opened/saved with memory RMS",
   "limitations": [
     "MicroEmulator does not play all original sound formats.",
@@ -113,82 +121,85 @@
     {
       "target": "MIDP2",
       "language": "RU",
-      "sha256": "4e5f3003e0e57ddf17d7748f5e335e0605c61fd292b5715d8ef7c9fc8bc60ad7"
+      "sha256": "c0194c6ec0a090ff09dbeb020db7686d1ef394aeb6baf6d1f1eba9ef4a668490"
     },
     {
       "target": "MIDP2",
       "language": "UA",
-      "sha256": "6ae6bf3d809d82d5b3a896167c2a8dfafb0d9b81ae1c9c511a24ff3a2ef891b1"
+      "sha256": "5657bd50695faa91ee944cb20339f69d3e976341bd2b27a44c9923353f523d82"
     },
     {
       "target": "MIDP2",
       "language": "RO",
-      "sha256": "240948d1d608f615bbeeec5c57d09299400317fb6e0490cd2d2c9a21796b2571"
+      "sha256": "6acf308a00941edaf17e64dd2f6c73d6ccd992c0e234000367d1620de708e0e2"
     },
     {
       "target": "MIDP2",
       "language": "EN",
-      "sha256": "d87cdcdbdcf7b4a763c4cca90c833e11a0448bea51449baacce0e41fd2b1001b"
+      "sha256": "d9f16e93ccb4000a9ad9c3b58c3b16c503dedbe25a1558f995d442945e61a841"
     },
     {
       "target": "MIDP2",
       "language": "CZ",
-      "sha256": "8701874361c196df2d90e0913701c392e232548b73ef01747cfe824bfd483ee1"
+      "sha256": "48535a4a609397412346fcc26197a678a70ea8d68d613b03c844388fa031e613"
     },
     {
       "target": "MOTOROLA",
       "language": "RU",
-      "sha256": "10562defbe456a5ed17ef9fbcda8532f33eaec4443a9023651ec30c4d29a15f3"
+      "sha256": "0f61bef1c735b403daa47e23e544bb9a73ad01cbe7bc6c0377030ecdce9fb10c"
     },
     {
       "target": "MOTOROLA",
       "language": "UA",
-      "sha256": "87997e10e82224695e2d7adf661936e79cf59c12ce7a2af4ec7d18595498cdee"
+      "sha256": "1241ae5ae0984d2ab434f0e063661079ae810b13ed3e529a3bd377a4027c42b0"
     },
     {
       "target": "MOTOROLA",
       "language": "RO",
-      "sha256": "bda3c80aa87bdc4ce0151c5e49c3d8e0953d211b90afc6fb9aef8939fb28f53d"
+      "sha256": "327d056193e64db1a3d0598ae40193b7571b809e642256c0b9c69dd2ddd3b193"
     },
     {
       "target": "MOTOROLA",
       "language": "EN",
-      "sha256": "fce8407fd2d18aa37cd002d010026b3843b46dcaa578ef3a815906aa15502fda"
+      "sha256": "4c4f6e5e42be42a097cad80e33aba8068af982b773d029407571605b983983ca"
     },
     {
       "target": "MOTOROLA",
       "language": "CZ",
-      "sha256": "402e48de2cc5c7369aec3d3bd36e73944a89bd0cb3b80def5a2591d052ba4a4c"
+      "sha256": "fa895718e899c2da8b8f86c4d7fe600d28e10f8856e9fa3e33593612c34dbedb"
     },
     {
       "target": "SIEMENS2",
       "language": "RU",
-      "sha256": "48f1c4cde0ec905de8cac4ad18bf7849c2e8cf28a695137a89d6cdee45cea29b"
+      "sha256": "6ffc56994fc32b098da27cb1ed18b761c33cec6665bda825fefaa282dd90e671"
     },
     {
       "target": "SIEMENS2",
       "language": "UA",
-      "sha256": "9bffe12cf3edad443af8a488139f7eb8c93fc027d809e64017dd2564ac3ee5f0"
+      "sha256": "465e12a84e761471379724ca1c7dad8c4d979898c9aab0366425cbdbaf02d76d"
     },
     {
       "target": "SIEMENS2",
       "language": "RO",
-      "sha256": "e40fcb22b6d726063423b8eb699fd4e26c77726e8cae238c141aa5ada34f3f40"
+      "sha256": "dc21a99bb90852b73096a63d1d3c03b04adcc891074b3b382cee551ba4c1b2f4"
     },
     {
       "target": "SIEMENS2",
       "language": "EN",
-      "sha256": "84126da6a9be0ebd430afff90f3ec1b569eb503dde47fc94ed469c2775a3db79"
+      "sha256": "0fbbe3b7587e6912fb5f1c36cb0733569f7c4e1e3c2517aec445b1dc1a7c0a93"
     },
     {
       "target": "SIEMENS2",
       "language": "CZ",
-      "sha256": "25edbffb15fd6df8665343a6f0d68feef933f400fc01629637e6187fd2c03c8e"
+      "sha256": "58ae8b10ec0da4a67c061d8d770712c2c921a1fddacd898cdfd80b483d086960"
     }
   ],
   "minimal_modules": [
     "MIDP2",
     "MOTOROLA",
     "SIEMENS2"
-  ]
+  ],
+  "list_menu_raster_frames": 2266,
+  "list_menu_italic_raster_frames": 2266,
+  "vlist_raster_frames": 1238
 }

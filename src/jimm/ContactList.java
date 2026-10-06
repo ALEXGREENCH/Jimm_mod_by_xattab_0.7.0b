@@ -171,13 +171,6 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		updateTitle(0);
 		//#sijapp cond.end#
 
-		tree.addCommandEx(cmdMainMenu, VirtualList.MENU_RIGHT_BAR);
-		tree.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
-
-		//#sijapp cond.if modules_DEBUGLOG is "true" #
-		tree.addCommandEx(debugListCommand, VirtualList.MENU_LEFT);
-		//#sijapp cond.end#
-
 		tree.setCommandListener(this);
 	}
 
@@ -287,7 +280,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		tree.setCapPrivateImage(MainMenu.getPrivateStatusImage());
 		tree.setCapHappyImage(happyIcon.elementAt(Options.getBoolean(Options.OPTION_FLAG_HAPPY) ? 0 : -1));
 		tree.setCapSoundImage(MainMenu.getSoundImage(Options.getBoolean(Options.OPTION_SILENT_MODE)));
-		tree.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) * 8);
+		tree.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
 
 		//#sijapp cond.if modules_TRAFFIC is "true" #
 		updateTitle(Traffic.getSessionTraffic());
@@ -300,6 +293,14 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		buildTree();
 		sortAll();
 		tree.unlock();
+
+		tree.removeAllCommands();
+		tree.addCommandEx(cmdMainMenu, VirtualList.MENU_RIGHT_BAR);
+		tree.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
+
+		//#sijapp cond.if modules_DEBUGLOG is "true" #
+		tree.addCommandEx(debugListCommand, VirtualList.MENU_LEFT);
+		//#sijapp cond.end#
 
 //		VirtualList.moveInCircle = true;
 		tree.setCyclingCursor(true);
@@ -643,6 +644,14 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		// treeSorted = true;
 	}
 
+	static private TreeNode addGroupNodeInternal(GroupItem item)
+	{
+		TreeNode groupNode = tree.addNode(null, item);
+		gNodes.put(new Integer(item.getId()), groupNode);
+		groupNode.setExpanded(item.expanded);
+		return groupNode;
+	}
+
 	// Builds contacts tree (without sorting) 
 	static private synchronized void buildTree()
 	{
@@ -666,8 +675,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 			for (i = 0; i < gCount; i++)
 			{
 				GroupItem item = (GroupItem)gItems.elementAt(i);
-				TreeNode groupNode = tree.addNode(null, item);
-				gNodes.put(new Integer(item.getId()), groupNode);
+				addGroupNodeInternal(item);
 			}
 		}
 
@@ -831,8 +839,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
                 GroupItem group = getGroupById(groupId);
                 if (group != null)
                 {
-                    groupNode = tree.addNode(null, group);
-                    gNodes.put(new Integer(groupId), groupNode);
+                    groupNode = addGroupNodeInternal(group);
                 }
             }
             cItemNode = tree.addNode(groupNode, item);
@@ -1587,18 +1594,25 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 	public void vtGetItemDrawData(TreeNode src, ListItem dst)
 	{
 		ContactListItem item = (ContactListItem)src.getData();
-
-		dst.image         = item instanceof GroupItem ? groupIcons.elementAt(src.getExpanded() ? 1 : 0) : imageList.elementAt(item.getImageIndex());
-		dst.xStatusImg    = item.getXStatus().getStatusImage();
-		dst.happyImg      = happyIcon.elementAt(item.getHappyImageIndex());
-		dst.bDayImg       = birthDayIcon.elementAt(item.getBirthDayImageIndex());
-		dst.text          = item.getText();
-		dst.authImg       = authIcon.elementAt(item.getAuthImageIndex());
-		dst.ignoreImg     = privateIcons.elementAt(item.getIgnoreImageIndex());
-		dst.visibilityImg = privateIcons.elementAt(item.getVisibilityImageIndex());
-		dst.clientImg     = clientIcons.elementAt(item.getClientImageIndex());
-		dst.color         = item.getTextColor();
-		dst.fontStyle     = item.getFontStyle();
+		dst.color = item.getTextColor();
+		dst.fontStyle = item.getFontStyle();
+		dst.text = item.getText();
+		if (item instanceof ContactItem)
+		{
+			dst.image = imageList.elementAt(item.getImageIndex());
+			dst.xStatusImg = item.getXStatus().getStatusImage();
+			dst.happyImg = happyIcon.elementAt(item.getHappyImageIndex());
+			dst.bDayImg = birthDayIcon.elementAt(item.getBirthDayImageIndex());
+			dst.authImg = authIcon.elementAt(item.getAuthImageIndex());
+			dst.ignoreImg = privateIcons.elementAt(item.getIgnoreImageIndex());
+			dst.visibilityImg = privateIcons.elementAt(item.getVisibilityImageIndex());
+			dst.clientImg = clientIcons.elementAt(item.getClientImageIndex());
+		}
+		else
+		{
+			dst.image = groupIcons.elementAt(src.getExpanded() ? 1 : 0);
+			dst.happyImg = imageList.elementAt(22);
+		}
 	}
 
 	public void vlCursorMoved(VirtualList sender) {}
@@ -1741,7 +1755,9 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 
 		if (item instanceof GroupItem)
 		{
-			tree.setExpandFlag(node, !node.getExpanded());
+			GroupItem group = (GroupItem)item;
+			group.expanded = !node.getExpanded();
+			tree.setExpandFlag(node, group.expanded);
 		}
 	}
 }

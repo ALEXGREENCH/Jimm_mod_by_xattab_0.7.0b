@@ -210,6 +210,7 @@ public abstract class VirtualList
 	private int lastCurrItem = 0, lastTopItem = 0;
 
 	private boolean fullScreen = false;
+	private static boolean xStatusOnRight;
 
 	private Icon capImage, capXstImage, capPrivateImage, capHappyImage, capSoundImage;
 	private int captionStatusEnd, captionXStatusEnd, captionPrivateEnd, captionSoundStart;
@@ -1619,7 +1620,7 @@ public abstract class VirtualList
 			paintedItem.image.drawByLeft(g, x, (y1 + y2) / 2);
 			x += paintedItem.image.getWidth() > 99 ? 2 : paintedItem.image.getWidth() + 1;
 		}
-		if (!Options.getBoolean(Options.OPTION_XSTATUS_RIGHT) && paintedItem.xStatusImg != null)
+		if (!xStatusOnRight && paintedItem.xStatusImg != null)
 		{
 			paintedItem.xStatusImg.drawByLeft(g, x, (y1 + y2) / 2);
 			x += paintedItem.xStatusImg.getWidth() + 1;
@@ -1650,7 +1651,7 @@ public abstract class VirtualList
 		}
 //		x -= clientImgWidth + 2;
 
-        if (Options.getBoolean(Options.OPTION_XSTATUS_RIGHT) && paintedItem.xStatusImg != null)
+        if (xStatusOnRight && paintedItem.xStatusImg != null)
         {
             paintedItem.xStatusImg.drawByRight(g, x, (y1 + y2) / 2);
             x -= paintedItem.xStatusImg.getWidth() + 2;
@@ -1745,7 +1746,9 @@ public abstract class VirtualList
 
 	public static void assignSoftKeys()
 	{
-        fontView = Options.getInt(Options.OPTION_FONT_VIEW);
+		setCaptionOffsets();
+		xStatusOnRight = Options.getBoolean(Options.OPTION_XSTATUS_RIGHT);
+		fontView = Options.getInt(Options.OPTION_FONT_VIEW);
 		if (Options.getBoolean(Options.OPTION_SWAP_SOFT_KEY))
 		{
 			MENU_LEFT_BAR  = MENU_TYPE_RIGHT_BAR;
@@ -1782,7 +1785,7 @@ public abstract class VirtualList
 		int layer = height / 4;
 		boolean defaultMenu = false;
 		
-		if ((style == DMS_DBLCLICK) || fullScreen) return false;
+		if (fullScreen) return false;
 		
 		if (style == DMS_DRAW) drawGradient(g, transformColorLight(capBkCOlor, -48), capBkCOlor, 0, y1, width, y2, Options.softbarAlpha);
 		
@@ -2011,7 +2014,6 @@ public abstract class VirtualList
 	
 	private static final int DMS_DRAW = 1;
 	private static final int DMS_CLICK = 2;
-	private static final int DMS_DBLCLICK = 3;
 
 	private boolean paint3points(Graphics g, int x1, int y1, int x2, int y2, int mode, int curX, int curY, int moveOffset, int menuItemsCount)
 	{
@@ -2030,7 +2032,6 @@ public abstract class VirtualList
 			
 		//#sijapp cond.if target is "MIDP2"#
 		case DMS_CLICK:
-		case DMS_DBLCLICK:
 			if (ptInRect(curX, curY, x1, y1, x2, y2))
 			{
 				moveSelectedMenuItem(moveOffset, menuItemsCount, true);
@@ -2080,7 +2081,7 @@ public abstract class VirtualList
 		// Draw background
 		if (mode == DMS_DRAW)
 		{
-			drawRect(g, transformColorLight(bkgrndColor, -32), bkgrndColor, x, y, x + width, y + height);
+			drawGradient(g, transformColorLight(bkgrndColor, -32), bkgrndColor, x, y, x + width, y + height, 255);
 //			drawGradient(g, x, y, x + width, y + height, bkgrndColor, 16, -48, -16);
 		}
 		
@@ -2110,7 +2111,9 @@ public abstract class VirtualList
 				{
 //					g.setColor(capBkCOlor);
 //					g.fillRect(x + 1, itemY - 1, width - 1, fontHeight + 1);
-					drawGradient(g, x + 2, itemY - 1, width - 3, fontHeight + 1, capBkCOlor, 16, -32, 0);
+					drawGradient(g, transformColorLight(Options.cursorColor, -32), Options.cursorColor, x + 1, itemY - 1, x + width, itemY + fontHeight, 255);
+					g.setColor(transformColorLight(Options.cursorColor, -48));
+					g.drawRect(x + 1, itemY - 1, width - 2, fontHeight);
 				}
 			}
 			itemY += fontHeight;
@@ -2124,8 +2127,8 @@ public abstract class VirtualList
 			switch (mode)
 			{
 			case DMS_DRAW:
-				g.setColor((i == curMenuItemIndex) ? getInverseColor(capBkCOlor) : capTxtColor);
-				g.drawString(cmd.getLabel(), x + layer, itemY, Graphics.LEFT | Graphics.TOP);
+				drawString(g, cmd.getLabel(), x + layer, itemY, Graphics.LEFT | Graphics.TOP,
+					(i == curMenuItemIndex) ? getInverseColor(Options.cursorColor) : capTxtColor);
 				break;
 				
 			//#sijapp cond.if target is "MIDP2"#

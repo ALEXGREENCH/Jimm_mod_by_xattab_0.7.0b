@@ -64,6 +64,11 @@ public class TreeNode
 		return expanded;
 	}
 
+	public void setExpanded(boolean expanded)
+	{
+		this.expanded = expanded;
+	}
+
 	// Returns number of subnodes
 	public int size()
 	{

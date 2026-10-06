@@ -35,6 +35,7 @@ public class GroupItem implements ContactListItem
 	// Persistent variables
 	private int id;
 	private String name;
+	protected boolean expanded;
 	
 	private int
 		// Counter for online users
@@ -73,10 +74,10 @@ public class GroupItem implements ContactListItem
 	    totalCount  += totalInc;
 	}
 
-    public int getImageIndex()
-    {
-        return 22; // иконка группы контактов...
-    }
+	public int getImageIndex()
+	{
+		return -1;
+	}
     
 	private jimm.comm.XStatus xstatus = new jimm.comm.XStatus();
 
@@ -86,14 +87,9 @@ public class GroupItem implements ContactListItem
 	}
 
 	public String getText()
-    {
-        String result;
-        
-        if ((onlineCount != 0) && !Options.getBoolean(Options.OPTION_CL_HIDE_OFFLINE)) 
-            result = name + " (" +Integer.toString(onlineCount) + "/" +Integer.toString(totalCount) + ")";
-        else result = name;
-        return result;
-    }
+	{
+		return name + " (" + Integer.toString(onlineCount) + "/" + Integer.toString(totalCount) + ")";
+	}
 
     public int getTextColor()
     {
