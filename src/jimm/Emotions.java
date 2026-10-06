@@ -259,7 +259,7 @@ public class Emotions implements VirtualListCommands, CommandListener
 
 	public  static String emotionText;
 	private static Selector selector;
-    private static int lastSelectedEmotion;
+    private static int lastSelectedEmotion = 0;
 	private static int caretPos;
 	private static Object lastScreen;
 	private static TextBox textBox;

@@ -51,6 +51,7 @@ python tools/build_source.py --modules SMILES,HISTORY,TRAFFIC
 python tools/test_source.py --matrix
 python tools/audit_source.py
 python tools/audit_resources.py
+python tools/test_languages.py
 python tools/test_graphics.py
 python tools/audit_graphics.py
 python tools/test_filesystems.py
@@ -63,9 +64,11 @@ python tools/audit_light.py
 
 Файловый браузер проверяется в общей функциональной серии. `test_filesystems.py` собирает три RU-варианта и отдельно сравнивает файловые адаптеры, включая JSR75 и собственный API Motorola; `--skip-build` использует уже собранные полные RU-варианты. `audit_filesystems.py` сверяет их сохранившиеся после оптимизации сигнатуры и инструкции. Эти проверки также входят в общую команду `--matrix`.
 
+`test_languages.py` использует уже собранные пять MIDP2-вариантов и свежий отчёт `audit_resources.py`: исполняет настоящий загрузчик языков, проверяет все значения и ошибки словарей. Общая серия `--matrix` запускает его после сверки ресурсов. Загрузчик смайлов и их редактор дополнительно проверяются в общей функциональной серии `emotions`.
+
 `test_light.py` собирает RU-варианты MIDP2 и Motorola и сравнивает контроллер подсветки: аппаратные вызовы, состояние, задачи таймера и первоначальный таймаут. `--skip-build` использует готовые полные RU-сборки, `--seed 10` запускает один начальный таймаут. `audit_light.py` отдельно сверяет сохранившиеся после оптимизации сигнатуры и инструкции. Полная серия подсветки входит в `--matrix`; Siemens не содержит этого контроллера.
 
-Отчёты: [функциональные проверки](../preservation/reports/source-tests.json), [сравнение байткода](../preservation/reports/source-bytecode-comparison.json), [ресурсы/локализации](../preservation/reports/source-resources.json), [графические компоненты](../preservation/reports/source-graphics.json) и [их байткод](../preservation/reports/source-graphics-bytecode.json), [файловые адаптеры](../preservation/reports/source-filesystems.json) и [их байткод](../preservation/reports/source-filesystems-bytecode.json), [подсветка](../preservation/reports/source-light.json) и [её байткод](../preservation/reports/source-light-bytecode.json). Область проверок и ограничения приведены в [описании восстановления](SOURCE-RECOVERY.md). Все сочетания модулей и поведение на реальных телефонах не проверены.
+Отчёты: [функциональные проверки](../preservation/reports/source-tests.json), [сравнение байткода](../preservation/reports/source-bytecode-comparison.json), [ресурсы/локализации](../preservation/reports/source-resources.json), [загрузчик языков](../preservation/reports/source-language-loader.json), [графические компоненты](../preservation/reports/source-graphics.json) и [их байткод](../preservation/reports/source-graphics-bytecode.json), [файловые адаптеры](../preservation/reports/source-filesystems.json) и [их байткод](../preservation/reports/source-filesystems-bytecode.json), [подсветка](../preservation/reports/source-light.json) и [её байткод](../preservation/reports/source-light-bytecode.json). Область проверок и ограничения приведены в [описании восстановления](SOURCE-RECOVERY.md). Все сочетания модулей и поведение на реальных телефонах не проверены.
 
 ## Историческая сборка Ant
 

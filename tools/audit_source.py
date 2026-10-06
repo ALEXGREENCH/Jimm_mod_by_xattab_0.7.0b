@@ -972,6 +972,21 @@ SYMBOLS.update({
     'w.a(Ljava/lang/String;Z)[Ljava/lang/String;': 'jimm/FileSystem.getDirectoryContents(Ljava/lang/String;Z)[Ljava/lang/String;',
 })
 
+CLASSES.update({'ai': 'jimm/util/ResourceBundle', 'cm': 'DrawControls/AniImageList', 'aj': 'DrawControls/LightControl'})
+SYMBOLS.update({
+    'ai.a [Ljava/lang/String;': 'jimm/util/ResourceBundle.langAvailable [Ljava/lang/String;',
+    'ai.a Ljava/lang/String;': 'jimm/util/ResourceBundle.currUiLanguage Ljava/lang/String;',
+    'ai.a Ljava/util/Hashtable;': 'jimm/util/ResourceBundle.resources Ljava/util/Hashtable;',
+    'ai.a(Ljava/lang/String;)V': 'jimm/util/ResourceBundle.setCurrUiLanguage(Ljava/lang/String;)V',
+    'ai.a()V': 'jimm/util/ResourceBundle.loadLang()V',
+    'ai.a$7a1ba7c4(Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/ResourceBundle.getString$7a1ba7c4(Ljava/lang/String;)Ljava/lang/String;',
+    'bo.a Lbo;': 'jimm/Emotions._this Ljimm/Emotions;',
+    'bo.a Laf;': 'jimm/Emotions.selector Ljimm/util/Selector;',
+    'f.a()I': 'DrawControls/ImageList.size()I',
+    'f.a(Ljava/lang/String;II)V': 'DrawControls/ImageList.load(Ljava/lang/String;II)V',
+    'aj.a(Z)V': 'DrawControls/LightControl.flash(Z)V',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1340,15 +1355,20 @@ METHODS = [
     ('ca', '<init>', '(ZJIZ)V', '<init>'),
     ('bo', 'a', '(Ljava/util/Vector;Ljava/lang/String;Ljava/lang/Integer;)V', 'insertTextCorr'),
     ('bo', 'a', '(Ljava/io/DataInputStream;)Ljava/lang/String;', 'readLineFromStream'),
-    ('bo', 'a', '(Lbi;Ljava/lang/String;III)V', 'addTextWithEmotions'),
+    ('ai', '<clinit>', '()V', '<clinit>'),
+    ('ai', 'a', '(Ljava/lang/String;)V', 'setCurrUiLanguage'),
+    ('ai', 'a', '()V', 'loadLang'),
+    ('ai', 'a', '(Ljava/lang/String;)Ljava/lang/String;', 'getString'),
+    ('ai', 'a$7a1ba7c4', '(Ljava/lang/String;)Ljava/lang/String;', 'getString$7a1ba7c4'),
+    ('bo', '<clinit>', '()V', '<clinit>'),
+    ('bo', '<init>', '()V', '<init>'),
     ('bo', 'a', '(Ljavax/microedition/lcdui/TextBox;Ljava/lang/Object;)V', 'selectEmotion'),
+    ('bo', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
     ('bo', 'a', '(Lcd;II)V', 'vlKeyPress'),
     ('bo', 'a', '(Lcd;)V', 'vlCursorMoved'),
     ('bo', 'b', '(Lcd;)V', 'vlItemClicked'),
     ('bo', 'a', '()V', 'select'),
-    ('bo', '<init>', '()V', '<init>'),
-    ('bo', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
-    ('bo', '<clinit>', '()V', '<clinit>'),
+    ('bo', 'a', '(Lbi;Ljava/lang/String;III)V', 'addTextWithEmotions'),
 
     ('bl', '<init>', '()V', '<init>'),
     ('bl', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
@@ -1594,7 +1614,7 @@ def main():
         for short, long in CLASSES.items():
             source_desc = source_desc.replace('L' + short + ';', 'L' + long + ';')
         after = next(m for m in new[CLASSES[owner]]['methods']
-                     if m['name'].split('$')[0] == source_name and m['desc'] == source_desc)
+                     if (m['name'] if '$' in source_name else m['name'].split('$')[0]) == source_name and m['desc'] == source_desc)
         left, right = normalized(before['code']), after['code']
         same_static = bool(before['access'] & 8) == bool(after['access'] & 8)
         if not same_static:

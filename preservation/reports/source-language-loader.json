@@ -1,0 +1,40 @@
+{
+  "scope": "Real ResourceBundle initialization, lazy loading, language switching and FLAG_ELLIPSIS specialization. Scripted resource bytes/read/close failures; real DataInputStream modified-UTF parser. All five actual MIDP2 dictionaries are queried by verified reference/source keys. A five-language list is provided for switching tests; historical individual releases contain one language each.",
+  "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+  "source_unoptimized_class_jar_sha256": "c90a89b5723907fa455977329c6bcfac8c27d9eff2dce2981333f315223e6717",
+  "dictionaries": [
+    {
+      "language": "RU",
+      "reference_jar_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_jar_sha256": "640866bd05448e0a7ab1aff152c28db091f0b8e434665901ceb7d34b522abeac",
+      "entries": 561
+    },
+    {
+      "language": "UA",
+      "reference_jar_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
+      "source_jar_sha256": "65adee08b0b7d9d261101261c9173677a7f58bc84e738b8a1a6bf2f09d5b38c2",
+      "entries": 561
+    },
+    {
+      "language": "RO",
+      "reference_jar_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
+      "source_jar_sha256": "99733654d5d15c432aa1cc3f0b112f5454b79e07949a8a8014658d843c1c5bdb",
+      "entries": 561
+    },
+    {
+      "language": "EN",
+      "reference_jar_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
+      "source_jar_sha256": "eb844c876acc16981b793eaa06b704565aa96251bddc548a8f0768e0c04b83d3",
+      "entries": 561
+    },
+    {
+      "language": "CZ",
+      "reference_jar_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
+      "source_jar_sha256": "cbd1020c69ceeeebddec50e56c94045b385217865ecff7ccadcdb690c6330694",
+      "entries": 562
+    }
+  ],
+  "observations": 4348,
+  "actual_dictionary_entries": 2806,
+  "differences": 0
+}
