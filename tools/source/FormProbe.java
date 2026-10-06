@@ -41,7 +41,7 @@ public class FormProbe extends VirtualListProbe {
         }row(label+":model="+b);
     }
     static void fresh(int font,int style,int width,boolean swap)throws Exception {
-        callbacks.clear();fields.clear();alpha(171,171,128);background(true);bool(174,swap);integer(118,style);f(options,"g","fontStyle",int.class).setInt(null,style);
+        callbacks.clear();fields.clear();alpha(171,171,128);background(true);bool(174,swap);bool(143,false);integer(118,style);f(options,"g","fontStyle",int.class).setInt(null,style);m(vl,"d","assignSoftKeys",void.class).invoke(null);
         s=instance(form,new Class<?>[]{String.class},"Form controls");
         f(form,"a","itemStateListener",ItemStateListener.class).set(s,new ItemStateListener(){public void itemStateChanged(Item item){callbacks.add("changed:"+fields.indexOf(item));}});
         f(vl,"H","forcedWidth",int.class).setInt(s,width);f(vl,"I","forcedHeight",int.class).setInt(s,220);m(vl,"b","setFontSize",void.class,int.class).invoke(s,font);
@@ -66,8 +66,8 @@ public class FormProbe extends VirtualListProbe {
         }
     }
     static void layouts()throws Exception {
-        for(int font:new int[]{0,8,16})for(int style:new int[]{0,2})for(int width:new int[]{90,176})for(boolean swap:new boolean[]{false,true}) {
-            fresh(font,style,width,swap);String label="layout-"+font+"-"+style+"-"+width+"-"+swap;state(label+"-empty");
+        for(int font:new int[]{0,8,16})for(int style:new int[]{0,2})for(int width:new int[]{90,176})for(boolean swap:new boolean[]{false,true})for(boolean canvasSwap:new boolean[]{false,true}) {
+            fresh(font,style,width,swap);bool(143,canvasSwap);m(vl,"d","assignSoftKeys",void.class).invoke(null);String label="layout-"+font+"-"+style+"-"+width+"-"+swap+"-"+canvasSwap;state(label+"-empty");
             append(new TextField("Text label","A long field with\na newline and enough text to exceed the screen width",200,TextField.ANY));
             append(new TextField(null,"password",100,TextField.PASSWORD));append(new StringItem("String label","String body"));append(new StringItem(null,"Only body"));
             append(new Gauge("Gauge label",true,10,3));ChoiceGroup c=choices("Choices",Choice.EXCLUSIVE,3);c.setSelectedIndex(2,true);append(c);

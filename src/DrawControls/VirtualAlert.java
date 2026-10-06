@@ -18,8 +18,9 @@ public class VirtualAlert extends VirtualList implements CommandListener
     private TextList lines;
     private final Object previousScreen;
     private final Font font = Font.getFont(Font.FACE_SYSTEM,
-        Options.getInt(Options.OPTION_CL_FONT_STYLE), Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
+        Options.fontStyle, Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
     private int popupWidth, popupHeight, visibleLines;
+    private final int fontSize = font.getSize();
 
     public VirtualAlert(Object previousScreen, String text, int tag)
     {
@@ -35,7 +36,7 @@ public class VirtualAlert extends VirtualList implements CommandListener
     public void updateText(boolean repaint)
     {
         lines = new TextList(null);
-        lines.setFontSize(font.getSize());
+        lines.setFontSize(fontSize);
         JimmUI.setColorScheme(lines, false);
         lines.addBigTextInternal(text, lines.getTextColor(), font.getStyle(), -1, getWidth() / 10 * 9);
         int count = lines.getSize();
@@ -44,7 +45,7 @@ public class VirtualAlert extends VirtualList implements CommandListener
         int height = 0;
         for (int i = 0; i < count; i++)
         {
-            height += lines.getLine(i).getHeight(font.getSize());
+            height += lines.getLine(i).getHeight(fontSize);
             if (height > popupHeight - 3)
             {
                 visibleLines = i;
@@ -53,7 +54,7 @@ public class VirtualAlert extends VirtualList implements CommandListener
         }
         popupWidth = 0;
         for (int i = count - 1; i >= 0; i--)
-            popupWidth = Math.max(popupWidth, lines.getLine(i).getWidth(font.getSize()));
+            popupWidth = Math.max(popupWidth, lines.getLine(i).getWidth(fontSize));
         popupWidth += 11;
         if (repaint) invalidate();
     }
@@ -101,8 +102,8 @@ public class VirtualAlert extends VirtualList implements CommandListener
         for (int i = lines.topItem; i < count; i++)
         {
             TextLine line = lines.getLine(i);
-            line.paint(x + 4, top + 4, g, font.getSize(), lines);
-            top += line.getHeight(font.getSize());
+            line.paint(x + 4, top + 4, g, fontSize, lines);
+            top += line.getHeight(fontSize);
             if (top >= end) break;
         }
         if (visibleLines < count)

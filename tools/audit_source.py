@@ -854,7 +854,36 @@ SYMBOLS.update({
     'e.b(Ljavax/microedition/lcdui/Graphics;II)V': 'DrawControls/Icon.drawImage(Ljavax/microedition/lcdui/Graphics;II)V',
 })
 
+SYMBOLS.update({
+    'ci.<init>(Ljava/lang/Object;Ljava/lang/String;I)V': 'DrawControls/VirtualAlert.<init>(Ljava/lang/Object;Ljava/lang/String;I)V',
+    'ci.d(Z)V': 'DrawControls/VirtualAlert.updateText(Z)V',
+    'ci.a(Ljavax/microedition/lcdui/Graphics;)V': 'DrawControls/VirtualAlert.paint(Ljavax/microedition/lcdui/Graphics;)V',
+    'ci.a(II)V': 'DrawControls/VirtualAlert.doKeyreaction(II)V',
+    'ci.i(I)V': 'DrawControls/VirtualAlert.pointerDragged(I)V',
+    'ci.a(ILcn;)V': 'DrawControls/VirtualAlert.get(ILDrawControls/ListItem;)V',
+    'ci.a()I': 'DrawControls/VirtualAlert.getSize()I',
+    'ci.a Ljava/lang/String;': 'DrawControls/VirtualAlert.text Ljava/lang/String;',
+    'ci.a Lbi;': 'DrawControls/VirtualAlert.lines LDrawControls/TextList;',
+    'ci.a Ljavax/microedition/lcdui/Font;': 'DrawControls/VirtualAlert.font Ljavax/microedition/lcdui/Font;',
+    'ci.o I': 'DrawControls/VirtualAlert.popupWidth I',
+    'ci.p I': 'DrawControls/VirtualAlert.popupHeight I',
+    'ci.q I': 'DrawControls/VirtualAlert.visibleLines I',
+    'ci.r I': 'DrawControls/VirtualAlert.fontSize I',
+    'cd.a(Ljavax/microedition/lcdui/Graphics;)V': 'DrawControls/VirtualList.paint(Ljavax/microedition/lcdui/Graphics;)V',
+    'cd.a(II)V': 'DrawControls/VirtualList.doKeyreaction(II)V',
+    'cd.a(Ljavax/microedition/lcdui/Graphics;IIII)V': 'DrawControls/VirtualList.drawScroller(Ljavax/microedition/lcdui/Graphics;IIII)V',
+    'cf.a(Lcd;Z)V': 'jimm/JimmUI.setColorScheme(LDrawControls/VirtualList;Z)V',
+})
+
 METHODS = [
+    ('ci', '<init>', '(Ljava/lang/Object;Ljava/lang/String;I)V', '<init>'),
+    ('ci', 'd', '(Z)V', 'updateText'),
+    ('ci', 'a', '(Ljavax/microedition/lcdui/Graphics;)V', 'paint'),
+    ('ci', 'a', '(II)V', 'doKeyreaction'),
+    ('ci', 'i', '(I)V', 'pointerDragged'),
+    ('ci', 'a', '(ILcn;)V', 'get'),
+    ('ci', 'a', '()I', 'getSize'),
+
     ('bi', '<init>', '(Ljava/lang/String;)V', '<init>'),
     ('bi', 'a', '()I', 'getSize'),
     ('bi', 'a', '(I)Lbm;', 'getLine'),
