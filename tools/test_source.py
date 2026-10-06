@@ -137,6 +137,16 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Clipboard/MagicEye mismatch: compare build/source-tests/clipboard-reference.txt and clipboard-source.txt')
     report['clipboard_observations'] = len(clipboard_ref.read_text().splitlines())
     report['clipboard_differences'] = 0
+    profile_ref, profile_src = TEST / 'profile-reference.txt', TEST / 'profile-source.txt'
+    for mode, output in [('reference', profile_ref), ('source', profile_src)]:
+        fixture = TEST / ('profile-' + mode + '.jar')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'ProfileFixture', TEST / ('message-' + mode + '.jar'), fixture, mode], 'profile-fixture-' + mode)
+        report['profile_' + mode] = run([*java, 'ProfileProbe', fixture, mode, output], 'profile-' + mode)
+    if profile_ref.read_bytes() != profile_src.read_bytes():
+        raise AssertionError('Profile mismatch: compare build/source-tests/profile-reference.txt and profile-source.txt')
+    report['profile_observations'] = len(profile_ref.read_text().splitlines())
+    report['profile_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

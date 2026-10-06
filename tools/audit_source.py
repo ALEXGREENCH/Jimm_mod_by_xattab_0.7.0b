@@ -22,8 +22,13 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'ay': 'jimm/comm/Icq$HTTPConnection', 'cb': 'jimm/comm/Icq$SOCKSConnection',
            'an': 'jimm/comm/Packet', 'ct': 'jimm/comm/UpdateContactListAction',
            'bq': 'jimm/comm/OtherAction', 'ae': 'jimm/comm/ActionListener',
-           'ac': 'jimm/comm/Message', 'ah': 'jimm/util/MagicEye'}
+           'ac': 'jimm/comm/Message', 'ah': 'jimm/util/MagicEye', 'br': 'jimm/EditInfo', 'as': 'jimm/comm/SaveInfoAction',
+           'ce': 'jimm/comm/RequestInfoAction', 'bi': 'DrawControls/TextList'}
 SYMBOLS = {
+    'as.a I': 'jimm/comm/SaveInfoAction.packetCounter I',
+    'as.b I': 'jimm/comm/SaveInfoAction.errorCounter I',
+    'as.a Ljava/util/Date;': 'jimm/comm/SaveInfoAction.init Ljava/util/Date;',
+
     'cf.c Ljava/lang/String;': 'jimm/JimmUI.clipBoardText Ljava/lang/String;',
     'cf.d Ljava/lang/String;': 'jimm/JimmUI.clipBoardHeader Ljava/lang/String;',
     'cf.e Ljava/lang/String;': 'jimm/JimmUI.clipBoardQuotedPrefix Ljava/lang/String;',
@@ -108,6 +113,19 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('br', '<init>', '([Ljava/lang/String;Ljava/lang/Object;)V', '<init>'),
+    ('br', 'run', '()V', 'run'),
+    ('br', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
+    ('as', 'a', '()V', 'init'),
+    ('as', 'a', '(Lan;)Z', 'forward'),
+    ('as', 'a', '()Z', 'isCompleted'),
+    ('as', 'b', '()Z', 'isError'),
+    ('as', 'a', '()I', 'getProgress'),
+    ('as', 'a', '(I)V', 'onEvent'),
+    ('cf', 'a', '(Ljava/lang/String;Ljava/lang/String;)V', 'requiestUserInfo'),
+    ('cf', 'a', '([Ljava/lang/String;Lbi;)V', 'fillUserInfo'),
+    ('cf', 'a', '([Ljava/lang/String;)V', 'showUserInfo'),
+
     ('cf', 'a', '()Z', 'clipBoardIsEmpty'),
     ('cf', 'a', '(Z)Ljava/lang/String;', 'getClipBoardText'),
     ('cf', 'c', '()V', 'clearClipBoardText'),

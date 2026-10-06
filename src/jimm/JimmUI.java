@@ -97,8 +97,14 @@ public class JimmUI implements CommandListener, VirtualListCommands
 	public final static Command cmdFind     = new Command(ResourceBundle.getString("find"),          Command.ITEM,   1);
 	public final static Command cmdCopyText = new Command(ResourceBundle.getString("copy_text"),     Command.ITEM,   4);
 	public final static Command cmdCopyAll  = new Command(ResourceBundle.getString("copy_all_text"), Command.ITEM,   5);
-	public final static Command cmdEdit     = new Command(ResourceBundle.getString("edit"),          Command.ITEM,   1);
+	public final static Command cmdEdit     = new Command(ResourceBundle.getString("editform"),          Command.ITEM,   1);
 	public final static Command cmdCopyAppend = new Command(ResourceBundle.getString("add_to_copied"), Command.ITEM, 4);
+	//#sijapp cond.if target is "MIDP2"#
+	public final static Command cmdSave = new Command(ResourceBundle.getString("save"), Jimm.is_phone_FLY() ? Command.BACK : Command.SCREEN, 1);
+	//#sijapp cond.else#
+	public final static Command cmdSave = new Command(ResourceBundle.getString("save"), Command.SCREEN, 1);
+	//#sijapp cond.end#
+	private static Command cmdUpdateNick = new Command(ResourceBundle.getString("update_nick"), Command.ITEM, 9);
 	public final static Command cmdMenu     = new Command(ResourceBundle.getString("option"),        Command.ITEM,   1);
 	public final static Command cmdSelect   = new Command(ResourceBundle.getString("select"),        Command.OK,     1);
 	//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
@@ -474,7 +480,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 
 			if (c == cmdEdit)
 			{
-				EditInfo.showEditForm(last_user_info, Jimm.display.getCurrent());
+				EditInfo.showEditForm(last_user_info, getCurrentScreen());
 			}
 
 			// "User info" -> "Copy text, Copy all, Add to copied"
@@ -487,6 +493,10 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			else if (c == cmdCopyAppend)
 			{
 				copyInfoText(false);
+			}
+			else if (c == cmdUpdateNick)
+			{
+				clciContactMenu.rename(last_user_info[UI_NICK]);
 			}
 		}
 
@@ -1136,14 +1146,14 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			(
 				ResourceBundle.getString(uiSectName),
 				list.getTextColor(),
-				Font.STYLE_BOLD,
+				Font.STYLE_BOLD + Options.fontStyle,
 				-1
 			).doCRLF(-1);
 			uiSectName = null;
 		}
 		
-		list.addBigText(ResourceBundle.getString(langStr)+": ", list.getTextColor(), Font.STYLE_PLAIN, uiBigTextIndex)
-		  .addBigText(str, Options.getInt(Options.OPTION_COLOR_BLUE), Font.STYLE_PLAIN, uiBigTextIndex)
+		list.addBigText(ResourceBundle.getString(langStr)+": ", list.getTextColor(), Options.fontStyle, uiBigTextIndex)
+		  .addBigText(str, Options.getInt(Options.OPTION_COLOR_BLUE), Options.fontStyle, uiBigTextIndex)
 		  .doCRLF(uiBigTextIndex);
 		uiBigTextIndex++;
 	}
@@ -1193,7 +1203,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			if (stat == 0) imgIndex = 6;
 			else if (stat == 1) imgIndex = 7;
 			else if (stat == 2) imgIndex = 3;
-			list.addBigText(ResourceBundle.getString("status") + ": ", list.getTextColor(), Font.STYLE_PLAIN, uiBigTextIndex)
+			list.addBigText(ResourceBundle.getString("status") + ": ", list.getTextColor(), Options.fontStyle, uiBigTextIndex)
 				.addImage(ContactList.getImageList().elementAt(imgIndex), null, uiBigTextIndex).doCRLF(uiBigTextIndex);
 			uiBigTextIndex++;
 		}
@@ -1247,8 +1257,11 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		{
 			if (uin == Options.getString(Options.OPTION_UIN))
 			{
-				infoTextList.addCommandEx(cmdMenu, VirtualList.MENU_LEFT_BAR);
 				infoTextList.addCommandEx(cmdEdit, VirtualList.MENU_LEFT);
+			}
+			else
+			{
+				infoTextList.addCommandEx(cmdUpdateNick, VirtualList.MENU_LEFT);
 			}
 			
 			RequestInfoAction act = new RequestInfoAction(uin, name);
