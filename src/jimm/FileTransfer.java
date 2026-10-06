@@ -442,21 +442,10 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 
 //        private int res_marker = 2;
 
-		// Commands
-		private Command backCommand;
-		private Command okCommand;
-
 		public ViewFinder()
 		{
-			//#sijapp cond.if target is "MIDP2"#
-			backCommand = new Command(ResourceBundle.getString("back"), Jimm.is_smart_SE() ? Command.CANCEL : Command.BACK, 2);
-			//#sijapp cond.else#
-			backCommand = new Command(ResourceBundle.getString("back"), Command.BACK, 2);
-			//#sijapp cond.end#
-			okCommand = new Command(ResourceBundle.getString("ok"), Command.SCREEN, 1);
-
-			this.addCommand(backCommand);
-			this.addCommand(okCommand);
+			this.addCommand(JimmUI.cmdBack);
+			this.addCommand(JimmUI.cmdOk);
 			this.setCommandListener(this);
 		}
 
@@ -605,7 +594,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 		}
 
 		// take a snapshot form the viewfinder
-		public void takeSnapshot()
+		private void takeSnapshot()
 		{
 			if (p != null)
 			{
@@ -628,7 +617,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 		}
 
 		// stop the viewfinder
-		public synchronized void stop()
+		private synchronized void stop()
 		{
 			if (active)
 			{
@@ -648,7 +637,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 		// action listener
 		public void commandAction(Command c, Displayable d)
 		{
-			if (c == this.okCommand)
+			if (c == JimmUI.cmdOk)
 			{
 				if (!viewfinder)
 				{
@@ -659,12 +648,13 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 					this.takeSnapshot();
 				}
 			}
-			else if (c == this.backCommand)
+			else if (c == JimmUI.cmdBack)
 			{
 				if (!viewfinder)
 				{
 					viewfinder = true;
 					active = false;
+					data = null;
 					this.start();
 				}
 				else
@@ -677,12 +667,13 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 			}
 		}
 
-		public void openSendScreen()
+		private void openSendScreen()
 		{
 			this.stop();
 			this.reset();
 			FileTransfer.this.setData(new ByteArrayInputStream(data), data.length);
 			FileTransfer.this.askForNameDesc("jimm_cam" + Util.getCounter() + ".jpeg", "");
+			data = null;
 		}
 
 		// Key pressed

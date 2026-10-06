@@ -114,12 +114,14 @@ public class FileTransferProbe extends ProfileProbe {
         }
     }
     static String commands(Object screen)throws Exception{StringBuilder b=new StringBuilder();for(Object c:(Vector)f(vl,"a","leftMenuItems",Vector.class).get(screen))b.append(commandName((Command)c)).append(';');return b.toString();}
-    static void exerciseFiles()throws Exception{
+    static void setupFiles()throws Exception{
         ui=load("cf","jimm.JimmUI");vl=load("cd","DrawControls.VirtualList");text=load("bi","DrawControls.TextList");form=load("d","DrawControls.VirtualForm");choice=load("j","DrawControls.FormChoiceGroup");tree=load("aw","DrawControls.VirtualTree");node=load("ax","DrawControls.TreeNode");formItem=load("i","DrawControls.FormItem");events=load("MessageIO","MessageIO");
         ft=load("p","jimm.FileTransfer");browser=load("u","jimm.FileBrowser");env=load("FileTransferIO","FileTransferIO");endpoint=load("TransportIO$Endpoint","TransportIO$Endpoint");traffic=load("x","jimm.Traffic");resource=load("ai","jimm.util.ResourceBundle");send=load("cl","jimm.comm.SendMessageAction");fileMessage=load("ab","jimm.comm.FileTransferMessage");
         owner=m(icq,"a","getIcq",icq).invoke(null);reset(false);string(0,"54321");controller=f(ui,"a","_this",ui).get(null);contactItem=instance(contact,new Class<?>[]{int.class,int.class,String.class,String.class,boolean.class,boolean.class},17,4,"12345","Known",false,true);
         Class<?> of=load("cg","jimm.OptionsForm");f(options,"a","optionsForm",of).set(null,instance(of,new Class<?>[0]));
-        forms();http();files();costs();
+    }
+    static void exerciseFiles()throws Exception{
+        setupFiles();forms();http();files();costs();
     }
     public static void main(String[] args){try{run(args,new Exercise(){public void run()throws Exception{exerciseFiles();}});System.exit(0);}catch(Throwable e){e.printStackTrace();System.exit(1);}}
 }
