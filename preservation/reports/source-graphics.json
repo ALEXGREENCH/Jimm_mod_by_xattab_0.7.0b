@@ -5,8 +5,8 @@
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
       "source_jar_sha256": "6409eb7b1b9c83e1cf2c10a9956da6c5c178fe9299c9d1ad50b46f7f9ac6f419",
-      "source_unoptimized_class_jar_sha256": "9459d24939cb611070092ec2754690b5c3d1de5f7dc18b0dd39f110ec7e6f8e9",
-      "source_unoptimized_with_resources_sha256": "bcea5bcaaca069a9156d13027672997d2369ddcd67f517fa4d9dbf3f58335c21",
+      "source_unoptimized_class_jar_sha256": "af0d80d3f6b86ef95b6d651c86d4d362d038aa96abf09b879c92e5f746550090",
+      "source_unoptimized_with_resources_sha256": "2d46d39888170dc3921d65d0a7ff30404c7f756366494d08e5b15750908a3d12",
       "observations": 2181,
       "raster_frames": 869,
       "differences": 0
@@ -14,9 +14,9 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_jar_sha256": "a646d09f401355411d19d8848bb50a32b9c3f0a7b7c7b8b125b4b61436c78243",
-      "source_unoptimized_class_jar_sha256": "5dce29dfc251e547f594a045b59a0cbea20c02fd10c0d4e937f0fb16771b4f8c",
-      "source_unoptimized_with_resources_sha256": "9cf24413c3f16938589e70cbc3e2ad3a7f846ccb5a86b6f8efb2b756de8a8ebf",
+      "source_jar_sha256": "bb2cbbe516d611e71ed74d78f5582c936880d529338b7ef10a74f10ebbcce745",
+      "source_unoptimized_class_jar_sha256": "807d4a0e4b3880411e350fb4b952de045c54ee4163493ed7472599f3853dc3d3",
+      "source_unoptimized_with_resources_sha256": "8066932ebbd3a6d9b682635a6109663379bb8670e11bcae3200fea352209a9d0",
       "observations": 71612,
       "raster_frames": 2813,
       "differences": 0

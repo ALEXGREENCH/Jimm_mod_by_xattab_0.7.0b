@@ -21,6 +21,8 @@ jobs:
             dist/source/
             preservation/reports/source-tests.json
             preservation/reports/source-bytecode-comparison.json
+            preservation/reports/source-light.json
+            preservation/reports/source-light-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

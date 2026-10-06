@@ -1,0 +1,175 @@
+{
+  "scope": "Executable optimized backlight signatures, static/synchronized modifiers and exact normalized instructions/handlers. The source optimizer removes constructor, MIDP2 changeState/On and lightOn; these are compared behaviorally on unoptimized source, not claimed as matching optimized signatures.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_class_jar_sha256": "722d4058e189be22cdc80c8b9d26663507eff1d5b23ac71756f2d48a494c5dcb",
+      "methods": [
+        {
+          "reference": "aj.<clinit>()V",
+          "source": "DrawControls/LightControl.<clinit>()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 8,
+          "source_instructions": 6,
+          "same_normalized_instructions": false,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": false,
+          "reference_normalized_sha256": "a33e996919be36f4e1fe13e59b9a53c68ee01079ded3825d2a24d3d132aee261",
+          "source_normalized_sha256": "53c30752a06212d28a1cf8bebac26628fea85f8b466ac9020cab21ddc40ad5a6"
+        },
+        {
+          "reference": "aj.a(Z)V",
+          "source": "DrawControls/LightControl.flash(Z)V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 11,
+          "source_instructions": 11,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "82a7e714218940d433dd03bce4da31367f777dcc144628933250ce8d59a3683f",
+          "source_normalized_sha256": "82a7e714218940d433dd03bce4da31367f777dcc144628933250ce8d59a3683f"
+        },
+        {
+          "reference": "aj.d()V",
+          "source": "DrawControls/LightControl.cancelTimeout()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 9,
+          "source_instructions": 12,
+          "same_normalized_instructions": false,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": false,
+          "reference_normalized_sha256": "59e4dc37be64e3fe9d18ca4a55834f7b9b190d00c16c17670db838ffe11f4f8a",
+          "source_normalized_sha256": "f56c8e440f407fee56de0aa3d1e65896374db9858ba7727f1db047ef813ca91f"
+        },
+        {
+          "reference": "aj.a()V",
+          "source": "DrawControls/LightControl.reset()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 16,
+          "source_instructions": 16,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "4a5758660f24e19b74c3ee9d0509a85193b032422231ed598ecbde5891938d95",
+          "source_normalized_sha256": "4a5758660f24e19b74c3ee9d0509a85193b032422231ed598ecbde5891938d95"
+        },
+        {
+          "reference": "aj.c()V",
+          "source": "DrawControls/LightControl.Off()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 6,
+          "source_instructions": 4,
+          "same_normalized_instructions": false,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": false,
+          "reference_normalized_sha256": "577ffcc72968b552419bd83f415e5be08cf403b7c198622cbe9cbed651cb190e",
+          "source_normalized_sha256": "04c923a9a98ca386e3906a7df5d7477fae7e9cbd9939972acba3262bbc6da158"
+        },
+        {
+          "reference": "t.<init>()V",
+          "source": "DrawControls/LightControl$1.<init>()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 3,
+          "source_instructions": 3,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "52e6d8084d1dbd58b5b0dc87f56afa1b975e9573396c6ce310182cbcb20e5725",
+          "source_normalized_sha256": "52e6d8084d1dbd58b5b0dc87f56afa1b975e9573396c6ce310182cbcb20e5725"
+        },
+        {
+          "reference": "t.run()V",
+          "source": "DrawControls/LightControl$1.run()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 2,
+          "source_instructions": 2,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "f1bf72bdd1abedda6eeb2b6ca694a601d6b7d0ddf3b58dd7cdc129d97b6cd205",
+          "source_normalized_sha256": "f1bf72bdd1abedda6eeb2b6ca694a601d6b7d0ddf3b58dd7cdc129d97b6cd205"
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_class_jar_sha256": "03908a5522fce305f734dca4ee4509b5319dcea1795c8177a466aba6eabb7d3c",
+      "methods": [
+        {
+          "reference": "aj.<clinit>()V",
+          "source": "DrawControls/LightControl.<clinit>()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 8,
+          "source_instructions": 8,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "a33e996919be36f4e1fe13e59b9a53c68ee01079ded3825d2a24d3d132aee261",
+          "source_normalized_sha256": "a33e996919be36f4e1fe13e59b9a53c68ee01079ded3825d2a24d3d132aee261"
+        },
+        {
+          "reference": "aj.a(Z)V",
+          "source": "DrawControls/LightControl.flash(Z)V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 15,
+          "source_instructions": 12,
+          "same_normalized_instructions": false,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": false,
+          "reference_normalized_sha256": "f9329e28668776ec2f68c205902f9bb14e4ef01a129cb444259a3927b58dccf3",
+          "source_normalized_sha256": "d299ce45b32f562e1afed409c4ac27888ac6bd9f4d4536f14db9d7df245ef8b4"
+        },
+        {
+          "reference": "aj.a()V",
+          "source": "DrawControls/LightControl.changeState()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 6,
+          "source_instructions": 6,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "0cb9d60788cb654bd5baa9396e3a1c52f5ee33f3bcd0efa8625ec4c66ae01602",
+          "source_normalized_sha256": "0cb9d60788cb654bd5baa9396e3a1c52f5ee33f3bcd0efa8625ec4c66ae01602"
+        },
+        {
+          "reference": "aj.b()V",
+          "source": "DrawControls/LightControl.Off()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 7,
+          "source_instructions": 7,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "474cdb8116bcf8e6c9b49cae031a0d5b6dc39b59fb9e22e1740e6b8cd24b0830",
+          "source_normalized_sha256": "474cdb8116bcf8e6c9b49cae031a0d5b6dc39b59fb9e22e1740e6b8cd24b0830"
+        },
+        {
+          "reference": "aj.c()V",
+          "source": "DrawControls/LightControl.On()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 7,
+          "source_instructions": 7,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "a1ddd6b784bd71aed5df9824851e86cf61c2acf0507757ad863bf8d9fef2b057",
+          "source_normalized_sha256": "a1ddd6b784bd71aed5df9824851e86cf61c2acf0507757ad863bf8d9fef2b057"
+        }
+      ]
+    }
+  ]
+}

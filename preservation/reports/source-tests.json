@@ -193,27 +193,27 @@
     {
       "target": "MOTOROLA",
       "language": "RU",
-      "sha256": "a646d09f401355411d19d8848bb50a32b9c3f0a7b7c7b8b125b4b61436c78243"
+      "sha256": "bb2cbbe516d611e71ed74d78f5582c936880d529338b7ef10a74f10ebbcce745"
     },
     {
       "target": "MOTOROLA",
       "language": "UA",
-      "sha256": "dfcea049ac61cafaa2a5c329e334a4bb6dec2c6f48840e6ed448b550aa81eb8f"
+      "sha256": "146456854d02afc8bf814d2bfa43323e44f40e106234a5b804a99eff2bfc8a47"
     },
     {
       "target": "MOTOROLA",
       "language": "RO",
-      "sha256": "7b60ad8355d77af7bde894f9a49b093e93798b3cad6d2f30a9f6da7d766ae090"
+      "sha256": "1946a48b5e1a65533f4aa769f0cda869fb4b04200d4bcb0bc616e6207e76b1b1"
     },
     {
       "target": "MOTOROLA",
       "language": "EN",
-      "sha256": "70d2218bc3eb888969eac09701dd4c038381da33840f2ba5d3961d4b9b9fcd04"
+      "sha256": "866ef55b3e73b10ff54114bad4c828f8c8a19833b264f80b36759d14fc384613"
     },
     {
       "target": "MOTOROLA",
       "language": "CZ",
-      "sha256": "1ef5080a363f9f249c1b0e7ff657ed3b54dd59f4007e2e0cec4c580c5a3fdf08"
+      "sha256": "51ea795dc279572aa04800706da769d56ad7ec5f3e16b30c89d277958fbce4f2"
     },
     {
       "target": "SIEMENS2",
@@ -248,5 +248,6 @@
   ],
   "resources": "PASS resources: 15 builds, 380 exact asset files, 8343 decoded language entries",
   "graphics": "PASS graphics: 3 platforms, 75974 observations, 4551 frames\nPASS graphics bytecode: 73 signatures, 58 identical normalized instructions/handlers",
-  "filesystems": "PASS filesystems: 4 device paths, 1224 observations\nPASS filesystems bytecode: 32 signatures, 20 identical normalized instructions/handlers"
+  "filesystems": "PASS filesystems: 4 device paths, 1224 observations\nPASS filesystems bytecode: 32 signatures, 20 identical normalized instructions/handlers",
+  "light": "PASS light: 2 platforms, 6696 observations\nPASS light bytecode: 12 signatures, 8 identical normalized instructions/handlers"
 }

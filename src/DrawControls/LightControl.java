@@ -33,8 +33,8 @@ import com.nokia.mid.ui.DeviceControl;
 
 public class LightControl
 {
-    private static int TIMEOUT = Options.getInt(Options.OPTION_LIGHT_TIMEOUT) * 1000;
     private static boolean lightOn = true;
+    private static int TIMEOUT = Options.getInt(Options.OPTION_LIGHT_TIMEOUT) * 1000;
     //#sijapp cond.if target is "MIDP2"#
     private static TimerTask lightTask;
     //#sijapp cond.end#
