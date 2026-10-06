@@ -142,7 +142,7 @@ public class Icq implements Runnable
 	{
 		String servers = Options.getString(Options.OPTION_SRV_HOST).replace('\n', ' ');
 		String[] serverList = Util.explode(servers, ' ');
-		String server = Util.replaceStr(serverList[0], "\r", "");
+		String server = Util.replaceStr(serverList[0], "\r", "", false);
 		return server;
 	}
 

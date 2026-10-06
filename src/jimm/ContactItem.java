@@ -69,9 +69,9 @@ public class ContactItem implements ContactListItem
 	             status,
 	             birthDay;
 	               
+	public String clientCap;
 	private String clientVersion,
 	                offlineTime,
-	                clientCap,
 	                lowerText;
 
 	public String name;

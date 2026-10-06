@@ -59,7 +59,7 @@ public final class XtrazSM
                 if (!cItem.getBooleanValue(ContactItem.CONTACTITEM_HAS_CHAT)) ChatHistory.newChatForm(cItem, cItem.name);
                 ChatHistory.addTextToForm(s, s3, s4, "", 0, true, false, XStatus.getStatusImage(cItem.getXStatus().getStatusIndex()), 0);
                 ContactList.enterContactMenu = false; // сброс флага, шоб меню контакта случайно не вылезло...
-                if (cItem.openChat && !SplashCanvas.locked()) cItem.activate();
+                if (cItem.openChat && !SplashCanvas.locked() && ContactList.tree.isActive()) cItem.activate();
                 // reset flag
                 cItem.openChat = false;
             }

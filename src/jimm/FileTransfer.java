@@ -271,8 +271,8 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 			int dataPos = respString.indexOf("http://");
 			if (dataPos == -1) throw new JimmException(195, 0);
 
-			respString = Util.replaceStr(respString, "\r", "");
-			respString = Util.replaceStr(respString, "\n", "");
+			respString = Util.replaceStr(respString, "\r", "", false);
+			respString = Util.replaceStr(respString, "\n", "", false);
 
 			// Close all http connection headers 
 			os.close();

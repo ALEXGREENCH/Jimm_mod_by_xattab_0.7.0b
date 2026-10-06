@@ -24,7 +24,7 @@
 package jimm.comm;
 
 import java.util.*;
-import javax.microedition.lcdui.*;
+import DrawControls.Icon;
 
 import jimm.*;
 import jimm.util.*;
@@ -100,9 +100,9 @@ public class ActionListener
                     // Create an message entry
                     int textLen = Util.getWord(abyte3, 64 + j5,false);
 					if (!contact.getBooleanValue(ContactItem.CONTACTITEM_HAS_CHAT)) ChatHistory.newChatForm(contact, contact.name);
-					ChatHistory.addTextToForm(s6, "", Util.byteArrayToString(abyte3, 66 + j5, textLen, false), "", 0, true, false, ContactList.imageList.elementAt(contact.getImageIndex()), 0);
+					ChatHistory.addTextToForm(s6, "", Util.byteArrayToString(abyte3, 66 + j5, textLen, true), "", 0, true, false, ContactList.imageList.elementAt(contact.getImageIndex()), 0);
 					ContactList.enterContactMenu = false; // сборос флага, шоб меню контакта случайно не вылезло...
-					if (!SplashCanvas.locked()) contact.activate();
+					if (!SplashCanvas.locked() && ContactList.tree.isActive()) contact.activate();
                     //reset flag
                     contact.readStatusMess = false;
                 }
@@ -155,7 +155,6 @@ public class ActionListener
                 // #sijapp cond.end#
                 
                 boolean statusChange = true;
-                boolean checkStatus = ((snacPacket.getFamily() == 0x0002) && (snacPacket.getCommand() == 0x0006));
                 int dwFT1 = 0, dwFT2 = 0, dwFT3 = 0;
                 int wVersion = 0;
                 byte[] capabilities_old = null; // Buffer for old style capabilities (TLV 0x000D)
@@ -175,7 +174,7 @@ public class ActionListener
                 String uin = Util.byteArrayToString(buf, 1, uinLen);
 
                 // Get new status and client capabilities
-                int status = checkStatus ? ContactList.STATUS_OFFLINE : ContactList.STATUS_ONLINE;
+                int status = ContactList.STATUS_ONLINE;
                 int xstatusIndex = -1;
                 int xstatusMod = -1;
                 String xstatusModTitle = "";
@@ -261,30 +260,34 @@ public class ActionListener
                         int ps = 0;
                         int len = tlvData.length;
 
-                        while (ps < len - 1)
+                        try
                         {
-                            int ExtTlv = Util.getWord(tlvData, ps);
-                            ps += 3;
-                            int ExtTlvLen = Util.getByte(tlvData, ps);
-                            int idx = ps;
-                            if (ExtTlvLen > 0)
+                            while (ps < len - 1)
                             {
-                                switch (ExtTlv)
+                                int ExtTlv = Util.getWord(tlvData, ps);
+                                ps += 3;
+                                int ExtTlvLen = Util.getByte(tlvData, ps);
+                                int idx = ps;
+                                if (ExtTlvLen > 0)
                                 {
-                                    case 0x0e:
-                                        String xtrazTit = Util.byteArrayToString(tlvData, idx + 8, ExtTlvLen - 7);
-                                        xstatusMod = Integer.parseInt(xtrazTit);
-                                        break;
-                                    case 0x02:
-                                        idx++;
-                                        int textLen = (int)Util.getWord(tlvData, idx);
-                                        idx += 2;
-                                        xstatusModTitle = Util.byteArrayToString(tlvData, idx, textLen, true);
-                                        break;
+                                    switch (ExtTlv)
+                                    {
+                                        case 0x0e:
+                                            String xtrazTit = Util.byteArrayToString(tlvData, idx + 8, ExtTlvLen - 7);
+                                            xstatusMod = Integer.parseInt(xtrazTit);
+                                            break;
+                                        case 0x02:
+                                            idx++;
+                                            int textLen = (int)Util.getWord(tlvData, idx);
+                                            idx += 2;
+                                            xstatusModTitle = Util.byteArrayToString(tlvData, idx, textLen, true);
+                                            break;
+                                    }
                                 }
+                                ps += ExtTlvLen + 1;
                             }
-                            ps += ExtTlvLen + 1;
                         }
+                        catch (Exception ignored) {}
                     }
                     else if (tlvType == 0x0005) // Reg. data time
                     {
@@ -303,29 +306,24 @@ public class ActionListener
                     item.setXStatus(capsArray);
                     item.setHappyFlag((status >> 16) & 0xFFFF);
 
-					if (xstatusMod != -1) // new style xStatuses (ICQ6)
-					{
-						item.getXStatus().setStatusIndex(xstatusMod);
-
-						if (!(xstatusModTitle.length() < 1) && (item.getBooleanValue(ContactItem.CONTACTITEM_HAS_CHAT)))
-						{
-							ChatHistory.addTextToForm(uin, "", xstatusModTitle, "", 0, true, false, XStatus.getStatusImage(xstatusMod), 0);
-						}
-					}
+                    boolean hasMood = xstatusMod != -1 && xstatusMod < XStatus.XSTATUS_NONE;
+                    if (hasMood) item.getXStatus().setStatusIndex(xstatusMod);
+                    if (xstatusModTitle != null)
+                    {
+                        if (item.getBooleanValue(ContactItem.CONTACTITEM_HAS_CHAT)
+                                && item.getIntValue(ContactItem.CONTACTITEM_STATUS) != ContactList.STATUS_OFFLINE
+                                && xstatusModTitle.length() > 1 && !xstatusModTitle.equals(item.clientCap))
+                        {
+                            Icon icon = hasMood ? XStatus.getStatusImage(xstatusMod)
+                                    : ContactList.imageList.elementAt(item.getImageIndex());
+                            ChatHistory.addTextToForm(uin, "", xstatusModTitle, "", 0, true, false, icon, 0);
+                        }
+                        item.clientCap = xstatusModTitle;
+                    }
 					item.setStatusImage();
 				}
 
-				if (checkStatus)
-				{
-					int statusIndex = Util.translateStatusReceived(status, item);
-					Alert statusAlert = new Alert(uin, JimmUI.getStatusString(statusIndex), null, null);
-					//#sijapp cond.if target is "MIDP2"#
-					statusAlert.setTimeout(Jimm.is_phone_SE() ? Alert.FOREVER : 3000);
-					//#sijapp cond.else#
-					statusAlert.setTimeout(3000);
-					//#sijapp cond.end#
-					Jimm.display.setCurrent(statusAlert);
-				}
+
 
 				// Update contact list
 				//#sijapp cond.if (target="MIDP2" | target="MOTOROLA" | target="SIEMENS2") & modules_FILES="true" #
@@ -882,6 +880,8 @@ public class ActionListener
                     else if (((msgType >= 1000) && (msgType <= 1004)))
                     {
 						MagicEye.addAction(uin, "read_status_message");
+                        ContactItem contact = ContactList.getItembyUIN(uin);
+                        if (contact == null) return;
 
 						String statusMess = "";
 						int statusMsgIdx = 0;
@@ -926,7 +926,14 @@ public class ActionListener
 							break;
 						}
 
-                   	    if (statusMsgIdx != 0) statusMess = Util.replaceStr(Options.getString(statusMsgIdx), "%TIME%", Icq.getLastStatusChangeTime());
+                        if (statusMsgIdx == 0) return;
+                        statusMess = Options.getString(statusMsgIdx);
+                        if (statusMess.length() < 1) return;
+                        if (statusMess.length() > 5)
+                        {
+                            statusMess = Util.replaceStr(Util.replaceStr(statusMess, "%time%",
+                                    Icq.getLastStatusChangeTime(), true), "%nick%", contact.name, true);
+                        }
 
                         // Acknowledge message with away message
                     	final byte[] statusMessBytes = Util.stringToByteArray(statusMess, false);
@@ -1041,25 +1048,6 @@ public class ActionListener
             }
 
             /*******************************************************************************************/ 
-            //	  Watch out for password change confirmation
-            else if ((snacPacket.getFamily() == SnacPacket.OLD_ICQ_FAMILY)
-                    && (snacPacket.getCommand() == SnacPacket.SRV_FROMICQSRV_COMMAND))
-            {
-				byte[] passrvc = snacPacket.getData();
-				int Type = Util.getWord(passrvc, 0, false);
-				int Type1 = Util.getByte(passrvc, 2);
-				if ((Type == 170) && (Type1 == 10))
-				{
-                    Alert pass_message = new Alert("", ResourceBundle.getString("change_pass_message"), null, AlertType.INFO);
-                    pass_message.setTimeout(15000);
-                    Jimm.display.setCurrent(pass_message, Jimm.display.getCurrent());
-                    Options.safe_save();
-                    // ContactList.activate(pass_message);
-				}
-            }
-            /******************************************************************************************/
-
-            /******************************************************************************************/
             //	  Watch out for CLI_ROSTERDELETE
             else if ((snacPacket.getFamily() == SnacPacket.ROSTER_FAMILY)
                     && (snacPacket.getCommand() == SnacPacket.CLI_ROSTERDELETE_COMMAND))
@@ -1079,7 +1067,7 @@ public class ActionListener
 
             //	  Watch out for SRV_AUTHREQ
             else if ((snacPacket.getFamily() == SnacPacket.ROSTER_FAMILY)
-                    && (snacPacket.getCommand() == SnacPacket.SRV_AUTHREQ_COMMAND))
+                    && (snacPacket.getCommand() == SnacPacket.SRV_AUTHREQ_COMMAND) && Options.getBoolean(Options.OPTION_MY_AUTH))
             {
                 int authMarker = 0;
                 
@@ -1153,47 +1141,31 @@ public class ActionListener
     }
 
 	/********************************************** Auto Answer *********************************************/
-	private static void sendAutoMessage(ContactItem contact) 
+	private static void sendAutoMessage(ContactItem contact)
 	{
-		if ((contact.getInvisibleId() != 0) || contact.getBooleanValue(ContactItem.CONTACTITEM_IS_TEMP)
-			|| (Options.getInt(Options.OPTION_PRIVATE_STATUS) == OtherAction.PSTATUS_NONE) || contact.autoAnswered
-			|| ((Options.getInt(Options.OPTION_PRIVATE_STATUS) == OtherAction.PSTATUS_VISIBLE_ONLY) && (contact.getVisibleId() == 0))) return;
+        if ((contact.getInvisibleId() != 0) || contact.getBooleanValue(ContactItem.CONTACTITEM_IS_TEMP)
+                || (Options.getInt(Options.OPTION_PRIVATE_STATUS) == OtherAction.PSTATUS_NONE) || contact.autoAnswered
+                || ((Options.getInt(Options.OPTION_PRIVATE_STATUS) == OtherAction.PSTATUS_VISIBLE_ONLY) && (contact.getVisibleId() == 0))) return;
 
-		long currStatus = Options.getLong(Options.OPTION_ONLINE_STATUS);
-
-		String statusMess = new String();
-
-		if (currStatus == ContactList.STATUS_AWAY)
-			statusMess = Util.replaceStr(Options.getString(Options.OPTION_STATUS_MESSAGE_AWAY), "%TIME%", Icq.getLastStatusChangeTime());
-
-		if (currStatus == ContactList.STATUS_DND)
-			statusMess = Util.replaceStr(Options.getString(Options.OPTION_STATUS_MESSAGE_DND), "%TIME%", Icq.getLastStatusChangeTime());
-
-		if (currStatus == ContactList.STATUS_NA)
-			statusMess = Util.replaceStr(Options.getString(Options.OPTION_STATUS_MESSAGE_NA), "%TIME%", Icq.getLastStatusChangeTime());
-
-		if (currStatus == ContactList.STATUS_OCCUPIED)
-			statusMess = Util.replaceStr(Options.getString(Options.OPTION_STATUS_MESSAGE_OCCUPIED), "%TIME%", Icq.getLastStatusChangeTime());
-
-		if (!(statusMess.length() < 1))
-		{
-			PlainMessage plainMsg = new PlainMessage
-				(
-					contact.getStringValue(ContactItem.CONTACTITEM_UIN), 
-					contact, 
-					Message.MESSAGE_TYPE_NORM, 
-					Util.createCurrentDate(false), 
-					ResourceBundle.getString("auto_message") + "\n" + statusMess
-				);
-
-			SendMessageAction sendMsgAct = new SendMessageAction(plainMsg);
-			try 
-			{
-				Icq.requestAction(sendMsgAct);
-			} 
-			catch (Exception e) {}
-		}
-		contact.autoAnswered = true;
+        long currStatus = Options.getLong(Options.OPTION_ONLINE_STATUS);
+        contact.autoAnswered = true;
+        String statusMess = null;
+        if (currStatus == ContactList.STATUS_AWAY) statusMess = Options.getString(Options.OPTION_STATUS_MESSAGE_AWAY);
+        if (currStatus == ContactList.STATUS_DND) statusMess = Options.getString(Options.OPTION_STATUS_MESSAGE_DND);
+        if (currStatus == ContactList.STATUS_NA) statusMess = Options.getString(Options.OPTION_STATUS_MESSAGE_NA);
+        if (currStatus == ContactList.STATUS_OCCUPIED) statusMess = Options.getString(Options.OPTION_STATUS_MESSAGE_OCCUPIED);
+        if (statusMess == null || statusMess.length() < 1) return;
+        if (statusMess.length() > 5)
+        {
+            statusMess = Util.replaceStr(Util.replaceStr(statusMess, "%time%",
+                    Icq.getLastStatusChangeTime(), true), "%nick%", contact.name, true);
+        }
+        PlainMessage plainMsg = new PlainMessage(contact.getStringValue(ContactItem.CONTACTITEM_UIN),
+                contact, Message.MESSAGE_TYPE_NORM, Util.createCurrentDate(false),
+                ResourceBundle.getString("auto_answer") + ":\n" + statusMess);
+        SendMessageAction sendMsgAct = new SendMessageAction(plainMsg);
+        try { Icq.requestAction(sendMsgAct); }
+        catch (Exception ignored) { }
 	}
 	/******************************************************************************************************/
 

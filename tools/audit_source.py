@@ -21,7 +21,8 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'aa': 'jimm/comm/Action', 'at': 'jimm/TimerTasks', 'e': 'DrawControls/Icon',
            'ay': 'jimm/comm/Icq$HTTPConnection', 'cb': 'jimm/comm/Icq$SOCKSConnection',
            'an': 'jimm/comm/Packet', 'ct': 'jimm/comm/UpdateContactListAction',
-           'bq': 'jimm/comm/OtherAction'}
+           'bq': 'jimm/comm/OtherAction', 'ae': 'jimm/comm/ActionListener',
+           'ac': 'jimm/comm/Message'}
 SYMBOLS = {
     'co.a I': 'jimm/comm/Util.counter I',
     'ct.a I': 'jimm/comm/UpdateContactListAction.state I',
@@ -100,6 +101,10 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('co', 'a', '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;', 'replaceStr'),
+    ('ae', 'a', '(Lan;)V', 'forward'),
+    ('ae', 'a', '(Lz;)V', 'sendAutoMessage'),
+    ('ae', 'a', '(Lac;)Z', 'isSpam'),
     ('co', 'b', '()I', 'createRandomId'),
     ('co', 'a', '()I', 'getCounter'),
     ('ct', 'a', '()V', 'init'),
