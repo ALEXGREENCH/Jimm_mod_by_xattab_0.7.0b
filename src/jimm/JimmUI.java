@@ -35,7 +35,7 @@ import jimm.comm.*;
 import jimm.util.*;
 import DrawControls.*;
 
-public class JimmUI implements CommandListener
+public class JimmUI implements CommandListener, VirtualListCommands
 {
 	// Last screen constants
 	public static Object lastScreen;
@@ -98,7 +98,7 @@ public class JimmUI implements CommandListener
 	public final static Command cmdCopyText = new Command(ResourceBundle.getString("copy_text"),     Command.ITEM,   4);
 	public final static Command cmdCopyAll  = new Command(ResourceBundle.getString("copy_all_text"), Command.ITEM,   5);
 	public final static Command cmdEdit     = new Command(ResourceBundle.getString("edit"),          Command.ITEM,   1);
-	public final static Command cmdNewPass  = new Command(ResourceBundle.getString("change_pass"),   Command.ITEM,   2);
+	public final static Command cmdCopyAppend = new Command(ResourceBundle.getString("add_to_copied"), Command.ITEM, 4);
 	public final static Command cmdMenu     = new Command(ResourceBundle.getString("option"),        Command.ITEM,   1);
 	public final static Command cmdSelect   = new Command(ResourceBundle.getString("select"),        Command.OK,     1);
 	//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
@@ -477,18 +477,16 @@ public class JimmUI implements CommandListener
 				EditInfo.showEditForm(last_user_info, Jimm.display.getCurrent());
 			}
 
-			if (c == cmdNewPass)
+			// "User info" -> "Copy text, Copy all, Add to copied"
+			if ((c == cmdCopyText) || (c == cmdCopyAll))
 			{
-				EditInfo.showChangePassForm(Jimm.display.getCurrent());
+				clearClipBoardText();
+				copyInfoText(c == cmdCopyAll);
+				infoTextList.addCommandEx(cmdCopyAppend, VirtualList.MENU_LEFT);
 			}
-
-			// "User info" -> "Copy text, Copy all"
-			else if ((c == cmdCopyText) || (c == cmdCopyAll))
+			else if (c == cmdCopyAppend)
 			{
-				JimmUI.setClipBoardText
-				(
-					"[" + getCaption(infoTextList) + "]\n" + infoTextList.getCurrText(0, (c == cmdCopyAll))
-				);
+				copyInfoText(false);
 			}
 		}
 
@@ -679,6 +677,8 @@ public class JimmUI implements CommandListener
 
     static private String clipBoardText;
     static private String clipBoardHeader;
+    static private String clipBoardQuotedPrefix;
+    static private String clipBoardPlainText;
     static private boolean clipBoardIncoming;
 	
 	static private String insertQuotingChars(String text, String qChars)
@@ -705,10 +705,15 @@ public class JimmUI implements CommandListener
     {
         if (!quote)
         {
-            return clipBoardText;
+            return clipBoardPlainText;
         }
 
         StringBuffer sb = new StringBuffer();
+
+        if (clipBoardQuotedPrefix != null)
+        {
+            sb.append(clipBoardQuotedPrefix);
+        }
 
         if (clipBoardHeader != null)
         {
@@ -722,16 +727,11 @@ public class JimmUI implements CommandListener
         return sb.toString();
     }
     
-    static public void setClipBoardText(String text)
+    static public void setClipBoardText(boolean incoming, String date, String from, String text, String quotedPrefix)
     {
         clipBoardText     = text;
-        clipBoardHeader   = null;
-        clipBoardIncoming = true;
-    }
-    
-    static public void setClipBoardText(boolean incoming, String date, String from, String text)
-    {
-        clipBoardText     = text;
+        clipBoardQuotedPrefix = quotedPrefix;
+        clipBoardPlainText = clipBoardPlainText + text;
         if (date != "***error***")
         {
             clipBoardHeader = from + ' ' + date;
@@ -743,12 +743,32 @@ public class JimmUI implements CommandListener
         clipBoardIncoming = incoming;
     }
 
-/*
-	static public void clearClipBoardText()
-	{
-		clipBoardText = null;
-	}
-*/	
+    static public void clearClipBoardText()
+    {
+        clipBoardText = null;
+        clipBoardHeader = null;
+        clipBoardQuotedPrefix = null;
+        clipBoardPlainText = "";
+    }
+
+    static private void copyInfoText(boolean all)
+    {
+        setClipBoardText(true, "***error***", getCaption(infoTextList),
+            infoTextList.getCurrText(0, all), getClipBoardText(true));
+    }
+
+    public void vlItemClicked(VirtualList sender) {}
+    public void vlCursorMoved(VirtualList sender) {}
+
+    public void vlKeyPress(VirtualList sender, int keyCode, int type)
+    {
+        if ((sender == infoTextList) && (keyCode == Canvas.KEY_STAR))
+        {
+            clearClipBoardText();
+            copyInfoText(false);
+            infoTextList.addCommandEx(cmdCopyAppend, VirtualList.MENU_LEFT);
+        }
+    }
 
 	////////////////////////
 	//                    //
@@ -1221,6 +1241,7 @@ public class JimmUI implements CommandListener
 	{
 		infoTextList = getInfoTextList(uin, false);
 		infoTextList.setCommandListener(_this);
+		infoTextList.setVLCommands(_this);
 
 		if (Icq.isConnected())
 		{
@@ -1228,7 +1249,6 @@ public class JimmUI implements CommandListener
 			{
 				infoTextList.addCommandEx(cmdMenu, VirtualList.MENU_LEFT_BAR);
 				infoTextList.addCommandEx(cmdEdit, VirtualList.MENU_LEFT);
-				infoTextList.addCommandEx(cmdNewPass, VirtualList.MENU_LEFT);
 			}
 			
 			RequestInfoAction act = new RequestInfoAction(uin, name);
@@ -1271,6 +1291,7 @@ public class JimmUI implements CommandListener
 		infoTextList.addCommandEx(cmdBack, VirtualList.MENU_RIGHT_BAR);
 		infoTextList.addCommandEx(cmdMenu, VirtualList.MENU_LEFT_BAR);
 		infoTextList.addCommandEx(cmdCopyText, VirtualList.MENU_LEFT);
+		if (!clipBoardIsEmpty()) infoTextList.addCommandEx(cmdCopyAppend, VirtualList.MENU_LEFT);
 		infoTextList.addCommandEx(cmdCopyAll, VirtualList.MENU_LEFT);
 	}
 	
@@ -1294,9 +1315,11 @@ public class JimmUI implements CommandListener
 			infoTextList.addCommandEx(cmdMenu, VirtualList.MENU_LEFT_BAR);
 			infoTextList.addCommandEx(cmdBack, VirtualList.MENU_RIGHT_BAR);
 			infoTextList.addCommandEx(cmdCopyText, VirtualList.MENU_LEFT);
+			if (!clipBoardIsEmpty()) infoTextList.addCommandEx(cmdCopyAppend, VirtualList.MENU_LEFT);
 			infoTextList.addCommandEx(cmdCopyAll, VirtualList.MENU_LEFT);
 
 			infoTextList.setCommandListener(_this);
+			infoTextList.setVLCommands(_this);
 		}
 		
 		return infoTextList;
@@ -2085,7 +2108,8 @@ public class JimmUI implements CommandListener
 			//#sijapp cond.end#
 
 			case USER_MENU_COPY_UIN:
-				JimmUI.setClipBoardText(clciContactMenu.getUinString());
+				clearClipBoardText();
+				setClipBoardText(true, "***error***", null, clciContactMenu.getUinString(), getClipBoardText(true));
 				ContactList.activate();
 				break;
 

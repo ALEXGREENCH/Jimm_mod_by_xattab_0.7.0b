@@ -1748,6 +1748,8 @@ public abstract class VirtualList
 	public static final int MENU_TYPE_RIGHT_BAR = 2;
 	public static final int MENU_TYPE_LEFT = 3;
 	public static final int MENU_TYPE_RIGHT = 4;
+	public static final int MENU_DEFAULT = 5;
+	private Command defaultCommand;
 
 	public static int MENU_LEFT_BAR;
 	public static int MENU_RIGHT_BAR;
@@ -1883,6 +1885,7 @@ public abstract class VirtualList
 	
 	protected Command findMenuByType(int type)
 	{
+		if ((defaultCommand != null) && (defaultCommand.getCommandType() == type)) return defaultCommand;
 		if ((leftMenu != null) && (leftMenu.getCommandType() == type)) return leftMenu;
 		
 		if ((rightMenu != null) && (rightMenu.getCommandType() == type)) return rightMenu;
@@ -1928,6 +1931,11 @@ public abstract class VirtualList
 	{
 		switch (type)
 		{
+		case MENU_DEFAULT:
+			defaultCommand = cmd;
+			invalidate();
+			break;
+
 		case MENU_TYPE_LEFT_BAR:
 			leftMenu = cmd;
 			invalidate();
@@ -1958,6 +1966,13 @@ public abstract class VirtualList
 	
 	public void removeCommandEx(Command cmd)
 	{
+		if (cmd == defaultCommand)
+		{
+			defaultCommand = null;
+			invalidate();
+			return;
+		}
+
 		if (cmd == leftMenu)
 		{
 			leftMenu = null;
@@ -1979,6 +1994,7 @@ public abstract class VirtualList
 
 	public void removeAllCommands()
 	{
+		defaultCommand = null;
 		leftMenu = null;
 		rightMenu = null;
 		leftMenuItems.removeAllElements();

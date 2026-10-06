@@ -98,9 +98,6 @@ class ChatTextList implements VirtualListCommands, CommandListener
 	/* Grand authorisation a for authorisation asking contact */
 	private static final  Command cmdGrantAuth = new Command(ResourceBundle.getString("grant"), Command.ITEM, 3);
 
-	/* Message copy command */
-	private static final Command cmdCopyText = new Command(ResourceBundle.getString("copy_text"), Command.ITEM, 4);
-
 	/* Add temporary or phantom contact to contact list */
 	private static final Command cmdAddUrs = new Command(ResourceBundle.getString("add_user"), Command.ITEM, 5);
 
@@ -154,11 +151,12 @@ class ChatTextList implements VirtualListCommands, CommandListener
 		textList.addCommandEx(JimmUI.cmdMenu, VirtualList.MENU_LEFT_BAR);
 		textList.addCommandEx(cmdCloseChat, VirtualList.MENU_RIGHT_BAR);
 		textList.addCommandEx(cmdContactMenu, VirtualList.MENU_LEFT);
-		textList.addCommandEx(cmdMsgReply, VirtualList.MENU_LEFT);
+		textList.addCommandEx(cmdMsgReply, VirtualList.MENU_DEFAULT);
 		textList.addCommandEx(cmdDelChat, VirtualList.MENU_LEFT);
-		textList.addCommandEx(cmdCopyText, VirtualList.MENU_LEFT);
+		textList.addCommandEx(JimmUI.cmdCopyText, VirtualList.MENU_LEFT);
 		if (!JimmUI.clipBoardIsEmpty())
 		{
+			textList.addCommandEx(JimmUI.cmdCopyAppend, VirtualList.MENU_LEFT);
 			textList.addCommandEx(JimmUI.cmdQuote, VirtualList.MENU_LEFT);
 			textList.addCommandEx(JimmUI.cmdPaste, VirtualList.MENU_LEFT);
 		}
@@ -238,11 +236,18 @@ class ChatTextList implements VirtualListCommands, CommandListener
 		}
 
 		/* Copy selected text to clipboard */
-		else if (c == cmdCopyText)
+		else if (c == JimmUI.cmdCopyText)
 		{
+			JimmUI.clearClipBoardText();
 			ChatHistory.copyText(contact.getUinString(), ChatName);
+			textList.addCommandEx(JimmUI.cmdCopyAppend, VirtualList.MENU_LEFT);
 			textList.addCommandEx(JimmUI.cmdQuote, VirtualList.MENU_LEFT);
 			textList.addCommandEx(JimmUI.cmdPaste, VirtualList.MENU_LEFT);
+		}
+
+		else if (c == JimmUI.cmdCopyAppend)
+		{
+			ChatHistory.copyText(contact.getUinString(), ChatName);
 		}
 
 		/* Reply with quotation */
@@ -427,7 +432,9 @@ class ChatTextList implements VirtualListCommands, CommandListener
 			// #sijapp cond.end#
 
 			case Canvas.KEY_STAR:
+				JimmUI.clearClipBoardText();
 				ChatHistory.copyText(contact.getUinString(), ChatName);
+				textList.addCommandEx(JimmUI.cmdCopyAppend, VirtualList.MENU_LEFT);
 				textList.addCommandEx(JimmUI.cmdQuote, VirtualList.MENU_LEFT);
 				textList.addCommandEx(JimmUI.cmdPaste, VirtualList.MENU_LEFT);
 				return;
@@ -669,7 +676,7 @@ public class ChatHistory
 				}
 			}
 			addTextToForm(uin, ResourceBundle.getString("sysnotice"), text, "", notice.getNewDate(), false, offline, image, 0);
-			MagicEye.addAction(uin, text);
+			MagicEye.addAction(uin, text, false);
 		}
 		chat.checkTextForURL();
 		chat.checkForAuthReply();
@@ -733,7 +740,7 @@ public class ChatHistory
 		JimmUI.setClipBoardText
 		(
 			md.getIncoming(), Util.getDateString(true, true, md.getTime()),
-			md.getIncoming() ? from : Icq.myNick, getCurrentMessage(uin)
+			md.getIncoming() ? from : Icq.myNick, getCurrentMessage(uin), JimmUI.getClipBoardText(true)
 		);
 	}
 

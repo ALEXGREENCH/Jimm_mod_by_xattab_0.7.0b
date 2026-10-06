@@ -109,8 +109,9 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		super(null);
 		addCommandEx(JimmUI.cmdMenu, TextList.MENU_LEFT_BAR);
 		addCommandEx(cmdBack, TextList.MENU_RIGHT_BAR);
-		addCommandEx(JimmUI.cmdSelect, TextList.MENU_LEFT);
+		addCommandEx(JimmUI.cmdSelect, TextList.MENU_DEFAULT);
 		addCommandEx(JimmUI.cmdCopyText, TextList.MENU_LEFT);
+		if (!JimmUI.clipBoardIsEmpty()) addCommandEx(JimmUI.cmdCopyAppend, TextList.MENU_LEFT);
 		addCommandEx(JimmUI.cmdFind, TextList.MENU_LEFT);
 		addCommandEx(cmdInfo, TextList.MENU_LEFT);
 		addCommandEx(cmdExport, TextList.MENU_LEFT);
@@ -149,11 +150,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 				break;
 			//#sijapp cond.end#
 			case Canvas.KEY_STAR:
-				int index = getCurrIndex();
-				if (index == -1) return;
-				CachedRecord record = HistoryStorage.getCachedRecord(currUin, index);
-				if (record == null) return;
-				JimmUI.setClipBoardText((record.type == 0), record.date, record.from, record.text);
+				copyText(true);
 				break;
 		}
 		
@@ -171,6 +168,22 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		}
 	}
 	
+    private void copyText(boolean clear)
+    {
+        int index = getCurrIndex();
+        if (index == -1) return;
+        CachedRecord record = HistoryStorage.getCachedRecord(currUin, index);
+        if (record == null) return;
+        if (clear)
+        {
+            JimmUI.clearClipBoardText();
+            HistoryStorage.list.addCommandEx(JimmUI.cmdCopyAppend, TextList.MENU_LEFT);
+            if (messText != null) messText.addCommandEx(JimmUI.cmdCopyAppend, TextList.MENU_LEFT);
+        }
+        JimmUI.setClipBoardText((record.type == 0), record.date, record.from,
+            record.text + "\n", JimmUI.getClipBoardText(true));
+    }
+
 	// VirtualList command impl.
 	public void vlItemClicked(VirtualList sender)
 	{
@@ -444,14 +457,10 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		}
 		
 		// Copy text from messages list or message box
-		else if (c == JimmUI.cmdCopyText)
+		else if ((c == JimmUI.cmdCopyText) || (c == JimmUI.cmdCopyAppend))
 		{
-			int index = getCurrIndex();
-			if (index == -1) return;
-			CachedRecord record = HistoryStorage.getCachedRecord(currUin, index);
-			if (record == null) return;
-			JimmUI.setClipBoardText((record.type == 0), record.date, record.from, record.text + "\n");
-		}
+			copyText(c == JimmUI.cmdCopyText);
+	}
 		
 		// next message command
 		else if (c == cmdMsgNext)
@@ -529,6 +538,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 			messText.addCommandEx(JimmUI.cmdMenu, TextList.MENU_LEFT_BAR);
 			messText.addCommandEx(JimmUI.cmdBack, TextList.MENU_RIGHT_BAR);
 			messText.addCommandEx(JimmUI.cmdCopyText, TextList.MENU_LEFT);
+			if (!JimmUI.clipBoardIsEmpty()) messText.addCommandEx(JimmUI.cmdCopyAppend, TextList.MENU_LEFT);
 			messText.addCommandEx(cmdMsgNext, TextList.MENU_LEFT);
 			messText.addCommandEx(cmdMsgPrev, TextList.MENU_LEFT);
 			messText.setCommandListener(this);
@@ -607,7 +617,7 @@ public class HistoryStorage
 	static final private String prefix = "hist";
 	
 	private static RecordStore recordStore;
-	private static HistoryStorageList list;
+	static HistoryStorageList list;
 	private static String currCacheUin = new String();
 	private static Hashtable cachedRecords;
 	

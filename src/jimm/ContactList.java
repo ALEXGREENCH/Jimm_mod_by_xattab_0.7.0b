@@ -945,7 +945,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 			{
 				if ((System.currentTimeMillis() - cItem.lastOfflineActivity) < 60000)
 				{
-					MagicEye.addAction(uin, "maybe_hiding_from_you");
+					MagicEye.addAction(uin, "maybe_hiding_from_you", true);
 				}
 				else
 				{

@@ -71,7 +71,7 @@ public final class XtrazSM
     {
         ContactItem cItem = ContactList.getItembyUIN(s);
 
-        MagicEye.addAction(s, "read_xtraz");
+        MagicEye.addAction(s, "read_xtraz", false);
 
         if ((cItem == null) || (cItem.getInvisibleId() != 0) || !(Options.getBoolean(Options.OPTION_XTRAZ_ENABLE))
 			|| cItem.getBooleanValue(ContactItem.CONTACTITEM_IS_TEMP) || ((int)Options.getInt(Options.OPTION_XSTATUS) == XStatus.XSTATUS_NONE)

@@ -126,6 +126,17 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Incoming message mismatch: compare build/source-tests/message-reference.txt and message-source.txt')
     report['message_observations'] = len(message_ref.read_text().splitlines())
     report['message_differences'] = 0
+    clipboard_ref, clipboard_src = TEST / 'clipboard-reference.txt', TEST / 'clipboard-source.txt'
+    for mode, output in [('reference', clipboard_ref), ('source', clipboard_src)]:
+        fixture = TEST / ('clipboard-' + mode + '.jar')
+        # Reuse the fixed date fixture; clipboard and list controllers are unchanged.
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'SplashFixture', TEST / ('login-' + mode + '.jar'), fixture, mode], 'clipboard-fixture-' + mode)
+        report['clipboard_' + mode] = run([*java, 'ClipboardProbe', fixture, mode, output], 'clipboard-' + mode)
+    if clipboard_ref.read_bytes() != clipboard_src.read_bytes():
+        raise AssertionError('Clipboard/MagicEye mismatch: compare build/source-tests/clipboard-reference.txt and clipboard-source.txt')
+    report['clipboard_observations'] = len(clipboard_ref.read_text().splitlines())
+    report['clipboard_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

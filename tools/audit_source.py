@@ -22,8 +22,15 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'ay': 'jimm/comm/Icq$HTTPConnection', 'cb': 'jimm/comm/Icq$SOCKSConnection',
            'an': 'jimm/comm/Packet', 'ct': 'jimm/comm/UpdateContactListAction',
            'bq': 'jimm/comm/OtherAction', 'ae': 'jimm/comm/ActionListener',
-           'ac': 'jimm/comm/Message'}
+           'ac': 'jimm/comm/Message', 'ah': 'jimm/util/MagicEye'}
 SYMBOLS = {
+    'cf.c Ljava/lang/String;': 'jimm/JimmUI.clipBoardText Ljava/lang/String;',
+    'cf.d Ljava/lang/String;': 'jimm/JimmUI.clipBoardHeader Ljava/lang/String;',
+    'cf.e Ljava/lang/String;': 'jimm/JimmUI.clipBoardQuotedPrefix Ljava/lang/String;',
+    'cf.f Ljava/lang/String;': 'jimm/JimmUI.clipBoardPlainText Ljava/lang/String;',
+    'cf.a Z': 'jimm/JimmUI.clipBoardIncoming Z',
+    'cf.a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;': 'jimm/JimmUI.insertQuotingChars(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;',
+
     'co.a I': 'jimm/comm/Util.counter I',
     'ct.a I': 'jimm/comm/UpdateContactListAction.state I',
     'ct.c I': 'jimm/comm/UpdateContactListAction.errorCode I',
@@ -101,6 +108,19 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('cf', 'a', '()Z', 'clipBoardIsEmpty'),
+    ('cf', 'a', '(Z)Ljava/lang/String;', 'getClipBoardText'),
+    ('cf', 'c', '()V', 'clearClipBoardText'),
+    ('cf', 'a', '(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V', 'setClipBoardText'),
+    ('cf', 'a', '(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;', 'insertQuotingChars'),
+    ('ah', 'a', '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V', 'registerAction'),
+    ('ah', 'a', '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V', 'addAction'),
+    ('ah', 'a', '(Ljava/lang/String;Ljava/lang/String;Z)V', 'addAction'),
+    ('cd', 'a', '(I)Ljavax/microedition/lcdui/Command;', 'findMenuByType'),
+    ('cd', 'a', '(Ljavax/microedition/lcdui/Command;I)V', 'addCommandEx'),
+    ('cd', 'a', '(Ljavax/microedition/lcdui/Command;)V', 'removeCommandEx'),
+    ('cd', 'm', '()V', 'removeAllCommands'),
+
     ('co', 'a', '(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;', 'replaceStr'),
     ('ae', 'a', '(Lan;)V', 'forward'),
     ('ae', 'a', '(Lz;)V', 'sendAutoMessage'),

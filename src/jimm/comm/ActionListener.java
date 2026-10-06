@@ -879,7 +879,7 @@ public class ActionListener
                     // Status message requests
                     else if (((msgType >= 1000) && (msgType <= 1004)))
                     {
-						MagicEye.addAction(uin, "read_status_message");
+						MagicEye.addAction(uin, "read_status_message", false);
                         ContactItem contact = ContactList.getItembyUIN(uin);
                         if (contact == null) return;
 

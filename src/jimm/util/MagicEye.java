@@ -29,7 +29,7 @@ import javax.microedition.lcdui.*;
 import jimm.*;
 import jimm.comm.*;
 
-public class MagicEye implements CommandListener
+public class MagicEye implements VirtualListCommands, CommandListener
 {
 	private static MagicEye instance = new MagicEye();
 	private static TextList list;
@@ -43,7 +43,6 @@ public class MagicEye implements CommandListener
 		list = new TextList(ResourceBundle.getString("magic_eye"));
 		list.setFontSize(TextList.SMALL_FONT);
 		list.setMode(TextList.MODE_TEXT);
-		list.addCommandEx(JimmUI.cmdBack, TextList.MENU_RIGHT_BAR);
 	}
 
 	public MagicEye()
@@ -59,28 +58,27 @@ public class MagicEye implements CommandListener
 		{
 			list.addCommandEx(JimmUI.cmdMenu, TextList.MENU_LEFT_BAR);
 			list.addCommandEx(JimmUI.cmdCopyText, TextList.MENU_LEFT);
+			if (!JimmUI.clipBoardIsEmpty()) list.addCommandEx(JimmUI.cmdCopyAppend, TextList.MENU_LEFT);
 			list.addCommandEx(JimmUI.cmdCopyAll, TextList.MENU_LEFT);
 			list.addCommandEx(JimmUI.cmdClearText, TextList.MENU_LEFT);
-			list.addCommandEx(cmdContactMenu, TextList.MENU_LEFT);
+			list.addCommandEx(cmdContactMenu, TextList.MENU_DEFAULT);
 		}
 
 		list.setCommandListener(_this);
+		list.setVLCommands(_this);
 		JimmUI.setColorScheme(list, false);
 		list.activate(Jimm.display);
 	}
 
 	private static void removeCommands()
 	{
-		list.removeCommandEx(JimmUI.cmdMenu);
-		list.removeCommandEx(JimmUI.cmdCopyText);
-		list.removeCommandEx(JimmUI.cmdCopyAll);
-		list.removeCommandEx(JimmUI.cmdClearText);
-		list.removeCommandEx(cmdContactMenu);
+		list.removeAllCommands();
+		list.addCommandEx(JimmUI.cmdBack, TextList.MENU_RIGHT_BAR);
 	}
 
 	private int counter = 1;
 
-	private synchronized void registerAction(String uin, String action, String msg)
+	private synchronized void registerAction(String uin, String action, String msg, boolean highlight)
 	{
 		if (!Options.getBoolean(Options.OPTION_MAGIC_EYE)) return;
 
@@ -92,17 +90,17 @@ public class MagicEye implements CommandListener
 		int nickColor = Options.getInt(Options.OPTION_COLOR_MY_NICK);
 
 		list.lock();
-		list.addBigText("[" + counter + "]: ", textColor, Font.STYLE_PLAIN, counter);
+		list.addBigText("[" + counter + "]: ", textColor, Options.fontStyle, counter);
 
-		if (contact == null) list.addBigText(uin + " (" + date + ") ", 0xFF0000, Font.STYLE_BOLD, counter);
-		else list.addBigText(contact.name + /*" [" + uin + "]*/" (" + date + ") ", nickColor, Font.STYLE_BOLD, counter);
+		if (contact == null) list.addBigText(uin + " (" + date + ") ", 0xFF0000, Font.STYLE_BOLD + Options.fontStyle, counter);
+		else list.addBigText(contact.name + /*" [" + uin + "]*/" (" + date + ") ", nickColor, Font.STYLE_BOLD + Options.fontStyle, counter);
 
-		list.addBigText(action, textColor, Font.STYLE_PLAIN, counter);
+		list.addBigText(action, highlight ? 0xFF0000 : textColor, Options.fontStyle, counter);
 
 		if (null != msg)
 		{
 			list.doCRLF(counter);
-			list.addBigText(msg, textColor, Font.STYLE_PLAIN, counter);
+			list.addBigText(msg, textColor, Options.fontStyle, counter);
 		}
 
 		list.doCRLF(counter);
@@ -113,12 +111,12 @@ public class MagicEye implements CommandListener
 
 	public static void addAction(String uin, String action, String msg)
 	{
-		instance.registerAction(uin, action, msg);
+		instance.registerAction(uin, action, msg, false);
 	}
 
-	public static void addAction(String uin, String action)
+	public static void addAction(String uin, String action, boolean highlight)
 	{
-		instance.registerAction(uin, action, null);
+		instance.registerAction(uin, action, null, highlight);
 	}
 
 	public void commandAction(Command c, Displayable d)
@@ -150,7 +148,14 @@ public class MagicEye implements CommandListener
 
 		else if ((c == JimmUI.cmdCopyText) || (c == JimmUI.cmdCopyAll))
 		{
-			JimmUI.setClipBoardText("[" + JimmUI.getCaption(list) + "]\n" + list.getCurrText(0, (c == JimmUI.cmdCopyAll)));
+			JimmUI.clearClipBoardText();
+			copyText(c == JimmUI.cmdCopyAll);
+			list.addCommandEx(JimmUI.cmdCopyAppend, TextList.MENU_LEFT);
+		}
+
+		else if (c == JimmUI.cmdCopyAppend)
+		{
+			copyText(false);
 		}
 
 		else if (c == JimmUI.cmdClearText)
@@ -163,5 +168,24 @@ public class MagicEye implements CommandListener
 				removeCommands();
 			}
 		}
+    }
+
+    private static void copyText(boolean all)
+    {
+        JimmUI.setClipBoardText(true, "***error***", JimmUI.getCaption(list),
+            list.getCurrText(0, all), JimmUI.getClipBoardText(true));
+    }
+
+    public void vlItemClicked(VirtualList sender) {}
+    public void vlCursorMoved(VirtualList sender) {}
+
+    public void vlKeyPress(VirtualList sender, int keyCode, int type)
+    {
+        if ((sender == list) && (keyCode == Canvas.KEY_STAR))
+        {
+            JimmUI.clearClipBoardText();
+            copyText(false);
+            list.addCommandEx(JimmUI.cmdCopyAppend, TextList.MENU_LEFT);
+        }
     }
 }
