@@ -238,10 +238,10 @@ public class MainMenu implements CommandListener
 	}
 
 	/* Displays the given alert and activates the main menu afterwards */
-	static public void activate(Alert alert)
+	static public void activate(String message)
 	{
 		MainMenu.build();
-		list.activate(Jimm.display, alert);
+		new VirtualAlert(list, message, -1).activate(Jimm.display);
 	}
 
 	/* Activates the main menu */
@@ -287,7 +287,7 @@ public class MainMenu implements CommandListener
 		}
 		else
 		{
-			Icq.disconnect();
+			Icq.disconnect(false);
 			try { Thread.sleep(500); }
 			catch (InterruptedException e) { }
 			try { Jimm.jimm.destroyApp(true); }
@@ -466,7 +466,7 @@ public class MainMenu implements CommandListener
 				break;
 
 			case MENU_DISCONNECT: /* Disconnect */
-				Icq.disconnect();
+				Icq.disconnect(true);
 				Thread.yield();
 				/* Show the main menu */
 				activate();

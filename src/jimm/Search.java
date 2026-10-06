@@ -391,8 +391,7 @@ public class Search
 				if (ContactList.getGroupItems().length == 0)
 				{
 					searchForm = null;
-					Alert errorMsg = new Alert(ResourceBundle.getString("warning"), JimmException.getErrDesc(161, 0), null, AlertType.WARNING);
-					errorMsg.setTimeout(Alert.FOREVER);
+					String errorMsg = JimmException.getErrDesc(161, 0);
 					ContactList.activate(errorMsg);
 				}
 				else

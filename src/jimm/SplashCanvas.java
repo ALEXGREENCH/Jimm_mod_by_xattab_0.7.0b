@@ -272,6 +272,12 @@ public class SplashCanvas extends Canvas
 		Jimm.isPasswordProtected = true;
 	}
 
+    public static void activate()
+    {
+        if (t2 != null) { t2.cancel(); t2 = null; }
+        Jimm.display.setCurrent(_this);
+    }
+
 	// Disable keylock
 	static public synchronized void unlock(boolean showContactList)
 	{

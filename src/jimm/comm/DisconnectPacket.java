@@ -200,7 +200,7 @@ public class DisconnectPacket extends Packet
 		// Assemble FLAP header
 		Util.putByte(buf, 0, 0x2A); // FLAP.ID
 		Util.putByte(buf, 1, 0x04); // FLAP.CHANNEL
-		Util.putWord(buf, 2, Icq.getFlapSequence()); // FLAP.SEQUENCE
+		Util.putWord(buf, 2, sequence); // FLAP.SEQUENCE
 		Util.putWord(buf, 4, length - 6); // FLAP.LENGTH
 
 		// Marker

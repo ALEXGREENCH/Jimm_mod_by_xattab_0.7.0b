@@ -44,7 +44,6 @@ public class ActionListener
             // Throw exception
             if (disconnectPacket.getError() == 0x0001)
             {
-                Icq.connecting = false;
                 throw (new JimmException(110, 0)); // Multiple logins
             }
             else

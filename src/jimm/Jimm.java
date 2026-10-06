@@ -312,7 +312,7 @@ public class Jimm extends MIDlet
 	public void destroyApp(boolean unconditional) throws MIDletStateChangeException
 	{
         // Disconnect
-        Icq.disconnect();
+        Icq.disconnect(false);
         //#sijapp cond.if target is "SIEMENS2"#
         com.siemens.mp.game.Light.setLightOff();
         //#sijapp cond.end#

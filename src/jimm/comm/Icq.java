@@ -68,9 +68,6 @@ public class Icq implements Runnable
 	public Icq()
 	{
 		_this = this;
-		// Set starting point for seq numbers (not bigger then 0x8000)
-		Random rand = new Random(System.currentTimeMillis());
-		flapSEQ = rand.nextInt() % 0x8000;
 	}
 
 	public static Icq getIcq()
@@ -172,19 +169,21 @@ public class Icq implements Runnable
 	// Connects to the ICQ network
 	static public synchronized void connect()
 	{
-		Icq.connecting = true;
+		setDisconnected(false);
 		Icq.setPoint = false;
 
 		// #sijapp cond.if target isnot "MOTOROLA"#
 		if (Options.getBoolean(Options.OPTION_SHADOW_CON))
 		{
 			// Make the shadow connection for Nokia 6230 of other devices if needed
-			ContentConnection ctemp = null;
+			HttpConnection ctemp = null;
 			try
 			{
-				String url = "http://jimm.im/fake";
-				ctemp = (ContentConnection) Connector.open(url);
+				String url = "http://sc.jimm.im/";
+				ctemp = (HttpConnection) Connector.open(url);
 
+				ctemp.setRequestProperty("Host", "");
+				ctemp.setRequestProperty("x-operamini-fetures", "AzLJyMVEAvzJjEFF0VxGxQ==");
 				ctemp.openDataInputStream();
 			}
 			catch (Exception e) {}
@@ -199,10 +198,7 @@ public class Icq implements Runnable
 		}
 		catch (JimmException e)
 		{
-			if(!reconnect(e))
-			{
-				JimmException.handleException(e);
-			}
+			JimmException.handleException(e);
 		}
 
 		SplashCanvas.setStatusToDraw(jimm.JimmUI.getStatusImageIndex(Options.getLong(Options.OPTION_ONLINE_STATUS)));
@@ -218,28 +214,25 @@ public class Icq implements Runnable
 
 
 	/* Disconnects from the ICQ network */
-	static public synchronized void disconnect()
+	static public synchronized void disconnect(boolean force)
 	{
-		Icq.connecting = false;
-		/* Disconnect */
-		if( c != null ) c.close();
-		resetServerCon();
-		// #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
-		// #sijapp cond.if modules_FILES is "true"#
-		resetPeerCon();
-		// #sijapp cond.end#
-		// #sijapp cond.end#
-
-		// #sijapp cond.if modules_TRAFFIC is "true" #
-		try
-		{
-			Traffic.save();
-		}
-		catch (Exception e) {}
-		// #sijapp cond.end#
-
-		/* Reset all contacts offine */ 
-		RunnableImpl.resetContactsOffline();
+        //#sijapp cond.if (target="MIDP2" | target="MOTOROLA" | target="SIEMENS2") & modules_FILES="true"#
+        resetPeerCon();
+        //#sijapp cond.end#
+        setDisconnected(true);
+        if (c != null)
+        {
+            thread = null;
+            synchronized (wait) { wait.notifyAll(); }
+            if (force) c.close();
+            else c.setInputCloseFlag(true);
+            //#sijapp cond.if modules_TRAFFIC is "true"#
+            try { Traffic.save(); } catch (Exception e) { }
+            //#sijapp cond.end#
+            RunnableImpl.resetContactsOffline();
+            setNotConnected();
+            if (c.isClosed()) c = null;
+        }
 	}
 
 	// Dels a ContactItem to the server saved contact list
@@ -331,12 +324,18 @@ public class Icq implements Runnable
     	return flapSEQ;
     }
 
+    public static int getInitialFlapSequence()
+    {
+        int seed = new Random(System.currentTimeMillis()).nextInt() & 0x7FFF;
+        int sum = 0;
+        for (int value = seed; value != 0; value /= 8) sum += value;
+        int reduced = seed - sum;
+        return (((((reduced & 0xFF) ^ (seed & 0xFF)) + (reduced & -256)) & 7) ^ seed) + 3;
+    }
+
     // Resets the comm. subsystem
     static public synchronized void resetServerCon()
     {
-        // Stop thread
-        thread = null;
-        
         // Wake up thread in order to complete
 		synchronized (Icq.wait)
 		{
@@ -392,7 +391,7 @@ public class Icq implements Runnable
     static private Vector actAction;
 
     // Action listener
-    static private ActionListener actListener;
+
     
     // Keep alive timer task
     static private TimerTasks keepAliveTimerTask;
@@ -402,321 +401,133 @@ public class Icq implements Runnable
     // Main loop
     public void run()
     {
-        // #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
-        // #sijapp cond.if modules_FILES is "true"#
-        // Is a DC packet Available
-        boolean dcPacketAvailable;
-        // #sijapp cond.end#
-        // #sijapp cond.end#
-
-        // Get thread object
-        Thread thread = Thread.currentThread();
-        // Required variables
+        Thread currentThread = Thread.currentThread();
         Action newAction = null;
-
-        // Instantiate connections
-        if (Options.getInt(Options.OPTION_CONN_TYPE) == Options.CONN_TYPE_SOCKET)
-        	c = new SOCKETConnection();
-        else if (Options.getInt(Options.OPTION_CONN_TYPE) == Options.CONN_TYPE_HTTP)
-        	c = new HTTPConnection();
-        // #sijapp cond.if modules_PROXY is "true"#
-        else if (Options.getInt(Options.OPTION_CONN_TYPE) == Options.CONN_TYPE_PROXY)
-        	c = new SOCKSConnection();
-        // #sijapp cond.end#
-
-        // Instantiate active actions vector
+        if (Options.getInt(Options.OPTION_CONN_TYPE) == 0) c = new SOCKETConnection();
+        //#sijapp cond.if target isnot "DEFAULT"#
+        else if (Options.getInt(Options.OPTION_CONN_TYPE) == 1) c = new HTTPConnection();
+        //#sijapp cond.end#
+        //#sijapp cond.if modules_PROXY is "true"#
+        else if (Options.getInt(Options.OPTION_CONN_TYPE) == 2) c = new SOCKSConnection();
+        //#sijapp cond.end#
         actAction = new Vector();
-
-        // Instantiate action listener
-        actListener = new ActionListener();
-        
+        ActionListener actionListener = new ActionListener();
         keepAliveTimerTask = new TimerTasks(TimerTasks.ICQ_KEEPALIVE);
-        long keepAliveInterv = Integer.parseInt(Options.getString(Options.OPTION_CONN_ALIVE_INVTERV))*1000;
-        Jimm.getTimerRef().schedule(keepAliveTimerTask, keepAliveInterv, keepAliveInterv);
-
-        // Catch JimmExceptions
+        long interval = Integer.parseInt(Options.getString(Options.OPTION_CONN_ALIVE_INVTERV)) * 1000;
+        Jimm.getTimerRef().schedule(keepAliveTimerTask, interval, interval);
         try
         {
-            // Abort only in error state
-            while (Icq.thread == thread)
+            while (thread == currentThread)
             {
-                // Get next action
                 synchronized (this)
                 {
-                    if (reqAction.size() > 0 )
+                    newAction = null;
+                    if (reqAction.size() > 0 && !(actAction.size() == 1
+                        && ((Action)actAction.elementAt(0)).isExclusive()))
                     {
-                        if ((actAction.size() == 1) && ((Action) actAction.elementAt(0)).isExclusive())
+                        if (reqAction != null && reqAction.size() != 0)
+                            newAction = (Action)reqAction.elementAt(0);
+                        if (!(actAction.size() > 0 && newAction.isExclusive()) && newAction.isExecutable())
                         {
-                            newAction = null;
+                            if (reqAction != null && reqAction.size() != 0) reqAction.removeElementAt(0);
                         }
-                        else
-                        {
-                        	if( reqAction != null && reqAction.size() != 0 )
-                        		newAction = (Action) reqAction.elementAt(0);
-                            if (((actAction.size() > 0) && newAction.isExclusive()) || (!newAction.isExecutable()))
-                            {
-                                newAction = null;
-                            }
-                            else
-                            {
-                            	if( reqAction != null && reqAction.size() != 0 )
-                            		reqAction.removeElementAt(0);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        newAction = null;
+                        else newAction = null;
                     }
                 }
-
-                // Wait if a new action does not exist
-                if ((newAction == null) && (c.available() == 0))
+                if (newAction == null && c.available() == 0)
                 {
-                    try
+                    try { synchronized (wait) { wait.wait(); } }
+                    catch (InterruptedException e) { }
+                }
+                else if (newAction != null)
+                {
+                    try { newAction.init(); actAction.addElement(newAction); }
+                    catch (JimmException e)
                     {
-                        synchronized (wait)
-                        {
-                            wait.wait(/*Icq.STANDBY*/);
-                        }
-                    } catch (InterruptedException e)
-                    {
-                        // Do nothing
+                        JimmException.handleException(e);
+                        if (e.isCritical()) throw e;
                     }
                 }
-                // Initialize action
-                else
-                    if (newAction != null)
-                    {
-                        try
-                        {
-                            newAction.init();
-                            actAction.addElement(newAction);
-                        } catch (JimmException e)
-                        {
-                        	if(!reconnect(e))
-                                JimmException.handleException(e);
-                            if (e.isCritical()) throw (e);
-                        }
-                    }
-
-                // Set dcPacketAvailable to true if the peerC is not null and
-                // there is an packet waiting
-                // #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
-                // #sijapp cond.if modules_FILES is "true"#
-                if (peerC != null)
+                boolean peerPacketAvailable = false;
+                //#sijapp cond.if (target="MIDP2" | target="MOTOROLA" | target="SIEMENS2") & modules_FILES="true"#
+                peerPacketAvailable = peerC != null && peerC.available() > 0;
+                //#sijapp cond.end#
+                while (c.available() > 0 || peerPacketAvailable)
                 {
-                    if (peerC.available() > 0)
-                        dcPacketAvailable = true;
-                    else
-                        dcPacketAvailable = false;
-                }
-                else
-                    dcPacketAvailable = false;
-                // #sijapp cond.end#
-                // #sijapp cond.end#
-
-                // Read next packet, if available
-                // #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
-                // #sijapp cond.if modules_FILES is "true"#
-                while ((c.available() > 0) || dcPacketAvailable)
-                {
-                    // Try to get packet
-                    Packet packet = null;
-                    try
-                    {
-                        if (c.available() > 0)
-                            packet = c.getPacket();
-                        else
-                            if (dcPacketAvailable) packet = peerC.getPacket();
-                    } catch (JimmException e)
-                    {
-                    	if(!reconnect(e))
-                            JimmException.handleException(e);
-                        if (e.isCritical()) throw (e);
-                    }
-
-                    // Forward received packet to all active actions and to the
-                    // action listener
-                    boolean consumed = false;
-                    for (int i = 0; i < actAction.size(); i++)
-                    {
-                        try
-                        {
-                            if (((Action) actAction.elementAt(i)).forward(packet))
-                            {
-                                consumed = true;
-                                break;
-                            }
-                        } catch (JimmException e)
-                        {
-                        	if(!reconnect(e))
-                                JimmException.handleException(e);
-                            if (e.isCritical()) throw (e);
-                        }
-                    }
-                    if (!consumed)
-                    {
-                        try
-                        {
-                            actListener.forward(packet);
-                        } catch (JimmException e)
-                        {
-                        	if(!reconnect(e))
-                                JimmException.handleException(e);
-                            if (e.isCritical()) throw (e);
-                        }
-                    }
-
-                    // Set dcPacketAvailable to true if the peerC is not null
-                    // and there is an packet waiting
-                    if (peerC != null)
-                    {
-                        if (peerC.available() > 0)
-                            dcPacketAvailable = true;
-                        else
-                            dcPacketAvailable = false;
-                    }
-                    else
-                        dcPacketAvailable = false;
-                }
-
-                // #sijapp cond.else#
-
-                while ((c.available() > 0))
-                {
-                    // Try to get packet
                     Packet packet = null;
                     try
                     {
                         if (c.available() > 0) packet = c.getPacket();
-                    } catch (JimmException e)
-                    {
-                    	if(!reconnect(e))
-                            JimmException.handleException(e);
-                        if (e.isCritical()) throw (e);
+                        //#sijapp cond.if (target="MIDP2" | target="MOTOROLA" | target="SIEMENS2") & modules_FILES="true"#
+                        else if (peerPacketAvailable) packet = peerC.getPacket();
+                        //#sijapp cond.end#
                     }
-
-                    // Forward received packet to all active actions and to the action listener
+                    catch (JimmException e)
+                    {
+                        JimmException.handleException(e);
+                        if (e.isCritical()) throw e;
+                    }
                     boolean consumed = false;
                     for (int i = 0; i < actAction.size(); i++)
                     {
                         try
                         {
-                            if (((Action) actAction.elementAt(i)).forward(packet))
-                            {
-                                consumed = true;
-                                break;
-                            }
-                        } catch (JimmException e)
-                        {
-                        	if(!reconnect(e))
-                                JimmException.handleException(e);
-                            if (e.isCritical()) throw (e);
+                            if (((Action)actAction.elementAt(i)).forward(packet)) { consumed = true; break; }
                         }
-                    }
-                    if (!consumed)
-                    {
-                        try
+                        catch (JimmException e)
                         {
-                            actListener.forward(packet);
-                        } catch (JimmException e)
-                        {
-                        	if(!reconnect(e))
-                                JimmException.handleException(e);
-                            if (e.isCritical()) throw (e);
-                        }
-                    }
-                }
-
-                // #sijapp cond.end#
-                // #sijapp cond.else#
-                while ((c.available() > 0))
-                {
-                    // Try to get packet
-                    Packet packet = null;
-                    try
-                    {
-                        if (c.available() > 0) packet = c.getPacket();
-                    } catch (JimmException e)
-                    {
-                    	if(!reconnect(e))
                             JimmException.handleException(e);
-                        if (e.isCritical()) throw (e);
-                    }
-
-                    // Forward received packet to all active actions and to the
-                    // action listener
-                    boolean consumed = false;
-                    for (int i = 0; i < actAction.size(); i++)
-                    {
-                        try
-                        {
-                            if (((Action) actAction.elementAt(i)).forward(packet))
-                            {
-                                consumed = true;
-                                break;
-                            }
-                        } catch (JimmException e)
-                        {
-                        	if(!reconnect(e))
-                                JimmException.handleException(e);
-                            if (e.isCritical()) throw (e);
+                            if (e.isCritical()) throw e;
                         }
                     }
-
                     if (!consumed)
                     {
-                        try
+                        try { actionListener.forward(packet); }
+                        catch (JimmException e)
                         {
-                            actListener.forward(packet);
-                        } catch (JimmException e)
-                        {
-                        	if(!reconnect(e))
-                                JimmException.handleException(e);
-                            if (e.isCritical()) throw (e);
+                            JimmException.handleException(e);
+                            if (e.isCritical()) throw e;
                         }
                     }
+                    //#sijapp cond.if (target="MIDP2" | target="MOTOROLA" | target="SIEMENS2") & modules_FILES="true"#
+                    peerPacketAvailable = peerC != null && peerC.available() > 0;
+                    //#sijapp cond.end#
                 }
-                // #sijapp cond.end#
-
-                // Remove completed actions
                 for (int i = 0; i < actAction.size(); i++)
-                {
-                    if (((Action) actAction.elementAt(i)).isCompleted() || ((Action) actAction.elementAt(i)).isError())
-                    {
+                    if (((Action)actAction.elementAt(i)).isCompleted() || ((Action)actAction.elementAt(i)).isError())
                         actAction.removeElementAt(i--);
-                    }
-                }
             }
         }
-		// Catch communication exception
-		catch (NullPointerException e) {}
-
-        // Critical JimmException
-        catch (JimmException e) {}
-
-        if (!Options.getBoolean(Options.OPTION_RECONNECT))
+        catch (NullPointerException e) { }
+        catch (Exception e) { }
+        if (!Options.getBoolean(Options.OPTION_RECONNECT) && c != null)
         {
-	        // Close connection
-	        c.close();
-
-	        resetServerCon();
-
-	        /* Reset all contacts offine */ 
-	        RunnableImpl.resetContactsOffline();
+            c.setInputCloseFlag(true);
+            resetServerCon();
+            RunnableImpl.resetContactsOffline();
         }
+	}
+
+	private static boolean disconnected = false;
+
+    public static boolean isDisconnected()
+    {
+        synchronized (_this) { return disconnected; }
     }
 
-	public static volatile boolean connecting = false;
+    private static void setDisconnected(boolean value)
+    {
+        synchronized (_this) { disconnected = value; }
+    }
 
-	private static boolean isNotCriticalConnectionError(int errCode)
+	public static boolean isNotCriticalConnectionError(int errCode)
 	{
 		switch (errCode)
 		{
 		case 110: // Login from another device
 		case 111: // Bad password
 		case 112: // Non-existant UIN
+		case 114: // Server rejected the login
 		case 117: // Empty UIN and/or password
 		case 122: // Specified server host and/or port is invalid
 		case 127: // Specified server host and/or port is invalid
@@ -725,28 +536,7 @@ public class Icq implements Runnable
 		return true;
 	}
 
-	public synchronized static boolean reconnect(JimmException e) 
-	{
-		int errCode = e.getErrCode();
 
-		if ((reconnect_attempts-- > 0) && Options.getBoolean(Options.OPTION_RECONNECT)
-			&& e.isCritical() && connecting && isNotCriticalConnectionError(errCode))
-		{
-			disconnect();
-			ContactList.beforeConnect();
-
-			try
-			{
-				Thread.sleep(Options.getInt(Options.OPTION_RECONNECT_DELAY) * 1000L); // пауза между попытками переподключения...
-			}
-			catch (InterruptedException ie) {}
-
-			nextSrvHost();
-			connect();
-			return true;
-		}
-		return false;
-	}
 
 	/**************************************************************************/
     /**************************************************************************/
@@ -755,7 +545,8 @@ public class Icq implements Runnable
     public abstract class Connection implements Runnable
     {
         // Disconnect flags
-        protected volatile boolean inputCloseFlag;
+        private volatile boolean inputCloseFlag;
+        private final Object closeLock = new Object();
 
         // Receiver thread
         protected volatile Thread rcvThread;
@@ -767,7 +558,19 @@ public class Icq implements Runnable
         public synchronized void connect(String hostAndPort) throws JimmException {}
 
         // Sets the reconnect flag and closes the connection
-        public synchronized void close() {}
+        public abstract void close();
+
+        protected final void setInputCloseFlag(boolean value)
+        {
+            synchronized (closeLock) { inputCloseFlag = value; }
+        }
+
+        protected final boolean getInputCloseFlag()
+        {
+            synchronized (closeLock) { return inputCloseFlag; }
+        }
+
+        public boolean isClosed() { return true; }
 
         // Returns the number of packets available
         public synchronized int available()
@@ -855,6 +658,7 @@ public class Icq implements Runnable
 			seq = 0;
 			connSeq = 0;
 			monitorURL = "http://http.proxy.icq.com/hello";
+            flapSEQ = getInitialFlapSequence();
 		}
 
 		// Opens a connection to the specified host and starts the receiver thread
@@ -866,7 +670,7 @@ public class Icq implements Runnable
 				// If this is the first connection initialize the connection with the proxy
 				if (connSeq == 1)
 				{
-					this.inputCloseFlag = false;
+					this.setInputCloseFlag(false);
 					this.rcvThread = new Thread(this);
 					this.rcvThread.start();
 					// Wait the the finished init will notify us
@@ -903,9 +707,9 @@ public class Icq implements Runnable
 		}
 
 		// Sets the reconnect flag and closes the connection
-		public synchronized void close()
+		public void close()
 		{
-			this.inputCloseFlag = true;
+			this.setInputCloseFlag(true);
 
 			try
 			{
@@ -1074,7 +878,7 @@ public class Icq implements Runnable
 			try
 			{
 				// Check abort condition
-				while (!this.inputCloseFlag)
+				while (!this.getInputCloseFlag())
 				{
 					// Set connection parameters
 					this.hcm = (HttpConnection) Connector.open(monitorURL, Connector.READ_WRITE);
@@ -1222,7 +1026,7 @@ public class Icq implements Runnable
 			// Catch communication exception
 			catch (NullPointerException e)
 			{
-				if (!this.inputCloseFlag)
+				if (!this.getInputCloseFlag())
 				{
 					// Construct and handle exception
 					JimmException f = new JimmException(125, 3);
@@ -1238,7 +1042,7 @@ public class Icq implements Runnable
 			// Catch IO exception
 			catch (IOException e)
 			{
-				if (!this.inputCloseFlag)
+				if (!this.getInputCloseFlag())
 				{
 					// Construct and handle exception
 					JimmException f = new JimmException(125, 1);
@@ -1266,7 +1070,7 @@ public class Icq implements Runnable
     	private OutputStream os;
 
         // FLAP sequence number counter
-    	private int nextSequence;
+
 
         // ICQ sequence number counter
     	private int nextIcqSequence;
@@ -1284,28 +1088,28 @@ public class Icq implements Runnable
 				is = sc.openInputStream();
 				os = sc.openOutputStream();
 
-				inputCloseFlag = false;
+				setInputCloseFlag(false);
 				rcvThread = new Thread(this);
 				rcvThread.start();
-				nextSequence = (new Random()).nextInt() % 0x0FFF;
+				flapSEQ = getInitialFlapSequence();
 				nextIcqSequence = 2;
 
 			} catch (ConnectionNotFoundException e)
 			{
-				throw (new JimmException(121, 0));
+				if (!getInputCloseFlag()) throw new JimmException(121, 0);
 			} catch (IllegalArgumentException e)
 			{
 				throw (new JimmException(122, 0));
 			} catch (IOException e)
 			{
-				throw (new JimmException(120, 20));
+				if (!getInputCloseFlag()) throw new JimmException(120, 20);
 			}
 		}        
 
         // Sets the reconnect flag and closes the connection
-        public synchronized void close()
+        public void close()
         {
-			inputCloseFlag = true;
+			setInputCloseFlag(true);
 			try
 			{
 				is.close();
@@ -1342,41 +1146,28 @@ public class Icq implements Runnable
         // Sends the specified packet
         public void sendPacket(Packet packet) throws JimmException
         {
-            // Throw exception if output stream is not ready
-            if (os == null) 
-            {
-            	JimmException e = new JimmException(123, 0);
-            	if (!Icq.reconnect(e)) throw e;
-            }
-
-            // Request lock on output stream
+            if (os == null) throw new JimmException(123, 0);
             synchronized (os)
             {
-                // Set sequence numbers
-                packet.setSequence(nextSequence++);
+                packet.setSequence(getFlapSequence());
                 if (packet instanceof ToIcqSrvPacket)
-                {
-                    ((ToIcqSrvPacket) packet).setIcqSequence(nextIcqSequence++);
-                }
-
-                // Send packet and count the bytes
+                    ((ToIcqSrvPacket)packet).setIcqSequence(nextIcqSequence++);
                 try
                 {
-                    byte[] outpack = packet.toByteArray();
-                    os.write(outpack);
+                    byte[] data = packet.toByteArray();
+                    os.write(data);
                     os.flush();
-                    // #sijapp cond.if modules_TRAFFIC is "true" #
-                    // 51 is the overhead for each packet
-                    Traffic.addOutTraffic(outpack.length + 51);
-                    // #sijapp cond.end#
-                } catch (IOException e)
+                    //#sijapp cond.if modules_TRAFFIC is "true"#
+                    Traffic.addOutTraffic(data.length + 51);
+                    //#sijapp cond.end#
+                }
+                catch (IOException e)
                 {
-                    close();
-                    JimmException ex = new JimmException(120, 3);
-                    if (!Icq.reconnect(ex)) throw ex;
+                    setInputCloseFlag(true);
+                    throw new JimmException(120, 3);
                 }
             }
-        }
+	}
         
         // #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
         // #sijapp cond.if modules_FILES is "true"#
@@ -1411,110 +1202,48 @@ public class Icq implements Runnable
         // Main loop
         public void run()
         {
-            // Required variables
-            byte[] flapHeader = new byte[6];
-            byte[] flapData;
-            byte[] rcvdPacket;
-            int bRead, bReadSum;
-
-            // Reset packet buffer
-            synchronized (this)
-            {
-                rcvdPackets = new Vector();
-            }
-
-            // Try
+            byte[] header = new byte[6];
+            synchronized (this) { rcvdPackets = new Vector(); }
             try
             {
-                // Check abort condition
-                while (!inputCloseFlag)
+                while (!getInputCloseFlag())
                 {
-                    // Read flap header
-                    bReadSum = 0;
+                    int offset = 0;
                     if (Options.getInt(Options.OPTION_CONN_PROP) == 1)
                     {
-                        while (is.available() == 0)
-                            Thread.sleep(250);
-                        if (is == null)
-                        	break;
+                        while (is.available() == 0) Thread.sleep(250);
+                        if (is == null) break;
                     }
-                    do
-                    {
-                        bRead = is.read(flapHeader, bReadSum, flapHeader.length - bReadSum);
-                        if (bRead == -1) break;
-                        bReadSum += bRead;
-                    } while (bReadSum < flapHeader.length);
-                    if (bRead == -1) break;
-
-                    // Verify flap header
-                    if (Util.getByte(flapHeader, 0) != 0x2A) { throw (new JimmException(124, 0)); }
-
-                    // Allocate memory for flap data
-                    flapData = new byte[Util.getWord(flapHeader, 4)];
-
-                    // Read flap data
-                    bReadSum = 0;
-                    do
-                    {
-                        bRead = is.read(flapData, bReadSum, flapData.length - bReadSum);
-                        if (bRead == -1) break;
-                        bReadSum += bRead;
-                    } while (bReadSum < flapData.length);
-                    if (bRead == -1) break;
-
-                    // Merge flap header and data and count the data
-                    rcvdPacket = new byte[flapHeader.length + flapData.length];
-                    System.arraycopy(flapHeader, 0, rcvdPacket, 0, flapHeader.length);
-                    System.arraycopy(flapData, 0, rcvdPacket, flapHeader.length, flapData.length);
-                    // #sijapp cond.if modules_TRAFFIC is "true" #
-                    // 46 is the overhead for each packet (6 byte flap header)
-                    Traffic.addInTraffic(bReadSum + 57);
-                    // #sijapp cond.end#
-
-                    // Lock object and add rcvd packet to vector
-                    synchronized (rcvdPackets)
-                    {
-                        rcvdPackets.addElement(rcvdPacket);
-                    }
-
-                    // Notify main loop
-                    synchronized (Icq.wait)
-                    {
-                        Icq.wait.notify();
-                    }
+                    int count;
+                    while ((count = is.read(header, offset, header.length - offset)) != -1
+                        && (offset += count) < header.length) { }
+                    if (count == -1) break;
+                    if (Util.getByte(header, 0) != 0x2A) throw new JimmException(124, 0);
+                    byte[] data = new byte[Util.getWord(header, 4)];
+                    offset = 0;
+                    while ((count = is.read(data, offset, data.length - offset)) != -1
+                        && (offset += count) < data.length) { }
+                    if (count == -1) break;
+                    byte[] packet = new byte[header.length + data.length];
+                    System.arraycopy(header, 0, packet, 0, header.length);
+                    System.arraycopy(data, 0, packet, header.length, data.length);
+                    //#sijapp cond.if modules_TRAFFIC is "true"#
+                    Traffic.addInTraffic(offset + 57);
+                    //#sijapp cond.end#
+                    synchronized (rcvdPackets) { rcvdPackets.addElement(packet); }
+                    synchronized (wait) { wait.notify(); }
                 }
             }
-            // Catch communication exception
-            catch (NullPointerException e)
-            {
-                // Construct and handle exception (only if input close flag has not been set)
-                if (!inputCloseFlag)
-                {
-                    JimmException f = new JimmException(120, 3);
-                    JimmException.handleException(f);
-                }
-
-                // Reset input close flag
-                inputCloseFlag = false;
-            }
-            // Catch InterruptedException
-            catch (InterruptedException e) {}
-            // Catch JimmException
-            catch (JimmException e)
-            {
-            	if(!Icq.reconnect(e)) JimmException.handleException(e);
-            }
-            // Catch IO exception
+            catch (NullPointerException e) { }
+            catch (InterruptedException e) { }
+            catch (JimmException e) { JimmException.handleException(e); }
             catch (IOException e)
             {
-            	// Construct and handle exception (only if input close flag has not been set)
-                if (!inputCloseFlag)
-                {
-                	JimmException f = new JimmException(120, 1);
-                	if (!Icq.reconnect(f)) JimmException.handleException(f);
-                }
+                if (!getInputCloseFlag() && c == this)
+                    JimmException.handleException(new JimmException(120, 1));
+                setInputCloseFlag(false);
             }
-        }
+	}
     }
 
     /**************************************************************************/
@@ -1526,6 +1255,8 @@ public class Icq implements Runnable
     // SOCKSConnection
     public class SOCKSConnection extends Connection implements Runnable
     {
+        public boolean isClosed() { return false; }
+
     	
     	private final byte[] SOCKS5_HELLO =
         { (byte) 0x05, (byte) 0x02, (byte) 0x00, (byte) 0x02}; // version 05: 1) noauth 2) login/passwod
@@ -1542,7 +1273,7 @@ public class Icq implements Runnable
     	private boolean is_connected = false;
 
         // FLAP sequence number counter
-    	private int nextSequence;
+
 
         // ICQ sequence number counter
     	private int nextIcqSequence;
@@ -1690,10 +1421,10 @@ public class Icq implements Runnable
                     break;
                 }
 
-                inputCloseFlag = false;
+                setInputCloseFlag(false);
                 rcvThread = new Thread(this);
                 rcvThread.start();
-                nextSequence = (new Random()).nextInt() % 0x0FFF;
+                flapSEQ = getInitialFlapSequence();
                 nextIcqSequence = 2;
             } catch (JimmException e)
             {
@@ -1840,8 +1571,8 @@ public class Icq implements Runnable
         }
 
         // Sets the reconnect flag and closes the connection
-	public synchronized void close() {
-		inputCloseFlag = true;
+	public void close() {
+		setInputCloseFlag(true);
 
 		stream_close();
 
@@ -1878,44 +1609,28 @@ public class Icq implements Runnable
         // Sends the specified packet
         public void sendPacket(Packet packet) throws JimmException
         {
-
-            // Throw exception if output stream is not ready
-            if (os == null)
-            {
-            	JimmException e = new JimmException(123, 0);
-            	if (!Icq.reconnect(e))
-            		throw e;
-            }
-
-            // Request lock on output stream
+            if (os == null) throw new JimmException(123, 0);
             synchronized (os)
             {
-
-                // Set sequence numbers
-                packet.setSequence(nextSequence++);
+                packet.setSequence(getFlapSequence());
                 if (packet instanceof ToIcqSrvPacket)
-                {
-                    ((ToIcqSrvPacket) packet).setIcqSequence(nextIcqSequence++);
-                }
-
-                // Send packet and count the bytes
+                    ((ToIcqSrvPacket)packet).setIcqSequence(nextIcqSequence++);
                 try
                 {
-                    byte[] outpack = packet.toByteArray();
-                    os.write(outpack);
+                    byte[] data = packet.toByteArray();
+                    os.write(data);
                     os.flush();
-                    // #sijapp cond.if modules_TRAFFIC is "true" #
-                    // 51 is the overhead for each packet
-                    Traffic.addOutTraffic(outpack.length + 51);
-                    // #sijapp cond.end#
-                } catch (IOException e)
-                {
-                    close();
+                    //#sijapp cond.if modules_TRAFFIC is "true"#
+                    Traffic.addOutTraffic(data.length + 51);
+                    //#sijapp cond.end#
                 }
-
+                catch (IOException e)
+                {
+                    setInputCloseFlag(true);
+                    throw new JimmException(120, 3);
+                }
             }
-
-        }
+	}
 
         // #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
         // #sijapp cond.if modules_FILES is "true"#
@@ -1950,117 +1665,52 @@ public class Icq implements Runnable
         // Main loop
         public void run()
         {
-            // Required variables
-            byte[] flapHeader = new byte[6];
-            byte[] flapData;
-            byte[] rcvdPacket;
-            int bRead, bReadSum;
-
-            // Reset packet buffer
-            synchronized (this)
-            {
-                rcvdPackets = new Vector();
-            }
-
-            // Try
+            byte[] header = new byte[6];
+            synchronized (this) { rcvdPackets = new Vector(); }
             try
             {
-                // Check abort condition
-                while (!inputCloseFlag)
+                while (!getInputCloseFlag())
                 {
-
-                    // Read flap header
-                    bReadSum = 0;
+                    int offset = 0;
                     if (Options.getInt(Options.OPTION_CONN_PROP) == 1)
                     {
-                        while (is.available() == 0)
-                            Thread.sleep(250);
-                        if (is == null)
-                        	break;
+                        while (is.available() == 0) Thread.sleep(250);
+                        if (is == null) break;
                     }
-                    do
-                    {
-                        bRead = is.read(flapHeader, bReadSum, flapHeader.length - bReadSum);
-                        if (bRead == -1) break;
-                        bReadSum += bRead;
-                    } while (bReadSum < flapHeader.length);
-                    if (bRead == -1) break;
-
-                    // Verify flap header
-                    if (Util.getByte(flapHeader, 0) != 0x2A) { throw (new JimmException(124, 0)); }
-
-                    // Allocate memory for flap data
-                    flapData = new byte[Util.getWord(flapHeader, 4)];
-
-                    // Read flap data
-                    bReadSum = 0;
-                    do
-                    {
-                        bRead = is.read(flapData, bReadSum, flapData.length - bReadSum);
-                        if (bRead == -1) break;
-                        bReadSum += bRead;
-                    } while (bReadSum < flapData.length);
-                    if (bRead == -1) break;
-
-                    // Merge flap header and data and count the data
-                    rcvdPacket = new byte[flapHeader.length + flapData.length];
-                    System.arraycopy(flapHeader, 0, rcvdPacket, 0, flapHeader.length);
-                    System.arraycopy(flapData, 0, rcvdPacket, flapHeader.length, flapData.length);
-                    // #sijapp cond.if modules_TRAFFIC is "true" #
-                    // 46 is the overhead for each packet (6 byte flap header)
-                    Traffic.addInTraffic(bReadSum + 57);
-                    // #sijapp cond.end#
-
-                    // Lock object and add rcvd packet to vector
-                    synchronized (rcvdPackets)
-                    {
-                        rcvdPackets.addElement(rcvdPacket);
-                    }
-
-                    // Notify main loop
-                    synchronized (Icq.wait)
-                    {
-                        Icq.wait.notify();
-                    }
+                    int count;
+                    while ((count = is.read(header, offset, header.length - offset)) != -1
+                        && (offset += count) < header.length) { }
+                    if (count == -1) break;
+                    if (Util.getByte(header, 0) != 0x2A) throw new JimmException(124, 0);
+                    byte[] data = new byte[Util.getWord(header, 4)];
+                    offset = 0;
+                    while ((count = is.read(data, offset, data.length - offset)) != -1
+                        && (offset += count) < data.length) { }
+                    if (count == -1) break;
+                    byte[] packet = new byte[header.length + data.length];
+                    System.arraycopy(header, 0, packet, 0, header.length);
+                    System.arraycopy(data, 0, packet, header.length, data.length);
+                    //#sijapp cond.if modules_TRAFFIC is "true"#
+                    Traffic.addInTraffic(offset + 57);
+                    //#sijapp cond.end#
+                    synchronized (rcvdPackets) { rcvdPackets.addElement(packet); }
+                    synchronized (wait) { wait.notify(); }
                 }
             }
-            // Catch communication exception
             catch (NullPointerException e)
             {
-                // Construct and handle exception (only if input close flag has not been set)
-                if (!inputCloseFlag)
-                {
-                    JimmException f = new JimmException(120, 3);
-                    JimmException.handleException(f);
-                }
-
-                // Reset input close flag
-                inputCloseFlag = false;
+                if (!getInputCloseFlag()) JimmException.handleException(new JimmException(120, 3));
+                setInputCloseFlag(false);
             }
-            // Catch InterruptedException
-            catch (InterruptedException e)
-            { /* Do nothing */
-            }
-            // Catch JimmException
-            catch (JimmException e)
-            {
-                // Handle exception
-                JimmException.handleException(e);
-            }
-            // Catch IO exception
+            catch (InterruptedException e) { }
+            catch (JimmException e) { JimmException.handleException(e); }
             catch (IOException e)
             {
-                // Construct and handle exception (only if input close flag has not been set)
-                if (!inputCloseFlag)
-                {
-                    JimmException f = new JimmException(120, 1);
-                    JimmException.handleException(f);
-                }
-
-                // Reset input close flag
-                inputCloseFlag = false;
+                if (!getInputCloseFlag())
+                    JimmException.handleException(new JimmException(120, 1));
+                setInputCloseFlag(false);
             }
-        }
+	}
     }
 
     // #sijapp cond.end #

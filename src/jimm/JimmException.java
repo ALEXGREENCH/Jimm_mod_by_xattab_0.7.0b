@@ -25,7 +25,7 @@ package jimm;
 import jimm.util.ResourceBundle;
 import jimm.comm.Icq;
 
-import javax.microedition.lcdui.*;
+import DrawControls.VirtualAlert;
 
 public class JimmException extends Exception
 {
@@ -124,61 +124,32 @@ public class JimmException extends Exception
 
 
 	// Exception handler
-	public synchronized static Alert handleException(JimmException e)
+	public synchronized static void handleException(JimmException e)
 	{
-
-		// Critical exception
-	    if (e.isCritical())
-		{
-			// Reset comm. subsystem
-			//  #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
-	    	//  #sijapp cond.if modules_FILES is "true"#
-			if (e.isPeer()) Icq.resetPeerCon();
-			else Icq.resetServerCon();
-			//  #sijapp cond.else#
-			Icq.resetServerCon();
-			//  #sijapp cond.end#
-			//  #sijapp cond.else#
-			Icq.resetServerCon();
-			//  #sijapp cond.end#
-
-			// Set offline status for all contacts and reset online counters 
-			ContactList.setStatusesOffline();
-			SplashCanvas.setStatusToDraw(JimmUI.getStatusImageIndex(ContactList.STATUS_OFFLINE));
-			SplashCanvas.setXStatusToDraw(null);
-
-			// Unlock splash (if locked)
-			if (SplashCanvas.locked()) SplashCanvas.unlock(true);
-
-			// Display error message
-			Alert errorMsg = new Alert(ResourceBundle.getString("error"), e.getMessage(), null, AlertType.ERROR);
-			errorMsg.setTimeout(Alert.FOREVER);
-			RunnableImpl.activateMainMenu(errorMsg);
-
-			return(errorMsg);
-		}
-		// Non-critical exception
-		else
-		{
-			// Display error message, if required
-			if (e.isDisplayMsg())
-			{
-				Alert errorMsg = new Alert(ResourceBundle.getString("warning"), e.getMessage(), null, AlertType.WARNING);
-				errorMsg.setTimeout(Alert.FOREVER);
-				
-				SplashCanvas.unlock(false);
-				
-				if (Icq.isConnected())
-				{
-					ContactList.activate(errorMsg);
-				}
-				else
-				{
-					RunnableImpl.activateMainMenu(errorMsg);
-				}
-				return(errorMsg);
-			}
-			return(null);
-		}
+        if (e.isCritical())
+        {
+            //#sijapp cond.if (target="MIDP2" | target="MOTOROLA" | target="SIEMENS2") & modules_FILES="true"#
+            if (e.isPeer()) Icq.resetPeerCon();
+            //#sijapp cond.end#
+            Icq.disconnect(true);
+            Icq.resetServerCon();
+            ContactList.setStatusesOffline();
+            SplashCanvas.setStatusToDraw(JimmUI.getStatusImageIndex(ContactList.STATUS_OFFLINE));
+            SplashCanvas.setXStatusToDraw(null);
+            if (Icq.isNotCriticalConnectionError(e.getErrCode()) && Icq.isDisconnected()
+                && Options.getBoolean(Options.OPTION_RECONNECT) && Icq.reconnect_attempts > 0)
+                new Thread(new RunnableImpl(RunnableImpl.TYPE_RECONNECT, null)).start();
+            else if (SplashCanvas.locked())
+            {
+                SplashCanvas.activate();
+                new VirtualAlert(SplashCanvas._this, e.getMessage(), -1).activate(Jimm.display);
+            }
+            else RunnableImpl.activateMainMenu(e.getMessage());
+        }
+        else if (e.isDisplayMsg())
+        {
+            if (Icq.isConnected()) ContactList.activate(e.getMessage());
+            else RunnableImpl.activateMainMenu(e.getMessage());
+        }
 	}
 }

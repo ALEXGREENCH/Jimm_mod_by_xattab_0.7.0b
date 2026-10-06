@@ -1483,7 +1483,7 @@ class OptionsForm implements CommandListener, ItemStateListener
 	{
         if (c == resetOptionsCommand)
         {
-            Icq.disconnect();
+            Icq.disconnect(true);
             try { Options.reset(); } catch (RecordStoreException ignored) { }
             new VirtualAlert(JimmUI.getCurrentScreen(), ResourceBundle.getString("reset_requires_restart"), -1).activate(Jimm.display);
             return;

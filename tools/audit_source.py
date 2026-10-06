@@ -14,7 +14,9 @@ ROOT = recover.ROOT
 OUT = ROOT / 'build/source-audit'
 CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem',
            'ci': 'DrawControls/VirtualAlert', 'cf': 'jimm/JimmUI',
-           'ag': 'jimm/MainMenu', 'aq': 'jimm/Templates'}
+           'ag': 'jimm/MainMenu', 'aq': 'jimm/Templates',
+           'r': 'jimm/comm/Icq', 'n': 'jimm/comm/ConnectAction',
+           'ap': 'jimm/comm/Icq$Connection', 'bv': 'jimm/JimmException'}
 SYMBOLS = {
     'co.a([BIIZ)Ljava/lang/String;': 'jimm/comm/Util.byteArrayToString([BIIZ)Ljava/lang/String;',
     'co.a(Ljava/lang/String;Z)[B': 'jimm/comm/Util.stringToByteArray(Ljava/lang/String;Z)[B',
@@ -37,6 +39,16 @@ SYMBOLS = {
     'aq.a()V': 'jimm/Templates.clearTemplates()V',
     'cf.e()V': 'jimm/JimmUI.menuRemoveContactSelected()V',
     'cf.f()V': 'jimm/JimmUI.menuRemoveMeSelected()V',
+    'r.a I': 'jimm/comm/Icq.flapSEQ I',
+    'r.a Lr;': 'jimm/comm/Icq._this Ljimm/comm/Icq;',
+    'r.c Z': 'jimm/comm/Icq.disconnected Z',
+    'n.b I': 'jimm/comm/ConnectAction.state I',
+    'n.b Z': 'jimm/comm/ConnectAction.active Z',
+    'n.c Z': 'jimm/comm/ConnectAction.cancel Z',
+    'n.a J': 'jimm/comm/ConnectAction.lastActivity J',
+    'n.a I': 'jimm/comm/ConnectAction.TIMEOUT I',
+    'ap.a Ljava/lang/Object;': 'jimm/comm/Icq$Connection.closeLock Ljava/lang/Object;',
+    'ap.a Z': 'jimm/comm/Icq$Connection.inputCloseFlag Z',
 }
 METHODS = [
     ('co', 'c', '([BII)Ljava/lang/String;', 'detectClientVersion'),
@@ -48,6 +60,18 @@ METHODS = [
     ('ci', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
     ('ag', 'a', '(ZZ)V', 'doExit'),
     ('aq', 'a', '()V', 'clearTemplates'),
+    ('r', 'a', '()I', 'getFlapSequence'),
+    ('r', 'b', '()I', 'getInitialFlapSequence'),
+    ('r', 'a', '()Z', 'isDisconnected'),
+    ('r', 'b', '(Z)V', 'setDisconnected'),
+    ('r', 'a', '(I)Z', 'isNotCriticalConnectionError'),
+    ('r', 'a', '(Z)V', 'disconnect'),
+    ('r', 'e', '()V', 'resetServerCon'),
+    ('n', 'a', '()Z', 'isCompleted'),
+    ('n', 'b', '()Z', 'isError'),
+    ('ap', 'a', '(Z)V', 'setInputCloseFlag'),
+    ('ap', 'a', '()Z', 'getInputCloseFlag'),
+    ('bv', 'a', '(Lbv;)V', 'handleException'),
 ]
 
 
@@ -88,9 +112,13 @@ def main():
         after = next(m for m in new[CLASSES[owner]]['methods']
                      if m['name'].split('$')[0] == source_name and m['desc'] == source_desc)
         left, right = normalized(before['code']), after['code']
+        same_static = bool(before['access'] & 8) == bool(after['access'] & 8)
+        if not same_static:
+            raise AssertionError('Static/instance mismatch: ' + owner + '.' + name + desc)
         methods.append({'reference': owner + '.' + name + desc,
                         'source': CLASSES[owner] + '.' + after['name'] + source_desc,
-                        'signature_verified': True, 'reference_instructions': len(left),
+                        'signature_verified': True, 'static_modifier_verified': same_static,
+                        'reference_instructions': len(left),
                         'source_instructions': len(right), 'same_normalized_instructions': left == right,
                         'reference_normalized_sha256': digest(left), 'source_normalized_sha256': digest(right)})
     report = {'reference_sha256': recover.sha(reference), 'rebuilt_sha256': recover.sha(rebuilt),

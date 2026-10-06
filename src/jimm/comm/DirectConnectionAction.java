@@ -374,13 +374,12 @@ public class DirectConnectionAction extends Action
     		break;
     		
     	case ON_ERROR:
-			Alert err = new Alert(ResourceBundle.getString("filetransfer"), ResourceBundle.getString("filetransfer") + " " + ResourceBundle.getString("was") + " " + ResourceBundle.getString("not") + " " +ResourceBundle.getString("successful") + "!", null, AlertType.WARNING);
-			ContactList.getVisibleContactListRef().activate(Jimm.display, err);
+			String err = ResourceBundle.getString("filetransfer") + " " + ResourceBundle.getString("was") + " " + ResourceBundle.getString("not") + " " +ResourceBundle.getString("successful") + "!";
+			ContactList.activate(err);
     		break;
     		
     	case ON_COMPLETE:
-			Alert ok = new Alert(ResourceBundle.getString("filetransfer"), ResourceBundle.getString("filetransfer") + " " + ResourceBundle.getString("was") + " " + ResourceBundle.getString("successful") + ".\n" +ResourceBundle.getString("speed") + ": " + getSpeed() + " " + ResourceBundle.getString("kbs"), null, AlertType.INFO);
-			ok.setTimeout(2000);
+			String ok = ResourceBundle.getString("filetransfer") + " " + ResourceBundle.getString("was") + " " + ResourceBundle.getString("successful") + ".\n" +ResourceBundle.getString("speed") + ": " + getSpeed() + " " + ResourceBundle.getString("kbs");
 			ContactList.activate(ok);
     		break;
     	}

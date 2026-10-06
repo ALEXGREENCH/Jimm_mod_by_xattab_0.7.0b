@@ -46,6 +46,7 @@ public class RunnableImpl implements Runnable
 	final static private int TYPE_RESET_CONTACTS      = 10;
 	final static private int TYPE_BACK_TO_LAST_SCR    = 11;
 	final static private int TYPE_ACTIVATE_MM         = 13;
+	final static public int TYPE_RECONNECT = 14;
 
 	RunnableImpl(int type, Object[] data)
 	{
@@ -121,8 +122,21 @@ public class RunnableImpl implements Runnable
 			JimmUI.backToLastScreen();
 			break;
 
+        case TYPE_RECONNECT:
+            System.gc();
+            try { Thread.sleep(Options.getInt(Options.OPTION_RECONNECT_DELAY) * 1000); }
+            catch (Exception e) { }
+            if (Icq.isDisconnected() && Icq.reconnect_attempts > 0)
+            {
+                Icq.reconnect_attempts--;
+                Icq.nextSrvHost();
+                ContactList.beforeConnect();
+                Icq.connect();
+            }
+            break;
+
 		case TYPE_ACTIVATE_MM:
-			MainMenu.activate((Alert)data[0]);
+			MainMenu.activate((String)data[0]);
 			break;
 		}
 	}
@@ -238,9 +252,9 @@ public class RunnableImpl implements Runnable
 		callSerially(TYPE_BACK_TO_LAST_SCR);
 	}
 
-	static public void activateMainMenu(Alert alert)
+	static public void activateMainMenu(String message)
 	{
-		callSerially(TYPE_ACTIVATE_MM, alert);
+		callSerially(TYPE_ACTIVATE_MM, message);
 	}
 
 	///////////////////////////////////////////////////////////////////////////

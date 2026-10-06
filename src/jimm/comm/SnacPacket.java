@@ -216,7 +216,7 @@ public class SnacPacket extends Packet
 		// Assemble FLAP header
 		Util.putByte(buf, 0, 0x2A);   // FLAP.ID
 		Util.putByte(buf, 1, 0x02);   // FLAP.CHANNEL
-		Util.putWord(buf, 2, Icq.getFlapSequence());   // FLAP.SEQUENCE
+		Util.putWord(buf, 2, sequence);   // FLAP.SEQUENCE
 		Util.putWord(buf, 4, 10 + this.data.length + (this.extData.length > 0 ? 2 + this.extData.length : 0));   // FLAP.LENGTH
 
 		// Assemble SNAC header

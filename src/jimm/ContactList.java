@@ -268,9 +268,9 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 	}
 
 	// Request display of the given alert and the main menu afterwards
-	static public void activate(Alert alert)
+	static public void activate(String message)
 	{
-		ContactList.tree.activate(Jimm.display, alert);
+		new VirtualAlert(tree, message, -1).activate(Jimm.display);
 
 		//#sijapp cond.if target is "MOTOROLA"#
 		LightControl.flash(false);

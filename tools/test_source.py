@@ -35,7 +35,7 @@ def main(matrix=False, skip_build=False):
                                   'microemu-jsr-75.jar', 'microemu-jsr-120.jar']]
     helpers = list((ROOT / 'tools/source').glob('*.java'))
     helpers = [p for p in helpers if p.name != 'Preprocess.java']
-    run([os.environ.get('JAVAC', 'javac'), '-encoding', 'UTF-8', '-cp', recover.cp(runtime),
+    run([os.environ.get('JAVAC', 'javac'), '-encoding', 'UTF-8', '-cp', recover.cp([CACHE / 'asm.jar', *runtime]),
          '-d', TEST, *helpers], 'compile-tests')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
@@ -66,6 +66,16 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Popup mismatch: compare build/source-tests/popup-reference.txt and popup-source.txt')
     report['popup_observations'] = len(popup_ref.read_text().splitlines())
     report['popup_differences'] = 0
+    network_ref, network_src = TEST / 'network-reference.txt', TEST / 'network-source.txt'
+    for path, mode, output in [(original, 'reference', network_ref), (test_jar, 'source', network_src)]:
+        fixture = TEST / ('network-' + mode + '.jar')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'NetworkFixture', path, fixture, mode], 'network-fixture-' + mode)
+        report['network_' + mode] = run([*java, 'NetworkStateProbe', fixture, mode, output], 'network-' + mode)
+    if network_ref.read_bytes() != network_src.read_bytes():
+        raise AssertionError('Lifecycle mismatch: compare build/source-tests/network-reference.txt and network-source.txt')
+    report['network_observations'] = len(network_ref.read_text().splitlines())
+    report['network_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']
