@@ -215,22 +215,10 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		{
 			if (c == cmdSelect)
 			{
-				int visId = clciContactMenu.getVisibleId();
-				int invisId = clciContactMenu.getInvisibleId();
 				int index = serverLists.getCurrTextIndex();
-
 				setPrivateListsID(index, clciContactMenu);
-/*
-				if (((visId == 0) && (invisId != 0) && (index == ServerListsAction.VISIBLE_LIST)))
-				{
-					setPrivateListsID(ServerListsAction.INVISIBLE_LIST, clciContactMenu);
-				}
-
-				if (((visId != 0) && (invisId == 0) && (index == ServerListsAction.INVISIBLE_LIST)))
-				{
-					setPrivateListsID(ServerListsAction.VISIBLE_LIST, clciContactMenu);
-				}
-*/
+				ContactList.justConnected = true;
+				ContactList.afterConnect(false);
 				serverLists = null;
 				ContactList.activate();
 			}
@@ -1868,11 +1856,10 @@ public class JimmUI implements CommandListener, VirtualListCommands
 	private static final int USER_MENU_LOCAL_INFO       = 11;
 	private static final int USER_MENU_USER_INFO        = 12;
 	private static final int USER_MENU_COPY_UIN         = 13;
-	//private static final int USER_MENU_QUOTA            = 14;
+	private static final int USER_MENU_ADD_USER         = 14;
 	private static final int USER_MENU_MOVE             = 15;
 	private static final int USER_MENU_LIST_OPERATION   = 16;
 	private static final int USER_MENU_XTRAZ_MESSAGE    = 17;
-	private static final int USER_MENU_CHECK_STATUS     = 18;
 
 	private static TextList tlContactMenu;
 	public  static ContactItem clciContactMenu;
@@ -1895,16 +1882,16 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		if (contact.getBooleanValue(ContactItem.CONTACTITEM_NO_AUTH))
 			addTextListItem(tlContactMenu, "requauth", ContactList.imageList.elementAt(16), USER_MENU_REQU_AUTH, true);
 
-		if (((contact.getBooleanValue(ContactItem.CONTACTITEM_NO_AUTH)) || (contact.getBooleanValue(ContactItem.CONTACTITEM_IS_TEMP))
-			||(contact.getBooleanValue(ContactItem.CONTACTITEM_PHANTOM))) && (Icq.isConnected()))
+		if ((contact.getBooleanValue(ContactItem.CONTACTITEM_IS_TEMP)
+			|| contact.getBooleanValue(ContactItem.CONTACTITEM_PHANTOM))
+			&& !contact.getBooleanValue(ContactItem.CONTACTITEM_NO_AUTH) && Icq.isConnected())
 		{
-			addTextListItem(tlContactMenu, "check_status", XStatus.imageList.elementAt(XStatus.XSTATUS_NONE), USER_MENU_CHECK_STATUS, true);
+			addTextListItem(tlContactMenu, "add_user", ContactList.menuIcons.elementAt(5), USER_MENU_ADD_USER, true);
 		}
 
 		//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
 		//#sijapp cond.if modules_FILES is "true"#
-		if ((status != ContactList.STATUS_OFFLINE) && ((Options.getInt(Options.OPTION_FT_MODE) == Options.FS_MODE_WEB)
-			|| ((contact.getIntValue(ContactItem.CONTACTITEM_ICQ_PROT) >= 8) && (contact.getIntValue(ContactItem.CONTACTITEM_CLIENT) != Util.CLI_JIMM))))
+		if (status != ContactList.STATUS_OFFLINE)
 		{
 			addTextListItem(tlContactMenu, "ft_name", ContactList.menuIcons.elementAt(8), USER_MENU_FILE_TRANS, true);
 			//#sijapp cond.if target isnot "MOTOROLA"#
@@ -1989,11 +1976,9 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		case USER_MENU_REQU_AUTH:
 			JimmUI.authMessage(JimmUI.AUTH_TYPE_REQ_AUTH, clciContactMenu, "requauth", "plsauthme");
 			break;
-/*
-		case USER_MENU_QUOTA:
-			writeMessage(clciContactMenu, JimmUI.getClipBoardText(true));
+		case USER_MENU_ADD_USER:
+			addUser(clciContactMenu);
 			break;
-*/
 		case USER_MENU_STATUS_MESSAGE:
 			long status = clciContactMenu.getIntValue(ContactItem.CONTACTITEM_STATUS);
 			if (!((status == ContactList.STATUS_ONLINE) || (status == ContactList.STATUS_OFFLINE) ||
@@ -2134,10 +2119,24 @@ public class JimmUI implements CommandListener, VirtualListCommands
 				showListsOperation();
 				break;
 
-			case USER_MENU_CHECK_STATUS:
-				checkStatus(clciContactMenu.getUinString(), true);
-				break;
 		}
+	}
+
+	public static void addUser(ContactItem contact)
+	{
+		Search search = new Search(true);
+		String[] data = new String[Search.LAST_INDEX];
+		data[Search.UIN] = contact.getUinString();
+		SearchAction action = new SearchAction(search, data, SearchAction.CALLED_BY_ADDUSER);
+		try
+		{
+			Icq.requestAction(action);
+		}
+		catch (JimmException ex)
+		{
+			JimmException.handleException(ex);
+		}
+		SplashCanvas.addTimerTask("wait", action, false);
 	}
 
 	public static void checkStatus(String uin, boolean act)
@@ -2178,7 +2177,9 @@ public class JimmUI implements CommandListener, VirtualListCommands
 
 		/* online time */
 		long onlineTime = cItem.getIntValue(ContactItem.CONTACTITEM_ONLINE);
-		if (onlineTime > 0) clInfoData[JimmUI.UI_ONLINETIME] = Util.longitudeToString(onlineTime);
+		long elapsedOnlineTime = onlineTime + (System.currentTimeMillis() - cItem.statusUpdateTime) / 1000;
+		if ((onlineTime > 0) && (elapsedOnlineTime > 0))
+			clInfoData[JimmUI.UI_ONLINETIME] = Util.longitudeToString(elapsedOnlineTime);
 
 		/* Offline since */
 		if ((cItem.getStringValue(ContactItem.CONTACTITEM_OFFLINETIME) != null) &&
@@ -2208,9 +2209,20 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		if (port != 0) clInfoData[JimmUI.UI_PORT] = Integer.toString(port);
 		//#sijapp cond.end#
 
-//		/* характеристики клиента */
-//		if (((cItem.getStringValue(ContactItem.CONTACTITEM_CLIENTCAP)) != ""))
-//			clInfoData[JimmUI.UI_CLIENT_CAP] = cItem.getStringValue(ContactItem.CONTACTITEM_CLIENTCAP);
+		int caps = cItem.getIntValue(ContactItem.CONTACTITEM_CAPABILITIES);
+		StringBuffer capabilities = new StringBuffer();
+		if ((caps & Util.CAPF_AIM_SERVERRELAY_INTERNAL) != 0) capabilities.append("\n[ICQ ServerRelay]");
+		if ((caps & Util.CAPF_UTF8_INTERNAL) != 0) capabilities.append("\n[UTF8 Messages]");
+		if ((caps & Util.CAPF_RICHTEXT) != 0) capabilities.append("\n[RTF Messages]");
+		if ((caps & Util.CAPF_ICQ6) != 0) capabilities.append("\n[ICQ 6 (HTML msgs)]");
+		if ((caps & Util.CAPF_ICQ7) != 0) capabilities.append("\n[ICQ Lite]");
+		if ((caps & Util.CAPF_AIMCHAT) != 0) capabilities.append("\n[AIM Chat]");
+		if ((caps & Util.CAPF_XTRAZ) != 0) capabilities.append("\n[ICQ xTraz Support]");
+		if ((caps & Util.CAPF_AIMFILE) != 0) capabilities.append("\n[File Transfer]");
+		if ((caps & Util.CAPF_AVATAR) != 0) capabilities.append("\n[ICQ Devils]");
+		if ((caps & Util.CAPF_DIRECT) != 0) capabilities.append("\n[ICQ DirectConnect]");
+		if ((caps & Util.CAPF_TYPING) != 0) capabilities.append("\n[Typing Notification]");
+		clInfoData[JimmUI.UI_CLIENT_CAP] = capabilities.toString();
 
 		JimmUI.fillUserInfo(clInfoData, tlist);
 		JimmUI.showInfoTextList(tlist);

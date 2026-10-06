@@ -1021,7 +1021,7 @@ public class ConnectAction extends Action
         case ON_COMPLETE:
             if (SplashCanvas.locked()) SplashCanvas.removeCmd(SplashCanvas.cancelCommnad);
             else ContactList.activate();
-            ContactList.afterConnect();
+            ContactList.afterConnect(true);
             if (Options.getBoolean(Options.OPTION_STATUS_AUTO)) TimerTasks.setStatusTimer();
             break;
         case ON_CANCEL:

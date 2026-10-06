@@ -24,7 +24,7 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'bq': 'jimm/comm/OtherAction', 'ae': 'jimm/comm/ActionListener',
            'ac': 'jimm/comm/Message', 'ah': 'jimm/util/MagicEye', 'br': 'jimm/EditInfo', 'as': 'jimm/comm/SaveInfoAction',
            'ce': 'jimm/comm/RequestInfoAction', 'bi': 'DrawControls/TextList',
-           'g': 'jimm/JimmUI$GetVersionInfoTimerTask'}
+           'g': 'jimm/JimmUI$GetVersionInfoTimerTask', 'm': 'jimm/ContactList'}
 SYMBOLS = {
     'as.a I': 'jimm/comm/SaveInfoAction.packetCounter I',
     'as.b I': 'jimm/comm/SaveInfoAction.errorCounter I',
@@ -114,6 +114,10 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('cf', 'a', '(Lz;)V', 'showContactMenu'),
+    ('cf', 'b', '(Lz;)V', 'addUser'),
+    ('cf', 'c', '(Lz;)V', 'showClientInfo'),
+    ('m', 'b', '(Z)V', 'afterConnect'),
     ('cf', 'b', '()V', 'about'),
     ('cf', 'a', '(Lbi;Ljava/lang/String;Le;IZ)V', 'addTextListItem'),
     ('cf', 'a', '(Lbi;Ljava/lang/String;Le;IZZ)V', 'addTextListItem'),

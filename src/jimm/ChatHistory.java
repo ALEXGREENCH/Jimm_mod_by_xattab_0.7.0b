@@ -267,22 +267,7 @@ class ChatTextList implements VirtualListCommands, CommandListener
 		/* Add temporary or phantom contact to list */
 		else if (c == cmdAddUrs)
 		{
-			Search search = new Search(true);
-			String data[] = new String[Search.LAST_INDEX];
-			data[Search.UIN] = contact.getUinString();
-
-			SearchAction act = new SearchAction(search, data, SearchAction.CALLED_BY_ADDUSER);
-
-			try
-			{
-				Icq.requestAction(act);
-			}
-			catch (JimmException e)
-			{
-				JimmException.handleException(e);
-			}
-
-			SplashCanvas.addTimerTask("wait", act, false);
+			JimmUI.addUser(contact);
 		}
 
 		/* Add selected text to history */

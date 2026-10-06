@@ -82,6 +82,7 @@ public class ContactItem implements ContactListItem
 	                readStatusMess;
 
 	public long lastOfflineActivity = 0;
+	public long statusUpdateTime = 0;
 
 	///////////////////////////////////////////////////////////////////////////
 	synchronized public void setStringValue(int key, String value)

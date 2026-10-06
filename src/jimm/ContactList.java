@@ -112,7 +112,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 
 	private static boolean treeBuilt = false; //treeSorted = false;
 
-	private static boolean justConnected;
+	public static boolean justConnected;
 
 	/* Contains tree nodes by groip ids */
 	private static Hashtable gNodes = new Hashtable();
@@ -912,6 +912,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 	)
 	{
 		ContactItem cItem = getItembyUIN(uin);
+		cItem.statusUpdateTime = System.currentTimeMillis();
 
 		int trueStatus = Util.translateStatusReceived(status, cItem);
 
@@ -943,13 +944,13 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 			}
 			else if (!justConnected)
 			{
-				if ((System.currentTimeMillis() - cItem.lastOfflineActivity) < 60000)
+				if ((cItem.statusUpdateTime - cItem.lastOfflineActivity) < 60000)
 				{
 					MagicEye.addAction(uin, "maybe_hiding_from_you", true);
 				}
 				else
 				{
-					cItem.lastOfflineActivity = System.currentTimeMillis();
+					cItem.lastOfflineActivity = cItem.statusUpdateTime;
 				}
 			}
 
@@ -1362,7 +1363,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		tree.repaint();
 	}
 	
-	public static void afterConnect()
+	public static void afterConnect(boolean requestInfo)
 	{
 		TimerTask AfterConnect = new TimerTask()
 		{
@@ -1372,6 +1373,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 			}
 		};
 		Jimm.getTimerRef().schedule(AfterConnect, 7000);
+		if (!requestInfo) return;
 
 		RequestInfoAction.StartMainRequestInfo = true;
 		RequestInfoAction act = new RequestInfoAction(Options.getString(Options.OPTION_UIN), "");
