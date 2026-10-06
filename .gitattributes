@@ -1,0 +1,13 @@
+reconstruction/**/*.java text eol=lf
+tools/**/*.java text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jar binary
+*.jad binary
+*.zip binary
+*.rar binary
+*.lng binary
+*.patch -whitespace
+reconstruction/resources/** binary
+reconstruction/resources/**/*.json text diff eol=lf

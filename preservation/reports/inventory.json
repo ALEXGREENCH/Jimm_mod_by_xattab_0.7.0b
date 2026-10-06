@@ -1,0 +1,163 @@
+[
+  {
+    "path": "preservation/originals/Jimm_MIDP2_RU/Jimm.jar",
+    "sha256": "fccb4366a61e29c20fc3a79c1a8f3244abc2d7862bc0bff9d5ad7d6e8f446bc2",
+    "bytes": 266518,
+    "classes": 96,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 266518\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/originals/Jimm_Moto_RU/Jimm.jar",
+    "sha256": "522f1658577cf77a38ceede6d79a1aff2e44507cc67572bbe20e12606907de9f",
+    "bytes": 252125,
+    "classes": 94,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 252125\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/originals/Jimm_Siemens2_RU/Jimm.jar",
+    "sha256": "abbec022d605ee33a8bacaf985455d71b571445a4b1fc4fe004137cd387145ef",
+    "bytes": 255064,
+    "classes": 94,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 255064\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_CZ/Jimm.jar",
+    "sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
+    "bytes": 273692,
+    "classes": 101,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 273692\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_EN/Jimm.jar",
+    "sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
+    "bytes": 273143,
+    "classes": 101,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 273143\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_RO/Jimm.jar",
+    "sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
+    "bytes": 273975,
+    "classes": 101,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 273975\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar",
+    "sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+    "bytes": 274937,
+    "classes": 101,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 274937\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_RU_light/History/Jimm.jar",
+    "sha256": "13fb72304d5bd6ef8362a3c8ce7b877f1fc2cd3d5908213a50243c16cd5020b1",
+    "bytes": 132864,
+    "classes": 62,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: Jimm\nMIDlet-Version: 0.5.2\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm-icq.ru/wap\nMIDlet-1: Jimm,icon.png,jimm.Jimm\nJimm-Version: 0.5.2b"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_RU_light/SMILES/Jimm.jar",
+    "sha256": "85a0a3682ed2d4cde7c1c6610703d254082a2925ff257b57ad486d00c8d914be",
+    "bytes": 127347,
+    "classes": 57,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: Jimm\nMIDlet-Version: 0.5.2\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm-icq.ru/wap\nMIDlet-1: Jimm,icon.png,jimm.Jimm\nJimm-Version: 0.5.2b"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_RU_light/Traffic, Proxy, Smiles/Jimm.jar",
+    "sha256": "f41566e638f7a877a4e462acac6a3f8651c559622cbcd31e5a4234d1e9a693a0",
+    "bytes": 135746,
+    "classes": 60,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: Jimm\nMIDlet-Version: 0.5.2\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm-icq.ru/wap\nMIDlet-1: Jimm,icon.png,jimm.Jimm\nJimm-Version: 0.5.2b"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_RU_light/Traffic, Proxy, Smiles, History/Jimm.jar",
+    "sha256": "1fbb682460f6bf48c1c5f70515c6e769d8f25ba85746a669fbebc3a917ade112",
+    "bytes": 148105,
+    "classes": 67,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: Jimm\nMIDlet-Version: 0.5.2\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm-icq.ru/wap\nMIDlet-1: Jimm,icon.png,jimm.Jimm\nJimm-Version: 0.5.2b"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_RU_light/Traffic, Smiles/Jimm.jar",
+    "sha256": "70fdbf1698873a7ed93a707cfb57363a9042dd8e5c0b7972f0dfc519fc3f7572",
+    "bytes": 131538,
+    "classes": 59,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: Jimm\nMIDlet-Version: 0.5.2\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm-icq.ru/wap\nMIDlet-1: Jimm,icon.png,jimm.Jimm\nJimm-Version: 0.5.2b"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_MIDP2_UA/Jimm.jar",
+    "sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
+    "bytes": 275161,
+    "classes": 101,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 275161\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Moto_CZ/Jimm.jar",
+    "sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
+    "bytes": 259560,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 259560\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Moto_EN/Jimm.jar",
+    "sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
+    "bytes": 259017,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 259017\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Moto_RO/Jimm.jar",
+    "sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
+    "bytes": 260009,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 260009\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Moto_RU/Jimm.jar",
+    "sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+    "bytes": 260798,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 260798\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Moto_UA/Jimm.jar",
+    "sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
+    "bytes": 260817,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 260817\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Siemens2_CZ/Jimm.jar",
+    "sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
+    "bytes": 262432,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 262432\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Siemens2_EN/Jimm.jar",
+    "sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
+    "bytes": 261508,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 261508\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Siemens2_RO/Jimm.jar",
+    "sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
+    "bytes": 262528,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 262528\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Siemens2_RU/Jimm.jar",
+    "sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+    "bytes": 263485,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 263485\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  },
+  {
+    "path": "preservation/wayback-originals/Jimm_Siemens2_UA/Jimm.jar",
+    "sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
+    "bytes": 263530,
+    "classes": 99,
+    "manifest": "Manifest-Version: 1.0\nAnt-Version: Apache Ant 1.6.5\nCreated-By: Jimm Project\nMIDlet-Name: J[im]m\nMIDlet-Version: 0.7.0\nMIDlet-Vendor: Jimm Project\nMIDlet-Jar-URL: Jimm.jar\nMIDlet-Jar-Size: 263530\nMIDlet-Icon: icon.png\nMicroEdition-Profile: MIDP-2.0\nMicroEdition-Configuration: CLDC-1.0\nMIDlet-Description: J2ME ICQ clone\nMIDlet-Info-URL: http://jimm.im/wap\nMIDlet-1: J[im]m,/icon.png,jimm.Jimm\nJimm-Version: 0.7.0b\nBackground: True\nFlipInsensitive: True\nNokia-MIDlet-No-Exit: true\n\n"
+  }
+]

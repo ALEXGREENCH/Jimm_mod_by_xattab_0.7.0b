@@ -1,0 +1,54 @@
+{
+  "asm.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar",
+    "sha256": "8cadd43ac5eb6d09de05faecca38b917a040bb9139c7edeb4cc81c740b713281"
+  },
+  "asm-tree.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar",
+    "sha256": "9929881f59eb6b840e86d54570c77b59ce721d104e6dfd7a40978991c2d3b41f"
+  },
+  "asm-commons.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar",
+    "sha256": "9a579b54d292ad9be171d4313fd4739c635592c2b5ac3a459bbd1049cddec6a0"
+  },
+  "asm-analysis.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/ow2/asm/asm-analysis/9.7.1/asm-analysis-9.7.1.jar",
+    "sha256": "85b29371884ba31bb76edf22323c2c24e172c3267a67152eba3d1ccc2e041ef2"
+  },
+  "ecj.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/eclipse/jdt/ecj/3.33.0/ecj-3.33.0.jar",
+    "sha256": "f7686c4960cf70c2ebc5c500a73a8cfc04541b730c18f1c5c21329889b137f45"
+  },
+  "microemu.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/microemu/microemulator/2.0.4/microemulator-2.0.4.jar",
+    "sha256": "dbd5f3eb8365d3e839d6a203149e0e3776fc1a0585e16ac1fc23f76c9fcae1c6"
+  },
+  "proguard.jar": {
+    "url": "https://repo.maven.apache.org/maven2/net/sf/proguard/proguard-base/5.2.1/proguard-base-5.2.1.jar",
+    "sha256": "f163bdd73c58cbc9b789ab14f5d602b4994dbd82eacb5d54b3bd2a95de63f3bf"
+  },
+  "vineflower.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/vineflower/vineflower/1.11.1/vineflower-1.11.1.jar",
+    "sha256": "a615d07ddbbcd489369674f40e42df639c32be95410890b38f173d5c1e2ea39c"
+  },
+  "microemu-jsr-75.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/microemu/microemu-jsr-75/2.0.4/microemu-jsr-75-2.0.4.jar",
+    "sha256": "d4372cf344ee03f0261ae58bd3d2becb4aed98272bca7c6bb98749efd11b4601"
+  },
+  "microemu-jsr-120.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/microemu/microemu-jsr-120/2.0.4/microemu-jsr-120-2.0.4.jar",
+    "sha256": "6d3f599901a297568c763e389c68aa921f4d5c03740e5c167b18159f0dac2c78"
+  },
+  "microemu-nokiaui.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/microemu/microemu-nokiaui/2.0.4/microemu-nokiaui-2.0.4.jar",
+    "sha256": "f2ed0f8526a5788091d1fd97d4e474c2ff777a1d94fade8f8396c9e5931ea9a8"
+  },
+  "cldcapi10.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/microemu/cldcapi10/2.0.4/cldcapi10-2.0.4.jar",
+    "sha256": "6b5753c830a966d91cbfcd5cde223a6899c6c69f021a8e38a429cec967bc290d"
+  },
+  "midpapi20.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/microemu/midpapi20/2.0.4/midpapi20-2.0.4.jar",
+    "sha256": "b7f6ed5e0344c7000643ecc114e6edff3587e8e77face546af0e12ffd6dbe826"
+  }
+}

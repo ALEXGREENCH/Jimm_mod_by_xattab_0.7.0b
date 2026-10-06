@@ -1,0 +1,3315 @@
+{
+  "22": {
+    "text": "Правка",
+    "candidate_legacy_keys": [
+      "edit"
+    ]
+  },
+  "y1": {
+    "text": "Подключиться",
+    "candidate_legacy_keys": [
+      "connect"
+    ]
+  },
+  "y5": {
+    "text": "Входной пароль",
+    "candidate_legacy_keys": [
+      "startup_pass"
+    ]
+  },
+  "E3": {
+    "text": "Меню",
+    "candidate_legacy_keys": [
+      "menu_button",
+      "menu"
+    ]
+  },
+  "e4": {
+    "text": "Учетная запись",
+    "candidate_legacy_keys": [
+      "account",
+      "options_account"
+    ]
+  },
+  "k0": {
+    "text": "\nICQ Клиент для J2ME\n\nВерсия: 0.7.0b\nДата: 28.03.2010\nВариант: MIDP2\nМодули: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nСайты проекта:\n",
+    "candidate_legacy_keys": []
+  },
+  "J4": {
+    "text": "Количество попыток подключения",
+    "candidate_legacy_keys": [
+      "reconnect_number"
+    ]
+  },
+  "W0": {
+    "text": "Мигать значком",
+    "candidate_legacy_keys": [
+      "blink_icon"
+    ]
+  },
+  "u2": {
+    "text": "Имя",
+    "candidate_legacy_keys": [
+      "firstname",
+      "name"
+    ]
+  },
+  "03": {
+    "text": "Скрывать пустые группы",
+    "candidate_legacy_keys": []
+  },
+  "A5": {
+    "text": "Статус",
+    "candidate_legacy_keys": [
+      "status"
+    ]
+  },
+  "a6": {
+    "text": "Прозрачность курсора",
+    "candidate_legacy_keys": []
+  },
+  "i4": {
+    "text": "Интерфейс",
+    "candidate_legacy_keys": [
+      "options_interface"
+    ]
+  },
+  "81": {
+    "text": "Секунды во времени",
+    "candidate_legacy_keys": [
+      "chat_show_seconds"
+    ]
+  },
+  "C6": {
+    "text": "На телефоне",
+    "candidate_legacy_keys": [
+      "xstatus_phone"
+    ]
+  },
+  "k3": {
+    "text": "Блокир. клавиши",
+    "candidate_legacy_keys": [
+      "keylock_enable"
+    ]
+  },
+  "k1": {
+    "text": "ID клиента",
+    "candidate_legacy_keys": [
+      "client_id"
+    ]
+  },
+  "p4": {
+    "text": "Вставить",
+    "candidate_legacy_keys": [
+      "paste"
+    ]
+  },
+  "y7": {
+    "text": "История сообщений",
+    "candidate_legacy_keys": [
+      "history"
+    ]
+  },
+  "z6": {
+    "text": "Дела",
+    "candidate_legacy_keys": [
+      "xstatus_business"
+    ]
+  },
+  "f1": {
+    "text": "Очистить",
+    "candidate_legacy_keys": [
+      "clear"
+    ]
+  },
+  "o5": {
+    "text": "Отключить звук",
+    "candidate_legacy_keys": [
+      "#sound_off"
+    ]
+  },
+  "n2": {
+    "text": "Факс",
+    "candidate_legacy_keys": [
+      "fax"
+    ]
+  },
+  "g0": {
+    "text": "Расширенные",
+    "candidate_legacy_keys": [
+      "enable_ext_keys"
+    ]
+  },
+  "x4": {
+    "text": "Приватн. статус",
+    "candidate_legacy_keys": [
+      "private_status"
+    ]
+  },
+  "s5": {
+    "text": "Сортировать список",
+    "candidate_legacy_keys": [
+      "sort_by"
+    ]
+  },
+  "B1": {
+    "text": "Копировать всё",
+    "candidate_legacy_keys": [
+      "copy_all_text"
+    ]
+  },
+  "A1": {
+    "text": "Копировать",
+    "candidate_legacy_keys": [
+      "copy_text"
+    ]
+  },
+  "T6": {
+    "text": "Сердце",
+    "candidate_legacy_keys": [
+      "xstatus_heart"
+    ]
+  },
+  "K0": {
+    "text": "Восстан. статус при активности",
+    "candidate_legacy_keys": [
+      "auto_status_restore"
+    ]
+  },
+  "x5": {
+    "text": "Скорость",
+    "candidate_legacy_keys": [
+      "speed"
+    ]
+  },
+  "n0": {
+    "text": "Добавить группу",
+    "candidate_legacy_keys": [
+      "add_group"
+    ]
+  },
+  "G0": {
+    "text": "Внимание!",
+    "candidate_legacy_keys": [
+      "attention"
+    ]
+  },
+  "s0": {
+    "text": "В список невидящих",
+    "candidate_legacy_keys": [
+      "add_invisible_list"
+    ]
+  },
+  "v0": {
+    "text": "Возраст",
+    "candidate_legacy_keys": [
+      "age"
+    ]
+  },
+  "41": {
+    "text": "Сотовый",
+    "candidate_legacy_keys": [
+      "cell_phone"
+    ]
+  },
+  "k7": {
+    "text": "Адрес прокси:",
+    "candidate_legacy_keys": [
+      "proxy_server_host"
+    ]
+  },
+  "F2": {
+    "text": "Из файла",
+    "candidate_legacy_keys": []
+  },
+  "t6": {
+    "text": "Думаю",
+    "candidate_legacy_keys": [
+      "xstatus_thinking"
+    ]
+  },
+  "u5": {
+    "text": "по статусу",
+    "candidate_legacy_keys": [
+      "sort_by_status"
+    ]
+  },
+  "M5": {
+    "text": "Готов чатиться",
+    "candidate_legacy_keys": [
+      "status_chat"
+    ]
+  },
+  "c7": {
+    "text": "Да",
+    "candidate_legacy_keys": [
+      "yes"
+    ]
+  },
+  "84": {
+    "text": "Информировать об отключившемся контакте",
+    "candidate_legacy_keys": [
+      "offl_notification"
+    ]
+  },
+  "Y2": {
+    "text": "У Вас остались непрочитанные сообщения. Выйти из программы?",
+    "candidate_legacy_keys": [
+      "have_unread_mess"
+    ]
+  },
+  "f4": {
+    "text": "Стоимость",
+    "candidate_legacy_keys": [
+      "cost",
+      "options_cost"
+    ]
+  },
+  "C0": {
+    "text": "Вопрос",
+    "candidate_legacy_keys": [
+      "antispam_msg",
+      "xstatus_question"
+    ]
+  },
+  "D6": {
+    "text": "Играю",
+    "candidate_legacy_keys": [
+      "xstatus_games"
+    ]
+  },
+  "d3": {
+    "text": "Версия протокола",
+    "candidate_legacy_keys": [
+      "jimm_prot"
+    ]
+  },
+  "b2": {
+    "text": "Список действий",
+    "candidate_legacy_keys": [
+      "ext_actionhotkeys"
+    ]
+  },
+  "Q3": {
+    "text": "Имя",
+    "candidate_legacy_keys": [
+      "firstname",
+      "name"
+    ]
+  },
+  "q3": {
+    "text": "Настройка яркости",
+    "candidate_legacy_keys": [
+      "light"
+    ]
+  },
+  "n5": {
+    "text": "Включить звук",
+    "candidate_legacy_keys": [
+      "#sound_on"
+    ]
+  },
+  "54": {
+    "text": "Смещение слева",
+    "candidate_legacy_keys": [
+      "offset_left"
+    ]
+  },
+  "u6": {
+    "text": "Кушаю",
+    "candidate_legacy_keys": [
+      "status_lunch",
+      "xstatus_eating"
+    ]
+  },
+  "I4": {
+    "text": "Переподключение",
+    "candidate_legacy_keys": [
+      "reconnect"
+    ]
+  },
+  "b5": {
+    "text": "Расширен. статус",
+    "candidate_legacy_keys": [
+      "set_xstatus"
+    ]
+  },
+  "o3": {
+    "text": "Фамилия",
+    "candidate_legacy_keys": [
+      "lastname"
+    ]
+  },
+  "i2": {
+    "text": "#",
+    "candidate_legacy_keys": [
+      "ext_clhotkeypound"
+    ]
+  },
+  "31": {
+    "text": "Характеристики",
+    "candidate_legacy_keys": [
+      "cap_info"
+    ]
+  },
+  "T4": {
+    "text": "Переимен. группу",
+    "candidate_legacy_keys": [
+      "rename_group"
+    ]
+  },
+  "Z5": {
+    "text": "Послать <-> Отмена",
+    "candidate_legacy_keys": [
+      "swap_send_and_back"
+    ]
+  },
+  "R5": {
+    "text": "Занят",
+    "candidate_legacy_keys": [
+      "status_occupied"
+    ]
+  },
+  "Q6": {
+    "text": "В туалете",
+    "candidate_legacy_keys": [
+      "xstatus_wc"
+    ]
+  },
+  "n4": {
+    "text": "(исх./вход./общ.)",
+    "candidate_legacy_keys": [
+      "out_in_total"
+    ]
+  },
+  "83": {
+    "text": "Инфо о контакте",
+    "candidate_legacy_keys": [
+      "info"
+    ]
+  },
+  "_": {
+    "text": "Время подсветки (сек)",
+    "candidate_legacy_keys": [
+      "backlight_timeout"
+    ]
+  },
+  "o6": {
+    "text": "Сердитый",
+    "candidate_legacy_keys": [
+      "xstatus_angry"
+    ]
+  },
+  "_1": {
+    "text": "Активировать при входящем сообщении",
+    "candidate_legacy_keys": [
+      "bring_up"
+    ]
+  },
+  "s6": {
+    "text": "Пью пиво",
+    "candidate_legacy_keys": [
+      "xstatus_beer"
+    ]
+  },
+  "0": {
+    "text": "Ручная подсветка",
+    "candidate_legacy_keys": []
+  },
+  "T1": {
+    "text": "Ваш запрос на авторизацию отклонил: ",
+    "candidate_legacy_keys": [
+      "denyedby"
+    ]
+  },
+  "q1": {
+    "text": "Заголовок, софт-бар",
+    "candidate_legacy_keys": [
+      "color_cap"
+    ]
+  },
+  "Y3": {
+    "text": "Окно ввода текста без заголовка",
+    "candidate_legacy_keys": []
+  },
+  "L0": {
+    "text": "Перейти в режим ожидания, если неактивны",
+    "candidate_legacy_keys": [
+      "auto_status_enable"
+    ]
+  },
+  "x3": {
+    "text": "Местное время",
+    "candidate_legacy_keys": [
+      "local_time"
+    ]
+  },
+  "_3": {
+    "text": "...даже если чат не пустой",
+    "candidate_legacy_keys": [
+      "hide_offline_anyway"
+    ]
+  },
+  "E1": {
+    "text": "Список контактов",
+    "candidate_legacy_keys": [
+      "contact_list"
+    ]
+  },
+  "1": {
+    "text": "Ответить",
+    "candidate_legacy_keys": [
+      "reply"
+    ]
+  },
+  "a": {
+    "text": "Найти/Добавить",
+    "candidate_legacy_keys": [
+      "search_user"
+    ]
+  },
+  "y3": {
+    "text": "О пользователе",
+    "candidate_legacy_keys": [
+      "main_info"
+    ]
+  },
+  "F3": {
+    "text": "Уведомление о сообщениях",
+    "candidate_legacy_keys": [
+      "message_notification"
+    ]
+  },
+  "v6": {
+    "text": "Смотрю ТВ",
+    "candidate_legacy_keys": [
+      "xstatus_tv"
+    ]
+  },
+  "65": {
+    "text": "Cерверы (через пробел)",
+    "candidate_legacy_keys": [
+      "server_host"
+    ]
+  },
+  "Z1": {
+    "text": "Отдел",
+    "candidate_legacy_keys": [
+      "depart"
+    ]
+  },
+  "q7": {
+    "text": "Текст",
+    "candidate_legacy_keys": [
+      "text_to_find"
+    ]
+  },
+  "x7": {
+    "text": "Свободно (КБ)",
+    "candidate_legacy_keys": [
+      "hist_avail"
+    ]
+  },
+  "d7": {
+    "text": "Вас добавил: ",
+    "candidate_legacy_keys": [
+      "youwereadded"
+    ]
+  },
+  "error_232": {
+    "text": "Получены неверные данные от сервера (#232.EXT)",
+    "candidate_legacy_keys": [
+      "error_232"
+    ]
+  },
+  "error_231": {
+    "text": "Ошибка при отправке запроса на регистрацию (#231.EXT)",
+    "candidate_legacy_keys": [
+      "error_231"
+    ]
+  },
+  "error_230": {
+    "text": "Запрос на регистрацию был отклонен сервером (#230.EXT)",
+    "candidate_legacy_keys": [
+      "error_230"
+    ]
+  },
+  "E6": {
+    "text": "Учёба",
+    "candidate_legacy_keys": [
+      "xstatus_college"
+    ]
+  },
+  "A7": {
+    "text": "Очистить историю",
+    "candidate_legacy_keys": [
+      "clear_history"
+    ]
+  },
+  "L7": {
+    "text": "Сохранение",
+    "candidate_legacy_keys": [
+      "exporting"
+    ]
+  },
+  "D0": {
+    "text": "Ответ",
+    "candidate_legacy_keys": [
+      "antispam_answer"
+    ]
+  },
+  "Z6": {
+    "text": "Описание",
+    "candidate_legacy_keys": [
+      "description",
+      "xtraz_desc"
+    ]
+  },
+  "6": {
+    "text": "Назад",
+    "candidate_legacy_keys": [
+      "back"
+    ]
+  },
+  "O6": {
+    "text": "Мобильник",
+    "candidate_legacy_keys": [
+      "xstatus_mobile"
+    ]
+  },
+  "_7": {
+    "text": "xTraz сообщение",
+    "candidate_legacy_keys": [
+      "xtraz_msg"
+    ]
+  },
+  "w1": {
+    "text": "Тип подключения",
+    "candidate_legacy_keys": [
+      "conn_type"
+    ]
+  },
+  "error_227": {
+    "text": "Proxy login/password failed (#227.EXT)",
+    "candidate_legacy_keys": [
+      "error_227"
+    ]
+  },
+  "error_226": {
+    "text": "Proxy connect Error (#226.EXT)",
+    "candidate_legacy_keys": [
+      "error_226"
+    ]
+  },
+  "error_221": {
+    "text": "Connection via HTTP proxy closed unrequested (#221.EXT)",
+    "candidate_legacy_keys": [
+      "error_221"
+    ]
+  },
+  "error_220": {
+    "text": "Сервер не прининял HTTP-запрос (#220.EXT)",
+    "candidate_legacy_keys": [
+      "error_220"
+    ]
+  },
+  "w7": {
+    "text": "Занято (КБ)",
+    "candidate_legacy_keys": [
+      "hist_size"
+    ]
+  },
+  "X5": {
+    "text": "На работе",
+    "candidate_legacy_keys": [
+      "status_work"
+    ]
+  },
+  "A6": {
+    "text": "В кино",
+    "candidate_legacy_keys": [
+      "xstatus_camera"
+    ]
+  },
+  "r2": {
+    "text": "Передача файла",
+    "candidate_legacy_keys": [
+      "filetransfer",
+      "ft_caption"
+    ]
+  },
+  "R4": {
+    "text": "Из списка игнора",
+    "candidate_legacy_keys": [
+      "rem_ignore_list"
+    ]
+  },
+  "Z2": {
+    "text": "Скрывать отключенных",
+    "candidate_legacy_keys": [
+      "hide_offline"
+    ]
+  },
+  "s": {
+    "text": "Аудио и видео",
+    "candidate_legacy_keys": [
+      "interest_9"
+    ]
+  },
+  "x1": {
+    "text": "Настройки подключения",
+    "candidate_legacy_keys": [
+      "conn_prop"
+    ]
+  },
+  "r": {
+    "text": "Астрономия",
+    "candidate_legacy_keys": [
+      "interest_8"
+    ]
+  },
+  "q": {
+    "text": "Автомобили",
+    "candidate_legacy_keys": [
+      "interest_7"
+    ]
+  },
+  "p": {
+    "text": "Автоматизация в быту",
+    "candidate_legacy_keys": [
+      "interest_6"
+    ]
+  },
+  "o": {
+    "text": "ICQ - Справка",
+    "candidate_legacy_keys": [
+      "interest_5"
+    ]
+  },
+  "n": {
+    "text": "80-е годы",
+    "candidate_legacy_keys": [
+      "interest_4"
+    ]
+  },
+  "m": {
+    "text": "70-е годы",
+    "candidate_legacy_keys": [
+      "interest_3"
+    ]
+  },
+  "l": {
+    "text": "60- годы",
+    "candidate_legacy_keys": [
+      "interest_2"
+    ]
+  },
+  "k": {
+    "text": "50-е годы",
+    "candidate_legacy_keys": [
+      "interest_1"
+    ]
+  },
+  "64": {
+    "text": "Смещение справа",
+    "candidate_legacy_keys": [
+      "offset_right"
+    ]
+  },
+  "c5": {
+    "text": "Доп. подключение",
+    "candidate_legacy_keys": [
+      "shadow_con"
+    ]
+  },
+  "H7": {
+    "text": "Сохранить всё",
+    "candidate_legacy_keys": [
+      "exportall"
+    ]
+  },
+  "27": {
+    "text": "Если заблокирован",
+    "candidate_legacy_keys": [
+      "when_locked"
+    ]
+  },
+  "K1": {
+    "text": "Валюта",
+    "candidate_legacy_keys": [
+      "currency"
+    ]
+  },
+  "T3": {
+    "text": "Новый шаблон",
+    "candidate_legacy_keys": [
+      "new_template"
+    ]
+  },
+  "j3": {
+    "text": "Для  разблокировки нажмите и удерживайте клавишу #",
+    "candidate_legacy_keys": [
+      "keylock_message"
+    ]
+  },
+  "M6": {
+    "text": "Пикник",
+    "candidate_legacy_keys": [
+      "xstatus_unk"
+    ]
+  },
+  "S6": {
+    "text": "Дорога",
+    "candidate_legacy_keys": [
+      "xstatus_way"
+    ]
+  },
+  "P4": {
+    "text": "Из списка видящих",
+    "candidate_legacy_keys": [
+      "rem_visible_list"
+    ]
+  },
+  "26": {
+    "text": "Шаблоны",
+    "candidate_legacy_keys": [
+      "templates"
+    ]
+  },
+  "A0": {
+    "text": "Анти-спам",
+    "candidate_legacy_keys": [
+      "antispam"
+    ]
+  },
+  "B2": {
+    "text": "Наклонный",
+    "candidate_legacy_keys": [
+      "font_italic"
+    ]
+  },
+  "U2": {
+    "text": "Вас авторизовал: ",
+    "candidate_legacy_keys": [
+      "grantedby"
+    ]
+  },
+  "K7": {
+    "text": "Сохранено из Jimm ",
+    "candidate_legacy_keys": [
+      "export_date"
+    ]
+  },
+  "j2": {
+    "text": "*",
+    "candidate_legacy_keys": [
+      "ext_clhotkeystar"
+    ]
+  },
+  "16": {
+    "text": "Системное уведомление",
+    "candidate_legacy_keys": [
+      "sysnotice"
+    ]
+  },
+  "33": {
+    "text": "ч",
+    "candidate_legacy_keys": [
+      "hours"
+    ]
+  },
+  "y6": {
+    "text": "Слушаю музыку",
+    "candidate_legacy_keys": [
+      "xstatus_music"
+    ]
+  },
+  "q0": {
+    "text": "Добав. к скопир.",
+    "candidate_legacy_keys": []
+  },
+  "u1": {
+    "text": "Фон заставки",
+    "candidate_legacy_keys": [
+      "color_sback"
+    ]
+  },
+  "d4": {
+    "text": "Настройки",
+    "candidate_legacy_keys": [
+      "options_lng"
+    ]
+  },
+  "Y1": {
+    "text": "Удалить",
+    "candidate_legacy_keys": [
+      "delete",
+      "remove",
+      "remove_user"
+    ]
+  },
+  "T2": {
+    "text": "Авторизовать",
+    "candidate_legacy_keys": [
+      "grant"
+    ]
+  },
+  "S5": {
+    "text": "Отключен",
+    "candidate_legacy_keys": [
+      "status_offline"
+    ]
+  },
+  "m5": {
+    "text": "Звуковой файл",
+    "candidate_legacy_keys": [
+      "sound"
+    ]
+  },
+  "32": {
+    "text": "Изменить данные",
+    "candidate_legacy_keys": [
+      "editform"
+    ]
+  },
+  "a5": {
+    "text": "Сменить статус",
+    "candidate_legacy_keys": [
+      "set_status"
+    ]
+  },
+  "g6": {
+    "text": "Хранить историю",
+    "candidate_legacy_keys": [
+      "use_history"
+    ]
+  },
+  "y4": {
+    "text": "Видим для всех",
+    "candidate_legacy_keys": [
+      "ps_all"
+    ]
+  },
+  "U3": {
+    "text": "Ник",
+    "candidate_legacy_keys": [
+      "nick"
+    ]
+  },
+  "n3": {
+    "text": "Язык интерфейса",
+    "candidate_legacy_keys": [
+      "language"
+    ]
+  },
+  "v5": {
+    "text": "по статусу и имени",
+    "candidate_legacy_keys": [
+      "sort_by_status_and_name"
+    ]
+  },
+  "24": {
+    "text": "Заметки",
+    "candidate_legacy_keys": [
+      "notes"
+    ]
+  },
+  "G7": {
+    "text": "Сохранить",
+    "candidate_legacy_keys": [
+      "export"
+    ]
+  },
+  "36": {
+    "text": "Абв (авторегистр)",
+    "candidate_legacy_keys": [
+      "text_abc"
+    ]
+  },
+  "h0": {
+    "text": "Обычные",
+    "candidate_legacy_keys": [
+      "disable_ext_keys"
+    ]
+  },
+  "95": {
+    "text": "Текущая сессия",
+    "candidate_legacy_keys": [
+      "session"
+    ]
+  },
+  "j7": {
+    "text": "Автовыбор",
+    "candidate_legacy_keys": [
+      "proxy_guess"
+    ]
+  },
+  "y2": {
+    "text": "Крупный",
+    "candidate_legacy_keys": [
+      "font_large"
+    ]
+  },
+  "a3": {
+    "text": "Смайлики",
+    "candidate_legacy_keys": [
+      "insert_emotion"
+    ]
+  },
+  "B4": {
+    "text": "Видим только для КЛ",
+    "candidate_legacy_keys": [
+      "ps_contact_list"
+    ]
+  },
+  "H4": {
+    "text": "Причина",
+    "candidate_legacy_keys": [
+      "reason"
+    ]
+  },
+  "d0": {
+    "text": "Абц => Abc",
+    "candidate_legacy_keys": [
+      "transliterate"
+    ]
+  },
+  "m0": {
+    "text": "Новый",
+    "candidate_legacy_keys": [
+      "add_new"
+    ]
+  },
+  "h": {
+    "text": "Пятница",
+    "candidate_legacy_keys": [
+      "friday"
+    ]
+  },
+  "B3": {
+    "text": "Управл. списком",
+    "candidate_legacy_keys": [
+      "manage_contact_list"
+    ]
+  },
+  "D4": {
+    "text": "Для текущего чата",
+    "candidate_legacy_keys": [
+      "pw_forme"
+    ]
+  },
+  "S4": {
+    "text": "Переименовать",
+    "candidate_legacy_keys": [
+      "rename"
+    ]
+  },
+  "N6": {
+    "text": "КПК",
+    "candidate_legacy_keys": [
+      "xstatus_ppc"
+    ]
+  },
+  "j5": {
+    "text": "Всего, начиная с",
+    "candidate_legacy_keys": [
+      "since"
+    ]
+  },
+  "t2": {
+    "text": "Поиск",
+    "candidate_legacy_keys": [
+      "find",
+      "xstatus_rambler_search"
+    ]
+  },
+  "V5": {
+    "text": "Депрессия",
+    "candidate_legacy_keys": [
+      "status_depression"
+    ]
+  },
+  "X3": {
+    "text": "Нет доступных групп для этого действия!",
+    "candidate_legacy_keys": [
+      "no_availible_groups"
+    ]
+  },
+  "60": {
+    "text": "Экология",
+    "candidate_legacy_keys": [
+      "interest_50"
+    ]
+  },
+  "g5": {
+    "text": "Свободная память",
+    "candidate_legacy_keys": [
+      "show_free_heap"
+    ]
+  },
+  "U5": {
+    "text": "Злой",
+    "candidate_legacy_keys": [
+      "status_evil"
+    ]
+  },
+  "23": {
+    "text": "Дом",
+    "candidate_legacy_keys": [
+      "home_info"
+    ]
+  },
+  "h4": {
+    "text": "Настройки ICQ",
+    "candidate_legacy_keys": [
+      "options_icq"
+    ]
+  },
+  "46": {
+    "text": "Текст слишком большой для вставки в редактор",
+    "candidate_legacy_keys": [
+      "text_too_long"
+    ]
+  },
+  "50": {
+    "text": "Фитнес",
+    "candidate_legacy_keys": [
+      "interest_49"
+    ]
+  },
+  "f": {
+    "text": "Среда",
+    "candidate_legacy_keys": [
+      "wednesday"
+    ]
+  },
+  "o4": {
+    "text": "Пароль",
+    "candidate_legacy_keys": [
+      "password"
+    ]
+  },
+  "40": {
+    "text": "Финансы и корпорации",
+    "candidate_legacy_keys": [
+      "interest_48"
+    ]
+  },
+  "30": {
+    "text": "Физкультура и спорт",
+    "candidate_legacy_keys": [
+      "interest_47"
+    ]
+  },
+  "p6": {
+    "text": "Водные процедуры",
+    "candidate_legacy_keys": [
+      "xstatus_duck"
+    ]
+  },
+  "20": {
+    "text": "Фанаты знаменитостей",
+    "candidate_legacy_keys": [
+      "interest_46"
+    ]
+  },
+  "10": {
+    "text": "Товары для дома",
+    "candidate_legacy_keys": [
+      "interest_45"
+    ]
+  },
+  "V0": {
+    "text": "Мигание при входе",
+    "candidate_legacy_keys": [
+      "blink_color"
+    ]
+  },
+  "00": {
+    "text": "Стиль жизни",
+    "candidate_legacy_keys": [
+      "interest_44"
+    ]
+  },
+  "_0": {
+    "text": "Религия",
+    "candidate_legacy_keys": [
+      "interest_43"
+    ]
+  },
+  "q6": {
+    "text": "Уставший",
+    "candidate_legacy_keys": [
+      "xstatus_tired"
+    ]
+  },
+  "Z": {
+    "text": "Развлечения",
+    "candidate_legacy_keys": [
+      "interest_42"
+    ]
+  },
+  "c": {
+    "text": "Следующий",
+    "candidate_legacy_keys": [
+      "next"
+    ]
+  },
+  "Y": {
+    "text": "Путешествия",
+    "candidate_legacy_keys": [
+      "interest_41"
+    ]
+  },
+  "l5": {
+    "text": "Socket",
+    "candidate_legacy_keys": [
+      "socket"
+    ]
+  },
+  "X": {
+    "text": "Профессии и ремесла",
+    "candidate_legacy_keys": [
+      "interest_40"
+    ]
+  },
+  "35": {
+    "text": "Отправить смс",
+    "candidate_legacy_keys": [
+      "send_sms"
+    ]
+  },
+  "W": {
+    "text": "Одежда и мода",
+    "candidate_legacy_keys": [
+      "interest_39"
+    ]
+  },
+  "V": {
+    "text": "Общественные науки",
+    "candidate_legacy_keys": [
+      "interest_38"
+    ]
+  },
+  "M3": {
+    "text": "Разное",
+    "candidate_legacy_keys": [
+      "misc",
+      "options_other"
+    ]
+  },
+  "U": {
+    "text": "Новости и СМИ",
+    "candidate_legacy_keys": [
+      "interest_37"
+    ]
+  },
+  "E5": {
+    "text": "%nick%, меня нет на месте с %time%. Вы можете оставить мне сообщение.",
+    "candidate_legacy_keys": []
+  },
+  "T": {
+    "text": "Наука и техника",
+    "candidate_legacy_keys": [
+      "interest_36"
+    ]
+  },
+  "S": {
+    "text": "Музыка",
+    "candidate_legacy_keys": [
+      "interest_35"
+    ]
+  },
+  "R": {
+    "text": "Мистицизм",
+    "candidate_legacy_keys": [
+      "interest_34"
+    ]
+  },
+  "a7": {
+    "text": "Работа",
+    "candidate_legacy_keys": [
+      "work_info"
+    ]
+  },
+  "Q": {
+    "text": "Медиа",
+    "candidate_legacy_keys": [
+      "interest_33"
+    ]
+  },
+  "P": {
+    "text": "Магазины",
+    "candidate_legacy_keys": [
+      "interest_32",
+      "xstatus_shopping"
+    ]
+  },
+  "O": {
+    "text": "Любимые занятия",
+    "candidate_legacy_keys": [
+      "interest_31"
+    ]
+  },
+  "N": {
+    "text": "Культура",
+    "candidate_legacy_keys": [
+      "interest_30"
+    ]
+  },
+  "07": {
+    "text": "Заголовок",
+    "candidate_legacy_keys": [
+      "xtraz_title"
+    ]
+  },
+  "x0": {
+    "text": "Всех контактов",
+    "candidate_legacy_keys": [
+      "all_contacts"
+    ]
+  },
+  "t5": {
+    "text": "по имени",
+    "candidate_legacy_keys": [
+      "sort_by_name"
+    ]
+  },
+  "A2": {
+    "text": "Жирный",
+    "candidate_legacy_keys": [
+      "font_bold"
+    ]
+  },
+  "M": {
+    "text": "Красота и здоровье",
+    "candidate_legacy_keys": [
+      "interest_29"
+    ]
+  },
+  "L": {
+    "text": "Космос",
+    "candidate_legacy_keys": [
+      "interest_28"
+    ]
+  },
+  "67": {
+    "text": "Которая группа?",
+    "candidate_legacy_keys": [
+      "whichgroup"
+    ]
+  },
+  "K": {
+    "text": "Компьютеры",
+    "candidate_legacy_keys": [
+      "interest_27"
+    ]
+  },
+  "J": {
+    "text": "Коллекции",
+    "candidate_legacy_keys": [
+      "interest_26"
+    ]
+  },
+  "I": {
+    "text": "Кино и телевидение",
+    "candidate_legacy_keys": [
+      "interest_25"
+    ]
+  },
+  "H": {
+    "text": "Каталог для заказов по почте",
+    "candidate_legacy_keys": [
+      "interest_24"
+    ]
+  },
+  "G": {
+    "text": "Исскуство",
+    "candidate_legacy_keys": [
+      "interest_23"
+    ]
+  },
+  "P5": {
+    "text": "Невидим для всех",
+    "candidate_legacy_keys": [
+      "ps_none",
+      "status_invis_all"
+    ]
+  },
+  "F": {
+    "text": "Интернет",
+    "candidate_legacy_keys": [
+      "interest_22"
+    ]
+  },
+  "E": {
+    "text": "Издательское дело",
+    "candidate_legacy_keys": [
+      "interest_21"
+    ]
+  },
+  "D": {
+    "text": "Игры",
+    "candidate_legacy_keys": [
+      "interest_20"
+    ]
+  },
+  "C4": {
+    "text": "Невидим для всех",
+    "candidate_legacy_keys": [
+      "ps_none",
+      "status_invis_all"
+    ]
+  },
+  "z3": {
+    "text": "Позвонить",
+    "candidate_legacy_keys": [
+      "make_call"
+    ]
+  },
+  "F1": {
+    "text": "Win1251 кодировка",
+    "candidate_legacy_keys": [
+      "cp1251"
+    ]
+  },
+  "C": {
+    "text": "Занятия на свежем воздухе",
+    "candidate_legacy_keys": [
+      "interest_19"
+    ]
+  },
+  "57": {
+    "text": "была",
+    "candidate_legacy_keys": [
+      "was"
+    ]
+  },
+  "B": {
+    "text": "Женщины",
+    "candidate_legacy_keys": [
+      "interest_18"
+    ]
+  },
+  "A": {
+    "text": "Домашние животные",
+    "candidate_legacy_keys": [
+      "interest_17"
+    ]
+  },
+  "r4": {
+    "text": "Введите номер",
+    "candidate_legacy_keys": [
+      "phone_input"
+    ]
+  },
+  "z": {
+    "text": "Государство и власть",
+    "candidate_legacy_keys": [
+      "interest_16"
+    ]
+  },
+  "y": {
+    "text": "Воспитание детей",
+    "candidate_legacy_keys": [
+      "interest_15"
+    ]
+  },
+  "x": {
+    "text": "Виды спорта",
+    "candidate_legacy_keys": [
+      "interest_14"
+    ]
+  },
+  "w": {
+    "text": "Вечеринки",
+    "candidate_legacy_keys": [
+      "interest_13"
+    ]
+  },
+  "d1": {
+    "text": "Город",
+    "candidate_legacy_keys": [
+      "city"
+    ]
+  },
+  "f5": {
+    "text": "Группировать контакты",
+    "candidate_legacy_keys": [
+      "show_user_groups"
+    ]
+  },
+  "v": {
+    "text": "Веб дизайн",
+    "candidate_legacy_keys": [
+      "interest_12"
+    ]
+  },
+  "u": {
+    "text": "Бизнес - услуги",
+    "candidate_legacy_keys": [
+      "interest_11"
+    ]
+  },
+  "t": {
+    "text": "Бизнес",
+    "candidate_legacy_keys": [
+      "interest_10"
+    ]
+  },
+  "V4": {
+    "text": "Статус сообщение",
+    "candidate_legacy_keys": [
+      "reqstatmsg",
+      "status_message"
+    ]
+  },
+  "4": {
+    "text": "Сброс",
+    "candidate_legacy_keys": [
+      "reset"
+    ]
+  },
+  "j6": {
+    "text": "Искать",
+    "candidate_legacy_keys": [
+      "user_search"
+    ]
+  },
+  "k6": {
+    "text": "Вибрация",
+    "candidate_legacy_keys": [
+      "vibration"
+    ]
+  },
+  "W5": {
+    "text": "Дома",
+    "candidate_legacy_keys": [
+      "status_home"
+    ]
+  },
+  "75": {
+    "text": "Приватность",
+    "candidate_legacy_keys": [
+      "server_lists"
+    ]
+  },
+  "R6": {
+    "text": "Вопрос",
+    "candidate_legacy_keys": [
+      "antispam_msg",
+      "xstatus_question"
+    ]
+  },
+  "51": {
+    "text": "Настройки чата",
+    "candidate_legacy_keys": [
+      "chat"
+    ]
+  },
+  "X2": {
+    "text": "Шарик радости",
+    "candidate_legacy_keys": [
+      "happy_balloon"
+    ]
+  },
+  "q2": {
+    "text": "Имя файла",
+    "candidate_legacy_keys": [
+      "filename"
+    ]
+  },
+  "66": {
+    "text": "Таймаут пинга",
+    "candidate_legacy_keys": [
+      "timeout_interv"
+    ]
+  },
+  "t4": {
+    "text": "Привет! Авторизуй меня, пожалуйста :-)",
+    "candidate_legacy_keys": [
+      "plsauthme"
+    ]
+  },
+  "92": {
+    "text": "Выход",
+    "candidate_legacy_keys": [
+      "exit_button",
+      "exit"
+    ]
+  },
+  "x2": {
+    "text": "Маленький",
+    "candidate_legacy_keys": [
+      "font_small"
+    ]
+  },
+  "86": {
+    "text": "Доступно",
+    "candidate_legacy_keys": [
+      "total_mem"
+    ]
+  },
+  "X0": {
+    "text": "Мигать ником",
+    "candidate_legacy_keys": [
+      "blink_nick"
+    ]
+  },
+  "D5": {
+    "text": "%nick%, прошу не тревожить...",
+    "candidate_legacy_keys": []
+  },
+  "k2": {
+    "text": "Вызов",
+    "candidate_legacy_keys": [
+      "ext_clhotkeycall"
+    ]
+  },
+  "p3": {
+    "text": "Дата последнего обновления",
+    "candidate_legacy_keys": [
+      "latest_ver"
+    ]
+  },
+  "l1": {
+    "text": "Цветовая схема",
+    "candidate_legacy_keys": [
+      "color_scheme"
+    ]
+  },
+  "t1": {
+    "text": "Курсор",
+    "candidate_legacy_keys": [
+      "color_cursor"
+    ]
+  },
+  "w0": {
+    "text": "Всех кроме этого",
+    "candidate_legacy_keys": [
+      "all_contact_except_this"
+    ]
+  },
+  "9": {
+    "text": "Открыть",
+    "candidate_legacy_keys": [
+      "open"
+    ]
+  },
+  "p2": {
+    "text": "любой",
+    "candidate_legacy_keys": [
+      "female_male"
+    ]
+  },
+  "u3": {
+    "text": "Онлайн",
+    "candidate_legacy_keys": [
+      "li_online_time"
+    ]
+  },
+  "45": {
+    "text": "Новое сообщение",
+    "candidate_legacy_keys": [
+      "send_message"
+    ]
+  },
+  "z0": {
+    "text": "Автоматическое сообщение:",
+    "candidate_legacy_keys": [
+      "auto_message"
+    ]
+  },
+  "73": {
+    "text": "ICQ клиент",
+    "candidate_legacy_keys": [
+      "icq_client"
+    ]
+  },
+  "e6": {
+    "text": "Оповещение о наборе",
+    "candidate_legacy_keys": [
+      "typing_notify"
+    ]
+  },
+  "lang_UA": {
+    "text": "Украинский",
+    "candidate_legacy_keys": [
+      "lang_UA"
+    ]
+  },
+  "w5": {
+    "text": "Звук/Вибра",
+    "candidate_legacy_keys": [
+      "sound_vibra"
+    ]
+  },
+  "j": {
+    "text": "Воскресенье",
+    "candidate_legacy_keys": [
+      "sunday"
+    ]
+  },
+  "E2": {
+    "text": "Память телефона\nСвободно",
+    "candidate_legacy_keys": []
+  },
+  "5": {
+    "text": "Отмена",
+    "candidate_legacy_keys": [
+      "cancel"
+    ]
+  },
+  "Q1": {
+    "text": "Очистка чатов",
+    "candidate_legacy_keys": [
+      "delete_chats"
+    ]
+  },
+  "c4": {
+    "text": "Опции",
+    "candidate_legacy_keys": [
+      "option"
+    ]
+  },
+  "c3": {
+    "text": "Версия Jimm",
+    "candidate_legacy_keys": [
+      "jimm_version"
+    ]
+  },
+  "17": {
+    "text": "Подождите...",
+    "candidate_legacy_keys": [
+      "wait"
+    ]
+  },
+  "p0": {
+    "text": "Добавить",
+    "candidate_legacy_keys": [
+      "add_to_list"
+    ]
+  },
+  "P6": {
+    "text": "Засыпаю",
+    "candidate_legacy_keys": [
+      "xstatus_man"
+    ]
+  },
+  "43": {
+    "text": "HTTP",
+    "candidate_legacy_keys": [
+      "http"
+    ]
+  },
+  "I0": {
+    "text": "Автоподключение",
+    "candidate_legacy_keys": [
+      "auto_connect"
+    ]
+  },
+  "lang_SR": {
+    "text": "Русский (C380)",
+    "candidate_legacy_keys": [
+      "lang_SR"
+    ]
+  },
+  "96": {
+    "text": "Статистика",
+    "candidate_legacy_keys": [
+      "traffic_lng"
+    ]
+  },
+  "L5": {
+    "text": "Отсутствую",
+    "candidate_legacy_keys": [
+      "status_away"
+    ]
+  },
+  "H5": {
+    "text": "Что-то взгрустнулось...",
+    "candidate_legacy_keys": [
+      "status_message_text_depress"
+    ]
+  },
+  "r3": {
+    "text": "Оффлайн с",
+    "candidate_legacy_keys": [
+      "li_offline_time"
+    ]
+  },
+  "f6": {
+    "text": "UIN",
+    "candidate_legacy_keys": [
+      "uin"
+    ]
+  },
+  "lang_SE": {
+    "text": "Шведский",
+    "candidate_legacy_keys": [
+      "lang_SE"
+    ]
+  },
+  "P3": {
+    "text": "Личные данные",
+    "candidate_legacy_keys": [
+      "myself"
+    ]
+  },
+  "p7": {
+    "text": "В историю",
+    "candidate_legacy_keys": [
+      "add_to_history"
+    ]
+  },
+  "c0": {
+    "text": "Abc => Абц",
+    "candidate_legacy_keys": [
+      "detransliterate"
+    ]
+  },
+  "lang_RU": {
+    "text": "Русский",
+    "candidate_legacy_keys": [
+      "lang_RU"
+    ]
+  },
+  "h6": {
+    "text": "Показывать смайлики",
+    "candidate_legacy_keys": [
+      "use_smiles"
+    ]
+  },
+  "e7": {
+    "text": "Прокси",
+    "candidate_legacy_keys": [
+      "proxy"
+    ]
+  },
+  "A3": {
+    "text": "мужской",
+    "candidate_legacy_keys": [
+      "male"
+    ]
+  },
+  "J0": {
+    "text": "Настройки режима ожидания",
+    "candidate_legacy_keys": [
+      "auto_status"
+    ]
+  },
+  "b": {
+    "text": "Послать",
+    "candidate_legacy_keys": [
+      "send",
+      "register_request_send"
+    ]
+  },
+  "n1": {
+    "text": "Текст в списке, чате",
+    "candidate_legacy_keys": [
+      "color_text"
+    ]
+  },
+  "W1": {
+    "text": "Имя файла и описание",
+    "candidate_legacy_keys": [
+      "name_desc"
+    ]
+  },
+  "m6": {
+    "text": "Громкость звуков",
+    "candidate_legacy_keys": [
+      "volume"
+    ]
+  },
+  "m7": {
+    "text": "Логин прокси:",
+    "candidate_legacy_keys": [
+      "proxy_server_login"
+    ]
+  },
+  "h3": {
+    "text": "Поддерживать подключение?",
+    "candidate_legacy_keys": [
+      "keep_conn_alive"
+    ]
+  },
+  "t7": {
+    "text": "Информация",
+    "candidate_legacy_keys": [
+      "history_info"
+    ]
+  },
+  "M0": {
+    "text": "в течение (мин)",
+    "candidate_legacy_keys": [
+      "auto_status_delay"
+    ]
+  },
+  "g": {
+    "text": "Четверг",
+    "candidate_legacy_keys": [
+      "thursday"
+    ]
+  },
+  "R1": {
+    "text": "Отчет о доставке",
+    "candidate_legacy_keys": [
+      "delivery_report"
+    ]
+  },
+  "s7": {
+    "text": "С учётом регистра",
+    "candidate_legacy_keys": [
+      "find_case_sensitiv"
+    ]
+  },
+  "S0": {
+    "text": "Фоновый рисунок",
+    "candidate_legacy_keys": [
+      "bg_image"
+    ]
+  },
+  "o1": {
+    "text": "Контакт с чатом",
+    "candidate_legacy_keys": [
+      "color_blue"
+    ]
+  },
+  "94": {
+    "text": "Информировать о подключившемся контакте",
+    "candidate_legacy_keys": [
+      "onl_notification"
+    ]
+  },
+  "lang_PL": {
+    "text": "Польский",
+    "candidate_legacy_keys": [
+      "lang_PL"
+    ]
+  },
+  "D2": {
+    "text": "Стиль шрифта",
+    "candidate_legacy_keys": [
+      "font_style"
+    ]
+  },
+  "c6": {
+    "text": "Прозрачность софтбара",
+    "candidate_legacy_keys": []
+  },
+  "l3": {
+    "text": "Заблокировано",
+    "candidate_legacy_keys": [
+      "keylock_enabled"
+    ]
+  },
+  "B5": {
+    "text": "Статус сообщение",
+    "candidate_legacy_keys": [
+      "reqstatmsg",
+      "status_message"
+    ]
+  },
+  "U1": {
+    "text": "Описание",
+    "candidate_legacy_keys": [
+      "description",
+      "xtraz_desc"
+    ]
+  },
+  "z7": {
+    "text": "не найден",
+    "candidate_legacy_keys": [
+      "not_found"
+    ]
+  },
+  "P1": {
+    "text": "Удалить чат",
+    "candidate_legacy_keys": [
+      "delete_chat"
+    ]
+  },
+  "n7": {
+    "text": "Пароль прокси:",
+    "candidate_legacy_keys": [
+      "proxy_server_pass"
+    ]
+  },
+  "v4": {
+    "text": "Должность",
+    "candidate_legacy_keys": [
+      "position"
+    ]
+  },
+  "e5": {
+    "text": "Время внизу",
+    "candidate_legacy_keys": [
+      "show_time"
+    ]
+  },
+  "m4": {
+    "text": "Оповещение",
+    "candidate_legacy_keys": [
+      "options_signaling"
+    ]
+  },
+  "J5": {
+    "text": "Тружусь, типа...",
+    "candidate_legacy_keys": [
+      "status_message_text_work"
+    ]
+  },
+  "r0": {
+    "text": "В список видящих",
+    "candidate_legacy_keys": [
+      "add_visible_list"
+    ]
+  },
+  "J1": {
+    "text": "Этого контакта",
+    "candidate_legacy_keys": [
+      "currect_contact"
+    ]
+  },
+  "N1": {
+    "text": "Инфо о клиенте",
+    "candidate_legacy_keys": [
+      "dc_info"
+    ]
+  },
+  "F6": {
+    "text": "Магазины",
+    "candidate_legacy_keys": [
+      "interest_32",
+      "xstatus_shopping"
+    ]
+  },
+  "N0": {
+    "text": "Автозапрос xTraz",
+    "candidate_legacy_keys": [
+      "auto_xtraz"
+    ]
+  },
+  "13": {
+    "text": "Д-я страничка",
+    "candidate_legacy_keys": [
+      "home_page"
+    ]
+  },
+  "O2": {
+    "text": "Отправить файл",
+    "candidate_legacy_keys": [
+      "ft_name"
+    ]
+  },
+  "a0": {
+    "text": "читает статус-сообщение",
+    "candidate_legacy_keys": []
+  },
+  "L6": {
+    "text": "Печатаю",
+    "candidate_legacy_keys": [
+      "xstatus_typing"
+    ]
+  },
+  "w3": {
+    "text": "Загрузка",
+    "candidate_legacy_keys": [
+      "loading"
+    ]
+  },
+  "w2": {
+    "text": "Средний",
+    "candidate_legacy_keys": [
+      "font_medium"
+    ]
+  },
+  "R2": {
+    "text": "Пол",
+    "candidate_legacy_keys": [
+      "gender"
+    ]
+  },
+  "H1": {
+    "text": "Стоимость пакета",
+    "candidate_legacy_keys": [
+      "cpp"
+    ]
+  },
+  "S1": {
+    "text": "Отклонить",
+    "candidate_legacy_keys": [
+      "deny"
+    ]
+  },
+  "25": {
+    "text": "Отправить фото",
+    "candidate_legacy_keys": [
+      "ft_cam",
+      "send_img"
+    ]
+  },
+  "z5": {
+    "text": "Респ./район/округ",
+    "candidate_legacy_keys": [
+      "state"
+    ]
+  },
+  "_6": {
+    "text": "Поменять софт-клавиши местами",
+    "candidate_legacy_keys": [
+      "swap_softs"
+    ]
+  },
+  "8": {
+    "text": "OK",
+    "candidate_legacy_keys": [
+      "ok"
+    ]
+  },
+  "R0": {
+    "text": "Гудок",
+    "candidate_legacy_keys": [
+      "beep"
+    ]
+  },
+  "o7": {
+    "text": "Попыток подключения:",
+    "candidate_legacy_keys": [
+      "auto_retry_count"
+    ]
+  },
+  "lang_LT": {
+    "text": "Литовский",
+    "candidate_legacy_keys": [
+      "lang_LT"
+    ]
+  },
+  "G1": {
+    "text": "Стоимость в день",
+    "candidate_legacy_keys": [
+      "cpd"
+    ]
+  },
+  "v3": {
+    "text": "В ожидании",
+    "candidate_legacy_keys": [
+      "li_idle_time"
+    ]
+  },
+  "15": {
+    "text": "Сохранение...",
+    "candidate_legacy_keys": [
+      "saveinfo"
+    ]
+  },
+  "I1": {
+    "text": "Бегущая строка",
+    "candidate_legacy_keys": [
+      "creeping_line"
+    ]
+  },
+  "Q5": {
+    "text": "Недоступен",
+    "candidate_legacy_keys": [
+      "status_na"
+    ]
+  },
+  "T0": {
+    "text": "День рождения",
+    "candidate_legacy_keys": [
+      "birth_day"
+    ]
+  },
+  "V6": {
+    "text": "Секс",
+    "candidate_legacy_keys": [
+      "xstatus_sex"
+    ]
+  },
+  "W6": {
+    "text": "Поиск",
+    "candidate_legacy_keys": [
+      "find",
+      "xstatus_rambler_search"
+    ]
+  },
+  "V3": {
+    "text": "Нет",
+    "candidate_legacy_keys": [
+      "ext_hotkey_action_none",
+      "no",
+      "xstatus_none"
+    ]
+  },
+  "g1": {
+    "text": "Очистка памяти",
+    "candidate_legacy_keys": [
+      "clear_heap"
+    ]
+  },
+  "47": {
+    "text": " хочет авторизоваться. Причина: ",
+    "candidate_legacy_keys": [
+      "wantsyourauth"
+    ]
+  },
+  "t3": {
+    "text": "В сети с",
+    "candidate_legacy_keys": [
+      "li_signon_time"
+    ]
+  },
+  "71": {
+    "text": "Картинка сообщения",
+    "candidate_legacy_keys": [
+      "chat_show_image"
+    ]
+  },
+  "h5": {
+    "text": "Показывать в заголовке",
+    "candidate_legacy_keys": [
+      "show_in_caption"
+    ]
+  },
+  "f7": {
+    "text": "Тип прокси",
+    "candidate_legacy_keys": [
+      "proxy_type"
+    ]
+  },
+  "X6": {
+    "text": "Дневник",
+    "candidate_legacy_keys": [
+      "xstatus_rambler_journal"
+    ]
+  },
+  "56": {
+    "text": "Часовой пояс",
+    "candidate_legacy_keys": [
+      "time_zone"
+    ]
+  },
+  "error_196": {
+    "text": "I/O error during filetransfer (#196.EXT)",
+    "candidate_legacy_keys": [
+      "error_196"
+    ]
+  },
+  "error_195": {
+    "text": "Impossible to parse filetransfer server data (#195.EXT)",
+    "candidate_legacy_keys": [
+      "error_195"
+    ]
+  },
+  "error_194": {
+    "text": "Wrong answer from filetransfer server (#194.EXT)",
+    "candidate_legacy_keys": [
+      "error_194"
+    ]
+  },
+  "error_193": {
+    "text": "Ошибка доступа к файловой системе для просмотра. Ошибка безопасности (#193.EXT)",
+    "candidate_legacy_keys": [
+      "error_193"
+    ]
+  },
+  "error_192": {
+    "text": "Некорректный путь к файлу. Возможно, данная функция не поддерживается (#192.EXT)",
+    "candidate_legacy_keys": [
+      "error_192"
+    ]
+  },
+  "error_191": {
+    "text": "Ошибка чтения файла. Возможно, данная функция не поддерживается (#191.EXT)",
+    "candidate_legacy_keys": [
+      "error_191"
+    ]
+  },
+  "error_190": {
+    "text": "Передача файлов не поддерживается для клиентов ICQ ниже 8-ой версии (#190.EXT)",
+    "candidate_legacy_keys": [
+      "error_190"
+    ]
+  },
+  "b0": {
+    "text": "читает xTraz-сообщение",
+    "candidate_legacy_keys": []
+  },
+  "D3": {
+    "text": "Я",
+    "candidate_legacy_keys": [
+      "me"
+    ]
+  },
+  "i3": {
+    "text": "Блокировка",
+    "candidate_legacy_keys": [
+      "keylock"
+    ]
+  },
+  "D1": {
+    "text": "Стоимость",
+    "candidate_legacy_keys": [
+      "cost",
+      "options_cost"
+    ]
+  },
+  "U4": {
+    "text": "Авторизоваться",
+    "candidate_legacy_keys": [
+      "requauth"
+    ]
+  },
+  "b3": {
+    "text": "Интересы",
+    "candidate_legacy_keys": [
+      "interests"
+    ]
+  },
+  "u0": {
+    "text": "Адрес",
+    "candidate_legacy_keys": [
+      "addr"
+    ]
+  },
+  "u4": {
+    "text": "Всплывающие окна",
+    "candidate_legacy_keys": [
+      "popup_win"
+    ]
+  },
+  "A4": {
+    "text": "Видим для всех, кроме списка невидящих",
+    "candidate_legacy_keys": [
+      "ps_exclude_invisible"
+    ]
+  },
+  "error_185": {
+    "text": "Фотосъёмка не поддерживается (#185.EXT)",
+    "candidate_legacy_keys": [
+      "error_185"
+    ]
+  },
+  "O5": {
+    "text": "Невидимый",
+    "candidate_legacy_keys": [
+      "status_invisible"
+    ]
+  },
+  "r7": {
+    "text": "В обратном направлении",
+    "candidate_legacy_keys": [
+      "find_backwards"
+    ]
+  },
+  "o2": {
+    "text": "женский",
+    "candidate_legacy_keys": [
+      "female"
+    ]
+  },
+  "error_183": {
+    "text": "Ошибка во время получения снимка (#183.EXT)",
+    "candidate_legacy_keys": [
+      "error_183"
+    ]
+  },
+  "error_182": {
+    "text": "Ошибка запуска видеоискателя (#182.EXT)",
+    "candidate_legacy_keys": [
+      "error_182"
+    ]
+  },
+  "error_181": {
+    "text": "Ошибка инициализации видеоискателя (#181.EXT)",
+    "candidate_legacy_keys": [
+      "error_181"
+    ]
+  },
+  "V2": {
+    "text": "Имя группы",
+    "candidate_legacy_keys": [
+      "group_name"
+    ]
+  },
+  "error_180": {
+    "text": "Ошибка создания объекта 'VideoControl' (#180.EXT)",
+    "candidate_legacy_keys": [
+      "error_180"
+    ]
+  },
+  "lang_IT": {
+    "text": "Итальянский",
+    "candidate_legacy_keys": [
+      "lang_IT"
+    ]
+  },
+  "42": {
+    "text": "E-mail",
+    "candidate_legacy_keys": [
+      "email"
+    ]
+  },
+  "x6": {
+    "text": "Пью кофе/чай",
+    "candidate_legacy_keys": [
+      "xstatus_coffee"
+    ]
+  },
+  "F0": {
+    "text": "Асинхронная передача",
+    "candidate_legacy_keys": [
+      "async"
+    ]
+  },
+  "90": {
+    "text": "возможно, скрывается",
+    "candidate_legacy_keys": [
+      "maybe_hiding_from_you"
+    ]
+  },
+  "S2": {
+    "text": "Открыть ссылку",
+    "candidate_legacy_keys": [
+      "goto_url"
+    ]
+  },
+  "Q4": {
+    "text": "Из списка невидящих",
+    "candidate_legacy_keys": [
+      "rem_invisible_list"
+    ]
+  },
+  "E4": {
+    "text": "Все сообщения",
+    "candidate_legacy_keys": [
+      "pw_all"
+    ]
+  },
+  "k4": {
+    "text": "Подключение",
+    "candidate_legacy_keys": [
+      "connecting",
+      "options_network"
+    ]
+  },
+  "error_172": {
+    "text": "Ошибка при сохранении настроек (#172.EXT)",
+    "candidate_legacy_keys": [
+      "error_172"
+    ]
+  },
+  "error_171": {
+    "text": "Невозможно получить мета информацию (#171.EXT)",
+    "candidate_legacy_keys": [
+      "error_171"
+    ]
+  },
+  "error_170": {
+    "text": "Возможно, недостаточно памяти (#170.EXT)",
+    "candidate_legacy_keys": [
+      "error_170"
+    ]
+  },
+  "lang_HE": {
+    "text": "Еврейский",
+    "candidate_legacy_keys": [
+      "lang_HE"
+    ]
+  },
+  "H0": {
+    "text": "Авторизация",
+    "candidate_legacy_keys": [
+      "auth"
+    ]
+  },
+  "P2": {
+    "text": "Отправить фото",
+    "candidate_legacy_keys": [
+      "ft_cam",
+      "send_img"
+    ]
+  },
+  "error_161": {
+    "text": "У Вас нет ни одной группы в списке. Пожалуйста, создайте новую группу (#161.EXT)",
+    "candidate_legacy_keys": [
+      "error_161"
+    ]
+  },
+  "N5": {
+    "text": "Не беспокоить",
+    "candidate_legacy_keys": [
+      "status_dnd"
+    ]
+  },
+  "error_160": {
+    "text": "Ошибка поиска (#160.EXT)",
+    "candidate_legacy_keys": [
+      "error_160"
+    ]
+  },
+  "G5": {
+    "text": "Не будите во мне зверя...",
+    "candidate_legacy_keys": [
+      "status_message_text_evil"
+    ]
+  },
+  "j0": {
+    "text": "О программе",
+    "candidate_legacy_keys": [
+      "about"
+    ]
+  },
+  "76": {
+    "text": "Название",
+    "candidate_legacy_keys": [
+      "title"
+    ]
+  },
+  "F4": {
+    "text": "Цитировать",
+    "candidate_legacy_keys": [
+      "quote"
+    ]
+  },
+  "G6": {
+    "text": "Болею",
+    "candidate_legacy_keys": [
+      "xstatus_sick"
+    ]
+  },
+  "u7": {
+    "text": "Сообщений",
+    "candidate_legacy_keys": [
+      "hist_cur"
+    ]
+  },
+  "error_159": {
+    "text": "Сервер не отвечает на запрос поиска. Попробуйте снова (#159.EXT)",
+    "candidate_legacy_keys": [
+      "error_159"
+    ]
+  },
+  "l2": {
+    "text": "Нет",
+    "candidate_legacy_keys": [
+      "ext_hotkey_action_none",
+      "no",
+      "xstatus_none"
+    ]
+  },
+  "error_158": {
+    "text": "Вы совершили попытку добавить пользователя ICQ в спиок AIM (#158.EXT)",
+    "candidate_legacy_keys": [
+      "error_158"
+    ]
+  },
+  "error_157": {
+    "text": "Разрешено не больше количество элементов этого типа (#157.EXT)",
+    "candidate_legacy_keys": [
+      "error_157"
+    ]
+  },
+  "error_156": {
+    "text": "Ошибка добавления. Попробуйте снова (#156.EXT)",
+    "candidate_legacy_keys": [
+      "error_156"
+    ]
+  },
+  "p1": {
+    "text": "Временный контакт",
+    "candidate_legacy_keys": [
+      "color_temp"
+    ]
+  },
+  "error_155": {
+    "text": "Объект уже находится в списке на сервере (#155.EXT)",
+    "candidate_legacy_keys": [
+      "error_155"
+    ]
+  },
+  "error_154": {
+    "text": "Ошибка обновления списка пользователей (#154.EXT)",
+    "candidate_legacy_keys": [
+      "error_154"
+    ]
+  },
+  "error_153": {
+    "text": "Полученное сообщение 4 типа не обработано (#153.EXT)",
+    "candidate_legacy_keys": [
+      "error_153"
+    ]
+  },
+  "error_152": {
+    "text": "Полученное сообщение 2 типа не обработано (#152.EXT)",
+    "candidate_legacy_keys": [
+      "error_152"
+    ]
+  },
+  "error_151": {
+    "text": "Полученное сообщение 1 типа не обработано (#151.EXT)",
+    "candidate_legacy_keys": [
+      "error_151"
+    ]
+  },
+  "error_150": {
+    "text": "Полученное сообщение не обработано (#150.EXT)",
+    "candidate_legacy_keys": [
+      "error_150"
+    ]
+  },
+  "B6": {
+    "text": "Развлекаюсь",
+    "candidate_legacy_keys": [
+      "xstatus_funny"
+    ]
+  },
+  "W3": {
+    "text": "без",
+    "candidate_legacy_keys": [
+      "not"
+    ]
+  },
+  "37": {
+    "text": "Предупреждение",
+    "candidate_legacy_keys": [
+      "warning"
+    ]
+  },
+  "d6": {
+    "text": "Только отображение",
+    "candidate_legacy_keys": [
+      "typing_display_only"
+    ]
+  },
+  "g2": {
+    "text": "6",
+    "candidate_legacy_keys": [
+      "ext_clhotkey6"
+    ]
+  },
+  "e2": {
+    "text": "4",
+    "candidate_legacy_keys": [
+      "ext_clhotkey4"
+    ]
+  },
+  "H6": {
+    "text": "Сплю",
+    "candidate_legacy_keys": [
+      "xstatus_sleeping"
+    ]
+  },
+  "c2": {
+    "text": "0",
+    "candidate_legacy_keys": [
+      "ext_clhotkey0"
+    ]
+  },
+  "Y5": {
+    "text": "Кушаю",
+    "candidate_legacy_keys": [
+      "status_lunch",
+      "xstatus_eating"
+    ]
+  },
+  "i7": {
+    "text": "Socks5",
+    "candidate_legacy_keys": [
+      "proxy_socks5"
+    ]
+  },
+  "h7": {
+    "text": "Socks4",
+    "candidate_legacy_keys": [
+      "proxy_socks4"
+    ]
+  },
+  "K4": {
+    "text": "Удалить",
+    "candidate_legacy_keys": [
+      "delete",
+      "remove",
+      "remove_user"
+    ]
+  },
+  "V1": {
+    "text": "Запретить исходящее оповещение",
+    "candidate_legacy_keys": [
+      "dis_out_notif"
+    ]
+  },
+  "error_140": {
+    "text": "Требуемое действие не может быть выполнено в данное время (#140.EXT)",
+    "candidate_legacy_keys": [
+      "error_140"
+    ]
+  },
+  "F5": {
+    "text": "%nick%, не сейчас...",
+    "candidate_legacy_keys": []
+  },
+  "lang_ES": {
+    "text": "Испанский",
+    "candidate_legacy_keys": [
+      "lang_ES"
+    ]
+  },
+  "k5": {
+    "text": "Размер",
+    "candidate_legacy_keys": [
+      "size"
+    ]
+  },
+  "05": {
+    "text": "Результаты",
+    "candidate_legacy_keys": [
+      "results"
+    ]
+  },
+  "lang_EN": {
+    "text": "Английский",
+    "candidate_legacy_keys": [
+      "lang_EN"
+    ]
+  },
+  "w4": {
+    "text": "Предыдущий",
+    "candidate_legacy_keys": [
+      "prev"
+    ]
+  },
+  "K3": {
+    "text": "Свернуть",
+    "candidate_legacy_keys": [
+      "minimize"
+    ]
+  },
+  "error_137": {
+    "text": "Заголовок старого протокола ICQ не обработан (#137.EXT)",
+    "candidate_legacy_keys": [
+      "error_137"
+    ]
+  },
+  "error_136": {
+    "text": "Пакет канала ping не обработан (#136.EXT)",
+    "candidate_legacy_keys": [
+      "error_136"
+    ]
+  },
+  "error_135": {
+    "text": "Пакет отсоединенного канала не обработан (#135.EXT)",
+    "candidate_legacy_keys": [
+      "error_135"
+    ]
+  },
+  "error_134": {
+    "text": "Ошибка пакета канала не обработана (#134.EXT)",
+    "candidate_legacy_keys": [
+      "error_134"
+    ]
+  },
+  "error_133": {
+    "text": "SNAC заголовок не обработан (#133.EXT)",
+    "candidate_legacy_keys": [
+      "error_133"
+    ]
+  },
+  "error_132": {
+    "text": "Пакет подсоединенного канала не обработан (#132.EXT)",
+    "candidate_legacy_keys": [
+      "error_132"
+    ]
+  },
+  "Z0": {
+    "text": "Время мигания (сек)",
+    "candidate_legacy_keys": [
+      "blink_time"
+    ]
+  },
+  "error_131": {
+    "text": "Неизвестный канал (#131.EXT)",
+    "candidate_legacy_keys": [
+      "error_131"
+    ]
+  },
+  "error_130": {
+    "text": "FLAP заголовок не обработан (#130.EXT)",
+    "candidate_legacy_keys": [
+      "error_130"
+    ]
+  },
+  "61": {
+    "text": "Мелкий шрифт",
+    "candidate_legacy_keys": [
+      "chat_small_font"
+    ]
+  },
+  "m1": {
+    "text": "Фон в списке, чате",
+    "candidate_legacy_keys": [
+      "color_back"
+    ]
+  },
+  "d": {
+    "text": "Понедельник",
+    "candidate_legacy_keys": [
+      "monday"
+    ]
+  },
+  "Z3": {
+    "text": "Нет результатов",
+    "candidate_legacy_keys": [
+      "no_results"
+    ]
+  },
+  "lang_DE": {
+    "text": "Немецкий",
+    "candidate_legacy_keys": [
+      "lang_DE"
+    ]
+  },
+  "L3": {
+    "text": "мин",
+    "candidate_legacy_keys": [
+      "minutes"
+    ]
+  },
+  "q4": {
+    "text": "Телефон",
+    "candidate_legacy_keys": [
+      "phone"
+    ]
+  },
+  "X1": {
+    "text": "Меню контакта",
+    "candidate_legacy_keys": [
+      "user_menu"
+    ]
+  },
+  "n6": {
+    "text": "Нет",
+    "candidate_legacy_keys": [
+      "ext_hotkey_action_none",
+      "no",
+      "xstatus_none"
+    ]
+  },
+  "error_129": {
+    "text": "Input stream is out of sync (#129.EXT)",
+    "candidate_legacy_keys": [
+      "error_129"
+    ]
+  },
+  "error_128": {
+    "text": "Connection has not been established (#128.EXT)",
+    "candidate_legacy_keys": [
+      "error_128"
+    ]
+  },
+  "error_127": {
+    "text": "Specified server host and/or port is invalid (#127.EXT)",
+    "candidate_legacy_keys": [
+      "error_127"
+    ]
+  },
+  "error_126": {
+    "text": "Requested TCP connection cannot be made (#126.EXT)",
+    "candidate_legacy_keys": [
+      "error_126"
+    ]
+  },
+  "error_125": {
+    "text": "An I/O error occured (#125.EXT)",
+    "candidate_legacy_keys": [
+      "error_125"
+    ]
+  },
+  "lang_CZ": {
+    "text": "Чешский",
+    "candidate_legacy_keys": [
+      "lang_CZ"
+    ]
+  },
+  "error_124": {
+    "text": "Входной поток не синхронизован (#124.EXT)",
+    "candidate_legacy_keys": [
+      "error_124"
+    ]
+  },
+  "error_123": {
+    "text": "Соединение не может быть установлено (#123.EXT)",
+    "candidate_legacy_keys": [
+      "error_123"
+    ]
+  },
+  "s4": {
+    "text": "Длина оплачиваемого пакета в КБ",
+    "candidate_legacy_keys": [
+      "plength"
+    ]
+  },
+  "error_122": {
+    "text": "Указанный сервер и/или порт некорректны (#122.EXT)",
+    "candidate_legacy_keys": [
+      "error_122"
+    ]
+  },
+  "error_121": {
+    "text": "Требуемое TCP соединение неосуществимо (#121.EXT)",
+    "candidate_legacy_keys": [
+      "error_121"
+    ]
+  },
+  "72": {
+    "text": "Введите пароль",
+    "candidate_legacy_keys": [
+      "enter_password"
+    ]
+  },
+  "error_120": {
+    "text": "Произошла ошибка ввода-вывода (#120.EXT)",
+    "candidate_legacy_keys": [
+      "error_120"
+    ]
+  },
+  "T5": {
+    "text": "В сети",
+    "candidate_legacy_keys": [
+      "status_online"
+    ]
+  },
+  "C1": {
+    "text": "Копировать номер",
+    "candidate_legacy_keys": [
+      "copy_uin"
+    ]
+  },
+  "I5": {
+    "text": "Дом, милый дом...",
+    "candidate_legacy_keys": [
+      "status_message_text_home"
+    ]
+  },
+  "o0": {
+    "text": "Добавить в список",
+    "candidate_legacy_keys": [
+      "add_user"
+    ]
+  },
+  "O1": {
+    "text": "Удалить группу",
+    "candidate_legacy_keys": [
+      "del_group",
+      "remove_group"
+    ]
+  },
+  "11": {
+    "text": "Фантомные контакты",
+    "candidate_legacy_keys": [
+      "cache_contacts"
+    ]
+  },
+  "z2": {
+    "text": "Нормальный",
+    "candidate_legacy_keys": [
+      "font_plain"
+    ]
+  },
+  "I6": {
+    "text": "Отрываюсь",
+    "candidate_legacy_keys": [
+      "xstatus_surfing"
+    ]
+  },
+  "error_119": {
+    "text": "Время соединения истекло (#119.EXT)",
+    "candidate_legacy_keys": [
+      "error_119"
+    ]
+  },
+  "s1": {
+    "text": "Мой ник в чате",
+    "candidate_legacy_keys": [
+      "color_my_nick"
+    ]
+  },
+  "error_118": {
+    "text": "Сервер не отвечает (#118.EXT)",
+    "candidate_legacy_keys": [
+      "error_118"
+    ]
+  },
+  "l7": {
+    "text": "Порт прокси:",
+    "candidate_legacy_keys": [
+      "proxy_server_port"
+    ]
+  },
+  "error_117": {
+    "text": "Нет UIN и/или пароля (#117.EXT)",
+    "candidate_legacy_keys": [
+      "error_117"
+    ]
+  },
+  "error_116": {
+    "text": "Оффлайн сообщение не может быть обработано (#116.EXT)",
+    "candidate_legacy_keys": [
+      "error_116"
+    ]
+  },
+  "error_115": {
+    "text": "Контакт-лист не может быть обработан (#115.EXT)",
+    "candidate_legacy_keys": [
+      "error_115"
+    ]
+  },
+  "error_114": {
+    "text": "Попытки исчерпаны (#114.EXT)",
+    "candidate_legacy_keys": [
+      "error_114"
+    ]
+  },
+  "error_113": {
+    "text": "Слишком много клиентов с одного IP (#113.EXT)",
+    "candidate_legacy_keys": [
+      "error_113"
+    ]
+  },
+  "error_112": {
+    "text": "Несуществующий UIN (#112.EXT)",
+    "candidate_legacy_keys": [
+      "error_112"
+    ]
+  },
+  "error_111": {
+    "text": "Неверный пароль (#111.EXT)",
+    "candidate_legacy_keys": [
+      "error_111"
+    ]
+  },
+  "error_110": {
+    "text": "Множественный вход с тем же UIN (#110.EXT)",
+    "candidate_legacy_keys": [
+      "error_110"
+    ]
+  },
+  "J7": {
+    "text": "История сообщений с ",
+    "candidate_legacy_keys": [
+      "message_history_with"
+    ]
+  },
+  "lang_BR": {
+    "text": "Португальский (Бразилия)",
+    "candidate_legacy_keys": [
+      "lang_BR"
+    ]
+  },
+  "i5": {
+    "text": "Значок звука",
+    "candidate_legacy_keys": [
+      "show_sound_icon"
+    ]
+  },
+  "lang_BG": {
+    "text": "Болгарский",
+    "candidate_legacy_keys": [
+      "lang_BG"
+    ]
+  },
+  "L4": {
+    "text": "Удалиться из его КЛ",
+    "candidate_legacy_keys": [
+      "remove_me"
+    ]
+  },
+  "Q2": {
+    "text": "Во весь экран",
+    "candidate_legacy_keys": [
+      "full_screen"
+    ]
+  },
+  "lang_BA": {
+    "text": "Боснийский",
+    "candidate_legacy_keys": [
+      "lang_BA"
+    ]
+  },
+  "06": {
+    "text": "успешной",
+    "candidate_legacy_keys": [
+      "successful"
+    ]
+  },
+  "C3": {
+    "text": "Безопасный вход",
+    "candidate_legacy_keys": [
+      "md5_login"
+    ]
+  },
+  "K5": {
+    "text": "Ммм... Кушать захотелось...",
+    "candidate_legacy_keys": [
+      "status_message_text_lunch"
+    ]
+  },
+  "error_100": {
+    "text": "Неизвестная ошибка (#100.EXT)",
+    "candidate_legacy_keys": [
+      "error_100"
+    ]
+  },
+  "m2": {
+    "text": "Показ./скр. отключенных",
+    "candidate_legacy_keys": [
+      "ext_hotkey_action_onoff"
+    ]
+  },
+  "M4": {
+    "text": "Удалиться из списка ",
+    "candidate_legacy_keys": [
+      "remove_me_from"
+    ]
+  },
+  "r6": {
+    "text": "Вечеринка",
+    "candidate_legacy_keys": [
+      "xstatus_party"
+    ]
+  },
+  "93": {
+    "text": "Инициализация...",
+    "candidate_legacy_keys": [
+      "init_ft"
+    ]
+  },
+  "t0": {
+    "text": "В список игнора",
+    "candidate_legacy_keys": [
+      "add_ignore_list"
+    ]
+  },
+  "7": {
+    "text": "Сохран.",
+    "candidate_legacy_keys": [
+      "save"
+    ]
+  },
+  "F7": {
+    "text": "Заполнять из истории",
+    "candidate_legacy_keys": [
+      "show_prev_mess"
+    ]
+  },
+  "i": {
+    "text": "Суббота",
+    "candidate_legacy_keys": [
+      "saturday"
+    ]
+  },
+  "U6": {
+    "text": "Перекур",
+    "candidate_legacy_keys": [
+      "xstatus_cigarette"
+    ]
+  },
+  "s3": {
+    "text": "Рег. дата",
+    "candidate_legacy_keys": [
+      "li_regdata_time"
+    ]
+  },
+  "E0": {
+    "text": "Приветствие",
+    "candidate_legacy_keys": [
+      "antispam_hello"
+    ]
+  },
+  "B0": {
+    "text": "Включить анти-спам",
+    "candidate_legacy_keys": [
+      "antispam_enable"
+    ]
+  },
+  "_2": {
+    "text": "Отключиться",
+    "candidate_legacy_keys": [
+      "disconnect"
+    ]
+  },
+  "82": {
+    "text": "Ошибка",
+    "candidate_legacy_keys": [
+      "error",
+      "no_recent_ver"
+    ]
+  },
+  "K6": {
+    "text": "Работаю",
+    "candidate_legacy_keys": [
+      "xstatus_engineering"
+    ]
+  },
+  "m3": {
+    "text": "Ключевое слово",
+    "candidate_legacy_keys": [
+      "keyword"
+    ]
+  },
+  "C5": {
+    "text": "%nick%, я отсутствую с %time%. Скоро буду...",
+    "candidate_legacy_keys": []
+  },
+  "Y6": {
+    "text": "Разрешить чтение",
+    "candidate_legacy_keys": [
+      "xtraz_enable"
+    ]
+  },
+  "w6": {
+    "text": "Друзья",
+    "candidate_legacy_keys": [
+      "xstatus_friends"
+    ]
+  },
+  "r1": {
+    "text": "Ник контакта в чате",
+    "candidate_legacy_keys": [
+      "color_nick"
+    ]
+  },
+  "f3": {
+    "text": "КБ/сек",
+    "candidate_legacy_keys": [
+      "kbs"
+    ]
+  },
+  "3": {
+    "text": "Выбор",
+    "candidate_legacy_keys": [
+      "select"
+    ]
+  },
+  "z4": {
+    "text": "Видим для списка видящих",
+    "candidate_legacy_keys": [
+      "ps_visible_list"
+    ]
+  },
+  "14": {
+    "text": "Причина не дана",
+    "candidate_legacy_keys": [
+      "noreason"
+    ]
+  },
+  "j4": {
+    "text": "Горячие клавиши",
+    "candidate_legacy_keys": [
+      "options_hotkeys"
+    ]
+  },
+  "y0": {
+    "text": "Автоответчик",
+    "candidate_legacy_keys": [
+      "auto_answer"
+    ]
+  },
+  "O3": {
+    "text": "Перенести в группу",
+    "candidate_legacy_keys": [
+      "move_to_group"
+    ]
+  },
+  "b6": {
+    "text": "Прозрачность заголовка",
+    "candidate_legacy_keys": []
+  },
+  "M1": {
+    "text": "дн",
+    "candidate_legacy_keys": [
+      "days"
+    ]
+  },
+  "85": {
+    "text": "Порт",
+    "candidate_legacy_keys": [
+      "server_port"
+    ]
+  },
+  "97": {
+    "text": "Перенос слов по буквам",
+    "candidate_legacy_keys": [
+      "word_wrapping"
+    ]
+  },
+  "21": {
+    "text": "Позвонить/Смс",
+    "candidate_legacy_keys": [
+      "calls"
+    ]
+  },
+  "H3": {
+    "text": "Сообщение",
+    "candidate_legacy_keys": [
+      "message"
+    ]
+  },
+  "70": {
+    "text": "Всевидящее око",
+    "candidate_legacy_keys": [
+      "magic_eye"
+    ]
+  },
+  "a2": {
+    "text": "Список клавиш",
+    "candidate_legacy_keys": [
+      "ext_listhotkeys"
+    ]
+  },
+  "C2": {
+    "text": "Размер шрифта",
+    "candidate_legacy_keys": [
+      "font_size"
+    ]
+  },
+  "b4": {
+    "text": "Только онлайн контакты",
+    "candidate_legacy_keys": [
+      "only_online"
+    ]
+  },
+  "e": {
+    "text": "Вторник",
+    "candidate_legacy_keys": [
+      "tuesday"
+    ]
+  },
+  "J6": {
+    "text": "В интернете",
+    "candidate_legacy_keys": [
+      "xstatus_internet"
+    ]
+  },
+  "J3": {
+    "text": "MIDP info",
+    "candidate_legacy_keys": [
+      "midp_info"
+    ]
+  },
+  "K2": {
+    "text": "Передача...",
+    "candidate_legacy_keys": [
+      "ft_transfer"
+    ]
+  },
+  "M2": {
+    "text": "Через web-сервер",
+    "candidate_legacy_keys": [
+      "ft_type_web"
+    ]
+  }
+}

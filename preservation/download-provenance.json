@@ -1,0 +1,169 @@
+[
+  {
+    "url": "https://web.archive.org/web/20100924114916id_/http://jimm.im/dload/jimm/Jimm_MIDP2_CZ.zip",
+    "file": "Jimm_MIDP2_CZ.zip",
+    "size": 265134,
+    "sha256": "484ac6dd5eb2f75d94f87d722bdd6de037e511777d5cdb27116c8d240d9b88cf",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924123751id_/http://jimm.im/dload/jimm/Jimm_MIDP2_EN.zip",
+    "file": "Jimm_MIDP2_EN.zip",
+    "size": 264476,
+    "sha256": "6096d0776f6cf00a6b539b58d1eff77783d2c5a76e42f58b5a0a1c952bb06275",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924113914id_/http://jimm.im/dload/jimm/Jimm_MIDP2_RO.zip",
+    "file": "Jimm_MIDP2_RO.zip",
+    "size": 265385,
+    "sha256": "b9c5d2fd7c3d8a793739b7d859531b9079ff0cac7d9c7d999789b7b1728743c8",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924163353id_/http://jimm.im/dload/jimm/Jimm_MIDP2_RU.zip",
+    "file": "Jimm_MIDP2_RU.zip",
+    "size": 266342,
+    "sha256": "e0da83351d18e9ea2d300096384c5ad029d5e01ba121dc217ce3f38855b9da56",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924105858id_/http://jimm.im/dload/jimm/Jimm_MIDP2_RU_light.zip",
+    "file": "Jimm_MIDP2_RU_light.zip",
+    "size": 660222,
+    "sha256": "97eaf6a0a37caa3db66d5a3b3aae04ede98b70f95141b3e6eab5f4c7d13e6d0c",
+    "entries": [
+      "History/",
+      "History/Jimm.jad",
+      "History/Jimm.jar",
+      "SMILES/",
+      "SMILES/Jimm.jad",
+      "SMILES/Jimm.jar",
+      "Traffic, Smiles/",
+      "Traffic, Smiles/Jimm.jad",
+      "Traffic, Smiles/Jimm.jar",
+      "Traffic, Proxy, Smiles/",
+      "Traffic, Proxy, Smiles/Jimm.jad",
+      "Traffic, Proxy, Smiles/Jimm.jar",
+      "Traffic, Proxy, Smiles, History/",
+      "Traffic, Proxy, Smiles, History/Jimm.jad",
+      "Traffic, Proxy, Smiles, History/Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924163559id_/http://jimm.im/dload/jimm/Jimm_MIDP2_UA.zip",
+    "file": "Jimm_MIDP2_UA.zip",
+    "size": 266414,
+    "sha256": "7adf78b11a6031ad432210b4dce6ee96e4cd48190487301cf118a6790e4498ce",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924105148id_/http://jimm.im/dload/jimm/Jimm_Moto_CZ.zip",
+    "file": "Jimm_Moto_CZ.zip",
+    "size": 251168,
+    "sha256": "58e50672d33e9f1da40a56419e126ebf2069331fdea778b13ffa4ceb939f0ce2",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924124526id_/http://jimm.im/dload/jimm/Jimm_Moto_EN.zip",
+    "file": "Jimm_Moto_EN.zip",
+    "size": 250554,
+    "sha256": "41fe92542838a05425d261f8c53ad7be25feb6eba2e5617e8164e722781afa54",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924111656id_/http://jimm.im/dload/jimm/Jimm_Moto_RO.zip",
+    "file": "Jimm_Moto_RO.zip",
+    "size": 251457,
+    "sha256": "d0b395268fb552a02c71cf4253684e39bcf25b1582b6c132a6487a31c21ea764",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924144220id_/http://jimm.im/dload/jimm/Jimm_Moto_RU.zip",
+    "file": "Jimm_Moto_RU.zip",
+    "size": 252443,
+    "sha256": "fb36ef61a204e9c180708fb4043155a737d9796afd922ef073e0e72130c19e8a",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924163837id_/http://jimm.im/dload/jimm/Jimm_Moto_UA.zip",
+    "file": "Jimm_Moto_UA.zip",
+    "size": 252459,
+    "sha256": "bf0d14f3f189235f8e4eee635dcdb9dcfc8417d19e706c201385dc4fa9dacf80",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924143550id_/http://jimm.im/dload/jimm/Jimm_Siemens2_CZ.zip",
+    "file": "Jimm_Siemens2_CZ.zip",
+    "size": 253910,
+    "sha256": "a68e5c5ba7fc790b5f91f9b3b865d752a05bacf601ec98d273478e26b1bdae72",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924123236id_/http://jimm.im/dload/jimm/Jimm_Siemens2_EN.zip",
+    "file": "Jimm_Siemens2_EN.zip",
+    "size": 253113,
+    "sha256": "18fbf06b3ad5561ad7c656150316075ac03a71ad7570513100b778f3e8f90e70",
+    "entries": [
+      "Jimm.jad",
+      "Jimm.jar"
+    ]
+  },
+  {
+    "url": "https://web.archive.org/web/20100924114418id_/http://jimm.im/dload/jimm/Jimm_Siemens2_RO.zip",
+    "file": "Jimm_Siemens2_RO.zip",
+    "size": 254151,
+    "sha256": "b1034334ad453140fa79df2f4f4f1d5b1b6a8caf5ad9041a499692eaad588216"
+  },
+  {
+    "url": "https://web.archive.org/web/20100924110902id_/http://jimm.im/dload/jimm/Jimm_Siemens2_RU.zip",
+    "file": "Jimm_Siemens2_RU.zip",
+    "size": 255127,
+    "sha256": "d53603c9eb64b4fe85e5ea6579e4aff576d8bd2526355b071032097c03368a9b"
+  },
+  {
+    "url": "https://web.archive.org/web/20100924115914id_/http://jimm.im/dload/jimm/Jimm_Siemens2_UA.zip",
+    "file": "Jimm_Siemens2_UA.zip",
+    "size": 255179,
+    "sha256": "6a833ee7a7a881a3fa4570a5a9f312ae797ed3cd247dd183f048f204cde59aac"
+  },
+  {
+    "url": "https://web.archive.org/web/20100924121922id_/http://jimm.im/dload/jimm/sources/jimm_0.6.0_src.rar",
+    "file": "jimm_0.6.0_src.rar",
+    "size": 491369,
+    "sha256": "e8523084f693260da85f9a69ea1cc7bee749a76dd0a1c215dec9fa710832c16f"
+  }
+]

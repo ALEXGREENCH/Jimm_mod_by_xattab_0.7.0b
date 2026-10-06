@@ -1,0 +1,2613 @@
+--- decompiled/jimm/Jimm.java
++++ reconstruction/midp2/src/jimm/Jimm.java
+@@ -120,7 +120,7 @@
+    public void pauseApp() {
+    }
+ 
+-   public void destroyApp(boolean var1) {
++   public void destroyApp(boolean var1) throws javax.microedition.midlet.MIDletStateChangeException {
+       C_ac.m_b_9b75();
+ 
+       try {
+--- decompiled/recovered/C_a.java
++++ reconstruction/midp2/src/recovered/C_a.java
+@@ -26,18 +26,18 @@
+ 
+    public final void m_a_1385ff(boolean var1) {
+       C_at.m_a_9b68();
+-      var1 = this.f_a_a_12b93.m_d_9b68();
++      int color = this.f_a_a_12b93.m_d_9b68();
+       this.f_a_a_12b93.m_a_9b75();
+       this.f_a_a_12b93
+-         .m_a_68a7a001(C_bt.m_a_e96ea081("95") + ":\n" + C_bt.m_a_e96ea081("n4") + "\n", var1, 1 + C_bq.f_bq_g_49, -1)
+-         .m_a_68a7a001(C_at.m_a_47921032(11) + "\n", var1, C_bq.f_bq_g_49, -1)
+-         .m_a_68a7a001(C_at.m_a_47921032(12) + "\n", var1, C_bq.f_bq_g_49, -1)
+-         .m_a_68a7a001(C_at.m_a_47921032(13) + "\n\n", var1, C_bq.f_bq_g_49, -1)
+-         .m_a_68a7a001(C_bt.m_a_e96ea081("j5") + " ", var1, 1 + C_bq.f_bq_g_49, -1)
+-         .m_a_68a7a001(C_at.m_a_47921032(4) + "\n" + C_bt.m_a_e96ea081("n4") + "\n", var1, 1 + C_bq.f_bq_g_49, -1)
+-         .m_a_68a7a001(C_at.m_a_47921032(21) + "\n", var1, C_bq.f_bq_g_49, -1)
+-         .m_a_68a7a001(C_at.m_a_47921032(22) + "\n", var1, C_bq.f_bq_g_49, -1)
+-         .m_a_68a7a001(C_at.m_a_47921032(23) + "\n", var1, C_bq.f_bq_g_49, -1);
++         .m_a_68a7a001(C_bt.m_a_e96ea081("95") + ":\n" + C_bt.m_a_e96ea081("n4") + "\n", color, 1 + C_bq.f_bq_g_49, -1)
++         .m_a_68a7a001(C_at.m_a_47921032(11) + "\n", color, C_bq.f_bq_g_49, -1)
++         .m_a_68a7a001(C_at.m_a_47921032(12) + "\n", color, C_bq.f_bq_g_49, -1)
++         .m_a_68a7a001(C_at.m_a_47921032(13) + "\n\n", color, C_bq.f_bq_g_49, -1)
++         .m_a_68a7a001(C_bt.m_a_e96ea081("j5") + " ", color, 1 + C_bq.f_bq_g_49, -1)
++         .m_a_68a7a001(C_at.m_a_47921032(4) + "\n" + C_bt.m_a_e96ea081("n4") + "\n", color, 1 + C_bq.f_bq_g_49, -1)
++         .m_a_68a7a001(C_at.m_a_47921032(21) + "\n", color, C_bq.f_bq_g_49, -1)
++         .m_a_68a7a001(C_at.m_a_47921032(22) + "\n", color, C_bq.f_bq_g_49, -1)
++         .m_a_68a7a001(C_at.m_a_47921032(23) + "\n", color, C_bq.f_bq_g_49, -1);
+       C_at.m_a_9b68();
+       this.f_a_a_12b93.m_d_9b75();
+    }
+--- decompiled/recovered/C_aa.java
++++ reconstruction/midp2/src/recovered/C_aa.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.HistoryStorage. Release class: aa. */
+ 
+ import java.io.ByteArrayInputStream;
+ import java.io.ByteArrayOutputStream;
+@@ -97,6 +99,7 @@
+    public static int m_a_aad3b1f2(String var0) {
+       p_aa_c_aad3b1ff(var0);
+ 
++      int var2;
+       try {
+          var2 = f_aa_a_a0e37fd2.getNumRecords();
+       } catch (Exception var1) {
+--- decompiled/recovered/C_ab.java
++++ reconstruction/midp2/src/recovered/C_ab.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.FileTransfer. Release class: ab. */
+ 
+ import java.io.IOException;
+ import java.io.InputStream;
+@@ -52,16 +54,16 @@
+    }
+ 
+    public final void m_a_9b75() {
+-      if ((this = this).f_ab_c_49 == 2) {
++      if (this.f_ab_c_49 == 2) {
+          this.f_ab_a_24088c = new C_be(this);
+          Display.getDisplay(Jimm.f_jimm_Jimm_a_3fbeb738).setCurrent(this.f_ab_a_24088c);
+-         this.f_ab_a_24088c.m_a_9b75();
++         this.f_ab_a_24088c.m_a_9b75() ;
+       } else {
+          if (this.f_ab_c_49 == 1) {
+             try {
+                C_al.m_a_48a6e557(this);
+                C_al.m_a_1385ff(false);
+-               C_al.m_a_9b75();
++               C_al.m_a_9b75() ;
+                return;
+             } catch (C_ar var1) {
+                C_ar.m_a_aef55300(var1);
+@@ -101,7 +103,7 @@
+                      var6 -= var7;
+                      if (var1.f_ab_b_49 != 0) {
+                         C_cp.m_b_13462e(100 * (var1.f_ab_b_49 - var6) / var1.f_ab_b_49);
+-                        C_cp.m_a_aad3b1ff(C_bt.m_a_e96ea081("K2"));
++                        C_cp.m_a_aad3b1ff(C_bt.m_a_e96ea081("K2")) ;
+                      }
+                   } while (var6 > 0);
+ 
+@@ -169,7 +171,7 @@
+          Object var7 = null;
+          if (this.f_ab_a_2406f9 == null) {
+             C_bq.m_a_4f708078(34, var1);
+-            C_bq.f_bq_a_240927.m_a_9b75();
++            C_bq.f_bq_a_240927.m_a_9b75() ;
+             C_bf.m_a_b329a056((InputStream)var2, false);
+          } else {
+             var3 = (int)var4.m_a_9b69();
+@@ -229,10 +231,10 @@
+                switch (C_bq.m_a_134621(97)) {
+                   case 0:
+                      C_cp.m_b_13462e(0);
+-                     C_cp.m_a_aad3b1ff(C_bt.m_a_e96ea081("93"));
++                     C_cp.m_a_aad3b1ff(C_bt.m_a_e96ea081("93")) ;
+                      C_cp.m_b_8eb9d703(C_cp.f_cp_a_1570d10e);
+                      C_cp.m_a_6f63a2af(this);
+-                     C_cp.m_a_9b75();
++                     C_cp.m_a_9b75() ;
+                      this.f_ab_b_523beb0a = this.f_ab_a_a555694c.getString();
+                      String[] var7 = C_cf.m_a_639c22ad(this.f_ab_b_523beb0a, '/');
+                      this.f_ab_c_523beb0a = var7.length == 0 ? this.f_ab_b_523beb0a : var7[var7.length - 1];
+@@ -246,10 +248,10 @@
+                      String var6 = var10001;
+                      this.f_ab_a_24088c = null;
+                      C_cp.m_b_13462e(0);
+-                     C_cp.m_a_aad3b1ff(C_bt.m_a_e96ea081("93"));
++                     C_cp.m_a_aad3b1ff(C_bt.m_a_e96ea081("93")) ;
+                      C_cp.m_a_8eb9d703(C_cp.f_cp_a_1570d10e);
+                      C_cp.m_a_6f63a2af(this);
+-                     C_cp.m_a_9b75();
++                     C_cp.m_a_9b75() ;
+                      C_bg var4 = new C_bg(C_bq.m_a_47921032(254), this.f_ab_a_2406f9, var6, var8, this.f_ab_a_91ffb459, this.f_ab_b_49);
+                      C_bv var5 = new C_bv(var4);
+ 
+@@ -271,7 +273,7 @@
+ 
+             if (var1 == C_cp.f_cp_a_1570d10e) {
+                this.p_ab_b_9b75();
+-               C_w.m_a_9b75();
++               C_w.m_a_9b75() ;
+             }
+          }
+       }
+--- decompiled/recovered/C_ac.java
++++ reconstruction/midp2/src/recovered/C_ac.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.Icq. Release class: ac. */
+ 
+ import java.io.ByteArrayOutputStream;
+ import java.util.Random;
+@@ -34,7 +36,7 @@
+       return f_ac_a_24048d;
+    }
+ 
+-   public static void m_a_cb3b8b85(C_ba var0) {
++   public static void m_a_cb3b8b85(C_ba var0) throws recovered.C_ar {
+       var0.m_a_cb2e5cc2(f_ac_a_24048d);
+       if (!var0.m_c_9b79()) {
+          throw new C_ar(140, 0);
+@@ -57,7 +59,7 @@
+       C_cn var3 = new C_cn(var0, 1);
+ 
+       try {
+-         m_a_cb3b8b85(var3);
++         m_a_cb3b8b85(var3) ;
+       } catch (C_ar var2) {
+          C_ar.m_a_aef55300(var2);
+          if (var2.f_ar_a_5a) {
+@@ -90,14 +92,14 @@
+       C_y var5 = new C_y(C_bq.m_a_47921032(254), C_bq.m_a_47921032(255), p_ac_b_73cf11cb(), C_bq.m_a_47921032(2));
+ 
+       try {
+-         m_a_cb3b8b85(var5);
++         m_a_cb3b8b85(var5) ;
+       } catch (C_ar var3) {
+          if (!m_a_cb352e57(var3)) {
+             C_ar.m_a_aef55300(var3);
+          }
+       }
+ 
+-      C_cp.m_a_13462e(C_bi.m_a_1349e2(C_bq.a$134622()));
++      C_cp.m_a_13462e(C_bi.m_a_1349e2(C_bq.a$134622())) ;
+       C_cp.m_a_48a013c6(C_x.m_a_485a59b9(C_bq.m_a_134621(92)));
+       C_cp.m_a_335e07a5(p_ac_b_73cf11cb(), var5, true);
+       f_ac_b_523beb0a = C_cf.m_a_2416688b(true, false);
+@@ -106,14 +108,14 @@
+    public static synchronized void m_b_9b75() {
+       f_ac_a_5a = false;
+       if (f_ac_a_240bf0 != null) {
+-         f_ac_a_240bf0.m_a_9b75();
+-      }
+-
+-      m_d_9b75();
++         f_ac_a_240bf0.m_a_9b75() ;
++      }
++
++      m_d_9b75() ;
+       m_e_9b75();
+ 
+       try {
+-         C_at.m_a_9b75();
++         C_at.m_a_9b75() ;
+       } catch (Exception var0) {
+       }
+ 
+@@ -133,13 +135,13 @@
+             C_ar.m_a_aef55300(var3);
+          }
+ 
+-         C_w.m_a_cb37742e(var0);
+-         C_w.m_a_9b75();
++         C_w.m_a_cb37742e(var0) ;
++         C_w.m_a_9b75() ;
+       } else {
+          C_cn var5 = new C_cn(var0, 2);
+ 
+          try {
+-            m_a_cb3b8b85(var5);
++            m_a_cb3b8b85(var5) ;
+          } catch (C_ar var4) {
+             C_ar.m_a_aef55300(var4);
+             if (var4.f_ar_a_5a) {
+@@ -153,7 +155,7 @@
+       return true;
+    }
+ 
+-   public static synchronized void m_a_afa340b5(String var0, boolean var1) {
++   public static synchronized void m_a_afa340b5(String var0, boolean var1) throws recovered.C_ar {
+       if (!C_bq.m_a_134632(146)) {
+          byte[] var4 = C_cf.m_a_afa28ebe(var0);
+          int var2 = f_ac_a_b47.length + 1 + var4.length + 2;
+@@ -195,6 +197,7 @@
+ 
+       int var1;
+       int var2;
++      int var5;
+       for (var2 = var1 = var5 = var4 & 32767; var5 != 0; var5 /= 8) {
+          var3 += var5;
+       }
+@@ -210,7 +213,7 @@
+       }
+ 
+       f_ac_c_5a = false;
+-      Jimm.m_a_9b75();
++      Jimm.m_a_9b75() ;
+       if (f_ac_b_48a69a2c != null) {
+          f_ac_b_48a69a2c.removeAllElements();
+       }
+@@ -292,7 +295,7 @@
+                }
+             } else if (var3 != null) {
+                try {
+-                  var3.m_a_9b75();
++                  var3.m_a_9b75() ;
+                   f_ac_b_48a69a2c.addElement(var3);
+                } catch (C_ar var13) {
+                   if (!m_a_cb352e57(var13)) {
+@@ -390,8 +393,8 @@
+       }
+ 
+       if (!C_bq.m_a_134632(149)) {
+-         f_ac_a_240bf0.m_a_9b75();
+-         m_d_9b75();
++         f_ac_a_240bf0.m_a_9b75() ;
++         m_d_9b75() ;
+          C_v.m_a_d3ad8a43(10, null);
+       }
+    }
+@@ -427,7 +430,7 @@
+          }
+ 
+          if (var9) {
+-            m_b_9b75();
++            m_b_9b75() ;
+             C_w.m_c_9b75();
+ 
+             try {
+@@ -435,7 +438,7 @@
+             } catch (InterruptedException var4) {
+             }
+ 
+-            int var5 = (var1 = C_bq.m_a_47921032(1)).indexOf(32) < 0 ? 10 : 32;
++            int var5 = ((String)(var1 = C_bq.m_a_47921032(1))).indexOf(32) < 0 ? 10 : 32;
+             if (((Object[])(var1 = C_cf.m_a_639c22ad((String)var1, (char)var5))).length >= 2) {
+                StringBuffer var2 = new StringBuffer();
+ 
+@@ -448,7 +451,7 @@
+                C_bq.m_a_4f708078(1, var2.toString());
+             }
+ 
+-            m_a_9b75();
++            m_a_9b75() ;
+             return true;
+          }
+       }
+@@ -505,7 +508,7 @@
+       }
+    }
+ 
+-   public static void m_a_13462e(int var0) {
++   public static void m_a_13462e(int var0) throws recovered.C_ar {
+       C_bq.m_a_255f656(192, var0);
+       C_bq.m_c_9b75();
+       if (m_b_9b79()) {
+@@ -519,17 +522,17 @@
+                var1 = 3;
+             }
+ 
+-            m_a_132be7(var1);
+-         }
+-
+-         C_am.m_a_13462e(m_d_9b68() | var0);
++            m_a_132be7(var1) ;
++         }
++
++         C_am.m_a_13462e(m_d_9b68() | var0) ;
+       }
+ 
+       C_w.m_e_9b75();
+       f_ac_b_523beb0a = C_cf.m_a_2416688b(true, false);
+    }
+ 
+-   public static void m_b_13462e(int var0) {
++   public static void m_b_13462e(int var0) throws recovered.C_ar {
+       ByteArrayOutputStream var1 = new ByteArrayOutputStream();
+       Object var2 = null;
+       byte[] var3 = C_cf.m_a_44c4d6c8(C_bq.m_a_47921032(32) + " " + C_bq.m_a_47921032(33), true);
+@@ -561,7 +564,7 @@
+    public static void m_a_132be7(byte var0) {
+       if (m_b_9b79()) {
+          try {
+-            C_am.m_a_132be7(var0);
++            C_am.m_a_132be7(var0) ;
+          } catch (C_ar var1) {
+             C_ar.m_a_aef55300(var1);
+          }
+--- decompiled/recovered/C_ad.java
++++ reconstruction/midp2/src/recovered/C_ad.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.SystemNotice. Release class: ad. */
+ 
+ public final class C_ad extends C_bm {
+    public int f_ad_a_49;
+--- decompiled/recovered/C_ae.java
++++ reconstruction/midp2/src/recovered/C_ae.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.UrlMessage. Release class: ae. */
+ 
+ public final class C_ae extends C_bm {
+    public String f_ae_a_523beb0a;
+--- decompiled/recovered/C_af.java
++++ reconstruction/midp2/src/recovered/C_af.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.XStatusForm. Release class: af. */
+ 
+ import java.util.Vector;
+ import javax.microedition.lcdui.ChoiceGroup;
+--- decompiled/recovered/C_ag.java
++++ reconstruction/midp2/src/recovered/C_ag.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.TextLine. Release class: ag. */
+ 
+ import java.util.Vector;
+ import javax.microedition.lcdui.Graphics;
+--- decompiled/recovered/C_ah.java
++++ reconstruction/midp2/src/recovered/C_ah.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.Emotions. Release class: ah. */
+ 
+ import java.io.DataInputStream;
+ import java.io.EOFException;
+@@ -40,14 +42,14 @@
+             StringBuffer var5 = new StringBuffer();
+             boolean var6 = false;
+             boolean var7 = false;
+-            p_ah_a_693a5ae2(var5, var4);
++            p_ah_a_693a5ae2(var5, var4) ;
+             int var14 = Integer.parseInt(var5.toString());
+ 
+             label62:
+             while (true) {
+-               p_ah_a_693a5ae2(var5, var4);
++               p_ah_a_693a5ae2(var5, var4) ;
+                Integer var8 = Integer.valueOf(var5.toString());
+-               p_ah_a_693a5ae2(var5, var4);
++               p_ah_a_693a5ae2(var5, var4) ;
+                String var9 = var5.toString();
+                int var10 = 0;
+ 
+@@ -93,7 +95,7 @@
+ 
+          for (int var17 = 0; var17 < var15; var17++) {
+             Object[] var19 = (Object[])var2.elementAt(var17);
+-            f_ah_a_b4e[var17] = (Integer)var19[0];
++            f_ah_a_b4e[var17] = ((Integer)var19[0]).intValue();
+             f_ah_a_6dccaaa5[var17] = (String)var19[1];
+             f_ah_b_6dccaaa5[var17] = (String)var19[2];
+          }
+@@ -105,7 +107,7 @@
+          for (int var18 = 0; var18 < var15; var18++) {
+             Object[] var20 = (Object[])var1.elementAt(var18);
+             f_ah_c_6dccaaa5[var18] = (String)var20[0];
+-            f_ah_b_b4e[var18] = (Integer)var20[1];
++            f_ah_b_b4e[var18] = ((Integer)var20[1]).intValue();
+          }
+ 
+          f_ah_a_5a = true;
+@@ -127,7 +129,7 @@
+       var0.addElement(var6);
+    }
+ 
+-   private static boolean p_ah_a_693a5ae2(StringBuffer var0, DataInputStream var1) {
++   private static boolean p_ah_a_693a5ae2(StringBuffer var0, DataInputStream var1) throws java.io.IOException {
+       var0.setLength(0);
+ 
+       byte var2;
+@@ -181,8 +183,8 @@
+             int[] var20 = null;
+ 
+             for (int var21 = 0; var21 < var17; var21++) {
+-               if (((Object[])(var18 = (int[])f_ah_a_48a69a2c.elementAt(var21)))[0] < var15) {
+-                  var15 = (int)((Object[])var18)[0];
++               if (((int[])(var18 = (int[])f_ah_a_48a69a2c.elementAt(var21)))[0] < var15) {
++                  var15 = ((int[])var18)[0];
+                   var20 = (int[])var18;
+                }
+             }
+--- decompiled/recovered/C_ai.java
++++ reconstruction/midp2/src/recovered/C_ai.java
+@@ -96,7 +96,7 @@
+       return var2;
+    }
+ 
+-   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) {
++   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) throws recovered.C_ar {
+       int var3 = C_cf.m_b_49634b7a(var0, var1 + 2);
+       String var4 = null;
+       String var5 = null;
+--- decompiled/recovered/C_aj.java
++++ reconstruction/midp2/src/recovered/C_aj.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.util.StringConvertor. Release class: aj. */
+ 
+ import java.io.InputStream;
+ import java.util.Vector;
+--- decompiled/recovered/C_al.java
++++ reconstruction/midp2/src/recovered/C_al.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.FileBrowser. Release class: al. */
+ 
+ import javax.microedition.io.Connector;
+ import javax.microedition.io.file.FileConnection;
+@@ -37,7 +39,7 @@
+    private static void p_al_b_9b75() {
+       f_al_a_129a3.m_j_9b75();
+       f_al_a_6dccaaa5 = new String[0];
+-      f_al_a_129a3.m_a_9b75();
++      f_al_a_129a3.m_a_9b75() ;
+       f_al_a_129a3.m_k_9b75();
+    }
+ 
+@@ -64,7 +66,7 @@
+ 
+    private static void p_al_c_9b75() {
+       f_al_a_129a3.m_j_9b75();
+-      f_al_a_129a3.m_a_9b75();
++      f_al_a_129a3.m_a_9b75() ;
+ 
+       for (int var0 = 0; var0 < f_al_a_6dccaaa5.length; var0++) {
+          f_al_a_129a3.m_a_c92c35af(null, f_al_a_6dccaaa5[var0]);
+@@ -146,7 +148,7 @@
+    public final void m_a_f31d59c0(C_bf var1, int var2, int var3) {
+    }
+ 
+-   public static void m_a_9b75() {
++   public static void m_a_9b75() throws recovered.C_ar {
+       if (f_al_a_2405a4 == null) {
+          new C_al();
+       }
+@@ -208,11 +210,11 @@
+ 
+          if (var1 == f_al_a_1570d10e) {
+             if (f_al_a_12bb2.m_a_46a7a37a() != null || f_al_a_5a) {
+-               C_w.m_a_9b75();
+-               return;
+-            }
+-
+-            C_bq.f_bq_a_240927.m_a_9b75();
++               C_w.m_a_9b75() ;
++               return;
++            }
++
++            C_bq.f_bq_a_240927.m_a_9b75() ;
+          }
+       }
+    }
+--- decompiled/recovered/C_am.java
++++ reconstruction/midp2/src/recovered/C_am.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.OtherAction. Release class: am. */
+ 
+ import java.util.Vector;
+ 
+@@ -18,7 +20,7 @@
+       16
+    );
+ 
+-   private static void p_am_a_e3a6666e(C_s[] var0) {
++   private static void p_am_a_e3a6666e(C_s[] var0) throws recovered.C_ar {
+       byte[] var1;
+       (var1 = new byte[(var0.length << 4) + 4])[0] = 0;
+       var1[1] = 5;
+@@ -32,7 +34,7 @@
+       C_ac.f_ac_a_240bf0.m_a_cb4b0023(new C_bw(2, 4, 0L, new byte[0], var1));
+    }
+ 
+-   public static void m_a_9b75() {
++   public static void m_a_9b75() throws recovered.C_ar {
+       C_s[] var0 = new C_s[]{new C_s(C_cf.f_cf_t_b47), f_am_b_12b74};
+       Vector var1;
+       Vector var2 = var1 = new Vector();
+@@ -131,11 +133,11 @@
+       C_s[] var8 = new C_s[var1.size() + var0.length];
+       var1.copyInto(var8);
+       System.arraycopy(var0, 0, var8, var1.size(), var0.length);
+-      p_am_a_e3a6666e(var8);
++      p_am_a_e3a6666e(var8) ;
+       C_ac.m_b_13462e(var5);
+    }
+ 
+-   public static void m_a_13462e(int var0) {
++   public static void m_a_13462e(int var0) throws recovered.C_ar {
+       int var1 = C_bq.m_a_134621(94);
+       long var2 = -2L;
+       long var4 = 65536L;
+@@ -250,7 +252,7 @@
+       C_ac.f_ac_a_240bf0.m_a_cb4b0023(new C_bw(1, 30, 0L, new byte[0], f_am_a_b47));
+    }
+ 
+-   public static void m_a_132be7(byte var0) {
++   public static void m_a_132be7(byte var0) throws recovered.C_ar {
+       int var1 = C_ac.m_a_46a7a10e().m_e_9b68();
+       byte var2 = 9;
+       if (var1 == 0) {
+--- decompiled/recovered/C_an.java
++++ reconstruction/midp2/src/recovered/C_an.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.EditInfo. Release class: an. */
+ 
+ import java.io.ByteArrayOutputStream;
+ import javax.microedition.lcdui.ChoiceGroup;
+--- decompiled/recovered/C_ao.java
++++ reconstruction/midp2/src/recovered/C_ao.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.ContactListItem. Release class: ao. */
+ 
+ public interface C_ao {
+    boolean equals(Object var1);
+--- decompiled/recovered/C_ap.java
++++ reconstruction/midp2/src/recovered/C_ap.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.ChatHistory. Release class: ap. */
+ 
+ import java.util.Enumeration;
+ import java.util.Hashtable;
+--- decompiled/recovered/C_aq.java
++++ reconstruction/midp2/src/recovered/C_aq.java
+@@ -8,7 +8,7 @@
+       this.f_aq_a_2404ac = var1;
+    }
+ 
+-   protected final void m_a_9b75() {
++   protected final void m_a_9b75() throws recovered.C_ar {
+       byte[] var2 = C_cf.m_a_afa28ebe(this.f_aq_a_2404ac.f_bm_c_523beb0a);
+       byte[] var3 = C_cf.m_a_44c4d6c8(this.f_aq_a_2404ac.f_ad_a_523beb0a, true);
+       if (this.f_aq_a_2404ac.f_ad_a_49 == 4) {
+--- decompiled/recovered/C_ar.java
++++ reconstruction/midp2/src/recovered/C_ar.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.JimmException. Release class: ar. */
+ 
+ import javax.microedition.lcdui.Alert;
+ import javax.microedition.lcdui.AlertType;
+--- decompiled/recovered/C_as.java
++++ reconstruction/midp2/src/recovered/C_as.java
+@@ -53,7 +53,7 @@
+       return var1;
+    }
+ 
+-   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) {
++   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) throws recovered.C_ar {
+       var2 = C_cf.m_b_49634b7a(var0, var1 + 2);
+       int var3;
+       if ((var3 = C_cf.m_b_49634b7a(var0, var1 + 4)) < 24) {
+--- decompiled/recovered/C_at.java
++++ reconstruction/midp2/src/recovered/C_at.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.Traffic. Release class: at. */
+ 
+ import java.io.ByteArrayInputStream;
+ import java.io.ByteArrayOutputStream;
+@@ -50,7 +52,7 @@
+       f_at_a_12946 = new C_a();
+    }
+ 
+-   public static void m_a_9b75() {
++   public static void m_a_9b75() throws java.io.IOException, javax.microedition.rms.InvalidRecordIDException, javax.microedition.rms.RecordStoreException, javax.microedition.rms.RecordStoreFullException, javax.microedition.rms.RecordStoreNotFoundException, javax.microedition.rms.RecordStoreNotOpenException {
+       RecordStore var0 = RecordStore.openRecordStore("traffic", true);
+ 
+       while (var0.getNumRecords() < 4) {
+@@ -142,16 +144,17 @@
+    private static int p_at_a_1385f2(boolean var0) {
+       int var1 = C_bq.m_a_134621(70);
+       int var2 = C_bq.m_a_134621(72);
++      int cost;
+       if (var0) {
+          if (f_at_e_49 != 0) {
+-            var0 = (f_at_e_49 / var2 + 1) * var1;
++            cost = (f_at_e_49 / var2 + 1) * var1;
+          } else {
+-            var0 = 0;
++            cost = 0;
+          }
+       } else if (f_at_e_49 != 0) {
+-         var0 = (f_at_e_49 / var2 + 1) * var1 + f_at_c_49;
++         cost = (f_at_e_49 / var2 + 1) * var1 + f_at_c_49;
+       } else {
+-         var0 = f_at_c_49;
++         cost = f_at_c_49;
+       }
+ 
+       Calendar var4 = Calendar.getInstance();
+@@ -163,7 +166,7 @@
+          f_at_b_711fe21.setTime(new Date().getTime());
+       }
+ 
+-      return var0 + f_at_h_49;
++      return cost + f_at_h_49;
+    }
+ 
+    public static int m_a_9b68() {
+--- decompiled/recovered/C_au.java
++++ reconstruction/midp2/src/recovered/C_au.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.FileSystem. Release class: au. */
+ 
+ import java.io.InputStream;
+ import java.io.OutputStream;
+@@ -7,19 +9,19 @@
+    C_au() {
+    }
+ 
+-   public static String[] m_a_855a3144(String var0, boolean var1) {
+-      return C_b.m_a_855a3144(var0, var1);
++   public static String[] m_a_855a3144(String var0, boolean var1) throws recovered.C_ar {
++      return C_b.m_a_855a3144(var0, var1) ;
+    }
+ 
+-   public abstract void m_a_aad3b1ff(String var1);
++   public abstract void m_a_aad3b1ff(String var1) throws java.io.IOException ;
+ 
+-   public abstract OutputStream m_a_75f818f3();
++   public abstract OutputStream m_a_75f818f3() throws java.io.IOException ;
+ 
+-   public abstract InputStream m_a_b52a89f8();
++   public abstract InputStream m_a_b52a89f8() throws java.io.IOException ;
+ 
+    public abstract void m_a_9b75();
+ 
+-   public abstract long m_a_9b69();
++   public abstract long m_a_9b69() throws java.io.IOException ;
+ 
+    public abstract String m_a_73cf11cb();
+ }
+--- decompiled/recovered/C_av.java
++++ reconstruction/midp2/src/recovered/C_av.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.ChatTextList. Release class: av. */
+ 
+ import java.util.Vector;
+ import javax.microedition.lcdui.Alert;
+@@ -255,8 +257,9 @@
+       if (var7.f_t_a_d18d4967.containsKey(var9)) {
+          C_ag var11;
+          C_n var12;
+-         if ((var4 = (Integer)var7.f_t_a_d18d4967.get(var9)) < var7.f_t_a_48a69a2c.size()
+-            && (var11 = (C_ag)var7.f_t_a_48a69a2c.elementAt(var4)).f_ag_a_48a69a2c.size() > 0
++         int index = ((Integer)var7.f_t_a_d18d4967.get(var9)).intValue();
++         if (index < var7.f_t_a_48a69a2c.size()
++            && (var11 = (C_ag)var7.f_t_a_48a69a2c.elementAt(index)).f_ag_a_48a69a2c.size() > 0
+             && (var12 = (C_n)var11.f_ag_a_48a69a2c.elementAt(0)).f_n_a_129e1 != null) {
+             var12.f_n_a_129e1 = var3;
+             var7.m_f_9b75();
+--- decompiled/recovered/C_aw.java
++++ reconstruction/midp2/src/recovered/C_aw.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.ContactItem. Release class: aw. */
+ 
+ import java.io.DataInputStream;
+ import java.io.DataOutputStream;
+@@ -290,7 +292,7 @@
+       }
+    }
+ 
+-   public final void m_a_3faa729d(DataOutputStream var1) {
++   public final void m_a_3faa729d(DataOutputStream var1) throws java.io.IOException {
+       var1.writeByte(0);
+       var1.writeInt(this.f_aw_c_49);
+       var1.writeByte(this.f_aw_e_49 & 10);
+@@ -307,7 +309,7 @@
+       }
+    }
+ 
+-   public final void m_a_414f9488(DataInputStream var1) {
++   public final void m_a_414f9488(DataInputStream var1) throws java.io.IOException {
+       this.f_aw_c_49 = var1.readInt();
+       this.f_aw_e_49 = var1.readByte();
+       this.f_aw_l_49 = var1.readInt();
+@@ -509,7 +511,7 @@
+          return false;
+       } else {
+          var1 = var1;
+-         return this.m_a_47921032(0).equals(var1.m_a_47921032(0)) && this.m_a_134632(8) == var1.m_a_134632(8);
++         return this.m_a_47921032(0).equals(((C_aw)var1).m_a_47921032(0)) && this.m_a_134632(8) == ((C_aw)var1).m_a_134632(8);
+       }
+    }
+ 
+@@ -622,7 +624,7 @@
+          var1 = C_ap.m_a_51338891(f_aw_c_523beb0a);
+          C_ap.m_b_aad3b1ff(f_aw_c_523beb0a);
+          var1.m_a_cb37742e(this);
+-         var1.m_e_9b75();
++         var1.m_e_9b75() ;
+          if (C_bq.m_a_134632(167) && this.f_aw_a_5a && this.m_b_134621(76) != 16) {
+             try {
+                C_l.m_a_afa300e4(f_aw_c_523beb0a, 0);
+@@ -643,7 +645,7 @@
+       if (C_cp.m_a_9b79()) {
+          C_cp.m_a_13462e(var1);
+          C_cp.m_a_48a013c6(this.m_a_2477b6e().m_a_2477940());
+-         C_cp.m_a_aad3b1ff(this.m_a_47921032(1));
++         C_cp.m_a_aad3b1ff(this.m_a_47921032(1)) ;
+          C_cp.m_b_9b75();
+          C_cp.m_f_9b75();
+       } else {
+--- decompiled/recovered/C_ax.java
++++ reconstruction/midp2/src/recovered/C_ax.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.DirectConnectionAction. Release class: ax. */
+ 
+ import java.util.Date;
+ import javax.microedition.lcdui.Alert;
+@@ -20,7 +22,7 @@
+       this.f_ax_b_5a = false;
+    }
+ 
+-   protected final void m_a_9b75() {
++   protected final void m_a_9b75() throws recovered.C_ar {
+       super.f_ba_a_24048d.getClass();
+       (C_ac.f_ac_a_240c0f = new C_cc())
+          .m_a_aad3b1ff(C_cf.m_c_79834524(this.f_ax_a_2408ca.m_a_46a7a37a().m_a_255806f(225)) + ":" + this.f_ax_a_2408ca.m_a_46a7a37a().m_b_134621(74));
+@@ -44,7 +46,7 @@
+       C_ac.f_ac_a_240c0f.m_a_cb4b0023(var2);
+    }
+ 
+-   protected final boolean m_a_cb4b0027(C_cd var1) {
++   protected final boolean m_a_cb4b0027(C_cd var1) throws recovered.C_ar {
+       int var2 = 0;
+       if (var1 instanceof C_cq) {
+          byte[] var4;
+@@ -54,7 +56,7 @@
+             C_cq var21 = new C_cq(var7);
+             C_ac.f_ac_a_240c0f.m_a_cb4b0023(var21);
+             byte[] var8 = new byte[19 + C_bq.m_a_47921032(254).length() + 1];
+-            var2 = (boolean)0;
++            var2 = 0;
+             C_cf.m_a_e306985c(var8, 0, 0);
+             C_cf.m_a_e3069c1d(var8, 1, 0L);
+             C_cf.m_a_7dcd9a57(var8, 5, 1L, false);
+@@ -108,7 +110,7 @@
+                   } catch (Exception var3) {
+                   }
+ 
+-                  C_ac.f_ac_a_240c0f.m_a_9b75();
++                  C_ac.f_ac_a_240c0f.m_a_9b75() ;
+                   Thread.yield();
+                   C_ac.f_ac_a_240c0f = null;
+                   this.f_ax_a_2408ca.m_a_46a7a37a().m_a_cb3e45bf(null);
+@@ -126,10 +128,11 @@
+          }
+       }
+ 
+-      return (boolean)var2;
++      return var2 != 0;
+    }
+ 
+    public final int m_a_9b68() {
++      int var2;
+       try {
+          var2 = this.f_ax_b_49 * 100 / (this.f_ax_a_2408ca.f_bg_a_49 >>> 11);
+       } catch (Exception var1) {
+@@ -177,7 +180,7 @@
+             return;
+          case 2:
+             this.f_ax_b_5a = true;
+-            C_w.m_a_9b75();
++            C_w.m_a_9b75() ;
+             return;
+          case 3:
+             Alert var2 = new Alert(
+--- decompiled/recovered/C_ay.java
++++ reconstruction/midp2/src/recovered/C_ay.java
+@@ -1,7 +1,9 @@
+ package recovered;
+ 
++/** 0.6 source correspondence (inferred): DrawControls.VirtualListCommands. Release class: ay. */
++
+ public interface C_ay {
+-   void m_a_f31d59c0(C_bf var1, int var2, int var3);
++   void m_a_f31d59c0(C_bf var1, int var2, int var3) ;
+ 
+    void m_a_cb3dd160(C_bf var1);
+ 
+--- decompiled/recovered/C_az.java
++++ reconstruction/midp2/src/recovered/C_az.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.EnterPassword. Release class: az. */
+ 
+ import javax.microedition.lcdui.Command;
+ import javax.microedition.lcdui.CommandListener;
+@@ -35,7 +37,7 @@
+          Jimm.f_jimm_Jimm_a_4a58c677.setCurrent(var1.f_az_a_fd805d5b);
+          C_bu.m_a_1385ff(true);
+       } else if (C_ac.m_a_9b79()) {
+-         p_az_a_9b75();
++         p_az_a_9b75() ;
+       } else {
+          C_w.m_a_9b75();
+       }
+@@ -55,7 +57,7 @@
+       if (var1 == this.f_az_a_1570d10e) {
+          if (C_bq.m_a_47921032(38).equals(this.f_az_a_fd805d5b.getString())) {
+             if (C_ac.m_a_9b79()) {
+-               p_az_a_9b75();
++               p_az_a_9b75() ;
+             } else {
+                C_cp.m_d_9b75();
+                C_cp.f_cp_a_4a = 0L;
+--- decompiled/recovered/C_b.java
++++ reconstruction/midp2/src/recovered/C_b.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.JSR75FileSystem. Release class: b. */
+ 
+ import java.io.InputStream;
+ import java.io.OutputStream;
+@@ -11,8 +13,8 @@
+ public final class C_b extends C_au {
+    private FileConnection f_b_a_dac33527;
+ 
+-   public static String[] m_a_855a3144(String var0, boolean var1) {
+-      String var2 = null;
++   public static String[] m_a_855a3144(String var0, boolean var1) throws recovered.C_ar {
++      String[] var2 = null;
+ 
+       try {
+          if (var0.equals("/")) {
+@@ -50,11 +52,11 @@
+       }
+    }
+ 
+-   public final void m_a_aad3b1ff(String var1) {
++   public final void m_a_aad3b1ff(String var1) throws java.io.IOException {
+       this.f_b_a_dac33527 = (FileConnection)Connector.open("file://" + var1);
+    }
+ 
+-   public final OutputStream m_a_75f818f3() {
++   public final OutputStream m_a_75f818f3() throws java.io.IOException {
+       if (!this.f_b_a_dac33527.exists()) {
+          this.f_b_a_dac33527.create();
+       } else if (this.f_b_a_dac33527.exists() & true) {
+@@ -65,7 +67,7 @@
+       return this.f_b_a_dac33527.openOutputStream();
+    }
+ 
+-   public final InputStream m_a_b52a89f8() {
++   public final InputStream m_a_b52a89f8() throws java.io.IOException {
+       return this.f_b_a_dac33527.openInputStream();
+    }
+ 
+@@ -79,7 +81,7 @@
+       }
+    }
+ 
+-   public final long m_a_9b69() {
++   public final long m_a_9b69() throws java.io.IOException {
+       return this.f_b_a_dac33527 != null ? this.f_b_a_dac33527.fileSize() : -1L;
+    }
+ 
+--- decompiled/recovered/C_ba.java
++++ reconstruction/midp2/src/recovered/C_ba.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.Action. Release class: ba. */
+ 
+ public abstract class C_ba {
+    protected C_ac f_ba_a_24048d;
+@@ -15,16 +17,16 @@
+    }
+ 
+    public final boolean m_c_9b79() {
+-      return this.f_ba_b_5a ? C_ac.m_b_9b79() : C_ac.m_a_9b79();
++      return this.f_ba_b_5a ? C_ac.m_b_9b79() : C_ac.m_a_9b79() ;
+    }
+ 
+-   protected abstract void m_a_9b75();
++   protected abstract void m_a_9b75() throws recovered.C_ar ;
+ 
+-   protected abstract boolean m_a_cb4b0027(C_cd var1);
++   protected abstract boolean m_a_cb4b0027(C_cd var1) throws recovered.C_ar ;
+ 
+    public abstract boolean m_a_9b79();
+ 
+-   public abstract boolean m_b_9b79();
++   public abstract boolean m_b_9b79() ;
+ 
+    public int m_a_9b68() {
+       return this.m_a_9b79() ? 100 : 0;
+--- decompiled/recovered/C_bb.java
++++ reconstruction/midp2/src/recovered/C_bb.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.CachedRecord. Release class: bb. */
+ 
+ final class C_bb {
+    String f_bb_a_523beb0a;
+--- decompiled/recovered/C_bd.java
++++ reconstruction/midp2/src/recovered/C_bd.java
+@@ -19,8 +19,6 @@
+    public C_bd(C_ac var1) {
+    }
+ 
+-   // $VF: Could not inline inconsistent finally blocks
+-   // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+    private static synchronized String p_bd_a_8ea82db7(String var0, String var1) {
+       if (C_cf.m_a_aad3b203(var0)) {
+          return var0;
+@@ -30,12 +28,8 @@
+             String var9 = (var8 = (SocketConnection)Connector.open("socket://" + var0 + ":" + var1, 3)).getAddress();
+ 
+             try {
+-               try {
+-                  var8.close();
+-               } catch (Exception var5) {
+-               }
+-            } catch (Throwable var6) {
+-               throw var6;
++               var8.close();
++            } catch (Exception var5) {
+             }
+ 
+             return var9;
+@@ -45,7 +39,7 @@
+       }
+    }
+ 
+-   public final synchronized void m_a_aad3b1ff(String var1) {
++   public final synchronized void m_a_aad3b1ff(String var1) throws recovered.C_ar {
+       int var2 = C_bq.m_a_134621(76);
+       this.f_bd_b_5a = false;
+       String var3 = "";
+@@ -67,26 +61,26 @@
+       try {
+          switch (var2) {
+             case 0:
+-               this.p_bd_a_efecb97b((byte)4, var3, var4);
++               this.p_bd_a_efecb97b((byte)4, var3, var4) ;
+                break;
+             case 1:
+-               this.p_bd_a_efecb97b((byte)5, var3, var4);
++               this.p_bd_a_efecb97b((byte)5, var3, var4) ;
+                break;
+             case 2:
+                try {
+-                  this.p_bd_a_efecb97b((byte)5, var3, var4);
++                  this.p_bd_a_efecb97b((byte)5, var3, var4) ;
+                } catch (Exception var6) {
+                }
+ 
+                if (!this.f_bd_b_5a) {
+-                  this.p_bd_b_9b75();
++                  this.p_bd_b_9b75() ;
+ 
+                   try {
+                      Thread.sleep(2000L);
+                   } catch (InterruptedException var5) {
+                   }
+ 
+-                  this.p_bd_a_efecb97b((byte)4, var3, var4);
++                  this.p_bd_a_efecb97b((byte)4, var3, var4) ;
+                }
+          }
+ 
+@@ -100,7 +94,7 @@
+       }
+    }
+ 
+-   private synchronized void p_bd_a_efecb97b(byte var1, String var2, String var3) {
++   private synchronized void p_bd_a_efecb97b(byte var1, String var2, String var3) throws recovered.C_ar {
+       String var4 = C_bq.m_a_47921032(8);
+       String var5 = C_bq.m_a_47921032(9);
+       String var6 = C_bq.m_a_47921032(11);
+@@ -165,18 +159,19 @@
+             }
+          }
+ 
++         int packetLength;
+          OutputStream var34 = this.f_bd_a_33c83ab2;
+          byte[] var24;
+          if (var1 == 5) {
+-            var1 = 7 + var2.length();
++            packetLength = 7 + var2.length();
+             var24 = C_cf.m_a_afa28ebe(var2);
+          } else {
+-            var1 = 9;
++            packetLength = 9;
+             var24 = C_cf.m_c_afa28ebe(p_bd_a_8ea82db7(var2, var3));
+          }
+ 
+          byte[] var21;
+-         (var21 = new byte[var1])[0] = (byte)var1;
++         (var21 = new byte[packetLength])[0] = (byte)var1;
+          var21[1] = 1;
+          if (var1 == 5) {
+             var21[2] = 0;
+@@ -245,7 +240,7 @@
+ 
+    public final synchronized void m_a_9b75() {
+       super.f_cb_a_5a = true;
+-      this.p_bd_b_9b75();
++      this.p_bd_b_9b75() ;
+       Thread.yield();
+    }
+ 
+@@ -273,7 +268,7 @@
+       }
+    }
+ 
+-   public final void m_a_cb4b0023(C_cd var1) {
++   public final void m_a_cb4b0023(C_cd var1) throws recovered.C_ar {
+       C_ar var2;
+       if (this.f_bd_a_33c83ab2 == null && !C_ac.m_a_cb352e57(var2 = new C_ar(123, 0))) {
+          throw var2;
+@@ -292,7 +287,7 @@
+                this.f_bd_a_33c83ab2.flush();
+                C_at.m_b_13462e(var7.length + 51);
+             } catch (IOException var5) {
+-               this.m_a_9b75();
++               this.m_a_9b75() ;
+             }
+          }
+       }
+--- decompiled/recovered/C_be.java
++++ reconstruction/midp2/src/recovered/C_be.java
+@@ -77,7 +77,7 @@
+       }
+    }
+ 
+-   private void p_be_a_aad3b1ff(String var1) {
++   private void p_be_a_aad3b1ff(String var1) throws java.io.IOException, javax.microedition.media.MediaException {
+       this.f_be_a_2fd8b6bf = Manager.createPlayer(var1);
+       this.f_be_a_2fd8b6bf.realize();
+       this.f_be_a_fbb20f6c = (VideoControl)this.f_be_a_2fd8b6bf.getControl("VideoControl");
+@@ -88,9 +88,9 @@
+       if (!this.f_be_a_5a) {
+          try {
+             try {
+-               this.p_be_a_aad3b1ff("capture://image");
++               this.p_be_a_aad3b1ff("capture://image") ;
+             } catch (Exception var5) {
+-               this.p_be_a_aad3b1ff("capture://video");
++               this.p_be_a_aad3b1ff("capture://video") ;
+             }
+ 
+             if (this.f_be_a_fbb20f6c != null) {
+@@ -181,20 +181,20 @@
+          if (!this.f_be_b_5a) {
+             this.p_be_e_9b75();
+          } else {
+-            this.p_be_c_9b75();
++            this.p_be_c_9b75() ;
+          }
+       } else {
+          if (var1 == this.f_be_a_1570d10e) {
+             if (!this.f_be_b_5a) {
+                this.f_be_b_5a = true;
+                this.f_be_a_5a = false;
+-               this.m_a_9b75();
++               this.m_a_9b75() ;
+                return;
+             }
+ 
+             this.p_be_d_9b75();
+             this.p_be_b_9b75();
+-            C_w.m_a_9b75();
++            C_w.m_a_9b75() ;
+             this.f_be_a_24046e.f_ab_a_24088c = null;
+          }
+       }
+@@ -214,7 +214,7 @@
+             return;
+          }
+ 
+-         this.p_be_c_9b75();
++         this.p_be_c_9b75() ;
+       }
+    }
+ }
+--- decompiled/recovered/C_bf.java
++++ reconstruction/midp2/src/recovered/C_bf.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.VirtualList. Release class: bf. */
+ 
+ import java.io.InputStream;
+ import java.util.Vector;
+@@ -411,8 +413,8 @@
+    }
+ 
+    public final void m_e_1385ff(boolean var1) {
+-      var1 = var1 ? this.m_e_9b68() : -this.m_e_9b68();
+-      this.m_a_2563266(var1, false);
++      int delta = var1 ? this.m_e_9b68() : -this.m_e_9b68();
++      this.m_a_2563266(delta, false);
+    }
+ 
+    protected boolean m_a_9b79() {
+@@ -643,11 +645,11 @@
+    }
+ 
+    protected final void m_e_13462e(int var1) {
+-      this.p_bf_d_255f295(var1, 1);
++      this.p_bf_d_255f295(var1, 1) ;
+    }
+ 
+    protected final void m_f_13462e(int var1) {
+-      this.p_bf_d_255f295(var1, 2);
++      this.p_bf_d_255f295(var1, 2) ;
+    }
+ 
+    public final void m_a_6f63a2af(CommandListener var1) {
+@@ -1087,7 +1089,7 @@
+             int var11 = this.m_i_9b68() - f_bf_a_49;
+             int var10 = this.p_bf_m_9b68() - var6;
+             int var12;
+-            int var13 = (var12 = this.m_a_9b68()) > var5 && var12 > 0;
++            boolean var13 = (var12 = this.m_a_9b68()) > var5 && var12 > 0;
+             int var14;
+             if ((var14 = m_a_255f288(m_a_255f288(this.f_bf_q_49, 32), -32)) == 0) {
+                var14 = 8421504;
+@@ -1103,11 +1105,12 @@
+             var1.setColor(var14);
+             var1.drawLine(var11 + 3, var7, var11 + 3, var10 - 1);
+             if (var13) {
+-               if ((var13 = (var10 - var7) * var5 / var12) < 7) {
+-                  var13 = 7;
++               int thumb;
++               if ((thumb = (var10 - var7) * var5 / var12) < 7) {
++                  thumb = 7;
+                }
+ 
+-               f_bf_E_49 = (f_bf_D_49 = this.f_bf_o_49 * (var10 - var13 - var7) / (var12 - var5) + var7) + var13;
++               f_bf_E_49 = (f_bf_D_49 = this.f_bf_o_49 * (var10 - thumb - var7) / (var12 - var5) + var7) + thumb;
+                var1.setColor(m_a_255f288(var14, -192));
+                var1.drawRect(var11, f_bf_D_49, f_bf_a_49 - 1, f_bf_E_49 - f_bf_D_49 - 1);
+                var1.setColor(m_a_255f288(this.f_bf_s_49, 96));
+--- decompiled/recovered/C_bg.java
++++ reconstruction/midp2/src/recovered/C_bg.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.FileTransferMessage. Release class: bg. */
+ 
+ import java.io.InputStream;
+ 
+--- decompiled/recovered/C_bh.java
++++ reconstruction/midp2/src/recovered/C_bh.java
+@@ -27,7 +27,7 @@
+       this.f_bh_b_6dccaaa5[0] = var1;
+    }
+ 
+-   protected final void m_a_9b75() {
++   protected final void m_a_9b75() throws recovered.C_ar {
+       byte[] var1;
+       C_cf.m_a_7dcd25f8(var1 = new byte[6], 0, 1202, false);
+       C_cf.m_a_7dcd9a57(var1, 2, Long.parseLong(this.f_bh_b_6dccaaa5[0]), false);
+--- decompiled/recovered/C_bi.java
++++ reconstruction/midp2/src/recovered/C_bi.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.JimmUI. Release class: bi. */
+ 
+ import java.util.Hashtable;
+ import java.util.Vector;
+@@ -190,7 +192,7 @@
+             short var27 = 0;
+             switch (var52) {
+                case 1:
+-                  m_a_b7252e78(f_bi_c_2406f9, null);
++                  m_a_b7252e78(f_bi_c_2406f9, null) ;
+                case 2:
+                default:
+                   break;
+@@ -286,13 +288,13 @@
+                   Jimm.f_jimm_Jimm_a_4a58c677.setCurrent(f_bi_c_fd805d5b);
+                   break;
+                case 10:
+-                  C_aa.m_a_e925fa09(f_bi_c_2406f9.m_b_73cf11cb(), f_bi_c_2406f9.f_aw_a_523beb0a);
++                  C_aa.m_a_e925fa09(f_bi_c_2406f9.m_b_73cf11cb(), f_bi_c_2406f9.f_aw_a_523beb0a) ;
+                   break;
+                case 11:
+                   p_bi_c_cb37742e(f_bi_c_2406f9);
+                   break;
+                case 12:
+-                  m_a_e925fa09(f_bi_c_2406f9.m_b_73cf11cb(), f_bi_c_2406f9.f_aw_a_523beb0a);
++                  m_a_e925fa09(f_bi_c_2406f9.m_b_73cf11cb(), f_bi_c_2406f9.f_aw_a_523beb0a) ;
+                   break;
+                case 13:
+                   m_c_9b75();
+@@ -300,7 +302,7 @@
+                   C_w.m_a_9b75();
+                   break;
+                case 14:
+-                  m_b_cb37742e(f_bi_c_2406f9);
++                  m_b_cb37742e(f_bi_c_2406f9) ;
+                   break;
+                case 15:
+                   f_bi_a_b4e = m_a_62c27a66("V2", 5, f_bi_a_240908, 1, f_bi_c_2406f9.m_b_134621(65));
+@@ -371,7 +373,7 @@
+             switch (f_bi_g_49) {
+                case 10001:
+                   f_bi_b_2406f9.m_a_255f295(70, 0);
+-                  C_ap.m_b_cb37742e(f_bi_b_2406f9);
++                  C_ap.m_b_cb37742e(f_bi_b_2406f9) ;
+                   break;
+                case 10002:
+                   f_bi_b_2406f9.m_a_2563266(8, false);
+@@ -417,7 +419,7 @@
+                   case 200001:
+                      String var44;
+                      if ((var44 = this.p_bi_c_73cf11cb()).length() != 0) {
+-                        m_a_122835b8(var44, f_bi_a_2406f9);
++                        m_a_122835b8(var44, f_bi_a_2406f9) ;
+                         this.b$552c4e01();
+                         if (Jimm.f_jimm_Jimm_b_5a) {
+                            f_bi_a_fd805d5b = null;
+@@ -519,14 +521,14 @@
+                         C_ar.m_a_aef55300(var13);
+                      }
+                   } else {
+-                     f_bi_a_a2d63fba.commandAction(var1, var2);
++                     f_bi_a_a2d63fba.commandAction(var1, var2) ;
+                   }
+ 
+                   p_bi_d_9b75();
+                   return;
+                }
+             } else if (f_bi_a_67f46df9 != null && var2 == f_bi_a_67f46df9) {
+-               f_bi_a_a2d63fba.commandAction(var1, var2);
++               f_bi_a_a2d63fba.commandAction(var1, var2) ;
+                f_bi_a_67f46df9 = null;
+                f_bi_a_49 = -1;
+             }
+@@ -613,7 +615,7 @@
+ 
+    public static int m_a_48817c53(Command var0, int var1) {
+       Object var2;
+-      return f_bi_a_49 == var1 && (var2 = f_bi_a_d18d4967.get(var0)) != null ? (Integer)var2 : -1;
++      return f_bi_a_49 == var1 && (var2 = f_bi_a_d18d4967.get(var0)) != null ? ((Integer)var2).intValue() : -1;
+    }
+ 
+    public static void a$4d6ecd91(String var0, String var1, CommandListener var2, int var3) {
+@@ -814,7 +816,7 @@
+ 
+          for (int var3 = 0; var3 < C_bq.f_bq_a_49; var3++) {
+             if (var1 == C_bq.f_bq_a_b4e[var3]) {
+-               p_bi_a_2a6fa57c(C_bq.m_a_47921032(40).charAt(var3), var0, var2);
++               p_bi_a_2a6fa57c(C_bq.m_a_47921032(40).charAt(var3), var0, var2) ;
+                return true;
+             }
+          }
+@@ -826,17 +828,17 @@
+    public static void m_a_db39810e(C_aw var0, int var1, int var2) {
+       switch (var1) {
+          case -10:
+-            p_bi_a_2a6fa57c(C_bq.m_a_134621(81), var0, var2);
++            p_bi_a_2a6fa57c(C_bq.m_a_134621(81), var0, var2) ;
+             break;
+          case 35:
+-            p_bi_a_2a6fa57c(C_bq.m_a_134621(82), var0, var2);
++            p_bi_a_2a6fa57c(C_bq.m_a_134621(82), var0, var2) ;
+             return;
+          case 42:
+-            p_bi_a_2a6fa57c(C_bq.m_a_134621(78), var0, var2);
++            p_bi_a_2a6fa57c(C_bq.m_a_134621(78), var0, var2) ;
+             return;
+          case 48:
+             if (!C_bq.m_a_134632(175)) {
+-               p_bi_a_2a6fa57c(C_bq.m_a_134621(77), var0, var2);
++               p_bi_a_2a6fa57c(C_bq.m_a_134621(77), var0, var2) ;
+                return;
+             }
+ 
+@@ -846,10 +848,10 @@
+             }
+             break;
+          case 52:
+-            p_bi_a_2a6fa57c(C_bq.m_a_134621(79), var0, var2);
++            p_bi_a_2a6fa57c(C_bq.m_a_134621(79), var0, var2) ;
+             return;
+          case 54:
+-            p_bi_a_2a6fa57c(C_bq.m_a_134621(80), var0, var2);
++            p_bi_a_2a6fa57c(C_bq.m_a_134621(80), var0, var2) ;
+             return;
+       }
+    }
+@@ -860,13 +862,13 @@
+          switch (var0) {
+             case 2:
+                if (var1 != null) {
+-                  m_a_e925fa09(var1.m_b_73cf11cb(), var1.f_aw_a_523beb0a);
++                  m_a_e925fa09(var1.m_b_73cf11cb(), var1.f_aw_a_523beb0a) ;
+                   return;
+                }
+                break;
+             case 3:
+                if (var1 != null) {
+-                  m_a_b7252e78(var1, null);
++                  m_a_b7252e78(var1, null) ;
+                   return;
+                }
+                break;
+--- decompiled/recovered/C_bj.java
++++ reconstruction/midp2/src/recovered/C_bj.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.OptionsForm. Release class: bj. */
+ 
+ import java.util.Calendar;
+ import java.util.Date;
+@@ -133,7 +135,7 @@
+ 
+    public final void m_a_9b75() {
+       this.f_bj_a_12b93.m_a_13462e(9);
+-      this.commandAction(C_bi.f_bi_i_1570d10e, null);
++      this.commandAction(C_bi.f_bi_i_1570d10e, null) ;
+    }
+ 
+    private String p_bj_a_d9e4d430(String var1, int var2, boolean var3) {
+@@ -152,7 +154,7 @@
+    private void p_bj_d_9b75() {
+       int var1 = this.f_bj_b_12b93.m_b_9b68();
+       boolean var2 = C_bq.m_a_134632(175);
+-      this.f_bj_b_12b93.m_a_9b75();
++      this.f_bj_b_12b93.m_a_9b75() ;
+       if (!var2) {
+          boolean var5 = false;
+          String var4 = "c2";
+@@ -207,7 +209,7 @@
+ 
+    public final void m_b_9b75() {
+       int var1 = this.f_bj_d_12b93.m_b_9b68();
+-      this.f_bj_d_12b93.m_a_9b75();
++      this.f_bj_d_12b93.m_a_9b75() ;
+       C_bi.m_a_9c7d0d74(this.f_bj_d_12b93, false);
+       this.f_bj_d_12b93.c$13462e();
+       this.f_bj_d_12b93.d$1385ff();
+@@ -348,7 +350,7 @@
+ 
+       if (var1 == this.f_bj_A_aa0ede5b && this.f_bj_A_aa0ede5b.isSelected(2)) {
+          C_bq.m_a_255f295(69, this.f_bj_A_aa0ede5b.getSelectedIndex());
+-         new C_ab(1, null).m_a_9b75();
++         new C_ab(1, null).m_a_9b75() ;
+       }
+    }
+ 
+@@ -358,7 +360,7 @@
+       this.f_bj_c_5a = C_bq.m_a_134632(129);
+       this.f_bj_a_5a = C_bq.m_a_134632(136);
+       C_bq.m_a_134621(65);
+-      this.f_bj_a_12b93.m_a_9b75();
++      this.f_bj_a_12b93.m_a_9b75() ;
+       this.f_bj_a_12b93.c$13462e();
+       this.f_bj_a_12b93.d$1385ff();
+       if (C_ac.m_a_9b79()) {
+@@ -452,7 +454,7 @@
+             C_bq.m_a_255f295(94, this.f_bj_e_12b93.m_b_9b68());
+             C_bq.m_c_9b75();
+             this.m_c_9b75();
+-            p_bj_i_9b75();
++            p_bj_i_9b75() ;
+          } else if (var1 == C_bi.f_bi_i_1570d10e) {
+             this.p_bj_j_9b75();
+             this.f_bj_a_67f46df9.addCommand(this.f_bj_a_1570d10e);
+@@ -744,7 +746,7 @@
+                   this.f_bj_a_67f46df9.append(this.f_bj_B_aa0ede5b);
+                   break;
+                case 11:
+-                  this.f_bj_e_12b93.m_a_9b75();
++                  this.f_bj_e_12b93.m_a_9b75() ;
+                   C_bi.m_a_9c7d0d74(this.f_bj_e_12b93, false);
+                   this.f_bj_e_12b93.c$13462e();
+                   this.f_bj_e_12b93.d$1385ff();
+@@ -1024,10 +1026,10 @@
+ 
+             C_bq.m_c_9b75();
+             C_bi.m_a_9c7d0d74(this.f_bj_a_12b93, false);
+-            C_bq.m_a_9b75();
++            C_bq.m_a_9b75() ;
+             if (var3) {
+                C_ac.m_f_9b75();
+-               p_bj_i_9b75();
++               p_bj_i_9b75() ;
+             }
+ 
+             this.m_c_9b75();
+@@ -1070,7 +1072,7 @@
+    private static void p_bj_i_9b75() {
+       if (C_ac.m_b_9b79()) {
+          try {
+-            C_am.m_a_9b75();
++            C_am.m_a_9b75() ;
+             C_am.m_a_13462e(C_ac.m_d_9b68() | (int)C_bq.a$134622());
+             return;
+          } catch (Exception var0) {
+--- decompiled/recovered/C_bk.java
++++ reconstruction/midp2/src/recovered/C_bk.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.ActionListener (with inlined XtrazSM). Release class: bk. */
+ 
+ import java.util.Vector;
+ import jimm.Jimm;
+@@ -8,7 +10,7 @@
+    private static Vector f_bk_b_48a69a2c = new Vector();
+    private static Vector f_bk_c_48a69a2c = new Vector();
+ 
+-   protected static void m_a_cb4b0023(C_cd var0) {
++   protected static void m_a_cb4b0023(C_cd var0) throws recovered.C_ar {
+       if (var0 instanceof C_ai) {
+          if (((C_ai)var0).m_b_9b68() == 1) {
+             C_ac.f_ac_a_5a = false;
+@@ -363,7 +365,7 @@
+                      C_v.m_a_cb40fff9(var258);
+                      C_aw var172 = C_w.m_a_513388b0(var135);
+                      if (C_bq.m_a_134632(166) && var172 != null) {
+-                        p_bk_a_cb37742e(var172);
++                        p_bk_a_cb37742e(var172) ;
+                         return;
+                      }
+                   }
+@@ -482,7 +484,7 @@
+                      C_v.m_a_cb40fff9((C_bm)var178);
+                      C_aw var206 = C_w.m_a_513388b0(var135);
+                      if (C_bq.m_a_134632(166) && var206 != null) {
+-                        p_bk_a_cb37742e(var206);
++                        p_bk_a_cb37742e(var206) ;
+                      }
+ 
+                      byte[] var211 = new byte[var130 + 11 + 2 + 51 + 3];
+@@ -500,7 +502,7 @@
+                      var221 += 2;
+                      C_cf.m_a_e306985c(var211, var221, 0);
+                      C_bw var249 = new C_bw(4, 11, 0L, new byte[0], var211);
+-                     C_ac.f_ac_a_240bf0.m_a_cb4b0023(var249);
++                     C_ac.f_ac_a_240bf0.m_a_cb4b0023(var249) ;
+                      return;
+                   }
+ 
+@@ -603,7 +605,7 @@
+                            C_cf.m_a_e306985c(var215, var229, 0);
+                            System.arraycopy(var162, var184, var215, ++var229, var179 + 24 + 19 + 4 + var195);
+                            C_bw var151 = new C_bw(4, 11, 0L, new byte[0], var215);
+-                           C_ac.f_ac_a_240bf0.m_a_cb4b0023(var151);
++                           C_ac.f_ac_a_240bf0.m_a_cb4b0023(var151) ;
+                            return;
+                         }
+ 
+@@ -686,7 +688,7 @@
+                                     + "</RES></NR>";
+                                  byte[] var49 = C_l.m_a_40349d6f(var135, var194, var95, var112, var65);
+                                  C_bw var50 = new C_bw(4, 11, 0L, new byte[0], var49);
+-                                 C_ac.f_ac_a_240bf0.m_a_cb4b0023(var50);
++                                 C_ac.f_ac_a_240bf0.m_a_cb4b0023(var50) ;
+                                  return;
+                               }
+ 
+@@ -767,7 +769,7 @@
+                      System.arraycopy(var218, 0, var238, var244, var218.length);
+                      C_cf.m_a_e306985c(var238, var244 + var218.length, 0);
+                      C_bw var219 = new C_bw(4, 11, 0L, new byte[0], var238);
+-                     C_ac.f_ac_a_240bf0.m_a_cb4b0023(var219);
++                     C_ac.f_ac_a_240bf0.m_a_cb4b0023(var219) ;
+                      return;
+                   }
+                } else if (var70 == 4) {
+@@ -928,8 +930,8 @@
+       } else {
+          String var2 = null;
+          String var1 = var0.f_bm_c_523beb0a;
+-         var2 = C_w.m_a_513388b0(var0.f_bm_c_523beb0a);
+-         if (null != var2 || p_bk_a_aad3b203(var1)) {
++         C_aw contact = C_w.m_a_513388b0(var0.f_bm_c_523beb0a);
++         if (null != contact || p_bk_a_aad3b203(var1)) {
+             return false;
+          } else if (!(var0 instanceof C_c)) {
+             return true;
+--- decompiled/recovered/C_bm.java
++++ reconstruction/midp2/src/recovered/C_bm.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.Message. Release class: bm. */
+ 
+ public abstract class C_bm {
+    int f_bm_b_49;
+--- decompiled/recovered/C_bo.java
++++ reconstruction/midp2/src/recovered/C_bo.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.util.Selector. Release class: bo. */
+ 
+ import javax.microedition.lcdui.Graphics;
+ 
+@@ -36,10 +38,10 @@
+       int var10000 = p_bo_k_9b68();
+       boolean var3 = false;
+       f_bo_k_49 = (var10000 + f_bo_j_49 - 1) / f_bo_j_49;
+-      this = f_bo_a_2409c2;
++      C_bo selected = f_bo_a_2409c2;
+       f_bo_a_2409c2.m_i_13462e(var2 / f_bo_j_49);
+       f_bo_o_49 = var2 % f_bo_j_49;
+-      this.m_f_9b75();
++      selected.m_f_9b75();
+       f_bo_n_49 = (f_bo_m_49 = f_bo_m_49 + (var1 - f_bo_m_49 * f_bo_j_49) / f_bo_j_49) - f_bo_l_49;
+       p_bo_a_9b75();
+    }
+--- decompiled/recovered/C_bp.java
++++ reconstruction/midp2/src/recovered/C_bp.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.MainMenu. Release class: bp. */
+ 
+ import javax.microedition.lcdui.Alert;
+ import javax.microedition.lcdui.Command;
+@@ -168,11 +170,11 @@
+ 
+    public final void commandAction(Command var1, Displayable var2) {
+       if (var1 == f_bp_b_1570d10e) {
+-         p_bp_a_1385ff(false);
++         p_bp_a_1385ff(false) ;
+       } else if (C_bi.m_a_cb3dd164(f_bp_b_12b93)) {
+          if (var1 == C_bi.f_bi_i_1570d10e) {
+             C_ac.m_a_132be7((byte)f_bp_b_12b93.m_b_9b68());
+-            p_bp_f_9b75();
++            p_bp_f_9b75() ;
+          } else {
+             if (var1 == C_bi.f_bi_c_1570d10e) {
+                m_b_9b75();
+@@ -216,7 +218,7 @@
+                C_bq.m_a_4f708078(32, "");
+                C_bq.m_a_4f708078(33, "");
+                C_bq.m_c_9b75();
+-               p_bp_f_9b75();
++               p_bp_f_9b75() ;
+                if (C_ac.m_b_9b79()) {
+                   try {
+                      C_am.m_a_9b75();
+@@ -263,7 +265,7 @@
+             m_b_9b75();
+             f_bp_a_67f46df9 = null;
+          } else if (C_bi.m_a_48817c53(var1, 1) == 3) {
+-            p_bp_a_1385ff(true);
++            p_bp_a_1385ff(true) ;
+          } else if (C_bi.m_a_48817c53(var1, 1) == 4) {
+             C_w.m_a_9b75();
+          } else if (var1 == C_bi.f_bi_i_1570d10e && C_bi.m_a_cb3dd164(f_bp_d_12b93)) {
+@@ -338,7 +340,7 @@
+                   C_br.m_a_9b75();
+                   return;
+                case 17:
+-                  p_bp_a_1385ff(false);
++                  p_bp_a_1385ff(false) ;
+             }
+          } else if (var1 == C_bi.f_bi_i_1570d10e && C_bi.m_a_cb3dd164(f_bp_a_12b93)) {
+             boolean var16 = false;
+@@ -355,13 +357,13 @@
+             C_bq.m_c_9b75();
+             f_bp_a_12b93 = null;
+             if (var16) {
+-               p_bp_a_13462e(var7);
++               p_bp_a_13462e(var7) ;
+             }
+          } else if (var2 == f_bp_a_fd805d5b && var1 == C_bi.f_bi_i_1570d10e) {
+             int var6;
+             C_bq.m_a_4f708078(p_bp_a_134621(var6 = (int)C_bq.a$134622()), f_bp_a_fd805d5b.getString());
+             C_bq.m_c_9b75();
+-            p_bp_a_13462e(var6);
++            p_bp_a_13462e(var6) ;
+          } else {
+             if (C_bi.m_a_48817c53(var1, 4) == 1) {
+                this.p_bp_b_13462e(C_bi.m_b_9b68());
+@@ -451,7 +453,7 @@
+       }
+ 
+       C_cp.m_a_13462e(C_bi.m_a_1349e2(C_ac.m_c_9b68()));
+-      p_bp_f_9b75();
++      p_bp_f_9b75() ;
+    }
+ 
+    private static int p_bp_a_134621(int var0) {
+--- decompiled/recovered/C_bq.java
++++ reconstruction/midp2/src/recovered/C_bq.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.Options. Release class: bq. */
+ 
+ import java.io.ByteArrayInputStream;
+ import java.io.ByteArrayOutputStream;
+@@ -26,7 +28,7 @@
+       try {
+          p_bq_e_9b75();
+          p_bq_f_9b75();
+-         p_bq_g_9b75();
++         p_bq_g_9b75() ;
+          if (m_a_134632(148)) {
+             m_a_2563266(148, false);
+             p_bq_f_9b75();
+@@ -219,7 +221,7 @@
+       m_a_4f708078(26, C_bt.m_a_e96ea081("K5"));
+    }
+ 
+-   private static void p_bq_g_9b75() {
++   private static void p_bq_g_9b75() throws java.io.IOException, javax.microedition.rms.InvalidRecordIDException, javax.microedition.rms.RecordStoreException, javax.microedition.rms.RecordStoreFullException, javax.microedition.rms.RecordStoreNotFoundException, javax.microedition.rms.RecordStoreNotOpenException {
+       RecordStore var0;
+       byte[] var1 = (var0 = RecordStore.openRecordStore("options", false)).getRecord(1);
+       ByteArrayInputStream var4 = new ByteArrayInputStream(var1);
+@@ -273,11 +275,11 @@
+                if (var3 < 64) {
+                   var2.writeUTF((String)f_bq_a_7b09cd37[var3]);
+                } else if (var3 < 128) {
+-                  var2.writeInt((Integer)f_bq_a_7b09cd37[var3]);
++                  var2.writeInt(((Integer)f_bq_a_7b09cd37[var3]).intValue());
+                } else if (var3 < 192) {
+-                  var2.writeBoolean((Boolean)f_bq_a_7b09cd37[var3]);
++                  var2.writeBoolean(((Boolean)f_bq_a_7b09cd37[var3]).booleanValue());
+                } else if (var3 < 224) {
+-                  var2.writeLong((Long)f_bq_a_7b09cd37[var3]);
++                  var2.writeLong(((Long)f_bq_a_7b09cd37[var3]).longValue());
+                } else if (var3 < 256) {
+                   byte[] var11 = C_cf.m_a_44c4d6c8((String)f_bq_a_7b09cd37[var3], true);
+                   Object var4 = null;
+@@ -308,15 +310,15 @@
+    }
+ 
+    public static synchronized int m_a_134621(int var0) {
+-      return (Integer)f_bq_a_7b09cd37[var0];
++      return ((Integer)f_bq_a_7b09cd37[var0]).intValue();
+    }
+ 
+    public static synchronized boolean m_a_134632(int var0) {
+-      return (Boolean)f_bq_a_7b09cd37[var0];
++      return ((Boolean)f_bq_a_7b09cd37[var0]).booleanValue();
+    }
+ 
+    public static synchronized long a$134622() {
+-      return (Long)f_bq_a_7b09cd37[192];
++      return ((Long)f_bq_a_7b09cd37[192]).longValue();
+    }
+ 
+    public static synchronized void m_a_4f708078(int var0, String var1) {
+--- decompiled/recovered/C_br.java
++++ reconstruction/midp2/src/recovered/C_br.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.util.MagicEye. Release class: br. */
+ 
+ import java.util.Vector;
+ import javax.microedition.lcdui.Command;
+--- decompiled/recovered/C_bs.java
++++ reconstruction/midp2/src/recovered/C_bs.java
+@@ -46,7 +46,7 @@
+       return var1;
+    }
+ 
+-   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) {
++   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) throws recovered.C_ar {
+       var2 = C_cf.m_b_49634b7a(var0, var1 + 2);
+       int var3;
+       if ((var3 = C_cf.m_b_49634b7a(var0, var1 + 4)) < 24) {
+--- decompiled/recovered/C_bt.java
++++ reconstruction/midp2/src/recovered/C_bt.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.util.ResourceBundle. Release class: bt. */
+ 
+ import java.io.DataInputStream;
+ import java.io.InputStream;
+--- decompiled/recovered/C_bu.java
++++ reconstruction/midp2/src/recovered/C_bu.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.LightControl. Release class: bu. */
+ 
+ import com.nokia.mid.ui.DeviceControl;
+ import java.util.TimerTask;
+--- decompiled/recovered/C_bv.java
++++ reconstruction/midp2/src/recovered/C_bv.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.SendMessageAction. Release class: bv. */
+ 
+ public final class C_bv extends C_ba {
+    private C_c f_bv_a_12984;
+@@ -31,7 +33,7 @@
+       return f_bv_d_49++;
+    }
+ 
+-   protected final void m_a_9b75() {
++   protected final void m_a_9b75() throws recovered.C_ar {
+       this.f_bv_a_49--;
+       C_aw var1;
+       if (this.f_bv_a_12984 != null) {
+--- decompiled/recovered/C_bw.java
++++ reconstruction/midp2/src/recovered/C_bw.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.SnacPacket. Release class: bw. */
+ 
+ public class C_bw extends C_cd {
+    protected int f_bw_a_49;
+@@ -57,7 +59,7 @@
+       return var1;
+    }
+ 
+-   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) {
++   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) throws recovered.C_ar {
+       int var3 = C_cf.m_b_49634b7a(var0, var1 + 2);
+       int var4;
+       if ((var4 = C_cf.m_b_49634b7a(var0, var1 + 4)) < 10) {
+@@ -66,9 +68,9 @@
+          int var5 = C_cf.m_b_49634b7a(var0, var1 + 6);
+          int var6 = C_cf.m_b_49634b7a(var0, var1 + 8);
+          if (var5 == 21 && var6 == 2) {
+-            return C_as.m_a_3c792e68(var0, var1, var2);
++            return C_as.m_a_3c792e68(var0, var1, var2) ;
+          } else if (var5 == 21 && var6 == 3) {
+-            return C_bs.m_a_3c792e68(var0, var1, var2);
++            return C_bs.m_a_3c792e68(var0, var1, var2) ;
+          } else {
+             var2 = C_cf.m_b_49634b7a(var0, var1 + 10);
+             long var8 = C_cf.m_a_49634b7b(var0, var1 + 12);
+--- decompiled/recovered/C_bx.java
++++ reconstruction/midp2/src/recovered/C_bx.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.AniImageList. Release class: bx. */
+ 
+ import java.io.InputStream;
+ 
+--- decompiled/recovered/C_by.java
++++ reconstruction/midp2/src/recovered/C_by.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.VirtualCanvas. Release class: by. */
+ 
+ import java.util.Timer;
+ import java.util.TimerTask;
+--- decompiled/recovered/C_bz.java
++++ reconstruction/midp2/src/recovered/C_bz.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.RemoveMeAction. Release class: bz. */
+ 
+ public final class C_bz extends C_ba {
+    private String f_bz_a_523beb0a;
+@@ -8,7 +10,7 @@
+       this.f_bz_a_523beb0a = var1;
+    }
+ 
+-   protected final void m_a_9b75() {
++   protected final void m_a_9b75() throws recovered.C_ar {
+       byte[] var1 = C_cf.m_a_afa28ebe(this.f_bz_a_523beb0a);
+       byte[] var2;
+       C_cf.m_a_e306985c(var2 = new byte[1 + var1.length], 0, var1.length);
+--- decompiled/recovered/C_c.java
++++ reconstruction/midp2/src/recovered/C_c.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.PlainMessage. Release class: c. */
+ 
+ public final class C_c extends C_bm {
+    public String f_c_a_523beb0a;
+--- decompiled/recovered/C_ca.java
++++ reconstruction/midp2/src/recovered/C_ca.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.ListItem. Release class: ca. */
+ 
+ public final class C_ca {
+    public String f_ca_a_523beb0a;
+--- decompiled/recovered/C_cb.java
++++ reconstruction/midp2/src/recovered/C_cb.java
+@@ -7,7 +7,7 @@
+    protected volatile Thread f_cb_a_72a5fc31;
+    protected Vector f_cb_a_48a69a2c;
+ 
+-   public synchronized void m_a_aad3b1ff(String var1) {
++   public synchronized void m_a_aad3b1ff(String var1) throws recovered.C_ar {
+    }
+ 
+    public synchronized void m_a_9b75() {
+@@ -17,7 +17,7 @@
+       return this.f_cb_a_48a69a2c == null ? 0 : this.f_cb_a_48a69a2c.size();
+    }
+ 
+-   public final C_cd m_a_46a7a8af() {
++   public final C_cd m_a_46a7a8af() throws recovered.C_ar {
+       byte[] var1;
+       synchronized (this.f_cb_a_48a69a2c) {
+          if (this.f_cb_a_48a69a2c.size() == 0) {
+@@ -31,7 +31,7 @@
+       return C_cd.m_a_3c792e68(var1, 0, var1.length);
+    }
+ 
+-   public void m_a_cb4b0023(C_cd var1) {
++   public void m_a_cb4b0023(C_cd var1) throws recovered.C_ar {
+    }
+ 
+    public int m_a_9b68() {
+--- decompiled/recovered/C_cc.java
++++ reconstruction/midp2/src/recovered/C_cc.java
+@@ -16,7 +16,7 @@
+    private volatile Thread f_cc_a_72a5fc31;
+    private Vector f_cc_a_48a69a2c;
+ 
+-   public final synchronized void m_a_aad3b1ff(String var1) {
++   public final synchronized void m_a_aad3b1ff(String var1) throws recovered.C_ar {
+       try {
+          this.f_cc_a_b4b0cc51 = (SocketConnection)Connector.open("socket://" + var1, 3);
+          this.f_cc_a_91ffb459 = this.f_cc_a_b4b0cc51.openInputStream();
+@@ -64,7 +64,7 @@
+       return this.f_cc_a_48a69a2c == null ? 0 : this.f_cc_a_48a69a2c.size();
+    }
+ 
+-   public final C_cd m_a_46a7a8af() {
++   public final C_cd m_a_46a7a8af() throws recovered.C_ar {
+       byte[] var1;
+       synchronized (this.f_cc_a_48a69a2c) {
+          if (this.f_cc_a_48a69a2c.size() == 0) {
+@@ -78,7 +78,7 @@
+       return C_cd.m_a_3c792e68(var1, 0, var1.length);
+    }
+ 
+-   public final void m_a_cb4b0023(C_cd var1) {
++   public final void m_a_cb4b0023(C_cd var1) throws recovered.C_ar {
+       if (this.f_cc_a_33c83ab2 == null) {
+          throw new C_ar(128, 0, true, true);
+       } else {
+@@ -89,7 +89,7 @@
+                this.f_cc_a_33c83ab2.flush();
+                C_at.m_b_13462e(var5.length + 51);
+             } catch (IOException var3) {
+-               this.m_a_9b75();
++               this.m_a_9b75() ;
+             }
+          }
+       }
+--- decompiled/recovered/C_cd.java
++++ reconstruction/midp2/src/recovered/C_cd.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.Packet. Release class: cd. */
+ 
+ public class C_cd {
+    protected int f_cd_c_49;
+@@ -27,11 +29,11 @@
+       return var1;
+    }
+ 
+-   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) {
++   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) throws recovered.C_ar {
+       if (var2 < 2) {
+          throw new C_ar(130, 0);
+       } else if (C_cf.m_a_49634b7a(var0, var1) != 42) {
+-         return C_cq.m_a_3c792e68(var0, var1, var2);
++         return C_cq.m_a_3c792e68(var0, var1, var2) ;
+       } else {
+          int var3;
+          if ((var3 = C_cf.m_a_49634b7a(var0, var1 + 1)) >= 1 && var3 <= 5) {
+@@ -40,14 +42,14 @@
+             } else {
+                switch (var3) {
+                   case 1:
+-                     return C_j.m_a_3c792e68(var0, var1, var2);
++                     return C_j.m_a_3c792e68(var0, var1, var2) ;
+                   case 2:
+-                     return C_bw.m_a_3c792e68(var0, var1, var2);
++                     return C_bw.m_a_3c792e68(var0, var1, var2) ;
+                   case 3:
+                   default:
+                      return null;
+                   case 4:
+-                     return C_ai.m_a_3c792e68(var0, var1, var2);
++                     return C_ai.m_a_3c792e68(var0, var1, var2) ;
+                }
+             }
+          } else {
+--- decompiled/recovered/C_ce.java
++++ reconstruction/midp2/src/recovered/C_ce.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.Templates. Release class: ce. */
+ 
+ import java.util.Vector;
+ import javax.microedition.lcdui.Command;
+--- decompiled/recovered/C_cf.java
++++ reconstruction/midp2/src/recovered/C_cf.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.Util. Release class: cf. */
+ 
+ import java.io.ByteArrayInputStream;
+ import java.io.ByteArrayOutputStream;
+@@ -535,24 +537,25 @@
+    }
+ 
+    public static int m_a_e306d820(byte[] var0, int var1, boolean var2) {
++      int result;
+       if (var2) {
+-         var2 = var0[var1] << 8 & 0xFF00 | var0[++var1] & 255;
+-      } else {
+-         var2 = var0[var1] & 255 | var0[++var1] << 8 & 0xFF00;
+-      }
+-
+-      return var2;
++         result = var0[var1] << 8 & 0xFF00 | var0[++var1] & 255;
++      } else {
++         result = var0[var1] & 255 | var0[++var1] << 8 & 0xFF00;
++      }
++
++      return result;
+    }
+ 
+    public static DataInputStream a$6f0c2d54(byte[] var0) {
+       return new DataInputStream(new ByteArrayInputStream(var0, 0, var0.length));
+    }
+ 
+-   public static int a$175c50c1(DataInputStream var0) {
++   public static int a$175c50c1(DataInputStream var0) throws java.io.IOException {
+       return var0.readByte() & 0xFF | var0.readByte() << 8 & 0xFF00;
+    }
+ 
+-   public static String m_a_b4050118(DataInputStream var0) {
++   public static String m_a_b4050118(DataInputStream var0) throws java.io.IOException {
+       int var1;
+       if ((var1 = a$175c50c1(var0)) == 0) {
+          return new String();
+@@ -794,7 +797,7 @@
+          try {
+             ByteArrayOutputStream var4 = new ByteArrayOutputStream();
+             DataOutputStream var10000 = new DataOutputStream(var4);
+-            B var2 = null;
++            byte[] var2 = null;
+             var10000.writeUTF(var0);
+             byte[] var5;
+             var2 = new byte[(var5 = var4.toByteArray()).length - 2];
+@@ -1188,6 +1191,7 @@
+    private static String p_cf_d_55a39fc4(byte[] var0, int var1, int var2) {
+       int var3 = var1 + var2;
+ 
++      StringBuffer var6;
+       for (var6 = new StringBuffer(var2); var1 < var3; var1++) {
+          int var4;
+          switch (var4 = var0[var1] & 0xFF) {
+--- decompiled/recovered/C_ch.java
++++ reconstruction/midp2/src/recovered/C_ch.java
+@@ -17,7 +17,7 @@
+       this.f_ch_a_2406f9 = var2;
+    }
+ 
+-   public final synchronized void m_a_9b75() {
++   public final synchronized void m_a_9b75() throws recovered.C_ar {
+       this.f_ch_c_49 = 0;
+       switch (this.f_ch_b_49) {
+          case 2:
+--- decompiled/recovered/C_ci.java
++++ reconstruction/midp2/src/recovered/C_ci.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.ColorChooser. Release class: ci. */
+ 
+ import javax.microedition.lcdui.Canvas;
+ import javax.microedition.lcdui.Font;
+--- decompiled/recovered/C_cj.java
++++ reconstruction/midp2/src/recovered/C_cj.java
+@@ -15,7 +15,7 @@
+       this.f_cj_a_6dccaaa5 = var1;
+    }
+ 
+-   protected final synchronized void m_a_9b75() {
++   protected final synchronized void m_a_9b75() throws recovered.C_ar {
+       ByteArrayOutputStream var1;
+       C_cf.m_a_559c4327(var1 = new ByteArrayOutputStream(), 3130, false);
+       C_cf.m_a_2a17548d(340, var1, this.f_cj_a_6dccaaa5[1], false);
+--- decompiled/recovered/C_ck.java
++++ reconstruction/midp2/src/recovered/C_ck.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.Search. Release class: ck. */
+ 
+ import javax.microedition.lcdui.Alert;
+ import javax.microedition.lcdui.AlertType;
+--- decompiled/recovered/C_cl.java
++++ reconstruction/midp2/src/recovered/C_cl.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.util.NoticeOnBirthDay. Release class: cl. */
+ 
+ import java.io.ByteArrayInputStream;
+ import java.io.ByteArrayOutputStream;
+--- decompiled/recovered/C_cm.java
++++ reconstruction/midp2/src/recovered/C_cm.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.TimerTasks. Release class: cm. */
+ 
+ import java.util.Timer;
+ import java.util.TimerTask;
+--- decompiled/recovered/C_cn.java
++++ reconstruction/midp2/src/recovered/C_cn.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.UpdateContactListAction. Release class: cn. */
+ 
+ import java.io.ByteArrayOutputStream;
+ 
+@@ -31,7 +33,7 @@
+       this.f_cn_b_49 = 4;
+    }
+ 
+-   protected final void m_a_9b75() {
++   protected final void m_a_9b75() throws recovered.C_ar {
+       Object var1 = null;
+       if (this.f_cn_b_49 != 3) {
+          C_ac.f_ac_a_240bf0.m_a_cb4b0023(new C_bw(19, 17, C_cf.m_a_9b68(), new byte[0], new byte[0]));
+@@ -90,11 +92,11 @@
+       }
+    }
+ 
+-   private static void p_cn_b_9b75() {
++   private static void p_cn_b_9b75() throws recovered.C_ar {
+       C_ac.f_ac_a_240bf0.m_a_cb4b0023(new C_bw(19, 18, C_cf.m_a_9b68(), new byte[0], new byte[0]));
+    }
+ 
+-   private static void p_cn_c_9b75() {
++   private static void p_cn_c_9b75() throws recovered.C_ar {
+       C_ac.f_ac_a_240bf0.m_a_cb4b0023(new C_bw(19, 9, C_cf.m_a_9b68(), new byte[0], p_cn_a_12d408()));
+    }
+ 
+@@ -105,7 +107,7 @@
+       }
+    }
+ 
+-   protected final synchronized boolean m_a_cb4b0027(C_cd var1) {
++   protected final synchronized boolean m_a_cb4b0027(C_cd var1) throws recovered.C_ar {
+       boolean var10;
+       label73: {
+          boolean var3 = false;
+--- decompiled/recovered/C_cp.java
++++ reconstruction/midp2/src/recovered/C_cp.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.SplashCanvas. Release class: cp. */
+ 
+ import java.io.IOException;
+ import java.util.Timer;
+--- decompiled/recovered/C_cq.java
++++ reconstruction/midp2/src/recovered/C_cq.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.DCPacket. Release class: cq. */
+ 
+ public final class C_cq extends C_cd {
+    byte[] f_cq_a_b47;
+--- decompiled/recovered/C_d.java
++++ reconstruction/midp2/src/recovered/C_d.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.VirtualTree. Release class: d. */
+ 
+ import java.util.Vector;
+ import javax.microedition.lcdui.Graphics;
+@@ -208,10 +210,10 @@
+       }
+ 
+       var2 = new C_e(var2);
+-      var1.m_a_9f354893(var2);
++      var1.m_a_9f354893((C_e)var2);
+       this.f_d_b_5a = true;
+       this.m_f_9b75();
+-      return var2;
++      return (C_e)var2;
+    }
+ 
+    private C_e p_d_a_9d74ebe1(C_e var1, C_e var2) {
+--- decompiled/recovered/C_e.java
++++ reconstruction/midp2/src/recovered/C_e.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.TreeNode. Release class: e. */
+ 
+ import java.util.Vector;
+ 
+--- decompiled/recovered/C_f.java
++++ reconstruction/midp2/src/recovered/C_f.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.Icon. Release class: f. */
+ 
+ import javax.microedition.lcdui.Graphics;
+ import javax.microedition.lcdui.Image;
+--- decompiled/recovered/C_g.java
++++ reconstruction/midp2/src/recovered/C_g.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.ImageList. Release class: g. */
+ 
+ import java.util.Vector;
+ import javax.microedition.lcdui.Image;
+@@ -20,7 +22,7 @@
+       return this.f_g_b_49;
+    }
+ 
+-   public final void m_a_afa300e4(String var1, int var2) {
++   public final void m_a_afa300e4(String var1, int var2) throws java.io.IOException {
+       Image var8;
+       int var3 = (var8 = Image.createImage(var1)).getHeight();
+       int var4 = var8.getWidth();
+@@ -39,7 +41,7 @@
+       var9.copyInto(this.f_g_a_2a87a6);
+    }
+ 
+-   public void m_a_44bd8e9f(String var1, int var2, int var3) {
++   public void m_a_44bd8e9f(String var1, int var2, int var3) throws java.io.IOException {
+       Image var10;
+       int var4 = (var10 = Image.createImage(var1)).getHeight();
+       int var5 = var10.getWidth();
+--- decompiled/recovered/C_i.java
++++ reconstruction/midp2/src/recovered/C_i.java
+@@ -24,7 +24,7 @@
+       C_ac.f_ac_a_49 = C_ac.m_b_9b68();
+    }
+ 
+-   public final synchronized void m_a_aad3b1ff(String var1) {
++   public final synchronized void m_a_aad3b1ff(String var1) throws recovered.C_ar {
+       try {
+          this.f_i_c_49++;
+          if (this.f_i_c_49 == 1) {
+@@ -81,7 +81,7 @@
+       Thread.yield();
+    }
+ 
+-   private void p_i_a_8412f60a(C_cd var1, byte[] var2, int var3, int var4) {
++   private void p_i_a_8412f60a(C_cd var1, byte[] var2, int var3, int var4) throws recovered.C_ar {
+       try {
+          this.f_i_b_473d1dc = (HttpConnection)Connector.open(
+             "http://" + this.f_i_c_523beb0a + ":" + this.f_i_b_49 + "/data?sid=" + this.f_i_b_523beb0a + "&seq=" + this.f_i_a_49, 3
+@@ -136,7 +136,7 @@
+       }
+    }
+ 
+-   public final void m_a_cb4b0023(C_cd var1) {
++   public final void m_a_cb4b0023(C_cd var1) throws recovered.C_ar {
+       this.p_i_a_8412f60a(var1, null, 5, this.f_i_c_49);
+    }
+ 
+--- decompiled/recovered/C_j.java
++++ reconstruction/midp2/src/recovered/C_j.java
+@@ -81,7 +81,7 @@
+       return var2;
+    }
+ 
+-   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) {
++   public static C_cd m_a_3c792e68(byte[] var0, int var1, int var2) throws recovered.C_ar {
+       int var3 = C_cf.m_b_49634b7a(var0, var1 + 2);
+       int var10000 = C_cf.m_b_49634b7a(var0, var1 + 4);
+       boolean var4 = false;
+--- decompiled/recovered/C_k.java
++++ reconstruction/midp2/src/recovered/C_k.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.VirtualTreeCommands. Release class: k. */
+ 
+ public interface C_k {
+    void m_a_e4015df8(C_e var1, C_ca var2);
+--- decompiled/recovered/C_l.java
++++ reconstruction/midp2/src/recovered/C_l.java
+@@ -4,7 +4,7 @@
+ import java.io.DataOutputStream;
+ 
+ public final class C_l {
+-   public static void m_a_afa300e4(String var0, int var1) {
++   public static void m_a_afa300e4(String var0, int var1) throws recovered.C_ar {
+       String var15 = "<N><QUERY>"
+          + C_cf.m_d_e96ea081("<Q><PluginID>srvMng</PluginID></Q>")
+          + "</QUERY><NOTIFY>"
+--- decompiled/recovered/C_m.java
++++ reconstruction/midp2/src/recovered/C_m.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.GroupItem. Release class: m. */
+ 
+ public final class C_m implements C_ao {
+    public int f_m_a_49;
+@@ -81,7 +83,7 @@
+          return false;
+       } else {
+          var1 = var1;
+-         return this.f_m_a_49 == var1.f_m_a_49;
++         return this.f_m_a_49 == ((C_m)var1).f_m_a_49;
+       }
+    }
+ 
+--- decompiled/recovered/C_n.java
++++ reconstruction/midp2/src/recovered/C_n.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.TextItem. Release class: n. */
+ 
+ import javax.microedition.lcdui.Font;
+ 
+--- decompiled/recovered/C_o.java
++++ reconstruction/midp2/src/recovered/C_o.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.AniIcon. Release class: o. */
+ 
+ import javax.microedition.lcdui.Graphics;
+ import javax.microedition.lcdui.Image;
+--- decompiled/recovered/C_p.java
++++ reconstruction/midp2/src/recovered/C_p.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.util.PhoneBook. Release class: p. */
+ 
+ import javax.microedition.io.Connector;
+ import javax.microedition.lcdui.Command;
+--- decompiled/recovered/C_q.java
++++ reconstruction/midp2/src/recovered/C_q.java
+@@ -17,7 +17,7 @@
+    public C_q(C_ac var1) {
+    }
+ 
+-   public final synchronized void m_a_aad3b1ff(String var1) {
++   public final synchronized void m_a_aad3b1ff(String var1) throws recovered.C_ar {
+       try {
+          this.f_q_a_b4b0cc51 = (SocketConnection)Connector.open("socket://" + var1, 3);
+          this.f_q_a_91ffb459 = this.f_q_a_b4b0cc51.openInputStream();
+@@ -63,7 +63,7 @@
+       Thread.yield();
+    }
+ 
+-   public final void m_a_cb4b0023(C_cd var1) {
++   public final void m_a_cb4b0023(C_cd var1) throws recovered.C_ar {
+       C_ar var2;
+       if (this.f_q_a_33c83ab2 == null && !C_ac.m_a_cb352e57(var2 = new C_ar(123, 0))) {
+          throw var2;
+--- decompiled/recovered/C_r.java
++++ reconstruction/midp2/src/recovered/C_r.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.HistoryStorageList. Release class: r. */
+ 
+ import java.io.OutputStream;
+ import java.util.Vector;
+--- decompiled/recovered/C_s.java
++++ reconstruction/midp2/src/recovered/C_s.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.GUID. Release class: s. */
+ 
+ public final class C_s {
+    byte[] f_s_a_b47;
+--- decompiled/recovered/C_t.java
++++ reconstruction/midp2/src/recovered/C_t.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): DrawControls.TextList. Release class: t. */
+ 
+ import java.util.Hashtable;
+ import java.util.Vector;
+@@ -88,20 +90,20 @@
+       }
+    }
+ 
+-   protected final void m_a_2563266(int var1, boolean var2) {
++   public final void m_a_2563266(int var1, boolean var2) {
+       int var3 = 0;
+       int var6 = this.m_e_9b68() / 2;
+       switch (var1) {
+          case -1:
+          case 1:
+             int var4 = this.m_b_9b68();
+-            var2 = this.m_a_9b68();
++            int count = this.m_a_9b68();
+             this.m_h_9b75();
+             int var5 = 0;
+ 
+             while (var5 < var6) {
+                super.f_bf_b_49 += var1;
+-               if (super.f_bf_b_49 < 0 || super.f_bf_b_49 >= var2) {
++               if (super.f_bf_b_49 < 0 || super.f_bf_b_49 >= count) {
+                   if (var3 != 0) {
+                      super.f_bf_b_49 -= var1;
+                   }
+@@ -306,17 +308,18 @@
+                   var8++;
+                } else {
+                   if (C_bq.m_a_134632(132)) {
+-                     for (var13 = var8; var13 >= 1; var13--) {
+-                        var17 = var18.substring(var10, var13);
++                     int splitIndex;
++                     for (splitIndex = var8; splitIndex >= 1; splitIndex--) {
++                        var17 = var18.substring(var10, splitIndex);
+                         if ((var12 = var6.stringWidth(var17)) <= var11) {
+                            break;
+                         }
+                      }
+ 
+-                     if (var13 - (var9 + 1) > 1) {
+-                        String var19 = var18.substring(var10, var13);
++                     if (splitIndex - (var9 + 1) > 1) {
++                        String var19 = var18.substring(var10, splitIndex);
+                         this.m_a_68bdbb6d(var19, var2, var3, var4, true, '\u0000');
+-                        var8 = var13;
++                        var8 = splitIndex;
+                      } else {
+                         String var20 = var18.substring(var10, var9);
+                         this.m_a_68bdbb6d(var20, var2, var3, var4, true, ' ');
+--- decompiled/recovered/C_u.java
++++ reconstruction/midp2/src/recovered/C_u.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.FileBrowserListener. Release class: u. */
+ 
+ interface C_u {
+    void m_a_aad3b1ff(String var1);
+--- decompiled/recovered/C_v.java
++++ reconstruction/midp2/src/recovered/C_v.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.RunnableImpl. Release class: v. */
+ 
+ import javax.microedition.lcdui.Alert;
+ import javax.microedition.lcdui.Display;
+@@ -97,7 +99,7 @@
+    }
+ 
+    private static boolean a$4e9ee315(Object[] var0) {
+-      return var0[1] == null ? false : (Boolean)var0[1];
++      return var0[1] == null ? false : ((Boolean)var0[1]).booleanValue();
+    }
+ 
+    public static void m_a_7ac2f2fc(Object[] var0, int var1, int var2) {
+@@ -105,6 +107,6 @@
+    }
+ 
+    private static int p_v_a_b1611cda(Object[] var0, int var1) {
+-      return var0[var1] == null ? 0 : (Integer)var0[var1];
++      return var0[var1] == null ? 0 : ((Integer)var0[var1]).intValue();
+    }
+ }
+--- decompiled/recovered/C_w.java
++++ reconstruction/midp2/src/recovered/C_w.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.ContactList. Release class: w. */
+ 
+ import java.io.ByteArrayInputStream;
+ import java.io.ByteArrayOutputStream;
+@@ -164,7 +166,7 @@
+       }
+    }
+ 
+-   private static void p_w_i_9b75() {
++   private static void p_w_i_9b75() throws java.lang.Exception, javax.microedition.rms.RecordStoreException, javax.microedition.rms.RecordStoreFullException, javax.microedition.rms.RecordStoreNotFoundException, javax.microedition.rms.RecordStoreNotOpenException {
+       f_w_a_48a69a2c = new Vector();
+       f_w_b_48a69a2c = new Vector();
+       String[] var0 = RecordStore.listRecordStores();
+@@ -222,7 +224,7 @@
+       }
+    }
+ 
+-   protected static void m_b_9b75() {
++   protected static void m_b_9b75() throws java.io.IOException, javax.microedition.rms.RecordStoreException, javax.microedition.rms.RecordStoreFullException, javax.microedition.rms.RecordStoreNotFoundException, javax.microedition.rms.RecordStoreNotOpenException {
+       try {
+          RecordStore.deleteRecordStore("contactlist");
+       } catch (RecordStoreNotFoundException var8) {
+@@ -499,14 +501,14 @@
+             }
+          }
+ 
+-         var4 = f_w_a_48a69a2c.indexOf(var0) != -1;
++         boolean contains = f_w_a_48a69a2c.indexOf(var0) != -1;
+          f_w_a_129a3.m_j_9b75();
+-         boolean var27 = var4 && !var3;
++         boolean var27 = contains && !var3;
+          if (var11 && !var3) {
+             var27 |= var9 != -1 | var0.m_a_9b79();
+          }
+ 
+-         boolean var22 = !var4 && var3;
++         boolean var22 = !contains && var3;
+          if (var11 && var3) {
+             var22 |= var9 == -1 && !var0.m_a_9b79();
+          }
+--- decompiled/recovered/C_x.java
++++ reconstruction/midp2/src/recovered/C_x.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.XStatus. Release class: x. */
+ 
+ public final class C_x {
+    private static final C_s[] f_x_a_2a8939 = new C_s[]{
+--- decompiled/recovered/C_y.java
++++ reconstruction/midp2/src/recovered/C_y.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.ConnectAction. Release class: y. */
+ 
+ import java.io.ByteArrayOutputStream;
+ import java.util.Hashtable;
+@@ -37,7 +39,7 @@
+       this.f_y_d_523beb0a = var4;
+    }
+ 
+-   private void p_y_a_aad3b1ff(String var1) {
++   private void p_y_a_aad3b1ff(String var1) throws recovered.C_ar {
+       int var2 = 0;
+ 
+       try {
+@@ -70,7 +72,7 @@
+       }
+    }
+ 
+-   protected final void m_a_9b75() {
++   protected final void m_a_9b75() throws recovered.C_ar {
+       this.f_y_b_49 = 0;
+       this.f_y_a_4a = System.currentTimeMillis();
+       if (this.f_y_a_523beb0a.length() != 0 && this.f_y_b_523beb0a.length() != 0) {
+@@ -84,7 +86,7 @@
+       }
+    }
+ 
+-   protected final boolean m_a_cb4b0027(C_cd var1) {
++   protected final boolean m_a_cb4b0027(C_cd var1) throws recovered.C_ar {
+       if (!this.f_y_b_5a && this.f_y_a_240bf0 == C_ac.f_ac_a_240bf0) {
+          this.f_y_c_5a = true;
+ 
+@@ -263,7 +265,7 @@
+                   throw new C_ar(var31, var51);
+                }
+ 
+-               if (var2 & this.f_y_e_523beb0a != null & this.f_y_c_b47 != null) {
++               if ((var2 != 0) & this.f_y_e_523beb0a != null & this.f_y_c_b47 != null) {
+                   if (!(this.f_y_a_240bf0 instanceof C_i)) {
+                      this.f_y_a_240bf0.m_a_9b75();
+                   }
+@@ -464,11 +466,11 @@
+                         C_aw var64;
+                         String var75 = (var64 = C_w.m_a_c2f0d221(var23)).m_b_73cf11cb();
+                         Integer var58 = (Integer)this.f_y_b_d18d4967.get(var75);
+-                        var64.m_f_13462e(var58 != null ? var58 : 0);
++                        var64.m_f_13462e(var58 != null ? var58.intValue() : 0);
+                         Integer var83 = (Integer)this.f_y_c_d18d4967.get(var75);
+-                        var64.m_e_13462e(var83 != null ? var83 : 0);
++                        var64.m_e_13462e(var83 != null ? var83.intValue() : 0);
+                         Integer var94 = (Integer)this.f_y_a_d18d4967.get(var75);
+-                        var64.m_d_13462e(var94 != null ? var94 : 0);
++                        var64.m_d_13462e(var94 != null ? var94.intValue() : 0);
+                      }
+ 
+                      C_bw var24 = new C_bw(19, 7, 7L, new byte[0], new byte[0]);
+@@ -519,7 +521,7 @@
+                }
+ 
+                C_bs var39;
+-               if (var1 instanceof C_bs && !var2 && (var39 = (C_bs)var1).m_b_9b68() == 21) {
++               if (var1 instanceof C_bs && var2 == 0 && (var39 = (C_bs)var1).m_b_9b68() == 21) {
+                   if (var39.f_bs_e_49 == 65) {
+                      byte[] var20;
+                      if ((var20 = var39.m_b_12d408()).length < 14) {
+@@ -575,7 +577,7 @@
+ 
+             this.f_y_a_4a = System.currentTimeMillis();
+             this.f_y_c_5a = false;
+-            return (boolean)var2;
++            return var2 != 0;
+          } catch (C_ar var18) {
+             this.f_y_a_4a = System.currentTimeMillis();
+             this.f_y_c_5a = false;
+--- decompiled/recovered/C_z.java
++++ reconstruction/midp2/src/recovered/C_z.java
+@@ -1,4 +1,6 @@
+ package recovered;
++
++/** 0.6 source correspondence (inferred): jimm.comm.SearchAction. Release class: z. */
+ 
+ import java.io.ByteArrayOutputStream;
+ 
+@@ -15,7 +17,7 @@
+       this.f_z_a_240c8b = var1;
+    }
+ 
+-   protected final void m_a_9b75() {
++   protected final void m_a_9b75() throws recovered.C_ar {
+       ByteArrayOutputStream var1 = new ByteArrayOutputStream();
+ 
+       for (int var2 = this.f_z_a_6dccaaa5.length - 1; var2 >= 0; var2--) {

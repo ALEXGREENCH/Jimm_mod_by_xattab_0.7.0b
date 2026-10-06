@@ -1,0 +1,22 @@
+name: Recovery build and bytecode audit
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/recover.py all
+      - uses: actions/upload-artifact@v4
+        with:
+          name: experimental-midp2-ru-reconstruction
+          path: |
+            dist/reconstructed/
+            preservation/reports/midp2-bytecode-comparison.json
+            preservation/reports/differential-tests.txt
