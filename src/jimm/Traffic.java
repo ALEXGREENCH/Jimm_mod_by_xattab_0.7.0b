@@ -387,15 +387,15 @@ public class Traffic
 			{
 				int color = trafficTextList.getTextColor(); 
 				trafficTextList.clear();
-				trafficTextList.addBigText(ResourceBundle.getString("session") + ":\n" + ResourceBundle.getString("out_in_total") + "\n", color, Font.STYLE_BOLD, -1)
-					.addBigText(Traffic.getTrafficString(SESSION + BYTES) + "\n", color, Font.STYLE_PLAIN, -1)
-					.addBigText(Traffic.getTrafficString(SESSION + KB) + "\n", color, Font.STYLE_PLAIN, -1)
-					.addBigText(Traffic.getTrafficString(SESSION + COST) + "\n\n", color, Font.STYLE_PLAIN, -1)
-					.addBigText(ResourceBundle.getString("since") + " ", color, Font.STYLE_BOLD, -1)
-					.addBigText(Traffic.getTrafficString(Traffic.SAVED_SINCE)+ "\n" + ResourceBundle.getString("out_in_total") + "\n", color, Font.STYLE_BOLD, -1)
-					.addBigText(Traffic.getTrafficString(OVERALL + BYTES) + "\n", color, Font.STYLE_PLAIN, -1)
-					.addBigText(Traffic.getTrafficString(OVERALL + KB) + "\n", color, Font.STYLE_PLAIN, -1)
-					.addBigText(Traffic.getTrafficString(OVERALL + COST) + "\n", color, Font.STYLE_PLAIN, -1);
+				trafficTextList.addBigText(ResourceBundle.getString("session") + ":\n" + ResourceBundle.getString("out_in_total") + "\n", color, Font.STYLE_BOLD + Options.fontStyle, -1)
+					.addBigText(Traffic.getTrafficString(SESSION + BYTES) + "\n", color, Options.fontStyle, -1)
+					.addBigText(Traffic.getTrafficString(SESSION + KB) + "\n", color, Options.fontStyle, -1)
+					.addBigText(Traffic.getTrafficString(SESSION + COST) + "\n\n", color, Options.fontStyle, -1)
+					.addBigText(ResourceBundle.getString("since") + " ", color, Font.STYLE_BOLD + Options.fontStyle, -1)
+					.addBigText(Traffic.getTrafficString(Traffic.SAVED_SINCE)+ "\n" + ResourceBundle.getString("out_in_total") + "\n", color, Font.STYLE_BOLD + Options.fontStyle, -1)
+					.addBigText(Traffic.getTrafficString(OVERALL + BYTES) + "\n", color, Options.fontStyle, -1)
+					.addBigText(Traffic.getTrafficString(OVERALL + KB) + "\n", color, Options.fontStyle, -1)
+					.addBigText(Traffic.getTrafficString(OVERALL + COST) + "\n", color, Options.fontStyle, -1);
 				compareTraffic = (byte) Traffic.getSessionTraffic();
 				trafficTextList.repaint();
 			}

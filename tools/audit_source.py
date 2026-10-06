@@ -32,8 +32,34 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'aw': 'DrawControls/VirtualTree', 'ax': 'DrawControls/TreeNode', 'cn': 'DrawControls/ListItem',
            'ab': 'jimm/comm/FileTransferMessage', 'bw': 'jimm/comm/DirectConnectionAction',
            'ao': 'jimm/comm/Icq$PeerConnection', 'au': 'jimm/comm/DCPacket',
-           'cl': 'jimm/comm/SendMessageAction', 'av': 'jimm/comm/PlainMessage'}
+           'cl': 'jimm/comm/SendMessageAction', 'av': 'jimm/comm/PlainMessage',
+           'a': 'jimm/Traffic$TrafficScreen'}
 SYMBOLS = {
+    'a': 'jimm/Traffic$TrafficScreen',
+    'x.a La;': 'jimm/Traffic.trafficScreen Ljimm/Traffic$TrafficScreen;',
+    'a.a Lbi;': 'jimm/Traffic$TrafficScreen.trafficTextList LDrawControls/TextList;',
+    'a.a Ljavax/microedition/lcdui/Command;': 'jimm/Traffic$TrafficScreen.resetCommand Ljavax/microedition/lcdui/Command;',
+    'a.b Ljavax/microedition/lcdui/Command;': 'jimm/Traffic$TrafficScreen.okCommand Ljavax/microedition/lcdui/Command;',
+    'm.a(I)V': 'jimm/ContactList.updateTitle(I)V',
+    'x.a I': 'jimm/Traffic.allInTraffic I',
+    'x.b I': 'jimm/Traffic.allOutTraffic I',
+    'x.c I': 'jimm/Traffic.savedCost I',
+    'x.d I': 'jimm/Traffic.all_traffic I',
+    'x.e I': 'jimm/Traffic.session_traffic I',
+    'x.f I': 'jimm/Traffic.sessionInTraffic I',
+    'x.g I': 'jimm/Traffic.sessionOutTraffic I',
+    'x.h I': 'jimm/Traffic.costPerDaySum I',
+    'x.a Ljava/util/Date;': 'jimm/Traffic.savedSince Ljava/util/Date;',
+    'x.b Ljava/util/Date;': 'jimm/Traffic.lastTimeUsed Ljava/util/Date;',
+    'x.<init>()V': 'jimm/Traffic.<init>()V',
+    'x.a()V': 'jimm/Traffic.save()V',
+    'x.a(I)Ljava/lang/String;': 'jimm/Traffic.getTrafficString(I)Ljava/lang/String;',
+    'x.a()I': 'jimm/Traffic.getSessionTraffic()I',
+    'x.a(I)V': 'jimm/Traffic.addInTraffic(I)V',
+    'x.b(I)V': 'jimm/Traffic.addOutTraffic(I)V',
+    'a.<init>()V': 'jimm/Traffic$TrafficScreen.<init>()V',
+    'a.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V': 'jimm/Traffic$TrafficScreen.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V',
+
     'cl': 'jimm/comm/SendMessageAction',
     'av': 'jimm/comm/PlainMessage',
     'cl.a Lav;': 'jimm/comm/SendMessageAction.plainMsg Ljimm/comm/PlainMessage;',
@@ -224,6 +250,16 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    # TrafficScreen.update is specialized to ()V; TrafficProbe exercises the actual update(true) callers.
+    ('x', '<init>', '()V', '<init>'),
+    ('x', 'a', '()V', 'save'),
+    ('x', 'a', '(I)Ljava/lang/String;', 'getTrafficString'),
+    ('x', 'a', '()I', 'getSessionTraffic'),
+    ('x', 'a', '(I)V', 'addInTraffic'),
+    ('x', 'b', '(I)V', 'addOutTraffic'),
+    ('a', '<init>', '()V', '<init>'),
+    ('a', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
+
     ('cl', '<init>', '(Lac;)V', '<init>'),
     # getMsgId is inlined in the rebuilt JAR; OutgoingProbe checks its ID arithmetic.
     ('cl', 'b', '()I', 'getMsgCounter'),
