@@ -75,9 +75,8 @@ public class Templates implements VirtualListCommands, CommandListener
 		Templates.textBox = textBox;
 		caretPos = textBox.getCaretPosition();
 
-		templateList = new TextList(null);
+		templateList = new TextList(ResourceBundle.getString("templates"));
 		JimmUI.setColorScheme(templateList, false);
-		templateList.setCaption(ResourceBundle.getString("templates"));
 		templateList.addCommandEx(JimmUI.cmdMenu, VirtualList.MENU_LEFT_BAR);
 		templateList.addCommandEx(backCommand, VirtualList.MENU_RIGHT_BAR);
 		templateList.addCommandEx(newTemplateCommand, VirtualList.MENU_LEFT);
@@ -210,7 +209,7 @@ public class Templates implements VirtualListCommands, CommandListener
 		templateList.clear();
 		int count = templates.size();
 		for ( int i = 0; i < count; i++)
-			templateList.addBigText((String)templates.elementAt(i), templateList.getTextColor(), Font.STYLE_PLAIN,i).doCRLF(i);
+			templateList.addBigText((String)templates.elementAt(i), templateList.getTextColor(), Options.fontStyle,i).doCRLF(i);
 		templateList.unlock();
 	}
 
@@ -274,7 +273,7 @@ public class Templates implements VirtualListCommands, CommandListener
 	{
 		removeContextCommand();
 
-		templateList.addCommandEx(selectTemplateCommand, VirtualList.MENU_LEFT);
+		templateList.addCommandEx(selectTemplateCommand, VirtualList.MENU_DEFAULT);
 		templateList.addCommandEx(editTemplateCommand, VirtualList.MENU_LEFT);
 		templateList.addCommandEx(deleteCurrentTemplateCommand, VirtualList.MENU_LEFT);
 		templateList.addCommandEx(clearCommand, VirtualList.MENU_LEFT);
