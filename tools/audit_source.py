@@ -33,8 +33,26 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'ab': 'jimm/comm/FileTransferMessage', 'bw': 'jimm/comm/DirectConnectionAction',
            'ao': 'jimm/comm/Icq$PeerConnection', 'au': 'jimm/comm/DCPacket',
            'cl': 'jimm/comm/SendMessageAction', 'av': 'jimm/comm/PlainMessage',
-           'a': 'jimm/Traffic$TrafficScreen'}
+           'a': 'jimm/Traffic$TrafficScreen', 'bl': 'jimm/XStatusForm', 'af': 'jimm/util/Selector'}
 SYMBOLS = {
+    'bl': 'jimm/XStatusForm',
+    'af': 'jimm/util/Selector',
+    'bl.a Ld;': 'jimm/XStatusForm.form LDrawControls/VirtualForm;',
+    'bl.a Ljavax/microedition/lcdui/TextField;': 'jimm/XStatusForm.titleTextField Ljavax/microedition/lcdui/TextField;',
+    'bl.b Ljavax/microedition/lcdui/TextField;': 'jimm/XStatusForm.descTextField Ljavax/microedition/lcdui/TextField;',
+    'bl.a Ljavax/microedition/lcdui/ChoiceGroup;': 'jimm/XStatusForm.choiceGroup Ljavax/microedition/lcdui/ChoiceGroup;',
+    'bl.a Ljava/util/Vector;': 'jimm/XStatusForm.xstatusform Ljava/util/Vector;',
+    'bl.a I': 'jimm/XStatusForm.xstIndex I',
+    'bl.a Z': 'jimm/XStatusForm.happyFlag Z',
+    'bl.<init>()V': 'jimm/XStatusForm.<init>()V',
+    'bl.a(I)Ljava/lang/String;': 'jimm/XStatusForm.getRecordDesc(I)Ljava/lang/String;',
+    'bl.a()Ljava/lang/String;': 'jimm/XStatusForm.saveInLine()Ljava/lang/String;',
+    'bl.a([B)V': 'jimm/XStatusForm.LoadLineInTable([B)V',
+    'ag.d()V': 'jimm/MainMenu.showXStatusSelector()V',
+    'ag.a Laf;': 'jimm/MainMenu.selector Ljimm/util/Selector;',
+    'ag.a Lag;': 'jimm/MainMenu._this Ljimm/MainMenu;',
+    'af.<init>(II)V': 'jimm/util/Selector.<init>(II)V',
+    'cv.f(Le;)V': 'jimm/SplashCanvas.setXStatusToDraw(LDrawControls/Icon;)V',
     'a': 'jimm/Traffic$TrafficScreen',
     'x.a La;': 'jimm/Traffic.trafficScreen Ljimm/Traffic$TrafficScreen;',
     'a.a Lbi;': 'jimm/Traffic$TrafficScreen.trafficTextList LDrawControls/TextList;',
@@ -250,6 +268,12 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('bl', '<init>', '()V', '<init>'),
+    ('bl', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
+    ('bl', 'a', '(I)Ljava/lang/String;', 'getRecordDesc'),
+    ('bl', 'a', '()Ljava/lang/String;', 'saveInLine'),
+    ('bl', 'a', '([B)V', 'LoadLineInTable'),
+    ('ag', 'd', '()V', 'showXStatusSelector'),
     # TrafficScreen.update is specialized to ()V; TrafficProbe exercises the actual update(true) callers.
     ('x', '<init>', '()V', '<init>'),
     ('x', 'a', '()V', 'save'),

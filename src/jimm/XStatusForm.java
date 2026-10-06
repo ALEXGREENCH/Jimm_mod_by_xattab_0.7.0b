@@ -34,19 +34,10 @@ public class XStatusForm implements CommandListener
 {
     private VirtualForm form;
 
-    private TextField titleTextField = new TextField(ResourceBundle.getString("xtraz_title"), "", 20, TextField.ANY);
-    private TextField descTextField  = new TextField(ResourceBundle.getString("xtraz_desc"), "", 1000, TextField.ANY);
-    private ChoiceGroup choiceGroup  = new FormChoiceGroup(null, Choice.MULTIPLE);
-
-    private Command saveCommand      = new Command(ResourceBundle.getString("save"), Command.SCREEN, 1);
-    //#sijapp cond.if target is "MIDP2"#
-    private Command backCommand      = new Command(ResourceBundle.getString("back"), Jimm.is_smart_SE() ? Command.CANCEL : Command.BACK, 2);
-    //#sijapp cond.else#
-    private Command backCommand      = new Command(ResourceBundle.getString("back"), Command.BACK,   2);
-    //#sijapp cond.end#
-
-    private static Vector xstatusform = new Vector();
-    private static XStatusForm instance;
+    private TextField titleTextField;
+    private TextField descTextField;
+    private ChoiceGroup choiceGroup;
+    private Vector xstatusform = new Vector();
 
     private int xstIndex = -1;
     private boolean happyFlag;
@@ -54,45 +45,55 @@ public class XStatusForm implements CommandListener
     /** Creates a new instance of XtrazForm */
     private XStatusForm() 
     {
-        form = new VirtualForm(ResourceBundle.getString("xtraz_msg"));
-        choiceGroup.append(ResourceBundle.getString("xtraz_enable"), null);
-        choiceGroup.append(ResourceBundle.getString("happy_balloon"), null);
-        form.append(titleTextField);
-        form.append(descTextField);
-        form.append(choiceGroup);
-        form.addCommand(saveCommand);
-        form.addCommand(backCommand);
-        form.setCommandListener(this);
     }
 
     private void showXtrazForm(int index) 
     {
+        if (form == null)
+        {
+            form = new VirtualForm(ResourceBundle.getString("xtraz_msg"));
+            form.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
+            form.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
+            form.addCommandEx(JimmUI.cmdSave, VirtualList.MENU_LEFT_BAR);
+            form.setCommandListener(this);
+            int constraints = TextField.ANY;
+            if (Options.getBoolean(Options.OPTION_TEXT_ABC))
+                constraints |= TextField.INITIAL_CAPS_SENTENCE;
+            titleTextField = new TextField(ResourceBundle.getString("xtraz_title"), "", 20, constraints);
+            descTextField = new TextField(ResourceBundle.getString("xtraz_desc"), "", 1000, constraints);
+            choiceGroup = new FormChoiceGroup(null, Choice.MULTIPLE);
+            choiceGroup.append(ResourceBundle.getString("xtraz_enable"), null);
+            choiceGroup.append(ResourceBundle.getString("happy_balloon"), null);
+        }
         xstIndex = index - 1;
         happyFlag = Options.getBoolean(Options.OPTION_FLAG_HAPPY);
-        String TitleAndDesc = getRecordDesc(xstIndex);
-        titleTextField.setString(TitleAndDesc.substring(0, TitleAndDesc.indexOf("\t")));
-        descTextField.setString(TitleAndDesc.substring(TitleAndDesc.indexOf("\t") + 1));
+        try
+        {
+            String titleAndDesc = getRecordDesc(xstIndex);
+            titleTextField.setString(titleAndDesc.substring(0, titleAndDesc.indexOf("\t")));
+            descTextField.setString(titleAndDesc.substring(titleAndDesc.indexOf("\t") + 1));
+        }
+        catch (Exception e) {}
         choiceGroup.setSelectedIndex(0, Options.getBoolean(Options.OPTION_XTRAZ_ENABLE));
         choiceGroup.setSelectedIndex(1, happyFlag);
-
-		form.activate(Jimm.display);
-		//#sijapp cond.if target is "MOTOROLA"#
-		LightControl.flash(true);
-		//#sijapp cond.end#
+        form.clear();
+        form.append(titleTextField);
+        form.append(descTextField);
+        form.append(choiceGroup);
+        form.activate(Jimm.display);
+        //#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
+        LightControl.flash(true);
+        //#sijapp cond.end#
     }
 
     public static void activate(int index) 
     {
-        if (instance == null) 
-        {
-            instance = new XStatusForm();
-        }
-        instance.showXtrazForm(index);
+        new XStatusForm().showXtrazForm(index);
     }
     
     public void commandAction(Command command, Displayable displayable) 
     {
-        if (command == saveCommand) 
+        if (command == JimmUI.cmdSave)
         {
             Options.setString(Options.OPTION_XTRAZ_TITLE, titleTextField.getString());
             Options.setString(Options.OPTION_XTRAZ_MESSAGE, descTextField.getString());
@@ -129,10 +130,11 @@ public class XStatusForm implements CommandListener
 			{
 				MainMenu.activate();
 			}
-        } 
-        else 
+            SplashCanvas.setXStatusToDraw(Icq.getCurrentXStatus());
+        }
+        else if (command == JimmUI.cmdBack)
         {
-            MainMenu.activate();
+            MainMenu.showXStatusSelector();
         }
     }
 

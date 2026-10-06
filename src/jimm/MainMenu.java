@@ -491,13 +491,7 @@ public class MainMenu implements CommandListener
 				break;
 
 			case MENU_XSTATUS: /* Set XStatus */
-				selector = new Selector(1, (Options.getInt(Options.OPTION_XSTATUS) == XStatus.XSTATUS_NONE) ? 0 : Options.getInt(Options.OPTION_XSTATUS) + 1);
-				JimmUI.setColorScheme(selector, false);
-				selector.setCyclingCursor(true);
-				selector.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
-				selector.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
-				selector.setCommandListener(this);
-				selector.activate(Jimm.display);
+				showXStatusSelector();
 				break;
 
 			case MENU_PRIVATE_STATUS:
@@ -745,6 +739,17 @@ public class MainMenu implements CommandListener
 		}
 	}
 
+	public static void showXStatusSelector()
+	{
+		selector = new Selector(1, (Options.getInt(Options.OPTION_XSTATUS) == XStatus.XSTATUS_NONE) ? 0 : Options.getInt(Options.OPTION_XSTATUS) + 1);
+		JimmUI.setColorScheme(selector, false);
+		selector.setCyclingCursor(true);
+		selector.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
+		selector.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
+		selector.setCommandListener(_this);
+		selector.activate(Jimm.display);
+	}
+
 	//XStatuses
 	public static void selectXst()
 	{
@@ -753,6 +758,8 @@ public class MainMenu implements CommandListener
 		if (xstIndex == 0) 
 		{
 			Options.setInt(Options.OPTION_XSTATUS, XStatus.XSTATUS_NONE);
+			Options.setString(Options.OPTION_XTRAZ_TITLE, "");
+			Options.setString(Options.OPTION_XTRAZ_MESSAGE, "");
 			Options.safe_save();
 
 			/* Active MM/CL */
@@ -769,6 +776,7 @@ public class MainMenu implements CommandListener
 					JimmException.handleException(e);
 				}
 			}
+			SplashCanvas.setXStatusToDraw(Icq.getCurrentXStatus());
 		} 
 		else 
 		{
