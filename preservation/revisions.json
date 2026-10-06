@@ -1,0 +1,277 @@
+{
+  "target_revision": "2010-05-12",
+  "currently_rebuilt_revision": "2010-03-28",
+  "scope": "Dates confirmed by embedded language strings and class-entry timestamps. May 12 is the archived website release targeted for restoration, not proof that no later release ever existed.",
+  "builds": [
+    {
+      "jar": "preservation/originals/Jimm_MIDP2_RU/Jimm.jar",
+      "sha256": "fccb4366a61e29c20fc3a79c1a8f3244abc2d7862bc0bff9d5ad7d6e8f446bc2",
+      "release_date": "28.03.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RU.lng",
+          "key": "k0",
+          "value": "\nICQ Клиент для J2ME\n\nВерсия: 0.7.0b\nДата: 28.03.2010\nВариант: MIDP2\nМодули: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nСайты проекта:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-03-28": 96
+      }
+    },
+    {
+      "jar": "preservation/originals/Jimm_Moto_RU/Jimm.jar",
+      "sha256": "522f1658577cf77a38ceede6d79a1aff2e44507cc67572bbe20e12606907de9f",
+      "release_date": "28.03.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RU.lng",
+          "key": "n0",
+          "value": "\nICQ Клиент для J2ME\n\nВерсия: 0.7.0b\nДата: 28.03.2010\nВариант: MOTOROLA\nМодули: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nСайты проекта:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-03-28": 94
+      }
+    },
+    {
+      "jar": "preservation/originals/Jimm_Siemens2_RU/Jimm.jar",
+      "sha256": "abbec022d605ee33a8bacaf985455d71b571445a4b1fc4fe004137cd387145ef",
+      "release_date": "28.03.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RU.lng",
+          "key": "i0",
+          "value": "\nICQ Клиент для J2ME\n\nВерсия: 0.7.0b\nДата: 28.03.2010\nВариант: SIEMENS2\nМодули: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nСайты проекта:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-03-28": 94
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_MIDP2_CZ/Jimm.jar",
+      "sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "CZ.lng",
+          "key": "60",
+          "value": "\nICQ klient pro J2ME\n\nVerze: 0.7.0b\nDatum: 12.05.2010\nCíl: MIDP2\nModuly: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nPoděkování: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 101
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_MIDP2_EN/Jimm.jar",
+      "sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "EN.lng",
+          "key": "60",
+          "value": "\nICQ client for J2ME\n\nVersion: 0.7.0b\nDate: 12.05.2010\nBuild: MIDP2\nModules: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 101
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_MIDP2_RO/Jimm.jar",
+      "sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RO.lng",
+          "key": "k0",
+          "value": "\nICQ Client pentru J2ME\n\nVersiunea: 0.7.0b\nDin: 12.05.2010\nVarianta: MIDP2\nModule: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nMulţumiri pentru suport: \nJora, rossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 101
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar",
+      "sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RU.lng",
+          "key": "k0",
+          "value": "\nICQ Клиент для J2ME\n\nВерсия: 0.7.0b\nДата: 12.05.2010\nВариант: MIDP2\nМодули: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nСайты проекта:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 101
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_MIDP2_UA/Jimm.jar",
+      "sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "UA.lng",
+          "key": "k0",
+          "value": "\nICQ Клієнт для J2ME\n\nВерсія: 0.7.0b\nДата: 12.05.2010\nВаріант: MIDP2\nМодулі: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\nПереклад: BURU, ROMKESZ\n\nСайти проекту:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 101
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Moto_CZ/Jimm.jar",
+      "sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "CZ.lng",
+          "key": "60",
+          "value": "\nICQ klient pro J2ME\n\nVerze: 0.7.0b\nDatum: 12.05.2010\nCíl: MOTOROLA\nModuly: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nPoděkování: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Moto_EN/Jimm.jar",
+      "sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "EN.lng",
+          "key": "60",
+          "value": "\nICQ client for J2ME\n\nVersion: 0.7.0b\nDate: 12.05.2010\nBuild: MOTOROLA\nModules: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Moto_RO/Jimm.jar",
+      "sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RO.lng",
+          "key": "n0",
+          "value": "\nICQ Client pentru J2ME\n\nVersiunea: 0.7.0b\nDin: 12.05.2010\nVarianta: MOTOROLA\nModule: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nMulţumiri pentru suport: \nJora, rossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Moto_RU/Jimm.jar",
+      "sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RU.lng",
+          "key": "n0",
+          "value": "\nICQ Клиент для J2ME\n\nВерсия: 0.7.0b\nДата: 12.05.2010\nВариант: MOTOROLA\nМодули: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nСайты проекта:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Moto_UA/Jimm.jar",
+      "sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "UA.lng",
+          "key": "n0",
+          "value": "\nICQ Клієнт для J2ME\n\nВерсія: 0.7.0b\nДата: 12.05.2010\nВаріант: MOTOROLA\nМодулі: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\nПереклад: BURU, ROMKESZ\n\nСайти проекту:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Siemens2_CZ/Jimm.jar",
+      "sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "CZ.lng",
+          "key": "60",
+          "value": "\nICQ klient pro J2ME\n\nVerze: 0.7.0b\nDatum: 12.05.2010\nCíl: SIEMENS2\nModuly: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nPoděkování: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Siemens2_EN/Jimm.jar",
+      "sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "EN.lng",
+          "key": "60",
+          "value": "\nICQ client for J2ME\n\nVersion: 0.7.0b\nDate: 12.05.2010\nBuild: SIEMENS2\nModules: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Siemens2_RO/Jimm.jar",
+      "sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RO.lng",
+          "key": "i0",
+          "value": "\nICQ Client pentru J2ME\n\nVersiunea: 0.7.0b\nDin: 12.05.2010\nVarianta: SIEMENS2\nModule: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nMulţumiri pentru suport: \nJora, rossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nProject sites:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Siemens2_RU/Jimm.jar",
+      "sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "RU.lng",
+          "key": "i0",
+          "value": "\nICQ Клиент для J2ME\n\nВерсия: 0.7.0b\nДата: 12.05.2010\nВариант: SIEMENS2\nМодули: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\n\nСайты проекта:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    },
+    {
+      "jar": "preservation/wayback-originals/Jimm_Siemens2_UA/Jimm.jar",
+      "sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
+      "release_date": "12.05.2010",
+      "language_date_evidence": [
+        {
+          "resource": "UA.lng",
+          "key": "i0",
+          "value": "\nICQ Клієнт для J2ME\n\nВерсія: 0.7.0b\nДата: 12.05.2010\nВаріант: SIEMENS2\nМодулі: SMILES,TRAFFIC,HISTORY,FILES,PROXY,ANISMILES\n\nThanks to: \nrossi, ArtDen, ip82, Arvin, tamerlan311, Piligrim, hobbit19, aspro, Divl, sogris, mrXPert, whiplash, Rx_G\nПереклад: BURU, ROMKESZ\n\nСайти проекту:\n"
+        }
+      ],
+      "class_entry_dates": {
+        "2010-05-12": 99
+      }
+    }
+  ]
+}

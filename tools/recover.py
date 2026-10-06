@@ -82,8 +82,9 @@ def verify_originals():
 def write_jar(path, entries):
     with zipfile.ZipFile(path, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name, data in sorted(entries.items()):
-            # Fixed timestamps make repeated builds byte-reproducible.
-            info = zipfile.ZipInfo(name, (2010, 5, 12, 0, 0, 0))
+            # Fixed timestamps identify the revision currently reconstructed.
+            # The May 12 website revision is the next target, not this build.
+            info = zipfile.ZipInfo(name, (2010, 3, 28, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o644 << 16
             z.writestr(info, data)
