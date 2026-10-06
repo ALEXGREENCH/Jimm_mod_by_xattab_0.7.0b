@@ -37,6 +37,9 @@ def main(matrix=False, skip_build=False):
     helpers = [p for p in helpers if p.name != 'Preprocess.java']
     run([os.environ.get('JAVAC', 'javac'), '-encoding', 'UTF-8', '-cp', recover.cp([CACHE / 'asm.jar', *runtime]),
          '-d', TEST, *helpers], 'compile-tests')
+    # No invokedynamic in the fixture classes loaded by MicroEmulator's legacy ASM.
+    run([os.environ.get('JAVAC', 'javac'), '-source', '7', '-target', '7', '-encoding', 'UTF-8',
+         '-cp', recover.cp(runtime), '-d', TEST, ROOT / 'tools/source/TransportIO.java'], 'compile-transport-io')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
     original = ROOT / 'preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar'
@@ -86,6 +89,16 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Splash mismatch: compare build/source-tests/splash-reference.txt and splash-source.txt')
     report['splash_observations'] = len(splash_ref.read_text().splitlines())
     report['splash_differences'] = 0
+    transport_ref, transport_src = TEST / 'transport-reference.txt', TEST / 'transport-source.txt'
+    for path, mode, output in [(original, 'reference', transport_ref), (test_jar, 'source', transport_src)]:
+        fixture = TEST / ('transport-' + mode + '.jar')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'TransportFixture', path, fixture, mode, TEST], 'transport-fixture-' + mode)
+        report['transport_' + mode] = run([*java, 'TransportProbe', fixture, mode, output], 'transport-' + mode)
+    if transport_ref.read_bytes() != transport_src.read_bytes():
+        raise AssertionError('Transport mismatch: compare build/source-tests/transport-reference.txt and transport-source.txt')
+    report['transport_observations'] = len(transport_ref.read_text().splitlines())
+    report['transport_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']

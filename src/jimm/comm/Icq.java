@@ -709,42 +709,22 @@ public class Icq implements Runnable
 		// Sets the reconnect flag and closes the connection
 		public void close()
 		{
-			this.setInputCloseFlag(true);
-
-			try
-			{
-				this.ism.close();
-			} catch (Exception e)
-			{ /* Do nothing */
-			} finally
-			{
-				this.ism = null;
-			}
-
-			try
-			{
-				this.osd.close();
-			} catch (Exception e)
-			{ /* Do nothing */
-			} finally
-			{
-				this.osd = null;
-			}
-
-			try
-			{
-				this.hcm.close();
-				this.hcd.close();
-			} catch (Exception e)
-			{ /* Do nothing */
-			} finally
-			{
-				this.hcm = null;
-				this.hcd = null;
-			}
-
-			Thread.yield();
+			setInputCloseFlag(true);
+			stream_close();
 		}
+
+        private void stream_close()
+        {
+            try { ism.close(); } catch (Exception e) {}
+            ism = null;
+            try { osd.close(); } catch (Exception e) {}
+            osd = null;
+            try { hcm.close(); } catch (Exception e) {}
+            hcm = null;
+            try { hcd.close(); } catch (Exception e) {}
+            hcd = null;
+        }
+
 
 		/***************************************************************************** 
 		 ***************************************************************************** 
@@ -784,7 +764,7 @@ public class Icq implements Runnable
 				this.osd = this.hcd.openOutputStream();
 			} catch (IOException e)
 			{
-				this.close();
+				this.setInputCloseFlag(true);
 			}
 
 			// Throw exception if output stream is not ready
@@ -802,7 +782,6 @@ public class Icq implements Runnable
 					if (rawData == null)
 					{
 						rawData = packet.toByteArray();
-						outpack = new byte[14 + rawData.length];
 					}
 
 					outpack = new byte[14 + rawData.length];
@@ -819,7 +798,7 @@ public class Icq implements Runnable
 
 					// Send the data
 					if (hcd.getResponseCode() != HttpConnection.HTTP_OK)
-						this.close();
+						this.setInputCloseFlag(true);
 					else
 						seq++;
 
@@ -845,7 +824,7 @@ public class Icq implements Runnable
 					// #sijapp cond.end#
 				} catch (IOException e)
 				{
-					this.close();
+					this.setInputCloseFlag(true);
 				}
 			}
 		}
@@ -1049,6 +1028,8 @@ public class Icq implements Runnable
 					JimmException.handleException(f);
 				}
 			}
+			stream_close();
+			Icq.setNotConnected();
 		}
 	}
 
@@ -1560,13 +1541,13 @@ public class Icq implements Runnable
 		is_connected = true;
 	  }
 	  catch (ConnectionNotFoundException e) {
-		throw (new JimmException(121, 226));
+		if (!getInputCloseFlag()) throw new JimmException(121, 0);
 	  }
 	  catch (IllegalArgumentException e) {
-		throw (new JimmException(122, 226));
+		throw new JimmException(122, 0);
 	  }
 	  catch (IOException e) {
-		throw (new JimmException(120, 226));
+		if (!getInputCloseFlag()) throw new JimmException(120, 0);
 	  }
         }
 
@@ -1576,35 +1557,17 @@ public class Icq implements Runnable
 
 		stream_close();
 
-		Thread.yield();
 	}
 
         // Close input and output streams
 	private synchronized void stream_close() {
-            try {
-                is.close();
-            } catch (Exception e) {
-		 /* Do nothing */
-            } finally {
-		is = null;
-            }
-
-            try {
-		os.close();
-            } catch (Exception e) {
-		/* Do nothing */
-            } finally {
-		os = null;
-            }
-
-            try {
-                sc.close();
-            } catch (Exception e)
-            { /* Do nothing */
-            } finally {
-                sc = null;
-            }
-        }
+            try { is.close(); } catch (Exception e) {}
+            is = null;
+            try { os.close(); } catch (Exception e) {}
+            os = null;
+            try { sc.close(); } catch (Exception e) {}
+            sc = null;
+	}
 
         // Sends the specified packet
         public void sendPacket(Packet packet) throws JimmException

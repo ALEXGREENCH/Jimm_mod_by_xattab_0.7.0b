@@ -18,7 +18,9 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'r': 'jimm/comm/Icq', 'n': 'jimm/comm/ConnectAction',
            'ap': 'jimm/comm/Icq$Connection', 'bv': 'jimm/JimmException',
            'cv': 'jimm/SplashCanvas', 'cd': 'DrawControls/VirtualList',
-           'aa': 'jimm/comm/Action', 'at': 'jimm/TimerTasks', 'e': 'DrawControls/Icon'}
+           'aa': 'jimm/comm/Action', 'at': 'jimm/TimerTasks', 'e': 'DrawControls/Icon',
+           'ay': 'jimm/comm/Icq$HTTPConnection', 'cb': 'jimm/comm/Icq$SOCKSConnection',
+           'an': 'jimm/comm/Packet'}
 SYMBOLS = {
     'co.a([BIIZ)Ljava/lang/String;': 'jimm/comm/Util.byteArrayToString([BIIZ)Ljava/lang/String;',
     'co.a(Ljava/lang/String;Z)[B': 'jimm/comm/Util.stringToByteArray(Ljava/lang/String;Z)[B',
@@ -72,6 +74,25 @@ SYMBOLS = {
     'cd.a(Ljavax/microedition/lcdui/Command;)V': 'DrawControls/VirtualList.removeCommandEx(Ljavax/microedition/lcdui/Command;)V',
     'cd.a(Ljavax/microedition/lcdui/CommandListener;)V': 'DrawControls/VirtualList.setCommandListener(Ljavax/microedition/lcdui/CommandListener;)V',
     'cd.l I': 'DrawControls/VirtualList.MENU_RIGHT_BAR I',
+    'ap.a(Z)V': 'jimm/comm/Icq$Connection.setInputCloseFlag(Z)V',
+    'ap.a()Z': 'jimm/comm/Icq$Connection.getInputCloseFlag()Z',
+    'ay.a Ljavax/microedition/io/HttpConnection;': 'jimm/comm/Icq$HTTPConnection.hcm Ljavax/microedition/io/HttpConnection;',
+    'ay.b Ljavax/microedition/io/HttpConnection;': 'jimm/comm/Icq$HTTPConnection.hcd Ljavax/microedition/io/HttpConnection;',
+    'ay.a Ljava/io/InputStream;': 'jimm/comm/Icq$HTTPConnection.ism Ljava/io/InputStream;',
+    'ay.a Ljava/io/OutputStream;': 'jimm/comm/Icq$HTTPConnection.osd Ljava/io/OutputStream;',
+    'ay.a Ljava/lang/String;': 'jimm/comm/Icq$HTTPConnection.monitorURL Ljava/lang/String;',
+    'ay.b Ljava/lang/String;': 'jimm/comm/Icq$HTTPConnection.sid Ljava/lang/String;',
+    'ay.c Ljava/lang/String;': 'jimm/comm/Icq$HTTPConnection.proxy_host Ljava/lang/String;',
+    'ay.a I': 'jimm/comm/Icq$HTTPConnection.seq I',
+    'ay.b I': 'jimm/comm/Icq$HTTPConnection.proxy_port I',
+    'ay.c I': 'jimm/comm/Icq$HTTPConnection.connSeq I',
+    'ay.a(Lan;[BII)V': 'jimm/comm/Icq$HTTPConnection.sendPacket(Ljimm/comm/Packet;[BII)V',
+    'ay.b()V': 'jimm/comm/Icq$HTTPConnection.stream_close()V',
+    'cb.a Ljavax/microedition/io/SocketConnection;': 'jimm/comm/Icq$SOCKSConnection.sc Ljavax/microedition/io/SocketConnection;',
+    'cb.a Ljava/io/InputStream;': 'jimm/comm/Icq$SOCKSConnection.is Ljava/io/InputStream;',
+    'cb.a Ljava/io/OutputStream;': 'jimm/comm/Icq$SOCKSConnection.os Ljava/io/OutputStream;',
+    'cb.a Z': 'jimm/comm/Icq$SOCKSConnection.is_connected Z',
+    'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
     ('co', 'c', '([BII)Ljava/lang/String;', 'detectClientVersion'),
@@ -111,6 +132,16 @@ METHODS = [
     ('cv', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
     ('at', 'cancel', '()Z', 'cancel'),
     ('at', 'run', '()V', 'run'),
+    ('ay', 'a', '(Ljava/lang/String;)V', 'connect'),
+    ('ay', 'a', '(Lan;[BII)V', 'sendPacket'),
+    ('ay', 'a', '(Lan;)V', 'sendPacket'),
+    ('ay', 'run', '()V', 'run'),
+    ('ay', 'b', '()V', 'stream_close'),
+    ('ay', 'a', '()V', 'close'),
+    ('cb', 'a', '(Ljava/lang/String;)V', 'connect'),
+    ('cb', 'a', '(BLjava/lang/String;Ljava/lang/String;)V', 'connect_socks'),
+    ('cb', 'b', '()V', 'stream_close'),
+    ('cb', 'a', '()V', 'close'),
 ]
 
 
@@ -127,6 +158,14 @@ def normalized(code):
 
 def digest(code):
     return hashlib.sha256('\n'.join(code).encode()).hexdigest()
+
+
+def normalized_handlers(handlers):
+    result = []
+    for entry in handlers:
+        region, _, exception = entry.rpartition(' ')
+        result.append(region + ' ' + CLASSES.get(exception, exception))
+    return result
 
 
 def main():
@@ -154,11 +193,18 @@ def main():
         same_static = bool(before['access'] & 8) == bool(after['access'] & 8)
         if not same_static:
             raise AssertionError('Static/instance mismatch: ' + owner + '.' + name + desc)
+        same_synchronized = bool(before['access'] & 32) == bool(after['access'] & 32)
+        if not same_synchronized:
+            raise AssertionError('Synchronization mismatch: ' + owner + '.' + name + desc)
+        same_handlers = normalized_handlers(before['handlers']) == after['handlers']
         methods.append({'reference': owner + '.' + name + desc,
                         'source': CLASSES[owner] + '.' + after['name'] + source_desc,
                         'signature_verified': True, 'static_modifier_verified': same_static,
+                        'synchronized_modifier_verified': same_synchronized,
                         'reference_instructions': len(left),
                         'source_instructions': len(right), 'same_normalized_instructions': left == right,
+                        'same_normalized_handlers': same_handlers,
+                        'same_normalized_bytecode': left == right and same_handlers,
                         'reference_normalized_sha256': digest(left), 'source_normalized_sha256': digest(right)})
     report = {'reference_sha256': recover.sha(reference), 'rebuilt_sha256': recover.sha(rebuilt),
               'reference_classes': len(old), 'rebuilt_classes': len(new), 'methods': methods,
@@ -167,7 +213,8 @@ def main():
     path = ROOT / 'preservation/reports/source-bytecode-comparison.json'
     path.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print('Audited', len(methods), 'method signatures;', sum(m['same_normalized_instructions'] for m in methods),
-          'identical normalized instruction sequences')
+          'identical normalized instruction sequences;', sum(m['same_normalized_bytecode'] for m in methods),
+          'also match exception tables')
 
 
 if __name__ == '__main__':
