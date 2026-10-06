@@ -58,6 +58,8 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 									, PlayerListener
 									//#sijapp cond.end#
 {
+    public static final int SORT_BY_ACTIVITY = 3;
+
 	/* Status (all are mutual exclusive) TODO: move status to ContactItem */
 	public static final int STATUS_AWAY       = 0x00000001;
 	public static final int STATUS_DND        = 0x00000002;
@@ -127,6 +129,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 	final public static ImageList happyIcon    = ImageList.load("/happy.png");
 	final public static ImageList authIcon     = ImageList.load("/auth.png");
 	final public static ImageList psIcons      = ImageList.load("/pstatus.png");
+	final public static ImageList groupIcons   = ImageList.load("/groups.png");
 
 	private static int onlineCounter;
 
@@ -688,7 +691,21 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		}
 
 		// treeSorted = false;
-		treeBuilt = true;
+        if (use_groups && Options.getBoolean(Options.OPTION_CL_HIDE_EMPTY))
+        {
+            for (int groupIndex = gItems.size() - 1; groupIndex >= 0; groupIndex--)
+            {
+                GroupItem group = (GroupItem)gItems.elementAt(groupIndex);
+                Integer id = new Integer(group.getId());
+                TreeNode node = (TreeNode)gNodes.get(id);
+                if (node.size() == 0)
+                {
+                    tree.removeNode(node);
+                    gNodes.remove(id);
+                }
+            }
+        }
+        treeBuilt = true;
 	}
 
 	// Returns reference to group with id or null if group not found
@@ -807,14 +824,31 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		// if have to add new contact
 		if (haveToAdd && !contactExistInTree)
 		{
-			cItemNode = tree.addNode(groupNode, item);
+			if (Options.getBoolean(Options.OPTION_CL_HIDE_EMPTY)
+                && Options.getBoolean(Options.OPTION_USER_GROUPS)
+                && !gNodes.containsKey(new Integer(groupId)))
+            {
+                GroupItem group = getGroupById(groupId);
+                if (group != null)
+                {
+                    groupNode = tree.addNode(null, group);
+                    gNodes.put(new Integer(groupId), groupNode);
+                }
+            }
+            cItemNode = tree.addNode(groupNode, item);
 		}
 
 		// if have to delete contact
 		else if (haveToDelete)
 		{
 			tree.removeNode(cItemNode);
-			wasDeleted = true;
+            if (Options.getBoolean(Options.OPTION_CL_HIDE_EMPTY)
+                && Options.getBoolean(Options.OPTION_USER_GROUPS) && groupNode.size() == 0)
+            {
+                tree.removeNode(groupNode);
+                gNodes.remove(new Integer(groupId));
+            }
+            wasDeleted = true;
 		}
 
 		// sort group
@@ -879,7 +913,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 	{
 		ContactItem cItem = getItembyUIN(uin);
 
-		int trueStatus = Util.translateStatusReceived(status);
+		int trueStatus = Util.translateStatusReceived(status, cItem);
 
 		if (cItem == null)
 		{
@@ -1553,7 +1587,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 	{
 		ContactListItem item = (ContactListItem)src.getData();
 
-		dst.image         = imageList.elementAt(item.getImageIndex());
+		dst.image         = item instanceof GroupItem ? groupIcons.elementAt(src.getExpanded() ? 1 : 0) : imageList.elementAt(item.getImageIndex());
 		dst.xStatusImg    = item.getXStatus().getStatusImage();
 		dst.happyImg      = happyIcon.elementAt(item.getHappyImageIndex());
 		dst.bDayImg       = birthDayIcon.elementAt(item.getBirthDayImageIndex());

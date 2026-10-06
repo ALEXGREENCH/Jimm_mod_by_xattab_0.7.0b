@@ -50,5 +50,13 @@
   "midpapi20.jar": {
     "url": "https://repo.maven.apache.org/maven2/org/microemu/midpapi20/2.0.4/midpapi20-2.0.4.jar",
     "sha256": "b7f6ed5e0344c7000643ecc114e6edff3587e8e77face546af0e12ffd6dbe826"
+  },
+  "ant.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/apache/ant/ant/1.10.15/ant-1.10.15.jar",
+    "sha256": "763acda4a69588c9ea8817a952851ff0c2fc4bffa1d081c2565dc407f29d5794"
+  },
+  "ant-launcher.jar": {
+    "url": "https://repo.maven.apache.org/maven2/org/apache/ant/ant-launcher/1.10.15/ant-launcher-1.10.15.jar",
+    "sha256": "5c8551990307a032336d98ddaed549a39a689f07d4d4c6b950601bf22b3d6a1b"
   }
 }

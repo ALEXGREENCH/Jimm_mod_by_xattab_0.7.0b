@@ -97,7 +97,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 	private static String currUin  = new String(), currName = new String();
 	
 	// Controls for finding text
-	private static Form frmFind;
+	private static VirtualForm frmFind;
 	//private static Command cmdFindOk;
 	//private static Command cmdFindCancel;
 	private static TextField tfldFind;
@@ -371,7 +371,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		if (c == JimmUI.cmdBack)
 		{
 			// back to messages list
-			if (JimmUI.isControlActive(messText) || (d == frmFind))
+			if (JimmUI.isControlActive(messText) || (frmFind.isActive()))
 			{
 				messText = null;
 				JimmUI.backToLastScreen(/*false*/);
@@ -470,10 +470,10 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		{
 			if (frmFind == null)
 			{
-				frmFind = new Form( ResourceBundle.getString("find") );
+				frmFind = new VirtualForm( ResourceBundle.getString("find") );
 				tfldFind = new TextField(ResourceBundle.getString("text_to_find"), "", 64, TextField.ANY);
 
-				chsFind = new ChoiceGroup(ResourceBundle.getString("option"), Choice.MULTIPLE);
+				chsFind = new FormChoiceGroup(ResourceBundle.getString("option"), Choice.MULTIPLE);
 				chsFind.append(ResourceBundle.getString("find_backwards"), null);
 				chsFind.append(ResourceBundle.getString("find_case_sensitiv"), null);
 				chsFind.setSelectedIndex(0, true);
@@ -484,7 +484,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 				frmFind.append(chsFind);
 				frmFind.setCommandListener(this);
 			}
-			Jimm.display.setCurrent(frmFind);
+			frmFind.activate(Jimm.display);
 		}
 		
 		// user select OK command in find screen

@@ -88,12 +88,12 @@ Author(s): Manuel Linsmayer, Andreas Rossbacher
 	<!--  *******************************************************************   -->
 	<!--  Version number of the build. The value can be in any format (e.g.     -->
 	<!--  0.2cvs).                                                              -->
-	<property name="version/jimm"      value="0.6.0b"                            />
+	<property name="version/jimm"      value="0.7.0b"                            />
 	<!--  *******************************************************************   -->
 	<!--  Version number of the build in the standardized format                -->
 	<!--  <major>[.<minor>[.<micro>]] (e.g. 0.2.1). This value should           -->
 	<!--  correspond to the version property (see above).                       -->
-	<property name="version/java"      value="0.6.0"                             />
+	<property name="version/java"      value="0.7.0"                             />
 	<!--  *******************************************************************   -->
 	<!--  CHANGE NOTHING BELOW THIS LINE, UNLESS YOU KNOW WHAT YOU'RE DOING     -->
 	<!--  *******************************************************************   -->

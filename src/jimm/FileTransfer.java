@@ -67,8 +67,8 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
     private ViewFinder vf;
     // #sijapp cond.end #
 
-    // Form for entering the name and description
-    private Form name_Desc;
+    // VirtualForm for entering the name and description
+    private VirtualForm name_Desc;
 
 	// File data
 	private InputStream fis;
@@ -124,7 +124,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
     public void startFT()
     {
 		// Ask user about web file transfer
-		if (Options.getBoolean(Options.OPTION_ASK_FOR_WEB_FT) && askForWebFileTransfer)
+		if (askForWebFileTransfer)
 		{
 			tlWebAsk = new TextList(ResourceBundle.getString("ft_caption"));
 			JimmUI.setColorScheme(tlWebAsk, true);
@@ -308,9 +308,9 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 			//code to set back Image
 			if (this.getCItem() == null)
 			{
-				DrawControls.VirtualList.setBackGroundImage(fis);
+				DrawControls.VirtualList.setBackGroundImage(fis, false);
 				Options.setString(Options.OPTION_IMG_PATH, fileName);
-				Options.setBoolean(Options.OPTION_BACK_IMAGE, true);
+				Options.setInt(Options.OPTION_BACKGROUND_MODE, 2);
 				Options.optionsForm.callColorSchemeOptions();
 				return;
 			}
@@ -363,7 +363,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 
     public void askForNameDesc(String filename, String description)
     {
-        name_Desc = new Form(ResourceBundle.getString("name_desc"));
+        name_Desc = new VirtualForm(ResourceBundle.getString("name_desc"));
         this.fileNameField = new TextField(ResourceBundle.getString("filename"), filename, 255, TextField.ANY);
         this.descriptionField = new TextField(ResourceBundle.getString("description"), description, 255, TextField.ANY);
 
@@ -380,7 +380,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
         name_Desc.addCommand(this.okCommand);
         name_Desc.setCommandListener(this);
 
-        Jimm.display.setCurrent(name_Desc);
+        name_Desc.activate(Jimm.display);
     }
     
     // Command listener
@@ -394,7 +394,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 			case WEB_ASK_RESULT_NO:
 			case WEB_ASK_RESULT_YES:
 				Options.setInt(Options.OPTION_FT_MODE, (index == WEB_ASK_RESULT_NO) ? Options.FS_MODE_NET : Options.FS_MODE_WEB);
-				Options.setBoolean(Options.OPTION_ASK_FOR_WEB_FT, false);
+				askForWebFileTransfer = false;
 				Options.safe_save();
 				startFtInternal();
 				return;
@@ -408,7 +408,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 		}
         else if (c == this.okCommand)
         {
-            if (d == this.name_Desc)
+            if (name_Desc != null && name_Desc.isActive())
             {
 				switch (Options.getInt(Options.OPTION_FT_MODE))
 				{

@@ -1,0 +1,406 @@
+{
+  "url": "https://svn.code.sf.net/p/jimm/code/!svn/bc/1787/branches/0.7.0/jimm/",
+  "svn_revision": 1787,
+  "files": [
+    {
+      "path": "src/net/sergetk/mobile/lcdui/BitmapFont.java",
+      "sha256": "584a95339eb9ca6b09d5c9ba614e4230656f75f4ff889ec5b7a0d066f0ef49a7"
+    },
+    {
+      "path": "src/net/sergetk/mobile/lcdui/FontFacade.java",
+      "sha256": "5ba1cf0924b5490b671c4e5e4a30ec7eb5923476efef34b4f4d514fbc0a1e393"
+    },
+    {
+      "path": "src/lng/BA.lang",
+      "sha256": "0e4b7691e2f45e95efe757c5478da0fadf40c8f2d4408097fa056115bc97b1a3"
+    },
+    {
+      "path": "src/lng/BE.lang",
+      "sha256": "64429b174de388f062e954d16c60d25c4776619d4a054154018e3ffd5c68165f"
+    },
+    {
+      "path": "src/lng/BG.lang",
+      "sha256": "6c49979913870982cabce5a39f95ec5101ca33afc92d3b4f0fa002cd45f7dd75"
+    },
+    {
+      "path": "src/lng/BR.lang",
+      "sha256": "196ffd7e05f8247b6335d7818f2a585ffc0ac985134699a99fd223800b514037"
+    },
+    {
+      "path": "src/lng/CZ.lang",
+      "sha256": "c4462e1a2d80d99dac74427d3191fae2d47316ddd579016efeaf735ff04716f7"
+    },
+    {
+      "path": "src/lng/DE.lang",
+      "sha256": "f6ecfafd97ca42f4236231d03ff255f3e704f8490680e44370a4324cb693c5f9"
+    },
+    {
+      "path": "src/lng/EN.lang",
+      "sha256": "27446b21bc30ba36bb9689cc769a3376d6163a80ee663449629dc1608a6bf241"
+    },
+    {
+      "path": "src/lng/ES.lang",
+      "sha256": "20db8d2a5a6d24c5a07103601c8c6b571f20c6e73499f57cc3a4ddbe75450d50"
+    },
+    {
+      "path": "src/lng/FR.lang",
+      "sha256": "600cd2a0963b92a545978e0d34fcc671b90d4ebe079b3a767be05b65ef47f3cb"
+    },
+    {
+      "path": "src/lng/HE.lang",
+      "sha256": "bf6ee07a34c54de4607f13285f591548159aa940a99be081d8dd2ba59fda5ac2"
+    },
+    {
+      "path": "src/lng/IT.lang",
+      "sha256": "c8a81e416e26cb65f45389adacba8c4ee22229b0eb74ed1c21e3193e6d4f4105"
+    },
+    {
+      "path": "src/lng/KK.lang",
+      "sha256": "f88a98db5a93caf1ef665a6e046aa0b89fd10a037bd49f03f7dd7a7526b6e169"
+    },
+    {
+      "path": "src/lng/LT.lang",
+      "sha256": "09acb1fb188a7d7ec070f8dfad3183bd5a3a57bb6fe4366448fa3389e73882c6"
+    },
+    {
+      "path": "src/lng/PL.lang",
+      "sha256": "aef0dd0e047c3c9148888c4e3606024a41880501963c3004d0388307885d6d3b"
+    },
+    {
+      "path": "src/lng/RO.lang",
+      "sha256": "b22c3fb6e980a49d6d8e07ebc50111883a9d9d14644b136d2f55d0d02fc457b9"
+    },
+    {
+      "path": "src/lng/RU.lang",
+      "sha256": "3d2af31714bcf2d7f5a45312f4913b78e087e14997e9d4b6af749e209b2b2952"
+    },
+    {
+      "path": "src/lng/SE.lang",
+      "sha256": "ae3ca2dfd07ccc3f66aadac298c6a0e036295328ae4057a35dec372bf87dab65"
+    },
+    {
+      "path": "src/lng/SK.lang",
+      "sha256": "ce09f52133d3d09d635be8ad0834486ccdcd318bb3005c77d0e59b06cde87f83"
+    },
+    {
+      "path": "src/lng/SR.lang",
+      "sha256": "5bb228efd76dc26cce0298751a0dc821c3f1d5e2b1779e11ab79785a9adf0e3b"
+    },
+    {
+      "path": "src/lng/UA.lang",
+      "sha256": "3be1a18de7cd482feefa73210c2b67bc43ae0bdb89f290e9a4a52c49b7dd8730"
+    },
+    {
+      "path": "src/jimm/ChatHistory.java",
+      "sha256": "ca366f281d9ec5c4e9a0cfe24f2dc5e1c2acf35492691b3a2f793d42f77f2518"
+    },
+    {
+      "path": "src/jimm/ContactItem.java",
+      "sha256": "9d6a37b90d3ae9f4f821407cb247bd31f4d6383e6ccc34c6d3bf20c81decf85a"
+    },
+    {
+      "path": "src/jimm/ContactList.java",
+      "sha256": "d50defe3adbf00d77fa181376bb934b6791956642916c4ff513e8c90a11adb60"
+    },
+    {
+      "path": "src/jimm/ContactListGroupItem.java",
+      "sha256": "98333c31d0dc377ab5553b415dcad7d9fe42f0a30c7fc6a8368287c2e5081405"
+    },
+    {
+      "path": "src/jimm/ContactListItem.java",
+      "sha256": "35397f11867ebf4c33d9a6fd767fed925317a780914798df1dc0a905da9c4a45"
+    },
+    {
+      "path": "src/jimm/DebugLog.java",
+      "sha256": "2c777e3245a318132cd1380e9d7c62d8c6f068ff3f6ee9e86f27172398a6f755"
+    },
+    {
+      "path": "src/jimm/EditInfo.java",
+      "sha256": "26c6a41cb613d26a1ab8a08b053bda5cc2c4cb4588dd3132799124933358bce7"
+    },
+    {
+      "path": "src/jimm/Emoticons.java",
+      "sha256": "2cedc548c59e912fc7912010a1b889947216bdad50550258ea45e62de60c99d0"
+    },
+    {
+      "path": "src/jimm/FileBrowser.java",
+      "sha256": "1fae1a89294aac7168d4eb454cb195fa544b9592e0209f4f420db98657cca964"
+    },
+    {
+      "path": "src/jimm/FileTransfer.java",
+      "sha256": "39c16dc3a0bcc623c8962aa97a338d91361f15928659643ed016be7bb1d65634"
+    },
+    {
+      "path": "src/jimm/HistoryStorage.java",
+      "sha256": "dba0cb7647a3c11dd0797e1588458b316bf78b1938f3b2f09c7c6800518f59c1"
+    },
+    {
+      "path": "src/jimm/Jimm.java",
+      "sha256": "32396cc8afe2dd5ced92acd94ddc745c6664550094c8e3709314de70e5255cf8"
+    },
+    {
+      "path": "src/jimm/JimmException.java",
+      "sha256": "5307dd20c758098eb6e663cb0f86903ae39e834454ca1abc8b2bb0159af15967"
+    },
+    {
+      "path": "src/jimm/JimmScreen.java",
+      "sha256": "1d795ad23cbb7ed83df72388710bdb9c6b3897639e32c69b384a1a60d4b838ee"
+    },
+    {
+      "path": "src/jimm/JimmUI.java",
+      "sha256": "a2001326ccbbd64e74692a79c0edb66e9a7dd17f23f9abcd8e4dd7ce2f8c2231"
+    },
+    {
+      "path": "src/jimm/MainMenu.java",
+      "sha256": "8238728a17a15d379c6a4b4d12a21bbec48e6c53b3ce266ec9ccc33c24a9e3ad"
+    },
+    {
+      "path": "src/jimm/MainThread.java",
+      "sha256": "13297df45006f0d4f6e7f15e52a3ddcdea7784bd217be52cab34c2f6c6dc4dc5"
+    },
+    {
+      "path": "src/jimm/Options.java",
+      "sha256": "181d37c1f3933f5b6f1c3da3f4c21d1115a8f480af0ee4d1ed86688d957abc61"
+    },
+    {
+      "path": "src/jimm/PhoneBook.java",
+      "sha256": "59a9caafdb1c42561905f21a832156e1ddc17765e4b0239f945ba2c455edcce7"
+    },
+    {
+      "path": "src/jimm/PrivateListsForm.java",
+      "sha256": "11392711568038fd0f6f08b3cf4e3c2b7de4d8dac16a84aab89009e11cc7b2ea"
+    },
+    {
+      "path": "src/jimm/Search.java",
+      "sha256": "34b25ab6c986e8c5a548d79c9239947b7683e3daa1eb311f83183a6b6880891e"
+    },
+    {
+      "path": "src/jimm/SplashCanvas.java",
+      "sha256": "e063f26495946acf2a6523741fefcb76f0c7b777732542b4034f07f5a21743d3"
+    },
+    {
+      "path": "src/jimm/StatusInfo.java",
+      "sha256": "bd67e6db57458ea6529ff933b0935fce95d7569949977da526311f6d1569dc54"
+    },
+    {
+      "path": "src/jimm/TelNum.java",
+      "sha256": "40718678019de26d0c45ce4da8aa8910aff47522f92b748b486eb8019db99acf"
+    },
+    {
+      "path": "src/jimm/Templates.java",
+      "sha256": "9f5ded57232d983aec9007c5b66abd27e9ce1dd6f2b3f1874108ff36bc401e1a"
+    },
+    {
+      "path": "src/jimm/Threads.java",
+      "sha256": "3532d16f7ee73db36e0fe1d0bddf26865a77f2ae3c87825eae28e6158cc09e30"
+    },
+    {
+      "path": "src/jimm/TimerTasks.java",
+      "sha256": "5b98509240b3134292e1ec3300ac81f5597e58b6e9d99ea5031a6455a92af5c7"
+    },
+    {
+      "path": "src/jimm/Traffic.java",
+      "sha256": "20c15df2b4e5302918e262548941bc459140bf55121798633319e4192733fa56"
+    },
+    {
+      "path": "src/jimm/util/ResourceBundle.java",
+      "sha256": "357e420ac9f2db70eb70e2e636f355f2f37a679e526852397b84bd526ad721a2"
+    },
+    {
+      "path": "src/jimm/comm/Action.java",
+      "sha256": "312c0a2ece345177f76a8f0c820e6e39fdbab91760213e57c628503d6e7e64f6"
+    },
+    {
+      "path": "src/jimm/comm/BytesInputStream.java",
+      "sha256": "1c78367f9dd51a18c4d85ce9eb66fd5bfc3d123a7bafe972ecf52be811779c41"
+    },
+    {
+      "path": "src/jimm/comm/ConnectAction.java",
+      "sha256": "10de04c543a050508cec3c378bf7317d901fdff0e790208afb001177f0dd4d19"
+    },
+    {
+      "path": "src/jimm/comm/ConnectPacket.java",
+      "sha256": "cdefc8a3255537a84d12cd1e11fe470559283d6c29c0d962218d5b26b3235cfe"
+    },
+    {
+      "path": "src/jimm/comm/DCPacket.java",
+      "sha256": "900c6568f007ea4e659c7c1dce509d3af43e57ec0657ccb9360934817d0aefc8"
+    },
+    {
+      "path": "src/jimm/comm/DirectConnectionAction.java",
+      "sha256": "6e6a53a1d042c7d9da54f7cb907eccce3d619e2a00cfa2239f26fa6c42986e97"
+    },
+    {
+      "path": "src/jimm/comm/DisconnectPacket.java",
+      "sha256": "57c4714d23522528fb7a67aa8c3e556cf69323404e3c9965d9fba07a669bf77b"
+    },
+    {
+      "path": "src/jimm/comm/ErrorPacket.java",
+      "sha256": "63c9cc297891a89bba5eb7600e97e39310bf73548a1276dbbf5e207571df44fc"
+    },
+    {
+      "path": "src/jimm/comm/FileTransferMessage.java",
+      "sha256": "3e079dc4c86115c2b5b9236cf327acf0a803946ca6b754ee18599f5b387ddd0a"
+    },
+    {
+      "path": "src/jimm/comm/FromIcqSrvPacket.java",
+      "sha256": "4ca70793c185cbc2456b94aad6e9a450f061c56b0f4d9304a0718b3fbec9c9f0"
+    },
+    {
+      "path": "src/jimm/comm/Icq.java",
+      "sha256": "491b1c869e16047577ec6dda678ed1a7a6cbd7e573f61278145f5bff09c5eee6"
+    },
+    {
+      "path": "src/jimm/comm/Message.java",
+      "sha256": "d94d6412c59d12a7380144272151fa659e0cdf7090e00532940268984a545636"
+    },
+    {
+      "path": "src/jimm/comm/Packet.java",
+      "sha256": "462382394c1f62566ea696d1052f0342abf946e1d4307414d4af707b3a4b6510"
+    },
+    {
+      "path": "src/jimm/comm/PingPacket.java",
+      "sha256": "bf978eaa5d39db0bb1b2933a55baf7c80018d8981a4f5834d58bf244ea0c8a5d"
+    },
+    {
+      "path": "src/jimm/comm/PlainMessage.java",
+      "sha256": "7fd0a1d38b219f271c94694933aa7024942afb13801007ce6dad76f98f9162ff"
+    },
+    {
+      "path": "src/jimm/comm/RegisterNewUinAction.java",
+      "sha256": "e2c996c4ec74ad17986a0c451d2df624d3ddcf7ff7baa771eb7f6a5b3b9d3553"
+    },
+    {
+      "path": "src/jimm/comm/RemoveMeAction.java",
+      "sha256": "adbecd6a79c6f6f547b12206dd94cee9ab507827a361ee9387ce683bf788351f"
+    },
+    {
+      "path": "src/jimm/comm/RequestBuddyIconAction.java",
+      "sha256": "1f3db89f3cc2f6a1fedcd7df45b30e8479ce832f508b4236d22a5b604488feff"
+    },
+    {
+      "path": "src/jimm/comm/RequestInfoAction.java",
+      "sha256": "268ce4c26ca8b3a45fc650da0b671cd99f9b81c09ed7d139853b957c99d4a2ed"
+    },
+    {
+      "path": "src/jimm/comm/SaveInfoAction.java",
+      "sha256": "132292515cd70a9fdd3396e4aa6def9898f08df46a93517f8b9acaccc9973e05"
+    },
+    {
+      "path": "src/jimm/comm/SearchAction.java",
+      "sha256": "d50f819b881bc77c129999d0a49eb7bf873776b5d7f11ed38d493058ab5e0740"
+    },
+    {
+      "path": "src/jimm/comm/SendMessageAction.java",
+      "sha256": "4fbf2930080ad53a8cce0aa480df3e1092cdb6afb0341616e8142fed94c9d04f"
+    },
+    {
+      "path": "src/jimm/comm/SnacPacket.java",
+      "sha256": "fd64d187e9cf97b41175ffc35c8e720bd65a63eeda0799e6d721354e0f52b5d7"
+    },
+    {
+      "path": "src/jimm/comm/SysNoticeAction.java",
+      "sha256": "e79af2863c2d8bd1b7bff4332b918e1fb0d4f37cb3d451e805d377858803ad50"
+    },
+    {
+      "path": "src/jimm/comm/SystemNotice.java",
+      "sha256": "ac11c81fa31e4efb59d901e5bcf9deb23845cdbfc712167c6f4cdf4de473dd40"
+    },
+    {
+      "path": "src/jimm/comm/ToIcqSrvPacket.java",
+      "sha256": "f4ea26fc8c840c9fe97e00f5d62de873a7ddb2c2007a95cf9d4baca1558ca7d4"
+    },
+    {
+      "path": "src/jimm/comm/UpdateContactListAction.java",
+      "sha256": "75c165e5803697c443c2f65008b74b2d9d011f321ae5c4ed1d09fce2ab65f6ab"
+    },
+    {
+      "path": "src/jimm/comm/UrlMessage.java",
+      "sha256": "1637fe9ca87d98675b6b53901c53b0abc835dec4cd383d8c7fde525fc5e953ed"
+    },
+    {
+      "path": "src/jimm/comm/Util.java",
+      "sha256": "88c988f115760a4d77e93a0c407c6fdf449f996ae4319619b6b31955bf123dca"
+    },
+    {
+      "path": "src/jimm/comm/connections/Connection.java",
+      "sha256": "b0f5a270fb3ab6060454c8413e0ee74d8cd20c049a259c1b8ed6d484136e353b"
+    },
+    {
+      "path": "src/jimm/comm/connections/HTTPConnection.java",
+      "sha256": "2875313075d2d8356511bd87d08d7bd22dda4a7851a1d0901af3358453107f43"
+    },
+    {
+      "path": "src/jimm/comm/connections/PeerConnection.java",
+      "sha256": "869636a87e22bbe2178ef6df02e22e79829b54230d8e2c8a58c355ce503e65ab"
+    },
+    {
+      "path": "src/jimm/comm/connections/SOCKETConnection.java",
+      "sha256": "fa905dac012a37b4cd236395f0fe0032c0c6f48594cbad24bea1eb0cc2d20039"
+    },
+    {
+      "path": "src/jimm/comm/connections/SOCKSConnection.java",
+      "sha256": "b6d9e1f229b78e3ee4d7d0002ab32327a6866a7c1ca2b45927c1180b1ec26ced"
+    },
+    {
+      "path": "src/DrawControls/IlImage.java",
+      "sha256": "ac26b20a4bad339a39743d7ccd37aadda66a84767bd7a53be42906c8009a0529"
+    },
+    {
+      "path": "src/DrawControls/ImageList.java",
+      "sha256": "b6ef17efe6937d828771b3f91f6ec97e3be2d355d8cc33dd8484bd3221eefdba"
+    },
+    {
+      "path": "src/DrawControls/ListItem.java",
+      "sha256": "18dd4ef2431857ecf8d865fc5e19f5f6ae3941dceb8dc9c9329ab81bfe2b0a2c"
+    },
+    {
+      "path": "src/DrawControls/TextList.java",
+      "sha256": "5a6aa2ad51759594a09fbfbcfa3bf137c360c1d479ad0691a131c8e098d784ca"
+    },
+    {
+      "path": "src/DrawControls/TreeNode.java",
+      "sha256": "9fe3754379796ef9535fa4bf7ea0041325e55be4dbc70adea21586141b54609b"
+    },
+    {
+      "path": "src/DrawControls/VirtualList.java",
+      "sha256": "3f6cdf26b19e8db91007e7d5b9a77f5c85a9cd5d0dfb4ae01e1d32d8a3d8d952"
+    },
+    {
+      "path": "src/DrawControls/VirtualListCommands.java",
+      "sha256": "2d4d5eb1dcb54b133be3d5067199c12cab30fbca1883864fbb322489d3ff52d9"
+    },
+    {
+      "path": "src/DrawControls/VirtualTree.java",
+      "sha256": "5b589c997b4a6c0a6ee0afd50157be955fadfe0a8c0d72497ca2a660a5f75353"
+    },
+    {
+      "path": "src/DrawControls/VirtualTreeCommands.java",
+      "sha256": "c0078bf7bd84f71f09c5cec06a2f5e76fe1bc271870b7b1d33fed3112b730e79"
+    },
+    {
+      "path": "src/DrawControls/device/ActivityUI.java",
+      "sha256": "cfdcdcbc1abf8caf9606e9aab4f1d5cc90bb89550058dcf65b0589675883e10b"
+    },
+    {
+      "path": "src/DrawControls/device/Device.java",
+      "sha256": "51c1b208708ac8d9ea23fd46a9a53abf5ee40403097f90463737fbd64bf51893"
+    },
+    {
+      "path": "src/DrawControls/device/NokiaDevice.java",
+      "sha256": "757d14d51d205ce88f9fba6e678c43df1f0514615177c4c4abf64dc7e4b82413"
+    },
+    {
+      "path": "src/DrawControls/device/SamsungDevice.java",
+      "sha256": "2e45e89ba138110bde1e584f2db87c2a2ee698ac476a0dc69d3f97a1d07462bc"
+    },
+    {
+      "path": "src/DrawControls/device/Sensor.java",
+      "sha256": "97a722df05dd5191ac1e0b6ece4ee661422908e1c35a0db4bd2f64d978903873"
+    },
+    {
+      "path": "src/DrawControls/device/StdDevice.java",
+      "sha256": "0021db4305c16beaa86a390c8bfa1b0c8847691bf68037c6c030b2e7e5901c38"
+    }
+  ]
+}

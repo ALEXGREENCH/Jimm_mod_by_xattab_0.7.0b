@@ -32,7 +32,9 @@ public class BytecodeDump {
    for(TryCatchBlockNode t:m.tryCatchBlocks)handlers.add(labels.get(t.start)+" "+labels.get(t.end)+" "+labels.get(t.handler)+" "+t.type);
    ms.add("{\"name\":"+q(m.name)+",\"desc\":"+q(m.desc)+",\"access\":"+m.access+",\"code\":"+arr(code)+",\"handlers\":"+arr(handlers)+",\"strings\":"+arr(strings)+",\"refs\":"+arr(refs)+"}");
   }
-  return "{\"name\":"+q(c.name)+",\"super\":"+q(c.superName)+",\"version\":"+c.version+",\"methods\":["+String.join(",",ms)+"]}";
+  List<String> fs=new ArrayList<>();
+  for(FieldNode f:c.fields)fs.add("{\"name\":"+q(f.name)+",\"desc\":"+q(f.desc)+",\"access\":"+f.access+",\"value\":"+q(f.value)+"}");
+  return "{\"name\":"+q(c.name)+",\"super\":"+q(c.superName)+",\"interfaces\":"+arr(c.interfaces)+",\"version\":"+c.version+",\"fields\":["+String.join(",",fs)+"],\"methods\":["+String.join(",",ms)+"]}";
  }
  public static void main(String[] args)throws Exception{
   List<String> classes=new ArrayList<>();Path p=Paths.get(args[0]);

@@ -33,6 +33,13 @@ public class OtherAction
     /** Creates a new instance of OtherAction */
     public OtherAction() {}
 
+    private static boolean extendedStatusSent;
+    private static final GUID CAP_STATUS_CHAT = new GUID(Util.explodeToBytes("B7,07,43,78,F5,0C,77,77,97,77,57,78,50,2D,05,75", ',', 16));
+    private static final GUID CAP_STATUS_EVIL = new GUID(Util.explodeToBytes("B7,07,43,78,F5,0C,77,77,97,77,57,78,50,2D,05,79", ',', 16));
+    private static final GUID CAP_STATUS_DEPRESSION = new GUID(Util.explodeToBytes("B7,07,43,78,F5,0C,77,77,97,77,57,78,50,2D,05,70", ',', 16));
+    private static final GUID CAP_STATUS_HOME = new GUID(Util.explodeToBytes("B7,07,43,78,F5,0C,77,77,97,77,57,78,50,2D,05,76", ',', 16));
+    private static final GUID CAP_STATUS_WORK = new GUID(Util.explodeToBytes("B7,07,43,78,F5,0C,77,77,97,77,57,78,50,2D,05,77", ',', 16));
+    private static final GUID CAP_STATUS_LUNCH = new GUID(Util.explodeToBytes("B7,07,43,78,F5,0C,77,77,97,77,57,78,50,2D,05,78", ',', 16));
     private static GUID CAP_JIMM;
 
     private static final GUID CAP_UNKNOWN       = new GUID(Util.explodeToBytes("09,46,00,00,4c,7f,11,d1,82,22,44,45,53,54,00,00", ',', 16));
@@ -135,19 +142,19 @@ public class OtherAction
         
         switch (client) 
         {
-            case  7: fp1 = 0xFFFFFFFE;  fp2 = 0x21062008; fp3 = 0xFFFFFFFE; prot =  Options.getInt(Options.OPTION_PROT_VERSION); break; // Jimm
+            case  7: fp1 = 0xFFFFFFFE;  fp2 = 0x06022009; fp3 = 0xFFFFFFFE; prot =  Options.getInt(Options.OPTION_PROT_VERSION); break; // Jimm
             case  1: fp1 = 0xFFFFFFFF;  fp2 = 0x00030807; fp3 = 0xFFFFFFFF; prot =  8; break; // Miranda
-            case  0: fp1 = 0x08000600;  fp2 = 0x0000000E; fp3 = 0x0000000F; prot = 11; break; // QIP 2005a
+            case  0: fp1 = 0x08000905;  fp2 = 0x0000000E; fp3 = 0x0000000F; prot = 11; break; // QIP 2005a
             case 12: fp1 = 0x00000000;  fp2 = 0x00000000; fp3 = 0x00000000; prot = 11; break; // QIP PDA (Symbian)
             case 13: fp1 = 0x00000000;  fp2 = 0x00000000; fp3 = 0x00000000; prot = 11; break; // QIP PDA (Windows)
-            case 14: fp1 = 0x00002330;  fp2 = 0x00000000; fp3 = 0x00000000; prot = 11; break; // QIP Infium
+            case 14: fp1 = 0x0000234A;  fp2 = 0x00000000; fp3 = 0x00000000; prot = 11; break; // QIP Infium
             case 18: fp1 = 0x00000000;  fp2 = 0x00000000; fp3 = 0x00000000; prot =  9; break; // ICQ 5.1
             case 15: fp1 = 0x00000000;  fp2 = 0x00000000; fp3 = 0x00000000; prot =  9; break; // ICQ 6   
             case  8: fp1 = 0x3BA8DBAF;  fp2 = 0x3BEB5373; fp3 = 0x3BEB5262; prot =  2; break; // stICQ
             case 11: fp1 = 0x00000000;  fp2 = 0x00000000; fp3 = 0x00000000; prot =  0; break; // VmICQ
             case 21: fp1 = 0x00000000;  fp2 = 0x00000000; fp3 = 0x00000000; prot =  0; break; // mChat
             case  2: fp1 = 0xFFFFFF7F;  fp2 = 0x00090808; fp3 = 0x00000000; prot =  7; break; // &RQ
-            case  3: fp1 = 0xFFFFF666;  fp2 = 0x0000044F; fp3 = 0x00000000; prot =  9; break; // R&Q
+            case  3: fp1 = 0xFFFFF666;  fp2 = 0x00000450; fp3 = 0x00000000; prot =  9; break; // R&Q
             case  6: fp1 = 0x00000000;  fp2 = 0x00000000; fp3 = 0x00000000; prot =  8; break; // Kopete
             case 22: fp1 = 0x00000000;  fp2 = 0x00000000; fp3 = 0x00000000; prot =  7; break; // Mac ICQ
 //          case 15: fp1 = 0xFF7777FF;  fp2 = 0x0000142C; fp3 = 0x00000000; prot =  9; break; // Unknown
@@ -170,6 +177,7 @@ public class OtherAction
 
         Vector guids = new Vector();
         setClientGUID(guids);
+        guids.addElement(new GUID(Util.CAP_AIM_SERVERRELAY));
         /*if (!Options.getBoolean(Options.OPTION_CP1251_HACK))*/ guids.addElement(new GUID(Util.CAP_UTF8));
         //#sijapp cond.if modules_FILES="true" #
         guids.addElement(new GUID(Util.CAP_AIMFILE));
@@ -182,6 +190,17 @@ public class OtherAction
         {
             guids.addElement(xstatus);
             if (Options.getBoolean(Options.OPTION_XTRAZ_ENABLE)) guids.addElement(new GUID(Util.CAP_XTRAZ));
+        }
+        extendedStatusSent = true;
+        switch ((int)Options.getLong(Options.OPTION_ONLINE_STATUS))
+        {
+        case ContactList.STATUS_CHAT: guids.addElement(CAP_STATUS_CHAT); break;
+        case ContactList.STATUS_EVIL: guids.addElement(CAP_STATUS_EVIL); break;
+        case ContactList.STATUS_DEPRESSION: guids.addElement(CAP_STATUS_DEPRESSION); break;
+        case ContactList.STATUS_HOME: guids.addElement(CAP_STATUS_HOME); break;
+        case ContactList.STATUS_WORK: guids.addElement(CAP_STATUS_WORK); break;
+        case ContactList.STATUS_LUNCH: guids.addElement(CAP_STATUS_LUNCH); break;
+        default: extendedStatusSent = false;
         }
         GUID[] result = new GUID[guids.size() + standart.length];
         guids.copyInto(result);
@@ -213,9 +232,21 @@ public class OtherAction
     public static void setStatus(int status) throws JimmException 
     {
         // Send a CLI_SETSTATUS packet
+        boolean extendedStatus = true;
+        switch (status & 0xFFFF)
+        {
+        case ContactList.STATUS_CHAT: status &= ~0xF0; break;
+        case ContactList.STATUS_LUNCH:
+        case ContactList.STATUS_EVIL:
+        case ContactList.STATUS_DEPRESSION:
+        case ContactList.STATUS_HOME:
+        case ContactList.STATUS_WORK: status &= ~0xF000; break;
+        default: extendedStatus = false;
+        }
         setClientId();
         Util.putDWord(CLI_SETSTATUS_DATA, 4, status);
         Icq.c.sendPacket(new SnacPacket(SnacPacket.SERVICE_FAMILY, SnacPacket.CLI_SETSTATUS_COMMAND, 0, new byte[0], CLI_SETSTATUS_DATA));
+        if (extendedStatus || extendedStatusSent) setStandartUserInfo();
     }
 
 	public static final byte PSTATUS_ALL           = 0x01;

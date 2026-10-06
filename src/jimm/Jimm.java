@@ -73,6 +73,9 @@ public class Jimm extends MIDlet
 	static private boolean is_phone_SE;
 	static private boolean is_smart_SE;
 	static private boolean is_phone_NOKIA;
+    public static boolean is_JP8;
+    public static boolean supportsNokiaLight;
+    public static String sonyEricssonPlatform;
 	//#sijapp cond.end#
 
 	//#sijapp cond.if target is "SIEMENS2"#
@@ -131,11 +134,18 @@ public class Jimm extends MIDlet
 
 			is_phone_FLY = (platform.toLowerCase().indexOf("fly") != -1);
 			is_phone_SE = (platform.toLowerCase().indexOf("ericsson") != -1);
-			is_smart_SE = ((platform.indexOf("m600") != -1) || (platform.indexOf("p800") != -1)
-						|| (platform.indexOf("p900") != -1) || (platform.indexOf("p910") != -1)
-						|| (platform.indexOf("w950") != -1) || (platform.indexOf("p990") != -1)
-						|| (platform.indexOf("p1i")  != -1));
+            if (is_phone_SE)
+            {
+                try
+                {
+                    sonyEricssonPlatform = System.getProperty("com.sonyericsson.java.platform").toLowerCase();
+                    is_JP8 = sonyEricssonPlatform.indexOf("jp-8") != -1;
+                    is_smart_SE = sonyEricssonPlatform.indexOf("sjp") != -1;
+                }
+                catch (Exception e) { }
+            }
 			is_phone_NOKIA = (platform.toLowerCase().indexOf("nokia") != -1);
+            supportsNokiaLight = is_phone_NOKIA;
 		}
 		//#sijapp cond.end#
 
@@ -200,7 +210,7 @@ public class Jimm extends MIDlet
 		SplashCanvas.setProgress(10);
 
 		//#sijapp cond.if modules_FILES is "true"#
-		if (Options.getBoolean(Options.OPTION_BACK_IMAGE))
+		if (Options.getInt(Options.OPTION_BACKGROUND_MODE) != 0)
 		{
 			try
 			{
@@ -210,7 +220,7 @@ public class Jimm extends MIDlet
 			}
 			catch(java.io.IOException rr) {}
 			catch(java.lang.Exception rr) {}
-			DrawControls.VirtualList.setBackGroundImage(InStr);
+			DrawControls.VirtualList.setBackGroundImage(InStr, false);
 		}
 		//#sijapp cond.end#
 

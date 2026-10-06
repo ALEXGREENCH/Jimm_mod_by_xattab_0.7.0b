@@ -541,7 +541,8 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 			else if (c == backCommand)
 			{
 				//try to back into menu from back image choose
-				if ((listener.getCItem() != null) || needToSelectDirectory) ContactList.activate();
+				if (listener instanceof OptionsForm) Options.optionsForm.activate();
+                else if ((listener.getCItem() != null) || needToSelectDirectory) ContactList.activate();
 				else Options.optionsForm.callColorSchemeOptions();
 			}
 		}

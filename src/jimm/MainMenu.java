@@ -82,8 +82,8 @@ public class MainMenu implements CommandListener
 	/* Groups list */
 	static private int[] groupIds;
 
-	/* Form for the adding users dialog */
-	static public Form textBoxForm;
+	/* VirtualForm for the adding users dialog */
+	static public VirtualForm textBoxForm;
 
 	/* Text box for adding users to the contact list */
 	static private TextField uinTextField;
@@ -264,21 +264,21 @@ public class MainMenu implements CommandListener
 	/* Show form for adding user */
 	static public void showTextBoxForm(String caption, String label, String text, int fieldType)
 	{
-		textBoxForm = new Form(ResourceBundle.getString(caption));
+		textBoxForm = new VirtualForm(ResourceBundle.getString(caption));
 		uinTextField = new TextField(ResourceBundle.getString(label), text, 16, fieldType);
 		textBoxForm.append(uinTextField);
 		
 		textBoxForm.addCommand(sendCommand);
 		textBoxForm.addCommand(JimmUI.cmdCancel);
 		textBoxForm.setCommandListener(_this);
-		Jimm.display.setCurrent(textBoxForm);
+		textBoxForm.activate(Jimm.display);
 	}
 
 	private void doExit(boolean anyway)
 	{
-		if (!anyway && ContactList.getUnreadMessCount() > 0)
+		if (!anyway && (ContactList.getUnreadMessCount() > 0 || Options.getBoolean(Options.OPTION_CONFIRM_EXIT)))
 		{
-			JimmUI.messageBox(ResourceBundle.getString("attention"), ResourceBundle.getString("have_unread_mess"), JimmUI.MESBOX_YESNO, _this, TAG_EXIT);
+			JimmUI.messageBox(ResourceBundle.getString("attention"), ResourceBundle.getString(ContactList.getUnreadMessCount() > 0 ? "have_unread_mess" : "want_exit"), JimmUI.MESBOX_YESNO, _this, TAG_EXIT);
 		}
 		else
 		{
@@ -414,7 +414,7 @@ public class MainMenu implements CommandListener
 			selector = null;
 		}
 
-		else if ((c == sendCommand) && (d == textBoxForm) && (textBoxForm != null))
+		else if ((c == sendCommand) && (textBoxForm.isActive()) && (textBoxForm != null))
 		{
 			Action act = null;
 
@@ -448,7 +448,7 @@ public class MainMenu implements CommandListener
 			SplashCanvas.addTimerTask("wait", act, false);
 		}
 
-		else if ((c == JimmUI.cmdCancel) && (d == textBoxForm))
+		else if ((c == JimmUI.cmdCancel) && (textBoxForm.isActive()))
 		{
 			activate();
 			textBoxForm = null;

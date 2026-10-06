@@ -33,50 +33,68 @@ import jimm.util.*;
 public class Util
 {
 	// Client CAPS
-	public  static final byte[] CAP_AIM_SERVERRELAY	= explodeToBytes("09,46,13,49,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
-	public  static final byte[] CAP_UTF8				= explodeToBytes("09,46,13,4E,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
-	public  static final byte[] CAP_UTF8_GUID			= explodeToBytes("7b,30,39,34,36,31,33,34,45,2D,34,43,37,46,2D,31,31,44,31,2D,38,32,32,32,2D,34,34,34,35,35,33,35,34,30,30,30,30,7D", ',', 16);
-	private static final byte[] CAP_MSGTYPE2			= explodeToBytes("09,49,13,49,4c,7f,11,d1,82,22,44,45,53,54,00,00", ',', 16);
-	public  static final byte[] CAP_MIRANDAIM			= explodeToBytes("4D,69,72,61,6E,64,61,4D,00,06,03,00,00,03,08,07", ',', 16);
-	private static final byte[] CAP_TRILLIAN			= explodeToBytes("97,b1,27,51,24,3c,43,34,ad,22,d6,ab,f7,3f,14,09", ',', 16);
+	public static final byte[] CAP_AIM_SERVERRELAY = explodeToBytes("09,46,13,49,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_UTF8 = explodeToBytes("09,46,13,4E,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_UTF8_GUID = explodeToBytes(
+      "7b,30,39,34,36,31,33,34,45,2D,34,43,37,46,2D,31,31,44,31,2D,38,32,32,32,2D,34,34,34,35,35,33,35,34,30,30,30,30,7D", ',', 16
+   );
+	public static final byte[] CAP_MSGTYPE2 = explodeToBytes("09,49,13,49,4c,7f,11,d1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_MIRANDAIM = explodeToBytes("4D,69,72,61,6E,64,61,4D,00,06,03,00,00,03,08,07", ',', 16);
+	public static final byte[] CAP_TRILLIAN = explodeToBytes("97,b1,27,51,24,3c,43,34,ad,22,d6,ab,f7,3f,14,09", ',', 16);
 	private static final byte[] CAP_TRILCRYPT		= explodeToBytes("f2,e7,c7,f4,fe,ad,4d,fb,b2,35,36,79,8b,df,00,00", ',', 16);
-	private static final byte[] CAP_SIM				= explodeToBytes("*SIM client  ,00,00,00,00", ',', 16);
+	public static final byte[] CAP_SIM = explodeToBytes("*SIM client  ,00,00,00,00", ',', 16);
 	private static final byte[] CAP_SIMOLD			= explodeToBytes("97,b1,27,51,24,3c,43,34,ad,22,d6,ab,f7,3f,14,00", ',', 16);
-	private static final byte[] CAP_LICQ				= explodeToBytes("*Licq client ,00,00,00,00", ',', 16);
-	public  static final byte[] CAP_KOPETE			= explodeToBytes("*Kopete ICQ  ,00,0c,00,02", ',', 16);
-	public  static final byte[] CAP_ANDRQ				= explodeToBytes("*&RQinside,08,08,09,00,00,00,00", ',', 16);
-	public  static final byte[] CAP_QIP				= explodeToBytes("56,3F,C8,09,0B,6F,41,*QIP 2005a", ',', 16);
-	public  static final byte[] CAP_QIPPDAWIN			= explodeToBytes("56,3F,C8,09,0B,6F,41,*QIP     !", ',', 16);
-	public  static final byte[] CAP_QIPPDASYM			= explodeToBytes("51,AD,D1,90,72,04,47,3D,A1,A1,49,F4,A3,97,A4,1F", ',', 16);
-	public  static final byte[] CAP_QIPINFIUM			= explodeToBytes("7C,73,75,02,C3,BE,4F,3E,A6,9F,01,53,13,43,1E,1A", ',', 16);
-	public  static final byte[] CAP_VMICQ				= explodeToBytes("*VmICQ ,76,30,2E,31,2E,39,62,00,00,00", ',', 16);
-	private static final byte[] CAP_IM2				= explodeToBytes("74,ED,C3,36,44,DF,48,5B,8B,1C,67,1A,1F,86,09,9F", ',', 16);
-	public  static final byte[] CAP_MACICQ			= explodeToBytes("dd,16,f2,02,84,e6,11,d4,90,db,00,10,4b,9b,4b,7d", ',', 16);
-	public  static final byte[] CAP_RICHTEXT			= explodeToBytes("97,b1,27,51,24,3c,43,34,ad,22,d6,ab,f7,3f,14,92", ',', 16);
-	public  static final byte[] CAP_ICQ6				= explodeToBytes("01,38,ca,7b,76,9a,49,15,88,f2,13,fc,00,97,9e,a8", ',', 16);
-	private static final byte[] CAP_STR20012			= explodeToBytes("a0,e9,3f,37,4f,e9,d3,11,bc,d2,00,04,ac,96,dd,96", ',', 16);
+	public static final byte[] CAP_LICQ = explodeToBytes("*Licq client ,00,00,00,00", ',', 16);
+	public static final byte[] CAP_KOPETE = explodeToBytes("*Kopete ICQ  ,00,0c,00,02", ',', 16);
+	public static final byte[] CAP_ANDRQ = explodeToBytes("*&RQinside,08,08,09,00,00,00,00", ',', 16);
+	public static final byte[] CAP_QIP = explodeToBytes("56,3F,C8,09,0B,6F,41,*QIP 2005a", ',', 16);
+	public static final byte[] CAP_QIPPDAWIN = explodeToBytes("56,3F,C8,09,0B,6F,41,*QIP     !", ',', 16);
+	public static final byte[] CAP_QIPPDASYM = explodeToBytes("51,AD,D1,90,72,04,47,3D,A1,A1,49,F4,A3,97,A4,1F", ',', 16);
+	public static final byte[] CAP_QIPINFIUM = explodeToBytes("7C,73,75,02,C3,BE,4F,3E,A6,9F,01,53,13,43,1E,1A", ',', 16);
+	public static final byte[] CAP_VMICQ = explodeToBytes("*VmICQ ,76,30,2E,31,2E,39,62,00,00,00", ',', 16);
+	public static final byte[] CAP_IM2 = explodeToBytes("74,ED,C3,36,44,DF,48,5B,8B,1C,67,1A,1F,86,09,9F", ',', 16);
+	public static final byte[] CAP_MACICQ = explodeToBytes("dd,16,f2,02,84,e6,11,d4,90,db,00,10,4b,9b,4b,7d", ',', 16);
+	public static final byte[] CAP_RICHTEXT = explodeToBytes("97,b1,27,51,24,3c,43,34,ad,22,d6,ab,f7,3f,14,92", ',', 16);
+	public static final byte[] CAP_ICQ6 = explodeToBytes("01,38,ca,7b,76,9a,49,15,88,f2,13,fc,00,97,9e,a8", ',', 16);
+	public static final byte[] CAP_STR20012 = explodeToBytes("a0,e9,3f,37,4f,e9,d3,11,bc,d2,00,04,ac,96,dd,96", ',', 16);
 	private static final byte[] CAP_AIMICON			= explodeToBytes("09,46,13,46,4c,7f,11,d1,82,22,44,45,53,54,00,00", ',', 16);
 	private static final byte[] CAP_AIMIMIMAGE		= explodeToBytes("09,46,13,45,4c,7f,11,d1,82,22,44,45,53,54,00,00", ',', 16);
-	private static final byte[] CAP_AIMCHAT			= explodeToBytes("74,8F,24,20,62,87,11,D1,82,22,44,45,53,54,00,00", ',', 16);
-	private static final byte[] CAP_MIP				= explodeToBytes("4D,49,50,20,00,00,00,00,00,00,00,00,00,00,00,00", ',', 16);
-	private static final byte[] CAP_YAPP				= explodeToBytes("*Yapp", ',', 16);
-	private static final byte[] CAP_SMAPER			= explodeToBytes("*Smaper", ',', 16);
-	public  static final byte[] CAP_XTRAZ				= explodeToBytes("1A,09,3C,6C,D7,FD,4E,C5,9D,51,A6,47,4E,34,F5,A0", ',', 16);
-	public  static final byte[] CAP_AIMFILE			= explodeToBytes("09,46,13,43,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
-	public  static final byte[] CAP_DIRECT			= explodeToBytes("09,46,13,44,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
-	public  static final byte[] CAP_JIMM				= explodeToBytes("*Jimm ,00,00,00,00,00,00,00,00,00,00,00", ',', 16);
-	public  static final byte[] CAP_AVATAR			= explodeToBytes("09,46,13,4C,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
-	public  static final byte[] CAP_TYPING			= explodeToBytes("56,3f,c8,09,0b,6f,41,bd,9f,79,42,26,09,df,a2,f3", ',', 16);
-	public  static final byte[] CAP_MCHAT				= explodeToBytes("*mChat icq,20,32,2E,33,2E,30,6D", ',', 16);
-	private static final byte[] CAP_FILE_SHARING		= explodeToBytes("09,46,13,48,4c,7f,11,d1,82,22,44,45,53,54,00,00", ',', 16);
-	private static final byte[] CAP_NAT_ICQ			= explodeToBytes("*NatICQ", ',', 16);
+	public static final byte[] CAP_AIMCHAT = explodeToBytes("74,8F,24,20,62,87,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_MIP = explodeToBytes("4D,49,50,20", ',', 16);
+	public static final byte[] CAP_YAPP = explodeToBytes("*Yapp", ',', 16);
+	public static final byte[] CAP_SMAPER = explodeToBytes("*Smaper", ',', 16);
+	public static final byte[] CAP_XTRAZ = explodeToBytes("1A,09,3C,6C,D7,FD,4E,C5,9D,51,A6,47,4E,34,F5,A0", ',', 16);
+	public static final byte[] CAP_AIMFILE = explodeToBytes("09,46,13,43,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_DIRECT = explodeToBytes("09,46,13,44,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_JIMM = explodeToBytes("*Jimm ,00,00,00,00,00,00,00,00,00,00,00", ',', 16);
+	public static final byte[] CAP_AVATAR = explodeToBytes("09,46,13,4C,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_TYPING = explodeToBytes("56,3f,c8,09,0b,6f,41,bd,9f,79,42,26,09,df,a2,f3", ',', 16);
+	public static final byte[] CAP_MCHAT = explodeToBytes("*mChat icq,20,32,2E,33,2E,30,6D", ',', 16);
+	public static final byte[] CAP_FILE_SHARING = explodeToBytes("09,46,13,48,4c,7f,11,d1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_NAT_ICQ = explodeToBytes("*NatICQ", ',', 16);
 //	private static final byte[] CAP_MICQ				= explodeToBytes("*mICQ ,A9,* R.K. ',00,00,00,00", ',', 16);
 //	private static final byte[] CAP_RAMBLER				= explodeToBytes("7E,11,B7,78,A3,53,49,26,A8,02,44,73,52,08,C4,2A", ',', 16);
 
 	// Arrays for new capability blowup
-	private static final byte[] CAP_OLD_HEAD			= explodeToBytes("09,46", ',', 16);
-	private static final byte[] CAP_OLD_TAIL			= explodeToBytes("4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_OLD_HEAD = explodeToBytes("09,46", ',', 16);
+	public static final byte[] CAP_OLD_TAIL = explodeToBytes("4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
 	
+	public static final byte[] CAP_JIMM_VERSION = explodeToBytes("68,74,74,70,3A,2F,2F,6A,69,6D,6D,2E,69,6D,2F,76,65,72", ',', 16);
+	public static final byte[] CAP_JIMM_WAP = explodeToBytes("68,74,74,70,3A,2F,2F,6A,69,6D,6D,2E,69,6D,2F,77,61,70", ',', 16);
+	public static final byte[] CAP_JIMM_ADV = explodeToBytes("68,74,74,70,3A,2F,2F,6A,69,6D,6D,2E,69,6D,2F,61,64,76", ',', 16);
+	public static final byte[] CAP_BAYAN = explodeToBytes("62,61,79,61,6E,49,43,51", ',', 16);
+	public static final byte[] CAP_DICHAT = explodeToBytes("44,5B,69,5D,43,68,61,74", ',', 16);
+	public static final byte[] CAP_QUTIM = explodeToBytes("*qutim", ',', 16);
+	public static final byte[] CAP_PIGEON = explodeToBytes("50,49,47,45,4F,4E,21", ',', 16);
+	public static final byte[] CAP_PIGEON_VERSION = explodeToBytes("76,65,72,3A", ',', 16);
+	public static final byte[] CAP_HTML = explodeToBytes("09,46,E0,01,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_XTRAZ_VIDEO = explodeToBytes("09,46,E0,02,4C,7F,11,D1,82,22,44,45,53,54,00,00", ',', 16);
+	public static final byte[] CAP_WJIMM = explodeToBytes("77,4A,69,6D,6D", ',', 16);
+	public static final byte[] CAP_LOCID = explodeToBytes("4C,6F,63,49,44", ',', 16);
+	public static final byte[] CAP_ICQ7 = explodeToBytes("C8,95,3A,9F,21,F1,4F,AA,B0,B2,6D,E6,63,AB,F5,B7", ',', 16);
+	public static final byte[] CAP_MIRANDA_ICQ = explodeToBytes("69,63,71", ',', 16);
+	public static final byte[] CAP_DIM = explodeToBytes("44,5B,69,6D,5D", ',', 16);
+	public static final byte[] CAP_QIP_STATUS = explodeToBytes("B7,07,43,78,F5,0C,77,77,97,77,57,78,50,2D,05,00", ',', 16);
 	// No capability
 	public static final int CAPF_NO_INTERNAL = 0x00000000;
 	// Client unterstands type-2 messages
@@ -96,29 +114,49 @@ public class Util
 	public static final int CAPF_QIP			= 0x00000800;
 	public static final int CAPF_IM2			= 0x00001000;
 	public static final int CAPF_MACICQ		= 0x00002000;
-	public static final int CAPF_RICHTEXT		= 0x00004000;
+	public static final int CAPF_RICHTEXT = 0x4;
 	public static final int CAPF_VMICQ		= 0x00008000;
 	public static final int CAPF_QIPPDASYM	= 0x00010000;
 	public static final int CAPF_STR20012		= 0x00020000;
 	public static final int CAPF_AIMICON		= 0x00040000; // можно заменить на что нить...
 	public static final int CAPF_SMAPER		= 0x00080000;
-	public static final int CAPF_ICQ6			= 0x00100000;
+	public static final int CAPF_ICQ6 = 0x200;
 	public static final int CAPF_QIPPDAWIN	= 0x00200000;
 	public static final int CAPF_MIP			= 0x00400000;
 	public static final int CAPF_YAPP			= 0x00800000;
-	public static final int CAPF_XTRAZ		= 0x01000000;
-	public static final int CAPF_AIMFILE		= 0x02000000;
+	public static final int CAPF_XTRAZ = 0x10;
+	public static final int CAPF_AIMFILE = 0x20;
 	public static final int CAPF_JIMM			= 0x04000000;
 	public static final int CAPF_AIMIMIMAGE	= 0x08000000; // можно заменить на что нить...
-	public static final int CAPF_AVATAR		= 0x10000000;
-	public static final int CAPF_DIRECT		= 0x20000000;
-	public static final int CAPF_TYPING		= 0x40000000;
+	public static final int CAPF_AVATAR = 0x40;
+	public static final int CAPF_DIRECT = 0x80;
+	public static final int CAPF_TYPING = 0x100;
 	public static final int CAPF_MCHAT		= 0x80000000;
 
 	private static boolean HAS_CAP_FILE_SHARING;
 	private static boolean HAS_CAP_NAT_ICQ;
 	private static boolean HAS_CAP_AIMCHAT;
 
+	public static final int CAPF_AIMCHAT = 0x8;
+	public static final int CAPF_FILE_SHARING = 0x400;
+	public static final int CAPF_HTML = 0x800;
+	public static final int CAPF_XTRAZ_VIDEO = 0x1000;
+	public static final int CAPF_ICQ7 = 0x2000;
+	public static final int CAPF_STATUS_CHAT = 0x4000;
+	public static final int CAPF_STATUS_EVIL = 0x8000;
+	public static final int CAPF_STATUS_DEPRESSION = 0x10000;
+	public static final int CAPF_STATUS_HOME = 0x20000;
+	public static final int CAPF_STATUS_WORK = 0x40000;
+	public static final int CAPF_STATUS_LUNCH = 0x80000;
+	public static final byte CLI_MRA = 30;
+	public static final byte CLI_BAYAN = 31;
+	public static final byte CLI_DICHAT = 32;
+	public static final byte CLI_WJIMM = 33;
+	public static final byte CLI_LOCID = 34;
+	public static final byte CLI_QUTIM = 35;
+	public static final byte CLI_PIGEON = 36;
+	public static final byte CLI_ICQ7 = 37;
+	public static final byte CLI_DIM = 38;
 	// Client IDs
 	public static final byte CLI_NONE			=  0;
 	public static final byte CLI_QIP			=  1;
@@ -150,29 +188,26 @@ public class Util
 	public static final byte CLI_MIP			= 27;
 	public static final byte CLI_YAPP			= 28;
 	public static final byte CLI_SMAPER		= 29;
-	public static final byte CLI_SLICK		= 30;
-	public static final byte CLI_IM2			= 31;
-	public static final byte CLI_NATICQ		= 32;
-	public static final byte CLI_SMARTICQ		= 33;
-	public static final byte CLI_ICQPPC		= 34;
-	public static final byte CLI_MICQ			= 35;
-	public static final byte CLI_WEBICQ		= 36;
-	public static final byte CLI_STRICQ		= 37;
-	public static final byte CLI_YSM			= 38;
-	public static final byte CLI_VICQ			= 39;
-	public static final byte CLI_ALICQ		= 40;
-	public static final byte CLI_CENTERICQ	= 41;
-	public static final byte CLI_LIBICQJABBER	= 42;
-	public static final byte CLI_SPAM			= 43;
-	public static final byte CLI_AIM			= 44;
+	public static final byte CLI_SLICK = 39;
+	public static final byte CLI_IM2 = 40;
+	public static final byte CLI_NATICQ = 41;
+	public static final byte CLI_SMARTICQ = 42;
+	public static final byte CLI_ICQPPC = 43;
+	public static final byte CLI_MICQ = 44;
+	public static final byte CLI_WEBICQ = 45;
+	public static final byte CLI_STRICQ = 46;
+	public static final byte CLI_YSM = 47;
+	public static final byte CLI_VICQ = 48;
+	public static final byte CLI_ALICQ = 49;
+	public static final byte CLI_CENTERICQ = 50;
+	public static final byte CLI_LIBICQJABBER = 51;
+	public static final byte CLI_SPAM = 52;
+	public static final byte CLI_AIM = 53;
 	
-	private static final String[] clientNames = explode
-	(
-		"Not detected|QIP|Miranda|&RQ|R&Q|Trillian|SIM|Kopete|Jimm|StICQ|Agile Messenger|Libicq2000|" +
-		"VmICQ|QIP PDA (Symbian)|QIP PDA (Windows)|QIP Infium|ICQ v6|ICQ Lite|ICQ Lite v4|ICQ Lite v5|" +
-		"ICQ 2003b|ICQ2GO!|mChat|Mac ICQ|Pidgin (Gaim)|GnomeICU|LICQ|MIP|Yapp|Sm@peR|Slick|IM2|NatICQ|SmartICQ|" +
-		"ICQ for PPC|mICQ|WebICQ|StrICQ|YSM|vICQ|Alicq|CenterICQ|Libicq2000 from Jabber|SPAM|AOL AIM|", '|'
-	);
+	private static final String[] clientNames = explode(
+      "Not detected|QIP|Miranda|&RQ|R&Q|Trillian|SIM|Kopete|Jimm|StICQ|Agile Messenger|Libicq2000|VmICQ|QIP PDA (Symbian)|QIP PDA (Windows)|QIP Infium|ICQ v6|ICQ Lite|ICQ Lite v4|ICQ Lite v5|ICQ 2003b|ICQ2GO!|mChat|Mac ICQ|Pidgin (Gaim)|GnomeICU|LICQ|MIP|Yapp|Sm@peR|Mail.ru Agent|BayanICQ|D[i]Chat|wJimm|LocID|qutIM|PIGEON!|ICQ v7|D[im]|Slick|IM2|NatICQ|SmartICQ|ICQ for PPC|mICQ|WebICQ|StrICQ|YSM|vICQ|Alicq|CenterICQ|Libicq2000|SPAM|AOL AIM|",
+      '|'
+   );
 
 	public static void PrintCapabilities(String caption, byte[] caps)
 	{
@@ -190,699 +225,468 @@ public class Util
 		}
 	}
 	
-	public static void detectUserClient(String uin, int dwFP1, int dwFP2, int dwFP3, byte[] capabilities, int wVersion, boolean statusChange)
-	{
-		int client = CLI_NONE;
-		String szVersion = "";
-//		String clientCaps = "\n";
-		int caps = CAPF_NO_INTERNAL;
-		ContactItem item = ContactList.getItembyUIN(uin);
+	public static void detectUserClient(String uin, int dwFP1, int dwFP2, int dwFP3, byte[] capabilities, int protocolVersion, boolean statusChange) {
+      byte client = CLI_NONE;
+      String clientVersion = "";
+      long caps = 0L;
+      ContactItem item;
+      if ((item = ContactList.getItembyUIN(uin)) != null) {
+         if (capabilities != null) {
+            for (int index = 0; index < capabilities.length / 16; index++) {
+               int offset = index << 4;
+               if (byteArrayEquals(capabilities, offset, CAP_AIM_SERVERRELAY, 0, 16)) {
+                  caps |= 1L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_UTF8, 0, 16)) {
+                  caps |= 2L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_MIRANDAIM, 0, 8)) {
+                  caps |= 4294967296L;
+                  clientVersion = detectClientVersion(capabilities, 2, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_MIRANDA_ICQ, 0, 3)) {
+                  caps |= 17179869184L;
+                  clientVersion = detectClientVersion(capabilities, 2, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_TRILLIAN, 0, 16)) {
+                  caps |= 8589934592L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_SIM, 0, 12)) {
+                  caps |= 34359738368L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_LICQ, 0, 12)) {
+                  caps |= 137438953472L;
+                  clientVersion = detectClientVersion(capabilities, 26, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_MSGTYPE2, 0, 16)) {
+                  caps |= 137438953472L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_KOPETE, 0, 12)) {
+                  caps |= 274877906944L;
+                  clientVersion = detectClientVersion(capabilities, 7, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_ANDRQ, 0, 9)) {
+                  caps |= 1099511627776L;
+                  clientVersion = detectClientVersion(capabilities, 3, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_QIP, 0, 16)) {
+                  caps |= 2199023255552L;
+                  clientVersion = detectClientVersion(capabilities, 1, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_QIPINFIUM, 0, 16)) {
+                  caps |= 549755813888L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_IM2, 0, 16)) {
+                  caps |= 4398046511104L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_MACICQ, 0, 16)) {
+                  caps |= 8796093022208L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_RICHTEXT, 0, 16)) {
+                  caps |= CAPF_RICHTEXT;
+               } else if (byteArrayEquals(capabilities, offset, CAP_VMICQ, 0, 6)) {
+                  caps |= 17592186044416L;
+                  clientVersion = detectClientVersion(capabilities, 12, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_QIPPDASYM, 0, 16)) {
+                  caps |= 35184372088832L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_STR20012, 0, 16)) {
+                  caps |= 70368744177664L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_ICQ6, 0, 16)) {
+                  caps |= CAPF_ICQ6;
+               } else if (byteArrayEquals(capabilities, offset, CAP_HTML, 0, 16)) {
+                  caps |= CAPF_HTML;
+               } else if (byteArrayEquals(capabilities, offset, CAP_XTRAZ_VIDEO, 0, 16)) {
+                  caps |= CAPF_XTRAZ_VIDEO;
+               } else if (byteArrayEquals(capabilities, offset, CAP_ICQ7, 0, 16)) {
+                  caps |= CAPF_ICQ7;
+               } else if (byteArrayEquals(capabilities, offset, CAP_QIPPDAWIN, 0, 16)) {
+                  caps |= 562949953421312L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_XTRAZ, 0, 16)) {
+                  caps |= CAPF_XTRAZ;
+               } else if (byteArrayEquals(capabilities, offset, CAP_AIMFILE, 0, 16)) {
+                  caps |= CAPF_AIMFILE;
+               } else if (byteArrayEquals(capabilities, offset, CAP_JIMM, 0, 5)) {
+                  caps |= 4503599627370496L;
+                  clientVersion = detectClientVersion(capabilities, 8, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_WJIMM, 0, 5)) {
+                  caps |= 576460752303423488L;
+                  clientVersion = detectClientVersion(capabilities, 33, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_LOCID, 0, 5)) {
+                  caps |= 1152921504606846976L;
+                  clientVersion = detectClientVersion(capabilities, 34, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_QUTIM, 0, 5)) {
+                  caps |= 72057594037927936L;
+                  clientVersion = detectClientVersion(capabilities, 35, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_PIGEON, 0, 7)) {
+                  caps |= 144115188075855872L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_PIGEON_VERSION, 0, 4)) {
+                  caps |= 288230376151711744L;
+                  clientVersion = detectClientVersion(capabilities, 36, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_BAYAN, 0, 8)) {
+                  caps |= 140737488355328L;
+                  clientVersion = detectClientVersion(capabilities, 31, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_DICHAT, 0, 8)) {
+                  caps |= 9007199254740992L;
+                  clientVersion = detectClientVersion(capabilities, 32, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_DIM, 0, 5)) {
+                  caps |= 68719476736L;
+                  clientVersion = detectClientVersion(capabilities, 38, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_AVATAR, 0, 16)) {
+                  caps |= CAPF_AVATAR;
+               } else if (byteArrayEquals(capabilities, offset, CAP_DIRECT, 0, 16)) {
+                  caps |= CAPF_DIRECT;
+               } else if (byteArrayEquals(capabilities, offset, CAP_TYPING, 0, 16)) {
+                  caps |= CAPF_TYPING;
+               } else if (byteArrayEquals(capabilities, offset, CAP_MCHAT, 0, 9)) {
+                  caps |= 18014398509481984L;
+                  clientVersion = detectClientVersion(capabilities, 22, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_MIP, 0, 4)) {
+                  caps |= 1125899906842624L;
+                  clientVersion = detectClientVersion(capabilities, 27, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_YAPP, 0, 4)) {
+                  caps |= 2251799813685248L;
+                  clientVersion = detectClientVersion(capabilities, 28, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_SMAPER, 0, 5)) {
+                  caps |= 281474976710656L;
+                  clientVersion = detectClientVersion(capabilities, 29, index);
+               } else if (byteArrayEquals(capabilities, offset, CAP_FILE_SHARING, 0, 16)) {
+                  caps |= CAPF_FILE_SHARING;
+               } else if (byteArrayEquals(capabilities, offset, CAP_NAT_ICQ, 0, 6)) {
+                  caps |= 36028797018963968L;
+               } else if (byteArrayEquals(capabilities, offset, CAP_AIMCHAT, 0, 16)) {
+                  caps |= CAPF_AIMCHAT;
+               } else if (byteArrayEquals(capabilities, offset, CAP_QIP_STATUS, 0, 15)) {
+                  byte[] capability = new byte[16];
+                  System.arraycopy(capabilities, index << 4, capability, 0, 16);
+                  int statusCode = capability[15] & 15;
+                        switch (statusCode) {
+                     case 0:
+                        caps |= CAPF_STATUS_DEPRESSION;
+                     case 5:
+                        caps |= CAPF_STATUS_CHAT;
+                     case 6:
+                        caps |= CAPF_STATUS_HOME;
+                     case 7:
+                        caps |= CAPF_STATUS_WORK;
+                     case 8:
+                        caps |= CAPF_STATUS_LUNCH;
+                     case 9:
+                        caps |= CAPF_STATUS_EVIL;
+                     case 1:
+                     case 2:
+                     case 3:
+                     case 4:
+                  }
+               }
+            }
 
-		if (item != null)
-		{
-			if (capabilities != null)
-			{
-				//Caps parsing
-				for (int j = 0; j < capabilities.length / 16; j++)
-				{
-					int j16 = j * 16;
-//					int unknown = 0;
+            item.setIntValue(ContactItem.CONTACTITEM_CAPABILITIES, (int)caps);
+         }
 
-					if (Util.byteArrayEquals(capabilities, j16, CAP_AIM_SERVERRELAY, 0, 16))
-					{
-//						clientCaps +=  "[ICQ ServerRelay]\n";
-//						unknown = 1;
-						caps |= CAPF_AIM_SERVERRELAY_INTERNAL;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_UTF8, 0, 16))
-					{
-//						clientCaps += "[UTF8 Messages]\n";
-//						unknown = 1;
-						caps |= CAPF_UTF8_INTERNAL;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_MIRANDAIM, 0, 8))
-					{
-						caps |= CAPF_MIRANDAIM;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_MIRANDAIM, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_TRILLIAN, 0, 16))
-					{
-						caps |= CAPF_TRILLIAN;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_TRILCRYPT, 0, 16))
-					{
-//						clientCaps += "[Trillian Crypt]\n";
-//						unknown = 1;
-						caps |= CAPF_TRILCRYPT;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_SIM, 0, 0xC))
-					{
-						caps |= CAPF_SIM;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_SIMOLD, 0, 16))
-					{
-//						clientCaps += "[SIM OLD]\n";
-//						unknown = 1;
-						caps |= CAPF_SIMOLD;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_LICQ, 0, 0xC))
-					{
-						caps |= CAPF_LICQ;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_LICQ,j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_MSGTYPE2, 0, 16))
-					{
-						caps |= CAPF_LICQ;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_KOPETE, 0, 0xC))
-					{
-						caps |= CAPF_KOPETE;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_KOPETE, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_ANDRQ, 0, 9))
-					{
-						caps |= CAPF_ANDRQ;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_ANDRQ, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_QIP, 0, 16))
-					{
-						caps |= CAPF_QIP;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_QIP, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_QIPINFIUM, 0, 16))
-					{
-						caps |= CAPF_QIPINFIUM;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_IM2, 0, 16))
-					{
-						caps |= CAPF_IM2;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_MACICQ, 0, 16))
-					{
-						caps |= CAPF_MACICQ;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_RICHTEXT, 0, 16))
-					{
-//						clientCaps += "[RTF Messages]\n";
-//						unknown = 1;
-						caps |= CAPF_RICHTEXT;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_VMICQ, 0, 6))
-					{
-						caps |= CAPF_VMICQ;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_VMICQ, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_QIPPDASYM, 0, 16))
-					{
-						caps |= CAPF_QIPPDASYM;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_STR20012, 0, 16))
-					{
-						caps |= CAPF_STR20012;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_AIMICON, 0, 16))
-					{
-//						clientCaps += "[AIM Icon]\n";
-//						unknown = 1;
-						caps |= CAPF_AIMICON;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_ICQ6, 0, 16))
-					{
-//						clientCaps += "[ICQ 6 (HTML msgs)]\n";
-//						unknown = 1;
-						caps |= CAPF_ICQ6;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_QIPPDAWIN, 0, 16))
-					{
-						caps |= CAPF_QIPPDAWIN;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_XTRAZ, 0, 16))
-					{
-//						clientCaps += "[ICQ xTraz Support]\n";
-//						unknown = 1;
-						caps |= CAPF_XTRAZ;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_AIMFILE, 0, 16))
-					{
-//						clientCaps += "[File Transfer]\n";
-//						unknown = 1;
-						caps |= CAPF_AIMFILE;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_JIMM, 0, 5))
-					{
-						caps |= CAPF_JIMM;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_JIMM, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_AIMIMIMAGE, 0, 16))
-					{
-//						clientCaps += "[AIM Image]\n";
-//						unknown = 1;
-						caps |= CAPF_AIMIMIMAGE;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_AVATAR, 0, 16))
-					{
-//						clientCaps += "[ICQ Devils]\n";
-//						unknown = 1;
-						caps |= CAPF_AVATAR;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_DIRECT, 0, 16))
-					{
-//						clientCaps += "[ICQ DirectConnect]\n";
-//						unknown = 1;
-						caps |= CAPF_DIRECT;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_TYPING, 0, 16))
-					{
-//						clientCaps += "[Typing Notification]\n";
-//						unknown = 1;
-						caps |= CAPF_TYPING;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_MCHAT, 0, 9))
-					{
-						caps |= CAPF_MCHAT;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_MCHAT, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_MIP, 0, 4))
-					{
-						caps |= CAPF_MIP;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_MIP, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_YAPP, 0, 4))
-					{
-						caps |= CAPF_YAPP;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_YAPP, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_SMAPER, 0, 5))
-					{
-						caps |= CAPF_SMAPER;
-						szVersion = detectClientVersion(uin, capabilities, CAPF_SMAPER, j);
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_FILE_SHARING, 0, 16))
-					{
-//						clientCaps += "[File Sharing]\n";
-//						unknown = 1;
-						HAS_CAP_FILE_SHARING = true;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_NAT_ICQ, 0, 6))
-					{
-						HAS_CAP_NAT_ICQ = true;
-					}
-					else if (Util.byteArrayEquals(capabilities, j16, CAP_AIMCHAT, 0, 16))
-					{
-//						clientCaps += "[AIM Chat]\n";
-//						unknown = 1;
-						HAS_CAP_AIMCHAT = true;
-					}
-//					if (unknown == 0) 
-//					{
-//						clientCaps += Util.byteArrayToString(capabilities, j16, 16) + "\n";
-//					}
-				}
+         if (!statusChange) {
+            if ((caps & 72057594037927936L) != 0L) {
+               client = CLI_QUTIM;
+            } else if ((caps & 144115188075855872L) != 0L) {
+               client = CLI_PIGEON;
+            } else if ((caps & 17592186044416L) != 0L) {
+               client = CLI_VMICQ;
+            } else if ((caps & 35184372088832L) != 0L) {
+               client = CLI_QIPPDASYM;
+            } else if ((caps & 562949953421312L) != 0L) {
+               client = CLI_QIPPDAWIN;
+            } else if ((caps & 18014398509481984L) != 0L) {
+               client = CLI_MCHAT;
+            } else if ((caps & 2199023255552L) != 0L) {
+               client = CLI_QIP;
+               if (dwFP1 >>> 24 != 0) {
+                  clientVersion = clientVersion + " (" + (dwFP1 >>> 24) + (dwFP1 >> 16 & 0xFF) + (dwFP1 >> 8 & 0xFF) + (dwFP1 & 0xFF) + ")";
+               }
+            } else if ((caps & 549755813888L) != 0L) {
+               client = CLI_QIPINFIUM;
+               if ((dwFP1 & 65535) != 0) {
+                  clientVersion = clientVersion + "(" + (dwFP1 & 65535) + ")";
+               }
+            } else if (protocolVersion == 31337) {
+               if ((caps & 2L) != 0L) {
+                  client = CLI_QIPINFIUM;
+               } else {
+                  client = CLI_QIP;
+                  clientVersion = "2005a";
+               }
+            } else if ((caps & 4503599627370496L) != 0L) {
+               client = CLI_JIMM;
+            } else if ((caps & 576460752303423488L) != 0L) {
+               client = CLI_WJIMM;
+            } else if ((caps & 1152921504606846976L) != 0L) {
+               client = CLI_LOCID;
+            } else if ((caps & 140737488355328L) != 0L) {
+               client = CLI_BAYAN;
+            } else if ((caps & 9007199254740992L) != 0L) {
+               client = CLI_DICHAT;
+            } else if ((caps & 68719476736L) != 0L) {
+               client = CLI_DIM;
+            } else if ((caps & 1125899906842624L) != 0L) {
+               client = CLI_MIP;
+            } else if ((caps & 2251799813685248L) != 0L) {
+               client = CLI_YAPP;
+            } else if ((caps & 281474976710656L) != 0L) {
+               client = CLI_SMAPER;
+            } else if ((caps & CAPF_ICQ6) != 0L) {
+               if ((caps & CAPF_AVATAR) != 0L) {
+                  client = CLI_MRA;
+               } else {
+                  client = CLI_ICQ6;
+               }
+            } else if ((caps & CAPF_ICQ7) != 0L) {
+               client = CLI_ICQLITE;
+               if ((caps & CAPF_HTML) != 0L && (caps & CAPF_XTRAZ_VIDEO) != 0L) {
+                  client = CLI_ICQ7;
+               }
+            } else if ((caps & 8589934592L) != 0L) {
+               client = CLI_TRILLIAN;
+            } else if ((caps & 4398046511104L) != 0L) {
+               client = CLI_IM2;
+            } else if ((caps & 34359738368L) != 0L) {
+               client = CLI_SIM;
+            } else if ((caps & 274877906944L) != 0L) {
+               client = CLI_KOPETE;
+            } else if ((caps & 137438953472L) != 0L) {
+               client = CLI_LICQ;
+            } else if ((caps & CAPF_AIMCHAT) != 0L) {
+               if ((caps & 2L) != 0L) {
+                  client = CLI_GAIM;
+               } else {
+                  client = CLI_AIM;
+               }
+            } else {
+               if ((caps & 2L) != 0L) {
+                  switch (protocolVersion) {
+                     case 10:
+                        if ((caps & CAPF_TYPING) != 0L && (caps & CAPF_RICHTEXT) != 0L) {
+                           client = CLI_ICQ2003B;
+                        }
+                     case 7:
+                        if ((caps & 1L) == 0L && (caps & CAPF_DIRECT) == 0L && dwFP1 == 0 && dwFP2 == 0 && dwFP3 == 0) {
+                           client = CLI_ICQ2GO;
+                        }
+                        break;
+                     default:
+                        if (dwFP1 == 0 && dwFP2 == 0 && dwFP3 == 0) {
+                           if ((caps & CAPF_RICHTEXT) != 0L) {
+                              client = CLI_ICQLITE;
+                              if ((caps & CAPF_AVATAR) != 0L && (caps & CAPF_XTRAZ) != 0L) {
+                                 if ((caps & CAPF_AIMFILE) != 0L) {
+                                    client = CLI_ICQLITE5;
+                                 } else {
+                                    client = CLI_ICQLITE4;
+                                 }
+                              }
+                           } else if ((caps & CAPF_FILE_SHARING) != 0L) {
+                              client = CLI_SLICK;
+                           } else if ((caps & 36028797018963968L) != 0L) {
+                              client = CLI_NATICQ;
+                           } else {
+                              client = CLI_AGILE;
+                           }
+                        }
+                  }
+               }
 
-//				String tmpst;
+               if ((caps & 8796093022208L) != 0L) {
+                  client = CLI_MACICQ;
+               } else if ((dwFP1 & -8454144) == 2097152000) {
+                  client = CLI_LICQ;
+                  int packedVersion;
+                  if ((packedVersion = dwFP1 & 65535) % 10 != 0) {
+                     clientVersion = packedVersion / 1000 + "." + packedVersion / 10 % 100 + "." + packedVersion % 10;
+                  } else {
+                     clientVersion = packedVersion / 1000 + "." + packedVersion / 10 % 100;
+                  }
+               } else {
+                  switch (dwFP1) {
+                     case -2458:
+                        client = CLI_RANDQ;
+                        clientVersion = (dwFP2 & 65535) + "";
+                        break;
+                     case -190:
+                        client = CLI_MICQ;
+                        break;
+                     case -129:
+                        client = CLI_ANDRQ;
+                        clientVersion = (dwFP2 >>> 24) + "." + (dwFP2 >> 16 & 0xFF) + "." + (dwFP2 >> 8 & 0xFF) + "." + (dwFP2 & 0xFF);
+                        break;
+                     case -113:
+                        client = CLI_STRICQ;
+                        break;
+                     case -85:
+                        client = CLI_YSM;
+                        break;
+                     case -66:
+                        client = CLI_ALICQ;
+                        break;
+                     case -2:
+                        if (dwFP3 == dwFP1) {
+                           client = CLI_JIMM;
+                        }
+                        break;
+                     case -1:
+                        if (dwFP2 == 0 && dwFP3 != -1) {
+                           if (protocolVersion == 7) {
+                              client = CLI_WEBICQ;
+                              break;
+                           }
 
-//				tmpst = "0000000" + (Integer.toHexString(dwFP1)).toUpperCase();
-//				tmpst = tmpst.substring(tmpst.length() - 8);
-//				clientCaps += "\nFP1: " + tmpst + "\n";
+                           if (dwFP3 == 997345517 && (caps & 2L) == 0L && (caps & CAPF_RICHTEXT) == 0L) {
+                              client = CLI_SPAM;
+                              break;
+                           }
+                        }
 
-//				tmpst = "0000000" + (Integer.toHexString(dwFP2)).toUpperCase();
-//				tmpst = tmpst.substring(tmpst.length() - 8);
-//				clientCaps += "FP2: " + tmpst + "\n";
+                        client = CLI_MIRANDA;
+                        clientVersion = (dwFP2 >> 24 & 127) + "." + (dwFP2 >> 16 & 0xFF) + "." + (dwFP2 >> 8 & 0xFF) + "." + (dwFP2 & 0xFF);
+                        break;
+                     case 67312000:
+                        client = CLI_VICQ;
+                        break;
+                     case 984052718:
+                        if (dwFP2 == 983982976 && dwFP3 == 981957186) {
+                           if (protocolVersion == 7 && (caps & 1L) != 0L && (caps & CAPF_DIRECT) != 0L && (caps & CAPF_RICHTEXT) != 0L) {
+                              client = CLI_CENTERICQ;
+                           } else {
+                              client = CLI_LIBICQ2000;
+                           }
+                        }
+                        break;
+                     case 997567497:
+                        client = CLI_TRILLIAN;
+                        break;
+                     case 1000922031:
+                        if (protocolVersion == 2) {
+                           client = CLI_STICQ;
+                        }
+                        break;
+                     case 1072798699:
+                        if (protocolVersion == 8 && dwFP1 == dwFP3) {
+                           client = CLI_IM2;
+                        }
+                        break;
+                     case 1107424276:
+                        if ((dwFP2 & dwFP3) == dwFP1 && protocolVersion == 8) {
+                           client = CLI_SPAM;
+                        }
+                        break;
+                     case Integer.MAX_VALUE:
+                        if ((caps & 4294967296L) != 0L || (caps & 17179869184L) != 0L) {
+                           client = CLI_MIRANDA;
+                           clientVersion = clientVersion + " (ICQ " + (dwFP2 >> 24 & 127) + "." + (dwFP2 >> 16 & 0xFF) + "." + (dwFP2 >> 8 & 0xFF) + "." + (dwFP2 & 0xFF) + ")";
+                        }
+                  }
 
-//				tmpst = "0000000" + (Integer.toHexString(dwFP3)).toUpperCase();
-//				tmpst = tmpst.substring(tmpst.length() - 8);
-//				clientCaps += "FP3: " + tmpst;
+                  if (client == 0) {
+                     if (dwFP1 != 0 && dwFP1 == dwFP3 && dwFP3 == dwFP2 && caps == 0L) {
+                        client = CLI_VICQ;
+                     } else if ((caps & 70368744177665L) != 0L && dwFP1 == 0 && dwFP2 == 0 && dwFP3 == 0 && protocolVersion == 0) {
+                        client = CLI_ICQPPC;
+                     } else {
+                        legacyDetection: {
+                           if (protocolVersion == 7) {
+                              if ((caps & 1L) != 0L && (caps & CAPF_DIRECT) != 0L) {
+                                 if (dwFP1 == 0 && dwFP2 == 0 && dwFP3 == 0) {
+                                    client = CLI_ANDRQ;
+                                    break legacyDetection;
+                                 }
+                              } else if ((caps & CAPF_RICHTEXT) != 0L) {
+                                 client = CLI_GNOMEICQ;
+                                 break legacyDetection;
+                              }
+                           }
 
-				item.setIntValue(ContactItem.CONTACTITEM_CAPABILITIES, caps);
-			}
+                           if (dwFP1 > 889192448 && dwFP1 < 1073741824) {
+                              switch (protocolVersion) {
+                                 case 9:
+                                    client = CLI_ICQLITE;
+                                    break;
+                                 case 10:
+                                    client = CLI_ICQ2003B;
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
 
-			//Client detection. If this is status change we don`t need to detect client... 
-			if (!statusChange)
-			{
-				switch(1)
-				{
-				default:
-					if ((caps & CAPF_VMICQ) != 0)
-					{
-						client = CLI_VMICQ;
-						break;
-					}
-
-					if ((caps & CAPF_QIPPDASYM) != 0)
-					{
-						client = CLI_QIPPDASYM;
-						break;
-					}
-
-					if ((caps & CAPF_QIPPDAWIN) != 0)
-					{
-						client = CLI_QIPPDAWIN;
-						break;
-					}
-
-					if ((caps & CAPF_MCHAT) != 0)
-					{
-						client = CLI_MCHAT;
-						break;
-					}
-
-					if ((caps & CAPF_QIP) != 0)
-					{
-						client = CLI_QIP;
-						if (((dwFP1 >> 24) & 0xFF) != 0)
-						{
-							szVersion += " (" + ((dwFP1 >> 24) & 0xFF) + ((dwFP1 >> 16) & 0xFF) + ((dwFP1 >> 8) & 0xFF) + (dwFP1 & 0xFF) + ")";
-						}
-						break;
-					}
-
-					if ((caps & CAPF_QIPINFIUM) != 0)
-					{
-						client = CLI_QIPINFIUM;
-						if ((dwFP1 & 0xFFFF) != 0)
-						{
-							szVersion += "(" + (dwFP1 & 0xFFFF) + ")";
-						}
-						break;
-					}
-
-					if (wVersion == 31337) //QIP's -?- Client ID
-					{
-						if ((caps & CAPF_UTF8_INTERNAL) != 0)
-						{
-							client = CLI_QIPINFIUM;
-						}
-						else
-						{
-							client = CLI_QIP;
-							szVersion = "2005a";
-						}
-						break;
-					}
-
-					if ((caps & CAPF_JIMM) != 0)
-					{
-						client = CLI_JIMM;
-						break;
-					}
-
-					if ((caps & CAPF_MIP) != 0)
-					{
-						client = CLI_MIP;
-						break;
-					}
-
-					if ((caps & CAPF_YAPP) != 0)
-					{
-						client = CLI_YAPP;
-						break;
-					}
-
-					if ((caps & CAPF_SMAPER) != 0)
-					{
-						client = CLI_SMAPER;
-						break;
-					}
-
-					if ((caps & CAPF_ICQ6) != 0)
-					{
-						client = CLI_ICQ6;
-						break;
-					}
-
-					if (((caps & (CAPF_TRILLIAN + CAPF_TRILCRYPT)) != 0) /*&& (dwFP1 == 0x3b75ac09)*/)
-					{
-						client = CLI_TRILLIAN;
-						break;
-					}
-			
-					if (((caps & CAPF_IM2) != 0) /*&& (dwFP1 == 0x3FF19BEB)*/)
-					{
-						client = CLI_IM2;
-						break;
-					}
-
-					if ((caps & (CAPF_SIM + CAPF_SIMOLD)) != 0)
-					{
-						client = CLI_SIM;
-						break;
-					}
-
-					if ((caps & CAPF_KOPETE) != 0)
-					{
-						client = CLI_KOPETE;
-						break;
-					}
-
-					if ((caps & CAPF_LICQ) != 0)
-					{
-						client = CLI_LICQ;
-						break;
-					}
-
-					if (HAS_CAP_AIMCHAT)
-					{
-						if ((caps & CAPF_UTF8_INTERNAL) != 0)
-						{
-							client = CLI_GAIM;
-						}
-						else
-						{
-							client = CLI_AIM;
-						}
-						break;
-					}
-
-//					if (((caps & CAPF_AIMICON) != 0) && ((caps & CAPF_AIMFILE) != 0) && ((caps & CAPF_AIMIMIMAGE) != 0))
-//					{
-//						client = CLI_GAIM;
-//						break;
-//					}
-
-					if ((caps & CAPF_UTF8_INTERNAL) != 0)
-					{
-						switch (wVersion) 
-						{
-						case 10:
-							if (((caps & CAPF_TYPING) != 0) && ((caps & CAPF_RICHTEXT) != 0))
-							{
-								client = CLI_ICQ2003B;
-							}
-						case 7:
-							if (((caps & CAPF_AIM_SERVERRELAY_INTERNAL) == 0) && ((caps & CAPF_DIRECT) == 0) && (dwFP1 == 0) && (dwFP2 == 0) && (dwFP3 == 0))
-							{
-								client = CLI_ICQ2GO;
-							}
-							break;
-						default:
-							if ((dwFP1 == 0) && (dwFP2 == 0) && (dwFP3 == 0))
-							{
-								if ((caps & CAPF_RICHTEXT) != 0)
-								{
-									client = CLI_ICQLITE;
-									if (((caps & CAPF_AVATAR) != 0) && ((caps & CAPF_XTRAZ) != 0))
-									{
-										if ((caps & CAPF_AIMFILE) != 0)
-										{
-											client = CLI_ICQLITE5;
-										}
-										else
-										{
-											client = CLI_ICQLITE4;
-										}
-									}
-								}
-								else if (HAS_CAP_FILE_SHARING)
-								{
-									client = CLI_SLICK;
-								}
-								else if (HAS_CAP_NAT_ICQ)
-								{
-									client = CLI_NATICQ;
-								}
-								else
-								{
-									client = CLI_AGILE;
-								}
-							}
-							break;
-						}
-					}
-
-					if ((caps & CAPF_MACICQ) != 0)
-					{
-						client = CLI_MACICQ;
-						break;
-					}
-
-					if ((dwFP1 & 0xFF7F0000) == 0x7D000000)
-					{
-						client = CLI_LICQ;
-						int ver = dwFP1 & 0xFFFF;
-						if (ver % 10 != 0)
-						{
-							szVersion = ver / 1000 + "." + (ver / 10) % 100 + "." + ver % 10;
-						}
-						else
-						{
-							szVersion = ver / 1000 + "." + (ver / 10) % 100;
-						}
-						break;
-					}
-
-					switch (dwFP1) 
-					{
-					case 0xFFFFFFFF:
-//						if ((dwFP3 == 0xFFFFFFFF) && (dwFP2 == 0xFFFFFFFF)) 
-//						{
-//							client = CLI_GAIM;
-//							break;
-//						}
-						if ( (dwFP2 == 0) && (dwFP3 != 0xFFFFFFFF) )
-						{
-							if (wVersion == 7) 
-							{
-								client = CLI_WEBICQ;
-								break;
-							}
-							if ((dwFP3 == 0x3B7248ED) && ((caps & CAPF_UTF8_INTERNAL) == 0) && ((caps & CAPF_RICHTEXT) == 0)) 
-							{
-								client = CLI_SPAM;
-								break;
-							}
-						}
-						client = CLI_MIRANDA;
-						szVersion = ((dwFP2 >> 24) & 0x7F) + "." + ((dwFP2 >> 16) & 0xFF) + "." + ((dwFP2 >> 8) & 0xFF) + "." + (dwFP2 & 0xFF);
-						break;
-
-					case 0x7FFFFFFF:
-						client = CLI_MIRANDA;
-						szVersion = ((dwFP2 >> 24) & 0x7F) + "." + ((dwFP2 >> 16) & 0xFF) + "." + ((dwFP2 >> 8) & 0xFF) + "." + (dwFP2 & 0xFF);
-						break;
-
-					case 0xFFFFFFFE:
-						if (dwFP3 == dwFP1)
-						{
-							client = CLI_JIMM;
-						}
-						break;
-
-					case 0xFFFFFF8F:
-						client = CLI_STRICQ;
-						break;
-
-					case 0xFFFFFF42:
-						client = CLI_MICQ;
-						break;
-
-					case 0xFFFFFFBE:
-						client = CLI_ALICQ;
-						break;
-
-					case 0xFFFFFF7F:
-						client = CLI_ANDRQ;
-						szVersion = ((dwFP2 >> 24) & 0xFF) + "." + ((dwFP2 >> 16) & 0xFF) + "." + ((dwFP2 >> 8) & 0xFF) + "." + (dwFP2 & 0xFF);
-						break;
-
-					case 0xFFFFF666:
-						client = CLI_RANDQ;
-						szVersion = (dwFP2 & 0xFFFF) + "";
-						break;
-
-					case 0xFFFFFFAB:
-						client = CLI_YSM;
-						break;
-
-					case 0x04031980:
-						client = CLI_VICQ;
-						break;
-
-					case 0x3AA773EE:
-						if ((dwFP2 == 0x3AA66380) && (dwFP3 == 0x3A877A42))
-						{
-							if (wVersion == 7)
-							{
-								if (((caps & CAPF_AIM_SERVERRELAY_INTERNAL) != 0) && ((caps & CAPF_DIRECT) != 0))
-								{
-									if ((caps & CAPF_RICHTEXT) != 0) 
-									{
-										client = CLI_CENTERICQ;
-										break;
-									}
-									client = CLI_LIBICQJABBER;
-								}
-							}
-							client = CLI_LIBICQ2000;
-						}
-						break;
-
-					case 0x3b75ac09:
-						client = CLI_TRILLIAN;
-						break;
-
-					case 0x3BA8DBAF: // FP2: 0x3BEB5373; FP3: 0x3BEB5262;
-						if (wVersion == 2)
-						{
-							client = CLI_STICQ;
-						}
-						break;
-
-					case 0x3FF19BEB: // FP2: 0x3FEC05EB; FP3: 0x3FF19BEB;
-						if ((wVersion == 8) && (dwFP1 == dwFP3))
-						{
-							client = CLI_IM2;
-						}
-						break;
-
-					case 0x4201F414:
-						if (((dwFP2 & dwFP3) == dwFP1) && (wVersion == 8))
-						{
-							client = CLI_SPAM;
-						}
-						break;
-/*
-					case 0xC9E020EA:
-						if ((dwFP2 == 0xF0E8E2E5) && (dwFP3 == 0xF2EAEE21))
-						{
-							client = CLI_JIMM;
-							szVersion = "0.5.2a";
-						}
-						break;
-*/
-					default: break;
-					}
-
-					if (client != CLI_NONE) break;
-
-					if ((dwFP1 != 0) && (dwFP1 == dwFP3) && (dwFP3 == dwFP2) && (caps == 0)) 
-					{
-						client = CLI_VICQ;
-						break;
-					}
-
-					if (((caps & (CAPF_STR20012 + CAPF_AIM_SERVERRELAY_INTERNAL)) != 0))
-					{
-						if ((dwFP1 == 0) && (dwFP2 == 0) && (dwFP3 == 0) && (wVersion == 0))
-						{
-							client = CLI_ICQPPC;
-							break;
-						}
-					}
-
-					if (wVersion == 7) 
-					{
-						if (((caps & CAPF_AIM_SERVERRELAY_INTERNAL) != 0) && ((caps & CAPF_DIRECT) != 0))
-						{
-							if ((dwFP1 == 0) && (dwFP2 == 0) && (dwFP3 == 0))
-							{
-								client = CLI_ANDRQ;
-								break;
-							}
-						}
-						else if ((caps & CAPF_RICHTEXT) != 0) 
-						{
-							client = CLI_GNOMEICQ;
-							break;
-						}
-					}
-
-					if (dwFP1 > 0x35000000 && dwFP1 < 0x40000000) 
-					{
-						switch(wVersion) 
-						{
-						case  9:
-							client = CLI_ICQLITE;
-							break;
-						case 10:
-							client = CLI_ICQ2003B;
-							break;
-						}
-					}
-				}
-				item.setIntValue(ContactItem.CONTACTITEM_CLIENT, client);
-				item.setStringValue(ContactItem.CONTACTITEM_CLIVERSION, szVersion);
-
-//				if (!Options.getBoolean(Options.OPTION_CLIENT_CAPS))
-//				{
-//					clientCaps = "";
-//				}
-//				item.setStringValue(ContactItem.CONTACTITEM_CLIENTCAP, clientCaps);
-//				clientCaps = null; // обнуление строки характеристик...
-
-				HAS_CAP_FILE_SHARING = false;
-				HAS_CAP_NAT_ICQ = false;
-				HAS_CAP_AIMCHAT = false;
-			}
-		}
-	}
+            item.setIntValue(ContactItem.CONTACTITEM_CLIENT, client);
+            item.setStringValue(ContactItem.CONTACTITEM_CLIVERSION, clientVersion);
+         }
+      }
+   }
 
 	public static String getClientString(byte cli)
 	{
 		return (clientNames[cli]);
 	}
 
-	private static String detectClientVersion(String uin, byte[] buf1, int cli, int tlvNum)
-	{
-		byte[] buf = new byte[16];
-		System.arraycopy(buf1, tlvNum * 16, buf, 0, 16);
-		String ver = "";
-		if (cli == Util.CAPF_MIRANDAIM)
-		{
-			if ((buf[0xC] == 0) && (buf[0xD] == 0) && (buf[0xE] == 0) && (buf[0xF] == 1))
-			{
-				ver = "0.1.2.0";
-			}
-			else if ((buf[0xC] == 0) && (buf[0xD] <= 3) && (buf[0xE] <= 3) && (buf[0xF] <= 1))
-			{
-				ver = "0." + buf[0xD] + "." + buf[0xE] + "." + buf[0xF];
-			}
-			else
-			{
-				ver = buf[0x8]+ "." + buf[0x9] + "." + buf[0xA] + "." + buf[0xB];
-			}
-		}
-		else if (cli == Util.CAPF_LICQ)
-		{
-			ver = buf[0xC] + "." + (buf[0xD]%100) + "." + buf[0xE];
-		}
-		else if (cli == Util.CAPF_KOPETE)
-		{
-			ver = buf[0xC] + "." + buf[0xD] + "." + buf[0xE] + "." + buf[0xF];
-		}
-		else if (cli == Util.CAPF_ANDRQ)
-		{
-			ver = buf[0xC] + "." + buf[0xB] + "." + buf[0xA] + "." + buf[9];
-		}
-		else if (cli == Util.CAPF_JIMM)
-		{
-			ver = Util.byteArrayToString(buf, 5, 11);
-		}
-		else if (cli == Util.CAPF_QIP)
-		{
-			ver = Util.byteArrayToString(buf, 11, 5);
-		}
-		else if (cli == Util.CAPF_MIP)
-		{
-			ver = Util.byteArrayToString(buf, 4, 12);
-		}
-		else if (cli == Util.CAPF_YAPP)
-		{
-			ver = Util.byteArrayToString(buf, 8, 5);
-		}
-		else if (cli == Util.CAPF_SMAPER)
-		{
-			ver = Util.byteArrayToString(buf, 7, 6);
-		}
-		else if (cli == CAPF_MCHAT)
-		{
-			ver = Util.byteArrayToString(buf, 10, 6);
-		}
-		else if (cli == CAPF_VMICQ)
-		{
-			ver = Util.byteArrayToString(buf, 6, 7);
-		}
-		return ver;
-	}
+	private static String detectClientVersion(byte[] capabilities, int client, int index) {
+      byte[] capability = new byte[16];
+      System.arraycopy(capabilities, index << 4, capability, 0, 16);
+      String version = "";
+      if (client == CLI_MIRANDA) {
+         if (capability[3] == 112 || capability[3] == 106) {
+            version = "0." + capability[5] + "." + capability[6] + "." + capability[7];
+         } else if (capability[12] == 0 && capability[13] == 0 && capability[14] == 0 && capability[15] == 1) {
+            version = "0.1.2.0";
+         } else if (capability[12] == 0 && capability[13] <= 3 && capability[14] <= 3 && capability[15] <= 1) {
+            version = "0." + capability[13] + "." + capability[14] + "." + capability[15];
+         } else {
+            version = (capability[8] & 127) + "." + capability[9] + "." + capability[10] + "." + capability[11];
+         }
+      } else if (client == CLI_LICQ) {
+         version = capability[12] + "." + capability[13] % 100 + "." + capability[14];
+      } else if (client == CLI_KOPETE) {
+         version = capability[12] + "." + capability[13] + "." + capability[14] + "." + capability[15];
+      } else if (client == CLI_ANDRQ) {
+         version = capability[12] + "." + capability[11] + "." + capability[10] + "." + capability[9];
+      } else if (client == CLI_JIMM) {
+         version = byteArrayToString(capability, 5, 11, false);
+      } else if (client == CLI_WJIMM) {
+         version = byteArrayToString(capability, 6, 7, false);
+      } else if (client == CLI_LOCID) {
+         version = (capability[11] >> 4 & 15) + "." + (capability[11] & 15) + "." + Integer.toHexString(capability[12] & 255) + " p" + capability[15];
+      } else if (client == CLI_BAYAN) {
+         version = byteArrayToString(capability, 8, 4, false);
+      } else if (client == CLI_DICHAT) {
+         version = byteArrayToString(capability, 9, 6, false);
+      } else if (client == CLI_DIM) {
+         version = byteArrayToString(capability, 6, 6, false);
+      } else if (client == CLI_QIP) {
+         version = byteArrayToString(capability, 11, 5, false);
+      } else if (client == CLI_MIP) {
+         version = byteArrayToString(capability, 4, 12, false);
+      } else if (client == CLI_YAPP) {
+         version = byteArrayToString(capability, 8, 5, false);
+      } else if (client == CLI_SMAPER) {
+         version = byteArrayToString(capability, 7, 6, false);
+      } else if (client == CLI_QUTIM) {
+         if (capability[6] == 46) {
+            int major = capability[5] - 48;
+            client = capability[7] - 48;
+            version = major + "." + client;
+         } else {
+            byte majorVersion = capability[6];
+            byte minorVersion = capability[7];
+            String versionText = majorVersion + "." + minorVersion;
+            switch (capability[5]) {
+               case 108:
+                  version = versionText + " (Linux)";
+                  break;
+               case 109:
+                  version = versionText + " (MacOS)";
+                  break;
+               case 117:
+               default:
+                  version = versionText + " (Unknown OS)";
+                  break;
+               case 119:
+                  version = versionText + " (Windows)";
+            }
+         }
+      } else if (client == CLI_PIGEON) {
+         version = byteArrayToString(capability, 4, 7, false);
+      } else if (client == CLI_MCHAT) {
+         version = byteArrayToString(capability, 10, 6, false);
+      } else if (client == CLI_VMICQ) {
+         version = byteArrayToString(capability, 6, 7, false);
+      }
+
+      return version;
+   }
 	
 	// Password encryption key
 	public static final byte[] PASSENC_KEY = explodeToBytes("F3,26,81,C4,39,86,DB,92,71,A3,B9,E6,53,7A,95,7C", ',', 16);
@@ -1459,41 +1263,37 @@ public class Util
 	}
 
 	// translateStatus(long status) => void
-	 public static int translateStatusReceived(int status)
+	 public static int translateStatusReceived(int status, ContactItem contact)
 	 {
-		  if ((status & 0x0100) != 0 && (status & 0xFFFF) != 0x0100 && status != 0xFFFFFFFF) status &= 0xFFFFFEFF;
-
-		  if (status == ContactList.STATUS_OFFLINE) return (ContactList.STATUS_OFFLINE);
-		  if ((status & ContactList.STATUS_DND) != 0) return (ContactList.STATUS_DND);
-		  if ((status & ContactList.STATUS_INVISIBLE) != 0) return (ContactList.STATUS_INVISIBLE);
-		  if ((status & ContactList.STATUS_INVIS_ALL) != 0) return (ContactList.STATUS_INVISIBLE);
-		  if ((status & ContactList.STATUS_OCCUPIED) != 0) return (ContactList.STATUS_OCCUPIED);
-		  if ((status & ContactList.STATUS_NA) != 0) return (ContactList.STATUS_NA);
-		  if ((status & ContactList.STATUS_CHAT) != 0) return (ContactList.STATUS_CHAT);
-		  if ((status & ContactList.STATUS_LUNCH) == ContactList.STATUS_LUNCH) return (ContactList.STATUS_LUNCH);
-		  if ((status & ContactList.STATUS_EVIL) == ContactList.STATUS_EVIL) return (ContactList.STATUS_EVIL);
-		  if ((status & ContactList.STATUS_HOME) == ContactList.STATUS_HOME) return (ContactList.STATUS_HOME);
-		  if ((status & ContactList.STATUS_WORK) == ContactList.STATUS_WORK) return (ContactList.STATUS_WORK);
-		  if ((status & ContactList.STATUS_AWAY) == ContactList.STATUS_AWAY) return (ContactList.STATUS_AWAY);
-		  if ((status & ContactList.STATUS_DEPRESSION) == ContactList.STATUS_DEPRESSION) return (ContactList.STATUS_DEPRESSION);
-		  return (ContactList.STATUS_ONLINE);
-	 }
+        if (status == ContactList.STATUS_OFFLINE) return ContactList.STATUS_OFFLINE;
+        if (contact != null)
+        {
+            if (contact.hasCapability(CAPF_STATUS_DEPRESSION)) return ContactList.STATUS_DEPRESSION;
+            if (contact.hasCapability(CAPF_STATUS_CHAT)) return ContactList.STATUS_CHAT;
+            if (contact.hasCapability(CAPF_STATUS_HOME)) return ContactList.STATUS_HOME;
+            if (contact.hasCapability(CAPF_STATUS_WORK)) return ContactList.STATUS_WORK;
+            if (contact.hasCapability(CAPF_STATUS_LUNCH)) return ContactList.STATUS_LUNCH;
+            if (contact.hasCapability(CAPF_STATUS_EVIL)) return ContactList.STATUS_EVIL;
+        }
+        if ((status & 0x0100) != 0 && (status & 0xFFFF) != 0x0100) status &= ~0x0100;
+        if ((status & ContactList.STATUS_DND) != 0) return ContactList.STATUS_DND;
+        if ((status & ContactList.STATUS_INVISIBLE) != 0) return ContactList.STATUS_INVISIBLE;
+        if ((status & ContactList.STATUS_INVIS_ALL) != 0) return ContactList.STATUS_INVISIBLE;
+        if ((status & ContactList.STATUS_OCCUPIED) != 0) return ContactList.STATUS_OCCUPIED;
+        if ((status & ContactList.STATUS_NA) != 0) return ContactList.STATUS_NA;
+        if ((status & ContactList.STATUS_AWAY) != 0) return ContactList.STATUS_AWAY;
+        return ContactList.STATUS_ONLINE;
+    }
 
 	// Get online status set value
 	public static int translateStatusSend(int status)
 	{
 		if (status == ContactList.STATUS_AWAY) return (Util.SET_STATUS_AWAY);
-		if (status == ContactList.STATUS_CHAT) return (Util.SET_STATUS_CHAT);
 		if (status == ContactList.STATUS_DND) return (Util.SET_STATUS_DND);
 		if (status == ContactList.STATUS_INVISIBLE) return (Util.SET_STATUS_INVISIBLE);
 		if (status == ContactList.STATUS_INVIS_ALL) return (Util.SET_STATUS_INVISIBLE);
 		if (status == ContactList.STATUS_NA) return (Util.SET_STATUS_NA);
 		if (status == ContactList.STATUS_OCCUPIED) return (Util.SET_STATUS_OCCUPIED);
-		if (status == ContactList.STATUS_LUNCH) return (Util.SET_STATUS_LUNCH);
-		if (status == ContactList.STATUS_EVIL) return (Util.SET_STATUS_EVIL);
-		if (status == ContactList.STATUS_DEPRESSION) return (Util.SET_STATUS_DEPRESSION);
-		if (status == ContactList.STATUS_HOME) return (Util.SET_STATUS_HOME);
-		if (status == ContactList.STATUS_WORK) return (Util.SET_STATUS_WORK);
 		return (Util.SET_STATUS_ONLINE);
 	}
 

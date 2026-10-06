@@ -124,24 +124,25 @@ public class ContactItem implements ContactListItem
 		switch (sortType)
 		{
 		case ContactList.SORT_BY_STATUS:
-			if (status == ContactList.STATUS_CHAT) return 2;
+			if (status == ContactList.STATUS_CHAT) return 3;
 			if ((status == ContactList.STATUS_ONLINE) || (status == ContactList.STATUS_HOME)
-				|| (status == ContactList.STATUS_WORK) || (status == ContactList.STATUS_INVISIBLE)) return 3;
-			if (status == ContactList.STATUS_EVIL) return 4;
-			if (status == ContactList.STATUS_DEPRESSION) return 5;
-			if (status == ContactList.STATUS_OCCUPIED) return 6;
-			if (status == ContactList.STATUS_DND) return 7;
-			if (status == ContactList.STATUS_LUNCH) return 8;
-			if (status == ContactList.STATUS_AWAY) return 9;
-			if (status == ContactList.STATUS_NA) return 10;
+				|| (status == ContactList.STATUS_WORK) || (status == ContactList.STATUS_INVISIBLE)) return 4;
+			if (status == ContactList.STATUS_EVIL) return 5;
+			if (status == ContactList.STATUS_DEPRESSION) return 6;
+			if (status == ContactList.STATUS_OCCUPIED) return 7;
+			if (status == ContactList.STATUS_DND) return 8;
+			if (status == ContactList.STATUS_LUNCH) return 9;
+			if (status == ContactList.STATUS_AWAY) return 10;
+			if (status == ContactList.STATUS_NA) return 11;
 			break;
+		case ContactList.SORT_BY_ACTIVITY:
+            if (getBooleanValue(CONTACTITEM_HAS_CHAT) && status != ContactList.STATUS_OFFLINE) return 2;
 		case ContactList.SORT_BY_STATUS_AND_NAME:
 			if (status != ContactList.STATUS_OFFLINE) return 5;
 			break;
 		}
 
-		if ((getBooleanValue(CONTACTITEM_IS_TEMP) || getBooleanValue(CONTACTITEM_PHANTOM)) &&
-			(status == ContactList.STATUS_OFFLINE)) return 20;
+		if ((getBooleanValue(CONTACTITEM_IS_TEMP) || getBooleanValue(CONTACTITEM_PHANTOM))) return 20;
 
 		return 15;
 	}

@@ -115,7 +115,7 @@ public class Search
 		private Command cmdCheckStatus;
 
 		/* Forms for results and query */
-		private Form searchForm;
+		private VirtualForm searchForm;
 
 		private TextList screen;
 
@@ -157,8 +157,8 @@ public class Search
 			cmdSendMessage = new Command(ResourceBundle.getString("send_message"), Command.ITEM, 6);
 			cmdShowInfo = new Command(ResourceBundle.getString("info"), Command.ITEM, 7);
 
-			/* Form */
-			searchForm = new Form(ResourceBundle.getString("search_user"));
+			/* VirtualForm */
+			searchForm = new VirtualForm(ResourceBundle.getString("search_user"));
 
 			/* TextFields */
 			uinSearchTextBox = new TextField(ResourceBundle.getString("uin"), "", 32, TextField.NUMERIC);
@@ -169,14 +169,14 @@ public class Search
 			citySearchTextBox = new TextField(ResourceBundle.getString("city"), "", 32, TextField.ANY);
 			keywordSearchTextBox = new TextField(ResourceBundle.getString("keyword"), "", 32, TextField.ANY);
 
-			chgrAge = new ChoiceGroup(ResourceBundle.getString("age"), ChoiceGroup.POPUP, Util.explode("---|13-17|18-22|23-29|30-39|40-49|50-59|> 60", '|'), null);
+			chgrAge = new FormChoiceGroup(ResourceBundle.getString("age"), ChoiceGroup.POPUP, Util.explode("---|13-17|18-22|23-29|30-39|40-49|50-59|> 60", '|'), null);
 
 			/* Choice Groups */
-			gender = new ChoiceGroup(ResourceBundle.getString("gender"), Choice.POPUP);
+			gender = new FormChoiceGroup(ResourceBundle.getString("gender"), Choice.POPUP);
 			gender.append(ResourceBundle.getString("female_male"), null);
 			gender.append(ResourceBundle.getString("female"), null);
 			gender.append(ResourceBundle.getString("male"), null);
-			onlyOnline = new ChoiceGroup("", Choice.MULTIPLE);
+			onlyOnline = new FormChoiceGroup("", Choice.MULTIPLE);
 			onlyOnline.append(ResourceBundle.getString("only_online"), null);
 
 			searchForm.append(onlyOnline);
@@ -231,7 +231,7 @@ public class Search
 			case ACTIV_JUST_SHOW:
 				searchForm.addCommand(searchCommand);
 				searchForm.addCommand(backCommand);
-				Jimm.display.setCurrent(searchForm);
+				searchForm.activate(Jimm.display);
 				break;
 				
 			case ACTIV_SHOW_NORESULTS:
@@ -239,7 +239,7 @@ public class Search
 				searchForm.addCommand(backCommand);
             	Alert alert = new Alert(null, ResourceBundle.getString("no_results"), null, null);
             	alert.setTimeout(Alert.FOREVER);
-            	Jimm.display.setCurrent(alert, searchForm);
+	searchForm.activate(Jimm.display, alert);
 				break;
 			}
 		}
@@ -333,7 +333,7 @@ public class Search
 					LightControl.flash(true);
 					//#sijapp cond.end#
 				}
-				else if (d == searchForm)
+				else if (searchForm.isActive())
 				{
 					searchForm = null;
 					MainMenu.activate();

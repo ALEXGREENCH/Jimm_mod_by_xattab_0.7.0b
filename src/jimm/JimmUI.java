@@ -40,7 +40,7 @@ public class JimmUI implements CommandListener
 	// Last screen constants
 	public static Object lastScreen;
 	
-	static private TextList msgBoxList;
+	static private VirtualAlert msgBoxList;
 
 	public static void setLastScreen(Object screen)
 	{
@@ -556,7 +556,7 @@ public class JimmUI implements CommandListener
 		}
 
 		// Message box
-		else if ((msgForm != null) && (d == msgForm))
+		else if ((msgForm != null) && msgForm.isActive())
 		{
 			listener.commandAction(c, d);
 			msgForm = null;
@@ -607,7 +607,7 @@ public class JimmUI implements CommandListener
 	
 	public static int getCurScreenTag()
 	{
-		if ((msgForm != null) && (msgForm.isShown())) return curScreenTag;
+		if ((msgForm != null) && (msgForm.isActive())) return curScreenTag;
 		if (isControlActive(msgBoxList)) return curScreenTag;
 		if (isControlActive(lstSelector)) return curScreenTag;
 		return -1;
@@ -618,8 +618,8 @@ public class JimmUI implements CommandListener
 	//     Message Box     //
 	//                     //
 	/////////////////////////
-	static private Form msgForm;
-	static private int curScreenTag = -1;
+	static private VirtualAlert msgForm;
+	public static int curScreenTag = -1;
 
 	public static int getCommandType(Command testCommand, int testTag)
 	{
@@ -634,35 +634,31 @@ public class JimmUI implements CommandListener
 		clearAll();
 		
 		curScreenTag = tag;
-		msgForm = new Form(cap);
-		msgForm.append(text);
+		msgForm = new VirtualAlert(getCurrentScreen(), text, tag);
+        msgForm.removeCommandEx(cmdBack);
 		
 		switch (type)
 		{
 		case MESBOX_YESNO:
-			msgForm.addCommand(cmdYes);
-			msgForm.addCommand(cmdNo);
+			msgForm.addCommandEx(cmdYes, VirtualList.MENU_LEFT_BAR);
+			msgForm.addCommandEx(cmdNo, VirtualList.MENU_RIGHT_BAR);
 			break;
 			
 		case MESBOX_OKCANCEL:
-			msgForm.addCommand(cmdOk);
-			msgForm.addCommand(cmdCancel);
+			msgForm.addCommandEx(cmdOk, VirtualList.MENU_LEFT_BAR);
+			msgForm.addCommandEx(cmdCancel, VirtualList.MENU_RIGHT_BAR);
 			break;
 		}
 
 		JimmUI.listener = listener;
 		msgForm.setCommandListener(_this);
-		Jimm.display.setCurrent(msgForm);
+		msgForm.activate(Jimm.display);
 	}
 	
-	public static TextList showMessageBox(ContactItem contact, String cap, String text, int type)
+	public static VirtualAlert showMessageBox(ContactItem contact, String cap, String text, int type)
 	{
-		msgBoxList = new TextList(cap);
-		msgBoxList.setMode(TextList.MODE_TEXT);
-		setColorScheme(msgBoxList, false);
-		msgBoxList.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) * 8);
-		msgBoxList.addBigText(text, msgBoxList.getTextColor(), Options.getInt(Options.OPTION_CL_FONT_STYLE), -1);
-		
+        msgBoxList = new VirtualAlert(getCurrentScreen(), text, -1);
+        msgBoxList.removeCommandEx(cmdBack);
 		switch (type)
 		{
 		case MESBOX_YESNO:
@@ -1660,7 +1656,7 @@ public class JimmUI implements CommandListener
 		{
 			title = caption;
 		}
-		messageTextbox.setTitle(title);
+		messageTextbox.setTitle(Options.getBoolean(Options.OPTION_TEXTBOX_NO_CAPTION) ? null : title);
 	}
 
 	private String getString()
@@ -1739,8 +1735,8 @@ public class JimmUI implements CommandListener
 			messageTextbox.addCommand(cmdSend);
 			messageTextbox.addCommand(cmdCancel);
 			messageTextbox.addCommand(cmdClearText);
-			messageTextbox.addCommand(transCmd);
-			messageTextbox.addCommand(detransCmd);
+			if (Options.getBoolean(Options.OPTION_TRANSLITERATE)) messageTextbox.addCommand(transCmd);
+			if (Options.getBoolean(Options.OPTION_DETRANSLITERATE)) messageTextbox.addCommand(detransCmd);
 			messageTextbox.addCommand(nextCmd);
 			messageTextbox.addCommand(prevCmd);
 			//#sijapp cond.if modules_SMILES is "true" #
@@ -1924,8 +1920,8 @@ public class JimmUI implements CommandListener
 
 	private static TextList tlContactMenu;
 	public  static ContactItem clciContactMenu;
-	public  static TextList removeContactMessageBox;
-	private static TextList removeMeMessageBox;
+	public  static VirtualAlert removeContactMessageBox;
+	private static VirtualAlert removeMeMessageBox;
 	private static TextBox renameTextbox;
 	private static TextList serverLists;
 

@@ -217,7 +217,7 @@ public class TextList extends VirtualList
 		return (((TextLine)lines.lastElement()).size() == 0) ? size - 1 : size;
 	}
 
-	private TextLine getLine(int index)
+	TextLine getLine(int index)
 	{
 		return (TextLine)lines.elementAt(index);
 	}
@@ -518,7 +518,7 @@ public class TextList extends VirtualList
 		return text;
 	}
 
-	private void addBigTextInternal(String text, int color, int fontStyle, int textIndex, int trueWidth)
+	void addBigTextInternal(String text, int color, int fontStyle, int textIndex, int trueWidth)
 	{
 		Font font;
 		int textLen, curPos, lastWordEnd, startPos, width, testStringWidth = 0;

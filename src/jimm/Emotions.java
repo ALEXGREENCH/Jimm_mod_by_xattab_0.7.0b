@@ -278,6 +278,7 @@ public class Emotions implements VirtualListCommands, CommandListener
 
 	public  static String emotionText;
 	private static Selector selector;
+    private static int lastSelectedEmotion;
 	private static int caretPos;
 	private static Object lastScreen;
 	private static TextBox textBox;
@@ -288,7 +289,7 @@ public class Emotions implements VirtualListCommands, CommandListener
 		Emotions.caretPos = textBox.getCaretPosition();
 		Emotions.textBox = textBox;
 
-		selector = new Selector(0, 0);
+		selector = new Selector(0, Options.getBoolean(Options.OPTION_REMEMBER_SMILE) ? lastSelectedEmotion : 0);
 
 		JimmUI.setColorScheme(selector, false);
 		selector.setCyclingCursor(true);
@@ -324,6 +325,7 @@ public class Emotions implements VirtualListCommands, CommandListener
 		// #sijapp cond.if target is "MOTOROLA"#
 		caretPos = textBox.getString().length();
 		// #sijapp cond.end#
+		lastSelectedEmotion = selector.getCurrSelectedIdx();
 		textBox.insert(" " + Emotions.getSelectedEmotion() + " ", caretPos);
 		JimmUI.selectScreen(lastScreen);
 		selector = null;

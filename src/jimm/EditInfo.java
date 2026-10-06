@@ -22,6 +22,8 @@ Author(s): Igor Palkin
 *******************************************************************************/
 package jimm;
 
+import DrawControls.*;
+
 import java.io.ByteArrayOutputStream;
 import javax.microedition.lcdui.*;
 
@@ -31,8 +33,10 @@ import DrawControls.LightControl;
 import jimm.comm.*;
 import jimm.util.*;
 
-public class EditInfo extends Form implements CommandListener, Runnable
+public class EditInfo implements CommandListener, Runnable
 {
+    private VirtualForm form;
+
 	private TextField _NickNameItem  = new TextField(ResourceBundle.getString("nick"), null, 20, TextField.ANY);
 	private TextField _FirstNameItem = new TextField(ResourceBundle.getString("firstname"), null, 20, TextField.ANY);
 	private TextField _LastNameItem  = new TextField(ResourceBundle.getString("lastname"), null, 20, TextField.ANY);
@@ -41,8 +45,8 @@ public class EditInfo extends Form implements CommandListener, Runnable
 	private TextField _HomePageItem  = new TextField(ResourceBundle.getString("home_page"), null, 70, TextField.ANY);
 	private TextField _AboutItem     = new TextField(ResourceBundle.getString("notes"), null, 600, TextField.ANY);
 	private TextField _CityItem      = new TextField(ResourceBundle.getString("city"), null, 50, TextField.ANY);
-	private ChoiceGroup _SexItem     = new ChoiceGroup(ResourceBundle.getString("gender"), ChoiceGroup.POPUP);
-	private ChoiceGroup _InterestsItem = new ChoiceGroup(ResourceBundle.getString("interests"), ChoiceGroup.MULTIPLE);
+	private ChoiceGroup _SexItem     = new FormChoiceGroup(ResourceBundle.getString("gender"), ChoiceGroup.POPUP);
+	private ChoiceGroup _InterestsItem = new FormChoiceGroup(ResourceBundle.getString("interests"), ChoiceGroup.MULTIPLE);
 
 	private static ChoiceGroup intterest1;
 	private static ChoiceGroup intterest2;
@@ -68,13 +72,13 @@ public class EditInfo extends Form implements CommandListener, Runnable
 
 	private EditInfo(Displayable currentForm) 
 	{
-		super(ResourceBundle.getString("editform"));
+		form = new VirtualForm(ResourceBundle.getString("editform"));
 		_PreviousForm = currentForm;
 
-		intterest1 = new ChoiceGroup(null, Choice.POPUP);
-		intterest2 = new ChoiceGroup(null, Choice.POPUP);
-		intterest3 = new ChoiceGroup(null, Choice.POPUP);
-		intterest4 = new ChoiceGroup(null, Choice.POPUP);
+		intterest1 = new FormChoiceGroup(null, Choice.POPUP);
+		intterest2 = new FormChoiceGroup(null, Choice.POPUP);
+		intterest3 = new FormChoiceGroup(null, Choice.POPUP);
+		intterest4 = new FormChoiceGroup(null, Choice.POPUP);
 		intterestText1 = new TextField(null, null, 60, TextField.ANY);
 		intterestText2 = new TextField(null, null, 60, TextField.ANY);
 		intterestText3 = new TextField(null, null, 60, TextField.ANY);
@@ -83,31 +87,31 @@ public class EditInfo extends Form implements CommandListener, Runnable
 		_SexItem.append("---", null);
 		_SexItem.append(ResourceBundle.getString("female"), null);
 		_SexItem.append(ResourceBundle.getString("male"), null);
-		append(_NickNameItem);
-		append(_FirstNameItem);
-		append(_LastNameItem);
-		append(_SexItem);
-		append(_EmailItem);
-		append(_BdayItem);
-		append(_HomePageItem);
-		append(_AboutItem);
-		append(_CityItem);
+		form.append(_NickNameItem);
+		form.append(_FirstNameItem);
+		form.append(_LastNameItem);
+		form.append(_SexItem);
+		form.append(_EmailItem);
+		form.append(_BdayItem);
+		form.append(_HomePageItem);
+		form.append(_AboutItem);
+		form.append(_CityItem);
 
-		addCommand(_CmdSave);
-		addCommand(_CmdCancel);
-		setCommandListener(this);
+		form.addCommand(_CmdSave);
+		form.addCommand(_CmdCancel);
+		form.setCommandListener(this);
 	}
 
 	private EditInfo(boolean fake, Displayable currentForm) 
 	{
-		super(ResourceBundle.getString("change_pass"));
+		form = new VirtualForm(ResourceBundle.getString("change_pass"));
 		_PreviousForm = currentForm;
-		append(_CurrentPass);
-		append(_NewPass);
-		append(_NewPassAgain);
-		addCommand(_CmdChange);
-		addCommand(_CmdCancel);
-		setCommandListener(this);
+		form.append(_CurrentPass);
+		form.append(_NewPass);
+		form.append(_NewPassAgain);
+		form.addCommand(_CmdChange);
+		form.addCommand(_CmdCancel);
+		form.setCommandListener(this);
 	}
 
 	public static void showEditForm(String[] userInfo, Displayable previousForm)
@@ -126,7 +130,7 @@ public class EditInfo extends Form implements CommandListener, Runnable
 
 		(new Thread(editInfoForm)).start();
 
-		Jimm.display.setCurrent(editInfoForm);
+		editInfoForm.form.activate(Jimm.display);
 		//#sijapp cond.if target is "MOTOROLA"#
 		LightControl.flash(true);
 		//#sijapp cond.end#
@@ -155,15 +159,15 @@ public class EditInfo extends Form implements CommandListener, Runnable
 		EditInfo.editInfoForm.intterestText3.setString((EditInfo.userInfo[JimmUI.UI_INETRESTS_3] != null) ? EditInfo.userInfo[JimmUI.UI_INETRESTS_3].substring(1) : null);
 		EditInfo.editInfoForm.intterestText4.setString((EditInfo.userInfo[JimmUI.UI_INETRESTS_4] != null) ? EditInfo.userInfo[JimmUI.UI_INETRESTS_4].substring(1) : null);
 
-		append(_InterestsItem);
-		append(intterest1);
-		append(intterestText1);
-		append(intterest2);
-		append(intterestText2);
-		append(intterest3);
-		append(intterestText3);
-		append(intterest4);
-		append(intterestText4);
+		form.append(_InterestsItem);
+		form.append(intterest1);
+		form.append(intterestText1);
+		form.append(intterest2);
+		form.append(intterestText2);
+		form.append(intterest3);
+		form.append(intterestText3);
+		form.append(intterest4);
+		form.append(intterestText4);
 	}
 
 	public static void showChangePassForm(Displayable previousForm) 
@@ -172,7 +176,7 @@ public class EditInfo extends Form implements CommandListener, Runnable
 		changePassForm._CurrentPass.setString(null);
 		changePassForm._NewPass.setString(null);
 		changePassForm._NewPassAgain.setString(null);
-		Jimm.display.setCurrent(changePassForm);
+		changePassForm.form.activate(Jimm.display);
 	}
 
 	public void commandAction(Command c, Displayable d) 

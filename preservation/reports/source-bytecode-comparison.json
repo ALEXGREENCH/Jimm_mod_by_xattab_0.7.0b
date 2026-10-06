@@ -1,0 +1,69 @@
+{
+  "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+  "rebuilt_sha256": "b09ea10fb1fadabc72c30fba41df1d1bcb6ff880f515cd82842e3993dc73ab01",
+  "reference_classes": 101,
+  "rebuilt_classes": 101,
+  "methods": [
+    {
+      "reference": "co.c([BII)Ljava/lang/String;",
+      "source": "jimm/comm/Util.detectClientVersion([BII)Ljava/lang/String;",
+      "signature_verified": true,
+      "reference_instructions": 488,
+      "source_instructions": 486,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "7e03ecbed7118b56c8f060ca881543cf9fb10711e966c5c6d634e0efc4d383c5",
+      "source_normalized_sha256": "973f43764177dd89e60144d63455eaee81d40faea01b7b62793b6256e7ee1333"
+    },
+    {
+      "reference": "co.a(I)I",
+      "source": "jimm/comm/Util.translateStatusSend(I)I",
+      "signature_verified": true,
+      "reference_instructions": 32,
+      "source_instructions": 32,
+      "same_normalized_instructions": true,
+      "reference_normalized_sha256": "a139b4a11ab8d1331594865f34a130f0fd48a660c70b386757e6944c9ffaab5a",
+      "source_normalized_sha256": "a139b4a11ab8d1331594865f34a130f0fd48a660c70b386757e6944c9ffaab5a"
+    },
+    {
+      "reference": "co.a(ILz;)I",
+      "source": "jimm/comm/Util.translateStatusReceived(ILjimm/ContactItem;)I",
+      "signature_verified": true,
+      "reference_instructions": 95,
+      "source_instructions": 94,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "2f2e11fb12a87d671a351d1bca05e763854a250910989bfb925eb45678c67c6e",
+      "source_normalized_sha256": "03b2020d5a9e43c75603795c6a04a20dfe8576fa5f6db98ed69bff80828bbb98"
+    },
+    {
+      "reference": "cj.a(Ljava/io/DataInputStream;)V",
+      "source": "jimm/Options.readOptions(Ljava/io/DataInputStream;)V",
+      "signature_verified": true,
+      "reference_instructions": 58,
+      "source_instructions": 58,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "3138fcf4c4375ca9c9ba0530c38600eb3a5192ff0a7a010662826c98963637e2",
+      "source_normalized_sha256": "35f190a3b49b629fcf76927489aebffa0de767f95466714e4100ff05e409d3c0"
+    },
+    {
+      "reference": "cj.a(Ljava/io/DataOutputStream;)V",
+      "source": "jimm/Options.writeOptions(Ljava/io/DataOutputStream;)V",
+      "signature_verified": true,
+      "reference_instructions": 79,
+      "source_instructions": 77,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "f8c7acbdd6492e93eaff96a542f750ceb1504e911bcf244b4691ccf4cf176fc5",
+      "source_normalized_sha256": "be8d31c65958e29ec9f6a78821e638169dcb9f0a9c55720636315d6c1c17b48e"
+    },
+    {
+      "reference": "z.a(I)I",
+      "source": "jimm/ContactItem.getSortWeight(I)I",
+      "signature_verified": true,
+      "reference_instructions": 100,
+      "source_instructions": 91,
+      "same_normalized_instructions": false,
+      "reference_normalized_sha256": "ef1807de08e3d8eaeb03f730cf9922c3a4dd2a38a464b34a248b84923eeb3d12",
+      "source_normalized_sha256": "b21ab6086841f4a0d190f4b84f0418fabfdf5b2930f793212c966ae12c836ee3"
+    }
+  ],
+  "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."
+}

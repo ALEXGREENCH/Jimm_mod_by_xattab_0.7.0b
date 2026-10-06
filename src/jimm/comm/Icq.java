@@ -94,7 +94,7 @@ public class Icq implements Runnable
 		}
 
 		// Connect?
-		if ((act instanceof ConnectAction) || (act instanceof RegisterNewUinAction))
+		if (act instanceof ConnectAction)
 		{
 			// Create new thread and start
 			thread = new Thread(_this);
@@ -214,22 +214,7 @@ public class Icq implements Runnable
 	}
 
 	// Connects to the ICQ network for register new uin
-	static public synchronized void connect(String newPassword)
-	{
-		// Connect
-		RegisterNewUinAction act = new RegisterNewUinAction(newPassword, getSrvHost(), Options.getString(Options.OPTION_SRV_PORT));
-		try
-		{
-			requestAction(act);
 
-		} catch (JimmException e)
-		{
-			JimmException.handleException(e);
-		}
-
-		// Start timer
-		RegisterNewUinAction.addTimerTask(act);
-	}
 
 
 	/* Disconnects from the ICQ network */
@@ -752,7 +737,7 @@ public class Icq implements Runnable
 
 			try
 			{
-				Thread.sleep(3000); // пауза между попытками переподключения...
+				Thread.sleep(Options.getInt(Options.OPTION_RECONNECT_DELAY) * 1000L); // пауза между попытками переподключения...
 			}
 			catch (InterruptedException ie) {}
 

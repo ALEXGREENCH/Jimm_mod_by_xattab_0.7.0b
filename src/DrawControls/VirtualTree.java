@@ -92,8 +92,8 @@ public class VirtualTree extends VirtualList
 		isChanged = true;
 	}
 
-	// private TreeNode getDrawItem(int index)
-	private TreeNode getDrawItem(int index)
+	// protected TreeNode getDrawItem(int index)
+	protected TreeNode getDrawItem(int index)
 	{
 		return (TreeNode) drawItems.elementAt(index);
 	}
@@ -273,7 +273,7 @@ public class VirtualTree extends VirtualList
 		TreeNode treeItem = getDrawItem(index);
 		commands.vtGetItemDrawData(treeItem, item);
 		item.horizOffset = treeItem.level * stepSize;
-		if ((showButtons) && (treeItem.size() != 0)) item.horizOffset += 3 * currFontHeight / 4;
+
 	}
 
 	// private static int drawNodeRect(Graphics g, TreeNode item, int x, int y1, int y2) - 
@@ -308,12 +308,7 @@ public class VirtualTree extends VirtualList
 		
 		super.drawItemData(g, index, x1, y1, x2, y2, fontHeight);
 		
-		if (showButtons)
-		{
-			TreeNode treeItem = getDrawItem(index);
-			int x = x1 + treeItem.level * stepSize;
-			drawNodeRect(g, treeItem, x, y1, y2, fontHeight);
-		}
+
 	}
 
 	//! Add new node
@@ -333,7 +328,7 @@ public class VirtualTree extends VirtualList
 	}
 
 	// private TreeNode findParent(TreeNodeInternal root, TreeNode node)
-	private TreeNode findParent(TreeNode root, TreeNode node)
+	protected TreeNode findParent(TreeNode root, TreeNode node)
 	{
 		if (root.findItem(node) != -1) return root;
 		int count = root.size();

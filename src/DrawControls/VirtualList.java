@@ -100,6 +100,9 @@ class VirtualCanvas extends Canvas implements Runnable
 
 	protected void keyPressed(int keyCode)
 	{
+        //#sijapp cond.if target is "MIDP2"#
+        LightControl.reset();
+        //#sijapp cond.end#
 		cancelKeyRepeatTask();
 		if (currentControl != null) currentControl.keyPressed(keyCode);
 		lastKeyKode = keyCode;
@@ -222,8 +225,8 @@ public abstract class VirtualList
 	private static int curMenuItemIndex; 
 	protected int borderWidth = 1;
 
-	private int 
-		topItem     = 0,           // Index of top visilbe item 
+	protected int topItem = 0;
+	private int           // Index of top visilbe item
 		//#sijapp cond.if target is "MOTOROLA"#
 		fontSize    = MEDIUM_FONT, // Current font size of VL
 		//#sijapp cond.else#
@@ -914,6 +917,9 @@ public abstract class VirtualList
 
 	protected void keyPressed(int keyCode)
 	{
+        //#sijapp cond.if target is "MIDP2"#
+        LightControl.reset();
+        //#sijapp cond.end#
 		//#sijapp cond.if target isnot "MOTOROLA"#
 		doKeyreaction(keyCode, KEY_PRESSED);
 		if (Options.getBoolean(Options.OPTION_STATUS_AUTO)) TimerTasks.setStatusTimer();
@@ -1020,11 +1026,16 @@ public abstract class VirtualList
         return KEY_CODE_UNKNOWN;
 	}
 
+	protected int getNonScrollerArea()
+	{
+		return getWidthInternal() - 5 * scrollerWidth;
+	}
+
 	//#sijapp cond.if target is "MIDP2"#
 	private static long lastPointerTime = 0;
-	private static int lastPointerYCrd = -1;
+	protected static int lastPointerYCrd = -1;
 //	private static int lastPointerXCrd = -1;
-	private static int lastPointerTopItem = -1;
+	protected static int lastPointerTopItem = -1;
 //	private long time;
 
 	protected void pointerDragged(int x, int y)
@@ -1051,10 +1062,7 @@ public abstract class VirtualList
 		return (value < 0) ? -value : value;
 	}
 
-	private int getNonScrollerArea()
-	{
-		return getWidthInternal() - 5 * scrollerWidth;
-	}
+
 
 	protected void pointerPressed(int x, int y)
 	{
@@ -1162,7 +1170,7 @@ public abstract class VirtualList
 		int width = getWidthInternal();
 		g.setFont(capFont);
 		int height = getCapHeight();
-		drawRect(g, capBkCOlor, transformColorLight(capBkCOlor, -48), 0, 0, width, height - 2);
+		drawGradient(g, capBkCOlor, transformColorLight(capBkCOlor, -48), 0, 0, width, height - 2, Options.captionAlpha);
 /*
 		// Диаграмма свободного хипа...
 		g.setColor(0xFFFFFF);
@@ -1203,11 +1211,11 @@ public abstract class VirtualList
 		g.setColor(getInverseColor(capBkCOlor));
 		if (capImage != null)
 		{
-			g.drawString(caption, x, (height - capFont.getHeight()) / 2, Graphics.TOP | Graphics.LEFT);
+			drawString(g, caption, x, (height - capFont.getHeight()) / 2, Graphics.TOP | Graphics.LEFT, getInverseColor(capBkCOlor));
 		}
 		else
 		{
-			g.drawString(caption, width / 2, (height - capFont.getHeight()) / 2, Graphics.TOP | Graphics.HCENTER);
+			drawString(g, caption, width / 2, (height - capFont.getHeight()) / 2, Graphics.TOP | Graphics.HCENTER, getInverseColor(capBkCOlor));
 		}
 
 		if (Options.getBoolean(Options.OPTION_SHOW_SND_ICON) && capSoundImage != null)
@@ -1227,9 +1235,9 @@ public abstract class VirtualList
 	private static int srcollerY2 = -1;
 
 	// Draw scroller is items doesn't fit in VL area 
-	private void drawScroller(Graphics g, int topY, int visCount, int menuBarHeight)
+	protected void drawScroller(Graphics g, int topY, int right, int visCount, int menuBarHeight)
 	{
-		int width = getWidthInternal() - scrollerWidth;
+		int width = right - scrollerWidth;
 		int height = getHeightInternal() - menuBarHeight;
 		int itemCount = getSize();
 		boolean haveToShowScroller = ((itemCount > visCount) && (itemCount > 0));
@@ -1288,16 +1296,18 @@ public abstract class VirtualList
 
 
 	//Add background image
-	static public void setBackGroundImage(InputStream ImgStream)
+	static public void setBackGroundImage(InputStream imageStream, boolean reset)
 	{
-		try
-		{
-			VirtualList.bgimage=Image.createImage(ImgStream);
-		}
-		catch(java.io.IOException ee) {}
-		catch(java.lang.NullPointerException rr) {}
-		if (ImgStream == null) bgimage = null;
-		return;
+        if (imageStream == null && reset) bgimage = null;
+        else
+        {
+            try { bgimage = Image.createImage(Options.getString(Options.OPTION_IMG_PATH)); }
+            catch (Exception resourceError)
+            {
+                try { bgimage = Image.createImage(imageStream); }
+                catch (Exception streamError) { bgimage = null; }
+            }
+        }
 	}
 	
 	static private void drawRect(Graphics g, int color1, int color2, int x1, int y1, int x2, int y2)
@@ -1370,9 +1380,9 @@ public abstract class VirtualList
 
 			if (grCursorY1 != -1)
 			{
-				if (!Options.getBoolean(Options.OPTION_TRANS_CURSOR))
+				if (Options.cursorAlpha > 10)
 				{
-					drawGradient(g, 1, grCursorY1 + 1, itemWidth - 2, grCursorY2 - grCursorY1 - 1, Options.cursorColor, 16, -32, 0);
+					drawGradient(g, transformColorLight(Options.cursorColor, -32), Options.cursorColor, 1, grCursorY1 + 1, itemWidth - 1, grCursorY2, Options.cursorAlpha);
 				}
 				g.setColor(transformColorLight(Options.cursorColor, -48));
 				boolean isCursorUpper = (topItem >= 1) ? isItemSelected(topItem - 1) : false;
@@ -1432,6 +1442,69 @@ public abstract class VirtualList
 		}
 		return false;
 	}
+
+    private static int[] gradientPixels;
+    private static int gradientHeight, gradientStart, gradientEnd;
+
+    public static void resetGradient() { gradientHeight = 0; }
+
+    public static void drawGradient(Graphics g, int first, int last,
+        int x1, int y1, int x2, int y2, int alpha)
+    {
+        int red1 = (first >> 16) & 255, green1 = (first >> 8) & 255, blue1 = first & 255;
+        int red2 = (last >> 16) & 255, green2 = (last >> 8) & 255, blue2 = last & 255;
+        int height = y2 - y1;
+        if (alpha == 255)
+        {
+            int steps = Math.max(8, Math.abs(height / 3));
+            for (int i = 0; i < steps; i++)
+            {
+                int top = i * height / steps + y1;
+                int bottom = (i + 1) * height / steps + y1;
+                if (top == bottom) continue;
+                g.setColor(i * (red2 - red1) / (steps - 1) + red1,
+                    i * (green2 - green1) / (steps - 1) + green1,
+                    i * (blue2 - blue1) / (steps - 1) + blue1);
+                g.fillRect(x1, top, x2 - x1, bottom - top);
+            }
+        }
+        else
+        {
+            int width = x2 - x1;
+            if (width <= 0 || height <= 0) return;
+            if (gradientPixels == null || gradientPixels.length < (height << 5))
+                gradientPixels = new int[height << 5];
+            if (gradientHeight != height || gradientStart != first || gradientEnd != last)
+            {
+                int offset = 0;
+                for (int y = 0; y < height; y++)
+                {
+                    int red = y * (red2 - red1) / (height - 1) + red1;
+                    int green = y * (green2 - green1) / (height - 1) + green1;
+                    int blue = y * (blue2 - blue1) / (height - 1) + blue1;
+                    int pixel = (alpha << 24) | (red << 16) | (green << 8) | blue;
+                    for (int x = 0; x < 32; x++) gradientPixels[offset++] = pixel;
+                }
+                gradientHeight = height;
+                gradientStart = first;
+                gradientEnd = last;
+            }
+            for (int x = x1, remaining = width; x < x2; x += 32, remaining -= 32)
+                g.drawRGB(gradientPixels, 0, 32, x, y1, Math.min(32, remaining), height, true);
+        }
+    }
+
+    public static void drawString(Graphics g, String text, int x, int y, int anchor, int color)
+    {
+        if (Options.getInt(Options.OPTION_FONT_VIEW) == 1)
+        {
+            g.setColor(0x7F7F7F);
+            g.drawString(text, x + 1, y, anchor);
+            g.drawString(text, x + 1, y + 1, anchor);
+        }
+        g.setColor(color);
+        g.drawString(text, x, y, anchor);
+    }
 
 	public static void drawGradient(Graphics g, int x, int y, int w, int h, int color, int count, int light1, int light2) 
 	{
@@ -1496,7 +1569,7 @@ public abstract class VirtualList
 		{
 		case DMS_DRAW:
 			drawItems(graphics, y, getFontHeight(), menuBarHeight, mode, curX, curY);
-			drawScroller(graphics, y, visCount, menuBarHeight);
+			drawScroller(graphics, y, getWidthInternal(), visCount, menuBarHeight);
 			if (menuBarHeight != 0) drawMenuBar(graphics, menuBarHeight, mode, curX, curY);
 			drawMenuItems(graphics, menuBarHeight, mode, curX, curY);
 			break;
@@ -1558,9 +1631,9 @@ public abstract class VirtualList
 		if (paintedItem.image != null)
 		{
 			paintedItem.image.drawByLeft(g, x, (y1 + y2) / 2);
-			x += paintedItem.image.getWidth() + 1;
+			x += paintedItem.image.getWidth() > 99 ? 2 : paintedItem.image.getWidth() + 1;
 		}
-		if (paintedItem.xStatusImg != null)
+		if (!Options.getBoolean(Options.OPTION_XSTATUS_RIGHT) && paintedItem.xStatusImg != null)
 		{
 			paintedItem.xStatusImg.drawByLeft(g, x, (y1 + y2) / 2);
 			x += paintedItem.xStatusImg.getWidth() + 1;
@@ -1579,7 +1652,7 @@ public abstract class VirtualList
 		{
 			g.setFont(getQuickFont(paintedItem.fontStyle));
 			g.setColor(paintedItem.color);
-			g.drawString(paintedItem.text, x, (y1 + y2 - fontHeight) / 2, Graphics.TOP | Graphics.LEFT);
+			drawString(g, paintedItem.text, x, (y1 + y2 - fontHeight) / 2, Graphics.TOP | Graphics.LEFT, paintedItem.color);
 		}
 
 		x = (getWidth() - scrollerWidth - 2);
@@ -1591,6 +1664,11 @@ public abstract class VirtualList
 		}
 //		x -= clientImgWidth + 2;
 
+        if (Options.getBoolean(Options.OPTION_XSTATUS_RIGHT) && paintedItem.xStatusImg != null)
+        {
+            paintedItem.xStatusImg.drawByRight(g, x, (y1 + y2) / 2);
+            x -= paintedItem.xStatusImg.getWidth() + 2;
+        }
 		if (paintedItem.visibilityImg != null)
 		{
 			paintedItem.visibilityImg.drawByRight(g, x, (y1 + y2) / 2);
@@ -1717,7 +1795,7 @@ public abstract class VirtualList
 		
 		if ((style == DMS_DBLCLICK) || fullScreen) return false;
 		
-		if (style == DMS_DRAW) drawRect(g, transformColorLight(capBkCOlor, -48), capBkCOlor, 0, y1, width, y2);
+		if (style == DMS_DRAW) drawGradient(g, transformColorLight(capBkCOlor, -48), capBkCOlor, 0, y1, width, y2, Options.softbarAlpha);
 		
 		g.setFont(menuBarFont);
 		
@@ -1746,7 +1824,7 @@ public abstract class VirtualList
 			}
 */
 			String text = leftMenu.getLabel();
-			g.drawString(text, layer, textY, Graphics.TOP | Graphics.LEFT);
+			drawString(g, text, layer, textY, Graphics.TOP | Graphics.LEFT, getInverseColor(capBkCOlor));
 			//if (leftMenu.getCommandType() == Command.OK) defaultMenu = true;   
 		}
 
@@ -1769,14 +1847,14 @@ public abstract class VirtualList
 			}
 */
 			String text = rightMenu.getLabel();
-			g.drawString(text, width - layer, textY, Graphics.TOP | Graphics.RIGHT);
+			drawString(g, text, width - layer, textY, Graphics.TOP | Graphics.RIGHT, getInverseColor(capBkCOlor));
 			//if (rightMenu.getCommandType() == Command.OK) defaultMenu = true;
 		}
 
 		if (Options.getBoolean(Options.OPTION_SHOW_TIME))
 		{
 			String text = Util.getDateString(true, false);
-			g.drawString(text, width / 2, textY, Graphics.TOP | Graphics.HCENTER);
+			drawString(g, text, width / 2, textY, Graphics.TOP | Graphics.HCENTER, getInverseColor(capBkCOlor));
 		}
 		else
 		{
@@ -1830,6 +1908,11 @@ public abstract class VirtualList
 		return menuBarFont.getHeight() + 2;
 	}
 	
+	protected boolean hasBothSoftKeys()
+	{
+		return leftMenu != null && rightMenu != null;
+	}
+
 	public void addCommandEx(Command cmd, int type)
 	{
 		switch (type)

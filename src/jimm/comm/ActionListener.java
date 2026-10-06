@@ -318,7 +318,7 @@ public class ActionListener
 
 				if (checkStatus)
 				{
-					int statusIndex = Util.translateStatusReceived(status);
+					int statusIndex = Util.translateStatusReceived(status, item);
 					Alert statusAlert = new Alert(uin, JimmUI.getStatusString(statusIndex), null, null);
 					//#sijapp cond.if target is "MIDP2"#
 					statusAlert.setTimeout(Jimm.is_phone_SE() ? Alert.FOREVER : 3000);
@@ -429,7 +429,7 @@ public class ActionListener
 //                        ContactItem item = ContactList.getItembyUIN(uin);
 //                        long status = Util.getDWord(tlvData, 0);
 //                        if (item != null && !item.getBooleanValue(ContactItem.CONTACTITEM_IS_TEMP)) 
-//                            item.setIntValue(ContactItem.CONTACTITEM_STATUS, Util.translateStatusReceived(status));
+//                            item.setIntValue(ContactItem.CONTACTITEM_STATUS, Util.translateStatusReceived(status, item));
 //                    }
                     /*************************************************************/
 

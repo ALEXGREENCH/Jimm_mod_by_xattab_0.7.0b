@@ -65,10 +65,12 @@ public class Selector extends VirtualList implements VirtualListCommands
 
 		switch (selectorType)
 		{
+        //#sijapp cond.if modules_SMILES is "true"#
 		case 0:
 			imgHeight = Emotions.images.getHeight();
 			itemHeight = imgHeight + 2;
 			break;
+        //#sijapp cond.end#
 		case 1:
 			imgHeight = XStatus.getXStatusImageList().getHeight();
 			itemHeight = imgHeight + ((drawWidth > 176) ? 6 : 4);
@@ -113,9 +115,11 @@ public class Selector extends VirtualList implements VirtualListCommands
 
 		switch (selectorType)
 		{
+        //#sijapp cond.if modules_SMILES is "true"#
 		case 0:
 			imagesCount = Emotions.images.size();
 			break;
+        //#sijapp cond.end#
 		case 1:
 			imagesCount = XStatus.getXStatusImageList().size();
 			break;
@@ -135,9 +139,9 @@ public class Selector extends VirtualList implements VirtualListCommands
 
 			if (isSelected && (i == curCol))
 			{
-				if (!Options.getBoolean(Options.OPTION_TRANS_CURSOR))
+				if (Options.cursorAlpha > 10)
 				{
-					VirtualList.drawGradient(g, xa + 1, y1 + 1, itemHeight - 2, y2 - y1 - 2, jimm.Options.cursorColor, 16, -32, 0);
+					VirtualList.drawGradient(g, transformColorLight(Options.cursorColor, -32), Options.cursorColor, xa + 1, y1 + 1, xb - 1, y2 - 1, Options.cursorAlpha);
 				}
 				g.setColor(transformColorLight(jimm.Options.cursorColor, -48));
 				g.drawRect(xa, y1, itemHeight - 1, y2 - y1 - 1);
@@ -147,9 +151,11 @@ public class Selector extends VirtualList implements VirtualListCommands
 			{
 				switch (selectorType)
 				{
+        //#sijapp cond.if modules_SMILES is "true"#
 				case 0:
 					Emotions.images.elementAt(startIdx).drawInCenter(g, xa + itemHeight / 2, (y1 + y2) / 2);
 					break;
+        //#sijapp cond.end#
 				case 1:
 					int offset = (increment / 2) + (increment % 2);
 					int xstIndex = (startIdx == 0) ? XStatus.XSTATUS_NONE - 1 : startIdx - 1;
@@ -171,11 +177,13 @@ public class Selector extends VirtualList implements VirtualListCommands
 
 		switch (selectorType)
 		{
+        //#sijapp cond.if modules_SMILES is "true"#
 		case 0:
 			if (selIdx >= Emotions.selEmotionsSmileNames.length) return;
 			Emotions.emotionText = Emotions.selEmotionsWord[selIdx];
 			_this.setCaption(Emotions.selEmotionsSmileNames[selIdx]);
 			break;
+        //#sijapp cond.end#
 		case 1:
 			if (selIdx > XStatus.getXStatusCount() + 1) return;
 			int xstIndex = (selIdx == 0) ? XStatus.XSTATUS_NONE - 1 : selIdx - 1;
@@ -202,8 +210,10 @@ public class Selector extends VirtualList implements VirtualListCommands
 	{
 		switch (selectorType)
 		{
+        //#sijapp cond.if modules_SMILES is "true"#
 		case 0:
 			return Emotions.selEmotionsIndexes.length;
+        //#sijapp cond.end#
 		case 1:
 			return XStatus.getXStatusCount() + 1;
 		case 2:

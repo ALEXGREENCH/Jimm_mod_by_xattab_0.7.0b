@@ -25,18 +25,18 @@ package jimm;
 
 import jimm.comm.*;
 import jimm.util.*;
-//#sijapp cond.if target is "MOTOROLA"#
 import DrawControls.*;
-//#sijapp cond.end#
 import java.util.*;
 import javax.microedition.rms.*;
 import javax.microedition.lcdui.*;
 
-public class XStatusForm extends Form implements CommandListener 
+public class XStatusForm implements CommandListener
 {
+    private VirtualForm form;
+
     private TextField titleTextField = new TextField(ResourceBundle.getString("xtraz_title"), "", 20, TextField.ANY);
     private TextField descTextField  = new TextField(ResourceBundle.getString("xtraz_desc"), "", 1000, TextField.ANY);
-    private ChoiceGroup choiceGroup  = new ChoiceGroup(null, Choice.MULTIPLE);
+    private ChoiceGroup choiceGroup  = new FormChoiceGroup(null, Choice.MULTIPLE);
 
     private Command saveCommand      = new Command(ResourceBundle.getString("save"), Command.SCREEN, 1);
     //#sijapp cond.if target is "MIDP2"#
@@ -54,15 +54,15 @@ public class XStatusForm extends Form implements CommandListener
     /** Creates a new instance of XtrazForm */
     private XStatusForm() 
     {
-        super(ResourceBundle.getString("xtraz_msg"));
+        form = new VirtualForm(ResourceBundle.getString("xtraz_msg"));
         choiceGroup.append(ResourceBundle.getString("xtraz_enable"), null);
         choiceGroup.append(ResourceBundle.getString("happy_balloon"), null);
-        append(titleTextField);
-        append(descTextField);
-        append(choiceGroup);
-        addCommand(saveCommand);
-        addCommand(backCommand);
-        setCommandListener(this);
+        form.append(titleTextField);
+        form.append(descTextField);
+        form.append(choiceGroup);
+        form.addCommand(saveCommand);
+        form.addCommand(backCommand);
+        form.setCommandListener(this);
     }
 
     private void showXtrazForm(int index) 
@@ -75,7 +75,7 @@ public class XStatusForm extends Form implements CommandListener
         choiceGroup.setSelectedIndex(0, Options.getBoolean(Options.OPTION_XTRAZ_ENABLE));
         choiceGroup.setSelectedIndex(1, happyFlag);
 
-		Jimm.display.setCurrent(this);
+		form.activate(Jimm.display);
 		//#sijapp cond.if target is "MOTOROLA"#
 		LightControl.flash(true);
 		//#sijapp cond.end#

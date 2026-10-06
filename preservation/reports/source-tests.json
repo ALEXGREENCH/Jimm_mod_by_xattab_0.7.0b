@@ -1,0 +1,95 @@
+{
+  "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+  "source_jar_sha256": "fa2af55a9b247e32d87ed453c2d878cd53727738f29edc7988e659d5af4a92ec",
+  "pure_logic": "PASS: 75837 May-reference differential checks (client versions, outgoing statuses, options streams)",
+  "detector": "PASS probe: 3159 detector/status cases",
+  "detector_cases": 3159,
+  "detector_differences": 0,
+  "ui": "PASS: MIDP2 startup and 10 options panels opened/saved with memory RMS",
+  "limitations": [
+    "MicroEmulator does not play all original sound formats.",
+    "No live ICQ login, real-device or complete bytecode-equivalence claim."
+  ],
+  "builds": [
+    {
+      "target": "MIDP2",
+      "language": "RU",
+      "sha256": "fa2af55a9b247e32d87ed453c2d878cd53727738f29edc7988e659d5af4a92ec"
+    },
+    {
+      "target": "MIDP2",
+      "language": "UA",
+      "sha256": "f43fef28785a9897fd5597d3e5efd919ab70e4d2ec26933877d03a9a3fabccd7"
+    },
+    {
+      "target": "MIDP2",
+      "language": "RO",
+      "sha256": "f560d69b0130eb15b10e59924f475d875439a578c0041dcee336609284e345c3"
+    },
+    {
+      "target": "MIDP2",
+      "language": "EN",
+      "sha256": "6ab661c0f38bd47208603b1a8db6a3c10ef86f16c9ab9c3ced40179ae9ba6e3a"
+    },
+    {
+      "target": "MIDP2",
+      "language": "CZ",
+      "sha256": "6d80cde17c601327bc8efb2c1f711bd3facf3058d0cf200371d0dbfd702c9d79"
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RU",
+      "sha256": "e6f47d59de6c623f9b699f53c67079728912e36031b4207770598a613ec94a4f"
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "UA",
+      "sha256": "e395ad49de37c95a7cc4a7a363fe283fee337f600ad0b2e90f907e5044c5531d"
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RO",
+      "sha256": "da9caef3d673c0641f825e834f2eea8fde6b60788752e380e024daf498972b81"
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "EN",
+      "sha256": "401e8bfa815c392abc79576f399ce4a9c757967bc4fe2009544ba2c324fac1be"
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "CZ",
+      "sha256": "3ea8ce5b3968e83976e97240eac1dee62cb39f063f16e171b6b895a474996aab"
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RU",
+      "sha256": "ce5c7a630579050b9be899bdb9515633ff911c455ce6d31236a09d8b71987e6e"
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "UA",
+      "sha256": "e92d1418fed190fd57364bde70b6caa2423094a3ac2b51aa4033a9791f1d518a"
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RO",
+      "sha256": "d47527b08c53f70b9daff8739bb37498b1ba830c3949cda04c694cfbc82e7aca"
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "EN",
+      "sha256": "110df45bc39140128029569c943642098d9cad740532c3485fb2d5903fa0aad2"
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "CZ",
+      "sha256": "5ab58874013ea2c6bff6cea2ef3fffe85a0f2a43760d46b5dccfce87d90a0ba9"
+    }
+  ],
+  "minimal_modules": [
+    "MIDP2",
+    "MOTOROLA",
+    "SIEMENS2"
+  ]
+}
