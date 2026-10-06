@@ -85,7 +85,7 @@ public class SendMessageAction extends Action
 		return ((long)msgId1 << 32) + msgId2;
 	}
 
-	public static synchronized int getMsgCounter()
+	private static synchronized int getMsgCounter()
 	{
 		return (msgCounter++);
 	}
@@ -136,9 +136,11 @@ public class SendMessageAction extends Action
 		}
 
 		if (Options.getBoolean(Options.OPTION_CHAT_IMAGE) && Options.getBoolean(Options.OPTION_DELIVERY_REPORT)
-			&& rcvr.hasCapability(Util.CAPF_AIM_SERVERRELAY_INTERNAL) && !rcvr.hasCapability(Util.CAPF_YAPP)
-			&& !rcvr.hasCapability(Util.CAPF_TRILLIAN)/* && !rcvr.hasCapability(Util.CAPF_ANDRQ) */
+			&& rcvr.hasCapability(Util.CAPF_AIM_SERVERRELAY_INTERNAL)
+			&& (rcvr.getIntValue(ContactItem.CONTACTITEM_CLIENT) != Util.CLI_YAPP)
+			&& (rcvr.getIntValue(ContactItem.CONTACTITEM_CLIENT) != Util.CLI_TRILLIAN)
 			&& (rcvr.getIntValue(ContactItem.CONTACTITEM_CLIENT) != Util.CLI_STICQ)
+			&& (rcvr.getIntValue(ContactItem.CONTACTITEM_CLIENT) != Util.CLI_AGILE)
 			&& (rcvr.getIntValue(ContactItem.CONTACTITEM_STATUS) != ContactList.STATUS_OFFLINE))
 		{
 			type = 2;

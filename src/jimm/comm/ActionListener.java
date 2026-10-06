@@ -772,10 +772,6 @@ public class ActionListener
                              String filename = Util.removeCr(Util.byteArrayToString(msg2Buf, msg2Marker, textLen));
                              msg2Marker += textLen;
                              
-                             // Get filesize
-                             long filesize = Util.getDWord(msg2Buf,msg2Marker,false);
-                             msg2Marker += 4;
-                             
                              // Get IP if possible
                              // Check length
                              if (msgBuf.length < + 8) {throw (new JimmException(152, 9, false));}

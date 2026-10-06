@@ -31,8 +31,26 @@ CLASSES = {'co': 'jimm/comm/Util', 'cj': 'jimm/Options', 'z': 'jimm/ContactItem'
            'j': 'DrawControls/FormChoiceGroup', 'k': 'jimm/FileBrowserListener',
            'aw': 'DrawControls/VirtualTree', 'ax': 'DrawControls/TreeNode', 'cn': 'DrawControls/ListItem',
            'ab': 'jimm/comm/FileTransferMessage', 'bw': 'jimm/comm/DirectConnectionAction',
-           'ao': 'jimm/comm/Icq$PeerConnection', 'au': 'jimm/comm/DCPacket'}
+           'ao': 'jimm/comm/Icq$PeerConnection', 'au': 'jimm/comm/DCPacket',
+           'cl': 'jimm/comm/SendMessageAction', 'av': 'jimm/comm/PlainMessage'}
 SYMBOLS = {
+    'cl': 'jimm/comm/SendMessageAction',
+    'av': 'jimm/comm/PlainMessage',
+    'cl.a Lav;': 'jimm/comm/SendMessageAction.plainMsg Ljimm/comm/PlainMessage;',
+    'cl.a Lab;': 'jimm/comm/SendMessageAction.fileTrans Ljimm/comm/FileTransferMessage;',
+    'cl.a I': 'jimm/comm/SendMessageAction.SEQ1 I',
+    'cl.b I': 'jimm/comm/SendMessageAction.msgId1 I',
+    'cl.c I': 'jimm/comm/SendMessageAction.msgId2 I',
+    'cl.d I': 'jimm/comm/SendMessageAction.msgCounter I',
+    'cl.<init>(Lac;)V': 'jimm/comm/SendMessageAction.<init>(Ljimm/comm/Message;)V',
+    'cl.a()J': 'jimm/comm/SendMessageAction.getMsgId()J',
+    'cl.b()I': 'jimm/comm/SendMessageAction.getMsgCounter()I',
+    'cl.a()V': 'jimm/comm/SendMessageAction.init()V',
+    'cl.a(Lan;)Z': 'jimm/comm/SendMessageAction.forward(Ljimm/comm/Packet;)Z',
+    'cl.a()Z': 'jimm/comm/SendMessageAction.isCompleted()Z',
+    'cl.b()Z': 'jimm/comm/SendMessageAction.isError()Z',
+    'cl.<clinit>()V': 'jimm/comm/SendMessageAction.<clinit>()V',
+
     'cc': 'jimm/FileTransfer$ViewFinder',
     'bw': 'jimm/comm/DirectConnectionAction',
     'ab': 'jimm/comm/FileTransferMessage',
@@ -206,6 +224,15 @@ SYMBOLS = {
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
 METHODS = [
+    ('cl', '<init>', '(Lac;)V', '<init>'),
+    # getMsgId is inlined in the rebuilt JAR; OutgoingProbe checks its ID arithmetic.
+    ('cl', 'b', '()I', 'getMsgCounter'),
+    ('cl', 'a', '()V', 'init'),
+    ('cl', 'a', '(Lan;)Z', 'forward'),
+    ('cl', 'a', '()Z', 'isCompleted'),
+    ('cl', 'b', '()Z', 'isError'),
+    ('cl', '<clinit>', '()V', '<clinit>'),
+
     ('cc', '<init>', '(Lp;)V', '<init>'),
     ('cc', 'b', '()V', 'reset'),
     ('cc', 'paint', '(Ljavax/microedition/lcdui/Graphics;)V', 'paint'),

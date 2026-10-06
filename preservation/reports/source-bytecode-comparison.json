@@ -1,9 +1,107 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "9ad8e726b447721fd2a789827a798d928315895dafb6a5cefa66d0c1f5c2b136",
+  "rebuilt_sha256": "6b06ae7c1a503611d036ad231e9f4869782bea42799a1a84a15be543aeb1f78a",
   "reference_classes": 101,
   "rebuilt_classes": 101,
   "methods": [
+    {
+      "reference": "cl.<init>(Lac;)V",
+      "source": "jimm/comm/SendMessageAction.<init>(Ljimm/comm/Message;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 42,
+      "source_instructions": 42,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "636f952ea45ba25ca8cb4f4383364a3309374e5ee9b7f0eda1e5291ff5a52b3f",
+      "source_normalized_sha256": "cc8ab7926f8ea078a0774cf287308371a1e843e146585bca6e96acd52b807e01"
+    },
+    {
+      "reference": "cl.b()I",
+      "source": "jimm/comm/SendMessageAction.getMsgCounter()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 6,
+      "source_instructions": 6,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "951b891762e8f8b825ad70e2f2bafea2bf2fa28cf62cf05ea1ae7b947eca19cf",
+      "source_normalized_sha256": "951b891762e8f8b825ad70e2f2bafea2bf2fa28cf62cf05ea1ae7b947eca19cf"
+    },
+    {
+      "reference": "cl.a()V",
+      "source": "jimm/comm/SendMessageAction.init()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 894,
+      "source_instructions": 888,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "d48abbe940e5a67d6a0af95e951e74d8bb69467a6c7abdac0152ce53b310bc33",
+      "source_normalized_sha256": "4f1333894ad0e3464d00043147a9de9a28be7894f47c0442de6961b68863c609"
+    },
+    {
+      "reference": "cl.a(Lan;)Z",
+      "source": "jimm/comm/SendMessageAction.forward(Ljimm/comm/Packet;)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b",
+      "source_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b"
+    },
+    {
+      "reference": "cl.a()Z",
+      "source": "jimm/comm/SendMessageAction.isCompleted()Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "95b2e72bb80f659c8a01f4cb932c1490f60952b977de0dfe8fa3b06048399704",
+      "source_normalized_sha256": "95b2e72bb80f659c8a01f4cb932c1490f60952b977de0dfe8fa3b06048399704"
+    },
+    {
+      "reference": "cl.b()Z",
+      "source": "jimm/comm/SendMessageAction.isError()Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b",
+      "source_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b"
+    },
+    {
+      "reference": "cl.<clinit>()V",
+      "source": "jimm/comm/SendMessageAction.<clinit>()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 3,
+      "source_instructions": 3,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "0236f846ed6f37df4a884d5c9ea658bc21b68c24e96b691db50410d0d123b022",
+      "source_normalized_sha256": "0236f846ed6f37df4a884d5c9ea658bc21b68c24e96b691db50410d0d123b022"
+    },
     {
       "reference": "cc.<init>(Lp;)V",
       "source": "jimm/FileTransfer$ViewFinder.<init>(Ljimm/FileTransfer;)V",
@@ -575,7 +673,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "5dbe3e841fdbd291dfffacc045cf182e4655f430a561201fd09572dcab20fae7",
+      "reference_normalized_sha256": "c363e1cdcc0d1329e21d30334905df90c2c90f6fd7611d121f7ece235cb355ed",
       "source_normalized_sha256": "6e51796887b739ea519f5a9c8e45eab2bf40847db961b6bbc08e0d768d35d58f"
     },
     {
@@ -1411,12 +1509,12 @@
       "static_modifier_verified": true,
       "synchronized_modifier_verified": true,
       "reference_instructions": 2637,
-      "source_instructions": 2142,
+      "source_instructions": 2133,
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "4040b61bca807dc805535bee4d0854c4d17458ac6308ec8129d1acccd490b233",
-      "source_normalized_sha256": "27c705f1e1d0c6800bf3919dd4099d48eab979643f5392a5cceb10c15886ba54"
+      "reference_normalized_sha256": "5b91cbf6e45c01a0f084b0f8a9835630ac60b922aa4836183f1680473f50ee5a",
+      "source_normalized_sha256": "64786d0eb0fa52d2cb90760f3952ca01601aaef900a237cde3c2f6bb07d4c513"
     },
     {
       "reference": "ae.a(Lz;)V",
@@ -1429,7 +1527,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "f24276f34971943fb37f5d45a90fea4bfc2e68bfe2583136d75a5b50afb17b5e",
+      "reference_normalized_sha256": "defa1cf7ea2c294a45761732c50cc23b7f6c878f9e65ae8e994c53b8ae703ae0",
       "source_normalized_sha256": "5e93e485493c954347554a41fb29dfa0b470761f272d6e49dca66c3cb5f7456e"
     },
     {
@@ -1443,7 +1541,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "98a3b5ba4f76ce3ecd6bd4e62d6403842faedba9c5f4016669d2be02e2488f63",
+      "reference_normalized_sha256": "c3199786bddacafcd846ab7585c277fade69694142b488705d42b6627d8674ef",
       "source_normalized_sha256": "f20dfa4dc029fe2243e00e19e1ca92d41dea3560e33b099d97d31f641f76a85a"
     },
     {
@@ -1597,7 +1695,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "96af385991a36b4783fd1db2014711428c7caebadee4c3ba4784717ee1391aaa",
+      "reference_normalized_sha256": "f072e4f8a2598c4a75c57752606263ebe9d9d1bf5477c790f5974a4b53d8b90f",
       "source_normalized_sha256": "bb22874690a2e8eb09292733b0e809a12a1b20248e2e25b245c0965161d889bd"
     },
     {
