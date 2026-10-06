@@ -2035,7 +2035,6 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			case USER_MENU_FILE_TRANS:
 				/* Send a filetransfer with a file given by path */
 				{
-					FileTransfer.askForWebFileTransfer = true;
 					FileTransfer ft = new FileTransfer(FileTransfer.FT_TYPE_FILE_BY_NAME, clciContactMenu);
 					ft.startFT();
 				}
@@ -2045,7 +2044,6 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			case USER_MENU_CAM_TRANS:
 				/* Send a filetransfer with a camera image */
 				{
-					FileTransfer.askForWebFileTransfer = true;
 					FileTransfer ft = new FileTransfer(FileTransfer.FT_TYPE_CAMERA_SNAPSHOT, clciContactMenu);
 					ft.startFT();
 				}

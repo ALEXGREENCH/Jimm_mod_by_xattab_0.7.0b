@@ -204,10 +204,10 @@ public class Traffic
 	  {
 		if (value != 0)
 		{
-			costString = Integer.toString(value / 100000) + ".";
-			afterDot = Integer.toString(value % 100000);
+			costString = Integer.toString(value / 10000) + ".";
+			afterDot = Integer.toString(value % 10000);
 
-			while (afterDot.length() != 5) afterDot = "0" + afterDot;
+			while (afterDot.length() != 4) afterDot = "0" + afterDot;
 
 			while ((afterDot.endsWith("0")) && (afterDot.length() > 2))
 			{
@@ -244,8 +244,8 @@ public class Traffic
 	static protected int generateCostSum(boolean thisSession)
 	{
 		int cost;
-		int costPerPacket = Options.getInt(Options.OPTION_COST_PER_PACKET);
 		int costPacketLength = Options.getInt(Options.OPTION_COST_PACKET_LENGTH);
+		int costPerPacket = Options.getInt(Options.OPTION_COST_PER_PACKET) / 1000 * (costPacketLength / 1024);
 
 		if (thisSession)
 		{

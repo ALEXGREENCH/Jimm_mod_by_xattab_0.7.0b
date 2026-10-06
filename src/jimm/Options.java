@@ -1440,7 +1440,6 @@ class OptionsForm implements CommandListener, ItemStateListener
 		{
 			Options.setInt(Options.OPTION_BACKGROUND_MODE, 2);
 			//#sijapp cond.if modules_FILES is "true"#
-			FileTransfer.askForWebFileTransfer = false;
 			FileTransfer ft = new FileTransfer(FileTransfer.FT_TYPE_FILE_BY_NAME, null);
 			ft.startFT();
 			//#sijapp cond.end#
@@ -1501,7 +1500,7 @@ class OptionsForm implements CommandListener, ItemStateListener
             importingOptions = c == importOptionsCommand;
             new FileBrowser();
             FileBrowser.setListener(this);
-            FileBrowser.setParameters(!importingOptions);
+            FileBrowser.setParameters(!importingOptions, true);
             try { FileBrowser.activate(); } catch (JimmException error) { JimmException.handleException(error); }
             return;
         }

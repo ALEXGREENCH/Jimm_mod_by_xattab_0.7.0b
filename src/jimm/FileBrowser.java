@@ -310,13 +310,11 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 
 	public static final String PARENT_DIRECTORY = "../";
 
-	public static final Command backCommand = new Command(ResourceBundle.getString("back"), Command.SCREEN, 0);
 
-	public static final Command selectCommand = new Command(ResourceBundle.getString("select"), Command.OK, 1);
 
 	public static final Command openCommand = new Command(ResourceBundle.getString("open"), Command.OK, 1);
 
-	private static boolean needToSelectDirectory, openCommandSelected;
+	private static boolean needToSelectDirectory, returnToOptions;
 
 	private static FileBrowser _this;
 
@@ -340,10 +338,7 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 		tree.setFontSize((imageList.getHeight() < 16) ? VirtualList.SMALL_FONT : VirtualList.MEDIUM_FONT);
 		tree.setStepSize(-tree.getFontHeight() / 2);
 		tree.setCapImage(imageList.elementAt(0));
-		JimmUI.setColorScheme(tree, false);
 		tree.setCyclingCursor(true);
-		tree.setShowButtons(false);
-		tree.addCommandEx(backCommand, VirtualList.MENU_RIGHT_BAR);
 		tree.setCommandListener(this);
 	}
 
@@ -385,9 +380,10 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 		updateTreeCaptionAndCommands((String) tree.getCurrentItem().getData());
 	}
 
-	public static void setParameters(boolean select_dir)
+	public static void setParameters(boolean select_dir, boolean fromOptions)
 	{
 		needToSelectDirectory = select_dir;
+		returnToOptions = fromOptions;
 	}
 
 	public static void setListener(FileBrowserListener _listener)
@@ -427,7 +423,6 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 				JimmException.handleException(e);
 			}
 		    rebuildTree();
-			openCommandSelected = false;
 		}
 		else
 		{
@@ -437,9 +432,8 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 
 	private static void updateTreeCaptionAndCommands(String name)
 	{
-		tree.removeCommandEx(openCommand);
-		tree.removeCommandEx(selectCommand);
-		tree.removeCommandEx(JimmUI.cmdMenu);
+		tree.removeAllCommands();
+		tree.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
 		if (name.equals(PARENT_DIRECTORY))
 		{
 			int d = currDir.lastIndexOf('/', currDir.length() - 2);
@@ -459,7 +453,7 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 //			if (needToSelectDirectory)
 //			{
 //				tree.addCommandEx(JimmUI.cmdMenu, VirtualList.MENU_LEFT_BAR);
-//				tree.addCommandEx(selectCommand, VirtualList.MENU_LEFT);
+//				tree.addCommandEx(JimmUI.cmdSave, VirtualList.MENU_LEFT);
 //				tree.addCommandEx(openCommand, VirtualList.MENU_LEFT);
 //			}
 			tree.addCommandEx(openCommand, VirtualList.MENU_LEFT_BAR);
@@ -469,7 +463,7 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 			if (needToSelectDirectory)
 			{
 				tree.addCommandEx(JimmUI.cmdMenu, VirtualList.MENU_LEFT_BAR);
-				tree.addCommandEx(selectCommand, VirtualList.MENU_LEFT);
+				tree.addCommandEx(JimmUI.cmdSave, VirtualList.MENU_LEFT);
 				tree.addCommandEx(openCommand, VirtualList.MENU_LEFT);
 			}
 			else tree.addCommandEx(openCommand, VirtualList.MENU_LEFT_BAR);
@@ -477,21 +471,11 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 		}
 		else
 		{
-			tree.addCommandEx(selectCommand, VirtualList.MENU_LEFT_BAR);
-			try
-			{
-				int file_size = 0;
-				FileSystem file = FileSystem.getInstance();
-				file.openFile(currDir + name);
-				file_size = (int) (file.fileSize() >> 10);
-				file.close();
-				int ext = name.lastIndexOf('.');
-				StringBuffer str_buf = new StringBuffer();
-				if (ext != -1) str_buf = str_buf.append(name.substring(ext + 1).toUpperCase()).append(", ");
-				str_buf = str_buf.append(file_size).append("Kb");
-				tree.setCaption(str_buf.toString());
-			}
-			catch (Exception e) {}
+			tree.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_LEFT_BAR);
+            int ext = name.lastIndexOf('.');
+            StringBuffer caption = new StringBuffer();
+            if (ext != -1) caption.append(name.substring(ext + 1).toUpperCase()).append(" file");
+            tree.setCaption(caption.toString());
 		}
 	}
 
@@ -519,6 +503,7 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 		reset();
 		currDir = ROOT_DIRECTORY;
 		items = FileSystem.getDirectoryContents(currDir, needToSelectDirectory);
+		JimmUI.setColorScheme(tree, false);
 		rebuildTree();
 		tree.activate(Jimm.display);
 	}
@@ -529,19 +514,18 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 		{
 			if (c == openCommand)
 			{
-				openCommandSelected = needToSelectDirectory;
 				VTnodeClicked(tree.getCurrentItem());
 			}
-			else if (c == selectCommand)
+			else if (c == JimmUI.cmdSelect || c == JimmUI.cmdSave)
 			{
 				String filename = (String) tree.getCurrentItem().getData();
 				if (filename.endsWith("/")) listener.onDirectorySelect(currDir + filename);
 				else listener.onFileSelect(currDir + filename);
 			}
-			else if (c == backCommand)
+			else if (c == JimmUI.cmdBack)
 			{
 				//try to back into menu from back image choose
-				if (listener instanceof OptionsForm) Options.optionsForm.activate();
+				if (returnToOptions) Options.optionsForm.activate();
                 else if ((listener.getCItem() != null) || needToSelectDirectory) ContactList.activate();
 				else Options.optionsForm.callColorSchemeOptions();
 			}

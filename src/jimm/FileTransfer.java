@@ -43,14 +43,11 @@ import DrawControls.*;
 import jimm.comm.*;
 import jimm.util.ResourceBundle;
 
-public class FileTransfer implements CommandListener, FileBrowserListener, Runnable
+public class FileTransfer implements CommandListener, FileBrowserListener, Runnable, ItemStateListener
 {    
 	private static final int MODE_SEND_THROUGH_WEB = 10001;
 	private static final int MODE_BACK_TO_MENU     = 10002;
-	
-	private static final int WEB_ASK_RESULT_YES    = 20000;
-	private static final int WEB_ASK_RESULT_NO     = 20001;
-	
+
 	private int curMode;
 
     // Type of filetrasfer
@@ -58,9 +55,6 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
     // #sijapp cond.if target isnot "MOTOROLA" #
     public static final int FT_TYPE_CAMERA_SNAPSHOT = 2;
     // #sijapp cond.end #
-
-    // Request
-    private String reqUin;
 
     // #sijapp cond.if target isnot "MOTOROLA" #
     // Viewfinder
@@ -75,12 +69,11 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 	private int fsize;
 
 	private String exceptionText;
-	
-	TextList tlWebAsk;
 
     // File path and description TextField
     private TextField fileNameField;
     private TextField descriptionField;
+    private FormChoiceGroup webTransfer;
 
 	private Alert alert;
 
@@ -89,14 +82,6 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
     private ContactItem cItem;
 
 	private String fileName, shortFileName;
-
-    // Commands
-	//#sijapp cond.if target is "MIDP2"#
-    private Command backCommand = new Command(ResourceBundle.getString("back"), Jimm.is_smart_SE() ? Command.CANCEL : Command.BACK, 2);
-	//#sijapp cond.else#
-    private Command backCommand = new Command(ResourceBundle.getString("back"), Command.BACK, 2);
-	//#sijapp cond.end#
-    private Command okCommand = new Command(ResourceBundle.getString("ok"), Command.OK, 1);
 
     // Constructor
     public FileTransfer(int ftType, ContactItem _cItem)
@@ -118,34 +103,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 		fsize = size;
     }
 
-	public static boolean askForWebFileTransfer;
-
-    // Start the file transfer procedure depening on the ft type
-    public void startFT()
-    {
-		// Ask user about web file transfer
-		if (askForWebFileTransfer)
-		{
-			tlWebAsk = new TextList(ResourceBundle.getString("ft_caption"));
-			JimmUI.setColorScheme(tlWebAsk, true);
-			
-			tlWebAsk.addBigText(ResourceBundle.getString("ft_web_ask"), tlWebAsk.getTextColor(), Font.STYLE_PLAIN, -1);
-			tlWebAsk.doCRLF(-1);
-			tlWebAsk.doCRLF(-1);
-			tlWebAsk.addBigText(ResourceBundle.getString("ft_web_yes"), tlWebAsk.getTextColor(), Font.STYLE_BOLD, WEB_ASK_RESULT_YES);
-			tlWebAsk.doCRLF(1);
-			tlWebAsk.addBigText(ResourceBundle.getString("ft_web_no"), tlWebAsk.getTextColor(), Font.STYLE_BOLD, WEB_ASK_RESULT_NO);
-			tlWebAsk.doCRLF(2);
-			tlWebAsk.selectTextByIndex(WEB_ASK_RESULT_YES);
-			tlWebAsk.addCommandEx(JimmUI.cmdSelect, VirtualList.MENU_TYPE_RIGHT_BAR);
-			tlWebAsk.setCommandListener(this);
-			tlWebAsk.activate(Jimm.display);
-			return;
-		}
-		else startFtInternal();
-	}
-
-	private void startFtInternal()
+	public void startFT()
 	{
         // #sijapp cond.if target isnot "MOTOROLA" #
         if (type == FileTransfer.FT_TYPE_CAMERA_SNAPSHOT)
@@ -160,7 +118,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
             try 
             {
                 FileBrowser.setListener(this);
-                FileBrowser.setParameters(false);
+                FileBrowser.setParameters(false, false);
                 FileBrowser.activate();
             }
             catch (JimmException e)
@@ -247,14 +205,18 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 				}
 			} while (counter > 0);
 			
-			// Send end of header
+			//#sijapp cond.if modules_TRAFFIC is "true"#
+            Traffic.addOutTraffic(fsize);
+            //#sijapp cond.end#
+
+            // Send end of header
 			StringBuffer buffer3 = new StringBuffer();
 			buffer3.append("\r\n--").append(boundary).append("--\r\n");
 			os.write(Util.stringToByteArray(buffer3.toString(), true));
 			os.flush();
 
 			int respCode = sc.getResponseCode();
-			if (respCode != HttpConnection.HTTP_OK) throw new Exception("Server error: " + respCode + "\r\n" + sc.getResponseMessage());
+			if (respCode != HttpConnection.HTTP_OK) throw new JimmException(194, respCode);
 			
 			// Read response
 			is = sc.openInputStream();
@@ -284,12 +246,13 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 //			messText.append("Filename: ").append(shortFileName).append("\n");
 			messText.append("Filesize: ").append(fsize / 1024).append("KB\n");
 			messText.append("Link: ").append(respString);
+			if (ResourceBundle.langAvailable[0].equals("RU")) messText.append("&lang=ru");
 
 			JimmUI.sendMessage(messText.toString(), cItem);
 //			PlainMessage plainMsg = new PlainMessage(Options.getString(Options.OPTION_UIN), cItem, Message.MESSAGE_TYPE_NORM, Util.createCurrentDate(false), messText.toString());
 //			Icq.requestAction(new SendMessageAction(plainMsg));
 		}
-		catch (Exception e)
+		catch (IOException e)
 		{
 			throw new JimmException(196, 0);
 		}
@@ -308,10 +271,9 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 			//code to set back Image
 			if (this.getCItem() == null)
 			{
-				DrawControls.VirtualList.setBackGroundImage(fis, false);
 				Options.setString(Options.OPTION_IMG_PATH, fileName);
-				Options.setInt(Options.OPTION_BACKGROUND_MODE, 2);
 				Options.optionsForm.callColorSchemeOptions();
+				DrawControls.VirtualList.setBackGroundImage(fis, false);
 				return;
 			}
 
@@ -326,7 +288,6 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 			//#sijapp cond.end#
 		}
 		catch (Exception e) {
-			e.printStackTrace();
 			JimmException.handleException(new JimmException(191, 0, true));
 		}
 	}
@@ -364,51 +325,50 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
     public void askForNameDesc(String filename, String description)
     {
         name_Desc = new VirtualForm(ResourceBundle.getString("name_desc"));
-        this.fileNameField = new TextField(ResourceBundle.getString("filename"), filename, 255, TextField.ANY);
-        this.descriptionField = new TextField(ResourceBundle.getString("description"), description, 255, TextField.ANY);
-
-        name_Desc.append(this.fileNameField);
-        name_Desc.append(this.descriptionField);
-        name_Desc.append(new StringItem(ResourceBundle.getString("size") + ": ", String.valueOf(fsize / 1024) + " kb"));
-        // #sijapp cond.if modules_TRAFFIC is "true" #
-        name_Desc.append(new StringItem(ResourceBundle.getString("cost") + ": ", 
-                Traffic.getString(((fsize/Options.getInt(Options.OPTION_COST_PACKET_LENGTH))+1)*Options.getInt(Options.OPTION_COST_PER_PACKET))
-                + " " +Options.getString(Options.OPTION_CURRENCY)));                       
-        // #sijapp cond.end #
-        
-        name_Desc.addCommand(this.backCommand);
-        name_Desc.addCommand(this.okCommand);
+        name_Desc.setFontSize(Options.getInt(Options.OPTION_CL_FONT_SIZE) << 3);
+        fileNameField = new TextField(ResourceBundle.getString("filename"), filename, 255, TextField.ANY);
+        descriptionField = new TextField(ResourceBundle.getString("description"), description, 255, TextField.ANY);
+        name_Desc.clear();
+        name_Desc.append(fileNameField);
+        name_Desc.append(descriptionField);
+        name_Desc.append(new StringItem(ResourceBundle.getString("size") + ": " + fsize / 1024 + " kb", null));
+        //#sijapp cond.if modules_TRAFFIC is "true"#
+        int packetLength = Options.getInt(Options.OPTION_COST_PACKET_LENGTH);
+        name_Desc.append(new StringItem(ResourceBundle.getString("cost") + ": "
+            + Traffic.getString((fsize / packetLength + 1) * (Options.getInt(Options.OPTION_COST_PER_PACKET)
+                / 1000) * (packetLength / 1024)) + " " + Options.getString(Options.OPTION_CURRENCY), null));
+        //#sijapp cond.end#
+        webTransfer = new FormChoiceGroup(null, Choice.MULTIPLE);
+        webTransfer.append(ResourceBundle.getString("ft_type_web"), null);
+        webTransfer.setSelectedIndex(0, Options.getInt(Options.OPTION_FT_MODE) == Options.FS_MODE_WEB);
+        name_Desc.append(webTransfer);
+        name_Desc.addCommandEx(JimmUI.cmdBack, VirtualList.MENU_RIGHT_BAR);
+        name_Desc.addCommandEx(JimmUI.cmdSend, VirtualList.MENU_LEFT_BAR);
         name_Desc.setCommandListener(this);
-
+        name_Desc.setItemStateListener(this);
         name_Desc.activate(Jimm.display);
-    }
+	}
     
+    public void itemStateChanged(Item item)
+    {
+        if (item == webTransfer)
+        {
+            Options.setInt(Options.OPTION_FT_MODE, webTransfer.isSelected(0) ? Options.FS_MODE_WEB : Options.FS_MODE_NET);
+            Options.safe_save();
+        }
+    }
+
     // Command listener
     public void commandAction(Command c, Displayable d)
     {
-		if (JimmUI.isControlActive(tlWebAsk) && (c == JimmUI.cmdSelect))
-		{
-			int index = tlWebAsk.getCurrTextIndex(); 
-			switch (index)
-			{
-			case WEB_ASK_RESULT_NO:
-			case WEB_ASK_RESULT_YES:
-				Options.setInt(Options.OPTION_FT_MODE, (index == WEB_ASK_RESULT_NO) ? Options.FS_MODE_NET : Options.FS_MODE_WEB);
-				askForWebFileTransfer = false;
-				Options.safe_save();
-				startFtInternal();
-				return;
-			default:
-				return;
-			}
-		}
-		else if ((alert != null) && (d == alert))
+		ContactList.enterContactMenu = false;
+		if ((alert != null) && (d == alert))
 		{
 			cItem.activate();
 		}
-        else if (c == this.okCommand)
+        else if (c == JimmUI.cmdSend)
         {
-            if (name_Desc != null && name_Desc.isActive())
+            if (JimmUI.isControlActive(name_Desc))
             {
 				switch (Options.getInt(Options.OPTION_FT_MODE))
 				{
@@ -419,7 +379,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 				case Options.FS_MODE_WEB:
 			        SplashCanvas.setProgress(0);
 			        SplashCanvas.setMessage(ResourceBundle.getString("init_ft"));
-			        SplashCanvas.removeCmd(SplashCanvas.cancelCommnad);
+			        SplashCanvas.addCmd(SplashCanvas.cancelCommnad);
 			        SplashCanvas.setCmdListener(this);
 					SplashCanvas.show();
 
@@ -432,7 +392,7 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
 				}
             }
         }
-        else if (c == this.backCommand)
+        else if (c == JimmUI.cmdBack)
         {
         	free();
             this.getCItem().activate();
@@ -452,6 +412,8 @@ public class FileTransfer implements CommandListener, FileBrowserListener, Runna
         fis = null;
         name_Desc = null;
         fileNameField = null;
+        descriptionField = null;
+        webTransfer = null;
         System.gc();
     }
 

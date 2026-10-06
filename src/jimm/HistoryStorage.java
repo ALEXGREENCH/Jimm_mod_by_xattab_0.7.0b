@@ -219,7 +219,7 @@ class HistoryStorageList extends VirtualList implements CommandListener, Virtual
 		try
 		{
 			FileBrowser.setListener(this);
-			FileBrowser.setParameters(true);
+			FileBrowser.setParameters(true, false);
 			FileBrowser.activate();
 		}
 		catch (JimmException e)

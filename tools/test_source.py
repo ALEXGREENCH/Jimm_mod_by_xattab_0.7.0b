@@ -39,7 +39,7 @@ def main(matrix=False, skip_build=False):
          '-d', TEST, *helpers], 'compile-tests')
     # No invokedynamic in the fixture classes loaded by MicroEmulator's legacy ASM.
     run([os.environ.get('JAVAC', 'javac'), '-source', '7', '-target', '7', '-encoding', 'UTF-8',
-         '-cp', recover.cp(runtime), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java'], 'compile-transport-io')
+         '-cp', recover.cp(runtime), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java'], 'compile-transport-io')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
     original = ROOT / 'preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar'
@@ -177,6 +177,16 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Search mismatch: compare build/source-tests/search-reference.txt and search-source.txt')
     report['search_observations'] = len(search_ref.read_text().splitlines())
     report['search_differences'] = 0
+    file_ref, file_src = TEST / 'file-transfer-reference.txt', TEST / 'file-transfer-source.txt'
+    for mode, output in [('reference', file_ref), ('source', file_src)]:
+        fixture = TEST / ('file-transfer-' + mode + '.jar')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']),
+             'FileTransferFixture', TEST / ('message-' + mode + '.jar'), fixture, mode, TEST], 'file-transfer-fixture-' + mode)
+        report['file_transfer_' + mode] = run([*java, 'FileTransferProbe', fixture, mode, output], 'file-transfer-' + mode)
+    if file_ref.read_bytes() != file_src.read_bytes():
+        raise AssertionError('File transfer mismatch: compare build/source-tests/file-transfer-reference.txt and file-transfer-source.txt')
+    report['file_transfer_observations'] = len(file_ref.read_text().splitlines())
+    report['file_transfer_differences'] = 0
     report['ui'] = run([*java, 'SourceSmokeTest', built], 'ui')
     report['limitations'] = ['MicroEmulator does not play all original sound formats.',
                             'No live ICQ login, real-device or complete bytecode-equivalence claim.']
