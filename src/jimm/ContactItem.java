@@ -480,7 +480,7 @@ public class ContactItem implements ContactListItem
 		if ((getBooleanValue(CONTACTITEM_HAS_CHAT)) || blinkingOffline
 			|| (Options.getBoolean(Options.OPTION_ONLINE_BLINK_NICK) && blinkingOnline))
 		{
-			return Font.STYLE_BOLD;
+			return Font.STYLE_BOLD + Options.fontStyle;
 		}
 
 		return Options.getInt(Options.OPTION_CL_FONT_STYLE);
@@ -633,14 +633,12 @@ public class ContactItem implements ContactListItem
 	private boolean blinkingOffline;
 	private boolean mustStayVisible;
 	private int blinkingNumber;
+	private boolean blinkOnConnect;
+	private int blinkLimit;
 	private TimerTask BlinkTimer;
 
 	public void prepareToBlink()
 	{
-		if (BlinkTimer != null)
-		{
-			BlinkTimer.cancel();
-		}
 		blinkingNumber = 0;
 		blinkingOnline = false;
 		blinkingOffline = false;
@@ -653,66 +651,43 @@ public class ContactItem implements ContactListItem
 		ContactList.contactChanged(this, false, true);
 	}
 
-	public void BlinkOnline()
+	public void startBlinking(boolean online)
 	{
-		if (!Options.getBoolean(Options.OPTION_ONLINE_BLINK_NICK) && !Options.getBoolean(Options.OPTION_ONLINE_BLINK_ICON))
+		blinkOnConnect = online;
+		if (blinkOnConnect)
 		{
-			return;
+			if (!Options.getBoolean(Options.OPTION_ONLINE_BLINK_NICK) && !Options.getBoolean(Options.OPTION_ONLINE_BLINK_ICON)) return;
+			blinkingOffline = false;
+			blinkLimit = (Options.getInt(Options.OPTION_ONLINE_BLINK_TIME) << 1) + 1;
 		}
-
-		blinkingOffline = false;
-
+		else
+		{
+			if (!Options.getBoolean(Options.OPTION_OFFLINE_BLINK_NICK))
+			{
+				mustStayVisible = false;
+				return;
+			}
+			blinkingOnline = false;
+			blinkLimit = (Options.getInt(Options.OPTION_OFFLINE_BLINK_TIME) << 1) + 1;
+		}
+		if (BlinkTimer != null) BlinkTimer.cancel();
 		BlinkTimer = new TimerTask()
 		{
 			public void run()
 			{
-				blinkingOnline = (!blinkingOnline) ? true : false;
 				blinkingNumber++;
-
-				if (blinkingNumber > (Options.getInt(Options.OPTION_ONLINE_BLINK_TIME) * 2 + 1))
+				if (blinkOnConnect) blinkingOnline = !blinkingOnline;
+				else blinkingOffline = !blinkingOffline;
+				if (blinkingNumber > blinkLimit)
 				{
 					BlinkTimer.cancel();
 					blinkingOnline = false;
-				}
-
-				ContactList.repaintTree();
-			}
-		};
-
-		Jimm.getTimerRef().schedule(BlinkTimer, 500, 500);
-	}
-
-	public void BlinkOffline()
-	{
-		if (!Options.getBoolean(Options.OPTION_OFFLINE_BLINK_NICK))
-		{
-			mustStayVisible = false;
-			return;
-		}
-
-		blinkingOnline = false;
-
-		BlinkTimer = new TimerTask()
-		{
-			public void run()
-			{
-				blinkingOffline = (!blinkingOffline) ? true : false;
-				blinkingNumber++;
-
-				if (blinkingNumber > (Options.getInt(Options.OPTION_OFFLINE_BLINK_TIME) * 2 + 1))
-				{
-					if (mustStayVisible)
-					{
-						updateAfterBlinking();
-					}
-					BlinkTimer.cancel();
 					blinkingOffline = false;
+					if (!blinkOnConnect) updateAfterBlinking();
 				}
-
 				ContactList.repaintTree();
 			}
 		};
-
 		Jimm.getTimerRef().schedule(BlinkTimer, 500, 500);
 	}
 	//#sijapp cond.end#

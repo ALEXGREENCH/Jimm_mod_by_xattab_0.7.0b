@@ -940,7 +940,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 
 				playSoundNotification(SOUND_TYPE_OFFLINE);
 				cItem.prepareToBlink();
-				cItem.BlinkOffline();
+				cItem.startBlinking(false);
 			}
 			else if (!justConnected)
 			{
@@ -1016,7 +1016,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		{
 			playSoundNotification(SOUND_TYPE_ONLINE);
 			cItem.prepareToBlink();
-			cItem.BlinkOnline();
+			cItem.startBlinking(true);
 		}
 	}
 	//#sijapp cond.end#

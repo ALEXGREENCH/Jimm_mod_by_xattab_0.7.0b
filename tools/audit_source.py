@@ -419,7 +419,38 @@ SYMBOLS = {
     'cb.a Z': 'jimm/comm/Icq$SOCKSConnection.is_connected Z',
     'cb.b()V': 'jimm/comm/Icq$SOCKSConnection.stream_close()V',
 }
+# Contact blinking shares one timer in all three May platform variants.
+CLASSES['ch'] = 'jimm/ContactItem$1'
+SYMBOLS.update({
+    'ch': 'jimm/ContactItem$1',
+    'cj.a(I)Z': 'jimm/Options.getBoolean(I)Z',
+    'cj.a(I)I': 'jimm/Options.getInt(I)I',
+    'cj.g I': 'jimm/Options.fontStyle I',
+    'cj.b I': 'jimm/Options.blinkColor I',
+    'jimm/Jimm.a()Ljava/util/Timer;': 'jimm/Jimm.getTimerRef()Ljava/util/Timer;',
+    'ch.<init>(Lz;)V': 'jimm/ContactItem$1.<init>(Ljimm/ContactItem;)V',
+    'ch.a Lz;': 'jimm/ContactItem$1.this$0 Ljimm/ContactItem;',
+    'z.c()V': 'jimm/ContactItem.prepareToBlink()V',
+    'z.b(Z)V': 'jimm/ContactItem.startBlinking(Z)V',
+    'z.b()I': 'jimm/ContactItem.getFontStyle()I',
+    'z.a()I': 'jimm/ContactItem.getTextColor()I',
+    'z.f Z': 'jimm/ContactItem.blinkingOnline Z',
+    'z.g Z': 'jimm/ContactItem.blinkingOffline Z',
+    'z.h Z': 'jimm/ContactItem.mustStayVisible Z',
+    'z.i Z': 'jimm/ContactItem.blinkOnConnect Z',
+    'z.r I': 'jimm/ContactItem.blinkingNumber I',
+    'z.s I': 'jimm/ContactItem.blinkLimit I',
+    'z.a Ljava/util/TimerTask;': 'jimm/ContactItem.BlinkTimer Ljava/util/TimerTask;',
+    'm.g()V': 'jimm/ContactList.repaintTree()V',
+})
+
 METHODS = [
+    ('z', 'c', '()V', 'prepareToBlink'),
+    ('z', 'b', '(Z)V', 'startBlinking'),
+    ('z', 'b', '()I', 'getFontStyle'),
+    ('z', 'a', '()I', 'getTextColor'),
+    ('ch', '<init>', '(Lz;)V', '<init>'),
+    ('ch', 'run', '()V', 'run'),
     ('q', '<init>', '()V', '<init>'),
     ('q', '<clinit>', '()V', '<clinit>'),
     ('q', 'a', '(Ljava/lang/String;Ljava/lang/String;BLjava/lang/String;J)V', 'addText'),
