@@ -196,6 +196,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 			break;
 		case SORT_BY_STATUS:
 		case SORT_BY_STATUS_AND_NAME:
+		case SORT_BY_ACTIVITY:
 			int weight1 = item1.getSortWeight(sortType);
 			int weight2 = item2.getSortWeight(sortType);
 			if (weight1 == weight2) result = item1.getSortText().compareTo(item2.getSortText());
@@ -665,7 +666,6 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		if (treeBuilt || ((cCount == 0) && (gCount == 0))) return;
 
 		tree.clear();
-		tree.setShowButtons(use_groups);
 
 		// add group nodes
 		gNodes.clear();
@@ -759,17 +759,13 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 	{
 		if ((group == null) || (groupNode == null)) return;
 
-		ContactItem cItem;
+		ContactItem[] items = getGroupItems(group.getId());
 		int onlineCount = 0;
-
-		int count = groupNode.size();
-		for (int i = 0; i < count; i++)
+		for (int i = 0; i < items.length; i++)
 		{
-			if (!(groupNode.elementAt(i).getData() instanceof ContactItem)) continue; // TODO: must be removed
-			cItem = (ContactItem)groupNode.elementAt(i).getData();
-			if (cItem.getIntValue(ContactItem.CONTACTITEM_STATUS) != STATUS_OFFLINE) onlineCount++;
+			if (items[i].getIntValue(ContactItem.CONTACTITEM_STATUS) != STATUS_OFFLINE) onlineCount++;
 		}
-		group.setCounters(onlineCount, count);
+		group.setCounters(onlineCount, items.length);
 	}
 
 	// Must be called after any changes in contacts
