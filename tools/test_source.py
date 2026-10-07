@@ -475,6 +475,7 @@ def main(matrix=False, skip_build=False):
         report['roster_key_bytecode'] = run([sys.executable, ROOT / 'tools/audit_roster_keys.py'], 'roster-key-bytecode-audit')
         report['roster_state'] = run([sys.executable, ROOT / 'tools/test_roster_state.py'], 'roster-state-audit')
         report['roster_state_bytecode'] = run([sys.executable, ROOT / 'tools/audit_roster_state.py'], 'roster-state-bytecode-audit')
+        report['icq_state_bytecode'] = run([sys.executable, ROOT / 'tools/audit_icq_state.py'], 'icq-state-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')

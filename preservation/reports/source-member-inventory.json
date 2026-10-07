@@ -3025,7 +3025,7 @@
       "signature_and_modifiers_verified": true,
       "reference_instructions": 8,
       "source_instructions": 8,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {
@@ -3064,7 +3064,7 @@
       "signature_and_modifiers_verified": true,
       "reference_instructions": 2,
       "source_instructions": 2,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {
@@ -3103,7 +3103,7 @@
       "signature_and_modifiers_verified": true,
       "reference_instructions": 2,
       "source_instructions": 2,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {

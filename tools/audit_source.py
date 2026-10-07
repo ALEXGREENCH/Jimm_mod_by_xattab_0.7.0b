@@ -2420,6 +2420,43 @@ SYMBOLS.update({
 })
 
 
+# Remaining Icq entry points retain inherited source names. The unused private-ID
+# getter is absent from the modern optimized JAR and is recorded in audit_icq_state.
+METHODS.extend([
+    ('r', 'a', '(Laa;)V', 'requestAction'),
+    ('r', 'a', '(Lz;)V', 'addToContactList'),
+    ('r', 'a', '(Lz;)Z', 'delFromContactList'),
+    ('r', 'c', '()V', 'setNotConnected'),
+    ('r', 'd', '()V', 'setConnected'),
+    ('r', 'd', '()I', 'setWebAware'),
+    ('r', 'g', '()V', 'setPoint'),
+    ('r', 'a', '()Ljava/lang/String;', 'getLastStatusChangeTime'),
+    ('r', 'a', '(B)V', 'setPrivateStatus'),
+    ('r', 'c', '(I)V', 'setPrivateStatusId'),
+])
+SYMBOLS.update({
+    'r.a(Laa;)V': 'jimm/comm/Icq.requestAction(Ljimm/comm/Action;)V',
+    'r.a(Lz;)V': 'jimm/comm/Icq.addToContactList(Ljimm/ContactItem;)V',
+    'r.a(Lz;)Z': 'jimm/comm/Icq.delFromContactList(Ljimm/ContactItem;)Z',
+    'r.c()V': 'jimm/comm/Icq.setNotConnected()V',
+    'r.d()V': 'jimm/comm/Icq.setConnected()V',
+    'r.d()I': 'jimm/comm/Icq.setWebAware()I',
+    'r.g()V': 'jimm/comm/Icq.setPoint()V',
+    'r.a()Ljava/lang/String;': 'jimm/comm/Icq.getLastStatusChangeTime()Ljava/lang/String;',
+    'r.a(B)V': 'jimm/comm/Icq.setPrivateStatus(B)V',
+    'r.c(I)V': 'jimm/comm/Icq.setPrivateStatusId(I)V',
+    'r.e()I': 'jimm/comm/Icq.getPrivateStatusId()I',
+    'r.a Ljava/util/Vector;': 'jimm/comm/Icq.reqAction Ljava/util/Vector;',
+    'r.a Ljava/lang/Thread;': 'jimm/comm/Icq.thread Ljava/lang/Thread;',
+    'r.a Ljava/lang/Object;': 'jimm/comm/Icq.wait Ljava/lang/Object;',
+    'r.b Z': 'jimm/comm/Icq.connected Z',
+    'r.b Ljava/lang/String;': 'jimm/comm/Icq.lastStatusChangeTime Ljava/lang/String;',
+    'r.c I': 'jimm/comm/Icq.privateId I',
+    'bv.a Z': 'jimm/JimmException.critical Z',
+    'bq.a(B)V': 'jimm/comm/OtherAction.setPrivateStatus(B)V',
+})
+
+
 def normalized(code):
     result = []
     for instruction in code:
