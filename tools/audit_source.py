@@ -2472,6 +2472,46 @@ SYMBOLS.update({
 })
 
 
+# Whole splash callbacks/rendering and raw chat helpers are retained separately in
+# audit_ui_helpers.py. The seven chat helpers are absent after modern inlining.
+METHODS.extend([
+    ('cv', 'a', '()Ljavax/microedition/lcdui/Image;', 'getSplashImage'),
+    ('cv', 'a', '()V', 'show'),
+    ('cv', 'f', '(I)V', 'keyPressed'),
+    ('cv', 'h', '(I)V', 'keyReleased'),
+    ('cv', 'g', '(I)V', 'keyRepeated'),
+    ('cv', 'b', '(II)V', 'pointerPressed'),
+    ('cv', 'a', '(Ljavax/microedition/lcdui/Graphics;)V', 'paint'),
+])
+SYMBOLS.update({
+    'cv.a()Ljavax/microedition/lcdui/Image;': 'jimm/SplashCanvas.getSplashImage()Ljavax/microedition/lcdui/Image;',
+    'cv.a()V': 'jimm/SplashCanvas.show()V',
+    'cv.f(I)V': 'jimm/SplashCanvas.keyPressed(I)V',
+    'cv.h(I)V': 'jimm/SplashCanvas.keyReleased(I)V',
+    'cv.g(I)V': 'jimm/SplashCanvas.keyRepeated(I)V',
+    'cv.b(II)V': 'jimm/SplashCanvas.pointerPressed(II)V',
+    'cv.a(Ljavax/microedition/lcdui/Graphics;)V': 'jimm/SplashCanvas.paint(Ljavax/microedition/lcdui/Graphics;)V',
+    'cv.a Ljavax/microedition/lcdui/Image;': 'jimm/SplashCanvas.splash Ljavax/microedition/lcdui/Image;',
+    'cv.b Ljavax/microedition/lcdui/Image;': 'jimm/SplashCanvas.notice Ljavax/microedition/lcdui/Image;',
+    'cv.a Ljavax/microedition/lcdui/Font;': 'jimm/SplashCanvas.logoFont Ljavax/microedition/lcdui/Font;',
+    'cv.b Ljavax/microedition/lcdui/Font;': 'jimm/SplashCanvas.font Ljavax/microedition/lcdui/Font;',
+    'cv.a Ljava/util/Timer;': 'jimm/SplashCanvas.t1 Ljava/util/Timer;',
+    'cv.b Ljava/util/Timer;': 'jimm/SplashCanvas.t2 Ljava/util/Timer;',
+    'cv.o I': 'jimm/SplashCanvas.height I',
+    'cv.b Z': 'jimm/SplashCanvas.showKeylock Z',
+    'cd.k()I': 'DrawControls/VirtualList.getWidth()I',
+    'cd.l()I': 'DrawControls/VirtualList.getHeight()I',
+    'y.a()Ljava/util/Vector;': 'jimm/ChatTextList.getMessData()Ljava/util/Vector;',
+    'y.a(Le;)V': 'jimm/ChatTextList.setImage(LDrawControls/Icon;)V',
+    'y.b(Le;)V': 'jimm/ChatTextList.setXstImage(LDrawControls/Icon;)V',
+    'y.c(Le;)V': 'jimm/ChatTextList.setHappyImage(LDrawControls/Icon;)V',
+    'y.d()V': 'jimm/ChatTextList.BeginTyping()V',
+    'y.a(JLe;Z)V': 'jimm/ChatTextList.AckMessage(JLDrawControls/Icon;Z)V',
+    'y.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZZLe;J)V':
+        'jimm/ChatTextList.addTextToForm(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZZLDrawControls/Icon;J)V',
+})
+
+
 def normalized(code):
     result = []
     for instruction in code:

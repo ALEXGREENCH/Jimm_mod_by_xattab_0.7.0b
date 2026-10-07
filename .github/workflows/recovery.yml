@@ -89,6 +89,8 @@ jobs:
             preservation/reports/source-icq-state-bytecode.json
             preservation/reports/source-other-status.json
             preservation/reports/source-other-status-bytecode.json
+            preservation/reports/source-ui-helper-bytecode.json
+            preservation/reports/source-ui-helper-replay.json
   verify:
     runs-on: ubuntu-latest
     steps:

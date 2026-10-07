@@ -2479,7 +2479,7 @@
       "signature_and_modifiers_verified": true,
       "reference_instructions": 10,
       "source_instructions": 10,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {
