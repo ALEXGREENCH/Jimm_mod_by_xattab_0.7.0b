@@ -2586,6 +2586,17 @@ SYMBOLS.update({
 })
 
 
+# Anti-spam state and the surviving checked-UIN helper. Inlined raw helpers and
+# full platform bodies are retained separately by audit_antispam.py.
+METHODS.append(('ae', 'a', '(Ljava/lang/String;)Z', 'isChecked'))
+SYMBOLS.update({
+    'ae.a(Ljava/lang/String;)Z': 'jimm/comm/ActionListener.isChecked(Ljava/lang/String;)Z',
+    'ae.a Ljava/util/Vector;': 'jimm/comm/ActionListener.uins Ljava/util/Vector;',
+    'ae.b Ljava/util/Vector;': 'jimm/comm/ActionListener.uin1 Ljava/util/Vector;',
+    'ae.c Ljava/util/Vector;': 'jimm/comm/ActionListener.uin2 Ljava/util/Vector;',
+})
+
+
 def normalized(code):
     result = []
     for instruction in code:

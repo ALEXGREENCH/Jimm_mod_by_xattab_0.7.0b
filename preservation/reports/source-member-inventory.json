@@ -1387,7 +1387,7 @@
       "signature_and_modifiers_verified": true,
       "reference_instructions": 13,
       "source_instructions": 13,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {

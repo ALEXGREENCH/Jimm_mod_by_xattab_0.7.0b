@@ -102,6 +102,8 @@ jobs:
             preservation/reports/source-static-text-replay.json
             preservation/reports/source-static-text-before.json
             preservation/reports/source-static-text-delta.json
+            preservation/reports/source-antispam.json
+            preservation/reports/source-antispam-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

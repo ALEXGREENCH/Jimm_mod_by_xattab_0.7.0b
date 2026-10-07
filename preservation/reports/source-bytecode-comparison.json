@@ -7681,7 +7681,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "08368a90b395c5af6999381b472cc2fb7cfb3b0f3e626cb29cbade1d26665bea",
+      "reference_normalized_sha256": "2007ef3977772fe2fefa3f5fa3488a8397c578e77c5b53488d8c9c679386ee73",
       "source_normalized_sha256": "fc5e1b3469ef1b80835f20f864a97545dff253189d1fc36d9f678887873f672f"
     },
     {
@@ -12510,10 +12510,10 @@
       "abstract_method": false,
       "reference_instructions": 13,
       "source_instructions": 13,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "3bd053fdbf9798614a6e48309af09660550658aae84d61134d7a01c9e2621484",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "14af9c0e3a4240098d34e15b0f304e0645faac548e73fabc58187a0d73a74feb",
       "source_normalized_sha256": "14af9c0e3a4240098d34e15b0f304e0645faac548e73fabc58187a0d73a74feb"
     },
     {
@@ -18051,9 +18051,25 @@
       "same_normalized_bytecode": true,
       "reference_normalized_sha256": "3c145355c2ca0fc991afd7d4e076d16459ac11b8d64bd97b81d465ff77451d90",
       "source_normalized_sha256": "3c145355c2ca0fc991afd7d4e076d16459ac11b8d64bd97b81d465ff77451d90"
+    },
+    {
+      "reference": "ae.a(Ljava/lang/String;)Z",
+      "source": "jimm/comm/ActionListener.isChecked(Ljava/lang/String;)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 18,
+      "source_instructions": 18,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "19511fdd763a0ce9df8c33b54fcb96fd63c35da032d12e3d2cd51acf707d8dca",
+      "source_normalized_sha256": "a3050d11c1f6ec435c2f05bd112cd7f0cfba9f9f52f3a0b6b9b7f7af3c8a3d2f"
     }
   ],
   "abstract_declarations": 34,
-  "same_normalized_executable_method_bodies": 637,
+  "same_normalized_executable_method_bodies": 638,
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."
 }
