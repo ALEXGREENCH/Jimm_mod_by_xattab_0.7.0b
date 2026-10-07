@@ -1140,6 +1140,18 @@ SYMBOLS.update({
     'ae.a(Lac;)Z': 'jimm/comm/ActionListener.isSpam(Ljimm/comm/Message;)Z',
 })
 
+# ProGuard merged these static Xtraz helpers into Icon in the rebuilt JAR.
+# This records their observed optimizer destination, without changing source ownership.
+SOURCE_OWNERS = {'ba': 'DrawControls/Icon'}
+CLASSES.update({'ba': 'jimm/comm/XtrazSM'})
+SYMBOLS.update({
+    'ba.a(Ljava/lang/String;IJJLjava/lang/String;)[B': 'DrawControls/Icon.a(Ljava/lang/String;IJJLjava/lang/String;)[B',
+    'ba.a([BI)I': 'DrawControls/Icon.a([BI)I',
+    'ba.b([BI)I': 'DrawControls/Icon.b([BI)I',
+    'co.c(Ljava/lang/String;)Ljava/lang/String;': 'jimm/comm/Util.DeMangleXml(Ljava/lang/String;)Ljava/lang/String;',
+    'co.d(Ljava/lang/String;)Ljava/lang/String;': 'jimm/comm/Util.MangleXml(Ljava/lang/String;)Ljava/lang/String;',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1798,6 +1810,15 @@ METHODS.extend([
 ])
 
 
+METHODS.extend([
+    ('ba', 'a', '(Ljava/lang/String;IJJLjava/lang/String;)[B', 'a'),
+    ('ba', 'a', '([BI)I', 'a'),
+    ('ba', 'b', '([BI)I', 'b'),
+    ('co', 'c', '(Ljava/lang/String;)Ljava/lang/String;', 'DeMangleXml'),
+    ('co', 'd', '(Ljava/lang/String;)Ljava/lang/String;', 'MangleXml'),
+])
+
+
 def normalized(code):
     result = []
     for instruction in code:
@@ -1851,7 +1872,8 @@ def main():
         source_desc = desc
         for short, long in CLASSES.items():
             source_desc = source_desc.replace('L' + short + ';', 'L' + long + ';')
-        after = next(m for m in new[CLASSES[owner]]['methods']
+        source_owner = SOURCE_OWNERS.get(owner, CLASSES[owner])
+        after = next(m for m in new[source_owner]['methods']
                      if (m['name'] if '$' in source_name else m['name'].split('$')[0]) == source_name and m['desc'] == source_desc)
         left, right = normalized(before['code']), after['code']
         same_static = bool(before['access'] & 8) == bool(after['access'] & 8)
@@ -1862,7 +1884,7 @@ def main():
             raise AssertionError('Synchronization mismatch: ' + owner + '.' + name + desc)
         same_handlers = normalized_handlers(before['handlers']) == after['handlers']
         methods.append({'reference': owner + '.' + name + desc,
-                        'source': CLASSES[owner] + '.' + after['name'] + source_desc,
+                        'source': source_owner + '.' + after['name'] + source_desc,
                         'signature_verified': True, 'static_modifier_verified': same_static,
                         'synchronized_modifier_verified': same_synchronized,
                         'reference_instructions': len(left),

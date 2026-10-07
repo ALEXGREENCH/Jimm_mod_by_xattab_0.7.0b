@@ -137,7 +137,7 @@ public final class XtrazSM
 
     private static byte[] a(String s, int i, long l1, long l2, String s1)
     {
-        byte abyte0[] = new byte[0];
+        byte abyte0[] = null;
         int j = 0;
         try
         {

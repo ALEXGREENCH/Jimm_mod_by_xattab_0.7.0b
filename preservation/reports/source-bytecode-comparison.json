@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "fd2ea2923fde7a61cd05c618705717ffecb78c9db20f5a7fbb508df237b16f5c",
+  "rebuilt_sha256": "eb0d1adc8127f5c918dbb3cd17947be5fffe165f30656f908a97ce154aa3cfbb",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -6693,7 +6693,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "f9b4297f691c76c2f719901115fcd5e0e16639a1bf919facc711e359e6ac852b",
+      "reference_normalized_sha256": "0e7ad14b8e703463dc073a24ae83dbfd483265bfef6dbbd65938dc08a88a20c3",
       "source_normalized_sha256": "64786d0eb0fa52d2cb90760f3952ca01601aaef900a237cde3c2f6bb07d4c513"
     },
     {
@@ -8543,6 +8543,76 @@
       "same_normalized_bytecode": true,
       "reference_normalized_sha256": "a52ce4b4a399ece65d0503d767bf833b1c6e931a0715cdaceb7882e8244d2b88",
       "source_normalized_sha256": "a52ce4b4a399ece65d0503d767bf833b1c6e931a0715cdaceb7882e8244d2b88"
+    },
+    {
+      "reference": "ba.a(Ljava/lang/String;IJJLjava/lang/String;)[B",
+      "source": "DrawControls/Icon.a(Ljava/lang/String;IJJLjava/lang/String;)[B",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 219,
+      "source_instructions": 215,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "aba044aa9e0ec52906dde2eaf17292d052841a0b862fc9b6f559c2923f686f23",
+      "source_normalized_sha256": "29d2c4cd320ffca1351b5fa3d364ac739b27d77037ec48bd17b1ccab09d37197"
+    },
+    {
+      "reference": "ba.a([BI)I",
+      "source": "DrawControls/Icon.a([BI)I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 13,
+      "source_instructions": 13,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "0da7dc1d955739148b29c4178339caad4f0c7d635e6e779ba6ae09d52a26c91a",
+      "source_normalized_sha256": "0da7dc1d955739148b29c4178339caad4f0c7d635e6e779ba6ae09d52a26c91a"
+    },
+    {
+      "reference": "ba.b([BI)I",
+      "source": "DrawControls/Icon.b([BI)I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 76,
+      "source_instructions": 76,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "64ad363480ab88b0d21c7d0413ceccddd3a932dc2d49441e5795f5105904f653",
+      "source_normalized_sha256": "64ad363480ab88b0d21c7d0413ceccddd3a932dc2d49441e5795f5105904f653"
+    },
+    {
+      "reference": "co.c(Ljava/lang/String;)Ljava/lang/String;",
+      "source": "jimm/comm/Util.DeMangleXml(Ljava/lang/String;)Ljava/lang/String;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 93,
+      "source_instructions": 93,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "6c60012d6ce424df7f0020a0f735621119b0826a15d9b48ffe71dde60581279d",
+      "source_normalized_sha256": "6c60012d6ce424df7f0020a0f735621119b0826a15d9b48ffe71dde60581279d"
+    },
+    {
+      "reference": "co.d(Ljava/lang/String;)Ljava/lang/String;",
+      "source": "jimm/comm/Util.MangleXml(Ljava/lang/String;)Ljava/lang/String;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 42,
+      "source_instructions": 42,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "4a01ce28aafb0ddff0b5c92e643f3bcf115f704c0146d8ef96b64965b5a7adc5",
+      "source_normalized_sha256": "4730f8ae12293d7a7aa1822ccdeccff94d65211fd2db00465958f512fe35c808"
     }
   ],
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."

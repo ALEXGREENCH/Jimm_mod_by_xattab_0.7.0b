@@ -190,7 +190,7 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('File transfer mismatch: compare build/source-tests/file-transfer-reference.txt and file-transfer-source.txt')
     report['file_transfer_observations'] = len(file_ref.read_text().splitlines())
     report['file_transfer_differences'] = 0
-    for prefix, fixture_class, probe in [('runnable', 'RunnableFixture', 'RunnableProbe'), ('server_actions', 'ServerActionFixture', 'ServerActionProbe'), ('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe'), ('list_menu', 'ListMenuFixture', 'ListMenuProbe'), ('list_menu_italic', 'ListMenuFixture', 'ListMenuProbe'), ('contact_tree', 'ContactTreeFixture', 'ContactTreeProbe'), ('tree', 'VirtualListFixture', 'TreeProbe'), ('form', 'FormFixture', 'FormProbe'), ('text_list', 'VirtualListFixture', 'TextListProbe'), ('alert', 'VirtualListFixture', 'AlertProbe'), ('templates', 'TemplatesFixture', 'TemplatesProbe'), ('templates_smart', 'TemplatesFixture', 'TemplatesProbe'), ('selector', 'SelectorFixture', 'SelectorProbe'), ('file_browser', 'VirtualListFixture', 'FileBrowserProbe'), ('emotions', 'EmotionsFixture', 'EmotionsProbe')]:
+    for prefix, fixture_class, probe in [('xtraz', 'XtrazFixture', 'XtrazProbe'), ('runnable', 'RunnableFixture', 'RunnableProbe'), ('server_actions', 'ServerActionFixture', 'ServerActionProbe'), ('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe'), ('list_menu', 'ListMenuFixture', 'ListMenuProbe'), ('list_menu_italic', 'ListMenuFixture', 'ListMenuProbe'), ('contact_tree', 'ContactTreeFixture', 'ContactTreeProbe'), ('tree', 'VirtualListFixture', 'TreeProbe'), ('form', 'FormFixture', 'FormProbe'), ('text_list', 'VirtualListFixture', 'TextListProbe'), ('alert', 'VirtualListFixture', 'AlertProbe'), ('templates', 'TemplatesFixture', 'TemplatesProbe'), ('templates_smart', 'TemplatesFixture', 'TemplatesProbe'), ('selector', 'SelectorFixture', 'SelectorProbe'), ('file_browser', 'VirtualListFixture', 'FileBrowserProbe'), ('emotions', 'EmotionsFixture', 'EmotionsProbe')]:
         reference_output, source_output = TEST / (prefix + '-reference.txt'), TEST / (prefix + '-source.txt')
         for mode, output in [('reference', reference_output), ('source', source_output)]:
             fixture = TEST / (prefix + '-' + mode + '.jar')
@@ -203,6 +203,23 @@ def main(matrix=False, skip_build=False):
             raise AssertionError(prefix + ' mismatch: compare build/source-tests/' + prefix + '-{reference,source}.txt')
         report[prefix + '_observations'] = len(reference_output.read_text().splitlines())
         report[prefix + '_differences'] = 0
+        if prefix == 'xtraz':
+            guard = reference_output.read_text(encoding='utf-8').splitlines()[-1]
+            sends, texts, chats, logs = [int(part.split(':')[1]) for part in guard.split('/')]
+            xtraz_report = {'scope': 'Actual MIDP2 XtrazSM serializers and Util XML helpers. '
+                            'Queries use transaction ID zero, as all actual callers do and the optimized '
+                            'reference specializes. Real ActionListener parses incoming requests/responses '
+                            'and retains privacy gates, response construction, open-chat state and failures. '
+                            'Only the Xtraz clock, new-chat destination and MagicEye log destination are '
+                            'additionally captured; existing file-transfer fixture I/O/chat/UI boundaries remain. '
+                            'Log resource keys are normalized through each real ResourceBundle dictionary. '
+                            'No live server, native queue or complete downstream chat/log side-effect claim.',
+                            'reference_sha256': recover.sha(original),
+                            'source_unoptimized_class_jar_sha256': recover.sha(source / 'classes.jar'),
+                            'observations': report[prefix + '_observations'], 'packet_send_attempts': sends,
+                            'chat_appends': texts, 'new_chat_calls': chats, 'log_calls': logs, 'differences': 0}
+            (ROOT / 'preservation/reports/source-xtraz.json').write_text(
+                json.dumps(xtraz_report, indent=2) + '\n', encoding='utf-8', newline='\n')
         if prefix == 'runnable':
             guard = reference_output.read_text(encoding='utf-8').splitlines()[-1]
             callbacks, queued = [int(part.split(':')[1]) for part in guard.split('/')]

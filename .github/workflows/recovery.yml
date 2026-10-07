@@ -27,6 +27,7 @@ jobs:
             preservation/reports/source-packets.json
             preservation/reports/source-server-actions.json
             preservation/reports/source-runnable.json
+            preservation/reports/source-xtraz.json
   verify:
     runs-on: ubuntu-latest
     steps:
