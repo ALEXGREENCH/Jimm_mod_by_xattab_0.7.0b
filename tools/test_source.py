@@ -490,6 +490,7 @@ def main(matrix=False, skip_build=False):
         report['static_text_replay'] = run([sys.executable, ROOT / 'tools/replay_static_text.py'], 'static-text-replay-audit')
         report['antispam'] = run([sys.executable, ROOT / 'tools/test_antispam.py'], 'antispam-audit')
         report['antispam_bytecode'] = run([sys.executable, ROOT / 'tools/audit_antispam.py'], 'antispam-bytecode-audit')
+        report['xtraz_queries'] = run([sys.executable, ROOT / 'tools/test_xtraz_queries.py'], 'xtraz-query-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')

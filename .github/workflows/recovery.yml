@@ -104,6 +104,7 @@ jobs:
             preservation/reports/source-static-text-delta.json
             preservation/reports/source-antispam.json
             preservation/reports/source-antispam-bytecode.json
+            preservation/reports/source-xtraz-queries.json
   verify:
     runs-on: ubuntu-latest
     steps:
