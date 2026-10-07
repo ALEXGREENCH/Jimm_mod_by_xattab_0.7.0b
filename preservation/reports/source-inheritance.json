@@ -1,0 +1,3130 @@
+{
+  "scope": "Typed calls already verified by the main audit, and every original abstract declaration with real descendant override witnesses. GroupItem image accessors use ContactListItem override identity rather than identical return -1 bodies. Names continue the inherited source; no instruction, branch, handler or synthetic-expression simplification. Abstract declarations are counted separately from executable bodies. This is a complete abstract-member inventory for MIDP2/RU, without claiming whole-program behavior or original author spellings.",
+  "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+  "source_optimized_class_jar_sha256": "81827a12b7228e1e0b44d262cca774ed19d98f9a9f1d47549a9899b3c1664d96",
+  "source_unoptimized_class_jar_sha256": "62cb6d01adb20b915b417b249285398b87b226941c13f5c357ef391e651de762",
+  "typed_call_aliases_verified": 239,
+  "original_abstract_declarations": 35,
+  "abstract_optimized_signatures_verified": 34,
+  "group_override_identities_corrected": 7,
+  "calls": [
+    {
+      "reference": "u.<init>()V",
+      "source": "jimm/FileBrowser.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "u.<clinit>()V",
+      "source": "jimm/FileBrowser.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "b.<init>()V",
+      "source": "jimm/JSR75FileSystem.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "af.<clinit>()V",
+      "source": "jimm/util/Selector.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "aq.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/Templates.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "aq.<clinit>()V",
+      "source": "jimm/Templates.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ci.i(I)V",
+      "source": "DrawControls/VirtualAlert.pointerDragged$255f295(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bi.a(Ljava/lang/String;IIIZC)V",
+      "source": "DrawControls/TextList.internAdd$51eb0c58(Ljava/lang/String;IIIZC)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "aw.<init>(Ljava/lang/String;Z)V",
+      "source": "DrawControls/VirtualTree.<init>(Ljava/lang/String;Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ax.<init>(Ljava/lang/Object;)V",
+      "source": "DrawControls/TreeNode.<init>(Ljava/lang/Object;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "m.e()V",
+      "source": "jimm/ContactList.resetAutoAnsweredFlag()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "m.a(II[Lbs;)V",
+      "source": "jimm/ContactList.update$3c34fc2b(II[Ljimm/ContactListItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "m.a(Lbb;)V",
+      "source": "jimm/ContactList.addGroup(Ljimm/GroupItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "m.b(Lbb;)V",
+      "source": "jimm/ContactList.removeGroup(Ljimm/GroupItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.d()V",
+      "source": "DrawControls/VirtualList.assignSoftKeys()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIIIII)V",
+      "source": "DrawControls/VirtualList.drawItemData(Ljavax/microedition/lcdui/Graphics;IIIIII)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.b(Ljavax/microedition/lcdui/Graphics;IIII)Z",
+      "source": "DrawControls/VirtualList.drawMenuItems(Ljavax/microedition/lcdui/Graphics;IIII)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;Ljava/util/Vector;IIIII)Z",
+      "source": "DrawControls/VirtualList.drawMenuItems(Ljavax/microedition/lcdui/Graphics;Ljava/util/Vector;IIIII)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIIIIIIII)Z",
+      "source": "DrawControls/VirtualList.paint3points(Ljavax/microedition/lcdui/Graphics;IIIIIIIII)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.b(Ljava/util/Vector;)V",
+      "source": "DrawControls/VirtualList.sortMenuItems(Ljava/util/Vector;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(Ljava/util/Vector;)V",
+      "source": "DrawControls/VirtualList.initPopupMenuItems(Ljava/util/Vector;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(IIZ)V",
+      "source": "DrawControls/VirtualList.moveSelectedMenuItem(IIZ)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a()Ljava/util/Vector;",
+      "source": "DrawControls/VirtualList.leftMenuPressed()Ljava/util/Vector;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.b()Ljava/util/Vector;",
+      "source": "DrawControls/VirtualList.rightMenuPressed()Ljava/util/Vector;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.e(I)I",
+      "source": "DrawControls/VirtualList.getMenuHeight(I)I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "m.<init>()V",
+      "source": "jimm/ContactList.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "m.a(Lax;Lcn;)V",
+      "source": "jimm/ContactList.vtGetItemDrawData(LDrawControls/TreeNode;LDrawControls/ListItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "m.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/ContactList.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "jimm/Jimm.startApp()V",
+      "source": "jimm/Jimm.startApp()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.d()I",
+      "source": "jimm/GroupItem.getImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.a()Lbj;",
+      "source": "jimm/GroupItem.getXStatus()Ljimm/comm/XStatus;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.c()Ljava/lang/String;",
+      "source": "jimm/GroupItem.getText()Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.a()I",
+      "source": "jimm/GroupItem.getTextColor()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.i()I",
+      "source": "jimm/GroupItem.getClientImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.f()I",
+      "source": "jimm/GroupItem.getBirthDayImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.g()I",
+      "source": "jimm/GroupItem.getHappyImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.h()I",
+      "source": "jimm/GroupItem.getAuthImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.j()I",
+      "source": "jimm/GroupItem.getVisibilityImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.k()I",
+      "source": "jimm/GroupItem.getIgnoreImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.b()Ljava/lang/String;",
+      "source": "jimm/GroupItem.getName()Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.equals(Ljava/lang/Object;)Z",
+      "source": "jimm/GroupItem.equals(Ljava/lang/Object;)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.b()I",
+      "source": "jimm/GroupItem.getFontStyle()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.a()Ljava/lang/String;",
+      "source": "jimm/GroupItem.getSortText()Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.a(I)I",
+      "source": "jimm/GroupItem.getSortWeight(I)I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.<init>(ILjava/lang/String;)V",
+      "source": "jimm/GroupItem.<init>(ILjava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.<init>()V",
+      "source": "jimm/GroupItem.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bb.<init>(Ljava/lang/String;)V",
+      "source": "jimm/GroupItem.<init>(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIIIII)Z",
+      "source": "DrawControls/VirtualList.drawItems(Ljavax/microedition/lcdui/Graphics;IIIIII)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIII)Z",
+      "source": "DrawControls/VirtualList.drawMenuBar(Ljavax/microedition/lcdui/Graphics;IIII)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;IIIIIII)V",
+      "source": "DrawControls/VirtualList.drawGradient(Ljavax/microedition/lcdui/Graphics;IIIIIII)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.pointerReleased(II)V",
+      "source": "DrawControls/VirtualCanvas.pointerReleased(II)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ag.<init>()V",
+      "source": "jimm/MainMenu.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ag.<clinit>()V",
+      "source": "jimm/MainMenu.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ag.a(Z)Le;",
+      "source": "jimm/MainMenu.getSoundImage(Z)LDrawControls/Icon;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ag.a$78a4d1d0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+      "source": "jimm/MainMenu.showTextBoxForm(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ag.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/MainMenu.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "at.<init>(Laa;)V",
+      "source": "jimm/TimerTasks.<init>(Ljimm/comm/Action;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "at.<init>(I)V",
+      "source": "jimm/TimerTasks.<init>(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "at.<init>(Ljava/lang/Object;Ljava/lang/String;II)V",
+      "source": "jimm/TimerTasks.<init>(Ljava/lang/Object;Ljava/lang/String;II)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "at.<clinit>()V",
+      "source": "jimm/TimerTasks.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.<init>()V",
+      "source": "jimm/OptionsForm.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.a()V",
+      "source": "jimm/OptionsForm.callColorSchemeOptions()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.a(Ljava/lang/String;IZ)Ljava/lang/String;",
+      "source": "jimm/OptionsForm.getHotKeyActName(Ljava/lang/String;IZ)Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.d()V",
+      "source": "jimm/OptionsForm.InitHotkeyMenuUI()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.b()V",
+      "source": "jimm/OptionsForm.InitColorMenuUI()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.g()V",
+      "source": "jimm/OptionsForm.readAccontsData()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.a(Ljava/lang/String;)Ljava/lang/String;",
+      "source": "jimm/OptionsForm.checkUin(Ljava/lang/String;)Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.h()V",
+      "source": "jimm/OptionsForm.showAccountControls()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.i()V",
+      "source": "jimm/OptionsForm.setAccountOptions()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.j()V",
+      "source": "jimm/OptionsForm.readAccontsControls()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.itemStateChanged(Ljavax/microedition/lcdui/Item;)V",
+      "source": "jimm/OptionsForm.itemStateChanged(Ljavax/microedition/lcdui/Item;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.c()V",
+      "source": "jimm/OptionsForm.activate()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.a(Ljavax/microedition/lcdui/ChoiceGroup;Ljava/lang/String;)V",
+      "source": "jimm/OptionsForm.addStr(Ljavax/microedition/lcdui/ChoiceGroup;Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.a(Ljavax/microedition/lcdui/ChoiceGroup;Ljava/lang/String;I)V",
+      "source": "jimm/OptionsForm.setChecked(Ljavax/microedition/lcdui/ChoiceGroup;Ljava/lang/String;I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/OptionsForm.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.run()V",
+      "source": "jimm/OptionsForm.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.a(Ljava/lang/String;)V",
+      "source": "jimm/OptionsForm.onFileSelect(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.b(Ljava/lang/String;)V",
+      "source": "jimm/OptionsForm.onDirectorySelect(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.a()Lz;",
+      "source": "jimm/OptionsForm.getCItem()Ljimm/ContactItem;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.k()V",
+      "source": "jimm/OptionsForm.setStatusAfterChanges()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cg.l()V",
+      "source": "jimm/OptionsForm.clearForm()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cf.a$1385ff()V",
+      "source": "jimm/JimmUI.setColorScheme$1385ff()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ar.<init>(II)V",
+      "source": "jimm/ColorChooser.<init>(II)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ar.keyPressed(I)V",
+      "source": "jimm/ColorChooser.keyPressed(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ar.paint(Ljavax/microedition/lcdui/Graphics;)V",
+      "source": "jimm/ColorChooser.paint(Ljavax/microedition/lcdui/Graphics;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ch.run()V",
+      "source": "jimm/ContactItem$1.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "y.e()V",
+      "source": "jimm/ChatTextList.activate$25decb5()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ai.<clinit>()V",
+      "source": "jimm/util/ResourceBundle.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bl.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/XStatusForm.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.<init>(ILz;)V",
+      "source": "jimm/FileTransfer.<init>(ILjimm/ContactItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.a()Lz;",
+      "source": "jimm/FileTransfer.getCItem()Ljimm/ContactItem;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.a(Ljava/io/InputStream;I)V",
+      "source": "jimm/FileTransfer.setData(Ljava/io/InputStream;I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.a()V",
+      "source": "jimm/FileTransfer.startFT()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.run()V",
+      "source": "jimm/FileTransfer.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.a(Ljava/lang/String;)V",
+      "source": "jimm/FileTransfer.onFileSelect(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.b(Ljava/lang/String;)V",
+      "source": "jimm/FileTransfer.onDirectorySelect(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.itemStateChanged(Ljavax/microedition/lcdui/Item;)V",
+      "source": "jimm/FileTransfer.itemStateChanged(Ljavax/microedition/lcdui/Item;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.a(Ljava/lang/String;Ljava/lang/String;)V",
+      "source": "jimm/FileTransfer.askForNameDesc(Ljava/lang/String;Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/FileTransfer.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "p.b()V",
+      "source": "jimm/FileTransfer.free()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "x.b(I)Ljava/lang/String;",
+      "source": "jimm/Traffic.getString(I)Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "x.a(Z)I",
+      "source": "jimm/Traffic.generateCostSum(Z)I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cp.<init>(Z)V",
+      "source": "jimm/Search.<init>(Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cp.a(I)[Ljava/lang/String;",
+      "source": "jimm/Search.getResult(I)[Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cp.a()Lcr;",
+      "source": "jimm/Search.getSearchForm()Ljimm/Search$SearchForm;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cr.<init>(Lcp;)V",
+      "source": "jimm/Search$SearchForm.<init>(Ljimm/Search;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cr.a(I)V",
+      "source": "jimm/Search$SearchForm.activate(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cr.a(Z)V",
+      "source": "jimm/Search$SearchForm.nextOrPrev(Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cr.a(Lcd;II)V",
+      "source": "jimm/Search$SearchForm.vlKeyPress(LDrawControls/VirtualList;II)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cr.a(Lcd;)V",
+      "source": "jimm/Search$SearchForm.vlCursorMoved(LDrawControls/VirtualList;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cr.b(Lcd;)V",
+      "source": "jimm/Search$SearchForm.vlItemClicked(LDrawControls/VirtualList;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cr.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/Search$SearchForm.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "o.<init>(Lcp;[Ljava/lang/String;)V",
+      "source": "jimm/comm/SearchAction.<init>(Ljimm/Search;[Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "o.a()V",
+      "source": "jimm/comm/SearchAction.init()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "o.a(Lan;)Z",
+      "source": "jimm/comm/SearchAction.forward(Ljimm/comm/Packet;)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "o.a(I)V",
+      "source": "jimm/comm/SearchAction.onEvent(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "o.a()Z",
+      "source": "jimm/comm/SearchAction.isCompleted()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "o.b()Z",
+      "source": "jimm/comm/SearchAction.isError()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cf.b(Lz;)V",
+      "source": "jimm/JimmUI.addUser(Ljimm/ContactItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cf.c(Lz;)V",
+      "source": "jimm/JimmUI.showClientInfo(Ljimm/ContactItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "m.b(Z)V",
+      "source": "jimm/ContactList.afterConnect(Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cf.b()V",
+      "source": "jimm/JimmUI.about$51c0f892()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cf.a(Lbi;Ljava/lang/String;Le;IZ)V",
+      "source": "jimm/JimmUI.addTextListItem(LDrawControls/TextList;Ljava/lang/String;LDrawControls/Icon;IZ)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cf.a(Lbi;Ljava/lang/String;Le;IZZ)V",
+      "source": "jimm/JimmUI.addTextListItem(LDrawControls/TextList;Ljava/lang/String;LDrawControls/Icon;IZZ)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "g.run()V",
+      "source": "jimm/JimmUI$GetVersionInfoTimerTask.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "br.<init>([Ljava/lang/String;Ljava/lang/Object;)V",
+      "source": "jimm/EditInfo.<init>([Ljava/lang/String;Ljava/lang/Object;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "br.run()V",
+      "source": "jimm/EditInfo.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "br.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/EditInfo.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "as.a()V",
+      "source": "jimm/comm/SaveInfoAction.init()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "as.a(Lan;)Z",
+      "source": "jimm/comm/SaveInfoAction.forward(Ljimm/comm/Packet;)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "as.a()Z",
+      "source": "jimm/comm/SaveInfoAction.isCompleted()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "as.b()Z",
+      "source": "jimm/comm/SaveInfoAction.isError()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "as.a()I",
+      "source": "jimm/comm/SaveInfoAction.getProgress()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "as.a(I)V",
+      "source": "jimm/comm/SaveInfoAction.onEvent(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cf.a(Ljava/lang/String;Ljava/lang/String;)V",
+      "source": "jimm/JimmUI.requiestUserInfo(Ljava/lang/String;Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cf.a([Ljava/lang/String;Lbi;)V",
+      "source": "jimm/JimmUI.fillUserInfo([Ljava/lang/String;LDrawControls/TextList;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(I)Ljavax/microedition/lcdui/Command;",
+      "source": "DrawControls/VirtualList.findMenuByType(I)Ljavax/microedition/lcdui/Command;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ae.a(Lan;)V",
+      "source": "jimm/comm/ActionListener.forward(Ljimm/comm/Packet;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ae.a(Lz;)V",
+      "source": "jimm/comm/ActionListener.sendAutoMessage(Ljimm/ContactItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ct.a()V",
+      "source": "jimm/comm/UpdateContactListAction.init()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ct.a(Lan;)Z",
+      "source": "jimm/comm/UpdateContactListAction.forward(Ljimm/comm/Packet;)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ct.a()Z",
+      "source": "jimm/comm/UpdateContactListAction.isCompleted()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ct.b()Z",
+      "source": "jimm/comm/UpdateContactListAction.isError()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ct.a(Lz;I)[B",
+      "source": "jimm/comm/UpdateContactListAction.packRosterItem(Ljimm/ContactItem;I)[B",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "n.a()V",
+      "source": "jimm/comm/ConnectAction.init()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "n.a(Lan;)Z",
+      "source": "jimm/comm/ConnectAction.forward(Ljimm/comm/Packet;)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "r.b(I)V",
+      "source": "jimm/comm/Icq.setXStatus(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bq.a(Z)V",
+      "source": "jimm/comm/OtherAction.setStandartUserInfo(Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cj.a(Ljava/io/DataInputStream;)V",
+      "source": "jimm/Options.readOptions(Ljava/io/DataInputStream;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cj.a(Ljava/io/DataOutputStream;)V",
+      "source": "jimm/Options.writeOptions(Ljava/io/DataOutputStream;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ci.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "DrawControls/VirtualAlert.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "r.b(Z)V",
+      "source": "jimm/comm/Icq.setDisconnected(Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "r.a(I)Z",
+      "source": "jimm/comm/Icq.isNotCriticalConnectionError(I)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "r.a(Z)V",
+      "source": "jimm/comm/Icq.disconnect(Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "r.e()V",
+      "source": "jimm/comm/Icq.resetServerCon()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "n.a()Z",
+      "source": "jimm/comm/ConnectAction.isCompleted()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "n.b()Z",
+      "source": "jimm/comm/ConnectAction.isError()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bv.a(Lbv;)V",
+      "source": "jimm/JimmException.handleException(Ljimm/JimmException;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cv.a(Ljava/lang/String;)V",
+      "source": "jimm/SplashCanvas.setMessage(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cv.l(I)V",
+      "source": "jimm/SplashCanvas.setProgress(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cv.b(Ljavax/microedition/lcdui/Command;)V",
+      "source": "jimm/SplashCanvas.addCmd(Ljavax/microedition/lcdui/Command;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cv.c(Ljavax/microedition/lcdui/Command;)V",
+      "source": "jimm/SplashCanvas.removeCmd(Ljavax/microedition/lcdui/Command;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cv.b(Ljavax/microedition/lcdui/CommandListener;)V",
+      "source": "jimm/SplashCanvas.setCmdListener(Ljavax/microedition/lcdui/CommandListener;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cv.o()V",
+      "source": "jimm/SplashCanvas.messageAvailable()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cv.a(Ljava/lang/String;Laa;Z)V",
+      "source": "jimm/SplashCanvas.addTimerTask(Ljava/lang/String;Ljimm/comm/Action;Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cv.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/SplashCanvas.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "at.run()V",
+      "source": "jimm/TimerTasks.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ay.a(Ljava/lang/String;)V",
+      "source": "jimm/comm/Icq$HTTPConnection.connect(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ay.a(Lan;)V",
+      "source": "jimm/comm/Icq$HTTPConnection.sendPacket(Ljimm/comm/Packet;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ay.run()V",
+      "source": "jimm/comm/Icq$HTTPConnection.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ay.a()V",
+      "source": "jimm/comm/Icq$HTTPConnection.close()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cb.a(Ljava/lang/String;)V",
+      "source": "jimm/comm/Icq$SOCKSConnection.connect(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cb.a(BLjava/lang/String;Ljava/lang/String;)V",
+      "source": "jimm/comm/Icq$SOCKSConnection.connect_socks(BLjava/lang/String;Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cb.a()V",
+      "source": "jimm/comm/Icq$SOCKSConnection.close()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bp.<init>(Ljava/lang/String;Ljava/util/Vector;Ljava/util/Vector;)V",
+      "source": "jimm/util/StringConvertor.<init>(Ljava/lang/String;Ljava/util/Vector;Ljava/util/Vector;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bp.<clinit>()V",
+      "source": "jimm/util/StringConvertor.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cs.<init>()V",
+      "source": "jimm/util/NoticeOnBirthDay.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cs.<clinit>()V",
+      "source": "jimm/util/NoticeOnBirthDay.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bf.<init>(Lr;)V",
+      "source": "jimm/comm/Icq$SOCKETConnection.<init>(Ljimm/comm/Icq;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ce.<init>(Ljava/lang/String;Ljava/lang/String;)V",
+      "source": "jimm/comm/RequestInfoAction.<init>(Ljava/lang/String;Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ce.<clinit>()V",
+      "source": "jimm/comm/RequestInfoAction.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bh.<init>([B)V",
+      "source": "jimm/comm/GUID.<init>([B)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bj.<init>()V",
+      "source": "jimm/comm/XStatus.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bj.<clinit>()V",
+      "source": "jimm/comm/XStatus.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "aa.<init>(ZZ)V",
+      "source": "jimm/comm/Action.<init>(ZZ)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ac.<init>(JLjava/lang/String;Ljava/lang/String;I)V",
+      "source": "jimm/comm/Message.<init>(JLjava/lang/String;Ljava/lang/String;I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "av.<init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Z)V",
+      "source": "jimm/comm/PlainMessage.<init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Z)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "av.<init>(Ljava/lang/String;Lz;IJLjava/lang/String;)V",
+      "source": "jimm/comm/PlainMessage.<init>(Ljava/lang/String;Ljimm/ContactItem;IJLjava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bk.<init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V",
+      "source": "jimm/comm/UrlMessage.<init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bz.<init>()V",
+      "source": "jimm/CachedRecord.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "by.<init>(Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/EnterPassword.<init>(Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "by.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/EnterPassword.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bd.<init>()V",
+      "source": "jimm/util/PhoneBook.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bd.<clinit>()V",
+      "source": "jimm/util/PhoneBook.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bd.a()V",
+      "source": "jimm/util/PhoneBook.activate()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bd.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/util/PhoneBook.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "as.<init>([Ljava/lang/String;)V",
+      "source": "jimm/comm/SaveInfoAction.<init>([Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ah.<init>()V",
+      "source": "jimm/util/MagicEye.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ah.<clinit>()V",
+      "source": "jimm/util/MagicEye.<clinit>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ah.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/util/MagicEye.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ah.b(Lcd;)V",
+      "source": "jimm/util/MagicEye.vlItemClicked(LDrawControls/VirtualList;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ah.a(Lcd;)V",
+      "source": "jimm/util/MagicEye.vlCursorMoved(LDrawControls/VirtualList;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ah.a(Lcd;II)V",
+      "source": "jimm/util/MagicEye.vlKeyPress(LDrawControls/VirtualList;II)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.<init>()V",
+      "source": "DrawControls/VirtualCanvas.<init>()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.paint(Ljavax/microedition/lcdui/Graphics;)V",
+      "source": "DrawControls/VirtualCanvas.paint(Ljavax/microedition/lcdui/Graphics;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.showNotify()V",
+      "source": "DrawControls/VirtualCanvas.showNotify()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.hideNotify()V",
+      "source": "DrawControls/VirtualCanvas.hideNotify()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.run()V",
+      "source": "DrawControls/VirtualCanvas.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.keyPressed(I)V",
+      "source": "DrawControls/VirtualCanvas.keyPressed(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.keyReleased(I)V",
+      "source": "DrawControls/VirtualCanvas.keyReleased(I)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.pointerDragged(II)V",
+      "source": "DrawControls/VirtualCanvas.pointerDragged(II)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "am.pointerPressed(II)V",
+      "source": "DrawControls/VirtualCanvas.pointerPressed(II)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ad.<init>(Lam;)V",
+      "source": "DrawControls/VirtualCanvas$1.<init>(LDrawControls/VirtualCanvas;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ad.run()V",
+      "source": "DrawControls/VirtualCanvas$1.run()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "aa.a()V",
+      "source": "jimm/comm/Action.init()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "aa.a(Lan;)Z",
+      "source": "jimm/comm/Action.forward(Ljimm/comm/Packet;)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "aa.b()Z",
+      "source": "jimm/comm/Action.isError()Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "ap.a()V",
+      "source": "jimm/comm/Icq$Connection.close()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.equals(Ljava/lang/Object;)Z",
+      "source": "jimm/ContactListItem.equals(Ljava/lang/Object;)Z",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": false
+    },
+    {
+      "reference": "bs.d()I",
+      "source": "jimm/ContactListItem.getImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.a()Lbj;",
+      "source": "jimm/ContactListItem.getXStatus()Ljimm/comm/XStatus;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.i()I",
+      "source": "jimm/ContactListItem.getClientImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.f()I",
+      "source": "jimm/ContactListItem.getBirthDayImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.g()I",
+      "source": "jimm/ContactListItem.getHappyImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.h()I",
+      "source": "jimm/ContactListItem.getAuthImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.j()I",
+      "source": "jimm/ContactListItem.getVisibilityImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.k()I",
+      "source": "jimm/ContactListItem.getIgnoreImageIndex()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.c()Ljava/lang/String;",
+      "source": "jimm/ContactListItem.getText()Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.a()I",
+      "source": "jimm/ContactListItem.getTextColor()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bs.b()I",
+      "source": "jimm/ContactListItem.getFontStyle()I",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bx.a(Lcd;II)V",
+      "source": "DrawControls/VirtualListCommands.vlKeyPress(LDrawControls/VirtualList;II)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "bx.b(Lcd;)V",
+      "source": "DrawControls/VirtualListCommands.vlItemClicked(LDrawControls/VirtualList;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "cd.a(ILcn;)V",
+      "source": "DrawControls/VirtualList.get(ILDrawControls/ListItem;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "w.a(Ljava/lang/String;)V",
+      "source": "jimm/FileSystem.openFile(Ljava/lang/String;)V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "w.a()Ljava/io/OutputStream;",
+      "source": "jimm/FileSystem.openOutputStream()Ljava/io/OutputStream;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "w.a()Ljava/io/InputStream;",
+      "source": "jimm/FileSystem.openInputStream()Ljava/io/InputStream;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "w.a()V",
+      "source": "jimm/FileSystem.close()V",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "w.a()J",
+      "source": "jimm/FileSystem.fileSize()J",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    },
+    {
+      "reference": "w.a()Ljava/lang/String;",
+      "source": "jimm/FileSystem.getName()Ljava/lang/String;",
+      "signature_and_modifiers_verified": true,
+      "source_optimized_method_present": true
+    }
+  ],
+  "abstract_declarations": [
+    {
+      "reference_owner": "aa",
+      "reference_name": "a",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Action",
+      "source_name": "init",
+      "source_desc": "()V",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "cl.a()V",
+        "bw.a()V",
+        "o.a()V",
+        "as.a()V",
+        "ct.a()V",
+        "n.a()V",
+        "cq.a()V",
+        "al.a()V",
+        "v.a()V",
+        "ce.a()V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1028,
+      "authoring_access_flags": 1028,
+      "optimized_access_flags": 1028,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "cl.a()V",
+          "source": "jimm/comm/SendMessageAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bw.a()V",
+          "source": "jimm/comm/DirectConnectionAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "o.a()V",
+          "source": "jimm/comm/SearchAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "as.a()V",
+          "source": "jimm/comm/SaveInfoAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ct.a()V",
+          "source": "jimm/comm/UpdateContactListAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "n.a()V",
+          "source": "jimm/comm/ConnectAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "cq.a()V",
+          "source": "jimm/comm/ServerListsAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "al.a()V",
+          "source": "jimm/comm/RemoveMeAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "v.a()V",
+          "source": "jimm/comm/SysNoticeAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ce.a()V",
+          "source": "jimm/comm/RequestInfoAction.init()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "aa",
+      "reference_name": "a",
+      "reference_desc": "(Lan;)Z",
+      "source_owner": "jimm/comm/Action",
+      "source_name": "forward",
+      "source_desc": "(Ljimm/comm/Packet;)Z",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "cl.a(Lan;)Z",
+        "bw.a(Lan;)Z",
+        "o.a(Lan;)Z",
+        "as.a(Lan;)Z",
+        "ct.a(Lan;)Z",
+        "n.a(Lan;)Z",
+        "cq.a(Lan;)Z",
+        "al.a(Lan;)Z",
+        "v.a(Lan;)Z",
+        "ce.a(Lan;)Z"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1028,
+      "authoring_access_flags": 1028,
+      "optimized_access_flags": 1028,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "cl.a(Lan;)Z",
+          "source": "jimm/comm/SendMessageAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bw.a(Lan;)Z",
+          "source": "jimm/comm/DirectConnectionAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "o.a(Lan;)Z",
+          "source": "jimm/comm/SearchAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "as.a(Lan;)Z",
+          "source": "jimm/comm/SaveInfoAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ct.a(Lan;)Z",
+          "source": "jimm/comm/UpdateContactListAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "n.a(Lan;)Z",
+          "source": "jimm/comm/ConnectAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "cq.a(Lan;)Z",
+          "source": "jimm/comm/ServerListsAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "al.a(Lan;)Z",
+          "source": "jimm/comm/RemoveMeAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "v.a(Lan;)Z",
+          "source": "jimm/comm/SysNoticeAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ce.a(Lan;)Z",
+          "source": "jimm/comm/RequestInfoAction.forward(Ljimm/comm/Packet;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "aa",
+      "reference_name": "a",
+      "reference_desc": "()Z",
+      "source_owner": "jimm/comm/Action",
+      "source_name": "isCompleted",
+      "source_desc": "()Z",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "cl.a()Z",
+        "bw.a()Z",
+        "o.a()Z",
+        "as.a()Z",
+        "ct.a()Z",
+        "n.a()Z",
+        "cq.a()Z",
+        "al.a()Z",
+        "v.a()Z",
+        "ce.a()Z"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "cl.a()Z",
+          "source": "jimm/comm/SendMessageAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bw.a()Z",
+          "source": "jimm/comm/DirectConnectionAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "o.a()Z",
+          "source": "jimm/comm/SearchAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "as.a()Z",
+          "source": "jimm/comm/SaveInfoAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ct.a()Z",
+          "source": "jimm/comm/UpdateContactListAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "n.a()Z",
+          "source": "jimm/comm/ConnectAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "cq.a()Z",
+          "source": "jimm/comm/ServerListsAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "al.a()Z",
+          "source": "jimm/comm/RemoveMeAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "v.a()Z",
+          "source": "jimm/comm/SysNoticeAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ce.a()Z",
+          "source": "jimm/comm/RequestInfoAction.isCompleted()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "aa",
+      "reference_name": "b",
+      "reference_desc": "()Z",
+      "source_owner": "jimm/comm/Action",
+      "source_name": "isError",
+      "source_desc": "()Z",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "cl.b()Z",
+        "bw.b()Z",
+        "o.b()Z",
+        "as.b()Z",
+        "ct.b()Z",
+        "n.b()Z",
+        "cq.b()Z",
+        "al.b()Z",
+        "v.b()Z",
+        "ce.b()Z"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "cl.b()Z",
+          "source": "jimm/comm/SendMessageAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bw.b()Z",
+          "source": "jimm/comm/DirectConnectionAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "o.b()Z",
+          "source": "jimm/comm/SearchAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "as.b()Z",
+          "source": "jimm/comm/SaveInfoAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ct.b()Z",
+          "source": "jimm/comm/UpdateContactListAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "n.b()Z",
+          "source": "jimm/comm/ConnectAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "cq.b()Z",
+          "source": "jimm/comm/ServerListsAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "al.b()Z",
+          "source": "jimm/comm/RemoveMeAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "v.b()Z",
+          "source": "jimm/comm/SysNoticeAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ce.b()Z",
+          "source": "jimm/comm/RequestInfoAction.isError()Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "ap",
+      "reference_name": "a",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq$Connection",
+      "source_name": "close",
+      "source_desc": "()V",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "ay.a()V",
+        "cb.a()V",
+        "bf.a()V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "ay.a()V",
+          "source": "jimm/comm/Icq$HTTPConnection.close()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "cb.a()V",
+          "source": "jimm/comm/Icq$SOCKSConnection.close()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bf.a()V",
+          "source": "jimm/comm/Icq$SOCKETConnection.close()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "az",
+      "reference_name": "a",
+      "reference_desc": "(Lax;Lcn;)V",
+      "source_owner": "DrawControls/VirtualTreeCommands",
+      "source_name": "vtGetItemDrawData",
+      "source_desc": "(LDrawControls/TreeNode;LDrawControls/ListItem;)V",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "u.a(Lax;Lcn;)V",
+        "d.a(Lax;Lcn;)V",
+        "m.a(Lax;Lcn;)V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "u.a(Lax;Lcn;)V",
+          "source": "jimm/FileBrowser.vtGetItemDrawData(LDrawControls/TreeNode;LDrawControls/ListItem;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "d.a(Lax;Lcn;)V",
+          "source": "DrawControls/VirtualForm.vtGetItemDrawData(LDrawControls/TreeNode;LDrawControls/ListItem;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "m.a(Lax;Lcn;)V",
+          "source": "jimm/ContactList.vtGetItemDrawData(LDrawControls/TreeNode;LDrawControls/ListItem;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "az",
+      "reference_name": "a",
+      "reference_desc": "(Lax;Lax;)I",
+      "source_owner": "DrawControls/VirtualTreeCommands",
+      "source_name": "vtCompareNodes",
+      "source_desc": "(LDrawControls/TreeNode;LDrawControls/TreeNode;)I",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "u.a(Lax;Lax;)I",
+        "d.a(Lax;Lax;)I",
+        "m.a(Lax;Lax;)I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "u.a(Lax;Lax;)I",
+          "source": "jimm/FileBrowser.vtCompareNodes(LDrawControls/TreeNode;LDrawControls/TreeNode;)I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "d.a(Lax;Lax;)I",
+          "source": "DrawControls/VirtualForm.vtCompareNodes(LDrawControls/TreeNode;LDrawControls/TreeNode;)I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "m.a(Lax;Lax;)I",
+          "source": "jimm/ContactList.vtCompareNodes(LDrawControls/TreeNode;LDrawControls/TreeNode;)I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "equals",
+      "reference_desc": "(Ljava/lang/Object;)Z",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "equals",
+      "source_desc": "(Ljava/lang/Object;)Z",
+      "same_optimized_signature": false,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.equals(Ljava/lang/Object;)Z",
+        "z.equals(Ljava/lang/Object;)Z"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": null,
+      "same_optimized_access_flags": null,
+      "witnesses": [
+        {
+          "reference": "bb.equals(Ljava/lang/Object;)Z",
+          "source": "jimm/GroupItem.equals(Ljava/lang/Object;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.equals(Ljava/lang/Object;)Z",
+          "source": "jimm/ContactItem.equals(Ljava/lang/Object;)Z",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "d",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getImageIndex",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.d()I",
+        "z.d()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.d()I",
+          "source": "jimm/GroupItem.getImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.d()I",
+          "source": "jimm/ContactItem.getImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "a",
+      "reference_desc": "()Lbj;",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getXStatus",
+      "source_desc": "()Ljimm/comm/XStatus;",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.a()Lbj;",
+        "z.a()Lbj;"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.a()Lbj;",
+          "source": "jimm/GroupItem.getXStatus()Ljimm/comm/XStatus;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.a()Lbj;",
+          "source": "jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "i",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getClientImageIndex",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.i()I",
+        "z.i()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.i()I",
+          "source": "jimm/GroupItem.getClientImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.i()I",
+          "source": "jimm/ContactItem.getClientImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "f",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getBirthDayImageIndex",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.f()I",
+        "z.f()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.f()I",
+          "source": "jimm/GroupItem.getBirthDayImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.f()I",
+          "source": "jimm/ContactItem.getBirthDayImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "g",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getHappyImageIndex",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.g()I",
+        "z.g()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.g()I",
+          "source": "jimm/GroupItem.getHappyImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.g()I",
+          "source": "jimm/ContactItem.getHappyImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "h",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getAuthImageIndex",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.h()I",
+        "z.h()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.h()I",
+          "source": "jimm/GroupItem.getAuthImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.h()I",
+          "source": "jimm/ContactItem.getAuthImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "j",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getVisibilityImageIndex",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.j()I",
+        "z.j()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.j()I",
+          "source": "jimm/GroupItem.getVisibilityImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.j()I",
+          "source": "jimm/ContactItem.getVisibilityImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "k",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getIgnoreImageIndex",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.k()I",
+        "z.k()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.k()I",
+          "source": "jimm/GroupItem.getIgnoreImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.k()I",
+          "source": "jimm/ContactItem.getIgnoreImageIndex()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "c",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getText",
+      "source_desc": "()Ljava/lang/String;",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.c()Ljava/lang/String;",
+        "z.c()Ljava/lang/String;"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.c()Ljava/lang/String;",
+          "source": "jimm/GroupItem.getText()Ljava/lang/String;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.c()Ljava/lang/String;",
+          "source": "jimm/ContactItem.getText()Ljava/lang/String;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "a",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getTextColor",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.a()I",
+        "z.a()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.a()I",
+          "source": "jimm/GroupItem.getTextColor()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.a()I",
+          "source": "jimm/ContactItem.getTextColor()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "b",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getFontStyle",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "bb.b()I",
+        "z.b()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.b()I",
+          "source": "jimm/GroupItem.getFontStyle()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.b()I",
+          "source": "jimm/ContactItem.getFontStyle()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "a",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getSortText",
+      "source_desc": "()Ljava/lang/String;",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "bb.a()Ljava/lang/String;",
+        "z.a()Ljava/lang/String;"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.a()Ljava/lang/String;",
+          "source": "jimm/GroupItem.getSortText()Ljava/lang/String;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.a()Ljava/lang/String;",
+          "source": "jimm/ContactItem.getSortText()Ljava/lang/String;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "a",
+      "reference_desc": "(I)I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getSortWeight",
+      "source_desc": "(I)I",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "bb.a(I)I",
+        "z.a(I)I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "bb.a(I)I",
+          "source": "jimm/GroupItem.getSortWeight(I)I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "z.a(I)I",
+          "source": "jimm/ContactItem.getSortWeight(I)I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bx",
+      "reference_name": "a",
+      "reference_desc": "(Lcd;II)V",
+      "source_owner": "DrawControls/VirtualListCommands",
+      "source_name": "vlKeyPress",
+      "source_desc": "(LDrawControls/VirtualList;II)V",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "u.a(Lcd;II)V",
+        "af.a(Lcd;II)V",
+        "aq.a(Lcd;II)V",
+        "d.a(Lcd;II)V",
+        "bg.a(Lcd;II)V",
+        "y.a(Lcd;II)V",
+        "bo.a(Lcd;II)V",
+        "cr.a(Lcd;II)V",
+        "ah.a(Lcd;II)V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "u.a(Lcd;II)V",
+          "source": "jimm/FileBrowser.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "af.a(Lcd;II)V",
+          "source": "jimm/util/Selector.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "aq.a(Lcd;II)V",
+          "source": "jimm/Templates.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "d.a(Lcd;II)V",
+          "source": "DrawControls/VirtualForm.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bg.a(Lcd;II)V",
+          "source": "jimm/HistoryStorageList.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "y.a(Lcd;II)V",
+          "source": "jimm/ChatTextList.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bo.a(Lcd;II)V",
+          "source": "jimm/Emotions.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "cr.a(Lcd;II)V",
+          "source": "jimm/Search$SearchForm.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ah.a(Lcd;II)V",
+          "source": "jimm/util/MagicEye.vlKeyPress(LDrawControls/VirtualList;II)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bx",
+      "reference_name": "a",
+      "reference_desc": "(Lcd;)V",
+      "source_owner": "DrawControls/VirtualListCommands",
+      "source_name": "vlCursorMoved",
+      "source_desc": "(LDrawControls/VirtualList;)V",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "u.a(Lcd;)V",
+        "af.a(Lcd;)V",
+        "aq.a(Lcd;)V",
+        "d.a(Lcd;)V",
+        "bg.a(Lcd;)V",
+        "y.a(Lcd;)V",
+        "bo.a(Lcd;)V",
+        "cr.a(Lcd;)V",
+        "ah.a(Lcd;)V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "u.a(Lcd;)V",
+          "source": "jimm/FileBrowser.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "af.a(Lcd;)V",
+          "source": "jimm/util/Selector.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "aq.a(Lcd;)V",
+          "source": "jimm/Templates.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "d.a(Lcd;)V",
+          "source": "DrawControls/VirtualForm.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bg.a(Lcd;)V",
+          "source": "jimm/HistoryStorageList.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "y.a(Lcd;)V",
+          "source": "jimm/ChatTextList.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bo.a(Lcd;)V",
+          "source": "jimm/Emotions.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "cr.a(Lcd;)V",
+          "source": "jimm/Search$SearchForm.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ah.a(Lcd;)V",
+          "source": "jimm/util/MagicEye.vlCursorMoved(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "bx",
+      "reference_name": "b",
+      "reference_desc": "(Lcd;)V",
+      "source_owner": "DrawControls/VirtualListCommands",
+      "source_name": "vlItemClicked",
+      "source_desc": "(LDrawControls/VirtualList;)V",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "u.b(Lcd;)V",
+        "af.b(Lcd;)V",
+        "aq.b(Lcd;)V",
+        "d.b(Lcd;)V",
+        "bg.b(Lcd;)V",
+        "y.b(Lcd;)V",
+        "bo.b(Lcd;)V",
+        "cr.b(Lcd;)V",
+        "ah.b(Lcd;)V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "u.b(Lcd;)V",
+          "source": "jimm/FileBrowser.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "af.b(Lcd;)V",
+          "source": "jimm/util/Selector.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "aq.b(Lcd;)V",
+          "source": "jimm/Templates.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "d.b(Lcd;)V",
+          "source": "DrawControls/VirtualForm.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bg.b(Lcd;)V",
+          "source": "jimm/HistoryStorageList.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "y.b(Lcd;)V",
+          "source": "jimm/ChatTextList.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bo.b(Lcd;)V",
+          "source": "jimm/Emotions.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "cr.b(Lcd;)V",
+          "source": "jimm/Search$SearchForm.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ah.b(Lcd;)V",
+          "source": "jimm/util/MagicEye.vlItemClicked(LDrawControls/VirtualList;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getSize",
+      "source_desc": "()I",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "af.a()I",
+        "ci.a()I",
+        "bi.a()I",
+        "aw.a()I",
+        "bg.a()I"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1028,
+      "authoring_access_flags": 1028,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": false,
+      "witnesses": [
+        {
+          "reference": "af.a()I",
+          "source": "jimm/util/Selector.getSize()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ci.a()I",
+          "source": "DrawControls/VirtualAlert.getSize()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bi.a()I",
+          "source": "DrawControls/TextList.getSize()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "aw.a()I",
+          "source": "DrawControls/VirtualTree.getSize()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bg.a()I",
+          "source": "jimm/HistoryStorageList.getSize()I",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "(ILcn;)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "get",
+      "source_desc": "(ILDrawControls/ListItem;)V",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "af.a(ILcn;)V",
+        "ci.a(ILcn;)V",
+        "bi.a(ILcn;)V",
+        "aw.a(ILcn;)V",
+        "bg.a(ILcn;)V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1028,
+      "authoring_access_flags": 1028,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": false,
+      "witnesses": [
+        {
+          "reference": "af.a(ILcn;)V",
+          "source": "jimm/util/Selector.get(ILDrawControls/ListItem;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "ci.a(ILcn;)V",
+          "source": "DrawControls/VirtualAlert.get(ILDrawControls/ListItem;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bi.a(ILcn;)V",
+          "source": "DrawControls/TextList.get(ILDrawControls/ListItem;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "aw.a(ILcn;)V",
+          "source": "DrawControls/VirtualTree.get(ILDrawControls/ListItem;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bg.a(ILcn;)V",
+          "source": "jimm/HistoryStorageList.get(ILDrawControls/ListItem;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "k",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "jimm/FileBrowserListener",
+      "source_name": "onFileSelect",
+      "source_desc": "(Ljava/lang/String;)V",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "cg.a(Ljava/lang/String;)V",
+        "bg.a(Ljava/lang/String;)V",
+        "p.a(Ljava/lang/String;)V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "cg.a(Ljava/lang/String;)V",
+          "source": "jimm/OptionsForm.onFileSelect(Ljava/lang/String;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bg.a(Ljava/lang/String;)V",
+          "source": "jimm/HistoryStorageList.onFileSelect(Ljava/lang/String;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "p.a(Ljava/lang/String;)V",
+          "source": "jimm/FileTransfer.onFileSelect(Ljava/lang/String;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "k",
+      "reference_name": "b",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "jimm/FileBrowserListener",
+      "source_name": "onDirectorySelect",
+      "source_desc": "(Ljava/lang/String;)V",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "cg.b(Ljava/lang/String;)V",
+        "bg.b(Ljava/lang/String;)V",
+        "p.b(Ljava/lang/String;)V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "cg.b(Ljava/lang/String;)V",
+          "source": "jimm/OptionsForm.onDirectorySelect(Ljava/lang/String;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bg.b(Ljava/lang/String;)V",
+          "source": "jimm/HistoryStorageList.onDirectorySelect(Ljava/lang/String;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "p.b(Ljava/lang/String;)V",
+          "source": "jimm/FileTransfer.onDirectorySelect(Ljava/lang/String;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "k",
+      "reference_name": "a",
+      "reference_desc": "()Lz;",
+      "source_owner": "jimm/FileBrowserListener",
+      "source_name": "getCItem",
+      "source_desc": "()Ljimm/ContactItem;",
+      "same_optimized_signature": true,
+      "already_audited": true,
+      "override_witnesses": [
+        "cg.a()Lz;",
+        "bg.a()Lz;",
+        "p.a()Lz;"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "cg.a()Lz;",
+          "source": "jimm/OptionsForm.getCItem()Ljimm/ContactItem;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "bg.a()Lz;",
+          "source": "jimm/HistoryStorageList.getCItem()Ljimm/ContactItem;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        },
+        {
+          "reference": "p.a()Lz;",
+          "source": "jimm/FileTransfer.getCItem()Ljimm/ContactItem;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "w",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "jimm/FileSystem",
+      "source_name": "openFile",
+      "source_desc": "(Ljava/lang/String;)V",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "b.a(Ljava/lang/String;)V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "b.a(Ljava/lang/String;)V",
+          "source": "jimm/JSR75FileSystem.openFile(Ljava/lang/String;)V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "w",
+      "reference_name": "a",
+      "reference_desc": "()Ljava/io/OutputStream;",
+      "source_owner": "jimm/FileSystem",
+      "source_name": "openOutputStream",
+      "source_desc": "()Ljava/io/OutputStream;",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "b.a()Ljava/io/OutputStream;"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "b.a()Ljava/io/OutputStream;",
+          "source": "jimm/JSR75FileSystem.openOutputStream()Ljava/io/OutputStream;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "w",
+      "reference_name": "a",
+      "reference_desc": "()Ljava/io/InputStream;",
+      "source_owner": "jimm/FileSystem",
+      "source_name": "openInputStream",
+      "source_desc": "()Ljava/io/InputStream;",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "b.a()Ljava/io/InputStream;"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "b.a()Ljava/io/InputStream;",
+          "source": "jimm/JSR75FileSystem.openInputStream()Ljava/io/InputStream;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "w",
+      "reference_name": "a",
+      "reference_desc": "()V",
+      "source_owner": "jimm/FileSystem",
+      "source_name": "close",
+      "source_desc": "()V",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "b.a()V"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "b.a()V",
+          "source": "jimm/JSR75FileSystem.close()V",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "w",
+      "reference_name": "a",
+      "reference_desc": "()J",
+      "source_owner": "jimm/FileSystem",
+      "source_name": "fileSize",
+      "source_desc": "()J",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "b.a()J"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "b.a()J",
+          "source": "jimm/JSR75FileSystem.fileSize()J",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    },
+    {
+      "reference_owner": "w",
+      "reference_name": "a",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_owner": "jimm/FileSystem",
+      "source_name": "getName",
+      "source_desc": "()Ljava/lang/String;",
+      "same_optimized_signature": true,
+      "already_audited": false,
+      "override_witnesses": [
+        "b.a()Ljava/lang/String;"
+      ],
+      "authoring_declaration_verified": true,
+      "abstract_modifier_verified": true,
+      "declaration_access_flags_verified": true,
+      "reference_access_flags": 1025,
+      "authoring_access_flags": 1025,
+      "optimized_access_flags": 1025,
+      "same_optimized_access_flags": true,
+      "witnesses": [
+        {
+          "reference": "b.a()Ljava/lang/String;",
+          "source": "jimm/JSR75FileSystem.getName()Ljava/lang/String;",
+          "native_hierarchy_and_signature_verified": true,
+          "authoring_override_identity_verified": true
+        }
+      ]
+    }
+  ],
+  "group_overrides": [
+    {
+      "reference": "bb.d()I",
+      "source": "jimm/GroupItem.getImageIndex()I",
+      "identity_proven_by_interface_and_both_implementations": true,
+      "same_constant_body": true
+    },
+    {
+      "reference": "bb.i()I",
+      "source": "jimm/GroupItem.getClientImageIndex()I",
+      "identity_proven_by_interface_and_both_implementations": true,
+      "same_constant_body": true
+    },
+    {
+      "reference": "bb.f()I",
+      "source": "jimm/GroupItem.getBirthDayImageIndex()I",
+      "identity_proven_by_interface_and_both_implementations": true,
+      "same_constant_body": true
+    },
+    {
+      "reference": "bb.g()I",
+      "source": "jimm/GroupItem.getHappyImageIndex()I",
+      "identity_proven_by_interface_and_both_implementations": true,
+      "same_constant_body": true
+    },
+    {
+      "reference": "bb.h()I",
+      "source": "jimm/GroupItem.getAuthImageIndex()I",
+      "identity_proven_by_interface_and_both_implementations": true,
+      "same_constant_body": true
+    },
+    {
+      "reference": "bb.j()I",
+      "source": "jimm/GroupItem.getVisibilityImageIndex()I",
+      "identity_proven_by_interface_and_both_implementations": true,
+      "same_constant_body": true
+    },
+    {
+      "reference": "bb.k()I",
+      "source": "jimm/GroupItem.getIgnoreImageIndex()I",
+      "identity_proven_by_interface_and_both_implementations": true,
+      "same_constant_body": true
+    }
+  ]
+}

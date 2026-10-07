@@ -1509,16 +1509,16 @@ METHODS = [
     ('jimm/Jimm', 'startApp', '()V', 'startApp'),
     ('bb', 'a', '(II)V', 'setCounters'),
     ('bb', 'b', '(II)V', 'updateCounters'),
-    ('bb', 'd', '()I', 'getClientImageIndex'),
+    ('bb', 'd', '()I', 'getImageIndex'),
     ('bb', 'a', '()Lbj;', 'getXStatus'),
     ('bb', 'c', '()Ljava/lang/String;', 'getText'),
     ('bb', 'a', '()I', 'getTextColor'),
-    ('bb', 'i', '()I', 'getBirthDayImageIndex'),
-    ('bb', 'f', '()I', 'getHappyImageIndex'),
-    ('bb', 'g', '()I', 'getAuthImageIndex'),
-    ('bb', 'h', '()I', 'getVisibilityImageIndex'),
-    ('bb', 'j', '()I', 'getIgnoreImageIndex'),
-    ('bb', 'k', '()I', 'getImageIndex'),
+    ('bb', 'i', '()I', 'getClientImageIndex'),
+    ('bb', 'f', '()I', 'getBirthDayImageIndex'),
+    ('bb', 'g', '()I', 'getHappyImageIndex'),
+    ('bb', 'h', '()I', 'getAuthImageIndex'),
+    ('bb', 'j', '()I', 'getVisibilityImageIndex'),
+    ('bb', 'k', '()I', 'getIgnoreImageIndex'),
     ('bb', 'b', '()Ljava/lang/String;', 'getName'),
     ('bb', 'equals', '(Ljava/lang/Object;)Z', 'equals'),
     ('bb', 'b', '()I', 'getFontStyle'),
@@ -2232,6 +2232,19 @@ for member in REMAINING_SYMBOLS['additional_methods']:
     _audited_signatures.add(signature)
     SYMBOLS[signature[0] + '.' + signature[1] + signature[2]] = (
         member['source_owner'] + '.' + member['source_name'] + member['source_desc'])
+
+
+# Complete typed call names from previously verified method declarations, and
+# abstract members identified by the actual override hierarchy. Equal constant
+# bodies in GroupItem cannot establish which ContactListItem method is overridden.
+INHERITED_SYMBOLS = json.loads((ROOT / 'tools/source/inherited-symbols.json').read_text(encoding='utf-8'))
+SYMBOLS.update(INHERITED_SYMBOLS['method_symbols'])
+for member in INHERITED_SYMBOLS['abstract_methods']:
+    signature = (member['reference_owner'], member['reference_name'], member['reference_desc'])
+    if member['same_optimized_signature'] and signature not in _audited_signatures:
+        assert member['source_owner'] == CLASSES[signature[0]]
+        METHODS.append((*signature, member['source_name']))
+        _audited_signatures.add(signature)
 
 
 def normalized(code):
