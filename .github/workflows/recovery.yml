@@ -57,6 +57,7 @@ jobs:
             preservation/reports/source-save-info.json
             preservation/reports/source-save-info-locales.json
             preservation/reports/source-magic-eye.json
+            preservation/reports/source-jimm-urls.json
   verify:
     runs-on: ubuntu-latest
     steps:

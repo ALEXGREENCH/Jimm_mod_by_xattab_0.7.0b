@@ -168,6 +168,7 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Clipboard/MagicEye mismatch: compare build/source-tests/clipboard-reference.txt and clipboard-source.txt')
     report['clipboard_observations'] = len(clipboard_ref.read_text().splitlines())
     report['clipboard_differences'] = 0
+    report['jimm_urls'] = run([sys.executable, ROOT / 'tools/test_jimm_urls.py', '--prepared'], 'jimm-urls-audit')
     profile_ref, profile_src = TEST / 'profile-reference.txt', TEST / 'profile-source.txt'
     for mode, output in [('reference', profile_ref), ('source', profile_src)]:
         fixture = TEST / ('profile-' + mode + '.jar')

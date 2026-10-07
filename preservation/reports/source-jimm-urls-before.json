@@ -1,0 +1,26 @@
+{
+  "scope": "Negative regression run on the preserved actual source build at 0b3bb55, before changing JimmUI.gotoURL. The complete URL probe (same inputs and terminal capture as the positive check) compares real tagged text, metrics, pixels and commands. Differences belong to 504 complete cases; this is not a count of differing individual lines.",
+  "cases": 1056,
+  "different_cases": 504,
+  "reference_observations": 7573,
+  "source_observations": 7513,
+  "reference_guard": "coverage:1056:648:480:1716:576:648",
+  "source_guard": "coverage:1056:648:480:1656:576:648",
+  "different_styles": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "before_source_sha256": "2acd04c13754ee02519102cc0b6186e22e906eb6ba87ef833b6734c36602cca4",
+  "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+  "source_jar_sha256": "7099fff269c6cf82a6c828c0e8b3b4eb15c454b4fa7fa65b17e98ed137d1a9f7",
+  "source_unoptimized_class_jar_sha256": "62cb6d01adb20b915b417b249285398b87b226941c13f5c357ef391e651de762",
+  "source_controller_fixture_sha256": "0d0e9d19ac4e65168584e9fe89464f08101cfa6987b6164b9df9f5287d50cbe5",
+  "reference_output_sha256": "22f602ab085fecf54a6034bba32aef536c8d23f4ea8530b408a4a463322857ac",
+  "source_output_sha256": "889aeea85937092d53ff448fc5e3faab2e3a1f43b67e634b019b9c55a3dd9541",
+  "prior_commit": "0b3bb55"
+}

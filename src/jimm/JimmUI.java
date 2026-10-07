@@ -1800,7 +1800,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			URLList.setCommandListener(_this);
 			for (int i = 0; i < v.size(); i++)
 			{
-				URLList.addBigText((String) v.elementAt(i), URLList.getTextColor(), Font.STYLE_PLAIN, i).doCRLF(i);
+				URLList.addBigText((String) v.elementAt(i), URLList.getTextColor(), Options.fontStyle, i).doCRLF(i);
 			}
 			JimmUI.showInfoTextList(URLList);
 		}

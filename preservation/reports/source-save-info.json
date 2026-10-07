@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2 SaveInfoAction constructor, referenced profile array/UTF16 content, TLV payload construction, real selected-account getters and packet serializers, native FromIcqSrvPacket replies, repeated init/forward, partial state, counters/progress, timeout overflow and completion callbacks. Original and unoptimized controllers use the inherited file-transfer host fixture. The third run starts from the whole delivered optimized source JAR and its actual optimized helpers/constructors; it adds only the same scripted connection boundary and blocks live login. Four action sites are captured: default Date NEW/constructor, currentTimeMillis and ContactList.activate. Connection records the actual packet and may throw JimmException or be a null receiver. Packet serialization then executes separately on that recorded object and serialization exceptions are compared literally; successful send returns count acceptance by this scripted connection, not successful physical transport. Profile arrays use length-prefixed UTF16-unit SHA256 including null distinctions; packet bytes are compared directly. No physical network, scheduler or complete ContactList.activate side-effect claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "7099fff269c6cf82a6c828c0e8b3b4eb15c454b4fa7fa65b17e98ed137d1a9f7",
-  "source_unoptimized_class_jar_sha256": "62cb6d01adb20b915b417b249285398b87b226941c13f5c357ef391e651de762",
+  "source_jar_sha256": "0c5f84fcef8db860da68a699d2131133ec00f69638efdfb99f485b1366960243",
+  "source_unoptimized_class_jar_sha256": "454b2ee93cd6850a730e9494b039ebbfe56c71aa8152e60a40904972e7df66f3",
   "observations": 10767,
   "optimized_observations": 10767,
   "initializations_per_run": 1103,

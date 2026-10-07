@@ -2261,6 +2261,12 @@ for member in EXACT_METHODS['methods']:
         member['source_owner'] + '.' + member['source_name'] + member['source_desc'])
 
 
+# Public String/Object URL entry point; the differential probe also verifies its
+# actual parsing, list fields, command route and terminal exception boundary.
+assert ('cf', 'a', '(Ljava/lang/String;Ljava/lang/Object;)V') not in _audited_signatures
+METHODS.append(('cf', 'a', '(Ljava/lang/String;Ljava/lang/Object;)V', 'gotoURL'))
+
+
 def normalized(code):
     result = []
     for instruction in code:
