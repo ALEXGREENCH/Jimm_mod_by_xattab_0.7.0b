@@ -1,7 +1,8 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "640866bd05448e0a7ab1aff152c28db091f0b8e434665901ceb7d34b522abeac",
+  "source_jar_sha256": "ba4d1859dba0c6e89ad7246ace22a4697202a7ae1148004871b16cb6e7228fa5",
   "pure_logic": "PASS: 75837 May-reference differential checks (client versions, outgoing statuses, options streams)",
+  "packets": "PASS packets: 45331 observations, 15642 successful parses",
   "detector": "PASS probe: 3159 detector/status cases",
   "detector_cases": 3159,
   "detector_differences": 0,
@@ -56,6 +57,14 @@
   "file_transfer_source": "PASS probe: 826 login/roster observations",
   "file_transfer_observations": 826,
   "file_transfer_differences": 0,
+  "runnable_reference": "PASS probe: 2211 login/roster observations",
+  "runnable_source": "PASS probe: 2211 login/roster observations",
+  "runnable_observations": 2211,
+  "runnable_differences": 0,
+  "server_actions_reference": "PASS probe: 4494 login/roster observations",
+  "server_actions_source": "PASS probe: 4494 login/roster observations",
+  "server_actions_observations": 4494,
+  "server_actions_differences": 0,
   "camera_reference": "PASS probe: 260 login/roster observations",
   "camera_source": "PASS probe: 260 login/roster observations",
   "camera_observations": 260,
@@ -173,77 +182,77 @@
     {
       "target": "MIDP2",
       "language": "RU",
-      "sha256": "640866bd05448e0a7ab1aff152c28db091f0b8e434665901ceb7d34b522abeac"
+      "sha256": "ba4d1859dba0c6e89ad7246ace22a4697202a7ae1148004871b16cb6e7228fa5"
     },
     {
       "target": "MIDP2",
       "language": "UA",
-      "sha256": "65adee08b0b7d9d261101261c9173677a7f58bc84e738b8a1a6bf2f09d5b38c2"
+      "sha256": "ad8b0452eb448d0e404e28c83b1fac2f4d5e268e7433dc07ff3145d0da000236"
     },
     {
       "target": "MIDP2",
       "language": "RO",
-      "sha256": "99733654d5d15c432aa1cc3f0b112f5454b79e07949a8a8014658d843c1c5bdb"
+      "sha256": "eb41b024187f11f2cf906bcf1a18987255843691af37fbef64dbbfc66c367b0f"
     },
     {
       "target": "MIDP2",
       "language": "EN",
-      "sha256": "eb844c876acc16981b793eaa06b704565aa96251bddc548a8f0768e0c04b83d3"
+      "sha256": "7153bfd4af40cbba6b96a9f6dc607e43a94d6e3109e753c140b7a1f565f12c9f"
     },
     {
       "target": "MIDP2",
       "language": "CZ",
-      "sha256": "cbd1020c69ceeeebddec50e56c94045b385217865ecff7ccadcdb690c6330694"
+      "sha256": "8229c94414814279ca8e3874d9fe14482eb8b8dde16a0b0555630510afa196c3"
     },
     {
       "target": "MOTOROLA",
       "language": "RU",
-      "sha256": "a3679d0b4e6ed72a8c0492f6e58a5d340e0e6a978fc45c766fb35e9d5d4cf98d"
+      "sha256": "07d4c431bc076d19587669c9d6d367e4e05a2748999f17974a2d91d3363d2c82"
     },
     {
       "target": "MOTOROLA",
       "language": "UA",
-      "sha256": "c4bd196c13e3898e9eb04926a8a4a29f43645fc7e94ddcb6b3b685ca129e53f9"
+      "sha256": "a5eea2d49b3186e5b57add1c9b99537bbaa3eda1ad96f934876f17cb72cc4ddf"
     },
     {
       "target": "MOTOROLA",
       "language": "RO",
-      "sha256": "4c724ac021a7b14a3d71601f6e8adc5a1d3f44681a44f5b98edfc9256a12bdce"
+      "sha256": "8066bc56cb9bb056f9faa8ce3e5bb13285ba43940fe6782f51eedaedec046f00"
     },
     {
       "target": "MOTOROLA",
       "language": "EN",
-      "sha256": "1b663c387314ed3b7b5e66f4a738d927fb6da6af68d3dc40590ea4e892a59170"
+      "sha256": "d741ab1d995aa16b4ce1eec917a9f982ef5451378f4f981992b668f39c928e27"
     },
     {
       "target": "MOTOROLA",
       "language": "CZ",
-      "sha256": "ad2070314bb51a969a8643c4c6f505c533c4a0d3199ed0e0c2ef5737de151324"
+      "sha256": "8143915553d970b5a5861e41dc7ce09c6d313317b6eb6dd6bf8204de4aade8f1"
     },
     {
       "target": "SIEMENS2",
       "language": "RU",
-      "sha256": "e2e377b7a8d45f75926283ce69d7cf8086963d11569b511bdb29b69d258ae81e"
+      "sha256": "72638d4006385fe7df6109c157f62db59f408692dadc22328106087aa4c16b49"
     },
     {
       "target": "SIEMENS2",
       "language": "UA",
-      "sha256": "991091f8eb7901411070ec88cc3d3ebcae7dda41076ad58ee243f0d49c42e5f1"
+      "sha256": "89afc9e93bf4b2b464ef553a79d4d8c7ffda32adb7273c604b1898c45bcc4496"
     },
     {
       "target": "SIEMENS2",
       "language": "RO",
-      "sha256": "490a92fab1ac185779f33b6200db553368271be795cc6924b8e44a6615ac3534"
+      "sha256": "35c29d292287f68434da9ffa9eba53349c533c9632a9ac5f57b537b761c4db6b"
     },
     {
       "target": "SIEMENS2",
       "language": "EN",
-      "sha256": "5e1d531f93f380adb28e7f91f57ab19c55be75e927125c316ca53f0ad31fafb9"
+      "sha256": "17f4c798c8908dc329abbbec5f5df3fae6b69cb881e8367a3e432eb751049712"
     },
     {
       "target": "SIEMENS2",
       "language": "CZ",
-      "sha256": "89e9e45a1bc72c30d3ca738d9e098a4fa717c02b30f5c9d59c53301ab72f22b1"
+      "sha256": "0b37f6be932c187b96ebb178ff61f03391f5fb9aece95173fe36dcdcd0c4dfa0"
     }
   ],
   "minimal_modules": [
@@ -255,11 +264,5 @@
   "language_loader": "PASS language loader: 4348 observations, 2806 actual entries",
   "graphics": "PASS graphics: 3 platforms, 75974 observations, 4551 frames\nPASS graphics bytecode: 73 signatures, 58 identical normalized instructions/handlers",
   "filesystems": "PASS filesystems: 4 device paths, 1224 observations\nPASS filesystems bytecode: 32 signatures, 20 identical normalized instructions/handlers",
-  "light": "PASS light: 2 platforms, 6696 observations\nPASS light bytecode: 12 signatures, 8 identical normalized instructions/handlers",
-  "packets": "PASS packets: 45331 observations, 15642 successful parses",
-  "matrix_reused_for_unchanged_source": true,
-  "server_actions_reference": "PASS probe: 4494 login/roster observations",
-  "server_actions_source": "PASS probe: 4494 login/roster observations",
-  "server_actions_observations": 4494,
-  "server_actions_differences": 0
+  "light": "PASS light: 2 platforms, 6696 observations\nPASS light bytecode: 12 signatures, 8 identical normalized instructions/handlers"
 }

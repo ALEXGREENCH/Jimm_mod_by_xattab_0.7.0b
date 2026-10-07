@@ -1100,6 +1100,46 @@ SYMBOLS.update({
     'ac.a J': 'jimm/comm/Message.newDate J',
 })
 
+
+# Verified real RunnableImpl dispatcher, typed payload helpers and callback identities.
+CLASSES.update({'l': 'jimm/RunnableImpl'})
+SYMBOLS.update({
+    'l.<init>(I[Ljava/lang/Object;)V': 'jimm/RunnableImpl.<init>(I[Ljava/lang/Object;)V',
+    'l.run()V': 'jimm/RunnableImpl.run()V',
+    'l.a(I[Ljava/lang/Object;)V': 'jimm/RunnableImpl.callSerially(I[Ljava/lang/Object;)V',
+    'l.a(ILjava/lang/Object;)V': 'jimm/RunnableImpl.callSerially(ILjava/lang/Object;)V',
+    'l.a(Lac;)V': 'jimm/RunnableImpl.addMessageSerially(Ljimm/comm/Message;)V',
+    'l.a(Ljava/lang/String;Z)V': 'jimm/RunnableImpl.BeginTyping(Ljava/lang/String;Z)V',
+    'l.a$4e9ee315([Ljava/lang/Object;)Z': 'jimm/RunnableImpl.getBoolean$4e9ee315([Ljava/lang/Object;)Z',
+    'l.a([Ljava/lang/Object;II)V': 'jimm/RunnableImpl.setInt([Ljava/lang/Object;II)V',
+    'l.a([Ljava/lang/Object;I)I': 'jimm/RunnableImpl.getInt([Ljava/lang/Object;I)I',
+    'l.a I': 'jimm/RunnableImpl.type I',
+    'l.a [Ljava/lang/Object;': 'jimm/RunnableImpl.data [Ljava/lang/Object;',
+    'l.a Ljavax/microedition/midlet/MIDlet;': 'jimm/RunnableImpl.midlet Ljavax/microedition/midlet/MIDlet;',
+    'm.a(Ljava/lang/String;Z)V': 'jimm/ContactList.BeginTyping(Ljava/lang/String;Z)V',
+    'm.a(Lac;Z)V': 'jimm/ContactList.addMessage(Ljimm/comm/Message;Z)V',
+    'm.a$505cff1c(Ljava/lang/String;)V': 'jimm/ContactList.update$505cff1c(Ljava/lang/String;)V',
+    'm.a(I)V': 'jimm/ContactList.updateTitle(I)V',
+    'm.a(Ljava/lang/String;II[B[BIIIIIIII)V': 'jimm/ContactList.update(Ljava/lang/String;II[B[BIIIIIIII)V',
+    'm.b(Lz;)V': 'jimm/ContactList.addContactItem(Ljimm/ContactItem;)V',
+    'm.d()V': 'jimm/ContactList.setStatusesOffline()V',
+    'm.b(I)V': 'jimm/ContactList.playSoundNotification(I)V',
+    'm.c()V': 'jimm/ContactList.beforeConnect()V',
+    'cf.a([Ljava/lang/String;)V': 'jimm/JimmUI.showUserInfo([Ljava/lang/String;)V',
+    'cf.a()V': 'jimm/JimmUI.backToLastScreen()V',
+    'ag.a(Ljava/lang/String;)V': 'jimm/MainMenu.activate(Ljava/lang/String;)V',
+    'r.a()V': 'jimm/comm/Icq.nextSrvHost()V',
+    'r.b()V': 'jimm/comm/Icq.connect()V',
+    'jimm/Jimm.a(Z)V': 'jimm/Jimm.setMinimized(Z)V',
+    'x.a()I': 'jimm/Traffic.getSessionTraffic()I',
+    'cj.a(I)I': 'jimm/Options.getInt(I)I',
+    'cj.a(I)Z': 'jimm/Options.getBoolean(I)Z',
+    'jimm/Jimm.b Z': 'jimm/Jimm.is_phone_SE Z',
+    'r.b I': 'jimm/comm/Icq.reconnect_attempts I',
+    'r.a()Z': 'jimm/comm/Icq.isDisconnected()Z',
+    'ae.a(Lac;)Z': 'jimm/comm/ActionListener.isSpam(Ljimm/comm/Message;)Z',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1741,6 +1781,21 @@ METHODS.extend([
 
 SYMBOLS.update({'r.a Lap;': 'jimm/comm/Icq.c Ljimm/comm/Icq$Connection;', 'ap.a(Lan;)V': 'jimm/comm/Icq$Connection.sendPacket(Ljimm/comm/Packet;)V', 'cj.a(I)Ljava/lang/String;': 'jimm/Options.getString(I)Ljava/lang/String;', 'co.a([BIZ)I': 'jimm/comm/Util.getWord([BIZ)I'})
 METHODS.extend([('cj', 'a', '(I)Ljava/lang/String;', 'getString'), ('co', 'a', '([BIZ)I', 'getWord')])
+
+
+METHODS.extend([
+    ('l', '<init>', '(I[Ljava/lang/Object;)V', '<init>'),
+    ('l', 'run', '()V', 'run'),
+    ('l', 'a', '(I[Ljava/lang/Object;)V', 'callSerially'),
+    ('l', 'a', '(ILjava/lang/Object;)V', 'callSerially'),
+    ('l', 'a', '(Lac;)V', 'addMessageSerially'),
+    ('l', 'a', '(Ljava/lang/String;Z)V', 'BeginTyping'),
+    ('l', 'a$4e9ee315', '([Ljava/lang/Object;)Z', 'getBoolean$4e9ee315'),
+    ('l', 'a', '([Ljava/lang/Object;II)V', 'setInt'),
+    ('l', 'a', '([Ljava/lang/Object;I)I', 'getInt'),
+    ('cj', 'a', '(I)I', 'getInt'),
+    ('cj', 'a', '(I)Z', 'getBoolean'),
+])
 
 
 def normalized(code):

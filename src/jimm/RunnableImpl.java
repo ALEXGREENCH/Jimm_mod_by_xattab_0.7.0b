@@ -122,6 +122,10 @@ public class RunnableImpl implements Runnable
 			JimmUI.backToLastScreen();
 			break;
 
+		case TYPE_ACTIVATE_MM:
+			MainMenu.activate((String)data[0]);
+			break;
+
         case TYPE_RECONNECT:
             System.gc();
             try { Thread.sleep(Options.getInt(Options.OPTION_RECONNECT_DELAY) * 1000); }
@@ -134,10 +138,6 @@ public class RunnableImpl implements Runnable
                 Icq.connect();
             }
             break;
-
-		case TYPE_ACTIVATE_MM:
-			MainMenu.activate((String)data[0]);
-			break;
 		}
 	}
 

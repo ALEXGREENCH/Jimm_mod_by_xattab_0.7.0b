@@ -26,6 +26,7 @@ jobs:
             preservation/reports/source-language-loader.json
             preservation/reports/source-packets.json
             preservation/reports/source-server-actions.json
+            preservation/reports/source-runnable.json
   verify:
     runs-on: ubuntu-latest
     steps:

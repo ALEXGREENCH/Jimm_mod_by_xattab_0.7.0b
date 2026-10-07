@@ -4,7 +4,7 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_class_jar_sha256": "0703c4f5809e676552d523f7d64dcb545c2b349d0e93f96aa80cbcab55af4527",
+      "source_class_jar_sha256": "fd2ea2923fde7a61cd05c618705717ffecb78c9db20f5a7fbb508df237b16f5c",
       "methods": [
         {
           "reference": "b.<init>()V",
@@ -115,7 +115,7 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_class_jar_sha256": "8668ed4e121cc96c6393374433806e456fc23749022fe860f7a60565167ac782",
+      "source_class_jar_sha256": "639c3b1ebe424ff85ff0b7d43f0385862562e4957e7d6ceeb17008d88e0f9166",
       "methods": [
         {
           "reference": "b.<init>()V",
@@ -330,7 +330,7 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_class_jar_sha256": "28ee2e6409a5e753009c7d6872f3f31b349fa20649a789724e2417f31559e922",
+      "source_class_jar_sha256": "4e92813ec36cc6e09918cbaa19e65bc13d3a6b5e1875933c8d32e20f7a773d3d",
       "methods": [
         {
           "reference": "b.<init>()V",
