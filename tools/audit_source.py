@@ -2160,6 +2160,47 @@ METHODS.extend([
 ])
 
 
+CLASSES.update({'ad': 'DrawControls/VirtualCanvas$1'})
+SYMBOLS.update({
+    'am.a Lcd;': 'DrawControls/VirtualCanvas.currentControl LDrawControls/VirtualList;',
+    'am.a Ljava/util/Timer;': 'DrawControls/VirtualCanvas.repeatTimer Ljava/util/Timer;',
+    'am.a Ljava/util/TimerTask;': 'DrawControls/VirtualCanvas.timerTask Ljava/util/TimerTask;',
+    'am.a I': 'DrawControls/VirtualCanvas.lastKeyKode I',
+    'am.a Ljavax/microedition/lcdui/Display;': 'DrawControls/VirtualCanvas.display Ljavax/microedition/lcdui/Display;',
+    'am.a()V': 'DrawControls/VirtualCanvas.cancelKeyRepeatTask()V',
+    'ad.a Lam;': 'DrawControls/VirtualCanvas$1.this$0 LDrawControls/VirtualCanvas;',
+    'cd.c(II)V': 'DrawControls/VirtualList.keyReaction(II)V',
+    'cd.f(I)V': 'DrawControls/VirtualList.keyPressed(I)V',
+    'cd.g(I)V': 'DrawControls/VirtualList.keyRepeated(I)V',
+    'cd.h(I)V': 'DrawControls/VirtualList.keyReleased(I)V',
+    'cd.i(I)V': 'DrawControls/VirtualList.pointerDragged$255f295(I)V',
+    'cd.b(II)V': 'DrawControls/VirtualList.pointerPressed(II)V',
+    'cd.f()V': 'DrawControls/VirtualList.showNotify()V',
+    'cd.a(Ljavax/microedition/lcdui/Graphics;)V': 'DrawControls/VirtualList.paint(Ljavax/microedition/lcdui/Graphics;)V',
+    'aj.a()V': 'DrawControls/LightControl.reset()V',
+    'co.a(Ljava/io/ByteArrayOutputStream;[B)V': 'jimm/comm/Util.writeByteArray(Ljava/io/ByteArrayOutputStream;[B)V',
+})
+METHODS.extend([
+    ('co', 'a', '(Ljava/io/ByteArrayOutputStream;[B)V', 'writeByteArray'),
+    ('cd', 'a', '(II)V', 'doKeyreaction'),
+    ('cd', 'f', '(I)V', 'keyPressed'),
+    ('cd', 'g', '(I)V', 'keyRepeated'),
+    ('cd', 'h', '(I)V', 'keyReleased'),
+    ('am', '<init>', '()V', '<init>'),
+    ('am', 'paint', '(Ljavax/microedition/lcdui/Graphics;)V', 'paint'),
+    ('am', 'showNotify', '()V', 'showNotify'),
+    ('am', 'hideNotify', '()V', 'hideNotify'),
+    ('am', 'run', '()V', 'run'),
+    ('am', 'keyPressed', '(I)V', 'keyPressed'),
+    ('am', 'keyReleased', '(I)V', 'keyReleased'),
+    ('am', 'a', '()V', 'cancelKeyRepeatTask'),
+    ('am', 'pointerDragged', '(II)V', 'pointerDragged'),
+    ('am', 'pointerPressed', '(II)V', 'pointerPressed'),
+    ('ad', '<init>', '(Lam;)V', '<init>'),
+    ('ad', 'run', '()V', 'run'),
+])
+
+
 def normalized(code):
     result = []
     for instruction in code:

@@ -455,6 +455,7 @@ def main(matrix=False, skip_build=False):
         report['graphics'] = run([sys.executable, ROOT / 'tools/test_graphics.py', '--skip-build'], 'graphics-audit')
         report['filesystems'] = run([sys.executable, ROOT / 'tools/test_filesystems.py', '--skip-build'], 'filesystems-audit')
         report['light'] = run([sys.executable, ROOT / 'tools/test_light.py', '--skip-build'], 'light-audit')
+        report['key_routing'] = run([sys.executable, ROOT / 'tools/test_key_routing.py', '--skip-build'], 'key-routing-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
     report['request_info_categories'] = run([sys.executable, ROOT / 'tools/test_request_info_categories.py',

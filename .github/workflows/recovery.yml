@@ -22,6 +22,7 @@ jobs:
             preservation/reports/source-tests.json
             preservation/reports/source-bytecode-comparison.json
             preservation/reports/source-resources.json
+            preservation/reports/source-key-routing.json
             preservation/reports/source-light.json
             preservation/reports/source-light-bytecode.json
             preservation/reports/source-language-loader.json

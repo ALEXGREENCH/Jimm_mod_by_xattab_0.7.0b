@@ -812,7 +812,7 @@ public class Util
 		}
 		catch (Exception e)
 		{
-			//System.out.println("Util.writeByteArray: " + e.toString());
+			e.printStackTrace();
 		}
 	}
 	

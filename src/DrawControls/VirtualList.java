@@ -100,9 +100,6 @@ class VirtualCanvas extends Canvas implements Runnable
 
 	protected void keyPressed(int keyCode)
 	{
-        //#sijapp cond.if target is "MIDP2"#
-        LightControl.reset();
-        //#sijapp cond.end#
 		cancelKeyRepeatTask();
 		if (currentControl != null) currentControl.keyPressed(keyCode);
 		lastKeyKode = keyCode;
@@ -911,9 +908,13 @@ public abstract class VirtualList
 		//#sijapp cond.else#
 		case KEY_PRESSED:
 		//#sijapp cond.end#
-			//#sijapp cond.if target="MOTOROLA"#
+			//#sijapp cond.if target is "MOTOROLA"#
 			LightControl.flash(false);
 			//#sijapp cond.end#
+			//#sijapp cond.if target is "MIDP2"#
+			LightControl.reset();
+			//#sijapp cond.end#
+			if (Options.getBoolean(Options.OPTION_STATUS_AUTO)) TimerTasks.setStatusTimer();
 			keyReaction(keyCode, type);
 			break;
 		case KEY_REPEATED:
@@ -926,12 +927,8 @@ public abstract class VirtualList
 
 	protected void keyPressed(int keyCode)
 	{
-        //#sijapp cond.if target is "MIDP2"#
-        LightControl.reset();
-        //#sijapp cond.end#
 		//#sijapp cond.if target isnot "MOTOROLA"#
 		doKeyreaction(keyCode, KEY_PRESSED);
-		if (Options.getBoolean(Options.OPTION_STATUS_AUTO)) TimerTasks.setStatusTimer();
 		//#sijapp cond.end#
 	}
 
@@ -944,7 +941,6 @@ public abstract class VirtualList
 	{
 		//#sijapp cond.if target is "MOTOROLA"#
 		doKeyreaction(keyCode, KEY_RELEASED);
-		if (Options.getBoolean(Options.OPTION_STATUS_AUTO)) TimerTasks.setStatusTimer();
 		//#sijapp cond.end#
 	}
 	
