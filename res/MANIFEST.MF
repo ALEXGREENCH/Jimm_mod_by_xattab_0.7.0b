@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Created-By: Jimm Project
-MIDlet-Name: Jimm
+MIDlet-Name: J[im]m
 MIDlet-Version: ###VERSION-JAVA###
 MIDlet-Vendor: Jimm Project
 MIDlet-Jar-URL: Jimm.jar
@@ -10,7 +10,8 @@ MicroEdition-Profile: ###MIDP-PROFILE###
 MicroEdition-Configuration: CLDC-1.0
 MIDlet-Description: J2ME ICQ clone
 MIDlet-Info-URL: http://jimm.im/wap
-MIDlet-1: Jimm,icon.png,jimm.Jimm
+MIDlet-1: J[im]m,/icon.png,jimm.Jimm
 Jimm-Version: ###VERSION###
 Background: True
 FlipInsensitive: True
+Nokia-MIDlet-No-Exit: true

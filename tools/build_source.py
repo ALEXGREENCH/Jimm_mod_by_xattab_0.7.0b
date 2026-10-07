@@ -42,7 +42,7 @@ def build(target='MIDP2', language='RU', modules=MODULES, compile_only=False, sm
                       'Preprocess', *args])
     preprocess('source', ROOT / 'src', sources, target, modules)
     replacements = {'VERSION': '0.7.0b', 'VERSION-JAVA': '0.7.0', 'DATE': '12.05.2010',
-                    'TARGET': target, 'MODULES': modules}
+                    'TARGET': target, 'MODULES': modules, 'MIDP-PROFILE': 'MIDP-2.0'}
     for path in sources.rglob('*'):
         if path.suffix in ('.java', '.lang'):
             data = path.read_bytes()

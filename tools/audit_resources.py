@@ -39,6 +39,61 @@ def assets(jar, language):
             and entry.filename not in ['META-INF/MANIFEST.MF', language + '.lng']}
 
 
+def attributes(data):
+    """Read the main Java ME manifest/JAD section, including folded values."""
+    lines = []
+    for line in data.decode('utf-8').splitlines():
+        if not line:
+            break
+        if line.startswith(' '):
+            if not lines:
+                raise AssertionError('Manifest continuation without an attribute')
+            lines[-1] += line[1:]
+        else:
+            lines.append(line)
+    result = {}
+    for line in lines:
+        name, separator, value = line.partition(': ')
+        if not separator or name in result:
+            raise AssertionError('Invalid or duplicate manifest attribute: ' + line)
+        result[name] = value
+    return result
+
+
+def metadata(old, new, reference, source):
+    expected = attributes(old.read('META-INF/MANIFEST.MF'))
+    actual = attributes(new.read('META-INF/MANIFEST.MF'))
+    old_jad = attributes(reference.with_suffix('.jad').read_bytes())
+    jad = attributes(source.with_suffix('.jad').read_bytes())
+    # Ant's version identifies the original tool, not the restored application.
+    # The URL and byte count belong to the rebuilt file and its accompanying JAD.
+    regenerated = {'Ant-Version', 'MIDlet-Jar-URL', 'MIDlet-Jar-Size'}
+    historic = {k: v for k, v in expected.items() if k not in regenerated}
+    differences = []
+    if {k: v for k, v in actual.items() if k not in regenerated} != historic:
+        differences.append('manifest historical attributes')
+    if {k: v for k, v in old_jad.items() if k not in regenerated} != historic:
+        differences.append('reference JAD historical attributes')
+    if {k: v for k, v in jad.items() if k not in regenerated} != historic:
+        differences.append('JAD historical attributes')
+    if any('###' in value for value in [*actual.values(), *jad.values()]):
+        differences.append('unexpanded build token')
+    if jad.get('MIDlet-Jar-URL') != source.name:
+        differences.append('JAD URL')
+    if jad.get('MIDlet-Jar-Size') != str(source.stat().st_size):
+        differences.append('JAD size')
+    entry = actual.get('MIDlet-1', '').split(',')
+    if len(entry) != 3 or entry[2].strip().replace('.', '/') + '.class' not in new.namelist():
+        differences.append('MIDlet entry class')
+    if len(entry) != 3 or entry[1].strip().lstrip('/') not in new.namelist():
+        differences.append('MIDlet entry icon')
+    if actual.get('MIDlet-Icon', '').lstrip('/') not in new.namelist():
+        differences.append('MIDlet icon')
+    return {'historical_attributes_checked': len(historic),
+            'attributes': historic, 'jad_url': jad.get('MIDlet-Jar-URL'),
+            'jad_size': jad.get('MIDlet-Jar-Size'), 'differences': differences}
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     mapping = json.loads((ROOT / 'tools/source/language-keys.json').read_text('utf-8'))
@@ -56,7 +111,9 @@ def main():
             recover.run([recover.java(), '-cp', task_cp, 'LanguageInventory',
                          prepared / ('lng/' + language + '.lang'), binary, prepared / 'lng/EN.lang'])
             inventories[target, language] = {name: (short, value) for name, short, value in records(binary.read_bytes(), 3)}
-    report = {'scope': 'All non-class files except the regenerated manifest are checked. Language dictionaries '
+    report = {'scope': 'All non-class files are checked. Manifest and JAD application attributes must match '
+                      'the original release; regenerated JAR URL/size and the original Ant version are separate. '
+                      'Language dictionaries '
                       'must match literal keys and decoded values without key normalization. Recovered semantic '
                       'names are checked separately; equal-value name candidates remain explicit. Serialized '
                       'record order/bytes are reported independently of dictionary equality.',
@@ -67,6 +124,7 @@ def main():
             reference = ROOT / ('preservation/wayback-originals/Jimm_' + original_target + '_' + language + '/Jimm.jar')
             source = ROOT / ('dist/source/Jimm-' + target + '-' + language + '.jar')
             with zipfile.ZipFile(reference) as old, zipfile.ZipFile(source) as new:
+                descriptor = metadata(old, new, reference, source)
                 left, right = assets(old, language), assets(new, language)
                 differences = [name for name in sorted(set(left) | set(right)) if left.get(name) != right.get(name)]
                 old_language = old.read(language + '.lng')
@@ -123,6 +181,7 @@ def main():
                     language_differences.append('<extra records>')
                 report['builds'].append({'target': target, 'language': language,
                                         'reference_sha256': recover.sha(reference), 'source_sha256': recover.sha(source),
+                                        'metadata': descriptor,
                                         'resource_files_matched': len(left) - len([n for n in differences if n in left]),
                                         'resource_differences': differences,
                                         'language_entries': len(old_pairs), 'named_language_entries_checked': len(checked),
@@ -134,13 +193,14 @@ def main():
                                         'source_language_sha256': sha(new_language),
                                         'files': [{'path': name, 'bytes': len(data), 'sha256': sha(data)} for name, data in sorted(left.items())],
                                         'language_keys': checked})
-                if differences or language_differences:
-                    failures.append((target, language, differences, language_differences))
+                if differences or language_differences or descriptor['differences']:
+                    failures.append((target, language, differences, language_differences, descriptor['differences']))
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
     if failures:
         raise AssertionError('May resource mismatch: ' + repr(failures))
     print('PASS resources: 15 builds, ' + str(sum(b['resource_files_matched'] for b in report['builds'])) +
           ' exact asset files, ' + str(sum(b['language_entries'] for b in report['builds'])) + ' decoded language entries')
+    print('PASS metadata: 15 JAR/JAD pairs, historical application attributes, entry class/icon and rebuilt URL/size')
 
 
 if __name__ == '__main__':
