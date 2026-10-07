@@ -84,6 +84,8 @@ jobs:
             preservation/reports/source-roster-keys.json
             preservation/reports/source-roster-keys-before.json
             preservation/reports/source-roster-keys-bytecode.json
+            preservation/reports/source-roster-state.json
+            preservation/reports/source-roster-state-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

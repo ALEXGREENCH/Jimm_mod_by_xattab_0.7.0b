@@ -1865,7 +1865,14 @@
             "m.a(Lcd;II)V": "jimm/ContactList.vlKeyPress(LDrawControls/VirtualList;II)V",
             "m.a(Lcd;)V": "jimm/ContactList.vlCursorMoved(LDrawControls/VirtualList;)V",
             "m.b(Lcd;)V": "jimm/ContactList.vlItemClicked(LDrawControls/VirtualList;)V",
-            "m.a()Lf;": "jimm/ContactList.getImageList()LDrawControls/ImageList;"
+            "m.a()Lf;": "jimm/ContactList.getImageList()LDrawControls/ImageList;",
+            "m.a(Z)Ljava/lang/String;": "jimm/ContactList.showNextPrevChat(Z)Ljava/lang/String;",
+            "m.d()I": "jimm/ContactList.getUnreadMessCount()I",
+            "m.a(Lbb;)[Lz;": "jimm/ContactList.getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+            "m.b(Ljava/lang/String;Z)V": "jimm/ContactList.TypingHelper(Ljava/lang/String;Z)V",
+            "m.a(Z)Z": "jimm/ContactList.changeSoundMode(Z)Z",
+            "m.a Lz;": "jimm/ContactList.lastChatItem Ljimm/ContactItem;",
+            "z.e()I": "jimm/ContactItem.getUnreadMessCount()I"
           },
           "callback": {
             "method": "m.a(Lcd;II)V",

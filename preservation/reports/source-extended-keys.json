@@ -32,7 +32,7 @@
             {
               "flavor": "device",
               "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-              "fixture_sha256": "bb7121909016e9468bd483763d110d9114b5d7fff1fdbfce95354d1ee11c2271",
+              "fixture_sha256": "745afa2d817ff82d835148c5af1eeadccb4438923efb24c7f193729e824f2f29",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -46,7 +46,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-              "fixture_sha256": "dc2669a573ae97350a7fc0307c707622772706b20b0d97cb29cbd6544d1664b6",
+              "fixture_sha256": "ca4ef59f36a08128f27d3b667f9c157e596370066e95b956ce5f0169a543acbf",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -65,7 +65,7 @@
             {
               "flavor": "device",
               "input_sha256": "1312cf76574fe42e27d6df0324bd0b461716d3cda7a9bca0c4d13e0c69ba04ea",
-              "fixture_sha256": "6cac69f940a14d022aa3e01c23952bcc7c02a3dd1aa7c34ec4b6f7a3d347c386",
+              "fixture_sha256": "bf43bc4b3ff037a869c1e7801d744062000f48c3e06d9f4343e703a4ff0e611f",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -79,7 +79,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "1312cf76574fe42e27d6df0324bd0b461716d3cda7a9bca0c4d13e0c69ba04ea",
-              "fixture_sha256": "4f64f144400eae68702fe343c0f3e0daf04598253897641404aed3617f6ce67a",
+              "fixture_sha256": "28586b679429fafbcd60f2aeabc4921cfab77df01281be6350f29aaddca63566",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -98,7 +98,7 @@
             {
               "flavor": "device",
               "input_sha256": "37a153e968f62a348fd9227a794975c6a5b9c0eabf88cbb2cdbb2889fcad8a90",
-              "fixture_sha256": "27cb36e390c6ea2aa4e5d7560ffea485426d8c8ca6e0f1f61cdc2499f180f91d",
+              "fixture_sha256": "e4018489a1600548e8fb5122cd7e0fccae82782dd01afaf2e7a6566be5ef36b0",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -112,7 +112,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "37a153e968f62a348fd9227a794975c6a5b9c0eabf88cbb2cdbb2889fcad8a90",
-              "fixture_sha256": "dccb446201ff8dc2c973b0e07905093557529d4f23493f337b4e2cf312da413c",
+              "fixture_sha256": "548ee2673b1664ad4cdbd5d37aa1672176add28421d1a8b8c4413384b8a0ef0b",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -157,7 +157,7 @@
             {
               "flavor": "device",
               "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-              "fixture_sha256": "cc2cc894f3e3fa23092dbf24dacede16eabe5dfb45525662aa5f7f2b84c4c2fe",
+              "fixture_sha256": "da74f744c1e62004ec6e5af2526f7f640b60bc426fdde85d01d55ac21d775972",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -171,7 +171,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-              "fixture_sha256": "893a89d6169f00852d753408f0b2d90dc1d4f6056d16beaaf8056311c857d8ff",
+              "fixture_sha256": "c09566e16b786770d91f4a65566282ab55fc417f7f4d1735e53cfbcc30659940",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -190,7 +190,7 @@
             {
               "flavor": "device",
               "input_sha256": "974fb0340a9ccc0529bda058efddb47709676f803c3a457b4c19d2ad891b8f0f",
-              "fixture_sha256": "47426e9bbc43322a53dfe573a8f4e6ca1e8bb28cfd38bf47b3e8ed5c29ec57f3",
+              "fixture_sha256": "93734b04c305b2109f85f71e763fd80b7e44889996b6359e37795c1abe9efc79",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -204,7 +204,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "974fb0340a9ccc0529bda058efddb47709676f803c3a457b4c19d2ad891b8f0f",
-              "fixture_sha256": "0e1f9cba71965008f3e8ce0616fcc0695007a52788ebd86c2ee07a346fc32a0e",
+              "fixture_sha256": "8a26b376fbd095af5b23ad0cfd72a8e12a4fab4f129f8fc9b06c343a57c642b2",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -223,7 +223,7 @@
             {
               "flavor": "device",
               "input_sha256": "facf6971bcb90b538f0fe081039fbeddb6e7bc4318ec297cd9479f4a18f66cc4",
-              "fixture_sha256": "57c1ed6b09f34ce47172c29b0d5122e26ca8d0f6e3b0a233230cb042a7d6d341",
+              "fixture_sha256": "6f2bb2e785974304cb2be2f49b05419f858b96ef5936b7779269e32b41f5cd5c",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -237,7 +237,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "facf6971bcb90b538f0fe081039fbeddb6e7bc4318ec297cd9479f4a18f66cc4",
-              "fixture_sha256": "414ba2a255c883522aafeb991f91eb1e3ecc6e99bdfe326b7e80a074507944a3",
+              "fixture_sha256": "72ae49745f5b1df12f5f3336b81d3e426bdd5095a1f4c381eb739675c9526963",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -282,7 +282,7 @@
             {
               "flavor": "device",
               "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-              "fixture_sha256": "85200c728702679fb4118b72581c991504e485d6abe15dcea15e30936ff48dcc",
+              "fixture_sha256": "d2d8967058a081ad9b434c3295fd55cf135c4015054a025c49d228f03b4e3eb9",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -296,7 +296,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-              "fixture_sha256": "b5d878f60ad524627b76c37858fceacf98adc75647a2d1c465960b921f4cabc9",
+              "fixture_sha256": "5c660b88cc22a3bd1cf65fce6be16454cdf75a14ed9176b1d64efda0b525ef7f",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -315,7 +315,7 @@
             {
               "flavor": "device",
               "input_sha256": "df08de155d4357a8253bb4f24a92bd7a976ee973ccf87e98aea16e4c1815542d",
-              "fixture_sha256": "3bd3cd010f5c66ac5f7359a41064067cfe3e7bd2c614d43ed68fdace8ab8f144",
+              "fixture_sha256": "52d03f8c02cde24aabbb8ed1c0cc58f9de6d5d6ff1613f6181862482193c8d5f",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -329,7 +329,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "df08de155d4357a8253bb4f24a92bd7a976ee973ccf87e98aea16e4c1815542d",
-              "fixture_sha256": "6a1b021475b8dd2e05ae3c892059ce585656e465557ab466a7697fa4c6d7c843",
+              "fixture_sha256": "a4d6380ed6d8ef14bbfce4aa47f41ac4f9a9752ef0c1620996e81399a12dd7f9",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -348,7 +348,7 @@
             {
               "flavor": "device",
               "input_sha256": "89b471e817cfdd58939b04a06c37e090dbed51ea69b53bca167d7a3ead2d4acc",
-              "fixture_sha256": "55e5c5a75ee3bc0390b55455afaea87856e761fa98e44f01edc855a628645f47",
+              "fixture_sha256": "62d7e24a4b48210da1a15c6e46d0e7fd4e2153c0fd7bbb955b96da213d1edef0",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -362,7 +362,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "89b471e817cfdd58939b04a06c37e090dbed51ea69b53bca167d7a3ead2d4acc",
-              "fixture_sha256": "f7c01cd950f888477d1c61da30bbc0202857fe9ed0bf545e09a7fb232e58abfe",
+              "fixture_sha256": "215b70955793252696ed5f842041c70a4b70a48610333c4e4509c64a3f3c9e56",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {

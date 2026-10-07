@@ -1,7 +1,7 @@
 {
   "scope": "Canonical inherited Util names, verified declarations and observed optimized signatures. All 87 reference methods and 62 fields are inventoried. Three parameter-specialized methods and the removed constructor are recorded separately; their signatures are not declared identical. Assigned-value initializer matching identifies members only; unused preceding parse calls and the omitted default-zero array store remain in whole-method instruction audits. Whole-method comparison includes every instruction, local slot, branch and exception region. A field identity is not a whole-initializer equality claim. Canonical names continue the inherited source; lost author spellings are not proven.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_optimized_class_jar_sha256": "000e896e3d26495e95d9fff1869f2d14da1fca793374b67d31068a503495019f",
+  "source_optimized_class_jar_sha256": "f3a71abacb4dcd3a417fa9b8dd36d64bdfb35ac5af1a435965876c829da0bb12",
   "source_unoptimized_class_jar_sha256": "55d2c31f9aef9dd12cf0e419730caf6cd1d7e18350b191bf1e5d54c5f7937f56",
   "method_inventory": 87,
   "field_inventory": 62,

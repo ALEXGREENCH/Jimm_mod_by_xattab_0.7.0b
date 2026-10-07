@@ -320,6 +320,8 @@
   "sound_bytecode": "PASS sound bytecode: 3 platforms, 7 whole typed methods per flavor, complete diffs/handlers and Siemens warm-up",
   "roster_keys": "PASS roster keys: MIDP2 restored\nPASS roster keys: MOTOROLA restored\nPASS roster keys: SIEMENS2 restored",
   "roster_key_bytecode": "PASS roster key bytecode: whole callback/page bodies, three platform guards, complete diffs and handlers",
+  "roster_state": "PASS roster state: MIDP2 3218\nPASS roster state: MOTOROLA 3218\nPASS roster state: SIEMENS2 3218",
+  "roster_state_bytecode": "PASS roster state bytecode: 6 whole methods per flavor, complete diffs/handlers and explicit unread/typing helper specialization",
   "socket_bytecode": "PASS socket close: all 3 platforms match 28 normalized instructions and all exception handlers",
   "phone_book_bytecode": "PASS PhoneBook: 8 optimized signatures in MIDP2/Siemens2, 15 platform/language presence checks",
   "send_text_bytecode": "PASS sender/typing platform audit: 3 original identities, 1024 bounds/increment, light guard and static class monitor",

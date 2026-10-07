@@ -1,0 +1,594 @@
+{
+  "observations": 9654,
+  "scope": "Whole genuine ContactList aggregation, group selection, chat cycling, TypingHelper and changeSoundMode. Actual ContactItem counters, activation, ChatHistory/ChatTextList and Options save/memory RMS execute. Device flavor preserves all application bytes and avoids positive chat display transitions. Scripted flavor substitutes exactly seven external isShown/repaint/setCurrent instructions in VirtualList and one Display.callSerially invocation in the actual RunnableImpl. Real error-task construction/type/data are observed at enqueue; the queued UI callback is not executed in this probe. retaining all other declarations, instructions and handlers and every other application/resource byte. Fixed option/vector/chat/canvas seeds isolate startup; the typing notification readiness gate is false. Physical repaint/display scheduling, the full notification pipeline and real device RMS are not claimed.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+              "fixture_sha256": "09b6ad0c8db2835134e39b2b042b73e280e01441c1f1dab42b647267631f2d33",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "a(Z)Ljava/lang/String;",
+                "unread": "d()I",
+                "items": "a(Lbb;)[Lz;",
+                "typing": "b(Ljava/lang/String;Z)V",
+                "sound": "a(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+              "fixture_sha256": "7d6fcbf0ca4196250606b85f6c0eff103af55795cb3abdf007532e2c49b98f34",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "a(Z)Ljava/lang/String;",
+                "unread": "d()I",
+                "items": "a(Lbb;)[Lz;",
+                "typing": "b(Ljava/lang/String;Z)V",
+                "sound": "a(Z)Z"
+              }
+            }
+          ]
+        },
+        {
+          "mode": "raw",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "1312cf76574fe42e27d6df0324bd0b461716d3cda7a9bca0c4d13e0c69ba04ea",
+              "fixture_sha256": "8caadf1fb1724a9fb9d51a051d69fd8363c50f83fa6958b21c7cc6f97a91e0da",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "1312cf76574fe42e27d6df0324bd0b461716d3cda7a9bca0c4d13e0c69ba04ea",
+              "fixture_sha256": "8e82617f9c187686a957b389814564283f2ad302dc92136ae3144664c27340d0",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            }
+          ]
+        },
+        {
+          "mode": "optimized",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "37a153e968f62a348fd9227a794975c6a5b9c0eabf88cbb2cdbb2889fcad8a90",
+              "fixture_sha256": "7d1af4334b625e328c7e8df6f6e2df33a5cad95f4a326bde11bc871b1eda5177",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "37a153e968f62a348fd9227a794975c6a5b9c0eabf88cbb2cdbb2889fcad8a90",
+              "fixture_sha256": "9305d064af2122b52dc5365e2af52c7daae7440a8fa814acfd61ebd2c230dfbf",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            }
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "flavor": "device",
+          "mode": "raw",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "device",
+          "mode": "optimized",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "scripted",
+          "mode": "raw",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "scripted",
+          "mode": "optimized",
+          "different_rows": 0,
+          "first_different_rows": []
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+              "fixture_sha256": "03c4f0ce89b3d652134ae291032faf40256145cbd587e91a11c736e0e1e6c527",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "a(Z)Ljava/lang/String;",
+                "unread": "d()I",
+                "items": "a(Lbb;)[Lz;",
+                "typing": "b(Ljava/lang/String;Z)V",
+                "sound": "a(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+              "fixture_sha256": "3d950557da5638217fe283d48f67a04371abad1a97c1c07f4b978847212fae9f",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "a(Z)Ljava/lang/String;",
+                "unread": "d()I",
+                "items": "a(Lbb;)[Lz;",
+                "typing": "b(Ljava/lang/String;Z)V",
+                "sound": "a(Z)Z"
+              }
+            }
+          ]
+        },
+        {
+          "mode": "raw",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "974fb0340a9ccc0529bda058efddb47709676f803c3a457b4c19d2ad891b8f0f",
+              "fixture_sha256": "f4a8101e4aa1e1e82bf380193f2bf230bb847a3f998cd512e772da976c01f7cb",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "974fb0340a9ccc0529bda058efddb47709676f803c3a457b4c19d2ad891b8f0f",
+              "fixture_sha256": "8b04ceedc04dfb66bf79aa10514bd6342ce5b9dfb0e0dc9c57789442ca529fb3",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            }
+          ]
+        },
+        {
+          "mode": "optimized",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "facf6971bcb90b538f0fe081039fbeddb6e7bc4318ec297cd9479f4a18f66cc4",
+              "fixture_sha256": "552ddf68bfe3d48f60c82ab00be67c406aaf91d77d7cc8cf49171e532b9b3087",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "facf6971bcb90b538f0fe081039fbeddb6e7bc4318ec297cd9479f4a18f66cc4",
+              "fixture_sha256": "0f60b11317bd68f124d63e4510922cdb1c66c5ee1165a3631ace7fbeda84efd1",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            }
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "flavor": "device",
+          "mode": "raw",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "device",
+          "mode": "optimized",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "scripted",
+          "mode": "raw",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "scripted",
+          "mode": "optimized",
+          "different_rows": 0,
+          "first_different_rows": []
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+              "fixture_sha256": "e7262c3b78bccae62de83efaaa01bd04483a48423d37ea82c3276c09ae14322f",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "a(Z)Ljava/lang/String;",
+                "unread": "d()I",
+                "items": "a(Laz;)[Ly;",
+                "typing": "b(Ljava/lang/String;Z)V",
+                "sound": "a(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+              "fixture_sha256": "aa85a32c30e87ca4d6a09a92120cfae874125ec1f119c27977e949de6711660f",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "a(Z)Ljava/lang/String;",
+                "unread": "d()I",
+                "items": "a(Laz;)[Ly;",
+                "typing": "b(Ljava/lang/String;Z)V",
+                "sound": "a(Z)Z"
+              }
+            }
+          ]
+        },
+        {
+          "mode": "raw",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "df08de155d4357a8253bb4f24a92bd7a976ee973ccf87e98aea16e4c1815542d",
+              "fixture_sha256": "3f19ba3d9f53395cc01ea2df16f983145f224a1ed7581cd6d514e0ef75da4c82",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "df08de155d4357a8253bb4f24a92bd7a976ee973ccf87e98aea16e4c1815542d",
+              "fixture_sha256": "255525184eca12dbdd1095a7f815890c36ffb4c4e7c8ed80fbebbddfa7f620f2",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            }
+          ]
+        },
+        {
+          "mode": "optimized",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "89b471e817cfdd58939b04a06c37e090dbed51ea69b53bca167d7a3ead2d4acc",
+              "fixture_sha256": "1fb10d4e9134a40def8de0d5a24f42eeb7925ca04a121b421b3de74e94674c3f",
+              "output_sha256": "96c631b7144c3c279a15275c324a13cc44488e2be37458d699a1e9dbb0427824",
+              "observations": 1297,
+              "coverage": {
+                "data": 1165,
+                "navigation": 84,
+                "typing": 0,
+                "sound_mode": 48,
+                "successful_chat_selections": 0,
+                "rms_records_observed": 144
+              },
+              "all_application_bytes_unchanged": true,
+              "enumerated_external_call_sites": 0,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "89b471e817cfdd58939b04a06c37e090dbed51ea69b53bca167d7a3ead2d4acc",
+              "fixture_sha256": "69331b646f4e67598372aa9d3bf0718c1ba349518e85c31fc8404c83bd9fdd1d",
+              "output_sha256": "18376ed35d7222896939d862e856cb067809b6fb2ad77fc74e3a55c7d9b287c9",
+              "observations": 1921,
+              "coverage": {
+                "data": 1165,
+                "navigation": 320,
+                "typing": 288,
+                "sound_mode": 148,
+                "successful_chat_selections": 180,
+                "rms_records_observed": 396
+              },
+              "all_application_bytes_unchanged": false,
+              "enumerated_external_call_sites": 8,
+              "subject_declarations_instructions_and_handlers_unchanged": true,
+              "methods": {
+                "next": "showNextPrevChat(Z)Ljava/lang/String;",
+                "unread": "getUnreadMessCount()I",
+                "items": "getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;",
+                "typing": "TypingHelper(Ljava/lang/String;Z)V",
+                "sound": "changeSoundMode(Z)Z"
+              }
+            }
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "flavor": "device",
+          "mode": "raw",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "device",
+          "mode": "optimized",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "scripted",
+          "mode": "raw",
+          "different_rows": 0,
+          "first_different_rows": []
+        },
+        {
+          "flavor": "scripted",
+          "mode": "optimized",
+          "different_rows": 0,
+          "first_different_rows": []
+        }
+      ]
+    }
+  ]
+}

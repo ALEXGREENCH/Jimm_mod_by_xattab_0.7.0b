@@ -1,7 +1,7 @@
 {
   "scope": "Verified typed members from existing name mappings, canonical JVM callbacks/constructors, graphics/light audits and contact property access. Instruction order, compiler accessors, optimizer specialization and exception regions are not simplified. Canonical names continue the inherited source; they do not prove lost author spellings. All original classes have an authoring-class identity; hierarchy differences are recorded rather than suppressed. Contact synthetic expressions and removed/specialized signatures remain explicit. Member naming is not whole-program equivalence.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_optimized_class_jar_sha256": "000e896e3d26495e95d9fff1869f2d14da1fca793374b67d31068a503495019f",
+  "source_optimized_class_jar_sha256": "f3a71abacb4dcd3a417fa9b8dd36d64bdfb35ac5af1a435965876c829da0bb12",
   "source_unoptimized_class_jar_sha256": "55d2c31f9aef9dd12cf0e419730caf6cd1d7e18350b191bf1e5d54c5f7937f56",
   "original_classes_named": 101,
   "new_signatures_verified": 181,
@@ -4175,7 +4175,7 @@
       "reference_owner": "z",
       "reference_name": "b",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_optimized_class_jar_sha256": "000e896e3d26495e95d9fff1869f2d14da1fca793374b67d31068a503495019f",
+      "source_optimized_class_jar_sha256": "f3a71abacb4dcd3a417fa9b8dd36d64bdfb35ac5af1a435965876c829da0bb12",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9
@@ -4185,7 +4185,7 @@
       "reference_owner": "z",
       "reference_name": "b",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_optimized_class_jar_sha256": "d99c7ec7e8c77a88ced89d30a23f8de6b8f608895c448f2a275754b726751868",
+      "source_optimized_class_jar_sha256": "52fcb92a91d2c8d6b8cb7ded7f1fac8465fef2d15f8139000aa9edfafe6058f0",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9
@@ -4195,7 +4195,7 @@
       "reference_owner": "y",
       "reference_name": "b",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_optimized_class_jar_sha256": "ba19794f11ed52a48988d6b432baa5be4f235874b6cb2929879096b62fe5ccfc",
+      "source_optimized_class_jar_sha256": "7e25dea4fbe12e62bc53f043e1f6169371f28f9a0df54a331af2d7c03f32d4ab",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9

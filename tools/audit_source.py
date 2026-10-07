@@ -2398,6 +2398,28 @@ SYMBOLS.update({
 })
 
 
+# Remaining ContactList state methods execute with real chat activation and RMS persistence.
+# Their inlined contact/chat helpers are recorded separately in audit_roster_state.py.
+METHODS.extend([
+    ('m', 'a', '(Z)Ljava/lang/String;', 'showNextPrevChat'),
+    ('m', 'd', '()I', 'getUnreadMessCount'),
+    ('m', 'a', '(Lbb;)[Lz;', 'getItems'),
+    ('m', 'b', '(Ljava/lang/String;Z)V', 'TypingHelper'),
+    ('m', 'a', '(Z)Z', 'changeSoundMode'),
+    ('cj', 'd', '()V', 'safe_save'),
+])
+SYMBOLS.update({
+    'm.a(Z)Ljava/lang/String;': 'jimm/ContactList.showNextPrevChat(Z)Ljava/lang/String;',
+    'm.d()I': 'jimm/ContactList.getUnreadMessCount()I',
+    'm.a(Lbb;)[Lz;': 'jimm/ContactList.getItems(Ljimm/GroupItem;)[Ljimm/ContactItem;',
+    'm.b(Ljava/lang/String;Z)V': 'jimm/ContactList.TypingHelper(Ljava/lang/String;Z)V',
+    'm.a(Z)Z': 'jimm/ContactList.changeSoundMode(Z)Z',
+    'm.a Lz;': 'jimm/ContactList.lastChatItem Ljimm/ContactItem;',
+    'cf.a Lz;': 'jimm/JimmUI.textMessReceiver Ljimm/ContactItem;',
+    'z.e()I': 'jimm/ContactItem.getUnreadMessCount()I',
+})
+
+
 def normalized(code):
     result = []
     for instruction in code:

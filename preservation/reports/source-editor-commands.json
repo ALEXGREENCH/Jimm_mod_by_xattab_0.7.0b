@@ -12,8 +12,8 @@
   "fixture_proofs": [
     {
       "mode": "reference",
-      "base_sha256": "d8ea7ae3ea1cefe3407f1b7baff70bc23536d79582858130e6fc5a17f14cadde",
-      "fixture_sha256": "e0840223c21e17cd098d5d4d26cf9d2cf342949e5b2490797ddaf88a95ec9e84",
+      "base_sha256": "c3da266ec7f725e8903ae66552718f02b528c94c525c27913f8595825b62b93e",
+      "fixture_sha256": "c97274ff804e79703ec05adbe496fd416716c35a21f7dbdad896c6f1cb68bb13",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 aj.a(Z)V": 4,
@@ -28,8 +28,8 @@
     },
     {
       "mode": "source",
-      "base_sha256": "e2fcc3e1c52aa0ad34f72cd9aa5b38a320d81a445d4d2433a21df7c7495071f2",
-      "fixture_sha256": "158f582fa852c3631ed2a5d46756890c1a2f72707a9c3b653c5215c663c59b93",
+      "base_sha256": "7911ce5a33ef68095622ab4e0c8d7859a4c3a4597ecbc21920802aecf7322267",
+      "fixture_sha256": "b16f957e95ddaad82cab1861b1710cec08ab9e548490055866a5f6c5b8313a10",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 DrawControls/LightControl.flash(Z)V": 3,
@@ -44,8 +44,8 @@
     },
     {
       "mode": "optimized-source",
-      "base_sha256": "c36875fd78d32cc55d19d9d2dadb0abc85409aabc2c9a1e404cb303c4e6f41d3",
-      "fixture_sha256": "77df6374f3dcb6b1f2167ba45db82df7981628870ec525bbcdc40c222eb6fb87",
+      "base_sha256": "2739213f6201e6fba478bee6bfd5277f553357fa7b7290519831d3913f7a371f",
+      "fixture_sha256": "6ca2b6194058dda9ceaad6d21ab06963b1a32ff5e55f46709811ed1179d49b5f",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 DrawControls/LightControl.flash(Z)V": 3,

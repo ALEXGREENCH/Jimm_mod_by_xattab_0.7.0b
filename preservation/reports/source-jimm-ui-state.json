@@ -14,19 +14,19 @@
     {
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "host_sha256": "d8ea7ae3ea1cefe3407f1b7baff70bc23536d79582858130e6fc5a17f14cadde",
+      "host_sha256": "c3da266ec7f725e8903ae66552718f02b528c94c525c27913f8595825b62b93e",
       "whole_controller_unchanged": true
     },
     {
       "mode": "source",
       "input_sha256": "55d2c31f9aef9dd12cf0e419730caf6cd1d7e18350b191bf1e5d54c5f7937f56",
-      "host_sha256": "e2fcc3e1c52aa0ad34f72cd9aa5b38a320d81a445d4d2433a21df7c7495071f2",
+      "host_sha256": "7911ce5a33ef68095622ab4e0c8d7859a4c3a4597ecbc21920802aecf7322267",
       "whole_controller_unchanged": true
     },
     {
       "mode": "optimized-source",
       "input_sha256": "37a153e968f62a348fd9227a794975c6a5b9c0eabf88cbb2cdbb2889fcad8a90",
-      "host_sha256": "de5974627c83225d8241ca6c9d2aa410e59e5c0775e37194b654c11c7c7d2e6b",
+      "host_sha256": "26c2839884f4c645a10d45421a7c3cd8ce37cfb7b150135ffd04aca7f3c6233b",
       "whole_controller_unchanged": true
     }
   ]
