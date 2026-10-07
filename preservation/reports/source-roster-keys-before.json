@@ -1,0 +1,696 @@
+{
+  "scope": "Whole genuine ContactList.vlKeyPress, JimmUI hotkeys, tree selection and TextList/VirtualList cursor movement. Device mode keeps all application bytes. Scripted mode changes exactly one Canvas.getGameAction invocation; all other instructions, method declarations and handlers remain intact. Explicit option and tree-state seeds isolate startup. Delete-contact with a selected contact and enabled MagicEye activation are outside this paging scope. No physical key-event scheduling or full UI startup claim. Counts exclude the final coverage summary row. The original unadjusted report and genuine output files remain in the hashed frozen archive.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+              "fixture_sha256": "e028d43ef25406de6f446fad7dd83193d15d5443643a761b1a55d8939f4a581c",
+              "output_sha256": "e8c9c11b9a1da90cb871e4e47cd524fe4df0df467887ac12be25f13985990bbc",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 744,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "a(Lcd;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+              "fixture_sha256": "8d91568c67954604dea42fcb0b580eba5e0e1acf8174d794e1d125bf23564ec5",
+              "output_sha256": "936f9ac1ac396491f49e6c3c384025c3fe273d129fa5d8f6f28cd6f6e9fd9152",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 1064,
+                "device_lookups": 1437,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "a(Lcd;II)V"
+            }
+          ]
+        },
+        {
+          "mode": "raw",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "ba6f300c45471b812e317737b4a365427b1bb55436334ac539a2a9a06a942954",
+              "fixture_sha256": "075987f44469a3041bd617826e92e11dd064db1b50beaf1deb45d12f8403d569",
+              "output_sha256": "6f32fa1f55dfc5098154ff2e76501e54492fcaa1fad1c71e41709834c631b7ee",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "ba6f300c45471b812e317737b4a365427b1bb55436334ac539a2a9a06a942954",
+              "fixture_sha256": "a56b6e64c21386e8bf873c61656a04c8c9793bfdf6e00afa50cb4a3d2fa2f4e6",
+              "output_sha256": "c33435e12912fd7d3dbd0b6fce1ed9dbaa6c03ff08df02d61a679c6740f21089",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            }
+          ]
+        },
+        {
+          "mode": "optimized",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "790fb87a68ddcafa90180d3e831d8fd64a59448be8a33edef4f961683690ab51",
+              "fixture_sha256": "a36500c29f06ed494534c2569764be435e270d6be9a197f94042c55027cd293a",
+              "output_sha256": "6f32fa1f55dfc5098154ff2e76501e54492fcaa1fad1c71e41709834c631b7ee",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "790fb87a68ddcafa90180d3e831d8fd64a59448be8a33edef4f961683690ab51",
+              "fixture_sha256": "f8b5107b7866ceb6a0b017e53d133ab063d4f01d38b6e9253b82d662036783fe",
+              "output_sha256": "c33435e12912fd7d3dbd0b6fce1ed9dbaa6c03ff08df02d61a679c6740f21089",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            }
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "flavor": "device",
+          "mode": "raw",
+          "different_observations": 950,
+          "first_different_rows": [
+            796,
+            797,
+            798,
+            800,
+            801,
+            802,
+            804,
+            805,
+            806,
+            808,
+            809,
+            810
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "device",
+          "mode": "optimized",
+          "different_observations": 950,
+          "first_different_rows": [
+            796,
+            797,
+            798,
+            800,
+            801,
+            802,
+            804,
+            805,
+            806,
+            808,
+            809,
+            810
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "scripted",
+          "mode": "raw",
+          "different_observations": 1437,
+          "first_different_rows": [
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26,
+            28,
+            29,
+            30
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "scripted",
+          "mode": "optimized",
+          "different_observations": 1437,
+          "first_different_rows": [
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26,
+            28,
+            29,
+            30
+          ],
+          "same_coverage": false
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+              "fixture_sha256": "4f16afad4a27e72af3f5defa589dd006c57ec56a7a42ec5b0d9fd655c91aaea1",
+              "output_sha256": "35ad2e1735898c017f8b721f1df7df1673d9f5faeb71b1c0d14e051da2ffb2e6",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 744,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "a(Lcb;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+              "fixture_sha256": "e888080a342b81286d65efe540e6d50d553efe88f9212df9e34c99d6f8a435ad",
+              "output_sha256": "07cff4246ba8bba1019ec986def74a478ba5e554041d7578ab4bfc1269def8b6",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 1078,
+                "device_lookups": 1476,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "a(Lcb;II)V"
+            }
+          ]
+        },
+        {
+          "mode": "raw",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "89d203a25f05c1e709ae3dbe1edd636635d9f15bbd8d7d4a0efbb543315fd4d9",
+              "fixture_sha256": "46ae00a3a84f153a014ed6b24e4e888f7761e23508f0a06f9bfee07ffd0867e2",
+              "output_sha256": "b281211eaf8fedf9b36e7b769f4f87d1d95ce6bdb09092bba9382484129b331f",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "89d203a25f05c1e709ae3dbe1edd636635d9f15bbd8d7d4a0efbb543315fd4d9",
+              "fixture_sha256": "a8bb21efd6e56868ffea3cb11f2f2c37dffed32f1a8360c0944917ed04efa306",
+              "output_sha256": "ec6f36e816837f9011f481643287232671a91274310726d98b48c13ecd249800",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            }
+          ]
+        },
+        {
+          "mode": "optimized",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "75538b7a2f896c0bb2fd66d4fb9f30325e7f2612f9a6080eda89d07a93263ca5",
+              "fixture_sha256": "534532fef6d4af709cf9f519441363e0f5068bbeb40c0d8f33b7b4645133822d",
+              "output_sha256": "b281211eaf8fedf9b36e7b769f4f87d1d95ce6bdb09092bba9382484129b331f",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "75538b7a2f896c0bb2fd66d4fb9f30325e7f2612f9a6080eda89d07a93263ca5",
+              "fixture_sha256": "b976dae09cb7212cb18deb40bf817aef641138de6d05ce89689418cd795d676b",
+              "output_sha256": "ec6f36e816837f9011f481643287232671a91274310726d98b48c13ecd249800",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            }
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "flavor": "device",
+          "mode": "raw",
+          "different_observations": 949,
+          "first_different_rows": [
+            828,
+            829,
+            830,
+            832,
+            833,
+            834,
+            836,
+            837,
+            838,
+            840,
+            841,
+            842
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "device",
+          "mode": "optimized",
+          "different_observations": 949,
+          "first_different_rows": [
+            828,
+            829,
+            830,
+            832,
+            833,
+            834,
+            836,
+            837,
+            838,
+            840,
+            841,
+            842
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "scripted",
+          "mode": "raw",
+          "different_observations": 1476,
+          "first_different_rows": [
+            48,
+            49,
+            50,
+            52,
+            53,
+            54,
+            56,
+            57,
+            58,
+            60,
+            61,
+            62
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "scripted",
+          "mode": "optimized",
+          "different_observations": 1476,
+          "first_different_rows": [
+            48,
+            49,
+            50,
+            52,
+            53,
+            54,
+            56,
+            57,
+            58,
+            60,
+            61,
+            62
+          ],
+          "same_coverage": false
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+              "fixture_sha256": "09e9ea52bb8652a5f0f7181ba00ff595270db169dd87714435360e17e2d028dc",
+              "output_sha256": "e8c9c11b9a1da90cb871e4e47cd524fe4df0df467887ac12be25f13985990bbc",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 744,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "a(Lcb;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+              "fixture_sha256": "77dec6895b807f5a562890754ec05608f1678b61a69fbe091b8a9dacd690597d",
+              "output_sha256": "71d32f8d6f32b179e30bbaa0a54f294dea2cd188b5ec3b9dfa8577428bfb4bdd",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 1088,
+                "device_lookups": 1511,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "a(Lcb;II)V"
+            }
+          ]
+        },
+        {
+          "mode": "raw",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "1daf592a0f1b37beb756934889067bbc9cb25c0e1a4b535198fe528b245aff42",
+              "fixture_sha256": "4f28f7a800ca153a4fcb0bbf5a39c4bdb9ac4be2e44d2ad556b9b3d0c22e6640",
+              "output_sha256": "6f32fa1f55dfc5098154ff2e76501e54492fcaa1fad1c71e41709834c631b7ee",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "1daf592a0f1b37beb756934889067bbc9cb25c0e1a4b535198fe528b245aff42",
+              "fixture_sha256": "b8d923b508ae431502cfcf815d8c47a732551ddb9c757f790ded1fc5855a1087",
+              "output_sha256": "c33435e12912fd7d3dbd0b6fce1ed9dbaa6c03ff08df02d61a679c6740f21089",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            }
+          ]
+        },
+        {
+          "mode": "optimized",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "3ed4d1ae2f69c7ef1c77869c565a756cd125c19400de523599e13a0cd6f0b27b",
+              "fixture_sha256": "531bb9eb60dc1610b0b6298b19f0cc2abbf4d64e998ab9745025e1146801dd21",
+              "output_sha256": "6f32fa1f55dfc5098154ff2e76501e54492fcaa1fad1c71e41709834c631b7ee",
+              "observations": 3855,
+              "coverage": {
+                "callbacks": 3855,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": true,
+              "only_one_external_call_instruction_changed": false,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "3ed4d1ae2f69c7ef1c77869c565a756cd125c19400de523599e13a0cd6f0b27b",
+              "fixture_sha256": "ef57c8eabc9cd58e7da9bfe6baef0636f3cd8aad804e747c72d4d1522262e51b",
+              "output_sha256": "c33435e12912fd7d3dbd0b6fce1ed9dbaa6c03ff08df02d61a679c6740f21089",
+              "observations": 4765,
+              "coverage": {
+                "callbacks": 4765,
+                "cursor_moves": 0,
+                "device_lookups": 0,
+                "zero_key_consumptions": 214
+              },
+              "all_application_bytes_unchanged": false,
+              "only_one_external_call_instruction_changed": true,
+              "callback": "vlKeyPress(LDrawControls/VirtualList;II)V"
+            }
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "flavor": "device",
+          "mode": "raw",
+          "different_observations": 950,
+          "first_different_rows": [
+            796,
+            797,
+            798,
+            800,
+            801,
+            802,
+            804,
+            805,
+            806,
+            808,
+            809,
+            810
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "device",
+          "mode": "optimized",
+          "different_observations": 950,
+          "first_different_rows": [
+            796,
+            797,
+            798,
+            800,
+            801,
+            802,
+            804,
+            805,
+            806,
+            808,
+            809,
+            810
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "scripted",
+          "mode": "raw",
+          "different_observations": 1511,
+          "first_different_rows": [
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26,
+            28,
+            29,
+            30
+          ],
+          "same_coverage": false
+        },
+        {
+          "flavor": "scripted",
+          "mode": "optimized",
+          "different_observations": 1511,
+          "first_different_rows": [
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26,
+            28,
+            29,
+            30
+          ],
+          "same_coverage": false
+        }
+      ]
+    }
+  ],
+  "source_ref": "7ed7969",
+  "observations": 25860,
+  "frozen_before_file_sha256": {
+    "ContactList.java": "673d21ebe62f8e6ffc461b44530d12d2cf04f41e35c235a45a0ee34556917ada",
+    "MIDP2-classes.jar": "be807b86a6d745dfbaac735d659b1feab51b75851eb1106f06fb7716cfb3621b",
+    "MIDP2-source.jar": "790fb87a68ddcafa90180d3e831d8fd64a59448be8a33edef4f961683690ab51",
+    "MOTOROLA-classes.jar": "169bea68d21d6363087e06a3f56e5efedd7fda88e76613d93bbb38073da9abab",
+    "MOTOROLA-source.jar": "75538b7a2f896c0bb2fd66d4fb9f30325e7f2612f9a6080eda89d07a93263ca5",
+    "report.json": "316748be63b199f50ff93600c72f22d8b0eff85c5ce8ac062bd4db5f1e7b3e91",
+    "roster-keys-MIDP2-optimized-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MIDP2-optimized-device.jar": "a36500c29f06ed494534c2569764be435e270d6be9a197f94042c55027cd293a",
+    "roster-keys-MIDP2-optimized-device.log": "e3fc7b04e43587726eadf35f9b7a9783617ab939fbc56fa8ace1291b645af9e8",
+    "roster-keys-MIDP2-optimized-device.txt": "6f32fa1f55dfc5098154ff2e76501e54492fcaa1fad1c71e41709834c631b7ee",
+    "roster-keys-MIDP2-optimized-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MIDP2-optimized-scripted.jar": "f8b5107b7866ceb6a0b017e53d133ab063d4f01d38b6e9253b82d662036783fe",
+    "roster-keys-MIDP2-optimized-scripted.log": "fa9d9ff4c236548837a5eca0732ab48d64defe69c198aaecf1f74720c3db62ab",
+    "roster-keys-MIDP2-optimized-scripted.txt": "c33435e12912fd7d3dbd0b6fce1ed9dbaa6c03ff08df02d61a679c6740f21089",
+    "roster-keys-MIDP2-optimized.properties": "fe6a6da9d8bc82460d5f5afe2790880c1fcd8451ff4646f18a4715df9e7fdb3b",
+    "roster-keys-MIDP2-raw-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MIDP2-raw-device.jar": "075987f44469a3041bd617826e92e11dd064db1b50beaf1deb45d12f8403d569",
+    "roster-keys-MIDP2-raw-device.log": "b56fdecf9915d9757f2ba2fea2bc1409eb6d70bea546f3ebd110bfc1a9cccde8",
+    "roster-keys-MIDP2-raw-device.txt": "6f32fa1f55dfc5098154ff2e76501e54492fcaa1fad1c71e41709834c631b7ee",
+    "roster-keys-MIDP2-raw-input.jar": "ba6f300c45471b812e317737b4a365427b1bb55436334ac539a2a9a06a942954",
+    "roster-keys-MIDP2-raw-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MIDP2-raw-scripted.jar": "a56b6e64c21386e8bf873c61656a04c8c9793bfdf6e00afa50cb4a3d2fa2f4e6",
+    "roster-keys-MIDP2-raw-scripted.log": "7b547f88775803d50d2a7aa0fa0165d98e5803d135863a3a4a1970e1e48b8ca6",
+    "roster-keys-MIDP2-raw-scripted.txt": "c33435e12912fd7d3dbd0b6fce1ed9dbaa6c03ff08df02d61a679c6740f21089",
+    "roster-keys-MIDP2-raw.properties": "fe6a6da9d8bc82460d5f5afe2790880c1fcd8451ff4646f18a4715df9e7fdb3b",
+    "roster-keys-MIDP2-reference-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MIDP2-reference-device.jar": "e028d43ef25406de6f446fad7dd83193d15d5443643a761b1a55d8939f4a581c",
+    "roster-keys-MIDP2-reference-device.log": "0240157e3dc44b496b3219617cf1e01ae86fb9d6f1b28212a832c749402db238",
+    "roster-keys-MIDP2-reference-device.txt": "e8c9c11b9a1da90cb871e4e47cd524fe4df0df467887ac12be25f13985990bbc",
+    "roster-keys-MIDP2-reference-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MIDP2-reference-scripted.jar": "8d91568c67954604dea42fcb0b580eba5e0e1acf8174d794e1d125bf23564ec5",
+    "roster-keys-MIDP2-reference-scripted.log": "f2f55a3b4033e212e5db657d6935750e82d00a909695bf01a71725493f27cc42",
+    "roster-keys-MIDP2-reference-scripted.txt": "936f9ac1ac396491f49e6c3c384025c3fe273d129fa5d8f6f28cd6f6e9fd9152",
+    "roster-keys-MIDP2-reference.properties": "a3a6be6a13533d37cacc0ed42b6e024eb347a92e6b474a45f1ca2e5901f51ae2",
+    "roster-keys-MOTOROLA-optimized-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MOTOROLA-optimized-device.jar": "534532fef6d4af709cf9f519441363e0f5068bbeb40c0d8f33b7b4645133822d",
+    "roster-keys-MOTOROLA-optimized-device.log": "f7c34bcf0a5909df8d9361405d9f899a6c8e8aa3f61d03ca2846ebacfa1dbc3d",
+    "roster-keys-MOTOROLA-optimized-device.txt": "b281211eaf8fedf9b36e7b769f4f87d1d95ce6bdb09092bba9382484129b331f",
+    "roster-keys-MOTOROLA-optimized-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MOTOROLA-optimized-scripted.jar": "b976dae09cb7212cb18deb40bf817aef641138de6d05ce89689418cd795d676b",
+    "roster-keys-MOTOROLA-optimized-scripted.log": "a8f74a441b5a793680ea96fa5cab3b77a09b093e1c442c3c798001fcadbcbd4c",
+    "roster-keys-MOTOROLA-optimized-scripted.txt": "ec6f36e816837f9011f481643287232671a91274310726d98b48c13ecd249800",
+    "roster-keys-MOTOROLA-optimized.properties": "986b6e07ea45adfca0765189df0aa09cce61159ebf207094bba7a11e49ab08e7",
+    "roster-keys-MOTOROLA-raw-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MOTOROLA-raw-device.jar": "46ae00a3a84f153a014ed6b24e4e888f7761e23508f0a06f9bfee07ffd0867e2",
+    "roster-keys-MOTOROLA-raw-device.log": "bbfe97ab870cb52ed3bd1de42fe9b01ece4684352d52db1eb3e1cd79bba22ceb",
+    "roster-keys-MOTOROLA-raw-device.txt": "b281211eaf8fedf9b36e7b769f4f87d1d95ce6bdb09092bba9382484129b331f",
+    "roster-keys-MOTOROLA-raw-input.jar": "89d203a25f05c1e709ae3dbe1edd636635d9f15bbd8d7d4a0efbb543315fd4d9",
+    "roster-keys-MOTOROLA-raw-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MOTOROLA-raw-scripted.jar": "a8bb21efd6e56868ffea3cb11f2f2c37dffed32f1a8360c0944917ed04efa306",
+    "roster-keys-MOTOROLA-raw-scripted.log": "36c7ca8c69bb52bf1a496f03afcd02bbce67c1ca37b156bf862b0632e398dcb7",
+    "roster-keys-MOTOROLA-raw-scripted.txt": "ec6f36e816837f9011f481643287232671a91274310726d98b48c13ecd249800",
+    "roster-keys-MOTOROLA-raw.properties": "986b6e07ea45adfca0765189df0aa09cce61159ebf207094bba7a11e49ab08e7",
+    "roster-keys-MOTOROLA-reference-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MOTOROLA-reference-device.jar": "4f16afad4a27e72af3f5defa589dd006c57ec56a7a42ec5b0d9fd655c91aaea1",
+    "roster-keys-MOTOROLA-reference-device.log": "ecb0ae1c42a3cc3f9d00061b3f1f2cfab72df533ac5892192dc576fceffa4bd5",
+    "roster-keys-MOTOROLA-reference-device.txt": "35ad2e1735898c017f8b721f1df7df1673d9f5faeb71b1c0d14e051da2ffb2e6",
+    "roster-keys-MOTOROLA-reference-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-MOTOROLA-reference-scripted.jar": "e888080a342b81286d65efe540e6d50d553efe88f9212df9e34c99d6f8a435ad",
+    "roster-keys-MOTOROLA-reference-scripted.log": "604dccd0929922826a4b6eccb322a41b8136e7fd2692c0e5055e859e8504c011",
+    "roster-keys-MOTOROLA-reference-scripted.txt": "07cff4246ba8bba1019ec986def74a478ba5e554041d7578ab4bfc1269def8b6",
+    "roster-keys-MOTOROLA-reference.properties": "4e51020758ba998b0612bf00b125562a2fbb9176638d4cddecbbab9756b8f370",
+    "roster-keys-SIEMENS2-optimized-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-SIEMENS2-optimized-device.jar": "531bb9eb60dc1610b0b6298b19f0cc2abbf4d64e998ab9745025e1146801dd21",
+    "roster-keys-SIEMENS2-optimized-device.log": "73d046388216bc5d3e0a35a04fcb05c1bb1e85dd985df30ad5d31970b3d7c5f8",
+    "roster-keys-SIEMENS2-optimized-device.txt": "6f32fa1f55dfc5098154ff2e76501e54492fcaa1fad1c71e41709834c631b7ee",
+    "roster-keys-SIEMENS2-optimized-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-SIEMENS2-optimized-scripted.jar": "ef57c8eabc9cd58e7da9bfe6baef0636f3cd8aad804e747c72d4d1522262e51b",
+    "roster-keys-SIEMENS2-optimized-scripted.log": "7712c36048f17477aa48f8b996fd9e15746f4324476abed081c6720a64cef542",
+    "roster-keys-SIEMENS2-optimized-scripted.txt": "c33435e12912fd7d3dbd0b6fce1ed9dbaa6c03ff08df02d61a679c6740f21089",
+    "roster-keys-SIEMENS2-optimized.properties": "fe6a6da9d8bc82460d5f5afe2790880c1fcd8451ff4646f18a4715df9e7fdb3b",
+    "roster-keys-SIEMENS2-raw-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-SIEMENS2-raw-device.jar": "4f28f7a800ca153a4fcb0bbf5a39c4bdb9ac4be2e44d2ad556b9b3d0c22e6640",
+    "roster-keys-SIEMENS2-raw-device.log": "87ce59e4d89a329726ed834d6b8c13aa424c9fa47ecffe2e89d287ca35f65719",
+    "roster-keys-SIEMENS2-raw-device.txt": "6f32fa1f55dfc5098154ff2e76501e54492fcaa1fad1c71e41709834c631b7ee",
+    "roster-keys-SIEMENS2-raw-input.jar": "1daf592a0f1b37beb756934889067bbc9cb25c0e1a4b535198fe528b245aff42",
+    "roster-keys-SIEMENS2-raw-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-SIEMENS2-raw-scripted.jar": "b8d923b508ae431502cfcf815d8c47a732551ddb9c757f790ded1fc5855a1087",
+    "roster-keys-SIEMENS2-raw-scripted.log": "ec630ba937f87ea72792328ea134c98a58d65e679d5c7b191411c4d19b322fd4",
+    "roster-keys-SIEMENS2-raw-scripted.txt": "c33435e12912fd7d3dbd0b6fce1ed9dbaa6c03ff08df02d61a679c6740f21089",
+    "roster-keys-SIEMENS2-raw.properties": "fe6a6da9d8bc82460d5f5afe2790880c1fcd8451ff4646f18a4715df9e7fdb3b",
+    "roster-keys-SIEMENS2-reference-device-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-SIEMENS2-reference-device.jar": "09e9ea52bb8652a5f0f7181ba00ff595270db169dd87714435360e17e2d028dc",
+    "roster-keys-SIEMENS2-reference-device.log": "898c4ad0ec25eded10cc9aa24ced78b6e358358235a6ca58faa5d421ddc15929",
+    "roster-keys-SIEMENS2-reference-device.txt": "e8c9c11b9a1da90cb871e4e47cd524fe4df0df467887ac12be25f13985990bbc",
+    "roster-keys-SIEMENS2-reference-scripted-fixture.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "roster-keys-SIEMENS2-reference-scripted.jar": "77dec6895b807f5a562890754ec05608f1678b61a69fbe091b8a9dacd690597d",
+    "roster-keys-SIEMENS2-reference-scripted.log": "4d87c53d64078b7bb24deb751da86190b0ceb4b86252da0c4159d5a02ffb936a",
+    "roster-keys-SIEMENS2-reference-scripted.txt": "71d32f8d6f32b179e30bbaa0a54f294dea2cd188b5ec3b9dfa8577428bfb4bdd",
+    "roster-keys-SIEMENS2-reference.properties": "d5186a256d27adf247eb6ba080afce7ecaba208632dfd6ba59edb32c73f3cd44",
+    "SIEMENS2-classes.jar": "a0d18d2d9e7c05d0f5ec73a26ea77ea1ef08f306c9f61aa09c6cf8b1a7775013",
+    "SIEMENS2-source.jar": "3ed4d1ae2f69c7ef1c77869c565a756cd125c19400de523599e13a0cd6f0b27b",
+    "VirtualList.java": "f23660e23d3d16d1241ba54075c40290c54856fa122f73e17fb358bb2072000a"
+  }
+}

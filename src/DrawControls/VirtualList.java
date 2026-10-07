@@ -620,6 +620,12 @@ public abstract class VirtualList
 		moveCursor(step, false);
 	}
 
+	public void moveCursorByPage(boolean forward)
+	{
+		int step = forward ? getVisCount() : -getVisCount();
+		moveCursor(step, false);
+	}
+
 	protected void moveCursor(int step, boolean moveTop)
 	{
 		storelastItemIndexes();

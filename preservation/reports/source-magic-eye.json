@@ -1,7 +1,7 @@
 {
   "scope": "Actual MIDP2 MagicEye constructor, singleton/listener split, synchronized journal, TextList wrapping/tags/format and full-frame raster, contact lookup, command identity, menus, clipboard, counter overflow, partial failures and ignored key-event types. The inherited file-transfer and virtual-list host fixtures remain. Only three terminal journal routing calls and default Date NEW/constructor in Util.createCurrentDate are additionally captured, with guarded site counts. Date formatting, ResourceBundle, contact creation, clipboard and TextList algorithms remain real. The user_menu action uses literal Y1 in both restored native RU dictionaries; unknown keys are literal. Original/unoptimized authoring JARs only; no whole optimized JAR, physical scheduler or complete terminal destination side-effect claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "be807b86a6d745dfbaac735d659b1feab51b75851eb1106f06fb7716cfb3621b",
+  "source_unoptimized_class_jar_sha256": "55d2c31f9aef9dd12cf0e419730caf6cd1d7e18350b191bf1e5d54c5f7937f56",
   "observations": 1081,
   "journal_calls": 519,
   "activation_calls": 301,

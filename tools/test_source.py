@@ -471,6 +471,8 @@ def main(matrix=False, skip_build=False):
         report['contact_store'] = run([sys.executable, ROOT / 'tools/test_contact_store.py'], 'contact-store-audit')
         report['sound'] = run([sys.executable, ROOT / 'tools/test_sound.py', '--skip-build'], 'sound-audit')
         report['sound_bytecode'] = run([sys.executable, ROOT / 'tools/audit_sound.py'], 'sound-bytecode-audit')
+        report['roster_keys'] = run([sys.executable, ROOT / 'tools/test_roster_keys.py'], 'roster-key-audit')
+        report['roster_key_bytecode'] = run([sys.executable, ROOT / 'tools/audit_roster_keys.py'], 'roster-key-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')

@@ -1651,6 +1651,26 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 		//#sijapp cond.end#
 
 		JimmUI.execHotKey(item, keyCode, type);
+		try
+		{
+			//#sijapp cond.if target is "MOTOROLA"#
+			if (type == VirtualList.KEY_RELEASED)
+			//#sijapp cond.else#
+			if (type == VirtualList.KEY_PRESSED)
+			//#sijapp cond.end#
+			{
+				switch (sender.getGameAction(keyCode))
+				{
+					case Canvas.LEFT:
+						if (keyCode != Canvas.KEY_NUM4) sender.moveCursorByPage(false);
+						break;
+					case Canvas.RIGHT:
+						if (keyCode != Canvas.KEY_NUM6) sender.moveCursorByPage(true);
+						break;
+				}
+			}
+		}
+		catch (Exception e) {}
 	}
 
 	// shows next or previos chat 

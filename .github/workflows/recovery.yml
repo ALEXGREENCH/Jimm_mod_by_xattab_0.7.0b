@@ -81,6 +81,9 @@ jobs:
             preservation/reports/source-sound.json
             preservation/reports/source-sound-bytecode.json
             preservation/reports/source-sound-before.json
+            preservation/reports/source-roster-keys.json
+            preservation/reports/source-roster-keys-before.json
+            preservation/reports/source-roster-keys-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

@@ -2379,6 +2379,25 @@ SYMBOLS.update({
 })
 
 
+# Roster callback and public page helper verified against May native calls and execution.
+# The page helper's readable name is inferred; native bytecode retains only c(Z)V.
+METHODS.extend([
+    ('m', 'a', '(Lcd;II)V', 'vlKeyPress'),
+    ('cd', 'c', '(Z)V', 'moveCursorByPage'),
+    ('m', 'a', '(Lcd;)V', 'vlCursorMoved'),
+    ('m', 'b', '(Lcd;)V', 'vlItemClicked'),
+    ('m', 'a', '()Lf;', 'getImageList'),
+])
+SYMBOLS.update({
+    'm.a(Lcd;II)V': 'jimm/ContactList.vlKeyPress(LDrawControls/VirtualList;II)V',
+    'cd.c(Z)V': 'DrawControls/VirtualList.moveCursorByPage(Z)V',
+    'm.a(Lcd;)V': 'jimm/ContactList.vlCursorMoved(LDrawControls/VirtualList;)V',
+    'm.b(Lcd;)V': 'jimm/ContactList.vlItemClicked(LDrawControls/VirtualList;)V',
+    'm.a()Lf;': 'jimm/ContactList.getImageList()LDrawControls/ImageList;',
+    'm.a Lf;': 'jimm/ContactList.imageList LDrawControls/ImageList;',
+})
+
+
 def normalized(code):
     result = []
     for instruction in code:

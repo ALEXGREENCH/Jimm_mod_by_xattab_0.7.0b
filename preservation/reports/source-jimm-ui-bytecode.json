@@ -1,8 +1,8 @@
 {
   "scope": "Complete May MIDP2 JimmUI typed inventory, preserving inherited canonical source names. The exact lost author spelling is not claimed. Command constructor keys and actual state reads/writes, existing differential controllers and explicit accessor/specialization witnesses anchor roles. Naming declarations is not complete controller or program equivalence. Complete original MIDP2 declarations and all their actual controller access sites are inventoried; constructor label keys, static/volatile and optimized visibility flags, authoring parameter specializations, exact compiler getter/writer operations, discarded native writer results, controller constructor, auth state inputs and dead null-control tag branches are independently checked. Field access enumeration alone is not semantic identity proof. Functional evidence is recorded in the focused runtime reports; whole-controller behavior is not claimed.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "be807b86a6d745dfbaac735d659b1feab51b75851eb1106f06fb7716cfb3621b",
-  "source_optimized_class_jar_sha256": "22b61d82b75f5fc77dfa96affd5b9918a49a663c4ae63e411fc442cf9909b8c6",
+  "source_unoptimized_class_jar_sha256": "55d2c31f9aef9dd12cf0e419730caf6cd1d7e18350b191bf1e5d54c5f7937f56",
+  "source_optimized_class_jar_sha256": "000e896e3d26495e95d9fff1869f2d14da1fca793374b67d31068a503495019f",
   "field_declarations": 67,
   "native_methods": 71,
   "same_optimized_signatures": 69,
@@ -6192,7 +6192,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "6595863ff8e5a9e2c6da454a994506bd3cd1aabf1468fa7da16c9782cb482bc2",
+      "reference_normalized_sha256": "590df65f1142465baee08298f36659a2a5b32ca3983398946381c8fa0318a7fc",
       "source_normalized_sha256": "7607c94c179e4901d5aaf3158584f6b3aede7b2b4c2660f1480a6b582e401ac7"
     },
     {
@@ -6458,7 +6458,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "f86427cad1c4ee276b0f6a06a40eac885d6f9c756f400f724a06597c4b3c256e",
+      "reference_normalized_sha256": "7f1ecebc651daa77930d6e4d5bd8b100910f590bdce6f26c4a00142585dde3fb",
       "source_normalized_sha256": "eecacac1a1e23edc5c395680e6886e9449a1be33682085a7b3b1ce5d9d34c1b4"
     },
     {
@@ -6952,7 +6952,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "31caae374e5ddc2c114a47f1d03218cc2a0257f6e10ce9333e7600562617adb8",
+      "reference_normalized_sha256": "bbbc0269a611b13eeaa9ae2a9bf7f0ad6ed553e6b9ed97ce39e335b13998e311",
       "source_normalized_sha256": "c7ebb788e29828d2470f6cf0d3b10c987dd436fe1240a10362cc7b16cb8c7246"
     },
     {
