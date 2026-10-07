@@ -17,7 +17,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "d3070d996b33f92ab84b7587f969855f6fb4a95fa39af1f871374c496f5d03f4",
+      "reference_normalized_sha256": "237b62c40855d97b32a0c2705f18ed9233435f0f3aece1bcd6a024504fb22290",
       "source_normalized_sha256": "14fcfec9906696a76e33fd536739e60e254d411012eb0d38e021a10d67f55871"
     },
     {
@@ -129,7 +129,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "05acdc89effb6f883f2d9b05f8a415e0582ea67856977a7c9f610309acf8e335",
+      "reference_normalized_sha256": "c6bd090997c99ebe6e0f7e5e38e45f8d1d5493ac5740eb636ae28dcb4786b8a7",
       "source_normalized_sha256": "405f3966ce7713d45524dd8a337085f1121a6ef6aefe698728c85b5a4f4a8212"
     },
     {
@@ -225,7 +225,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "6caa8c759823862bad833548fcea4335cbd36c6d0de6cd3832b5dd082b096a79",
+      "reference_normalized_sha256": "3697ac0dfc43dc260acd742c7c145c5bc29aa0f212a2fc7371243fae6ec5bfcb",
       "source_normalized_sha256": "cf67589cfd7def8b65c7b9c9cb8b89c7e6d34ad34caa136852ce40ef1f8f7a4f"
     },
     {
@@ -433,7 +433,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "2489e70a213692493cc8390629ab8af7f72c78bce217ca29d8bc8dfcdc8f6678",
+      "reference_normalized_sha256": "26f81020c4b5f3e3a162bb3f1fc17c2fbc0233c4cc4565a1310ee57c3e30096f",
       "source_normalized_sha256": "a5d31d3242a49e92bfd2e6c0e83473a8d1f67b8f8d7e99f9abee529d79b80aa8"
     },
     {
@@ -689,7 +689,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e6d08f8e5854d6df8bbff864ccf0ccce911a7dd47b5dc17520d14432d5100839",
+      "reference_normalized_sha256": "619b7fbabd6d2cafceb9edfb1e4b65a40ca4a9d0939fc9d4688d84e60177e921",
       "source_normalized_sha256": "1f76db0b31d84296bf9b3c26afd827097dabc286480a5853f2a337443f3be3d6"
     },
     {
@@ -1166,10 +1166,10 @@
       "abstract_method": false,
       "reference_instructions": 7,
       "source_instructions": 7,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "1bcb371c5ed42d8d579c79bf57294017c2ab94001adaa3c6f14059e6df584209",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "4f1d3636ae98c86a8dd0c72b6695e585fb57d79cefb74cfa50c3fdd030574312",
       "source_normalized_sha256": "4f1d3636ae98c86a8dd0c72b6695e585fb57d79cefb74cfa50c3fdd030574312"
     },
     {
@@ -2513,7 +2513,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "bc851df04c4ecf4f48302bdba3ff8505a312188cc1477bb75ac89331de7fd874",
+      "reference_normalized_sha256": "00e9f0bf39a65efd98d47a0e936a418454b884d16ba98552c1c2f5799d65de1b",
       "source_normalized_sha256": "6924dbc10dddc173533f662c627edf664076e3864b80e187c0559eb1f2ca1bf2"
     },
     {
@@ -2545,7 +2545,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "052a3912a0b9c1d45c7c11eaf5b1df89f8e3a3eb9e4d1e0dc2cf0a4d9ea51573",
+      "reference_normalized_sha256": "76d1ee8111d0a8d29e94996f0e20c571c961598f37bc25b34c47e0e7b65f4326",
       "source_normalized_sha256": "dc8aa7cea9f109077e024077d3edd06d2cf711e8ca539d2200898ad133561745"
     },
     {
@@ -2737,7 +2737,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "5e7aa3e5127f33037e373c386f6e9422109b9a2dfcdf61c27dae07c7c263dfc9",
+      "reference_normalized_sha256": "49a8550627ec317309c1c5005e25e1ab393e0fba649c62caf706b91e47b72314",
       "source_normalized_sha256": "40df6de8ca3c1b497a12554d69df64063be3d4feecdeb7fbbe2cd006521d04bd"
     },
     {
@@ -2753,7 +2753,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "ad2db9af990b0301e7865e2b19cb456d2b764d032bf01d6158476c5d688f6a70",
+      "reference_normalized_sha256": "1f5dd0f42eed6b2eb8a0ba388e75657ff9b8e64645e19879e871ea3f1ad2c78f",
       "source_normalized_sha256": "65debbaca274dbafec1b42066a9e4c8e19b064a5b552e8b42958fc3f9719a9ce"
     },
     {
@@ -2897,7 +2897,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "dece795f0d1808bc622df5074dbc5beae20679108b0d9a03d19fca0a021af28a",
+      "reference_normalized_sha256": "a9f8a31b8b09e33678edd19a725802b55f02eae4261f4742f26284c5108f47db",
       "source_normalized_sha256": "c5eb53412ac2c932f7bb3adabc255bc845dedd54d49758ca30fc2f8ac3a701bd"
     },
     {
@@ -2977,7 +2977,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "0bd8c411febdb4bc571b0e5806a0b3117daff4b4d68c2a73bb67554bc19c223b",
+      "reference_normalized_sha256": "bea5b02d52e888c3e620814ae63cd438e6f080e5607cf65f6872a9d21ff57fe9",
       "source_normalized_sha256": "559fdbdd268063b828c0a4c752507bca027bcbfd9c2d838d33374bb1fd6b95e3"
     },
     {
@@ -3457,7 +3457,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "9ec1a2e2e713d0c53d0654f24c2aaa37236eae52968bf4798f2c2954baad0a45",
+      "reference_normalized_sha256": "6dde65986fead7999728fdbef72dc2a2265907b4bab8ca0a873607c2b1ae99e5",
       "source_normalized_sha256": "9fa950a47f76f3fc590d518d17a3dad06e12d60d6a7322caa5bd5c53310cee93"
     },
     {
@@ -3601,7 +3601,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "715d61e4edb7ebac3c65809103a172fdc75521f65eaf34d8c98ee80932ae4dcd",
+      "reference_normalized_sha256": "c3723e5888c992bc9e14c15af007fb4a3988d51acb1fdd98c4f3f23d52dcdfe2",
       "source_normalized_sha256": "de403ee0e0a5cde101e6eb739a49b78fc2b918cea86334750f9295ea3f0b2bbc"
     },
     {
@@ -3665,7 +3665,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "d0c4b6e0a57d4a5eee996bf1fe15c0ae2fa119b7454ec99e38ce14ed893aa9e8",
+      "reference_normalized_sha256": "5c03a31ca0f7369481bd56cd07beffa6d710c49c0d35154fc3986d18a4eafc86",
       "source_normalized_sha256": "89fc928cb855c6623ff4ae7e13a0e7aed6ff7c0da2e0630486e80c22a33ccb60"
     },
     {
@@ -3681,7 +3681,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e81d738d619edfb81c462a06f011a0fc698d4632d5b1fe1ef9ba12fe35eab9e7",
+      "reference_normalized_sha256": "2452b41fa6f0d263edf9427b0b1c2a5ec8fb6b5b73a499469feb04379d9cfd7e",
       "source_normalized_sha256": "4de8381658d791df89751df0dcab2f6190c2e76c9e23234d0fc586fb78206bf9"
     },
     {
@@ -3745,7 +3745,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "fa6ae4d599936ca6702100a4b53581c5495a938763830f2b8f3394f152063c57",
+      "reference_normalized_sha256": "97697c4c21a6c619e563d31ea64abc340f1227c35f4c978bf76b5dda04eb34de",
       "source_normalized_sha256": "38450ea1c403219ae0228d02c71c63a60ba335e1b73bfedb76c96635aeb41420"
     },
     {
@@ -3806,10 +3806,10 @@
       "abstract_method": false,
       "reference_instructions": 13,
       "source_instructions": 13,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e403a80bd3f017ebcc8e9c12446b2a83857e8693e88f0646ccc449688cc809f6",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "0c7181f532663a67bb3f8764c5cc9b86cc8d386e7171669d72eed594e2cdcc14",
       "source_normalized_sha256": "0c7181f532663a67bb3f8764c5cc9b86cc8d386e7171669d72eed594e2cdcc14"
     },
     {
@@ -3822,10 +3822,10 @@
       "abstract_method": false,
       "reference_instructions": 37,
       "source_instructions": 37,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "acdf4ae206d49c8cfed9907577474c1d87e0fec2664ea51d726a4eb5821f7aaa",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "eb82871242187471ddccb896848f6445a711d8a9ac86d789dd5946ba2680ec2a",
       "source_normalized_sha256": "eb82871242187471ddccb896848f6445a711d8a9ac86d789dd5946ba2680ec2a"
     },
     {
@@ -3841,7 +3841,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "65af26952992eba88c82fdc1f078d8d1800e196bc49e1aa0039d0710e2f0c159",
+      "reference_normalized_sha256": "e45fb3475a28c35900d0e62ddb60d02ba11939ae3dd78f6ccc60c6629c38b6a8",
       "source_normalized_sha256": "cfd3213f87cacbdd016c9bc1a3902dbada363124679f6257a38679dfdeadc1ad"
     },
     {
@@ -3857,7 +3857,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "15abe8f3ee83423f9f94b98fa85b925951a858091ea49daa04730a58adf0678d",
+      "reference_normalized_sha256": "749fc18f212f5d4892b902db2abf70ea97d3899d4455f0e393335bba8ec4a005",
       "source_normalized_sha256": "7251160f54aace1f933dc1d8c45e2fbf4a95616a373167b083a2d8c221ac0629"
     },
     {
@@ -4129,7 +4129,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "d95834274d0264255035623cf51512f4ec66448c7fcde6ac223b083f1c7aa0ef",
+      "reference_normalized_sha256": "d8179cd246eba25a97cde2618487d9fd36a1868df0947a9b05531fde5a16e15d",
       "source_normalized_sha256": "387b375354ab9ac078e2e809062e5ad45dcb3ca02aae765b4eb8e8a73b702e32"
     },
     {
@@ -4209,7 +4209,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "756081039b78cbfc70a18e94afb7963e50858b7938d6fcafa15c09251b2d4d46",
+      "reference_normalized_sha256": "8749352905fbf523d76b8c5a2346daba1cded417b49fef8bdeb657c9e50aefc0",
       "source_normalized_sha256": "7a4a902bf1c2475645260885a512023c926426075e436286535a8aba004d4a1e"
     },
     {
@@ -4270,10 +4270,10 @@
       "abstract_method": false,
       "reference_instructions": 7,
       "source_instructions": 7,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "b29ab47ec03a20edae20933b365a2168ec6e6c73da6f915296e52d62bea196b4",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "cea0662f73a366d56bc282a26929c196e27ec9a76c21cb1eb84642e71889bc94",
       "source_normalized_sha256": "cea0662f73a366d56bc282a26929c196e27ec9a76c21cb1eb84642e71889bc94"
     },
     {
@@ -4577,7 +4577,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "11e5e5012519ea5c5c50cdbf7e11181c2f27b56db536be88cefc28a05e6034b7",
+      "reference_normalized_sha256": "e922aad28a57b7b540f4af712b50be7ae3362c75641bd83d527abdc2458ef13a",
       "source_normalized_sha256": "c68d865644d5d6614a50db917165c212434cd1b751a7d956c4bb23a87d416b6a"
     },
     {
@@ -4657,7 +4657,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "44b5a778339408f85aed32e47e047583d1104ac1aaf3ae73e4d724d0fece97fd",
+      "reference_normalized_sha256": "0ab5dc12ad2d7d9bd2a5b594f4064b181422690f34e8408c5842639ff01cda50",
       "source_normalized_sha256": "198fcaad5f6979ec926cb7a5685f587dd9b84442bcb68747166e2d58fcdbebe7"
     },
     {
@@ -4721,7 +4721,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "cd9a5c23b9354885641b520b6219e8a056d7db9c6c13774a4fe70fcbcb885c27",
+      "reference_normalized_sha256": "982b3db76f78147c17640cc3f60074ebd25362f5137e2938d7071cf3a6d6be60",
       "source_normalized_sha256": "bcff8f8461d8fb3ec8b8efda0d2fd77f5ab2f9ca24ee414a0d7f1268db6c83c1"
     },
     {
@@ -4881,7 +4881,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "73bcaa9027c3a5421ef36638afa9d24a86f1b2434f9d3a3a747da35ec823df7e",
+      "reference_normalized_sha256": "543142fae591f03c04761f8ea60df8bc93f146d852f9a5084e619d3ff476d496",
       "source_normalized_sha256": "f51b09e71a69577b2e1b802d26b1655266e14924ff26bd5944d7de96afedb46d"
     },
     {
@@ -4913,7 +4913,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "5700f4d3162e06ce54d57a63d5cbaef482c1084663ea179703a4825de5ba12f5",
+      "reference_normalized_sha256": "4af5981a7132e76efb36ffa43f32429a0e1e8cb396a0691d2dbc670a18026313",
       "source_normalized_sha256": "54ed0ab0bd249057f8c24eb542052ed41c83b157875f60a9c896030b1896d167"
     },
     {
@@ -4929,7 +4929,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "b09e04a4565533c2ad2122b4428aa2e5ba7f1271ee721bae3786a14d14a0936a",
+      "reference_normalized_sha256": "ca7f58a50e2f16a1fbde799e6e90b158fbd00a81b5e7519af7ca4795dc70a1aa",
       "source_normalized_sha256": "030cc904df05894ea8547c27c8d57adb49d643160f0b10673212ef029c45835e"
     },
     {
@@ -5217,7 +5217,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "2e0cda4c7d1573e1b67778278f3092dca50a1e354c4022e0ede1f1d3271d2831",
+      "reference_normalized_sha256": "e3417fcfe028439acb16de876ecc31a23f5e86834c80d63502d683532b981e6d",
       "source_normalized_sha256": "e3548caff158e86f724e0a0167c3b5992713440e71791f42d6be83ee514309e0"
     },
     {
@@ -5425,7 +5425,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "a70b91c7f16ee4770e6b030f44ecaf2a6f737cecd4f1b90fbc7148fcd4812697",
+      "reference_normalized_sha256": "8421d142cd7ad904025fb57abc7ff0ff676a125ba43364f333737e2aaad47da2",
       "source_normalized_sha256": "406f0038e1eb884773c2f0409bf87b026863667bb38b2bad86c070c3f6f5a697"
     },
     {
@@ -5841,7 +5841,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "208aeb2bf81302b51ae2873341774fef1c729918579516205ed14ceeddbfa0fe",
+      "reference_normalized_sha256": "4bb921c2a9c710902f09e22ce5c0ba36cc6c70c2a0646bde66903fc33169ba7c",
       "source_normalized_sha256": "d451fb4285944534002ae9735ae3537cd4933c9a101752b883f7a4dce9cd4c8b"
     },
     {
@@ -6081,7 +6081,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "46c2b2f7c7cefaaf30ec9e66692011b389127a495943cdcf6452aeeac1fe2934",
+      "reference_normalized_sha256": "1c806002f7f6ff7cb092c790e302cb7accef1918524a6ff9f0aa8b6aff230d2b",
       "source_normalized_sha256": "4f1333894ad0e3464d00043147a9de9a28be7894f47c0442de6961b68863c609"
     },
     {
@@ -6433,7 +6433,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e5186b42ed935879208fc56eb6ad3d05f95cd82d60b8680cf88f54a87e8048c3",
+      "reference_normalized_sha256": "b7a77c808630a286f5df5ed5b9e170179542a43d6711dc91a023af96ada6aceb",
       "source_normalized_sha256": "647736dfa11c6547b80a3e285ab9ae61e4efde47afd9e0560b42b55766cff44b"
     },
     {
@@ -6737,7 +6737,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "f8f075975caa20b934d32ba877805fc70222ab319778546954cf4ec82a23b77c",
+      "reference_normalized_sha256": "51a1675e804f94d59b1de102f1b9495d9684c728268a8ca38d4f60603f33f56a",
       "source_normalized_sha256": "92af111b9b07ed6974cb0b49d38db5979995cb99a9c18dbf039730eff32a9a0f"
     },
     {
@@ -6801,7 +6801,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "5be1542857e4b19cf602c2a50cdf7a4ad3476bfb1348ee51d2a576bab4de5391",
+      "reference_normalized_sha256": "1f9a3e5e854e5270babde636d05a65c2b052f973707079f4ab2570a5dfe93a3c",
       "source_normalized_sha256": "da7eccda3b8f5396f989ca43e842860fb0cf6cc931cbcaf93632d78a459392b3"
     },
     {
@@ -6929,7 +6929,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "03eb4f9588ed946f669c8c5d87a83ea19ad5cdf4595a39599c62c91ae53536af",
+      "reference_normalized_sha256": "db4bc87eba37e88e09b2ad3ac1ac88248befb09543c1e26132df10ea02905c44",
       "source_normalized_sha256": "f61c84760ede1ee3b1a584c0c2cf29576d5e5989abddec4bb5ee978c1cdefbad"
     },
     {
@@ -7009,7 +7009,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "36de810e57e31665e8c1bea3cef9a760ba675157c7ee5ad053de2d1cf32120d8",
+      "reference_normalized_sha256": "649e407a99a1dcbbab62ffbdc69002cbc43e0cdcc892add00a2b8e19ad3d48e9",
       "source_normalized_sha256": "cce312b818e485e25e508d6da1015a3304a458ab75bf014ae3a23df50864a755"
     },
     {
@@ -7121,7 +7121,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "1c882998e3f042f896ce0836f9a090e1f14db5e2c1fee1addd994a2efd7053aa",
+      "reference_normalized_sha256": "a7b225bfa377895deacd83040aa1c5ee5d0b7677cbfd16cb6e7cfb8bc51d0692",
       "source_normalized_sha256": "c7ebb788e29828d2470f6cf0d3b10c987dd436fe1240a10362cc7b16cb8c7246"
     },
     {
@@ -7185,7 +7185,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "d38dffaa3c9696e5da12b006f1d6d116451cfa6c1acfcb3cab4969dc36a2e667",
+      "reference_normalized_sha256": "a882f21df721089262122769267e6fab20d110052ace65049df7035bdfbfe71d",
       "source_normalized_sha256": "7607c94c179e4901d5aaf3158584f6b3aede7b2b4c2660f1480a6b582e401ac7"
     },
     {
@@ -7649,7 +7649,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "502fbdabe10d8a738e0c2cd7d3ddb9d3a602e5b76a670c0829381646cd56cb88",
+      "reference_normalized_sha256": "12c7d394927c2225f41da9933645017c2f60386217135b4aeeb89c4f037bba51",
       "source_normalized_sha256": "1e43e83975fbd610be1d77a6b483af10b8d5cc92f2d57993248f7274d3d5d172"
     },
     {
@@ -7665,7 +7665,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "ed6c775c0f49ae76e8682e9b4b150f16b7e8540c0179011df3c421cc2eff1297",
+      "reference_normalized_sha256": "799fbad416ad47a839058fa45b7761c51960967bd5529eac68c357c55d4a2024",
       "source_normalized_sha256": "c35d1f479eb265de73f129353ffbc0047e9e743b9d579009fd76af6a2f1ab1b4"
     },
     {
@@ -7681,7 +7681,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "926052f4f9b401ae6d7b7ed55eb37499579baa7e235e8fc0560ad0364a157cd0",
+      "reference_normalized_sha256": "71fa8464937410a4cbed1534c3650e7a7237a97e2ac0be7f5f44e8c7111c3f3b",
       "source_normalized_sha256": "a7cdeef2e21ad791da5ac8d12fe4cfc27c776bee8fce74515f8ea038ada20712"
     },
     {
@@ -7697,7 +7697,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e68c77abec5e1c4d88f07718c79fe4fc960f81645b30a7cf1d5dc44ce199dabe",
+      "reference_normalized_sha256": "e63a315477ab56df51c5fa22743fa375fa01ebc0cec925122fb8ae1aacbe059b",
       "source_normalized_sha256": "256a9180749190e4d23b03d4068fdf0d623628eb7db9dbabfc7841acca0c21f1"
     },
     {
@@ -7745,7 +7745,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "f301554a04556ffa070cea97a355667b895ed50b2eeecd7087f1c2b91e6673c0",
+      "reference_normalized_sha256": "361414e078c0bd720b83c1dafbec6de157849b5676673a103348788d75947d16",
       "source_normalized_sha256": "d7f2dd90b4e6bc55161fc6fcda10080a8360fd21d912ca44ca893ff629736397"
     },
     {
@@ -7857,7 +7857,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "416f4e9ca6c7a4fed8e17c69bd7cf6ff2ea965fee489c0f61917a22adaec6a80",
+      "reference_normalized_sha256": "53543e208fb21da034632277c2377ff10956be436077e69a353c7ce3fe19d3f9",
       "source_normalized_sha256": "bb22874690a2e8eb09292733b0e809a12a1b20248e2e25b245c0965161d889bd"
     },
     {
@@ -7889,7 +7889,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "c31a44fe5d55c44152d06a8f975cac765b6cceac3dc5b003cc2f9453eee528d3",
+      "reference_normalized_sha256": "9afd3f37c37a62faf51f111246d1fda6ffdbad1034d93c23615feec8251daab5",
       "source_normalized_sha256": "3131547233ea83a5def15e68f5109fbf1ae1c48cb691e07d90d066c232c4e885"
     },
     {
@@ -8017,7 +8017,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "c20aa17866aee22fc54b42809ab51990d3842da0b8435cc34036cb208c27dc76",
+      "reference_normalized_sha256": "6dadc865371283f02652ba0ea55e88acf46ed709f7dac0ed6daf6cba95a7018a",
       "source_normalized_sha256": "687f550513359a6ede45605ecbdbeef54c18f18e1d14e9b057bb7aeddeae27f8"
     },
     {
@@ -8129,7 +8129,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "14a82803bd53fdd8445481c4bd54c2a315261c50b9404ea2ad2de3101b0d6b38",
+      "reference_normalized_sha256": "09479448680c6a847114926926d3a49687875aff46afb7fd09ab0a1c6208e14c",
       "source_normalized_sha256": "f488bd7882f32bc1c1fd2287d063595a62896d5af5bd19364b0d22bf5d265298"
     },
     {
@@ -8225,7 +8225,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "428bf9bc50602a642b26a574745cfab7e6f1bdb517e0cd7a606a3459cdff9aaf",
+      "reference_normalized_sha256": "b39e5cd827e86cc3d181a7a9d43d3c58ff423e2b1f70d79d639765266d875bb2",
       "source_normalized_sha256": "42eaba5cc3e47c3aab10e5c23406bf390868b6719510082f581466405f2debe6"
     },
     {
@@ -8481,7 +8481,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "b48c12e46825f92f7b03aad89227e5db41ff2232ab5c2ed4e1a90648cbdcceb8",
+      "reference_normalized_sha256": "dce1fae7f6345cea6ab7075daf0931b9a4c8d833d8f242cc43a838e9bfc2be70",
       "source_normalized_sha256": "05618993352f6dd9f624afcb92cc20717f0b80fc42134412aa4f5f9985581762"
     },
     {
@@ -12897,7 +12897,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "9f3e1532e3dd55a84aa607b34676b9463a2768de4ce3a66c3f030039d2db1b16",
+      "reference_normalized_sha256": "ed7f320240da6bb55e0c6b1dc7aa475efbe60012e5d1cb766b45d92dd87590c8",
       "source_normalized_sha256": "5631c09fbdbc693d1b28851198041d5fea1dbff0b346eec7fb8ae71995254015"
     },
     {
@@ -13489,7 +13489,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "12ba50a3e0897862745368e221aa208e8af9e0bdbb11b978fe468d5d9ee601a5",
+      "reference_normalized_sha256": "65cff93f219418b691f2c17535d05165225b7166fd966d53999885254c82b7a5",
       "source_normalized_sha256": "64f54c9aca16095b73b67e09f0c7bc08c4a71addd61c3b1994e0e0070807a2fd"
     },
     {
@@ -13534,10 +13534,10 @@
       "abstract_method": false,
       "reference_instructions": 23,
       "source_instructions": 23,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "9f64a9ae5210f0327a03aa4efd4b69bf9634548904faaf4040e19c15b9254b21",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "72504837ba5abd9f4689c4ac982f539766fcee9f06cb5f49bb3c2afc0987861c",
       "source_normalized_sha256": "72504837ba5abd9f4689c4ac982f539766fcee9f06cb5f49bb3c2afc0987861c"
     },
     {
@@ -13617,7 +13617,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "1aaf78288b5ef661cdbd1363edf88a2af1a2bf68087c29a58fbb1f32fa0e8afa",
+      "reference_normalized_sha256": "6d109a8825d3f81c224c75277127d3b4e89941bd6e605a09b76315dc35478df2",
       "source_normalized_sha256": "b66b127346b184f4655cca407b4035255467a838f1f193e6ad419bf7b930e3dd"
     },
     {
@@ -13777,7 +13777,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "80d7fa33ce11de961cea53baaf176baf36c450921c7853d2ecc99234551037f4",
+      "reference_normalized_sha256": "5f7948eccd13ad89f5d1fcc88d0828063a3a8df9351d1b4924ee93ef6477e61c",
       "source_normalized_sha256": "19b76aa4278dba42e264d7bdd9dec6b6161c294b96fb823c799e44e493f9c684"
     },
     {
@@ -14369,7 +14369,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "0fdb63fbb4e443d9ca896ff504d2ae03e68395690e68e41bf82339c85f2824f0",
+      "reference_normalized_sha256": "24875799318b8976a5cc0a920b639464a460e2da8b9c5ec59af0bc4de0312018",
       "source_normalized_sha256": "9231286c5a914837a046828be0298bb7acbf1bd5be511addf41005f148794fa9"
     },
     {
@@ -14561,7 +14561,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "66f0d7df5c3d69272e819f2834ce83ffa1fd359f978169ebde8b7f41c0085928",
+      "reference_normalized_sha256": "b0c14ea7b87b9f43fcae5e9a9871b005ecb870375cda675934a088af96ca7628",
       "source_normalized_sha256": "963ecb0927e500fbf737c5a8d77c81da088084040c30ef4003f489708d38f183"
     },
     {
@@ -14593,7 +14593,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "9f0520a7dd24fc9ab44970886e77ab075dde4efb4c144fb8eea6b7d14829fb6e",
+      "reference_normalized_sha256": "659acbb2814307e647a8c81736c97fa1e1883735d4f280c53c575a5811913246",
       "source_normalized_sha256": "4c8e528c952f48aef0f5b4d630dde9863a2cb02c8d42b9e4659b3c639fe998b8"
     },
     {
@@ -15169,7 +15169,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "1b0d3926ab291656c8191ceddb844c6bdf0e59e23def513665081f8e3c3b91d0",
+      "reference_normalized_sha256": "5ea07ef0c7590bde4b8923fa6f7c9039e3af8a9c15010c8e47f532d861427cc7",
       "source_normalized_sha256": "faea8ddbab255c1882d1944f2638442e12f1e5acd22f68657699ff15123f8a46"
     },
     {
@@ -15747,9 +15747,745 @@
       "same_normalized_bytecode": true,
       "reference_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "source_normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "reference": "ap.a(Ljava/lang/String;)V",
+      "source": "jimm/comm/Icq$Connection.connect(Ljava/lang/String;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 1,
+      "source_instructions": 1,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "8cd2510271575d8430c05368315a87b9c4784c7389a47496080c1e615a2a00b6",
+      "source_normalized_sha256": "8cd2510271575d8430c05368315a87b9c4784c7389a47496080c1e615a2a00b6"
+    },
+    {
+      "reference": "ap.a()I",
+      "source": "jimm/comm/Icq$Connection.available()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "d4218f749402d49a94e288d4f1ed6a714f4f6df1f6b38e8fd7ec44ffbf14ffd7",
+      "source_normalized_sha256": "d4218f749402d49a94e288d4f1ed6a714f4f6df1f6b38e8fd7ec44ffbf14ffd7"
+    },
+    {
+      "reference": "ap.b()I",
+      "source": "jimm/comm/Icq$Connection.getLocalPort()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b",
+      "source_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b"
+    },
+    {
+      "reference": "ap.a()[B",
+      "source": "jimm/comm/Icq$Connection.getLocalIP()[B",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 3,
+      "source_instructions": 3,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "96a421795fd1c6ddafd00222512939b3c4416fc01c1249dcd3e10e74ffa2f8c3",
+      "source_normalized_sha256": "96a421795fd1c6ddafd00222512939b3c4416fc01c1249dcd3e10e74ffa2f8c3"
+    },
+    {
+      "reference": "ap.b()Z",
+      "source": "jimm/comm/Icq$Connection.isClosed()Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "95b2e72bb80f659c8a01f4cb932c1490f60952b977de0dfe8fa3b06048399704",
+      "source_normalized_sha256": "95b2e72bb80f659c8a01f4cb932c1490f60952b977de0dfe8fa3b06048399704"
+    },
+    {
+      "reference": "cb.b()Z",
+      "source": "jimm/comm/Icq$SOCKSConnection.isClosed()Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b",
+      "source_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b"
+    },
+    {
+      "reference": "cb.b()I",
+      "source": "jimm/comm/Icq$SOCKSConnection.getLocalPort()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 7,
+      "source_instructions": 7,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "9e2502f77a9d6d3814cc836ef82c2103f1aca620f29e31858ba6fd54e27a817f",
+      "source_normalized_sha256": "9e2502f77a9d6d3814cc836ef82c2103f1aca620f29e31858ba6fd54e27a817f"
+    },
+    {
+      "reference": "cb.a()[B",
+      "source": "jimm/comm/Icq$SOCKSConnection.getLocalIP()[B",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "22cc9aab48d4ca33a36e3b2a9cc999d59774975ebe2850fd50695ae7eddcb063",
+      "source_normalized_sha256": "22cc9aab48d4ca33a36e3b2a9cc999d59774975ebe2850fd50695ae7eddcb063"
+    },
+    {
+      "reference": "cd.a(Ljavax/microedition/lcdui/Display;)V",
+      "source": "DrawControls/VirtualList.setDisplay(Ljavax/microedition/lcdui/Display;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 6,
+      "source_instructions": 6,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "037eb4c3ba29d5b3be61916bdd3e9fc7bcaea79ea4b3af9802e75b24b7cfec33",
+      "source_normalized_sha256": "037eb4c3ba29d5b3be61916bdd3e9fc7bcaea79ea4b3af9802e75b24b7cfec33"
+    },
+    {
+      "reference": "cd.a(Z)V",
+      "source": "DrawControls/VirtualList.setFullScreen(Z)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 14,
+      "source_instructions": 14,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "831564abed87fd272cb7d5b2f343c7af3b7795ba7673e234994094d845871f1c",
+      "source_normalized_sha256": "831564abed87fd272cb7d5b2f343c7af3b7795ba7673e234994094d845871f1c"
+    },
+    {
+      "reference": "cd.a(Le;)V",
+      "source": "DrawControls/VirtualList.setCapImage(LDrawControls/Icon;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 11,
+      "source_instructions": 11,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "76da04ed62f775f798c10b25e477e0728a11833a79507e5d454c628fe603b275",
+      "source_normalized_sha256": "76da04ed62f775f798c10b25e477e0728a11833a79507e5d454c628fe603b275"
+    },
+    {
+      "reference": "cd.b(Le;)V",
+      "source": "DrawControls/VirtualList.setCapXstImage(LDrawControls/Icon;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 11,
+      "source_instructions": 11,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "1f4e8972814b99033dc034b21e8f9e57cd8e25693f8c52ee1418503af1e581f1",
+      "source_normalized_sha256": "1f4e8972814b99033dc034b21e8f9e57cd8e25693f8c52ee1418503af1e581f1"
+    },
+    {
+      "reference": "cd.d(Le;)V",
+      "source": "DrawControls/VirtualList.setCapHappyImage(LDrawControls/Icon;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 11,
+      "source_instructions": 11,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "81f8239e7f208605945e389edf54772bffa033580e8caa97e551b1a08392df38",
+      "source_normalized_sha256": "81f8239e7f208605945e389edf54772bffa033580e8caa97e551b1a08392df38"
+    },
+    {
+      "reference": "cd.a()Lcd;",
+      "source": "DrawControls/VirtualList.getCurrent()LDrawControls/VirtualList;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 8,
+      "source_instructions": 8,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "82712bb0cb2d651ffb137671759f642066e2063717be4a0e75e9b5aa903e532f",
+      "source_normalized_sha256": "82712bb0cb2d651ffb137671759f642066e2063717be4a0e75e9b5aa903e532f"
+    },
+    {
+      "reference": "cd.a(IIII)V",
+      "source": "DrawControls/VirtualList.setColors(IIII)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 18,
+      "source_instructions": 18,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "33b3c253fca91f19e55f172850128c4b808d89bd5214a03216b36146a04d2a2e",
+      "source_normalized_sha256": "33b3c253fca91f19e55f172850128c4b808d89bd5214a03216b36146a04d2a2e"
+    },
+    {
+      "reference": "cd.c(Ljava/lang/String;)V",
+      "source": "DrawControls/VirtualList.setCaption(Ljava/lang/String;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 15,
+      "source_instructions": 15,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "4d127e1c67b2ea0f720720ec2480f88423900023c3d48d717c9b7a86815f4cf3",
+      "source_normalized_sha256": "4d127e1c67b2ea0f720720ec2480f88423900023c3d48d717c9b7a86815f4cf3"
+    },
+    {
+      "reference": "cd.a(Ljava/io/InputStream;Z)V",
+      "source": "DrawControls/VirtualList.setBackGroundImage(Ljava/io/InputStream;Z)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 21,
+      "source_instructions": 21,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "ba4decce8538bff9afa4955cf42cc20abea1eb1313be6294de5d0f1f288513c0",
+      "source_normalized_sha256": "ba4decce8538bff9afa4955cf42cc20abea1eb1313be6294de5d0f1f288513c0"
+    },
+    {
+      "reference": "cd.a(IIIIII)Z",
+      "source": "DrawControls/VirtualList.ptInRect(IIIIII)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 16,
+      "source_instructions": 16,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "91099fe0300f2631043bbc9221bcfe26481bfbd870f13975ec6b03399900cd13",
+      "source_normalized_sha256": "91099fe0300f2631043bbc9221bcfe26481bfbd870f13975ec6b03399900cd13"
+    },
+    {
+      "reference": "cf.a(Lbi;)V",
+      "source": "jimm/JimmUI.showInfoTextList(LDrawControls/TextList;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 4,
+      "source_instructions": 4,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "91ecafe5e3d66ce5aca2a0e347368a8e1d6d56424f076366d1834443204640a8",
+      "source_normalized_sha256": "91ecafe5e3d66ce5aca2a0e347368a8e1d6d56424f076366d1834443204640a8"
+    },
+    {
+      "reference": "cf.a(Lbi;Ljava/lang/String;II)V",
+      "source": "jimm/JimmUI.addMessageText(LDrawControls/TextList;Ljava/lang/String;II)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 11,
+      "source_instructions": 11,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "0297bd9aea56bd6f01400ee8a3a6865043e1ae98ba5b5b5339b253e1663855e8",
+      "source_normalized_sha256": "0297bd9aea56bd6f01400ee8a3a6865043e1ae98ba5b5b5339b253e1663855e8"
+    },
+    {
+      "reference": "cf.a(Lcd;)Z",
+      "source": "jimm/JimmUI.isControlActive(LDrawControls/VirtualList;)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 7,
+      "source_instructions": 7,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "a0195f5184f2085f8cd456aedb5ab479d073db932e4f870e9ab4c25b18698ba4",
+      "source_normalized_sha256": "a0195f5184f2085f8cd456aedb5ab479d073db932e4f870e9ab4c25b18698ba4"
+    },
+    {
+      "reference": "cj.g()V",
+      "source": "jimm/Options.resetLangDependedOpts()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 37,
+      "source_instructions": 37,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "49abd1306e2bd4c31cd46801e27c1543465dd4da9646582970eca4d2f29f91b8",
+      "source_normalized_sha256": "49abd1306e2bd4c31cd46801e27c1543465dd4da9646582970eca4d2f29f91b8"
+    },
+    {
+      "reference": "cj.c()V",
+      "source": "jimm/Options.reset()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 3,
+      "source_instructions": 3,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "2386f604e95aa16a950920329fbe76df37e37beb685dc7c1fe58f1b9531b6589",
+      "source_normalized_sha256": "2386f604e95aa16a950920329fbe76df37e37beb685dc7c1fe58f1b9531b6589"
+    },
+    {
+      "reference": "cj.a$134622()J",
+      "source": "jimm/Options.getLong$134622()J",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 6,
+      "source_instructions": 6,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "b40bce909485045672ac647de9040620897296d40dfea7cbdac8d6a151d2f8ff",
+      "source_normalized_sha256": "b40bce909485045672ac647de9040620897296d40dfea7cbdac8d6a151d2f8ff"
+    },
+    {
+      "reference": "ct.b()V",
+      "source": "jimm/comm/UpdateContactListAction.sendCLI_ADDEND()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 14,
+      "source_instructions": 14,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "b99be133c86d0ab7f30055fb135aec81a1a1b7914c3d83fb031d7c394d3135e2",
+      "source_normalized_sha256": "b99be133c86d0ab7f30055fb135aec81a1a1b7914c3d83fb031d7c394d3135e2"
+    },
+    {
+      "reference": "cv.b()V",
+      "source": "jimm/SplashCanvas.Repaint()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 3,
+      "source_instructions": 3,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "3062ec78c32945ca3b44a3ed64ef4273e1ae9835d1b2784d6bc8d8d1ba118d3d",
+      "source_normalized_sha256": "3062ec78c32945ca3b44a3ed64ef4273e1ae9835d1b2784d6bc8d8d1ba118d3d"
+    },
+    {
+      "reference": "cv.q()V",
+      "source": "jimm/SplashCanvas.requestUnlock()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 13,
+      "source_instructions": 13,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "886757da38aaff0ac3da93f82f6d12e99fd2fe1bb5aeeabc222a015fe426a3f6",
+      "source_normalized_sha256": "886757da38aaff0ac3da93f82f6d12e99fd2fe1bb5aeeabc222a015fe426a3f6"
+    },
+    {
+      "reference": "cv.p()V",
+      "source": "jimm/SplashCanvas.startTimer()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 13,
+      "source_instructions": 13,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "c6160349945080619d9e49769acc058887cf67af500513af77189d60a00fc7e8",
+      "source_normalized_sha256": "c6160349945080619d9e49769acc058887cf67af500513af77189d60a00fc7e8"
+    },
+    {
+      "reference": "cv.a(ILcn;)V",
+      "source": "jimm/SplashCanvas.get(ILDrawControls/ListItem;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 1,
+      "source_instructions": 1,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "8cd2510271575d8430c05368315a87b9c4784c7389a47496080c1e615a2a00b6",
+      "source_normalized_sha256": "8cd2510271575d8430c05368315a87b9c4784c7389a47496080c1e615a2a00b6"
+    },
+    {
+      "reference": "cv.a()I",
+      "source": "jimm/SplashCanvas.getSize()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b",
+      "source_normalized_sha256": "de853d9a7f8c4cb381881711b6b54104b948031f05c9f9a710edd0e7489fda1b"
+    },
+    {
+      "reference": "m.a()Lcd;",
+      "source": "jimm/ContactList.getVisibleContactListRef()LDrawControls/VirtualList;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "2cec7691b3340a502af4ef148310c9046b90b58a9ab6078251008194fc95784d",
+      "source_normalized_sha256": "2cec7691b3340a502af4ef148310c9046b90b58a9ab6078251008194fc95784d"
+    },
+    {
+      "reference": "m.a()I",
+      "source": "jimm/ContactList.getSsiListLastChangeTime()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "54a9ba85af56bd905b3e04cbb7c1d7127072d836c9cab7d32c483c8960306011",
+      "source_normalized_sha256": "54a9ba85af56bd905b3e04cbb7c1d7127072d836c9cab7d32c483c8960306011"
+    },
+    {
+      "reference": "m.b()I",
+      "source": "jimm/ContactList.getSsiNumberOfItems()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "9a05ae88ad358d463364293b6bd00def4d201cbb8207a430066169be3e43503b",
+      "source_normalized_sha256": "9a05ae88ad358d463364293b6bd00def4d201cbb8207a430066169be3e43503b"
+    },
+    {
+      "reference": "m.a()[Lz;",
+      "source": "jimm/ContactList.getContactItems()[Ljimm/ContactItem;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "c79b7b0f5704195a5e85a7a4577cd6c9f9ab201514b04992049020e9b6a35d10",
+      "source_normalized_sha256": "c79b7b0f5704195a5e85a7a4577cd6c9f9ab201514b04992049020e9b6a35d10"
+    },
+    {
+      "reference": "m.a()[Lbb;",
+      "source": "jimm/ContactList.getGroupItems()[Ljimm/GroupItem;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "f969a8a3c9c49ed7a1e2fbe0b6e427efbe2d432b840c382fe6fc7951e8cbdf7d",
+      "source_normalized_sha256": "f969a8a3c9c49ed7a1e2fbe0b6e427efbe2d432b840c382fe6fc7951e8cbdf7d"
+    },
+    {
+      "reference": "m.a(Ljava/lang/String;)V",
+      "source": "jimm/ContactList.activate(Ljava/lang/String;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "afcf613023c5bbdc2f3002e4946eaefab6ff32699c621f394022b0a8af3844dd",
+      "source_normalized_sha256": "afcf613023c5bbdc2f3002e4946eaefab6ff32699c621f394022b0a8af3844dd"
+    },
+    {
+      "reference": "m.a(Z)V",
+      "source": "jimm/ContactList.optionsChanged$25decb5(Z)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 5,
+      "source_instructions": 5,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "5109e9763d619c4b6440d01e9af8958f503ce458a763866be96e0a4ef6a48d81",
+      "source_normalized_sha256": "5109e9763d619c4b6440d01e9af8958f503ce458a763866be96e0a4ef6a48d81"
+    },
+    {
+      "reference": "n.a()I",
+      "source": "jimm/comm/ConnectAction.getProgress()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 27,
+      "source_instructions": 27,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "23f0b6717144401ac5f389761ca2de1c155afb2ae619cb4bd4da7b29b293b582",
+      "source_normalized_sha256": "23f0b6717144401ac5f389761ca2de1c155afb2ae619cb4bd4da7b29b293b582"
+    },
+    {
+      "reference": "r.a()Lr;",
+      "source": "jimm/comm/Icq.getIcq()Ljimm/comm/Icq;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 2,
+      "source_instructions": 2,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "963867f957e0bf44f101702840095cf5ff8aabb1e70d675de5cfefa051f2be43",
+      "source_normalized_sha256": "963867f957e0bf44f101702840095cf5ff8aabb1e70d675de5cfefa051f2be43"
+    },
+    {
+      "reference": "r.b()Ljava/lang/String;",
+      "source": "jimm/comm/Icq.getSrvHost()Ljava/lang/String;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 14,
+      "source_instructions": 14,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "b7af04a8fe94b92b3af0cffc668db60ef667675871c4c9e3652159d35c3c079e",
+      "source_normalized_sha256": "b7af04a8fe94b92b3af0cffc668db60ef667675871c4c9e3652159d35c3c079e"
+    },
+    {
+      "reference": "r.f()V",
+      "source": "jimm/comm/Icq.resetPeerCon()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 3,
+      "source_instructions": 3,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "20a201d58666901bc011227d28d0707eeaf889fbb4ace111de3ab4edd97fd9ba",
+      "source_normalized_sha256": "20a201d58666901bc011227d28d0707eeaf889fbb4ace111de3ab4edd97fd9ba"
+    },
+    {
+      "reference": "r.a()Le;",
+      "source": "jimm/comm/Icq.getCurrentXStatus()LDrawControls/Icon;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 8,
+      "source_instructions": 8,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "bd6127c6da7e78fc1b80f93233c1afcdb250cef49b17a9978344cedecc70b272",
+      "source_normalized_sha256": "bd6127c6da7e78fc1b80f93233c1afcdb250cef49b17a9978344cedecc70b272"
+    },
+    {
+      "reference": "cf.a(Ljava/lang/Object;Ljava/lang/String;)V",
+      "source": "jimm/JimmUI.setCaption(Ljava/lang/Object;Ljava/lang/String;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 16,
+      "source_instructions": 16,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "9454d45681ae2589400fb108537c9bbb2e41408402d81c86a2741c163af47c74",
+      "source_normalized_sha256": "9454d45681ae2589400fb108537c9bbb2e41408402d81c86a2741c163af47c74"
+    },
+    {
+      "reference": "cf.a()Ljava/lang/Object;",
+      "source": "jimm/JimmUI.getCurrentScreen()Ljava/lang/Object;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 16,
+      "source_instructions": 16,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "02dd720a20ff8030d4f984b9b5a7bca47e2a03472161d8044642aa527f8048c3",
+      "source_normalized_sha256": "02dd720a20ff8030d4f984b9b5a7bca47e2a03472161d8044642aa527f8048c3"
+    },
+    {
+      "reference": "cv.m(I)V",
+      "source": "jimm/SplashCanvas.tryToUnlock(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 24,
+      "source_instructions": 24,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "66eae9e734eba6d3f3082ea97ca1f973f18cde40a4f37613a19c42307dc8976b",
+      "source_normalized_sha256": "66eae9e734eba6d3f3082ea97ca1f973f18cde40a4f37613a19c42307dc8976b"
+    },
+    {
+      "reference": "r.c()I",
+      "source": "jimm/comm/Icq.getCurrentStatus()I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 7,
+      "source_instructions": 7,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "aeb3c064f7f02bc4801f9aeead1cc918fc2017729e94024a53acad7cb226227a",
+      "source_normalized_sha256": "aeb3c064f7f02bc4801f9aeead1cc918fc2017729e94024a53acad7cb226227a"
     }
   ],
   "abstract_declarations": 34,
-  "same_normalized_executable_method_bodies": 503,
+  "same_normalized_executable_method_bodies": 554,
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."
 }

@@ -19,6 +19,7 @@ jobs:
       - run: python tools/audit_util.py
       - run: python tools/audit_members.py
       - run: python tools/audit_inheritance.py
+      - run: python tools/audit_method_graph.py
       - uses: actions/upload-artifact@v4
         with:
           name: maintained-src-may-reconstruction
@@ -33,6 +34,7 @@ jobs:
             preservation/reports/source-contact-core.json
             preservation/reports/source-member-inventory.json
             preservation/reports/source-inheritance.json
+            preservation/reports/source-method-graph.json
             preservation/reports/source-util-bytecode.json
             preservation/reports/source-light.json
             preservation/reports/source-light-bytecode.json

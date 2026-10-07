@@ -2247,6 +2247,20 @@ for member in INHERITED_SYMBOLS['abstract_methods']:
         _audited_signatures.add(signature)
 
 
+# Further identities proven by unique full-body matches. The separate audit
+# replays their dependency rounds without using these aliases prematurely.
+EXACT_BASE_SYMBOLS = dict(SYMBOLS)
+EXACT_METHODS = json.loads((ROOT / 'tools/source/exact-methods.json').read_text(encoding='utf-8'))
+for member in EXACT_METHODS['methods']:
+    signature = (member['reference_owner'], member['reference_name'], member['reference_desc'])
+    assert signature not in _audited_signatures, signature
+    assert member['source_owner'] == SOURCE_OWNERS.get(signature[0], CLASSES[signature[0]])
+    METHODS.append((*signature, member['source_name']))
+    _audited_signatures.add(signature)
+    SYMBOLS[signature[0] + '.' + signature[1] + signature[2]] = (
+        member['source_owner'] + '.' + member['source_name'] + member['source_desc'])
+
+
 def normalized(code):
     result = []
     for instruction in code:
@@ -2278,6 +2292,18 @@ def normalized_handlers(handlers):
     return result
 
 
+def resolve_method(methods, name, desc):
+    exact = [m for m in methods if (m['name'], m['desc']) == (name, desc)]
+    if exact:
+        assert len(exact) == 1, ('Duplicate exact member', name, desc)
+        return exact[0]
+    specialized = [m for m in methods if '$' not in name and m['name'].split('$')[0] == name
+                   and m['desc'] == desc]
+    assert len(specialized) == 1, ('Missing or ambiguous specialized member', name, desc,
+                                  [m['name'] for m in specialized])
+    return specialized[0]
+
+
 def main():
     signatures = [(owner, name, desc) for owner, name, desc, source in METHODS]
     if len(signatures) != len(set(signatures)):
@@ -2301,8 +2327,7 @@ def main():
         for short, long in CLASSES.items():
             source_desc = source_desc.replace('L' + short + ';', 'L' + long + ';')
         source_owner = SOURCE_OWNERS.get(owner, CLASSES[owner])
-        after = next(m for m in new[source_owner]['methods']
-                     if (m['name'] if '$' in source_name else m['name'].split('$')[0]) == source_name and m['desc'] == source_desc)
+        after = resolve_method(new[source_owner]['methods'], source_name, source_desc)
         left, right = normalized(before['code']), after['code']
         same_static = bool(before['access'] & 8) == bool(after['access'] & 8)
         if not same_static:
