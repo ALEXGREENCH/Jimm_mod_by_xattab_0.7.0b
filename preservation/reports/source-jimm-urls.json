@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2-RU JimmUI.gotoURL and the URL-list commandAction route, real Util URL parsing, TextList wrapping, tagged selection, text/font metrics, command labels and screen transitions. All eight font bit masks, three contact-font option values and four terminal results are exercised. The URL list retains its native fixed small font; 176x220 MicroEmulator pixels are compared. Only JimmUI platformRequest calls are captured; an Exception is swallowed and an Error escapes as in the original. Existing login/date fixtures provide inert surrounding initialization. Whole controller bytecode is verified unchanged before capture; only terminal call instructions change afterward. No physical browser launch, device rendering or complete controller equivalence claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "4499418730f6b498674fab51e844ca8ae6ae3c38e799885a136cda6fc39fd562",
-  "source_unoptimized_class_jar_sha256": "63d0ed1e8d0cdc2c684696a86ffb66caec7b42da2f11af3c3c57fe8184dfb57f",
+  "source_jar_sha256": "2c64e6d6dd651fdae41afe001f832ba7997a8b77bc0e38f5b2e0eabec2697363",
+  "source_unoptimized_class_jar_sha256": "c84f814945d4f376590407a3e73b248993f6c1dae2d9bfc7c3f2eb1525a669b1",
   "observations": 7573,
   "goto_url_calls": 1056,
   "list_snapshots": 648,
@@ -15,8 +15,8 @@
   "fixture_proofs": [
     {
       "mode": "reference",
-      "base_fixture_sha256": "e082590811e5e8d2c9d397e6d64bee6462127c2d18f4784bc2b1aa5bdbdc40fc",
-      "fixture_sha256": "3c59e5bcf451a59680f506648d0392c142948fa9021446558c137cc52809ef41",
+      "base_fixture_sha256": "29bf4b8cf03d1cf75f3ea1f029089c7ad6d8d36fef92e9495c588cf2544d4255",
+      "fixture_sha256": "a764be764b2bbeba8665ae14e513d9a40744600f1c4e4292b7aba2fb650c0701",
       "terminal_call_sites": 3,
       "unchanged_controller_before_capture": true,
       "only_terminal_invocations_changed": true,
@@ -25,8 +25,8 @@
     },
     {
       "mode": "source",
-      "base_fixture_sha256": "8b30f5c9c8498bc66f27e7679ece58ffe94be80d4c5d48fb2bc58386bb675cc1",
-      "fixture_sha256": "38cbb997c4f77b08cf312aaff9954d38c9b79b4c7fd3a7d5ab92d8a0d274a144",
+      "base_fixture_sha256": "8ba807fca7c7d9299f433a5a0fa88d94fe9a007aec47cae347a07cf06a5bac20",
+      "fixture_sha256": "4c4ec0bc07e666ad6398e497f7e94687e7aa722160f85815099e34aa859d7da1",
       "terminal_call_sites": 3,
       "unchanged_controller_before_capture": true,
       "only_terminal_invocations_changed": true,

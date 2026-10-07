@@ -133,3 +133,5 @@ Native телефонная книга, команды звонка/SMS и ош�
 
 
 Порядок подсветки, таймера автостатуса, реакции и callback для трёх платформ проверяется `python tools/test_key_routing.py --skip-build`. Та же команда проверяет обработку ошибок `Util.writeByteArray`; [отчёт](../preservation/reports/source-key-routing.json) сохраняется в общей матрице и CI. Границы этой проверки описаны в [восстановлении исходников](SOURCE-RECOVERY.md).
+
+После полной матрицы `python tools/audit_static_text.py` повторяет сверку целых `TextList.showText` / `getLineNumbers` на трёх RU-платформах. `python tools/replay_static_text.py` использует подготовленные стенды и повторяет MIDP2 native/raw text-list сценарии, проверяя неизменность всего текущего класса TextList в fixtures. [Байткод](../preservation/reports/source-static-text-bytecode.json) и [replay](../preservation/reports/source-static-text-replay.json) входят в матрицу и артефакты CI; [свидетельство до правки](../preservation/reports/source-static-text-before.json) относится к сохранённым настоящим сборкам прежнего коммита.

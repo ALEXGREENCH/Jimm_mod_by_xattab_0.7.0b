@@ -1,7 +1,7 @@
 {
   "scope": "Actual MIDP2 ServerListsAction/RemoveMeAction/SysNoticeAction/SystemNotice. Real constructors, action state, contact IDs, selected account, serializers and error paths. Existing file-transfer fixture connection/UI boundaries are retained. Only action clock reads/default Date construction and ContactList.contactChanged are captured here; Util date conversion and roster-ID generation algorithms remain real with a fixed clock. No network login, physical timing or complete protocol-equivalence claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "63d0ed1e8d0cdc2c684696a86ffb66caec7b42da2f11af3c3c57fe8184dfb57f",
+  "source_unoptimized_class_jar_sha256": "c84f814945d4f376590407a3e73b248993f6c1dae2d9bfc7c3f2eb1525a669b1",
   "observations": 4494,
   "successful_sends": 451,
   "accepted_acknowledgments": 840,

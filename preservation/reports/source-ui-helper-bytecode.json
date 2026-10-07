@@ -7,11 +7,11 @@
     },
     "raw": {
       "path": "build/source/MIDP2-RU/classes.jar",
-      "sha256": "63d0ed1e8d0cdc2c684696a86ffb66caec7b42da2f11af3c3c57fe8184dfb57f"
+      "sha256": "c84f814945d4f376590407a3e73b248993f6c1dae2d9bfc7c3f2eb1525a669b1"
     },
     "optimized": {
       "path": "dist/source/Jimm-MIDP2-RU.jar",
-      "sha256": "4499418730f6b498674fab51e844ca8ae6ae3c38e799885a136cda6fc39fd562"
+      "sha256": "2c64e6d6dd651fdae41afe001f832ba7997a8b77bc0e38f5b2e0eabec2697363"
     }
   },
   "methods": [

@@ -1,0 +1,596 @@
+{
+  "scope": "Genuine baseline 3c1c659 versus the completed current matrix. In all three full RU raw JARs only TextList.class and its eight-argument showText method changed; in each of fifteen delivered localized JARs only TextList.class changed, with all other entry bytes and names unchanged. Dumped raw header/field metadata remains equal; this does not assert every class-file attribute. All 1128 main signatures and 671 previous complete instruction/handler matches remain. All prior 9775 MIDP2 text-list observations and 930 rasters remain byte-identical. This is a structural/order restoration, without a fabricated prior runtime failure or whole-program equivalence claim.",
+  "baseline_commit": "3c1c659",
+  "baseline_source_sha256": "c9427bfeb32f126c6bfaaffa75e60687d5eac3b2ce89224345bf7c54bff36e1f",
+  "current_source_sha256": "3eb3c4b627bb8b74f17dab631e4050c838671cdb6af3410300834fefbe0e7548",
+  "raw_changes": [
+    {
+      "target": "MIDP2",
+      "baseline_sha256": "63d0ed1e8d0cdc2c684696a86ffb66caec7b42da2f11af3c3c57fe8184dfb57f",
+      "current_sha256": "c84f814945d4f376590407a3e73b248993f6c1dae2d9bfc7c3f2eb1525a669b1",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ],
+      "complete_changed_methods": [
+        {
+          "before": {
+            "name": "showText",
+            "desc": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIII)V",
+            "access": 9,
+            "code": [
+              "187 DrawControls/TextList",
+              "89",
+              "1",
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "58 8",
+              "25 8",
+              "21 5",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "25 8",
+              "25 1",
+              "21 7",
+              "21 6",
+              "2",
+              "21 4",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "3",
+              "54 9",
+              "167 36",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 2",
+              "21 3",
+              "25 0",
+              "21 5",
+              "25 8",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "21 3",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "96",
+              "54 3",
+              "132 9 1",
+              "21 9",
+              "25 8",
+              "182 DrawControls/TextList.getSize()I",
+              "161 18",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "182 DrawControls/TextList.getSize()I"
+            ]
+          },
+          "after": {
+            "name": "showText",
+            "desc": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIII)V",
+            "access": 9,
+            "code": [
+              "187 DrawControls/TextList",
+              "89",
+              "1",
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "58 8",
+              "25 8",
+              "21 5",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "25 8",
+              "25 1",
+              "21 7",
+              "21 6",
+              "2",
+              "21 4",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "25 8",
+              "182 DrawControls/TextList.getSize()I",
+              "54 10",
+              "3",
+              "54 9",
+              "167 28",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "87",
+              "132 9 1",
+              "21 9",
+              "21 10",
+              "161 21",
+              "3",
+              "54 9",
+              "167 52",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 2",
+              "21 3",
+              "25 0",
+              "21 5",
+              "25 8",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "21 3",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "96",
+              "54 3",
+              "132 9 1",
+              "21 9",
+              "21 10",
+              "161 34",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "182 DrawControls/TextList.getSize()I",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "baseline_sha256": "053c1042fd1ae2ba018ea597696c008abb0a14ef5ed002ee8d4e53fa61dc7655",
+      "current_sha256": "7c2d292eeeafe1bf3bede519a8b6858a5c54874fab6eddb790af041135b13bc4",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ],
+      "complete_changed_methods": [
+        {
+          "before": {
+            "name": "showText",
+            "desc": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIII)V",
+            "access": 9,
+            "code": [
+              "187 DrawControls/TextList",
+              "89",
+              "1",
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "58 8",
+              "25 8",
+              "21 5",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "25 8",
+              "25 1",
+              "21 7",
+              "21 6",
+              "2",
+              "21 4",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "3",
+              "54 9",
+              "167 36",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 2",
+              "21 3",
+              "25 0",
+              "21 5",
+              "25 8",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "21 3",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "96",
+              "54 3",
+              "132 9 1",
+              "21 9",
+              "25 8",
+              "182 DrawControls/TextList.getSize()I",
+              "161 18",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "182 DrawControls/TextList.getSize()I"
+            ]
+          },
+          "after": {
+            "name": "showText",
+            "desc": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIII)V",
+            "access": 9,
+            "code": [
+              "187 DrawControls/TextList",
+              "89",
+              "1",
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "58 8",
+              "25 8",
+              "21 5",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "25 8",
+              "25 1",
+              "21 7",
+              "21 6",
+              "2",
+              "21 4",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "25 8",
+              "182 DrawControls/TextList.getSize()I",
+              "54 10",
+              "3",
+              "54 9",
+              "167 28",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "87",
+              "132 9 1",
+              "21 9",
+              "21 10",
+              "161 21",
+              "3",
+              "54 9",
+              "167 52",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 2",
+              "21 3",
+              "25 0",
+              "21 5",
+              "25 8",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "21 3",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "96",
+              "54 3",
+              "132 9 1",
+              "21 9",
+              "21 10",
+              "161 34",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "182 DrawControls/TextList.getSize()I",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "baseline_sha256": "84d762c906e2809b31a8278365fc732c7c8258fbe8310459ce61a7dc3dc8857b",
+      "current_sha256": "b9f5e8d29fe2d997a8511350b9cadeb054c1ca93f7ec1e1eea31402c48a4a57d",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ],
+      "complete_changed_methods": [
+        {
+          "before": {
+            "name": "showText",
+            "desc": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIII)V",
+            "access": 9,
+            "code": [
+              "187 DrawControls/TextList",
+              "89",
+              "1",
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "58 8",
+              "25 8",
+              "21 5",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "25 8",
+              "25 1",
+              "21 7",
+              "21 6",
+              "2",
+              "21 4",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "3",
+              "54 9",
+              "167 36",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 2",
+              "21 3",
+              "25 0",
+              "21 5",
+              "25 8",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "21 3",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "96",
+              "54 3",
+              "132 9 1",
+              "21 9",
+              "25 8",
+              "182 DrawControls/TextList.getSize()I",
+              "161 18",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "182 DrawControls/TextList.getSize()I"
+            ]
+          },
+          "after": {
+            "name": "showText",
+            "desc": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIII)V",
+            "access": 9,
+            "code": [
+              "187 DrawControls/TextList",
+              "89",
+              "1",
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "58 8",
+              "25 8",
+              "21 5",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "25 8",
+              "25 1",
+              "21 7",
+              "21 6",
+              "2",
+              "21 4",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "25 8",
+              "182 DrawControls/TextList.getSize()I",
+              "54 10",
+              "3",
+              "54 9",
+              "167 28",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "87",
+              "132 9 1",
+              "21 9",
+              "21 10",
+              "161 21",
+              "3",
+              "54 9",
+              "167 52",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 2",
+              "21 3",
+              "25 0",
+              "21 5",
+              "25 8",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "21 3",
+              "25 8",
+              "21 9",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "21 5",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "96",
+              "54 3",
+              "132 9 1",
+              "21 9",
+              "21 10",
+              "161 34",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "183 DrawControls/TextList.<init>(Ljava/lang/String;)V",
+              "182 DrawControls/VirtualList.setFontSize(I)V",
+              "182 DrawControls/TextList.addBigTextInternal(Ljava/lang/String;IIII)V",
+              "182 DrawControls/TextList.getSize()I",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.paint(IILjavax/microedition/lcdui/Graphics;ILDrawControls/VirtualList;)V",
+              "182 DrawControls/TextList.getLine(I)LDrawControls/TextLine;",
+              "182 DrawControls/TextLine.getHeight(I)I"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "delivered_changes": [
+    {
+      "target": "MIDP2",
+      "language": "RU",
+      "baseline_sha256": "4499418730f6b498674fab51e844ca8ae6ae3c38e799885a136cda6fc39fd562",
+      "current_sha256": "2c64e6d6dd651fdae41afe001f832ba7997a8b77bc0e38f5b2e0eabec2697363",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MIDP2",
+      "language": "UA",
+      "baseline_sha256": "e7fc15846bf2186b2d1a7ba777c52719682468ef19d0a8806b82c7f4cc76f88c",
+      "current_sha256": "8dcdc59dcd2b83da8e03530c58149c0ee360c18cd6b629e64f7496858c4f1a01",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MIDP2",
+      "language": "RO",
+      "baseline_sha256": "9e04b03ebbc8d749a9639b8fdba355396ee036be5a0728964c71553f94163226",
+      "current_sha256": "11eb05a5fb5b3674531ab911dd96dd3c4a5cd5abc62f6f2674ae1d5618119f18",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MIDP2",
+      "language": "EN",
+      "baseline_sha256": "5d4cb98c83ae11f1dba7d9928db4f3b73ef89f1db5c65ef0e3488d44f5662c92",
+      "current_sha256": "247834de6c32327037a2675b1f5c5a3e5d89dc2029a6a08eabc5087b2c77ecdb",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MIDP2",
+      "language": "CZ",
+      "baseline_sha256": "c8de1093b1677f45ea988cab01f146619edf6e98a1c9569ea268833587d41fb9",
+      "current_sha256": "19d33d4e068de1e4f616ea4a1958ccbd71e6eecae87273b8206dfaeca29d188d",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RU",
+      "baseline_sha256": "62cb4473dd9ec50de5a3406023f6923acbe9b0b07dab4965b7a3d5b7b971a9f1",
+      "current_sha256": "ff2fd08c035bd584691c5e9ae2f77ea5674716810fdf4763c1d6e70dfc267339",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "UA",
+      "baseline_sha256": "86fd4cd8518d872ac22dc872cc5ea79005e4bb0ac2dd68fbef122c8b0a6678e6",
+      "current_sha256": "8dab7f3f81b295c84d24c1f0e8542d5d44af80d2f8119d9df1cedac4cfe1413b",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RO",
+      "baseline_sha256": "98fa1d25c99efa5b6babf458c64f4ab0648926efddf8e1e1a436dd863bd5f58a",
+      "current_sha256": "5623cc5f435beca2858d419e8ecc0b94c6fc442a46c237602d551d8362c08981",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "EN",
+      "baseline_sha256": "a3e6db8f024e4b6d0b8f37d0f1b5f38bb239ead931f8f337a92b002a5e35fc21",
+      "current_sha256": "319012994a97dd30e8593627ad7a723791991ce0eb0ec2503d59d2f47f809d8d",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "CZ",
+      "baseline_sha256": "c471a2468a8261d4ac8f3b792398726dc9d5df07d22a56361f22e02feadf759b",
+      "current_sha256": "708a517e6a06a954ca597ea4139ee63e7736b8865552a0aec24a82de23917fd6",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RU",
+      "baseline_sha256": "c0d5a279d37a94b7725f123757ed37a898027cf30fb9348d73f49e425d9a3ba7",
+      "current_sha256": "2b9c6503a3c19ea7b842544ed211ab8c65d8479203d40f4c4868cef482aebf8c",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "UA",
+      "baseline_sha256": "c2ef26d15023dd6ec942da0e733d8d7d4937d117e9498e943ac8e870f7735d53",
+      "current_sha256": "594d37b880a9a4a031ba8c636e1d4c1abb02334dece28624ad4b6164785d4fc1",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RO",
+      "baseline_sha256": "2aecc222318dcb135be76474657e19fb3dbba27923afac2b0cdf8eaf7a9cd477",
+      "current_sha256": "3b81dcbb3eb399164accd0d31d3ea40fdc082e1fdd7cf591b3d28a6247bac52c",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "EN",
+      "baseline_sha256": "e4d9b501601b46b4f6fc513b092adff718e560c593493a2f374bede4f1d023fe",
+      "current_sha256": "efe50453ff52de1b7d4fdad29a7925d89f30d8a3af0ca776f1e8efb7a3aa9fea",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "CZ",
+      "baseline_sha256": "edcef2ee3b095e1efb96b3e18a834870fac5064d0d83cba4d3b262b40cbf76c7",
+      "current_sha256": "4ddf3aacc343cde7216f06e911a82ebc1c54624577f8f81039705c34a7988b9c",
+      "changed_entries": [
+        "DrawControls/TextList.class"
+      ]
+    }
+  ],
+  "main_signatures": 1128,
+  "previous_complete_matches_retained": 671,
+  "text_list_observations_retained": 9775,
+  "raster_frames_retained": 930
+}

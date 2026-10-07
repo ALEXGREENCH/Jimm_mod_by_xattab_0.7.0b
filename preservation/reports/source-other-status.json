@@ -1,14 +1,14 @@
 {
   "scope": "Complete May MIDP2 RU OtherAction.setPrivateStatus/setStatus/setUserInfo with actual Icq, GUID, Util, capability builders, SnacPacket serializers, SOCKETConnection.sendPacket, Traffic and roster title updates. Natural output streams record real wire bytes and actual stream monitor ownership; first/second packet write/flush IOExceptions, unchecked exceptions/Error and null connection/output paths retain real application handling. Device mode preserves every application/resource byte. Clock mode changes exactly one external System clock read in actual Util.createRandomId; every other declaration/instruction/handler and application/resource is retained. Host MIDlet, typed option table, privacy ID, FLAP sequence, status flags/data and socket streams are explicit inputs. XStatus is set to none, physical network, UI event ordering and all GUID advertisement combinations are not claimed.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "raw_sha256": "63d0ed1e8d0cdc2c684696a86ffb66caec7b42da2f11af3c3c57fe8184dfb57f",
-  "delivered_sha256": "4499418730f6b498674fab51e844ca8ae6ae3c38e799885a136cda6fc39fd562",
+  "raw_sha256": "c84f814945d4f376590407a3e73b248993f6c1dae2d9bfc7c3f2eb1525a669b1",
+  "delivered_sha256": "2c64e6d6dd651fdae41afe001f832ba7997a8b77bc0e38f5b2e0eabec2697363",
   "proofs": [
     {
       "mode": "reference",
       "clocked": false,
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "b3c923e5a0fb461f7fbce627fe640173d12519250b09ef172700cadf6fbf0f33",
+      "fixture_sha256": "fd3299821e7f42df8837e04f2d30210343886c8f00afea92407e4fd8f172ff81",
       "output_sha256": "67c533267e2b1dcd95550a6e551ef6ab588f4134839f106d4cf2c50336c6f689",
       "observations": 5836,
       "coverage": [
@@ -23,8 +23,8 @@
     {
       "mode": "raw",
       "clocked": false,
-      "input_sha256": "980f4d46a6a931c8b6f76f0dbf3edb1d16b57ea52ea1fb1cc3a506e78288f8f8",
-      "fixture_sha256": "41af3733348d05978c1efd0c81116261dc8b156592863332840cf34f629f6edb",
+      "input_sha256": "dcd05187473b7ed84c0e0f1eed750944774d2841df8174869e9409ec0ab4d411",
+      "fixture_sha256": "2536000b2f34b0e93601356c522b41fac8dfc247c115fc5f5110b2e36c484f2a",
       "output_sha256": "67c533267e2b1dcd95550a6e551ef6ab588f4134839f106d4cf2c50336c6f689",
       "observations": 5836,
       "coverage": [
@@ -39,8 +39,8 @@
     {
       "mode": "optimized",
       "clocked": false,
-      "input_sha256": "4499418730f6b498674fab51e844ca8ae6ae3c38e799885a136cda6fc39fd562",
-      "fixture_sha256": "bd74c1c2c61d5233895d7856c9a4810a817740442d9223bacb39268088aedb8d",
+      "input_sha256": "2c64e6d6dd651fdae41afe001f832ba7997a8b77bc0e38f5b2e0eabec2697363",
+      "fixture_sha256": "f19f718fb0a923de7f019c92def815d8b7bdadbb2e9e8e9155016e8aa138df55",
       "output_sha256": "67c533267e2b1dcd95550a6e551ef6ab588f4134839f106d4cf2c50336c6f689",
       "observations": 5836,
       "coverage": [
@@ -56,7 +56,7 @@
       "mode": "reference",
       "clocked": true,
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "d4cee387c93c46a10c5b21cafbfde92140e4437bf56989ff4193895c6632c9e5",
+      "fixture_sha256": "7b7a7de630c357b849d93e80d279d88e84f14d3ebe85e4f90c3e18c05d93e07d",
       "output_sha256": "b94b0e086cbd54b4a9a17e8a582d6829d703eb826f20e3b114b91088e9b828f6",
       "observations": 5976,
       "coverage": [
@@ -71,8 +71,8 @@
     {
       "mode": "raw",
       "clocked": true,
-      "input_sha256": "980f4d46a6a931c8b6f76f0dbf3edb1d16b57ea52ea1fb1cc3a506e78288f8f8",
-      "fixture_sha256": "595bc52db376cc6b74274da094c4b1692532650384d0f607e4d9ff702d726e08",
+      "input_sha256": "dcd05187473b7ed84c0e0f1eed750944774d2841df8174869e9409ec0ab4d411",
+      "fixture_sha256": "9c2015735ef853e6a7bd9e64246f250cfb47ad52f07ebf523e49042a0a8cfbf0",
       "output_sha256": "b94b0e086cbd54b4a9a17e8a582d6829d703eb826f20e3b114b91088e9b828f6",
       "observations": 5976,
       "coverage": [
@@ -87,8 +87,8 @@
     {
       "mode": "optimized",
       "clocked": true,
-      "input_sha256": "4499418730f6b498674fab51e844ca8ae6ae3c38e799885a136cda6fc39fd562",
-      "fixture_sha256": "5deefe301cbfd27ddcef0b8e61c20a6c6b04aa40cdc29a41e7552abee12d85a9",
+      "input_sha256": "2c64e6d6dd651fdae41afe001f832ba7997a8b77bc0e38f5b2e0eabec2697363",
+      "fixture_sha256": "203b4b54a5249b421afc04b88a5c5b4e3ae9c26371ebb6ab728a342bc519a927",
       "output_sha256": "b94b0e086cbd54b4a9a17e8a582d6829d703eb826f20e3b114b91088e9b828f6",
       "observations": 5976,
       "coverage": [

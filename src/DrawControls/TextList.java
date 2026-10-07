@@ -725,7 +725,10 @@ public class TextList extends VirtualList
 		TextList paintList = new TextList(null);
 		paintList.setFontSize(fontSize);
 		paintList.addBigTextInternal(s, textColor, fontStyle, -1, width);
-		for (int line = 0; line < paintList.getSize(); line++)
+		int line;
+		int linesCount = paintList.getSize();
+		for (line = 0; line < linesCount; line++) paintList.getLine(line).getHeight(fontSize);
+		for (line = 0; line < linesCount; line++)
 		{
 			paintList.getLine(line).paint(x, y, g, fontSize, paintList);
 			y += paintList.getLine(line).getHeight(fontSize);

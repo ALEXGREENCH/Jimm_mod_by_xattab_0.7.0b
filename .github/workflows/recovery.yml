@@ -98,6 +98,10 @@ jobs:
             preservation/reports/source-vlist-helper-replay.json
             preservation/reports/source-contact-helper-bytecode.json
             preservation/reports/source-contact-helper-replay.json
+            preservation/reports/source-static-text-bytecode.json
+            preservation/reports/source-static-text-replay.json
+            preservation/reports/source-static-text-before.json
+            preservation/reports/source-static-text-delta.json
   verify:
     runs-on: ubuntu-latest
     steps:
