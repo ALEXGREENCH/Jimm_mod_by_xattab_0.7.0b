@@ -4206,10 +4206,10 @@
       "abstract_method": false,
       "reference_instructions": 12,
       "source_instructions": 12,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "a2e8967931d615f6d78c7cf2c91bf475fca6c49a60b2fa69bc2ba8bd7c3bf092",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "7a4a902bf1c2475645260885a512023c926426075e436286535a8aba004d4a1e",
       "source_normalized_sha256": "7a4a902bf1c2475645260885a512023c926426075e436286535a8aba004d4a1e"
     },
     {
@@ -5841,7 +5841,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "71a0619a6718a1e966e9a62317f163e10e3287444b1fc3841955fb408a02b538",
+      "reference_normalized_sha256": "06e82cd830ba7e7580930a0652947254c0fa7188b4132ffc9f04fa5c0ba43f3c",
       "source_normalized_sha256": "d451fb4285944534002ae9735ae3537cd4933c9a101752b883f7a4dce9cd4c8b"
     },
     {
@@ -7857,7 +7857,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "026517574006fd349b791824abc4074b35d0230b6ebd0155687cd35c5383ad96",
+      "reference_normalized_sha256": "e80d67a2692562c8f70566e32655347aeaab5748667509a2374b5a38aef856e2",
       "source_normalized_sha256": "bb22874690a2e8eb09292733b0e809a12a1b20248e2e25b245c0965161d889bd"
     },
     {
@@ -7889,7 +7889,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "9afd3f37c37a62faf51f111246d1fda6ffdbad1034d93c23615feec8251daab5",
+      "reference_normalized_sha256": "ae232a2e1cdb4a903be436f3c94080e190a02bb965a8d787f9a3a1f97cb9940e",
       "source_normalized_sha256": "3131547233ea83a5def15e68f5109fbf1ae1c48cb691e07d90d066c232c4e885"
     },
     {
@@ -12769,7 +12769,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "5afaef5d8ce043ec2241df59f94728cbb49cd48d5e9faf76c3c2e091440385dd",
+      "reference_normalized_sha256": "5a076ca24e192ca547f00e6927391b6e4a9ea09c159517836fc6d9bd37c34d7c",
       "source_normalized_sha256": "dd904f835b0ea80a3209a89b81440aafb7055e4f251bb07a070d4bf0306b106f"
     },
     {
@@ -14609,7 +14609,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "e222f73238e50a530e23914f75b488d439f524c9b08ea91f84412493564877a3",
+      "reference_normalized_sha256": "c0a64066a62f54cd0c55d08cc098dd2493bbb307fc4b82df69c1aa10c9a36657",
       "source_normalized_sha256": "58e8c701df4e1248780e7341a0256eb7473aa836d5bd66d6b9253a1195b77a6d"
     },
     {
@@ -17619,9 +17619,57 @@
       "same_normalized_bytecode": true,
       "reference_normalized_sha256": "ae076d92bfbfdd927ee9fa51f62f15121d761297626d2d10b314d5c332bc49d3",
       "source_normalized_sha256": "ae076d92bfbfdd927ee9fa51f62f15121d761297626d2d10b314d5c332bc49d3"
+    },
+    {
+      "reference": "bq.a([Lbh;)V",
+      "source": "jimm/comm/OtherAction.setUserInfo([Ljimm/comm/GUID;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 69,
+      "source_instructions": 69,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "bd63317c68a684fdefc8e807320e27b46f49faa3a5684074173f31ef010e4e5a",
+      "source_normalized_sha256": "2fc4dfa61b5864ae34f3a067ac201c24093e3ca419309dadef91480cae84ca19"
+    },
+    {
+      "reference": "bq.a(I)V",
+      "source": "jimm/comm/OtherAction.setStatus(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 209,
+      "source_instructions": 209,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "14681bf313e1ea1629bbde9e3adad1799e1e94744ef80658b64b8f43d9287abb",
+      "source_normalized_sha256": "14681bf313e1ea1629bbde9e3adad1799e1e94744ef80658b64b8f43d9287abb"
+    },
+    {
+      "reference": "bq.a(B)V",
+      "source": "jimm/comm/OtherAction.setPrivateStatus(B)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 61,
+      "source_instructions": 63,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "9bb05b632d28a9a2ad76d422a66a1a0f05357cfce5c384dab5bbc5fc20a5749c",
+      "source_normalized_sha256": "bdff8a3209150b8a200b2b88ee34b3dd8a9f12269b7a6c64bea5de873a8d33e8"
     }
   ],
   "abstract_declarations": 34,
-  "same_normalized_executable_method_bodies": 606,
+  "same_normalized_executable_method_bodies": 608,
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."
 }

@@ -2457,6 +2457,21 @@ SYMBOLS.update({
 })
 
 
+# Whole capability/status/private packet methods are replayed through real socket
+# serialization in test_other_status.py; only setStatus has a fully equal body.
+METHODS.extend([
+    ('bq', 'a', '([Lbh;)V', 'setUserInfo'),
+    ('bq', 'a', '(I)V', 'setStatus'),
+    ('bq', 'a', '(B)V', 'setPrivateStatus'),
+])
+SYMBOLS.update({
+    'bq.a([Lbh;)V': 'jimm/comm/OtherAction.setUserInfo([Ljimm/comm/GUID;)V',
+    'bq.a(I)V': 'jimm/comm/OtherAction.setStatus(I)V',
+    'bq.a [B': 'jimm/comm/OtherAction.CLI_SETSTATUS_DATA [B',
+    'bq.a Z': 'jimm/comm/OtherAction.extendedStatusSent Z',
+})
+
+
 def normalized(code):
     result = []
     for instruction in code:

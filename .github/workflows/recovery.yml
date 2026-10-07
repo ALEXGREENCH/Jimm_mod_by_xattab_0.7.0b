@@ -87,6 +87,8 @@ jobs:
             preservation/reports/source-roster-state.json
             preservation/reports/source-roster-state-bytecode.json
             preservation/reports/source-icq-state-bytecode.json
+            preservation/reports/source-other-status.json
+            preservation/reports/source-other-status-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:
