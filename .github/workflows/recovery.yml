@@ -71,6 +71,9 @@ jobs:
             preservation/reports/source-extended-keys.json
             preservation/reports/source-extended-keys-before.json
             preservation/reports/source-extended-keys-bytecode.json
+            preservation/reports/source-options-cache.json
+            preservation/reports/source-options-cache-before.json
+            preservation/reports/source-options-cache-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

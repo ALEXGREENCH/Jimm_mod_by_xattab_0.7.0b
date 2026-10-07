@@ -2334,6 +2334,13 @@ for _member in UI_SYMBOLS['methods']:
 METHODS.append(('cd', 'b', '(I)I', 'getExtendedGameAction'))
 SYMBOLS['cd.b(I)I'] = 'DrawControls/VirtualList.getExtendedGameAction(I)I'
 
+# Native cache guard, construction and real three-platform menu reuse establish this entry.
+METHODS.append(('cj', 'e', '()V', 'editOptions'))
+SYMBOLS.update({
+    'cj.a Lcg;': 'jimm/Options.optionsForm Ljimm/OptionsForm;',
+    'cg.c()V': 'jimm/OptionsForm.activate()V',
+})
+
 
 def normalized(code):
     result = []

@@ -464,6 +464,8 @@ def main(matrix=False, skip_build=False):
         report['key_routing'] = run([sys.executable, ROOT / 'tools/test_key_routing.py', '--skip-build'], 'key-routing-audit')
         report['extended_keys'] = run([sys.executable, ROOT / 'tools/test_extended_keys.py'], 'extended-keys-audit')
         report['extended_key_bytecode'] = run([sys.executable, ROOT / 'tools/audit_extended_keys.py'], 'extended-key-bytecode-audit')
+        report['options_cache'] = run([sys.executable, ROOT / 'tools/test_options_cache.py'], 'options-cache-audit')
+        report['options_cache_bytecode'] = run([sys.executable, ROOT / 'tools/audit_options_cache.py'], 'options-cache-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')

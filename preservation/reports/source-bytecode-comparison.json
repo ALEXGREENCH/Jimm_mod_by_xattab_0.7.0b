@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "2e4e99f2cee4972efe76677dd44b82164bba4e8b668ce431306b37ec9db39685",
+  "rebuilt_sha256": "f262c6d5e171093494179f9bbc7cd70315c26cbc9b09ae86ef3e7d3b3f69f935",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -225,7 +225,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "cddd851b5bfd6ea5ba3a97479a0e266dcfc0abb1a0b2c1a6e51afa2b6c0a58b2",
+      "reference_normalized_sha256": "3fa2daef30b4cf56249872ba9a7f9ff62335539acebb201167184ed32750371c",
       "source_normalized_sha256": "cf67589cfd7def8b65c7b9c9cb8b89c7e6d34ad34caa136852ce40ef1f8f7a4f"
     },
     {
@@ -4129,7 +4129,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "f52c29c6d6c386708d00c2b2793ecfa27d65f3385434af4d3a6c9943517e1617",
+      "reference_normalized_sha256": "5e97f376c1727ff0cb4c64478212fdcb4b3dd4674a0b9752f7ac4cf859690587",
       "source_normalized_sha256": "387b375354ab9ac078e2e809062e5ad45dcb3ca02aae765b4eb8e8a73b702e32"
     },
     {
@@ -4145,7 +4145,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "977619631aad49a1956ba7eb93959dc818a9892e5650a7a3e37018872c33f3a3",
+      "reference_normalized_sha256": "d73be0b8010affe201386d7233c2858031db39f681094ea03c528f5d3488553e",
       "source_normalized_sha256": "6b5556a208bdb4be4bedbee081f55bed6bf3c65eb8459f71ba0553256113c81b"
     },
     {
@@ -4302,10 +4302,10 @@
       "abstract_method": false,
       "reference_instructions": 95,
       "source_instructions": 95,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "372ef7de877cb0bc75d0f6267480344d85c97034ee3bcdf41abd664ba83d7b06",
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "eadbcaf06ead74cbdd4e3e283b54fd928dedbfb3ef68d0ba19e2108d399fc647",
       "source_normalized_sha256": "eadbcaf06ead74cbdd4e3e283b54fd928dedbfb3ef68d0ba19e2108d399fc647"
     },
     {
@@ -6737,7 +6737,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "51a1675e804f94d59b1de102f1b9495d9684c728268a8ca38d4f60603f33f56a",
+      "reference_normalized_sha256": "6b1f34e4c47801a73535d59d9cb21b8371bb129734279dce4192709bacecd521",
       "source_normalized_sha256": "92af111b9b07ed6974cb0b49d38db5979995cb99a9c18dbf039730eff32a9a0f"
     },
     {
@@ -17123,9 +17123,25 @@
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "51aded36d1dfe1be1cd3d32ad32eb2b3a7851855e2aaa624eba5e522a5110a74",
       "source_normalized_sha256": "da929215e12e36e10d61de2e57ed0b818b66aca1fc83fa38237e94da8185fd7f"
+    },
+    {
+      "reference": "cj.e()V",
+      "source": "jimm/Options.editOptions()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 9,
+      "source_instructions": 9,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "faa4f773ae8aceb999928d91a1ddfd16b0681bfb1abb1225440a0bae68cd3ab0",
+      "source_normalized_sha256": "faa4f773ae8aceb999928d91a1ddfd16b0681bfb1abb1225440a0bae68cd3ab0"
     }
   ],
   "abstract_declarations": 34,
-  "same_normalized_executable_method_bodies": 588,
+  "same_normalized_executable_method_bodies": 590,
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."
 }

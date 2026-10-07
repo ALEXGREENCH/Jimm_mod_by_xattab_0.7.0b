@@ -1,0 +1,185 @@
+{
+  "scope": "Actual settings entry, constructors, activation and TextList on three targets. All input application classes/resources remain byte-for-byte intact. Only a minimal MIDlet and host manifest isolate startup; typed Options and Jimm.display are explicitly seeded. Motorola bitmap font is initialized by its genuine resource-reading constructor. Null/existing controller, repeated entry, selected tags, connection type, font, four refreshed snapshot values, canvas current-control binding, entire menu text and explicit cache clearing are observed. No replacement application implementations or derived expected outputs. Explicit cache clearing is input, not a claim about the Back command, all settings panels, complete startup or handset.",
+  "negative_before_fix": true,
+  "builds": [
+    {
+      "target": "MIDP2",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "raw_sha256": "0d4b6d742bbd7342d2414c88e7413c55022092c757db47109f4f0dcbfb65c39b",
+      "delivered_sha256": "90870214fb96cfb190741b6d57fe183a7958819d3eb24b07ccfbe6a3a4aa2f3e",
+      "opens": 1536,
+      "observations": 1537,
+      "different_observations": 960,
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+          "fixture_sha256": "33cc4392cb7a45bcd6fa625e2d19be4f10023aab02cd594c01a0e83265528915",
+          "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
+          "all_input_application_bytes_unchanged": true,
+          "entry_instructions": [
+            "178 cj.a Lcg;",
+            "199 6",
+            "187 cg",
+            "89",
+            "183 cg.<init>()V",
+            "179 cj.a Lcg;",
+            "178 cj.a Lcg;",
+            "182 cg.c()V",
+            "177"
+          ],
+          "cache_field": {
+            "name": "a",
+            "desc": "Lcg;",
+            "access": 9,
+            "value": "null"
+          },
+          "activation": "c()V"
+        },
+        {
+          "mode": "source",
+          "input_sha256": "4efb8260b0bce31ebef378b1755dcf2f1f71ce4f1137a2161d0c97c1ce7c9b79",
+          "fixture_sha256": "d25ccc000ce61373fd49afa024fdf394610fb8e37325d131748d638fb47f8ed9",
+          "output_sha256": "76fb2f46edc504c0b06b8883df30137957323343fc386f6d59b894266db4de70",
+          "all_input_application_bytes_unchanged": true,
+          "entry_instructions": [
+            "187 jimm/OptionsForm",
+            "89",
+            "183 jimm/OptionsForm.<init>()V",
+            "179 jimm/Options.optionsForm Ljimm/OptionsForm;",
+            "178 jimm/Options.optionsForm Ljimm/OptionsForm;",
+            "182 jimm/OptionsForm.activate()V",
+            "177"
+          ],
+          "cache_field": {
+            "name": "optionsForm",
+            "desc": "Ljimm/OptionsForm;",
+            "access": 9,
+            "value": "null"
+          },
+          "activation": "activate()V"
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "raw_sha256": "cd40cf1482cce7f5c2c3f0fb7a6ed5fae09d6c04dc190675e5f1c2d14f6bed37",
+      "delivered_sha256": "b39b7f785612682e6f6612a37744f58aac0b5b1e583984d449c97fe6fe2a4241",
+      "opens": 1536,
+      "observations": 1537,
+      "different_observations": 960,
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+          "fixture_sha256": "fa1144adadf5f748f67aaa40fc5b85c77c6141af69dbb2d4e07058ab3fd41e72",
+          "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
+          "all_input_application_bytes_unchanged": true,
+          "entry_instructions": [
+            "178 ci.a Lce;",
+            "199 6",
+            "187 ce",
+            "89",
+            "183 ce.<init>()V",
+            "179 ci.a Lce;",
+            "178 ci.a Lce;",
+            "182 ce.c()V",
+            "177"
+          ],
+          "cache_field": {
+            "name": "a",
+            "desc": "Lce;",
+            "access": 9,
+            "value": "null"
+          },
+          "activation": "c()V"
+        },
+        {
+          "mode": "source",
+          "input_sha256": "8b274845d6a922a6aa0306a5fe631f18878ce3696beaf95e430ebad035e67e63",
+          "fixture_sha256": "57c4e6dfa6a0544f744f8b85efb807b75b727e60c7031c4e6ba4beb361b81317",
+          "output_sha256": "76fb2f46edc504c0b06b8883df30137957323343fc386f6d59b894266db4de70",
+          "all_input_application_bytes_unchanged": true,
+          "entry_instructions": [
+            "187 jimm/OptionsForm",
+            "89",
+            "183 jimm/OptionsForm.<init>()V",
+            "179 jimm/Options.optionsForm Ljimm/OptionsForm;",
+            "178 jimm/Options.optionsForm Ljimm/OptionsForm;",
+            "182 jimm/OptionsForm.activate()V",
+            "177"
+          ],
+          "cache_field": {
+            "name": "optionsForm",
+            "desc": "Ljimm/OptionsForm;",
+            "access": 9,
+            "value": "null"
+          },
+          "activation": "activate()V"
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "raw_sha256": "3891e845f4cfdb7f7f8918b24567848efa94c78a14ae6b57f35c0828fcfcb1b6",
+      "delivered_sha256": "f99984458a9970366f17113f66f2f8e9ee14522bda85e4c1a8b089422b68dec4",
+      "opens": 1536,
+      "observations": 1537,
+      "different_observations": 960,
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+          "fixture_sha256": "8859224f1122f7a8b925204b579a25559f3cc6ed4f088531b595b7fc257022ac",
+          "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
+          "all_input_application_bytes_unchanged": true,
+          "entry_instructions": [
+            "178 ch.a Lce;",
+            "199 6",
+            "187 ce",
+            "89",
+            "183 ce.<init>()V",
+            "179 ch.a Lce;",
+            "178 ch.a Lce;",
+            "182 ce.c()V",
+            "177"
+          ],
+          "cache_field": {
+            "name": "a",
+            "desc": "Lce;",
+            "access": 9,
+            "value": "null"
+          },
+          "activation": "c()V"
+        },
+        {
+          "mode": "source",
+          "input_sha256": "3d634fc794b847382a3f6d483d1f08e62b024842ce10571895ee8f4b7789cf74",
+          "fixture_sha256": "4113a8cc1fd9ca16c3e5fce4c26dbf0e4a029cb380259e71f49796f112ed14c6",
+          "output_sha256": "76fb2f46edc504c0b06b8883df30137957323343fc386f6d59b894266db4de70",
+          "all_input_application_bytes_unchanged": true,
+          "entry_instructions": [
+            "187 jimm/OptionsForm",
+            "89",
+            "183 jimm/OptionsForm.<init>()V",
+            "179 jimm/Options.optionsForm Ljimm/OptionsForm;",
+            "178 jimm/Options.optionsForm Ljimm/OptionsForm;",
+            "182 jimm/OptionsForm.activate()V",
+            "177"
+          ],
+          "cache_field": {
+            "name": "optionsForm",
+            "desc": "Ljimm/OptionsForm;",
+            "access": 9,
+            "value": "null"
+          },
+          "activation": "activate()V"
+        }
+      ]
+    }
+  ],
+  "source_options_sha256": "55e4c71079e7dbcc916265c4de132677d729386352c5e1b89351e30cc57ef991",
+  "source_ref": "72e318c"
+}

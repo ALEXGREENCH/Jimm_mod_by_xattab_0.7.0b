@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2-RU JimmUI.sendMessage orchestration, real PlainMessage/SendMessageAction constructors, ID counter and date conversion, and untouched Icq.beginTyping with real SNAC serialization. Queue, chat/history, error delivery, sleep and light call sites are captured with scripted exceptions. Typing uses the actual LoginConnection boundary and two real class-monitor contention cases. Unoptimized authored and delivered optimized applications must both match May; controller instructions and handlers are verified unchanged except the enumerated calls, action ID clock and the single default Date clock in real Calendar conversion. Helpful-NPE strings containing JVM/compiler names are excluded; NPE classes and partial state are compared. No live queue execution, physical RMS/history, backlight, waiting or network claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "90870214fb96cfb190741b6d57fe183a7958819d3eb24b07ccfbe6a3a4aa2f3e",
-  "source_unoptimized_class_jar_sha256": "0d4b6d742bbd7342d2414c88e7413c55022092c757db47109f4f0dcbfb65c39b",
+  "source_jar_sha256": "792c4c27e0a2868ad057fbf6d95d62d2130559d5a4455e43ae5c7f8ba609dea5",
+  "source_unoptimized_class_jar_sha256": "c6b6e23f1e38d4e40e5fa020738987d30afdf188a335e76c87b08c125bcca3ad",
   "observations": 3601,
   "optimized_observations": 3601,
   "send_calls": 316,
@@ -18,8 +18,8 @@
   "fixture_proofs": [
     {
       "mode": "reference",
-      "base_sha256": "46e4245b55ced41172cb7105d387d80edc09dade12ef726c1c720c19ae807304",
-      "fixture_sha256": "49676e959d8e68eb9e9f33347d64d07dbcd513a895673e471653f1e9f4077fd9",
+      "base_sha256": "73567066e5f36345cce1061ed2903670c174ac91b14666730ba76cca5bbba35a",
+      "fixture_sha256": "7f0358c66848f7fc447aa5ad399ad7420930ac806e4309899399b8b0f70a16f5",
       "unchanged_controller_before_capture": true,
       "only_checked_call_instructions_changed": true,
       "typing_body_unchanged": true,
@@ -36,8 +36,8 @@
     },
     {
       "mode": "source",
-      "base_sha256": "4f649317fea0a6339fe190443ca1ad5f869ed2b26e1bbb180b34dd70debb3ab7",
-      "fixture_sha256": "b53ea89019cc467dc623422f058985ddbc5a567ff28bee1683edd4c8f17bf4af",
+      "base_sha256": "eff260c3c2b9441dee9f499a153f42298f515e11965f4cb6f9702d75aec6b609",
+      "fixture_sha256": "c54c945221181acf984e430f27d7e36d46030d2849e721d1ebab61c7a7455548",
       "unchanged_controller_before_capture": true,
       "only_checked_call_instructions_changed": true,
       "typing_body_unchanged": true,
@@ -54,8 +54,8 @@
     },
     {
       "mode": "optimized-source",
-      "base_sha256": "7573e3d20eaacee394d68bc4ca0b283414488a1c0747dd9ebab9ba989e05f4f3",
-      "fixture_sha256": "75fd30b1df1449e7359edda3230558ad59e1d46a22913bd992def676e426682e",
+      "base_sha256": "aaa4b7954ffff86db7cfb14c91dd4a76872b411ea48d1164c23e1196a6711108",
+      "fixture_sha256": "4511b719c4a1cadb92424c2b15831e1bcdc4fb2d97adfc56ddb53e4d16861a1e",
       "unchanged_controller_before_capture": true,
       "only_checked_call_instructions_changed": true,
       "typing_body_unchanged": true,
