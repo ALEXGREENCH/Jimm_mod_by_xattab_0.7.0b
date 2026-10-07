@@ -81,6 +81,7 @@
   "add_group"                   "Přidat skupinu"
   "add_user"                    "Přidat uživatele"
   "add_to_list"                 "Přidat do seznamu"
+  "add_to_copied"               "Přidat ke zkopír."
   "add_visible_list"            "Do seznamu Viditelný"
   "add_invisible_list"          "Do seznamu Neviditelný"
   "add_ignore_list"             "Do seznamu Ignorace"
@@ -152,6 +153,7 @@
   "color_cursor"                "Kurzor"
   "color_sback"                 "Pozadí při zablok. klávesnici"
   "custom_scheme"               "Uživatel"
+  "confirm_exit"                "Potvrdit při ukončení"
   "conn_type"                   "Typ spojení"
   "conn_prop"                   "Vlastnosti spojení"
   "connect"                     "Připojit"
@@ -192,7 +194,9 @@
   "enable_web_aware"            "Ukázat můj status na webu"
   "enter_password"              "Zadej heslo"
   "error"                       "Chyba"
+  "export_options"              "Export Nastavení"
   "exit"                        "Konec"
+  "want_exit"                   "Opravdu ukončit?"
   "ext_listhotkeys"             "Rychlá volba"
   "ext_actionhotkeys"           "Seznam kláves"
   "ext_clhotkey0"               "0"
@@ -227,7 +231,11 @@
   "font_italic"                 "Kurzíva(šikmé)"
   "font_size"                   "Velikost písma"
   "font_style"                  "Typ písma"
+  "font_view"                   "Zobrazení stylu písma"
+  "font_plain_desc"             "Normální"
+  "font_shadow"                 "Se \"stínem\"(výraznější)"
   "free_heap"                   "Volná paměť"
+  "from_file"                   "Ze souboru"
   "ft_caption"                  "File transfer"
   "ft_transfer"                 "Přenášející..."
   "ft_type"                     "Odeslání souboru přes"
@@ -249,6 +257,7 @@
   "have_unread_mess"            "Máte nepřečtené zprávy."
   "hide_offline"                "Skrýt odpojené uživatele"
   "hide_offline_anyway"         "...po ukončení chatu"
+  "hide_empty_groups"           "Jen skupiny s online kontakty"
   "home_page"                   "Domovská stránka"
   "home_info"                   "Domov"
   "hours"                       "h"
@@ -256,6 +265,7 @@
   "http_user_agent"             "User-Agent String for HTTP-Connection"
   "http_wap_profile"            "WAP-Profile String for HTTP-Connection"
   "icq_client"                  "ICQ klient"
+  "import_options"              "Import Nastavení"
   "info"                        "O uživateli"
   "init_ft"                     "Inicializace"
   "insert_emotion"              "Vložit smajlíka"
@@ -286,6 +296,7 @@
   "lang_SE"                     "Švédština"
   "lang_SR"                     "Srbština"
   "lang_UA"                     "עבריתUkrajinština"
+  "remember_last_smile"         "Pamatovat poslední smajl"
   "lastname"                    "Příjmení"
   "latest_ver"                  "Poslední dostupná verze"
   "light"                       "Upravit jas"
@@ -315,6 +326,7 @@
   "move_to_group"               "Přesuň do skupiny"
   "myself"                      "Osobní údaje"
   "name"                        "Jméno"
+  "reset_requires_restart"      "Restart program to complete options reset"
   "new_pass"                    "Nové heslo"
   "new_pass_again"              "Nové heslo (potvrzení)"
   "new_template"                "Nová šablona"
@@ -323,6 +335,7 @@
   "no"                          "Ne"
   "not"                         "ne"
   "no_availible_groups"         "Pro tuto operaci nejsou dostupné žádné skupiny!"
+  "textbox_no_caption"          "Maximalizovat okno psaní"
   "no_results"                  "Bez výsledku"
   "not_implemented"             "Funkce zatím není implementována."
   "noreason"                    "Bez důvodu."
@@ -372,6 +385,7 @@
   "reason"                      "Důvod"
   "reconnect"                   "Opět spojit"
   "reconnect_number"            "Počet pokusů spojení"
+  "reconnect_delay"             "Pauza mezi pokusy (s)"
   "remove"                      "Odstranit ze seznamu"
   "remove_me"                   "Odstraň mě"
   "remove_me_from"              "Odstranit z kontakt listu "
@@ -382,6 +396,7 @@
   "rem_ignore_list"             "Ze seznamu Ignorace"
   "rename"                      "Přejmenovat"
   "rename_group"                "Přejmenovat skupinu"
+  "update_nick"                 "Obnovit nick"
   "reply"                       "Odpověď"
   "requauth"                    "Autorizační požadavek"
   "reqstatmsg"                  "Vyžádat zprávu o stavu"
@@ -390,6 +405,7 @@
   "requ"                        "Požadován"
   "requno"                      "Nepožadován"
   "res"                         "Rozlišení"
+  "reset_options"               "Reset Nastavení"
   "reset"                       "Reset"
   "results"                     "Výsledky"
   "save"                        "Uložit"
@@ -427,6 +443,7 @@
   "sort_by_name"                "jmen"
   "sort_by_status"              "stavu"
   "sort_by_status_and_name"     "stavu a jmen"
+  "sort_by_activity"            "aktivity"
   "sound_vibra"                 "Zvuk/Vibrace"
   "speed"                       "Rychlost"
   "startup_pass"                "Heslo pro spuštění"
@@ -470,7 +487,9 @@
   "title"                       "Název"
   "total_mem"                   "Celková paměť"
   "traffic_lng"                 "Provoz"
-  "trans_cursor"                "Prázdný kurzor (obrys)"
+  "cursor_transparency"         "Průhlednost kurzoru"
+  "caption_transparency"        "Průhlednost horní lišty"
+  "softbar_transparency"        "Průhlednost dolní lišty"
   "typing_display_only"         "Pouze displej"
   "typing_notify"               "Píše zprávu"
   "uin"                         "Uživatel"
@@ -481,6 +500,7 @@
   "vibration"                   "Vibrace"
   "viewfinder"                  "Hledáček"
   "volume"                      "Hlasitost"
+  "xstatus_right"               "Status rozšířený vpravo"
   "xstatus_none"				"žádný"
   "xstatus_angry"				"Špatná nálada"
   "xstatus_duck"				"Koupání"
@@ -535,6 +555,20 @@
   "wrong_pass_entry"            "Chyba! Ověřte správnost zadání hesla"
   "yes"                         "Ano"
   "youwereadded"                "Byl jste přidán do seznamu uživatele: "
+
+  // Backlight controls
+  //#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_timeout"           "Čas podsvícení (sek)"
+  //#sijapp cond.else#
+  "backlight_timeout"           "Čas podsvícení (sec)"
+  //#sijapp cond.end#
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_manual"            "Ruční podsvícení (*)"
+  //#sijapp cond.else#
+  "backlight_manual"            "Ruční podsvícení"
+  //#sijapp cond.end#
+  //#sijapp cond.end#
 
   // MOTOROLA strings
   //#sijapp cond.if target is "MOTOROLA"#
@@ -688,36 +722,4 @@
   "error_231"					"Sending registration request failed (#231.EXT)"
   "error_232"					"Wrong registration meta-data received (#232.EXT)"
 
-  // Restored from the 12.05.2010 release.
-  "add_to_copied" "Přidat ke zkopír."
-  "caption_transparency" "Průhlednost horní lišty"
-  "confirm_exit" "Potvrdit při ukončení"
-  "cursor_transparency" "Průhlednost kurzoru"
-  "export_options" "Export Nastavení"
-  "font_shadow" "Se \"stínem\"(výraznější)"
-  "font_view" "Zobrazení stylu písma"
-  "hide_empty_groups" "Jen skupiny s online kontakty"
-  "import_options" "Import Nastavení"
   "lang_BA" "Bosnian"
-  "reconnect_delay" "Pauza mezi pokusy (s)"
-  "remember_last_smile" "Pamatovat poslední smajl"
-  "reset_options" "Reset Nastavení"
-  "reset_requires_restart" "Restart program to complete options reset"
-  "softbar_transparency" "Průhlednost dolní lišty"
-  "sort_by_activity" "aktivity"
-  "textbox_no_caption" "Maximalizovat okno psaní"
-  "update_nick" "Obnovit nick"
-  "want_exit" "Opravdu ukončit?"
-  "xstatus_right" "Status rozšířený vpravo"
-  "from_file"                     "Ze souboru"
-  "font_plain_desc"               "Normální"
-  //#sijapp cond.if target is "MOTOROLA"#
-  "backlight_timeout"           "Čas podsvícení (sek)"
-  //#sijapp cond.else#
-  "backlight_timeout"           "Čas podsvícení (sec)"
-  //#sijapp cond.end#
-  //#sijapp cond.if target is "MOTOROLA"#
-  "backlight_manual"            "Ruční podsvícení (*)"
-  //#sijapp cond.else#
-  "backlight_manual"            "Ruční podsvícení"
-  //#sijapp cond.end#

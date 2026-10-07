@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2 RequestInfoAction initialization, response parsing, partial fields, completion/timeout state and repeated delivery. Real contact rename/save, UpdateContactListAction construction, birthday tables/RMS and request serialization execute. Clock and UI/contact-list/chat notification destinations are captured; inherited birthday/file-transfer fixture boundaries remain. Only category fields 40-43 are translated through each real ResourceBundle; all other fields retain literal UTF-16 data, including overflow into field 44. No live server, physical event queue or complete downstream notification claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "0cd55da99119af6a93b607bbceffac026259af70906c04bb8aecd42ddeea46e7",
-  "source_unoptimized_class_jar_sha256": "871d594a144a711d857bb55c8e0757dc851507473f4c76b8d52bc908991fe4f2",
+  "source_jar_sha256": "c2b9cebc44f8639536502633bc0b744940bd4955784039fc6a06f93886e2ba95",
+  "source_unoptimized_class_jar_sha256": "93a3792a9cef0f9a96e74f8f5ac070c5902ee10ea7af18e394c58265e55c9580",
   "observations": 16048,
   "initializations": 37,
   "forward_calls": 15945,

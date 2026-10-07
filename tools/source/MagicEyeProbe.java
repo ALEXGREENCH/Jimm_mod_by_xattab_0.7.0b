@@ -46,7 +46,7 @@ public class MagicEyeProbe extends TextListProbe {
     static void additions()throws Exception{
         String[] values={null,"","ASCII","\u041f\u0440\u0438\u0432\u0435\u0442 \u010d","a\u0000b\r\nc","\ud83d\ude00\ud800x\udfff"};
         for(boolean enabled:new boolean[]{false,true})for(int style:new int[]{0,1,2,3})for(int width:new int[]{70,176})for(int value=0;value<values.length;value++)for(int wrapper=0;wrapper<3;wrapper++){
-            fresh(width,style,enabled);String label="add-"+enabled+'-'+style+'-'+width+'-'+value+'-'+wrapper;add(label,value%2==0?"12345":values[value],value==0?null:value==1?"":value==2?n("Y1","W1"):"unknown.action",values[value],value%2==0,wrapper);
+            fresh(width,style,enabled);String label="add-"+enabled+'-'+style+'-'+width+'-'+value+'-'+wrapper;add(label,value%2==0?"12345":values[value],value==0?null:value==1?"":value==2?"Y1":"unknown.action",values[value],value%2==0,wrapper);
             activate(label+"-activate");if(enabled&&value>=3&&wrapper==0&&width==176&&style==0){s=eyeList;f(vl,"H","forcedWidth",int.class).setInt(s,width);f(vl,"I","forcedHeight",int.class).setInt(s,160);render(label,s);}
         }
         for(int count:new int[]{Integer.MIN_VALUE,-1,0,1,Integer.MAX_VALUE}){fresh(176,0,true);journalCount.setInt(eye,count);for(int repeat=0;repeat<3;repeat++)add("overflow-"+count+'-'+repeat,"12345","unknown.action","detail\ntext",true,0);}

@@ -242,7 +242,7 @@ def main(matrix=False, skip_build=False):
                             'journal routing calls and default Date NEW/constructor in Util.createCurrentDate '
                             'are additionally captured, with guarded site counts. Date formatting, ResourceBundle, '
                             'contact creation, clipboard and TextList algorithms remain real. The user_menu action '
-                            'uses each native RU dictionary key (reference Y1, source W1); unknown keys are literal. '
+                            'uses literal Y1 in both restored native RU dictionaries; unknown keys are literal. '
                             'Original/unoptimized authoring JARs only; no whole optimized JAR, physical scheduler '
                             'or complete terminal destination side-effect claim.',
                             'reference_sha256': recover.sha(original),

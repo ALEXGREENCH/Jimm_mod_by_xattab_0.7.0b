@@ -4,7 +4,7 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_class_jar_sha256": "7a84b0ca4da54a6d0bb3e6191ad0f8a1b1dda2d6d7af19d095f06fa5bae6631f",
+      "source_class_jar_sha256": "324083156339efe93c7e194aadac083ad0f76c87f2c51a8215da96a12b6bcb55",
       "methods": [
         {
           "reference": "bd.<init>()V",
@@ -26,11 +26,11 @@
           "static_and_synchronized_modifiers_verified": true,
           "reference_instructions": 33,
           "source_instructions": 33,
-          "same_normalized_instructions": false,
+          "same_normalized_instructions": true,
           "same_normalized_handlers": true,
-          "same_normalized_bytecode": false,
+          "same_normalized_bytecode": true,
           "reference_normalized_sha256": "9b7ef97bc01c2bd4665f02a84b448731c042a0802aa77c606c245a529b7cd9bd",
-          "source_normalized_sha256": "a0be20febddf74593a86a866d9b3640aba994f213e0c95e5d14d8d0781814c9e"
+          "source_normalized_sha256": "9b7ef97bc01c2bd4665f02a84b448731c042a0802aa77c606c245a529b7cd9bd"
         },
         {
           "reference": "bd.a()V",
@@ -39,11 +39,11 @@
           "static_and_synchronized_modifiers_verified": true,
           "reference_instructions": 39,
           "source_instructions": 39,
-          "same_normalized_instructions": false,
+          "same_normalized_instructions": true,
           "same_normalized_handlers": true,
-          "same_normalized_bytecode": false,
+          "same_normalized_bytecode": true,
           "reference_normalized_sha256": "91085233bcaee6e7dd30bc520fa7a6d624d845d48f3ad972131029787407bb05",
-          "source_normalized_sha256": "8ed65c741e446779d182db2ee4890420505ebf01c6fc340678f4978ab4d1afef"
+          "source_normalized_sha256": "91085233bcaee6e7dd30bc520fa7a6d624d845d48f3ad972131029787407bb05"
         },
         {
           "reference": "bd.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
@@ -63,7 +63,7 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_class_jar_sha256": "b3083294022f3627248d42a18f5fdd6edd8063d9d256d0f48040a41b22207093",
+      "source_class_jar_sha256": "edbb7399856e9c19803ac8d685be2e070b23cb4d053a6858734b6753cb65c2f1",
       "methods": [
         {
           "reference": "bc.<init>()V",
@@ -85,11 +85,11 @@
           "static_and_synchronized_modifiers_verified": true,
           "reference_instructions": 33,
           "source_instructions": 33,
-          "same_normalized_instructions": false,
+          "same_normalized_instructions": true,
           "same_normalized_handlers": true,
-          "same_normalized_bytecode": false,
+          "same_normalized_bytecode": true,
           "reference_normalized_sha256": "23983880d9db63d2a40ba7699e9ba6bf5c09321e15d6314cd86fe15ec962e908",
-          "source_normalized_sha256": "9e5ebc2be82f5d42835ff43e1911324a8fdcacf4328ec69359ad529a971af52c"
+          "source_normalized_sha256": "23983880d9db63d2a40ba7699e9ba6bf5c09321e15d6314cd86fe15ec962e908"
         },
         {
           "reference": "bc.a()V",
@@ -98,11 +98,11 @@
           "static_and_synchronized_modifiers_verified": true,
           "reference_instructions": 39,
           "source_instructions": 39,
-          "same_normalized_instructions": false,
+          "same_normalized_instructions": true,
           "same_normalized_handlers": true,
-          "same_normalized_bytecode": false,
+          "same_normalized_bytecode": true,
           "reference_normalized_sha256": "c8918c200961953e79e4a4a54b4c6158e44e1801ffb73779f680b98eaa98e438",
-          "source_normalized_sha256": "f37c8d0ed6edfe8159f0506b97fd4ff44b28a384ba8b95f46bfe8755f943014c"
+          "source_normalized_sha256": "c8918c200961953e79e4a4a54b4c6158e44e1801ffb73779f680b98eaa98e438"
         },
         {
           "reference": "bc.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
@@ -125,7 +125,7 @@
       "target": "MIDP2",
       "language": "RU",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_jar_sha256": "0cd55da99119af6a93b607bbceffac026259af70906c04bb8aecd42ddeea46e7",
+      "source_jar_sha256": "c2b9cebc44f8639536502633bc0b744940bd4955784039fc6a06f93886e2ba95",
       "reference_controller": "bd.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -134,7 +134,7 @@
       "target": "MIDP2",
       "language": "UA",
       "reference_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-      "source_jar_sha256": "e7d468ac0307ae38723c421a4265a0ab902ff1e1f077f1f21b08afa239dc5086",
+      "source_jar_sha256": "db03c94031db8833ecc76919a94b32b3fc6fe98e00a9c0b678cfcb71cf3591ae",
       "reference_controller": "bd.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -143,7 +143,7 @@
       "target": "MIDP2",
       "language": "RO",
       "reference_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-      "source_jar_sha256": "dc76493c9dd6941f4d8b342bb0cd34e93a9c4948452d0065f321b228cca7a475",
+      "source_jar_sha256": "8a39778ca1877b8dfac70908334a838c255269c3c1bd5bb02e684ce288f41bc7",
       "reference_controller": "bd.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -152,7 +152,7 @@
       "target": "MIDP2",
       "language": "EN",
       "reference_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-      "source_jar_sha256": "b224ef56eda716539fef67ccfc1a63f44ec608827f910a1059e5a297982e1e79",
+      "source_jar_sha256": "456ad8df4a44bca7b29704b5a59a3e176cb85494949e51bedeb9c61f73a076e5",
       "reference_controller": "bd.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -161,7 +161,7 @@
       "target": "MIDP2",
       "language": "CZ",
       "reference_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-      "source_jar_sha256": "c5d5c0db918e56e40a3acaa86ffe4a4c319421205bafafccf9aa94684c2281c5",
+      "source_jar_sha256": "4ff1c80f91692b3aaee6be6e0eb0780067f02dcdfe5a093da9bcacbc57ff3a62",
       "reference_controller": "bd.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -170,7 +170,7 @@
       "target": "MOTOROLA",
       "language": "RU",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_jar_sha256": "3940712c8bfc80ff495fd7bd435d66f42c266aa23608207b767009a153839bd1",
+      "source_jar_sha256": "a991df896c317cad828489561a882ebe54248778ce7623c10b0a15035ec1abf2",
       "reference_controller": null,
       "phone_book_present": false,
       "same_platform_presence": true
@@ -179,7 +179,7 @@
       "target": "MOTOROLA",
       "language": "UA",
       "reference_sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
-      "source_jar_sha256": "bc94e9712036f4a8405a17022061981b295fa0896301499c3cc6c72a346d207f",
+      "source_jar_sha256": "a91c572c957c2456adf5f7e57785f67acf59c777230c2c4dc56cebd16c336b07",
       "reference_controller": null,
       "phone_book_present": false,
       "same_platform_presence": true
@@ -188,7 +188,7 @@
       "target": "MOTOROLA",
       "language": "RO",
       "reference_sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
-      "source_jar_sha256": "1aaeb8d06dffab5057498e75da13b95593b29764927bd64fd5a63c075d77740f",
+      "source_jar_sha256": "6f7037a055c84c16d65800de21d69dd70457069c96314efbba64c5a8863ee951",
       "reference_controller": null,
       "phone_book_present": false,
       "same_platform_presence": true
@@ -197,7 +197,7 @@
       "target": "MOTOROLA",
       "language": "EN",
       "reference_sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
-      "source_jar_sha256": "da5091552189ba8d0659d2ba7d1abc9c54876964ab3c715caf87a4b138de0b98",
+      "source_jar_sha256": "a9510efaca335db527a0d7798a6a73fbd8a505e29656b0c4d3c17e25dc09f60e",
       "reference_controller": null,
       "phone_book_present": false,
       "same_platform_presence": true
@@ -206,7 +206,7 @@
       "target": "MOTOROLA",
       "language": "CZ",
       "reference_sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
-      "source_jar_sha256": "b80a22cf3d337099ff2fb1b29af4004c6e635b609d5895e935374a8c8cfacbaf",
+      "source_jar_sha256": "35c9b18ad17c840fd2c228208695e5dd391d383fa60cee006a218a35cd95d62f",
       "reference_controller": null,
       "phone_book_present": false,
       "same_platform_presence": true
@@ -215,7 +215,7 @@
       "target": "SIEMENS2",
       "language": "RU",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_jar_sha256": "7f2a41a90445a9990a994dd11b5e27ca7179030d55cbca249dd1f43e2009ac2c",
+      "source_jar_sha256": "5be68040b308d3e6eacd46d2c12977046e600e42bea08e6df384dbcd14d63046",
       "reference_controller": "bc.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -224,7 +224,7 @@
       "target": "SIEMENS2",
       "language": "UA",
       "reference_sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
-      "source_jar_sha256": "1e32b850f90d6f86736a48cc94c1d5ba8a2883e84a3c05b8a420a50d557f9da1",
+      "source_jar_sha256": "245bf357eea551bf01ef977315740d3c91c5727e4f5814a17e44632541c3dbb2",
       "reference_controller": "bc.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -233,7 +233,7 @@
       "target": "SIEMENS2",
       "language": "RO",
       "reference_sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
-      "source_jar_sha256": "236d85dc96c1d83f2b06a9d5fdd8604a0d90561946529c90c8bbf927cd9f3696",
+      "source_jar_sha256": "0514cc50b5ee522173cba905cf11efb3921e4544f0e4816968dcb03de2b09ad5",
       "reference_controller": "bc.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -242,7 +242,7 @@
       "target": "SIEMENS2",
       "language": "EN",
       "reference_sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
-      "source_jar_sha256": "d46466d5d6f272738c7114766cc14b900674c187ff6336a2ac12fab35d6fc4c1",
+      "source_jar_sha256": "7ceaf6a55d9a0b833b4f0d9ec44d9de8d5a127a2e1cdbf5e3ad49889003a9d41",
       "reference_controller": "bc.class",
       "phone_book_present": true,
       "same_platform_presence": true
@@ -251,7 +251,7 @@
       "target": "SIEMENS2",
       "language": "CZ",
       "reference_sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
-      "source_jar_sha256": "21b4d7eddf5283038f84f7233f2e5789c804aebd35ae9fa025f17f24b803ab54",
+      "source_jar_sha256": "ca271ec59845a75d5a66eb7027d519e0cac7da533987e1cf5f12553174a2718b",
       "reference_controller": "bc.class",
       "phone_book_present": true,
       "same_platform_presence": true

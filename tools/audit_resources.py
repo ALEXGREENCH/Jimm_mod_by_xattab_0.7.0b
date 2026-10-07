@@ -56,8 +56,10 @@ def main():
             recover.run([recover.java(), '-cp', task_cp, 'LanguageInventory',
                          prepared / ('lng/' + language + '.lang'), binary, prepared / 'lng/EN.lang'])
             inventories[target, language] = {name: (short, value) for name, short, value in records(binary.read_bytes(), 3)}
-    report = {'scope': 'All non-class files except the regenerated manifest are checked. Language tables '
-                      'are compared by recovered semantic names and decoded values; short keys/order differ.',
+    report = {'scope': 'All non-class files except the regenerated manifest are checked. Language dictionaries '
+                      'must match literal keys and decoded values without key normalization. Recovered semantic '
+                      'names are checked separately; equal-value name candidates remain explicit. Serialized '
+                      'record order/bytes are reported independently of dictionary equality.',
               'builds': []}
     failures = []
     for target, original_target in [('MIDP2', 'MIDP2'), ('MOTOROLA', 'Moto'), ('SIEMENS2', 'Siemens2')]:
@@ -67,10 +69,18 @@ def main():
             with zipfile.ZipFile(reference) as old, zipfile.ZipFile(source) as new:
                 left, right = assets(old, language), assets(new, language)
                 differences = [name for name in sorted(set(left) | set(right)) if left.get(name) != right.get(name)]
-                old_pairs = dict(records(old.read(language + '.lng')))
-                new_pairs = dict(records(new.read(language + '.lng')))
+                old_language = old.read(language + '.lng')
+                new_language = new.read(language + '.lng')
+                old_records, new_records = records(old_language), records(new_language)
+                old_pairs, new_pairs = dict(old_records), dict(new_records)
+                if len(old_records) != len(old_pairs) or len(new_records) != len(new_pairs):
+                    raise AssertionError('Duplicate literal language keys: ' + target + ' ' + language)
+                literal_differences = [key for key in sorted(set(old_pairs) | set(new_pairs))
+                                       if old_pairs.get(key) != new_pairs.get(key)]
                 checked = []
                 language_differences = []
+                if literal_differences:
+                    language_differences.append('<literal key/value table>')
                 source_keys = set()
                 names = {name: short for name, (short, value) in inventories[target, language].items() if short in new_pairs}
                 base_names = {short: name for base, name in mapping['keys'].items()
@@ -89,6 +99,8 @@ def main():
                 for name, new_key in names.items():
                     source_keys.add(new_key)
                     old_key, value = expected.get(name, (None, None))
+                    if target == 'MIDP2' and new_key != old_key:
+                        language_differences.append(name + ': short key')
                     if name == 'about_info':
                         value = value.replace('MIDP2', target)
                     platform_key = None
@@ -115,6 +127,11 @@ def main():
                                         'resource_differences': differences,
                                         'language_entries': len(old_pairs), 'named_language_entries_checked': len(checked),
                                         'language_differences': language_differences,
+                                        'literal_language_key_value_differences': literal_differences,
+                                        'same_literal_language_table': not literal_differences,
+                                        'same_serialized_language_bytes': old_language == new_language,
+                                        'reference_language_sha256': sha(old_language),
+                                        'source_language_sha256': sha(new_language),
                                         'files': [{'path': name, 'bytes': len(data), 'sha256': sha(data)} for name, data in sorted(left.items())],
                                         'language_keys': checked})
                 if differences or language_differences:

@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "7a84b0ca4da54a6d0bb3e6191ad0f8a1b1dda2d6d7af19d095f06fa5bae6631f",
+  "rebuilt_sha256": "324083156339efe93c7e194aadac083ad0f76c87f2c51a8215da96a12b6bcb55",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -114,7 +114,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "05acdc89effb6f883f2d9b05f8a415e0582ea67856977a7c9f610309acf8e335",
-      "source_normalized_sha256": "43422669f081759ec5734eabbedafc22687f3aae659ebb9db72466599d5c428e"
+      "source_normalized_sha256": "405f3966ce7713d45524dd8a337085f1121a6ef6aefe698728c85b5a4f4a8212"
     },
     {
       "reference": "u.a(Lax;Lcn;)V",
@@ -548,7 +548,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "3e5ffba1b7780aa0488c8efc527575e7c0c3a0f972b561962ff7a1451cf82df3",
-      "source_normalized_sha256": "5eb49ac3c2872012b8c6579ef22e42908a06268cb3a070ec8c34e2d7358926ce"
+      "source_normalized_sha256": "8d66d924d38b29244548d130939f98fd4ec110e787f05f01412df4141c372c41"
     },
     {
       "reference": "aq.a(Lcd;II)V",
@@ -604,7 +604,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "e6d08f8e5854d6df8bbff864ccf0ccce911a7dd47b5dc17520d14432d5100839",
-      "source_normalized_sha256": "bbf93826ef40f7a5174693ab997c8c672b9213e51fcfdea354adf8441ad5f9fb"
+      "source_normalized_sha256": "1f76db0b31d84296bf9b3c26afd827097dabc286480a5853f2a337443f3be3d6"
     },
     {
       "reference": "aq.c()V",
@@ -716,7 +716,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "de90176816e65c54a51421f962efd8d456bb7054a540d605dd6bd40bbea21d91",
-      "source_normalized_sha256": "718bcb1fe9530c6f4004f4926168921d8a175d8634a56fd934cded4a9e790042"
+      "source_normalized_sha256": "f6ef8dbdd8d2bbbdfab1c0be98b00d247eef3f3c21d19edb59c203bb73cf98b3"
     },
     {
       "reference": "ci.<init>(Ljava/lang/Object;Ljava/lang/String;I)V",
@@ -2606,7 +2606,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "b1afee9c172f1a817cf936b3ca707335316354660dc618925eb3a49d1d256493",
-      "source_normalized_sha256": "d898ac0eb6a7b3a73cf4c808370d78c00f8a762e7169c58bf48cb6fb3fc60be3"
+      "source_normalized_sha256": "559fdbdd268063b828c0a4c752507bca027bcbfd9c2d838d33374bb1fd6b95e3"
     },
     {
       "reference": "bb.a(II)V",
@@ -3092,11 +3092,11 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 27,
       "source_instructions": 27,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "b623a813ab3df7797553293fb0a6c3a0a834756b760a75054a2adddbb052e297",
-      "source_normalized_sha256": "08a4894c72bd88b2454baea4ee92f545fe294575ec6120b172ae6dc69480f209"
+      "source_normalized_sha256": "b623a813ab3df7797553293fb0a6c3a0a834756b760a75054a2adddbb052e297"
     },
     {
       "reference": "ag.a()Le;",
@@ -3152,7 +3152,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "0078069f37afb5b4f7dae8baeda69139dc45954034b8e4d86c4723547c259ea0",
-      "source_normalized_sha256": "ee86fe22d8068c8804d948408262b8db30b2a6822c26f04d0d23acabaf140ef4"
+      "source_normalized_sha256": "de403ee0e0a5cde101e6eb739a49b78fc2b918cea86334750f9295ea3f0b2bbc"
     },
     {
       "reference": "ag.b()V",
@@ -3208,7 +3208,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "50528280c45d38985de296f908d5982fbaa109364f27a5ab988a9349198de503",
-      "source_normalized_sha256": "e3680e73c311ab10801581c6a0a69d9d59be134b1c67295ed787ec2168974721"
+      "source_normalized_sha256": "89fc928cb855c6623ff4ae7e13a0e7aed6ff7c0da2e0630486e80c22a33ccb60"
     },
     {
       "reference": "ag.a(I)V",
@@ -3250,7 +3250,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "56a2182b97fcfe045ca236e5d58110f082585e965f07e14501a91cba005744a6",
-      "source_normalized_sha256": "ea77035b4ba717de95e83a2620771b70444b4092a36881c8b1fff1251d626c20"
+      "source_normalized_sha256": "fe0082f6878a17d68c3842fa866f227bce596dc754a6377cc48fd7c3dc126c1e"
     },
     {
       "reference": "ag.f()V",
@@ -3278,7 +3278,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "c0e934732f8881522797ec007f6fb21c3ec347f6abdba38be7321f256542b7a2",
-      "source_normalized_sha256": "d0fc4b685c6e402bb2236dfa47246e5fa3cec2a90fcfeef2fc9d85312d1bfeb6"
+      "source_normalized_sha256": "38450ea1c403219ae0228d02c71c63a60ba335e1b73bfedb76c96635aeb41420"
     },
     {
       "reference": "at.<init>(Laa;)V",
@@ -3390,7 +3390,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "de0e257f9312389f52db11641aee847630461477e3cc9c51f95cad8215d98f95",
-      "source_normalized_sha256": "1f0aea34271434a9d76c90aaf0ba137ac4af9ea18f549aad5f3d8e89a09b489a"
+      "source_normalized_sha256": "f8a77e2c1d5d8c7f5a511966be960e8cf0b4079ee8df8dddc8a58ea4d7178d1d"
     },
     {
       "reference": "cg.a()V",
@@ -3432,7 +3432,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "c360aa2be039d50fea52f11b396d7f6e14a2125e85bd679054439166c3060a2c",
-      "source_normalized_sha256": "dc518c7910c9ea7d75a1ca25941c3e043e2ca29d673be1781ce92337ed0bb3bc"
+      "source_normalized_sha256": "eb964870511821b837e790597f80003398f9ab00387211565389e0f41f968acd"
     },
     {
       "reference": "cg.b()V",
@@ -3446,7 +3446,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "e42094dc8ee1483db4d8cc1e48a6469d22f0b1e503d6eab032b21985d3404806",
-      "source_normalized_sha256": "2598fe624533717fbe0086a3ca67976b614a195eb59c1f44786f00b9fe354bea"
+      "source_normalized_sha256": "9dbd3c45477e5512e9f73c478477c9cfcfa2186b2bf9b07e5af32a622f5c33e5"
     },
     {
       "reference": "cg.e()V",
@@ -3516,7 +3516,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "39a962288dcca7a57985b73261a0dcb20f70d1c43e7f6f4aaf492e4ccdd67747",
-      "source_normalized_sha256": "e6b73488d0aa340881fb21cb610e7001306f0a4cfc08cf3a3d989e1d26a13ac5"
+      "source_normalized_sha256": "377fb715af998d3b49b96b7910decafd085720ce9223c6d6d1ab4275f2ddb3d6"
     },
     {
       "reference": "cg.i()V",
@@ -3572,7 +3572,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "27acd4475fbae3112575cdbd142a4517b74edacf72482aed9141e91832f92cbf",
-      "source_normalized_sha256": "f65359d0a06bfefd277cb15fbac75a2811964007008718c11eab47be00d5c42b"
+      "source_normalized_sha256": "5dc0db6166a64112ffb46b8ca8e232f0388f8d7491e094d43bc9168c1c9a6d3e"
     },
     {
       "reference": "cg.a(Ljavax/microedition/lcdui/ChoiceGroup;Ljava/lang/String;)V",
@@ -3614,7 +3614,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "560a5dd0139534bc33ff490e84e0325e143a01b48bf00e9413698c0e2bdfb79a",
-      "source_normalized_sha256": "9d6c29fd30ccc29033e737fd720f118ee67e0156ebc1e087ece93306823086f9"
+      "source_normalized_sha256": "387b375354ab9ac078e2e809062e5ad45dcb3ca02aae765b4eb8e8a73b702e32"
     },
     {
       "reference": "cg.run()V",
@@ -3876,11 +3876,11 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 7,
       "source_instructions": 7,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "a228b4108d1c415a6154509377d6e8e3038c1c6ef3fd67458bd9beb27dfd0241",
-      "source_normalized_sha256": "2b0feceee458b7afc49391fcab7c4f82cab73368bc2dde3765834d470ea51c28"
+      "source_normalized_sha256": "a228b4108d1c415a6154509377d6e8e3038c1c6ef3fd67458bd9beb27dfd0241"
     },
     {
       "reference": "q.<clinit>()V",
@@ -3978,7 +3978,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "88375629cc9e062e60b1ef007a1425691961ddabd6c114b04aa437bf06f2b753",
-      "source_normalized_sha256": "73f955db98067065008a9582fd26b8d97605416ff0e6cbdfab63dd0081f17ba5"
+      "source_normalized_sha256": "13f9d54b5bb46daff0d11f9a916224b4c28230f6727ac04ff69f91542211a1ad"
     },
     {
       "reference": "q.b(Ljava/lang/String;I)Lbz;",
@@ -4006,7 +4006,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "11e5e5012519ea5c5c50cdbf7e11181c2f27b56db536be88cefc28a05e6034b7",
-      "source_normalized_sha256": "afeaaaae63138465a39bf34faf0e07f07700e9e1ab35af2b9fcbc15a1aeb791e"
+      "source_normalized_sha256": "c68d865644d5d6614a50db917165c212434cd1b751a7d956c4bb23a87d416b6a"
     },
     {
       "reference": "q.a(Ljava/lang/String;)V",
@@ -4076,7 +4076,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "44b5a778339408f85aed32e47e047583d1104ac1aaf3ae73e4d724d0fece97fd",
-      "source_normalized_sha256": "a7308c8335cabaccf53520c07fa33180963fa2bc5048fbf33da693421a9175c9"
+      "source_normalized_sha256": "198fcaad5f6979ec926cb7a5685f587dd9b84442bcb68747166e2d58fcdbebe7"
     },
     {
       "reference": "q.b(Ljava/lang/String;)V",
@@ -4118,7 +4118,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "68cf7fc8a9f935057b7112feb6caf6be15edb67b0c6487018400c6bd503a6a2d",
-      "source_normalized_sha256": "44b146cd0689521f17537356330385fcbf3a450d3f80fe5bde482e2403623ca5"
+      "source_normalized_sha256": "12ff03f18e20e85b638563285423b1604a3b460fd6d7463bb27636f961b34ce0"
     },
     {
       "reference": "bg.a(Lcd;)V",
@@ -4146,7 +4146,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "ee2da074f27a98d811ffecd5a4ac23a03fd9c5dcb4751fea126f53fad3e11e99",
-      "source_normalized_sha256": "79a417471f906f0afacffbfe47d9c53ad942052722a05dc9358ea8a262a11949"
+      "source_normalized_sha256": "c1ae21a18cce43116318f79378b4c18c1f404fd5e6db59cebdf5f4c5feeb08e6"
     },
     {
       "reference": "bg.d(Z)V",
@@ -4272,7 +4272,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "fc9ea322d9ff731aba81e42b5623745be2b4d966c83e901e3af1f3198a31e0d7",
-      "source_normalized_sha256": "d993af4a007031878f2dc84b54e837c33143bd3d1af2922762ea0eeae706974f"
+      "source_normalized_sha256": "f51b09e71a69577b2e1b802d26b1655266e14924ff26bd5944d7de96afedb46d"
     },
     {
       "reference": "bg.a(Ljava/lang/String;)Lw;",
@@ -4300,7 +4300,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "23c39ce4d02aea928f43536aebf49a00badba983747dcd5ca70d191d02005a46",
-      "source_normalized_sha256": "75f0443301d04d8ac024fd26358882eb702d96a28fce179418e1957fcd0fabda"
+      "source_normalized_sha256": "54ed0ab0bd249057f8c24eb542052ed41c83b157875f60a9c896030b1896d167"
     },
     {
       "reference": "bg.a()V",
@@ -4496,7 +4496,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "bdc38fc3ce52f59277c4cb1eecd39744d9615cd055dc77fe3c9d294562257d99",
-      "source_normalized_sha256": "45cc44a8e07fc7546337bc28f9d19243e3c3bcf5424126583bd32603b1b311c4"
+      "source_normalized_sha256": "e2dc53346b67cb0bddd0db6bc4bfa53ba6f8738d85bba333b8a56bd8be0ad252"
     },
     {
       "reference": "y.e()V",
@@ -4538,7 +4538,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "1a9a3e9f6ecdd1603e5d221f38d9f643b9b868a4f0934b59cd13d38e45d15c6a",
-      "source_normalized_sha256": "99585bf3f5736028ffc63f212ea908fbfdec3ed673241cff1879e356ed0ac288"
+      "source_normalized_sha256": "aae7417477c792d8b3f1475c4de45bd3b8f5acf82d1c3a0075e5a985b311f633"
     },
     {
       "reference": "y.<clinit>()V",
@@ -4552,7 +4552,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "938b55e95c7866cc59bab410a6c4da3832daf883311148cb5e1bf7a1bfea2841",
-      "source_normalized_sha256": "97378fed5908d47bffaa46a2efc5eaf77921b7e9ad3a9eaade47710b433a5cff"
+      "source_normalized_sha256": "f70ccc84d14d4666bf3228c36d6035d9506e7a08287599b68df666d56ccd5485"
     },
     {
       "reference": "bt.a(Lz;Lac;)V",
@@ -4566,7 +4566,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "2c3f74c5af8b8c621c84c5c5cd467d228a622a4cb00aaea54db0d88f406a98eb",
-      "source_normalized_sha256": "f2fa4e1277b0a026c53414b3599c134dfec000a14e82b0e3348db2606c646aaa"
+      "source_normalized_sha256": "e3548caff158e86f724e0a0167c3b5992713440e71791f42d6be83ee514309e0"
     },
     {
       "reference": "bt.a(Ljava/lang/String;JZ)V",
@@ -5266,7 +5266,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "1ce40a96ad9ce86a82d9bd06520106b0b1110761fe7f39644483b32839df699a",
-      "source_normalized_sha256": "0738e21c5813d8bc261c6423dc2a7ed327dca21f974ec3551548507d6ce796c0"
+      "source_normalized_sha256": "09687fb805d5bac7a5c4ce78b1b5ddf36e04e35d3675482ea1a9c44d94714e98"
     },
     {
       "reference": "a.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
@@ -5420,7 +5420,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "ad624a93eb488764bfa42c7ac24b7c1df74c9d352e0be01c93f739f78c6711b2",
-      "source_normalized_sha256": "44591d1e0aef5f0f24ec8b7aa8f75a9a8474b29c38398c5ecba22f76ddb76e21"
+      "source_normalized_sha256": "01c16e3bfed6ec6c17d6af5edd0171dee58456cce791b90704bcf05497da8a9f"
     },
     {
       "reference": "cc.a(Ljava/lang/String;)V",
@@ -5630,7 +5630,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "e5186b42ed935879208fc56eb6ad3d05f95cd82d60b8680cf88f54a87e8048c3",
-      "source_normalized_sha256": "8cd1bdc358ca2a5bb5d9ce08d84466ddaeaf367dfc56a9598d2fe0cedf7146a9"
+      "source_normalized_sha256": "647736dfa11c6547b80a3e285ab9ae61e4efde47afd9e0560b42b55766cff44b"
     },
     {
       "reference": "ao.<init>()V",
@@ -5882,7 +5882,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "70479f4ecf29ca58d5196335dbd2decdf8582eed8e0dfb82ce27c76c93dde213",
-      "source_normalized_sha256": "3dea4a086182cf6696512cc2ffc77dd8824391894d31e130e270ded07c908ab8"
+      "source_normalized_sha256": "f325d99c139003fa6454d9286e4ab9c8223cb0db864cbb37658a611063c31507"
     },
     {
       "reference": "p.a(Ljava/lang/String;)V",
@@ -5938,7 +5938,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "ddd4691c3138f89c2bf1624c715ba6a9e043b276d0fb4f22212397073579e243",
-      "source_normalized_sha256": "d05d460513956d6a7162ed94de38a579f880aa5156cd4bd04e9cc1ca954483f7"
+      "source_normalized_sha256": "263b9993b745e1d2a1853acaad837ef76771444f828dcf730d83d29f4b52113a"
     },
     {
       "reference": "p.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
@@ -5952,7 +5952,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "1fd7a694e9d475ec4650e540807b72648642035178fc1c2e39951123d9f23f07",
-      "source_normalized_sha256": "bc0c59ee986e81e29939b6ed7a6af0a5f0925e168d56cf8c09964950fcadd6ff"
+      "source_normalized_sha256": "da7eccda3b8f5396f989ca43e842860fb0cf6cc931cbcaf93632d78a459392b3"
     },
     {
       "reference": "p.b()V",
@@ -6050,7 +6050,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "9a2df57cdf27bf940d5412fff4da98ab94e2b9c9c069030a733735a5ae89c68d",
-      "source_normalized_sha256": "6647f945c66f706b975b9eff69bd1a352fa05621a30a4eaef9cb818db524a704"
+      "source_normalized_sha256": "538f837be5bbf3da075bc4679ab3821c782da5198aca1cfcab085d71a3efd9d5"
     },
     {
       "reference": "cr.a(I)V",
@@ -6064,7 +6064,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "e9e37da8a308cbc52acc7f6ab724a18fdc9a0c9337600a7a15b43f3f22fe7823",
-      "source_normalized_sha256": "eea80ad30f022f3025b9f1113a4af7ff5169d4803b29e3dac786800212fd9141"
+      "source_normalized_sha256": "f61c84760ede1ee3b1a584c0c2cf29576d5e5989abddec4bb5ee978c1cdefbad"
     },
     {
       "reference": "cr.a(Z)V",
@@ -6134,7 +6134,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "9504bc0d77e9c906feab22c04ec5fb5a1b8fe978a24f49e1525d3ed8baa97033",
-      "source_normalized_sha256": "e11e7fa07561dd1eda714ee5e6d139f104d5b9fcfd6c2ce38efcd5beb37969f8"
+      "source_normalized_sha256": "cce312b818e485e25e508d6da1015a3304a458ab75bf014ae3a23df50864a755"
     },
     {
       "reference": "o.<init>(Lcp;[Ljava/lang/String;)V",
@@ -6232,7 +6232,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "1e7f5291ba8a7f3bc9e4ef8c75d4bd54849c20d1c5a2ca1a117a5f4f73e5b849",
-      "source_normalized_sha256": "058420c3a24f95c5ac40368dbba495eb9db3c7493b61acb1d110f964c1842b1c"
+      "source_normalized_sha256": "c7ebb788e29828d2470f6cf0d3b10c987dd436fe1240a10362cc7b16cb8c7246"
     },
     {
       "reference": "cf.b(Lz;)V",
@@ -6246,7 +6246,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "e83ba3cc840a540c4aa24fafb9aef7ca6d9b351f3af7f53b5b01166d48d937ad",
-      "source_normalized_sha256": "e6aeceb69e0da6e35adbe20759efb23faa09e440ba4a111782acac0abb1e2ceb"
+      "source_normalized_sha256": "1fc942edfdfa8eb613c188493bcf84b1b369310b1c4051fe1976efbc87c45867"
     },
     {
       "reference": "cf.c(Lz;)V",
@@ -6288,7 +6288,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "9032156029d91ac8af855adfd9984c421edc6fa516828b69eb782a572ea74799",
-      "source_normalized_sha256": "841ffb55b275c6343556d4028e32aa79b7041ae96f106bb1482aeac72e86be5d"
+      "source_normalized_sha256": "7607c94c179e4901d5aaf3158584f6b3aede7b2b4c2660f1480a6b582e401ac7"
     },
     {
       "reference": "cf.a(Lbi;Ljava/lang/String;Le;IZ)V",
@@ -6344,7 +6344,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "c28c35d04fe58f0580aa6f4bb840d2b567b016ee118bd73ea849b315a82a6c6c",
-      "source_normalized_sha256": "89095b1ef4e738ee18f565b96f6035f611a9e3035bb6d91498a141ee5bb61989"
+      "source_normalized_sha256": "4a9e74f11dbab0a4e0b77048aa0cf1fe893795697dcf9853118e02512ae17978"
     },
     {
       "reference": "br.run()V",
@@ -6358,7 +6358,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "19d623784500eb2e27ad40fd147ff416c53d765b1c6ad756566bc4bbc1e0c0eb",
-      "source_normalized_sha256": "7bfa452cbd36daebf2cce3f072f303748e04135b1a2dd6bfc42d225b1466a665"
+      "source_normalized_sha256": "8fc39f1b0c3695823e1d6f7c7d20e91dda79cbbcae0dcc827c3d70ae6da7c201"
     },
     {
       "reference": "br.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
@@ -6372,7 +6372,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "a455e73da6951df3265d6ff8e0bfd6346285495b62466ecbcb28c1e319d57ab0",
-      "source_normalized_sha256": "402e9c3f4e354b03b55ed7ef457935590cf956d7ec85ce228cbf768d3c198308"
+      "source_normalized_sha256": "ab7003d786711285c43c92bd587448e428e4197bfcf47a8d129a6680b21df63d"
     },
     {
       "reference": "as.a()V",
@@ -6470,7 +6470,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "899ae5ee0235a346de5f6a71e8d625c26263af198694e13412d2f783cab042ab",
-      "source_normalized_sha256": "4bb0c94ada9587424f716b40d36c495fa110190cb760d4d30ce97540632db765"
+      "source_normalized_sha256": "abbefd92180a554bda42b01f17af5465f4a87105e95cec1ec19b952db31088a6"
     },
     {
       "reference": "cf.a([Ljava/lang/String;Lbi;)V",
@@ -6484,7 +6484,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "339c79caf7e28cadce1a24dea15941a496bf9e0f619d08fabe9e735b14a1a8ce",
-      "source_normalized_sha256": "f0507ea6236b7a02535baaebe0db32ed4725b86ab0770c3d8f5dcae678f155e9"
+      "source_normalized_sha256": "eecacac1a1e23edc5c395680e6886e9449a1be33682085a7b3b1ce5d9d34c1b4"
     },
     {
       "reference": "cf.a([Ljava/lang/String;)V",
@@ -6694,7 +6694,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "b4c7cded1a9bbd1cd7da46dbfcb0504ce1220d5905eadc529f20452721958268",
-      "source_normalized_sha256": "98319d8e0c148aeee6f6587458e52d3fa0cc2ddfbf5efcc5229029e185348d50"
+      "source_normalized_sha256": "1e43e83975fbd610be1d77a6b483af10b8d5cc92f2d57993248f7274d3d5d172"
     },
     {
       "reference": "ae.a(Lz;)V",
@@ -6708,7 +6708,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "718a1ff747a8542463cee0186709f3f2780a817b5e4285fb1efd20d5b5ef4701",
-      "source_normalized_sha256": "7c85fed7298697d42da3bec2d8825d6625f8fadd76be0d93ffcdb3042a6f60a3"
+      "source_normalized_sha256": "c35d1f479eb265de73f129353ffbc0047e9e743b9d579009fd76af6a2f1ab1b4"
     },
     {
       "reference": "ae.a(Lac;)Z",
@@ -6722,7 +6722,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "926052f4f9b401ae6d7b7ed55eb37499579baa7e235e8fc0560ad0364a157cd0",
-      "source_normalized_sha256": "21a7e46c9f65da6208f4358cce8862617c74c52192086897794782a35535f2c1"
+      "source_normalized_sha256": "a7cdeef2e21ad791da5ac8d12fe4cfc27c776bee8fce74515f8ea038ada20712"
     },
     {
       "reference": "co.b()I",
@@ -7016,7 +7016,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "038c1dbbb7914091d225a521decd1511e2eab0f7526d50d892e6a055f5c6f12c",
-      "source_normalized_sha256": "065163d565121dd6693b987760de02c12a2a710f9bd6dee4be2b4e4f0b75d7d3"
+      "source_normalized_sha256": "687f550513359a6ede45605ecbdbeef54c18f18e1d14e9b057bb7aeddeae27f8"
     },
     {
       "reference": "aq.a()V",
@@ -7338,7 +7338,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "84f53ff8d52de2d4ae5af1f88b870bf15907b7587f6c2d7b4bd91be95d942c4d",
-      "source_normalized_sha256": "b0cd997eb90159eae4ca6b8f3b6bd6f53ad95a48729c839909ffaabacfcc9595"
+      "source_normalized_sha256": "f45c3afda8951a330c343cc989f77b2374ff5a4fa3aa50a8117ead546696a6d0"
     },
     {
       "reference": "cv.d(Z)V",
@@ -7422,7 +7422,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "f18cb1e9397a07272823678efbe4ac3ce74d80ec82f0671bd48d0ddfc6550af2",
-      "source_normalized_sha256": "0e552a26ffa199bf1da1b7d81ff098a92a55f776a8435c4c905eb7ceb3e55351"
+      "source_normalized_sha256": "05618993352f6dd9f624afcb92cc20717f0b80fc42134412aa4f5f9985581762"
     },
     {
       "reference": "ay.a(Ljava/lang/String;)V",
@@ -9308,11 +9308,11 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 11,
       "source_instructions": 11,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "1f326c41806c9ba629d2c8d24739379c6cda76c09b1979f9321e1b208947cbb6",
-      "source_normalized_sha256": "06ad9164b3d7a5e5140ffde607b95bf5781ffc489d68004fa23dd12e68f273f0"
+      "source_normalized_sha256": "1f326c41806c9ba629d2c8d24739379c6cda76c09b1979f9321e1b208947cbb6"
     },
     {
       "reference": "bj.a()I",
@@ -9368,7 +9368,7 @@
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "f99e95db2da926e98cba4a42c3ea6706591f180757f3d343029c06f58071c965",
-      "source_normalized_sha256": "3d5157e26cebc4b6d1e92cc6de83a798c66f957002af79fc1d21cc7ae35b2e15"
+      "source_normalized_sha256": "ee216698c48d19aad71bb50b6f162377c8a8acd0d176dd602b68c25f5ce61d0b"
     },
     {
       "reference": "z.a([B)V",
@@ -9616,11 +9616,11 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 32,
       "source_instructions": 32,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "15275db572d7b4130c38322a7d6a411842ba2a054782b7550bf7ec8abda7a233",
-      "source_normalized_sha256": "fa1b9c8a33511487723202bf4f813cc53e6a4d8cd91604d4363b952b2d4a9caa"
+      "source_normalized_sha256": "15275db572d7b4130c38322a7d6a411842ba2a054782b7550bf7ec8abda7a233"
     },
     {
       "reference": "by.a(Ljavax/microedition/lcdui/Displayable;)V",
@@ -9686,11 +9686,11 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 33,
       "source_instructions": 33,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "9b7ef97bc01c2bd4665f02a84b448731c042a0802aa77c606c245a529b7cd9bd",
-      "source_normalized_sha256": "a0be20febddf74593a86a866d9b3640aba994f213e0c95e5d14d8d0781814c9e"
+      "source_normalized_sha256": "9b7ef97bc01c2bd4665f02a84b448731c042a0802aa77c606c245a529b7cd9bd"
     },
     {
       "reference": "bd.a()V",
@@ -9700,11 +9700,11 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 39,
       "source_instructions": 39,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "91085233bcaee6e7dd30bc520fa7a6d624d845d48f3ad972131029787407bb05",
-      "source_normalized_sha256": "8ed65c741e446779d182db2ee4890420505ebf01c6fc340678f4978ab4d1afef"
+      "source_normalized_sha256": "91085233bcaee6e7dd30bc520fa7a6d624d845d48f3ad972131029787407bb05"
     },
     {
       "reference": "bd.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
@@ -9770,11 +9770,11 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 14,
       "source_instructions": 14,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "0270297a77df4a9b7056f59fd5df83dc88ddcd3f9d8705a5d4caddc251253b8f",
-      "source_normalized_sha256": "71deee66bfcea63ad8383396444330253da8c6072a0dc370151acb0c1a67d256"
+      "source_normalized_sha256": "0270297a77df4a9b7056f59fd5df83dc88ddcd3f9d8705a5d4caddc251253b8f"
     },
     {
       "reference": "ah.<init>()V",
@@ -9798,11 +9798,11 @@
       "synchronized_modifier_verified": true,
       "reference_instructions": 24,
       "source_instructions": 24,
-      "same_normalized_instructions": false,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "6df3764756e5cd55df1dc1376743b307a084dc68cda24df7287180ffa0347b27",
-      "source_normalized_sha256": "03838fc025e398231e49c1130adb53506870b864c8481b99a7a73380f98b557c"
+      "source_normalized_sha256": "6df3764756e5cd55df1dc1376743b307a084dc68cda24df7287180ffa0347b27"
     },
     {
       "reference": "ah.a()V",
