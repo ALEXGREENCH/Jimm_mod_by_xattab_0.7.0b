@@ -10,15 +10,16 @@ public class PacketProbe {
     static final String[] old={"an","ak","h","bn","bu","ck"};
     static final String[] names={"Packet","SnacPacket","ConnectPacket","DisconnectPacket","ToIcqSrvPacket","FromIcqSrvPacket"};
     static Class<?>[] types=new Class<?>[6];
+    static Properties configuration=new Properties();static String dcName="au",errorName="bv";static int dcCases;
     static String hex(byte[] b){return b==null?"null":Base64.getEncoder().encodeToString(b);}
     static String value(Object o){return o instanceof byte[]?hex((byte[])o):o instanceof String?"str:"+hex(((String)o).getBytes(java.nio.charset.StandardCharsets.UTF_8)):String.valueOf(o);}
     static void row(String s){out.println(s);rows++;}
     static Method method(Class<?> c,String name,Class<?> result,Class<?>...args)throws Exception{for(Method m:c.getDeclaredMethods())if(m.getName().equals(name)&&m.getReturnType()==result&&Arrays.equals(m.getParameterTypes(),args)){m.setAccessible(true);return m;}throw new NoSuchMethodException(c+"."+name);}
     static Field field(Class<?> c,String name,Class<?> type)throws Exception{for(Field f:c.getDeclaredFields())if(f.getName().equals(name)&&f.getType()==type){f.setAccessible(true);return f;}throw new NoSuchFieldException(c+"."+name);}
-    static Object failure(Throwable t){if(t instanceof Error)throw new AssertionError("Broken packet fixture",t);String kind=t.getClass().getName();if(kind.equals(ref?"bv":"jimm.JimmException"))return "JimmException:"+t.getMessage();return "exception:"+kind;}
+    static Object failure(Throwable t){if(t instanceof Error)throw new AssertionError("Broken packet fixture",t);String kind=t.getClass().getName();if(kind.equals(ref?errorName:"jimm.JimmException"))return "JimmException:"+t.getMessage();return "exception:"+kind;}
     static Object invoke(Method m,Object receiver,Object...args)throws Exception{try{return m.invoke(receiver,args);}catch(InvocationTargetException e){return failure(e.getCause());}}
     static Object create(int kind,Class<?>[] params,Object...args)throws Exception{Constructor<?> c=types[kind].getDeclaredConstructor(params);c.setAccessible(true);try{return c.newInstance(args);}catch(InvocationTargetException e){return failure(e.getCause());}}
-    static int kind(Object packet){for(int i=5;i>=0;i--)if(packet.getClass()==types[i])return i;if(packet.getClass().getName().equals(ref?"au":"jimm.comm.DCPacket"))return 6;throw new AssertionError("Unexpected packet "+packet.getClass());}
+    static int kind(Object packet){for(int i=5;i>=0;i--)if(packet.getClass()==types[i])return i;if(packet.getClass().getName().equals(ref?dcName:"jimm.comm.DCPacket"))return 6;throw new AssertionError("Unexpected packet "+packet.getClass());}
     static String fields(Object packet)throws Exception{
         int k=kind(packet);if(k==6)return "DCPacket";StringBuilder s=new StringBuilder(names[k]);
         s.append("/seq:").append(field(types[0],ref?"c":"sequence",int.class).get(packet));
@@ -110,11 +111,34 @@ public class PacketProbe {
         if(parsed<300)throw new AssertionError("Too few successful parser observations: "+parsed);
     }
     static byte[] language(boolean list)throws Exception{ByteArrayOutputStream b=new ByteArrayOutputStream();DataOutputStream d=new DataOutputStream(b);if(list){d.writeShort(1);d.writeUTF("RU");}else{d.writeShort(256);for(int i=0;i<256;i++){d.writeUTF("error_"+i);d.writeUTF("code:"+i+":EXT");}}return b.toByteArray();}
+    static void directParser()throws Exception{
+        Class<?> dc=Class.forName(ref?dcName:"jimm.comm.DCPacket",true,loader);
+        Method parse=method(dc,ref?"a":"parse",types[0],byte[].class,int.class,int.class);
+        Field data=field(dc,ref?"a":"data",byte[].class);
+        for(int size:new int[]{0,1,2,3,255,256})for(int off:new int[]{-1,0,1,6,256,Integer.MAX_VALUE})for(int length:new int[]{-1,0,1,2,6,256,Integer.MAX_VALUE}){
+            byte[] buf=new byte[size];for(int i=0;i<size;i++)buf[i]=(byte)(i*37+11);
+            Object p=invoke(parse,null,buf,off,length);if(p==null||p instanceof String)throw new AssertionError("Direct parser failed");
+            row("direct:"+size+":"+off+":"+length+":"+(data.get(p)==buf)+":"+value(wire(p)));
+            if(size>0)buf[0]=77;row("direct-input-alias:"+(data.get(p)==buf)+":"+value(wire(p)));
+            Object copy=wire(p);if(!(copy instanceof byte[]))throw new AssertionError("Direct serializer failed");((byte[])copy)[size>0?2:0]=88;
+            row("direct-wire-copy:"+hex((byte[])data.get(p)));dcCases++;
+        }
+        for(int off:new int[]{-1,0,Integer.MAX_VALUE})for(int length:new int[]{-1,0,2,Integer.MAX_VALUE}){
+            Object p=invoke(parse,null,null,off,length);if(p==null||p instanceof String)throw new AssertionError("Null direct parser failed");
+            row("direct-null:"+off+":"+length+":"+(data.get(p)==null)+":"+value(wire(p)));dcCases++;
+        }
+        for(int size:new int[]{65535,65536,65537}){
+            byte[] buf=new byte[size];Arrays.fill(buf,(byte)0x5a);Object p=invoke(parse,null,buf,0,size);
+            row("direct-word-boundary:"+size+":"+(data.get(p)==buf)+":"+value(wire(p)));dcCases++;
+        }
+        row("direct-cases:"+dcCases);
+    }
     public static void main(String[] args)throws Exception{
-        ref=args[2].equals("reference");ArrayList<URL> urls=new ArrayList<>();urls.add(Paths.get(args[0]).toUri().toURL());urls.add(Paths.get(args[1]).toUri().toURL());for(String lib:new String[]{"microemu.jar","microemu-jsr-75.jar","microemu-jsr-120.jar","microemu-nokiaui.jar"})urls.add(Paths.get(args[3],lib).toUri().toURL());
+        ref=args[2].equals("reference");if(args.length>5){try(InputStream in=Files.newInputStream(Paths.get(args[5]))){configuration.load(in);}dcName=configuration.getProperty("DCPacket");errorName=configuration.getProperty("error");}
+        ArrayList<URL> urls=new ArrayList<>();urls.add(Paths.get(args[0]).toUri().toURL());urls.add(Paths.get(args[1]).toUri().toURL());for(String lib:new String[]{"microemu.jar","microemu-jsr-75.jar","microemu-jsr-120.jar","microemu-nokiaui.jar"})urls.add(Paths.get(args[3],lib).toUri().toURL());
         loader=new URLClassLoader(urls.toArray(new URL[0]),ClassLoader.getPlatformClassLoader());Class<?> io=Class.forName("ResourceIO",true,loader);Hashtable files=(Hashtable)io.getField("files").get(null);files.put("/langlist.lng",language(true));files.put("/RU.lng",language(false));
-        Class<?> options=Class.forName(ref?"cj":"jimm.Options",true,loader);Object[] values=new Object[256];for(int i=0;i<256;i++)values[i]=i<64||i>=224?"":i<128?Integer.valueOf(0):i<192?Boolean.FALSE:Long.valueOf(0);values[133]=Boolean.TRUE;for(Field f:options.getDeclaredFields())if(f.getType()==Object[].class){f.setAccessible(true);f.set(null,values);}
-        for(int i=0;i<6;i++)types[i]=Class.forName(ref?old[i]:"jimm.comm."+names[i],true,loader);
-        out=new PrintWriter(Files.newBufferedWriter(Paths.get(args[4]),java.nio.charset.StandardCharsets.UTF_8));for(boolean cp:new boolean[]{true,false}){values[133]=Boolean.valueOf(cp);row("cp1251:"+cp);constructors();parsers();}row("successful-parses:"+parsed);out.close();loader.close();System.out.println("PASS packets: "+rows+" observations, "+parsed+" successful parses");System.exit(0);
+        Class<?> options=Class.forName(ref?configuration.getProperty("options","cj"):"jimm.Options",true,loader);Object[] values=new Object[256];for(int i=0;i<256;i++)values[i]=i<64||i>=224?"":i<128?Integer.valueOf(0):i<192?Boolean.FALSE:Long.valueOf(0);values[133]=Boolean.TRUE;for(Field f:options.getDeclaredFields())if(f.getType()==Object[].class){f.setAccessible(true);f.set(null,values);}
+        for(int i=0;i<6;i++)types[i]=Class.forName(ref?configuration.getProperty(names[i],old[i]):"jimm.comm."+names[i],true,loader);
+        out=new PrintWriter(Files.newBufferedWriter(Paths.get(args[4]),java.nio.charset.StandardCharsets.UTF_8));for(boolean cp:new boolean[]{true,false}){values[133]=Boolean.valueOf(cp);row("cp1251:"+cp);constructors();parsers();if(args.length>5)directParser();}row("successful-parses:"+parsed);out.close();loader.close();System.out.println("PASS packets: "+rows+" observations, "+parsed+" successful parses");System.exit(0);
     }
 }

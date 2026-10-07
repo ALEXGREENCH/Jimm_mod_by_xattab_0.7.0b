@@ -105,6 +105,9 @@ jobs:
             preservation/reports/source-antispam.json
             preservation/reports/source-antispam-bytecode.json
             preservation/reports/source-xtraz-queries.json
+            preservation/reports/source-packet-parsers.json
+            preservation/reports/source-packet-root.json
+            preservation/reports/source-packet-parsers-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:
