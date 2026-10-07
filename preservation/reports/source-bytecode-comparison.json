@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "4083e7388c483a65872d55fa6f8b8a4f4569d4790f9f9e1c6677fba043c8e3d2",
+  "rebuilt_sha256": "2e4e99f2cee4972efe76677dd44b82164bba4e8b668ce431306b37ec9db39685",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -2849,7 +2849,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "be67764d0da22da417c69056426c09735dc44c0edac68234963427d4ca8df80c",
+      "reference_normalized_sha256": "319c372cc5ce1b0b665cfeb7fbd18ba8625995da4c6bd1b7e042826a7f89e9fa",
       "source_normalized_sha256": "c560f84a83df1087d917ce08845f154439652d8fdde5a46278c106945dad7b2d"
     },
     {
@@ -17107,6 +17107,22 @@
       "same_normalized_bytecode": true,
       "reference_normalized_sha256": "27ffeb31ad49dcb1580a8ac845d6145d2d27f6aa48b7cc72f132195337847dd7",
       "source_normalized_sha256": "27ffeb31ad49dcb1580a8ac845d6145d2d27f6aa48b7cc72f132195337847dd7"
+    },
+    {
+      "reference": "cd.b(I)I",
+      "source": "DrawControls/VirtualList.getExtendedGameAction(I)I",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 89,
+      "source_instructions": 88,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": false,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "51aded36d1dfe1be1cd3d32ad32eb2b3a7851855e2aaa624eba5e522a5110a74",
+      "source_normalized_sha256": "da929215e12e36e10d61de2e57ed0b818b66aca1fc83fa38237e94da8185fd7f"
     }
   ],
   "abstract_declarations": 34,

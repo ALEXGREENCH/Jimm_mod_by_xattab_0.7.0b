@@ -1,0 +1,284 @@
+{
+  "scope": "Actual three-platform extended-key classification and private menu/cursor reaction in original and unoptimized classes; delivered optimized classes are additionally executed after restoration. A minimal MIDlet and explicit Options seed isolate startup. Device flavor uses genuine MicroEmulator APIs and preserves every input class byte; scripted flavor changes exactly two API invocation instructions, retaining all declarations, subject control flow, exception regions and other application class bytes. API names, game results, errors and call order are inputs/observations, never derived expected application code. No complete startup, public key pipeline or physical handset keymap claim.",
+  "negative_before_fix": true,
+  "builds": [
+    {
+      "target": "MIDP2",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_jar_sha256": "87fb61a73a8aae294d2acb9d6a1e5628f120505462c7a30e3410305ee1bb2541",
+      "source_unoptimized_class_jar_sha256": "879680de6d5c4271d7a6b0d101467ddfe2623b2844a26f7296daa7a1f690a518",
+      "device_observations": 1095,
+      "scripted_observations": 2509,
+      "comparisons": {
+        "device": {
+          "different_observations": 529,
+          "lookup_differences": 500,
+          "reaction_differences": 28,
+          "reference_output_sha256": "026b1768aff93bff0c04fc61068ae58c96b84e8e27191ca18036579241aee25d",
+          "source_output_sha256": "6bab8b2ee5a3cdafa83d508e8759722e0b54ba0cfb75bc17cc2da009c42b67f4"
+        },
+        "scripted": {
+          "different_observations": 137,
+          "lookup_differences": 0,
+          "reaction_differences": 0,
+          "reference_output_sha256": "f30e3d1794f94ececba95795f743aaf966053ae5d8e72a39bb90bd18cacdb884",
+          "source_output_sha256": "6a57b7b5c92c10d6e306363d130a1a0436076e4e20ff5c5c7a7ab51ad329bf69"
+        }
+      },
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+              "fixture_sha256": "68f5de75744a99811d3f34c73177f4a26f6c4685494cc7e03c6fbdebf8d6bf79",
+              "all_input_class_bytes_unchanged": true,
+              "only_two_enumerated_device_calls_changed": false,
+              "captures": {},
+              "coverage": [
+                523,
+                570,
+                8,
+                32
+              ]
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+              "fixture_sha256": "5775829682eaffba74adf078298a435c552713a50db2ff78cacdcfc0da70b3df",
+              "all_input_class_bytes_unchanged": false,
+              "only_two_enumerated_device_calls_changed": true,
+              "captures": {
+                "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;": 1,
+                "182 javax/microedition/lcdui/Canvas.getGameAction(I)I": 1
+              },
+              "coverage": [
+                2508
+              ]
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "c527c2f3a997224c54c3bf1a5cc0236bd23f57b0abd794cb981660ac308ba2e7",
+              "fixture_sha256": "54282bfc58f83002ded5c10c7969b063bda07e84fdc2bb4a7c72109b708df3a9",
+              "all_input_class_bytes_unchanged": true,
+              "only_two_enumerated_device_calls_changed": false,
+              "captures": {},
+              "coverage": [
+                523,
+                570,
+                4,
+                22
+              ]
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "c527c2f3a997224c54c3bf1a5cc0236bd23f57b0abd794cb981660ac308ba2e7",
+              "fixture_sha256": "0c88484ac64b7c14048126cea8ba7d730542bba0ce3acafa1a55fdb77fea652f",
+              "all_input_class_bytes_unchanged": false,
+              "only_two_enumerated_device_calls_changed": true,
+              "captures": {
+                "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;": 1,
+                "182 javax/microedition/lcdui/Canvas.getGameAction(I)I": 1
+              },
+              "coverage": [
+                2508
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_jar_sha256": "9ad335a0d0a839bb46b6eeb55154bd5a8eded2b9919acf368017b3bbfea64a04",
+      "source_unoptimized_class_jar_sha256": "5dca65664317c7a1a3a87e960a0b0cc9ebab93397a99d834c014563b70bf240a",
+      "device_observations": 1095,
+      "scripted_observations": 2509,
+      "comparisons": {
+        "device": {
+          "different_observations": 528,
+          "lookup_differences": 498,
+          "reaction_differences": 28,
+          "reference_output_sha256": "3ba6908ac1150bd8695d4f9c1d43564c3a3dc137feeb85cbe0ebac595aa33376",
+          "source_output_sha256": "e85c8069a1839800609af2838c2213c1587e9a7af28b8443087856331e0883a3"
+        },
+        "scripted": {
+          "different_observations": 105,
+          "lookup_differences": 0,
+          "reaction_differences": 0,
+          "reference_output_sha256": "d342e7fd4a5a0ae79877c826958941c8da185e7094b5f52cf16bc0c0bd857205",
+          "source_output_sha256": "331da86fade2025bf1f50e167cecf7629c1329ca549e581c6a99da15c2abca13"
+        }
+      },
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+              "fixture_sha256": "4a33dc49a1a2ecc4a08e8fa96c5e200dbee070b83e062e41b17c105cf481215a",
+              "all_input_class_bytes_unchanged": true,
+              "only_two_enumerated_device_calls_changed": false,
+              "captures": {},
+              "coverage": [
+                523,
+                570,
+                8,
+                32
+              ]
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+              "fixture_sha256": "bd252f82fd6fcf657964e28301d1e1a0f784277c57a876416e5d1ec47f13e4b8",
+              "all_input_class_bytes_unchanged": false,
+              "only_two_enumerated_device_calls_changed": true,
+              "captures": {
+                "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;": 1,
+                "182 javax/microedition/lcdui/Canvas.getGameAction(I)I": 1
+              },
+              "coverage": [
+                2508
+              ]
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "e864af78328b3637b0aaab91062a3a75e1f1d3f927363d69a4beb44ebd067897",
+              "fixture_sha256": "e6943e3187dfb9419a8c09768cb4295e2d44c861ef64a3d0066f3ec58a5bf9b4",
+              "all_input_class_bytes_unchanged": true,
+              "only_two_enumerated_device_calls_changed": false,
+              "captures": {},
+              "coverage": [
+                523,
+                570,
+                4,
+                22
+              ]
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "e864af78328b3637b0aaab91062a3a75e1f1d3f927363d69a4beb44ebd067897",
+              "fixture_sha256": "841a1dc13fc8ea1966fbde12d2a9e2d2f70ee8c273bf0a5d7ba8d4f5ef4eff75",
+              "all_input_class_bytes_unchanged": false,
+              "only_two_enumerated_device_calls_changed": true,
+              "captures": {
+                "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;": 1,
+                "182 javax/microedition/lcdui/Canvas.getGameAction(I)I": 1
+              },
+              "coverage": [
+                2508
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "source_jar_sha256": "4aad8f97008dfdf6ecd55e0e104c6b81401389ffe188e1d00a7be1209d0dfd03",
+      "source_unoptimized_class_jar_sha256": "c85146f8e42bab21dd4d5e274b38b6cafed3fbf1618a27536c68aa808c34f743",
+      "device_observations": 1095,
+      "scripted_observations": 2509,
+      "comparisons": {
+        "device": {
+          "different_observations": 530,
+          "lookup_differences": 501,
+          "reaction_differences": 28,
+          "reference_output_sha256": "9294777fe8190c0d9db10276f455a9c816c38878c666f6efad21c340aa3e1ce5",
+          "source_output_sha256": "00c2e95194b8eb7c3ea9815295afd6bda2e32ca21dd90c0c3938c9d9c467ee0a"
+        },
+        "scripted": {
+          "different_observations": 172,
+          "lookup_differences": 0,
+          "reaction_differences": 0,
+          "reference_output_sha256": "dea3ce56ed95f9c89316a5f5b41123f01b9ab9fa7eb20629dc5939efe941a48c",
+          "source_output_sha256": "1979f93a8ffe35e3896d930a413a60a1c95b75cb7c0e665bb34325671f1f1acd"
+        }
+      },
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+              "fixture_sha256": "a284ff8c957ccac55c4dd12db8ad9a08b887d303ad48ea1baf7bb0efb4208c21",
+              "all_input_class_bytes_unchanged": true,
+              "only_two_enumerated_device_calls_changed": false,
+              "captures": {},
+              "coverage": [
+                523,
+                570,
+                7,
+                32
+              ]
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+              "fixture_sha256": "bb2b6e1eb9971a5a283b8e23f5c15cfb4a0f2840e70dec9cd58bc07b29d4c65d",
+              "all_input_class_bytes_unchanged": false,
+              "only_two_enumerated_device_calls_changed": true,
+              "captures": {
+                "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;": 1,
+                "182 javax/microedition/lcdui/Canvas.getGameAction(I)I": 1
+              },
+              "coverage": [
+                2508
+              ]
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "28fed3bc031dbd5f6e55927261efe83b9d0fb67ee1aedbaba6daaada88d41f47",
+              "fixture_sha256": "7cda109c4570ddc87af03d92de17b0d553f968842456aad6bd977aa3afc935ab",
+              "all_input_class_bytes_unchanged": true,
+              "only_two_enumerated_device_calls_changed": false,
+              "captures": {},
+              "coverage": [
+                523,
+                570,
+                3,
+                22
+              ]
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "28fed3bc031dbd5f6e55927261efe83b9d0fb67ee1aedbaba6daaada88d41f47",
+              "fixture_sha256": "cd3cc6d3bacf6fa17c431e3d4cd2701bf26bf65452c116e05b78dfcacd8d7500",
+              "all_input_class_bytes_unchanged": false,
+              "only_two_enumerated_device_calls_changed": true,
+              "captures": {
+                "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;": 1,
+                "182 javax/microedition/lcdui/Canvas.getGameAction(I)I": 1
+              },
+              "coverage": [
+                2508
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source_virtual_list_sha256": "8369686b850d5eab3579391e3670e4ce3dddcf0c67662dc4f25e7de634f48987",
+  "source_ref": "1f62ff0"
+}

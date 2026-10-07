@@ -4,8 +4,8 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_optimized_class_jar_sha256": "4083e7388c483a65872d55fa6f8b8a4f4569d4790f9f9e1c6677fba043c8e3d2",
-      "source_unoptimized_class_jar_sha256": "879680de6d5c4271d7a6b0d101467ddfe2623b2844a26f7296daa7a1f690a518",
+      "source_optimized_class_jar_sha256": "2e4e99f2cee4972efe76677dd44b82164bba4e8b668ce431306b37ec9db39685",
+      "source_unoptimized_class_jar_sha256": "0d4b6d742bbd7342d2414c88e7413c55022092c757db47109f4f0dcbfb65c39b",
       "reference_sender": "cf.a(Ljava/lang/String;Lz;)V",
       "reference_typing": "r.a(Ljava/lang/String;Z)V",
       "sender_chunk_bound_and_increment": 1024,
@@ -20,8 +20,8 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_optimized_class_jar_sha256": "afee2345c1d841486ce7f4e33144119afaea1873e9ef436853a7d39920d0fef0",
-      "source_unoptimized_class_jar_sha256": "5dca65664317c7a1a3a87e960a0b0cc9ebab93397a99d834c014563b70bf240a",
+      "source_optimized_class_jar_sha256": "97e0f991b26284005da636cc6b03fc5790dab88bf7e52fdb1667a6206e9b5409",
+      "source_unoptimized_class_jar_sha256": "cd40cf1482cce7f5c2c3f0fb7a6ed5fae09d6c04dc190675e5f1c2d14f6bed37",
       "reference_sender": "cd.a(Ljava/lang/String;Lz;)V",
       "reference_typing": "s.a(Ljava/lang/String;Z)V",
       "sender_chunk_bound_and_increment": 1024,
@@ -36,8 +36,8 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_optimized_class_jar_sha256": "d0f0fdc100aa2a34c6ea3fb2cb86e2911f16fb6fbb051b48bc716774e8af2392",
-      "source_unoptimized_class_jar_sha256": "c85146f8e42bab21dd4d5e274b38b6cafed3fbf1618a27536c68aa808c34f743",
+      "source_optimized_class_jar_sha256": "4e6db52831c39eabcb65f9009caabda85c1fdd077fd0b5cc65141d05fbd700f9",
+      "source_unoptimized_class_jar_sha256": "3891e845f4cfdb7f7f8918b24567848efa94c78a14ae6b57f35c0828fcfcb1b6",
       "reference_sender": "cd.a(Ljava/lang/String;Ly;)V",
       "reference_typing": "r.a(Ljava/lang/String;Z)V",
       "sender_chunk_bound_and_increment": 1024,

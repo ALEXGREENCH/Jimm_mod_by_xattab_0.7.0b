@@ -1,0 +1,353 @@
+{
+  "scope": "Direct three-platform switch identities, exact allowed code sets, original argument fallback, strictly-positive real getGameAction return, exception fall-through and default constructor SMALL_FONT store in native/raw/optimized subjects. Authoring instance argument slot and optimizer static conversion remain explicit. Entire instruction/handler sequences are not rewritten or claimed identical; no public pipeline or physical device keymap claim.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_unoptimized_class_jar_sha256": "0d4b6d742bbd7342d2414c88e7413c55022092c757db47109f4f0dcbfb65c39b",
+      "source_optimized_class_jar_sha256": "2e4e99f2cee4972efe76677dd44b82164bba4e8b668ce431306b37ec9db39685",
+      "proofs": [
+        {
+          "mode": "reference",
+          "owner": "cd",
+          "name": "b",
+          "desc": "(I)I",
+          "instructions": 89,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            -11,
+            -7,
+            -6,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 0,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "cd.u I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "77 84 86 java/lang/Exception"
+          ]
+        },
+        {
+          "mode": "authoring",
+          "owner": "DrawControls/VirtualList",
+          "name": "getExtendedGameAction",
+          "desc": "(I)I",
+          "instructions": 88,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            -11,
+            -7,
+            -6,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 1,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "DrawControls/VirtualList.fontSize I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "77 84 85 java/lang/Exception"
+          ]
+        },
+        {
+          "mode": "optimized",
+          "owner": "DrawControls/VirtualList",
+          "name": "getExtendedGameAction",
+          "desc": "(I)I",
+          "instructions": 88,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            -11,
+            -7,
+            -6,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 0,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "DrawControls/VirtualList.fontSize I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "77 84 85 java/lang/Exception"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_unoptimized_class_jar_sha256": "cd40cf1482cce7f5c2c3f0fb7a6ed5fae09d6c04dc190675e5f1c2d14f6bed37",
+      "source_optimized_class_jar_sha256": "97e0f991b26284005da636cc6b03fc5790dab88bf7e52fdb1667a6206e9b5409",
+      "proofs": [
+        {
+          "mode": "reference",
+          "owner": "cb",
+          "name": "b",
+          "desc": "(I)I",
+          "instructions": 89,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            -22,
+            -21,
+            -11,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 0,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "cb.s I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "77 84 86 java/lang/Exception"
+          ]
+        },
+        {
+          "mode": "authoring",
+          "owner": "DrawControls/VirtualList",
+          "name": "getExtendedGameAction",
+          "desc": "(I)I",
+          "instructions": 88,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            -22,
+            -21,
+            -11,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 1,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "DrawControls/VirtualList.fontSize I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "77 84 85 java/lang/Exception"
+          ]
+        },
+        {
+          "mode": "optimized",
+          "owner": "DrawControls/VirtualList",
+          "name": "getExtendedGameAction",
+          "desc": "(I)I",
+          "instructions": 88,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            -22,
+            -21,
+            -11,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 0,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "DrawControls/VirtualList.fontSize I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "77 84 85 java/lang/Exception"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "source_unoptimized_class_jar_sha256": "3891e845f4cfdb7f7f8918b24567848efa94c78a14ae6b57f35c0828fcfcb1b6",
+      "source_optimized_class_jar_sha256": "4e6db52831c39eabcb65f9009caabda85c1fdd077fd0b5cc65141d05fbd700f9",
+      "proofs": [
+        {
+          "mode": "reference",
+          "owner": "cb",
+          "name": "b",
+          "desc": "(I)I",
+          "instructions": 87,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 0,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "cb.s I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "75 82 84 java/lang/Exception"
+          ]
+        },
+        {
+          "mode": "authoring",
+          "owner": "DrawControls/VirtualList",
+          "name": "getExtendedGameAction",
+          "desc": "(I)I",
+          "instructions": 86,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 1,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "DrawControls/VirtualList.fontSize I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "75 82 83 java/lang/Exception"
+          ]
+        },
+        {
+          "mode": "optimized",
+          "owner": "DrawControls/VirtualList",
+          "name": "getExtendedGameAction",
+          "desc": "(I)I",
+          "instructions": 86,
+          "platform_switch_keys": [
+            -203,
+            -202,
+            21,
+            22,
+            105,
+            106,
+            112,
+            113,
+            57345,
+            57346
+          ],
+          "input_argument_slot": 0,
+          "fallback_returns_input_argument": true,
+          "strictly_positive_game_action_return_verified": true,
+          "game_api_exception_fallback_verified": true,
+          "default_font_field": "DrawControls/VirtualList.fontSize I",
+          "default_font_size": 8,
+          "default_constructor_font_store_verified": true,
+          "device_calls": [
+            "182 javax/microedition/lcdui/Canvas.getKeyName(I)Ljava/lang/String;",
+            "182 javax/microedition/lcdui/Canvas.getGameAction(I)I"
+          ],
+          "handlers": [
+            "2 7 8 java/lang/IllegalArgumentException",
+            "75 82 83 java/lang/Exception"
+          ]
+        }
+      ]
+    }
+  ]
+}

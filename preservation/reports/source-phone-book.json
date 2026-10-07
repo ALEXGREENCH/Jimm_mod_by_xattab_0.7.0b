@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2 PhoneBook activation/singleton, native TextBox fields, title/content/size/constraints, commands and listener, exact command identity, repeated forms/old SMS state and send/call exception paths. Reference and unoptimized authored controller execute against the inherited file-transfer host fixture. A second run substitutes only the delivered optimized source PhoneBook class in that source host fixture; its observations must also match. Only six PhoneBook call sites to Display.setCurrent, MIDlet.platformRequest, Connector.open and MainMenu.activate are captured (2/1/1/2). SMS connection/messages are scripted implementations of the real JSR120 interfaces, with actual casts, method dispatch/order and controller catches. IOException/runtime/Error failures, null/wrong types, null native fields/receivers, command aliases/null and native text validation are covered. Existing file-transfer boundaries remain. No physical call/SMS, display or complete main-menu effect claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "87fb61a73a8aae294d2acb9d6a1e5628f120505462c7a30e3410305ee1bb2541",
-  "source_unoptimized_class_jar_sha256": "879680de6d5c4271d7a6b0d101467ddfe2623b2844a26f7296daa7a1f690a518",
+  "source_jar_sha256": "90870214fb96cfb190741b6d57fe183a7958819d3eb24b07ccfbe6a3a4aa2f3e",
+  "source_unoptimized_class_jar_sha256": "0d4b6d742bbd7342d2414c88e7413c55022092c757db47109f4f0dcbfb65c39b",
   "reference_controller_sha256": "60141f64fc745260bd91df4a38ff108d0a3538208cc5c99b4241683202e5b34f",
   "source_unoptimized_controller_sha256": "0bf02fd3dd3e3dbb9a96208df9e48d7ebd778b21a042cb39bf1d582e5111dd28",
   "source_optimized_controller_sha256": "44910f8f85badf5e0ab4fa4ce3609a1a32abc0f1c0968abf981df1300a8e5b6a",

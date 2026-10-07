@@ -225,11 +225,7 @@ public abstract class VirtualList
 
 	protected int topItem = 0;
 	private int           // Index of top visilbe item
-		//#sijapp cond.if target is "MOTOROLA"#
-		fontSize    = MEDIUM_FONT, // Current font size of VL
-		//#sijapp cond.else#
 		fontSize    = SMALL_FONT, // Current font size of VL
-		//#sijapp cond.end#
 		bkgrndColor = 0xFFFFFF,    // bk color of VL
 		textColor   = 0x000000,    // Default text color.
 		capBkCOlor  = 0xC0C0C0,
@@ -1006,13 +1002,19 @@ public abstract class VirtualList
 		//#sijapp cond.if target is "MIDP2"#
         case -6:
 		//#sijapp cond.end#
-        case -21: case 21: case 105: case -202: case 113: case 57345:// case -5: // -5 for Z8...
+		//#sijapp cond.if target is "MOTOROLA"#
+        case -21:
+		//#sijapp cond.end#
+        case 21: case 105: case -202: case 113: case 57345:// case -5: // -5 for Z8...
         	return KEY_CODE_LEFT_MENU;
 
 		//#sijapp cond.if target is "MIDP2"#
         case -7:
 		//#sijapp cond.end#
-        case -22: case 22: case 106: case -203: case 112: case 57346:
+		//#sijapp cond.if target is "MOTOROLA"#
+        case -22:
+		//#sijapp cond.end#
+        case 22: case 106: case -203: case 112: case 57346:
         	return KEY_CODE_RIGHT_MENU;
 
 		//#sijapp cond.if target isnot "SIEMENS2"#
@@ -1028,7 +1030,7 @@ public abstract class VirtualList
         }
         catch (Exception e) {}
 
-        return KEY_CODE_UNKNOWN;
+        return keyCode;
 	}
 
 	protected int getNonScrollerArea()

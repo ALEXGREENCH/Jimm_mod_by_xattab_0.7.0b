@@ -2330,6 +2330,11 @@ for _member in UI_SYMBOLS['methods']:
         _ui_audited.add(_identity)
 
 
+# May device key mapping retains raw unknown codes; authored instance method is made static by ProGuard.
+METHODS.append(('cd', 'b', '(I)I', 'getExtendedGameAction'))
+SYMBOLS['cd.b(I)I'] = 'DrawControls/VirtualList.getExtendedGameAction(I)I'
+
+
 def normalized(code):
     result = []
     for instruction in code:

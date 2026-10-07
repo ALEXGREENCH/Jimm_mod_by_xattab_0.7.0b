@@ -68,6 +68,9 @@ jobs:
             preservation/reports/source-editor-commands-bytecode.json
             preservation/reports/source-jimm-ui-bytecode.json
             preservation/reports/source-jimm-ui-state.json
+            preservation/reports/source-extended-keys.json
+            preservation/reports/source-extended-keys-before.json
+            preservation/reports/source-extended-keys-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:
