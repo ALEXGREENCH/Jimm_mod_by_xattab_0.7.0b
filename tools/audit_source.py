@@ -1152,6 +1152,27 @@ SYMBOLS.update({
     'co.d(Ljava/lang/String;)Ljava/lang/String;': 'jimm/comm/Util.MangleXml(Ljava/lang/String;)Ljava/lang/String;',
 })
 
+# Verified converter fields, retained helper signatures and real UTF-8 detector.
+CLASSES.update({'bp': 'jimm/util/StringConvertor'})
+SYMBOLS.update({
+    'bp.c(Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/StringConvertor.loadFromResource(Ljava/lang/String;)Ljava/lang/String;',
+    'bp.d(Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/StringConvertor.removeCr(Ljava/lang/String;)Ljava/lang/String;',
+    'bp.e(Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/StringConvertor.toUpperCase(Ljava/lang/String;)Ljava/lang/String;',
+    'bp.a(C)C': 'jimm/util/StringConvertor.toLowerCase(C)C',
+    'bp.f(Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/StringConvertor.convertChar(Ljava/lang/String;)Ljava/lang/String;',
+    'bp.a(Ljava/util/Vector;)[Ljava/lang/String;': 'jimm/util/StringConvertor.vectorToArray(Ljava/util/Vector;)[Ljava/lang/String;',
+    'bp.a(Ljava/lang/String;Ljava/util/Vector;)V': 'jimm/util/StringConvertor.convertorParser(Ljava/lang/String;Ljava/util/Vector;)V',
+    'bp.a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/StringConvertor.convert(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;',
+    'bp.a(Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/StringConvertor.detransliterate(Ljava/lang/String;)Ljava/lang/String;',
+    'bp.b(Ljava/lang/String;)Ljava/lang/String;': 'jimm/util/StringConvertor.transliterate(Ljava/lang/String;)Ljava/lang/String;',
+    'bp.a Ljava/lang/String;': 'jimm/util/StringConvertor.name Ljava/lang/String;',
+    'bp.a [Ljava/lang/String;': 'jimm/util/StringConvertor.from [Ljava/lang/String;',
+    'bp.b [Ljava/lang/String;': 'jimm/util/StringConvertor.to [Ljava/lang/String;',
+    'bp.a I': 'jimm/util/StringConvertor.maxWordLength I',
+    'bp.a [Lbp;': 'jimm/util/StringConvertor.converters [Ljimm/util/StringConvertor;',
+    'co.a([BII)Z': 'jimm/comm/Util.isDataUTF8([BII)Z',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1816,6 +1837,22 @@ METHODS.extend([
     ('ba', 'b', '([BI)I', 'b'),
     ('co', 'c', '(Ljava/lang/String;)Ljava/lang/String;', 'DeMangleXml'),
     ('co', 'd', '(Ljava/lang/String;)Ljava/lang/String;', 'MangleXml'),
+])
+
+
+METHODS.extend([
+    ('bp', 'c', '(Ljava/lang/String;)Ljava/lang/String;', 'loadFromResource'),
+    ('bp', 'd', '(Ljava/lang/String;)Ljava/lang/String;', 'removeCr'),
+    ('bp', 'e', '(Ljava/lang/String;)Ljava/lang/String;', 'toUpperCase'),
+    ('bp', 'a', '(C)C', 'toLowerCase'),
+    ('bp', 'f', '(Ljava/lang/String;)Ljava/lang/String;', 'convertChar'),
+    ('bp', 'a', '(Ljava/util/Vector;)[Ljava/lang/String;', 'vectorToArray'),
+    ('bp', '<init>', '(Ljava/lang/String;Ljava/util/Vector;Ljava/util/Vector;)V', '<init>'),
+    ('bp', 'a', '(Ljava/lang/String;Ljava/util/Vector;)V', 'convertorParser'),
+    ('bp', 'a', '(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;', 'convert'),
+    ('bp', 'a', '(Ljava/lang/String;)Ljava/lang/String;', 'detransliterate'),
+    ('bp', 'b', '(Ljava/lang/String;)Ljava/lang/String;', 'transliterate'),
+    ('bp', '<clinit>', '()V', '<clinit>'),
 ])
 
 

@@ -1,0 +1,12 @@
+{
+  "scope": "Real MIDP2 StringConvertor initialization, resource decoding, rule parsing, constructors, table copies/aliases, longest matches, duplicate precedence, case preservation and public conversions. Only resource opening and Character results are captured. Character modes delegate to the host, model ASCII-only conversion, or return the input; the actual converter fallback executes in all cases. Streams script available/read/close and partial reads. Results retain raw UTF-16 code units. Named zero-width tables are inspected but their nonempty conversion path is excluded: the original and source loop cannot advance. No real-device Character contract or full editor integration claim.",
+  "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+  "source_unoptimized_class_jar_sha256": "ea9c8239e3ed1337570b5c5e786ff7c7b8c21a21986fcaefb8647ea447c05e72",
+  "source_resource_jar_sha256": "8c78c7717a3b974792c17eb13b6c63deb48e46a599a30cf4439e049a290668a5",
+  "reference_table_sha256": "569f144f1a6906ed44e5f2fc8280fad0d08d1282adae3d6646be894a67d36c5a",
+  "source_table_sha256": "569f144f1a6906ed44e5f2fc8280fad0d08d1282adae3d6646be894a67d36c5a",
+  "observations": 204659,
+  "conversion_calls": 5234,
+  "parsed_tables": 364,
+  "differences": 0
+}

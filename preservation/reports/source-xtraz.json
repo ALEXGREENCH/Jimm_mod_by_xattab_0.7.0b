@@ -3,9 +3,9 @@
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
   "source_unoptimized_class_jar_sha256": "ea9c8239e3ed1337570b5c5e786ff7c7b8c21a21986fcaefb8647ea447c05e72",
   "observations": 4861,
+  "packet_send_attempts": 259,
   "chat_appends": 28,
   "new_chat_calls": 14,
   "log_calls": 565,
-  "differences": 0,
-  "packet_send_attempts": 259
+  "differences": 0
 }
