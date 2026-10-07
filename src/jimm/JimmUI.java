@@ -1587,17 +1587,18 @@ public class JimmUI implements CommandListener, VirtualListCommands
 
 	private void setCaption(String title)
 	{
-		caption = (title == null) ? "" : title;
+		caption = title;
 
 		if (strings.size() > 1)
 		{
-			title = "[" + (current + 1) + "/" + (strings.size() + 1) + "] " + caption;
+			title = "[" + (current + 1) + "/" + (strings.size() + 1) + "] ";
+			if (caption != null) title += caption;
 		}
 		else
 		{
 			title = caption;
 		}
-		messageTextbox.setTitle(Options.getBoolean(Options.OPTION_TEXTBOX_NO_CAPTION) ? null : title);
+		messageTextbox.setTitle(title);
 	}
 
 	private String getString()
@@ -1675,27 +1676,21 @@ public class JimmUI implements CommandListener, VirtualListCommands
 
 			messageTextbox.addCommand(cmdSend);
 			messageTextbox.addCommand(cmdCancel);
-			messageTextbox.addCommand(cmdClearText);
-			if (Options.getBoolean(Options.OPTION_TRANSLITERATE)) messageTextbox.addCommand(transCmd);
-			if (Options.getBoolean(Options.OPTION_DETRANSLITERATE)) messageTextbox.addCommand(detransCmd);
-			messageTextbox.addCommand(nextCmd);
-			messageTextbox.addCommand(prevCmd);
 			//#sijapp cond.if modules_SMILES is "true" #
 			messageTextbox.addCommand(cmdInsertEmo);
 			//#sijapp cond.end#
 			messageTextbox.addCommand(cmdInsTemplate);
+			messageTextbox.addCommand(cmdQuote);
+			messageTextbox.addCommand(cmdPaste);
+			if (Options.getBoolean(Options.OPTION_TRANSLITERATE)) messageTextbox.addCommand(transCmd);
+			if (Options.getBoolean(Options.OPTION_DETRANSLITERATE)) messageTextbox.addCommand(detransCmd);
+			messageTextbox.addCommand(cmdClearText);
 		}
 
 		textMessReceiver = receiver;
 		textMessCurMode = EDITOR_MODE_MESSAGE;
 		_this.restore();
-		_this.setCaption(textMessReceiver.name);
-
-		if (!JimmUI.clipBoardIsEmpty())
-		{
-			messageTextbox.addCommand(cmdQuote);
-			messageTextbox.addCommand(cmdPaste);
-		}
+		_this.setCaption(Options.getBoolean(Options.OPTION_TEXTBOX_NO_CAPTION) ? null : textMessReceiver.name);
 
 		if (initText != null)
 		{
@@ -1706,6 +1701,10 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			//#sijapp cond.end#
 			_this.insert(initText, caretPos);
 		}
+
+		//#sijapp cond.if target is "MIDP2"#
+		if (Jimm.is_phone_SE()) System.gc();
+		//#sijapp cond.end#
 
 		messageTextbox.setCommandListener(_this);
 		Jimm.display.setCurrent(messageTextbox);
@@ -1721,9 +1720,9 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		}
 		//#sijapp cond.end#
 
-		// #sijapp cond.if target is "MOTOROLA"#
+		//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
 		LightControl.flash(true);
-		// #sijapp cond.end#
+		//#sijapp cond.end#
 	}
 
 	/* Construct plain message object, request new SendMessageAction and Add the new message to the chat history */

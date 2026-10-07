@@ -2268,6 +2268,30 @@ METHODS.append(('cf', 'a', '(Ljava/lang/String;Ljava/lang/Object;)V', 'gotoURL')
 METHODS.append(('cf', 'a', '(Ljava/lang/String;Lz;)V', 'sendMessage'))
 METHODS.append(('r', 'a', '(Ljava/lang/String;Z)V', 'beginTyping'))
 
+# Editor identities are anchored by actual creation/pagination execution and field access roles.
+# Keep them after EXACT_BASE_SYMBOLS so the historical dependency-graph proof remains independent.
+METHODS.extend([
+    ('cf', 'a', '(Ljava/lang/String;)V', 'setCaption'),
+    ('cf', 'h', '()V', 'saveCurPage'),
+    ('cf', 'i', '()V', 'setCurrentScreen'),
+    ('cf', 'c', '()Ljava/lang/String;', 'getString'),
+    ('cf', 'a', '(Ljava/lang/String;I)V', 'insert'),
+    ('cf', 'a', '(Lz;Ljava/lang/String;)V', 'writeMessage'),
+])
+SYMBOLS.update({
+    'cf.a Ljavax/microedition/lcdui/TextBox;': 'jimm/JimmUI.messageTextbox Ljavax/microedition/lcdui/TextBox;',
+    'cf.a Ljava/util/Vector;': 'jimm/JimmUI.strings Ljava/util/Vector;',
+    'cf.d I': 'jimm/JimmUI.current I',
+    'cf.e I': 'jimm/JimmUI.textLimit I',
+    'cf.h Ljava/lang/String;': 'jimm/JimmUI.caption Ljava/lang/String;',
+    'cf.a(Ljava/lang/String;)V': 'jimm/JimmUI.setCaption(Ljava/lang/String;)V',
+    'cf.h()V': 'jimm/JimmUI.saveCurPage()V',
+    'cf.i()V': 'jimm/JimmUI.setCurrentScreen()V',
+    'cf.c()Ljava/lang/String;': 'jimm/JimmUI.getString()Ljava/lang/String;',
+    'cf.a(Ljava/lang/String;I)V': 'jimm/JimmUI.insert(Ljava/lang/String;I)V',
+    'cf.a(Lz;Ljava/lang/String;)V': 'jimm/JimmUI.writeMessage(Ljimm/ContactItem;Ljava/lang/String;)V',
+})
+
 
 def normalized(code):
     result = []

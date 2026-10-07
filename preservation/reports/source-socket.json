@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2 SOCKETConnection connect/close/send/run/local-address methods. Scripted Connector and streams, fixed initial-sequence clock, captured Thread.start/sleep/yield and terminal JimmException delivery. Actual locks, Object.notify, receiver queue, packet serialization, sequence assignment and Traffic counters execute. The start boundary does not launch a thread; run is invoked directly. Physical scheduling, a live ICQ server, and device network APIs are not claimed. Existing NetworkFixture replaces the separate Icq.connect entry point.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "1470f54e0530adc7fa2614346bbc76bfb5306c80609d3e96c0cff1da88ba887e",
-  "source_unoptimized_class_jar_sha256": "ff68d353da6819c00599806ab0249226c49e677d616d2a53bb02b917e36f00c1",
+  "source_jar_sha256": "d7d94c08266ea891f766b5272b93a28487c9f125511562f6ff7c83498a045b80",
+  "source_unoptimized_class_jar_sha256": "3ddb63f034af35fbea936d5ae179c8842a1ffece898407d8954ed3d7a661f423",
   "observations": 3841,
   "connect_calls": 78,
   "close_calls": 240,

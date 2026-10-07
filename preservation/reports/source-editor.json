@@ -1,0 +1,66 @@
+{
+  "scope": "Actual MIDP2-RU JimmUI private caption, pagination, insertion, save/get/current-page and public writeMessage creation/reuse. Actual TextBox state, constraints, commands and listener are used. Add/listener/constraints call captures delegate to the real API; display switch, gc, light and typing terminal calls are recorded with scripted failures. Complete controller declarations, flags, instructions and handlers are verified before and after interception. No physical display, gc scheduling, backlight or typing packet claim; real typing/SNAC is independently tested by test_send_text.py. Existing login/date host initialization boundaries apply. Unoptimized and delivered optimized classes both run.",
+  "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+  "source_jar_sha256": "d7d94c08266ea891f766b5272b93a28487c9f125511562f6ff7c83498a045b80",
+  "source_unoptimized_class_jar_sha256": "3ddb63f034af35fbea936d5ae179c8842a1ffece898407d8954ed3d7a661f423",
+  "observations": 19948,
+  "title_calls": 320,
+  "pagination_scenarios": 180,
+  "write_message_calls": 1578,
+  "command_add_calls": 6309,
+  "typing_calls": 285,
+  "gc_calls": 598,
+  "light_calls": 1019,
+  "optimized_observations": 19948,
+  "differences": 0,
+  "fixture_proofs": [
+    {
+      "mode": "reference",
+      "base_sha256": "335a487bd0d71b16c3190f90cc07dd32a7a2e6a5209071aab4a4bed337b4d37f",
+      "fixture_sha256": "3f013bbfdbcef5f9083540925d566a375ddfe1c2b299f11279684d2e3fdb331f",
+      "captures": {
+        "184 java/lang/System.gc()V": 3,
+        "184 aj.a(Z)V": 4,
+        "182 javax/microedition/lcdui/Display.setCurrent(Ljavax/microedition/lcdui/Displayable;)V": 4,
+        "182 javax/microedition/lcdui/Displayable.addCommand(Ljavax/microedition/lcdui/Command;)V": 13,
+        "182 javax/microedition/lcdui/Displayable.setCommandListener(Ljavax/microedition/lcdui/CommandListener;)V": 3,
+        "184 r.a(Ljava/lang/String;Z)V": 2,
+        "182 javax/microedition/lcdui/TextBox.setConstraints(I)V": 1
+      },
+      "whole_controller_unchanged_before_capture": true,
+      "only_enumerated_invocations_changed": true
+    },
+    {
+      "mode": "source",
+      "base_sha256": "eb9b898bd479456792fa68aab25fa6b695d92526de738c5e0f4dd28e4d448c4c",
+      "fixture_sha256": "f2dea56e340c5388add32ec2a6c61888a35ac8f9c37c38fe924dd2c54f3db744",
+      "captures": {
+        "184 java/lang/System.gc()V": 3,
+        "184 DrawControls/LightControl.flash(Z)V": 3,
+        "182 javax/microedition/lcdui/Display.setCurrent(Ljavax/microedition/lcdui/Displayable;)V": 4,
+        "184 jimm/comm/Icq.beginTyping(Ljava/lang/String;Z)V": 2,
+        "182 javax/microedition/lcdui/TextBox.setConstraints(I)V": 1,
+        "182 javax/microedition/lcdui/Displayable.addCommand(Ljavax/microedition/lcdui/Command;)V": 13,
+        "182 javax/microedition/lcdui/Displayable.setCommandListener(Ljavax/microedition/lcdui/CommandListener;)V": 3
+      },
+      "whole_controller_unchanged_before_capture": true,
+      "only_enumerated_invocations_changed": true
+    },
+    {
+      "mode": "optimized-source",
+      "base_sha256": "56ef0ee89644a92ea4b300e4119175c443d3e18bac3a907282511f98cbbd6004",
+      "fixture_sha256": "ac1e70408ce0ec2c82537e2274694e8edf24f18aab3f3e52a0ab994506d3d7d4",
+      "captures": {
+        "184 java/lang/System.gc()V": 3,
+        "184 DrawControls/LightControl.flash(Z)V": 3,
+        "182 javax/microedition/lcdui/Display.setCurrent(Ljavax/microedition/lcdui/Displayable;)V": 4,
+        "182 javax/microedition/lcdui/Displayable.addCommand(Ljavax/microedition/lcdui/Command;)V": 13,
+        "182 javax/microedition/lcdui/Displayable.setCommandListener(Ljavax/microedition/lcdui/CommandListener;)V": 3,
+        "184 jimm/comm/Icq.beginTyping(Ljava/lang/String;Z)V": 2,
+        "182 javax/microedition/lcdui/TextBox.setConstraints(I)V": 1
+      },
+      "whole_controller_unchanged_before_capture": true,
+      "only_enumerated_invocations_changed": true
+    }
+  ]
+}

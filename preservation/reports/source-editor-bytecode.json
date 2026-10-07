@@ -1,0 +1,113 @@
+{
+  "scope": "Original platform identities, static/concrete signatures, command label keys and creation order, size 2048, option-154 location, direct nullable caption storage and counter tokens, SE GC guard and its real source getter, light presence/tail and caret API. This is not full body equivalence or runtime evidence for Motorola/Siemens; actual MIDP2 editor execution is recorded separately.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_optimized_class_jar_sha256": "d7901734679b5710788700f3ded4330f93180c75a0de4f5ff899302892c3cefc",
+      "source_unoptimized_class_jar_sha256": "3ddb63f034af35fbea936d5ae179c8842a1ffece898407d8954ed3d7a661f423",
+      "reference_editor": "cf.a(Lz;Ljava/lang/String;)V",
+      "creation_command_names": [
+        "cmdSend",
+        "cmdCancel",
+        "cmdInsertEmo",
+        "cmdInsTemplate",
+        "cmdQuote",
+        "cmdPaste",
+        "transCmd",
+        "detransCmd",
+        "cmdClearText"
+      ],
+      "creation_command_label_keys": [
+        "b",
+        "5",
+        "h3",
+        "f6",
+        "O4",
+        "y4",
+        "d0",
+        "c0",
+        "f1"
+      ],
+      "editor_field_role_witnesses_verified": 5,
+      "editor_size": 2048,
+      "caption_option_in_entry_only": true,
+      "gc_phone_SE_guard_verified": true,
+      "gc_calls": 1,
+      "light_true_calls": 1,
+      "caret_uses_end_of_string": false
+    },
+    {
+      "target": "MOTOROLA",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_optimized_class_jar_sha256": "611eb4427bfaf483c54df0ba0951161491d6bc8d845bc677c7d28949aa8d4cab",
+      "source_unoptimized_class_jar_sha256": "67206ecfb448355439c57cf34a455611ff22e8d03afea35063bfd9fcd23e6dca",
+      "reference_editor": "cd.a(Lz;Ljava/lang/String;)V",
+      "creation_command_names": [
+        "cmdSend",
+        "cmdCancel",
+        "cmdInsertEmo",
+        "cmdInsTemplate",
+        "cmdQuote",
+        "cmdPaste",
+        "transCmd",
+        "detransCmd",
+        "cmdClearText"
+      ],
+      "creation_command_label_keys": [
+        "e",
+        "8",
+        "k3",
+        "i6",
+        "R4",
+        "B4",
+        "g0",
+        "f0",
+        "i1"
+      ],
+      "editor_field_role_witnesses_verified": 5,
+      "editor_size": 2048,
+      "caption_option_in_entry_only": true,
+      "gc_phone_SE_guard_verified": false,
+      "gc_calls": 0,
+      "light_true_calls": 1,
+      "caret_uses_end_of_string": true
+    },
+    {
+      "target": "SIEMENS2",
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "source_optimized_class_jar_sha256": "8e2992ab89e18f5515d6e8b5ae32f188794f38244ada34aa3705cb4cb8900aeb",
+      "source_unoptimized_class_jar_sha256": "11bcf892f15f4530639858fe9fdc387f5056393dbfea05b963f6a54bcd5e3f09",
+      "reference_editor": "cd.a(Ly;Ljava/lang/String;)V",
+      "creation_command_names": [
+        "cmdSend",
+        "cmdCancel",
+        "cmdInsertEmo",
+        "cmdInsTemplate",
+        "cmdQuote",
+        "cmdPaste",
+        "transCmd",
+        "detransCmd",
+        "cmdClearText"
+      ],
+      "creation_command_label_keys": [
+        "9",
+        "3",
+        "f3",
+        "c6",
+        "M4",
+        "w4",
+        "b0",
+        "a0",
+        "d1"
+      ],
+      "editor_field_role_witnesses_verified": 5,
+      "editor_size": 2048,
+      "caption_option_in_entry_only": true,
+      "gc_phone_SE_guard_verified": false,
+      "gc_calls": 0,
+      "light_true_calls": 0,
+      "caret_uses_end_of_string": false
+    }
+  ]
+}

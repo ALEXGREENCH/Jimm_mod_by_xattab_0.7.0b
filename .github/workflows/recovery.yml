@@ -60,6 +60,8 @@ jobs:
             preservation/reports/source-jimm-urls.json
             preservation/reports/source-send-text.json
             preservation/reports/source-send-text-bytecode.json
+            preservation/reports/source-editor.json
+            preservation/reports/source-editor-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

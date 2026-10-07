@@ -1,0 +1,24 @@
+{
+  "scope": "Genuine pre-fix source/classes at a35a244, with the same complete editor probe used after correction. Counts compare whole scenarios; failure/reuse pairs are one scenario. Actual controller remains unchanged except verified call-site captures.",
+  "prior_commit": "a35a244",
+  "scenarios": 2057,
+  "different_scenarios": 1677,
+  "different_scenarios_by_kind": {
+    "title": 128,
+    "page": 120,
+    "open": 1408,
+    "failure": 21
+  },
+  "reference_observations": 19948,
+  "source_observations": 18992,
+  "reference_guard": "coverage:320:180:1578:6309:285:598:1019",
+  "source_guard": "coverage:320:180:1578:7409:288:0:0",
+  "source_ui_sha256": "85a36b64ec0d1043da52d42353b5f16759647d7dcd0f39b262d7a14ff0a001dc",
+  "source_unoptimized_class_jar_sha256": "ff68d353da6819c00599806ab0249226c49e677d616d2a53bb02b917e36f00c1",
+  "source_jar_sha256": "1470f54e0530adc7fa2614346bbc76bfb5306c80609d3e96c0cff1da88ba887e",
+  "source_host_sha256": "965f9212caa4fae68a276a6be4b777102c3b39eabbdfcff9f6a4460c1ee51616",
+  "reference_probe_sha256": "6d601faf38c252abd056b3c6c16d52cace1ca60779d362b88807b9cca53ad735",
+  "source_probe_sha256": "5da779deb146b38e2157eb924dfb0037681dce82f4a1229b3a2aab33701f926f",
+  "reference_output_sha256": "0f34bee2d994ee7be1d69c96a4913daac829faf5bd22c551fd06177197ccabca",
+  "source_output_sha256": "ebab18493665253ae384269d7255a23443320172f8b3906cfde9f5996d21ff3b"
+}
