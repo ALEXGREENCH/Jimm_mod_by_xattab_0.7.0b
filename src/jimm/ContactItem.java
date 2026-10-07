@@ -442,7 +442,7 @@ public class ContactItem implements ContactListItem
 	public ContactItem() {}
 	
 	/* Returns true if client supports given capability */
-	public boolean hasCapability(int capability)
+	public synchronized boolean hasCapability(int capability)
 	{
 		return ((capability & this.caps) != 0x00000000);
 	}

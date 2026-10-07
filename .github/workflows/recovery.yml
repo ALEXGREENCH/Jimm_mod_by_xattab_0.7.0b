@@ -14,8 +14,10 @@ jobs:
           python-version: '3.12'
       - run: python tools/test_source.py --matrix
       - run: python tools/test_tariffs.py
+      - run: python tools/test_contact_core.py --skip-build
       - run: python tools/audit_source.py
       - run: python tools/audit_util.py
+      - run: python tools/audit_members.py
       - uses: actions/upload-artifact@v4
         with:
           name: maintained-src-may-reconstruction
@@ -27,6 +29,8 @@ jobs:
             preservation/reports/source-key-routing.json
             preservation/reports/source-util-core.json
             preservation/reports/source-tariffs.json
+            preservation/reports/source-contact-core.json
+            preservation/reports/source-member-inventory.json
             preservation/reports/source-util-bytecode.json
             preservation/reports/source-light.json
             preservation/reports/source-light-bytecode.json

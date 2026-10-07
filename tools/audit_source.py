@@ -2218,6 +2218,22 @@ for member in UTIL_SYMBOLS['methods']:
         _audited_signatures.add(('co', name, desc))
 
 
+# Typed contact members and the remaining animation/timer classes. The inventory
+# keeps specialized and compiler-generated methods separate from same signatures.
+REMAINING_SYMBOLS = json.loads((ROOT / 'tools/source/remaining-symbols.json').read_text(encoding='utf-8'))
+CLASSES.update(REMAINING_SYMBOLS['classes'])
+SYMBOLS.update(REMAINING_SYMBOLS['fields'])
+SYMBOLS.update(REMAINING_SYMBOLS['method_symbols'])
+for member in REMAINING_SYMBOLS['additional_methods']:
+    signature = (member['reference_owner'], member['reference_name'], member['reference_desc'])
+    assert signature not in _audited_signatures, signature
+    assert member['source_owner'] == SOURCE_OWNERS.get(signature[0], CLASSES[signature[0]])
+    METHODS.append((*signature, member['source_name']))
+    _audited_signatures.add(signature)
+    SYMBOLS[signature[0] + '.' + signature[1] + signature[2]] = (
+        member['source_owner'] + '.' + member['source_name'] + member['source_desc'])
+
+
 def normalized(code):
     result = []
     for instruction in code:
@@ -2281,11 +2297,16 @@ def main():
         same_synchronized = bool(before['access'] & 32) == bool(after['access'] & 32)
         if not same_synchronized:
             raise AssertionError('Synchronization mismatch: ' + owner + '.' + name + desc)
+        same_abstract = bool(before['access'] & 1024) == bool(after['access'] & 1024)
+        if not same_abstract:
+            raise AssertionError('Abstract/concrete mismatch: ' + owner + '.' + name + desc)
         same_handlers = normalized_handlers(before['handlers']) == after['handlers']
         methods.append({'reference': owner + '.' + name + desc,
                         'source': source_owner + '.' + after['name'] + source_desc,
                         'signature_verified': True, 'static_modifier_verified': same_static,
                         'synchronized_modifier_verified': same_synchronized,
+                        'abstract_modifier_verified': same_abstract,
+                        'abstract_method': bool(before['access'] & 1024),
                         'reference_instructions': len(left),
                         'source_instructions': len(right), 'same_normalized_instructions': left == right,
                         'same_normalized_handlers': same_handlers,
@@ -2293,6 +2314,8 @@ def main():
                         'reference_normalized_sha256': digest(left), 'source_normalized_sha256': digest(right)})
     report = {'reference_sha256': recover.sha(reference), 'rebuilt_sha256': recover.sha(rebuilt),
               'reference_classes': len(old), 'rebuilt_classes': len(new), 'methods': methods,
+              'abstract_declarations': sum(m['abstract_method'] for m in methods),
+              'same_normalized_executable_method_bodies': sum(m['same_normalized_bytecode'] and not m['abstract_method'] for m in methods),
               'scope': 'Verified subset only. Instruction equality includes local slots and branch layout; '
                        'compiler and optimizer differences remain. Functional checks are recorded separately.'}
     path = ROOT / 'preservation/reports/source-bytecode-comparison.json'

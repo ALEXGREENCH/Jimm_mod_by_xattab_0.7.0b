@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "aefcdba77243f1f1f6a29d99265a6fb4214c8d48149d718fb1b3339f53a21094",
+  "source_jar_sha256": "7099fff269c6cf82a6c828c0e8b3b4eb15c454b4fa7fa65b17e98ed137d1a9f7",
   "pure_logic": "PASS: 75837 May-reference differential checks (client versions, outgoing statuses, options streams)",
   "packets": "PASS packets: 45331 observations, 15642 successful parses",
   "convertor": "PASS converter: 204659 observations, 5234 conversions, 364 parsed tables",
@@ -220,77 +220,77 @@
     {
       "target": "MIDP2",
       "language": "RU",
-      "sha256": "aefcdba77243f1f1f6a29d99265a6fb4214c8d48149d718fb1b3339f53a21094"
+      "sha256": "7099fff269c6cf82a6c828c0e8b3b4eb15c454b4fa7fa65b17e98ed137d1a9f7"
     },
     {
       "target": "MIDP2",
       "language": "UA",
-      "sha256": "a0e0ebd31c14738e79779f3a101710a19da9b6d15271e62d9ba595f531ccabc1"
+      "sha256": "a7144509679e5a1f1db96a954acef22b8e91d84db7b83c01a1946caeb8181b89"
     },
     {
       "target": "MIDP2",
       "language": "RO",
-      "sha256": "c55510ded0306930c39c4aeeacfad2bd083d7b734ed5e16e02442e78fbacef05"
+      "sha256": "3411b209453d5a79aba9d63cb4ef0adce7c168bac81c4f12f15cdb1863e58976"
     },
     {
       "target": "MIDP2",
       "language": "EN",
-      "sha256": "e7c1499d0786cdc88e103975b7f0baeef63f4a5e77beb3d86faedf232c11438c"
+      "sha256": "3b1b3e8ccf9a75a160fb96f1d9c14db0b89dd2c4b979d4314d1e8870aba11cd0"
     },
     {
       "target": "MIDP2",
       "language": "CZ",
-      "sha256": "48e90a8b8473cfce3cd47501b5e7d5178f1ed49727ad056ebf05b2f995bcc0ba"
+      "sha256": "d383cf82160905ca958e4f41c1a4eca6c5a047f03f81df355f94387647a4e0ab"
     },
     {
       "target": "MOTOROLA",
       "language": "RU",
-      "sha256": "ab2db9674436eec2ef0c9d2b91ef16ac62e8f855c30cf2148444bd8b7827ea69"
+      "sha256": "2100db3017a7720c45f53431bb7d0143d69e1e2541dfd17405a05fea9605ffc1"
     },
     {
       "target": "MOTOROLA",
       "language": "UA",
-      "sha256": "f31fcc2364559202eaaec227369d5fee2fb0d7720c222523fa4d779247ce2e79"
+      "sha256": "3eddc50d6160ef626a94d64972045bebd34c6f981488f7c1e78a1a9d94dea393"
     },
     {
       "target": "MOTOROLA",
       "language": "RO",
-      "sha256": "47f1e7427348ac6000844fd0cdbc427b9d1adbbeab3b8cb121255e3202cf65b1"
+      "sha256": "9458aaf99584b6f26ac0536d7e0cd9ef3cdb9f45721eb21acbc2e960855f8035"
     },
     {
       "target": "MOTOROLA",
       "language": "EN",
-      "sha256": "96f56e1aa2fa809adeeb42b5f3d64ada8922ef69d3fb226a01b88ad1a6728074"
+      "sha256": "e1105c2ff9f330fd22fa7da069d4824c18b052dcb028269dae6490de15d07555"
     },
     {
       "target": "MOTOROLA",
       "language": "CZ",
-      "sha256": "fcc4bb7130b92c70df021ca75d668651c72192839c63ff19e93018df68fa4d11"
+      "sha256": "58374d76838a406bdbfeb7a6d241dbab92e979d2e7d2cbfbc2bd14a6d8a1e9ca"
     },
     {
       "target": "SIEMENS2",
       "language": "RU",
-      "sha256": "73a218e8fbbfa47430a07132f91a9b4a37a2926511b3c5a90f45a18767f1614d"
+      "sha256": "311a69377d7a9ecdf3a327293b96dee31651df249d0395712f262708ecc24f9e"
     },
     {
       "target": "SIEMENS2",
       "language": "UA",
-      "sha256": "7235beea54d749b696281750d4d84b1df551b7f8270087d7c4cb6776476f604f"
+      "sha256": "095f2a402dab9d647329bc1f3a777937b589db0345593ca4304b906f40c4f77d"
     },
     {
       "target": "SIEMENS2",
       "language": "RO",
-      "sha256": "489ed59df5326153ce37510e9706d16f0b1fa0e22237b7a0262e4279ac604eed"
+      "sha256": "2ad48bbc06a1f02d2f517e478619d045455a3950f1daa8f76ec3119d79974a8e"
     },
     {
       "target": "SIEMENS2",
       "language": "EN",
-      "sha256": "84b17eaf510413564897b80de9f2cf0c6e0207a313ee1ddc4ddb8c916c5caef9"
+      "sha256": "6a0393f1ba1ab0efdbc450ae6b45732618a4de3d7b8914b66ad2b84f57bb3b5e"
     },
     {
       "target": "SIEMENS2",
       "language": "CZ",
-      "sha256": "9481d20e3de2c6103168c29f96941196ed4d1a55543790e39a10893740759272"
+      "sha256": "9a87f4070546738f3e2d510c255a59b2b0227a6b274a56585989120a5e615601"
     }
   ],
   "minimal_modules": [

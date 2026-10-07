@@ -1,0 +1,2050 @@
+{
+  "scope": "Verified typed members from existing name mappings, canonical JVM callbacks/constructors, graphics/light audits and contact property access. Instruction order, compiler accessors, optimizer specialization and exception regions are not simplified. Canonical names continue the inherited source; they do not prove lost author spellings.",
+  "classes": {
+    "be": "DrawControls/AniIcon",
+    "cu": "jimm/ContactList$1",
+    "t": "DrawControls/LightControl$1"
+  },
+  "fields": {
+    "z.c I": "jimm/ContactItem.idAndGropup I",
+    "z.d I": "jimm/ContactItem.idle I",
+    "z.e I": "jimm/ContactItem.booleanValues I",
+    "z.f I": "jimm/ContactItem.messCounters I",
+    "z.a I": "jimm/ContactItem.caps I",
+    "z.g I": "jimm/ContactItem.typeAndClientId I",
+    "z.h I": "jimm/ContactItem.portAndProt I",
+    "z.i I": "jimm/ContactItem.intIP I",
+    "z.j I": "jimm/ContactItem.extIP I",
+    "z.k I": "jimm/ContactItem.authCookie I",
+    "z.l I": "jimm/ContactItem.uinLong I",
+    "z.m I": "jimm/ContactItem.online I",
+    "z.n I": "jimm/ContactItem.regdata I",
+    "z.o I": "jimm/ContactItem.signOn I",
+    "z.p I": "jimm/ContactItem.status I",
+    "z.q I": "jimm/ContactItem.birthDay I",
+    "z.r I": "jimm/ContactItem.blinkingNumber I",
+    "z.s I": "jimm/ContactItem.blinkLimit I",
+    "z.b I": "jimm/ContactItem.happyFlag I",
+    "z.t I": "jimm/ContactItem.ignoreId I",
+    "z.u I": "jimm/ContactItem.visAndInvisId I",
+    "z.a Ljava/lang/String;": "jimm/ContactItem.name Ljava/lang/String;",
+    "z.b Ljava/lang/String;": "jimm/ContactItem.clientCap Ljava/lang/String;",
+    "z.c Ljava/lang/String;": "jimm/ContactItem.currentUin Ljava/lang/String;",
+    "z.d Ljava/lang/String;": "jimm/ContactItem.clientVersion Ljava/lang/String;",
+    "z.e Ljava/lang/String;": "jimm/ContactItem.offlineTime Ljava/lang/String;",
+    "z.f Ljava/lang/String;": "jimm/ContactItem.lowerText Ljava/lang/String;",
+    "z.a Z": "jimm/ContactItem.readXtraz Z",
+    "z.b Z": "jimm/ContactItem.autoAnswered Z",
+    "z.c Z": "jimm/ContactItem.openChat Z",
+    "z.d Z": "jimm/ContactItem.readStatusMess Z",
+    "z.e Z": "jimm/ContactItem.typing Z",
+    "z.f Z": "jimm/ContactItem.blinkingOnline Z",
+    "z.g Z": "jimm/ContactItem.blinkingOffline Z",
+    "z.h Z": "jimm/ContactItem.mustStayVisible Z",
+    "z.i Z": "jimm/ContactItem.blinkOnConnect Z",
+    "z.a [B": "jimm/ContactItem.rosterData [B",
+    "z.a J": "jimm/ContactItem.lastOfflineActivity J",
+    "z.b J": "jimm/ContactItem.statusUpdateTime J",
+    "z.a Lab;": "jimm/ContactItem.ftm Ljimm/comm/FileTransferMessage;",
+    "z.a Ljava/util/TimerTask;": "jimm/ContactItem.BlinkTimer Ljava/util/TimerTask;",
+    "z.a Lbj;": "jimm/ContactItem.xstatus Ljimm/comm/XStatus;",
+    "e.a Ljavax/microedition/lcdui/Image;": "DrawControls/Icon.image Ljavax/microedition/lcdui/Image;",
+    "e.a I": "DrawControls/Icon.x I",
+    "e.b I": "DrawControls/Icon.y I",
+    "e.c I": "DrawControls/Icon.width I",
+    "e.d I": "DrawControls/Icon.height I",
+    "f.a [Le;": "DrawControls/ImageList.icons [LDrawControls/Icon;",
+    "f.a I": "DrawControls/ImageList.width I",
+    "f.b I": "DrawControls/ImageList.height I",
+    "be.a [Le;": "DrawControls/AniIcon.frames [LDrawControls/Icon;",
+    "be.a [I": "DrawControls/AniIcon.delays [I",
+    "be.a I": "DrawControls/AniIcon.currentFrame I",
+    "be.a Z": "DrawControls/AniIcon.painted Z",
+    "be.a J": "DrawControls/AniIcon.sleepTime J",
+    "cm.a Ljava/lang/Thread;": "DrawControls/AniImageList.thread Ljava/lang/Thread;",
+    "cm.a J": "DrawControls/AniImageList.time J",
+    "cm.a [Lbe;": "DrawControls/AniImageList.icons [LDrawControls/AniIcon;",
+    "aj.a Z": "DrawControls/LightControl.lightOn Z",
+    "aj.a I": "DrawControls/LightControl.TIMEOUT I",
+    "aj.a Ljava/util/TimerTask;": "DrawControls/LightControl.lightTask Ljava/util/TimerTask;"
+  },
+  "method_symbols": {
+    "z.a(I)Z": "jimm/ContactItem.getBooleanValue(I)Z",
+    "z.b(I)Z": "jimm/ContactItem.hasCapability(I)Z",
+    "z.b(I)I": "jimm/ContactItem.getIntValue(I)I",
+    "z.c(I)Z": "jimm/ContactItem.isMessageAvailable(I)Z",
+    "z.c()V": "jimm/ContactItem.prepareToBlink()V",
+    "z.b(Z)V": "jimm/ContactItem.startBlinking(Z)V",
+    "z.b()I": "jimm/ContactItem.getFontStyle()I",
+    "z.a()I": "jimm/ContactItem.getTextColor()I",
+    "z.a(I)Ljava/lang/String;": "jimm/ContactItem.getStringValue(I)Ljava/lang/String;",
+    "z.a(IZ)V": "jimm/ContactItem.setBooleanValue(IZ)V",
+    "z.a(II)V": "jimm/ContactItem.setIntValue(II)V",
+    "z.m()I": "jimm/ContactItem.getVisibleId()I",
+    "z.n()I": "jimm/ContactItem.getInvisibleId()I",
+    "z.l()I": "jimm/ContactItem.getIgnoreId()I",
+    "z.e(I)V": "jimm/ContactItem.setVisibleId(I)V",
+    "z.f(I)V": "jimm/ContactItem.setInvisibleId(I)V",
+    "z.d(I)V": "jimm/ContactItem.setIgnoreId(I)V",
+    "z.c()I": "jimm/ContactItem.getUIN()I",
+    "z.b()Ljava/lang/String;": "jimm/ContactItem.getUinString()Ljava/lang/String;",
+    "z.a(Ljava/lang/String;)V": "jimm/ContactItem.rename(Ljava/lang/String;)V",
+    "z.a([B)V": "jimm/ContactItem.setXStatus([B)V",
+    "z.a()Lbj;": "jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+    "z.a(ILjava/lang/String;)V": "jimm/ContactItem.setStringValue(ILjava/lang/String;)V",
+    "z.a()Ljava/lang/String;": "jimm/ContactItem.getSortText()Ljava/lang/String;",
+    "z.a(I)I": "jimm/ContactItem.getSortWeight(I)I",
+    "z.b(I)[B": "jimm/ContactItem.longIPToByteAray(I)[B",
+    "z.a([B)I": "jimm/ContactItem.arrayToLongIP([B)I",
+    "z.a(I[B)V": "jimm/ContactItem.setIPValue(I[B)V",
+    "z.a(I)[B": "jimm/ContactItem.getIPValue(I)[B",
+    "z.d()I": "jimm/ContactItem.getImageIndex()I",
+    "z.c()Ljava/lang/String;": "jimm/ContactItem.getText()Ljava/lang/String;",
+    "z.a()Lab;": "jimm/ContactItem.getFTM()Ljimm/comm/FileTransferMessage;",
+    "z.a()Z": "jimm/ContactItem.mustBeShownAnyWay()Z",
+    "z.b(I)V": "jimm/ContactItem.increaseMessageCount(I)V",
+    "z.a()V": "jimm/ContactItem.resetUnreadMessages()V",
+    "z.a(Z)V": "jimm/ContactItem.BeginTyping(Z)V",
+    "z.f()I": "jimm/ContactItem.getBirthDayImageIndex()I",
+    "z.g()I": "jimm/ContactItem.getHappyImageIndex()I",
+    "z.h()I": "jimm/ContactItem.getAuthImageIndex()I",
+    "z.i()I": "jimm/ContactItem.getClientImageIndex()I",
+    "z.j()I": "jimm/ContactItem.getVisibilityImageIndex()I",
+    "z.k()I": "jimm/ContactItem.getIgnoreImageIndex()I",
+    "z.e()V": "jimm/ContactItem.activate()V",
+    "z.f()V": "jimm/ContactItem.setStatusImage()V",
+    "z.c(I)V": "jimm/ContactItem.setHappyFlag(I)V",
+    "z.a(Lz;)Z": "jimm/ContactItem.access$2(Ljimm/ContactItem;)Z",
+    "z.b(Lz;)Z": "jimm/ContactItem.access$3(Ljimm/ContactItem;)Z",
+    "z.c(Lz;)Z": "jimm/ContactItem.access$5(Ljimm/ContactItem;)Z",
+    "z.b(Lz;)I": "jimm/ContactItem.access$0(Ljimm/ContactItem;)I",
+    "z.c(Lz;)I": "jimm/ContactItem.access$7(Ljimm/ContactItem;)I",
+    "z.a(Lz;)Ljava/util/TimerTask;": "jimm/ContactItem.access$8(Ljimm/ContactItem;)Ljava/util/TimerTask;",
+    "z.a(Lz;)V": "jimm/ContactItem.access$9(Ljimm/ContactItem;)V",
+    "be.<init>(Le;I)V": "DrawControls/AniIcon.<init>(LDrawControls/Icon;I)V",
+    "be.a()Ljavax/microedition/lcdui/Image;": "DrawControls/AniIcon.getImage()Ljavax/microedition/lcdui/Image;",
+    "be.b(Ljavax/microedition/lcdui/Graphics;II)V": "DrawControls/AniIcon.drawImage(Ljavax/microedition/lcdui/Graphics;II)V",
+    "cu.<init>()V": "jimm/ContactList$1.<init>()V",
+    "cu.run()V": "jimm/ContactList$1.run()V",
+    "t.<init>()V": "DrawControls/LightControl$1.<init>()V",
+    "t.run()V": "DrawControls/LightControl$1.run()V",
+    "z.<init>(IILjava/lang/String;Ljava/lang/String;ZZ)V": "jimm/ContactItem.<init>(IILjava/lang/String;Ljava/lang/String;ZZ)V",
+    "z.<init>()V": "jimm/ContactItem.<init>()V",
+    "z.equals(Ljava/lang/Object;)Z": "jimm/ContactItem.equals(Ljava/lang/Object;)Z",
+    "z.<clinit>()V": "jimm/ContactItem.<clinit>()V"
+  },
+  "additional_methods": [
+    {
+      "reference_owner": "aa",
+      "reference_name": "a",
+      "reference_desc": "()Z",
+      "source_owner": "jimm/comm/Action",
+      "source_name": "isCompleted",
+      "source_desc": "()Z"
+    },
+    {
+      "reference_owner": "ae",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/ActionListener",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "ae",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/ActionListener",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "ag",
+      "reference_name": "e",
+      "reference_desc": "()V",
+      "source_owner": "jimm/MainMenu",
+      "source_name": "showPrivateStatus",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "aj",
+      "reference_name": "a",
+      "reference_desc": "(Z)V",
+      "source_owner": "DrawControls/LightControl",
+      "source_name": "flash",
+      "source_desc": "(Z)V"
+    },
+    {
+      "reference_owner": "aj",
+      "reference_name": "d",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/LightControl",
+      "source_name": "cancelTimeout",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "aj",
+      "reference_name": "a",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/LightControl",
+      "source_name": "reset",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "aj",
+      "reference_name": "c",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/LightControl",
+      "source_name": "Off",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "aj",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/LightControl",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "ap",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq$Connection",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "ap",
+      "reference_name": "a",
+      "reference_desc": "(Lan;)V",
+      "source_owner": "jimm/comm/Icq$Connection",
+      "source_name": "sendPacket",
+      "source_desc": "(Ljimm/comm/Packet;)V"
+    },
+    {
+      "reference_owner": "ap",
+      "reference_name": "run",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq$Connection",
+      "source_name": "run",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "ay",
+      "reference_name": "<init>",
+      "reference_desc": "(Lr;)V",
+      "source_owner": "jimm/comm/Icq$HTTPConnection",
+      "source_name": "<init>",
+      "source_desc": "(Ljimm/comm/Icq;)V"
+    },
+    {
+      "reference_owner": "az",
+      "reference_name": "a",
+      "reference_desc": "(Lax;Lcn;)V",
+      "source_owner": "DrawControls/VirtualTreeCommands",
+      "source_name": "vtGetItemDrawData",
+      "source_desc": "(LDrawControls/TreeNode;LDrawControls/ListItem;)V"
+    },
+    {
+      "reference_owner": "az",
+      "reference_name": "a",
+      "reference_desc": "(Lax;Lax;)I",
+      "source_owner": "DrawControls/VirtualTreeCommands",
+      "source_name": "vtCompareNodes",
+      "source_desc": "(LDrawControls/TreeNode;LDrawControls/TreeNode;)I"
+    },
+    {
+      "reference_owner": "be",
+      "reference_name": "<init>",
+      "reference_desc": "(Le;I)V",
+      "source_owner": "DrawControls/AniIcon",
+      "source_name": "<init>",
+      "source_desc": "(LDrawControls/Icon;I)V"
+    },
+    {
+      "reference_owner": "be",
+      "reference_name": "a",
+      "reference_desc": "()Ljavax/microedition/lcdui/Image;",
+      "source_owner": "DrawControls/AniIcon",
+      "source_name": "getImage",
+      "source_desc": "()Ljavax/microedition/lcdui/Image;"
+    },
+    {
+      "reference_owner": "be",
+      "reference_name": "b",
+      "reference_desc": "(Ljavax/microedition/lcdui/Graphics;II)V",
+      "source_owner": "DrawControls/AniIcon",
+      "source_name": "drawImage",
+      "source_desc": "(Ljavax/microedition/lcdui/Graphics;II)V"
+    },
+    {
+      "reference_owner": "bq",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/OtherAction",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "a",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getSortText",
+      "source_desc": "()Ljava/lang/String;"
+    },
+    {
+      "reference_owner": "bs",
+      "reference_name": "a",
+      "reference_desc": "(I)I",
+      "source_owner": "jimm/ContactListItem",
+      "source_name": "getSortWeight",
+      "source_desc": "(I)I"
+    },
+    {
+      "reference_owner": "bv",
+      "reference_name": "<init>",
+      "reference_desc": "(II)V",
+      "source_owner": "jimm/JimmException",
+      "source_name": "<init>",
+      "source_desc": "(II)V"
+    },
+    {
+      "reference_owner": "bv",
+      "reference_name": "<init>",
+      "reference_desc": "(IIZ)V",
+      "source_owner": "jimm/JimmException",
+      "source_name": "<init>",
+      "source_desc": "(IIZ)V"
+    },
+    {
+      "reference_owner": "bx",
+      "reference_name": "a",
+      "reference_desc": "(Lcd;)V",
+      "source_owner": "DrawControls/VirtualListCommands",
+      "source_name": "vlCursorMoved",
+      "source_desc": "(LDrawControls/VirtualList;)V"
+    },
+    {
+      "reference_owner": "cb",
+      "reference_name": "<init>",
+      "reference_desc": "(Lr;)V",
+      "source_owner": "jimm/comm/Icq$SOCKSConnection",
+      "source_name": "<init>",
+      "source_desc": "(Ljimm/comm/Icq;)V"
+    },
+    {
+      "reference_owner": "cb",
+      "reference_name": "run",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq$SOCKSConnection",
+      "source_name": "run",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "<init>",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "<init>",
+      "source_desc": "(Ljava/lang/String;)V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getSize",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "b",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getDrawHeight",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "b",
+      "reference_desc": "(I)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "setFontSize",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "c",
+      "reference_desc": "(I)I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getGameAction",
+      "source_desc": "(I)I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "e",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "repaint",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "e",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getVisCount",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "c$13462e",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "setMode$13462e",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "b",
+      "reference_desc": "()Z",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "isActive",
+      "source_desc": "()Z"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "b",
+      "reference_desc": "(Ljavax/microedition/lcdui/Display;)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "activate",
+      "source_desc": "(Ljavax/microedition/lcdui/Display;)V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "(I)I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getItemHeight",
+      "source_desc": "(I)I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "g",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "invalidate",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "d",
+      "reference_desc": "(I)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "checkCurrItem",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "h",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "checkTopItem",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "b",
+      "reference_desc": "(I)Z",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "visibleItem",
+      "source_desc": "(I)Z"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "i",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "storelastItemIndexes",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "j",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "repaintIfLastIndexesChanged",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "(IZ)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "moveCursor",
+      "source_desc": "(IZ)V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "()Z",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "itemSelected",
+      "source_desc": "()Z"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "(Ljavax/microedition/lcdui/CommandListener;)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "setCommandListener",
+      "source_desc": "(Ljavax/microedition/lcdui/CommandListener;)V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "j",
+      "reference_desc": "(I)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "setTopItem",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "k",
+      "reference_desc": "(I)V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "setCurrentItem",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "h",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getCurrIndex",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "(I)Z",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "isItemSelected",
+      "source_desc": "(I)Z"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "i",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getFontHeight",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "a",
+      "reference_desc": "(II)I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "transformColorLight",
+      "source_desc": "(II)I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "d",
+      "reference_desc": "(I)I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getInverseColor",
+      "source_desc": "(I)I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "c",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "afterUnlock",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "l",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "unlock",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "n",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getHeightInternal",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "j",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getWidthInternal",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "o",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "getMenuBarHeight",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cd",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/VirtualList",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/Object;)V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "setLastScreen",
+      "source_desc": "(Ljava/lang/Object;)V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "a",
+      "reference_desc": "()V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "backToLastScreen",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "b",
+      "reference_desc": "(Ljava/lang/Object;)V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "selectScreen",
+      "source_desc": "(Ljava/lang/Object;)V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "commandAction",
+      "reference_desc": "(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "commandAction",
+      "source_desc": "(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/Object;)Ljava/lang/String;",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "getCaption",
+      "source_desc": "(Ljava/lang/Object;)Ljava/lang/String;"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "a",
+      "reference_desc": "(Ljavax/microedition/lcdui/Command;I)I",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "getCommandType",
+      "source_desc": "(Ljavax/microedition/lcdui/Command;I)I"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "a",
+      "reference_desc": "(Lcd;Z)V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "setColorScheme",
+      "source_desc": "(LDrawControls/VirtualList;Z)V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "a",
+      "reference_desc": "(J)I",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "getStatusImageIndex",
+      "source_desc": "(J)I"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "e",
+      "reference_desc": "()V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "menuRemoveContactSelected",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "f",
+      "reference_desc": "()V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "menuRemoveMeSelected",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cf",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/JimmUI",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cj",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/Options",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cj",
+      "reference_name": "a",
+      "reference_desc": "(ILjava/lang/String;)V",
+      "source_owner": "jimm/Options",
+      "source_name": "setString",
+      "source_desc": "(ILjava/lang/String;)V"
+    },
+    {
+      "reference_owner": "cj",
+      "reference_name": "a",
+      "reference_desc": "(II)V",
+      "source_owner": "jimm/Options",
+      "source_name": "setInt",
+      "source_desc": "(II)V"
+    },
+    {
+      "reference_owner": "cj",
+      "reference_name": "a",
+      "reference_desc": "(IZ)V",
+      "source_owner": "jimm/Options",
+      "source_name": "setBoolean",
+      "source_desc": "(IZ)V"
+    },
+    {
+      "reference_owner": "cj",
+      "reference_name": "a",
+      "reference_desc": "(IJ)V",
+      "source_owner": "jimm/Options",
+      "source_name": "setLong",
+      "source_desc": "(IJ)V"
+    },
+    {
+      "reference_owner": "cj",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/Options",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cm",
+      "reference_name": "a",
+      "reference_desc": "(I)Le;",
+      "source_owner": "DrawControls/AniImageList",
+      "source_name": "elementAt",
+      "source_desc": "(I)LDrawControls/Icon;"
+    },
+    {
+      "reference_owner": "cm",
+      "reference_name": "a",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/AniImageList",
+      "source_name": "size",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "cm",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/AniImageList",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cm",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;II)V",
+      "source_owner": "DrawControls/AniImageList",
+      "source_name": "load",
+      "source_desc": "(Ljava/lang/String;II)V"
+    },
+    {
+      "reference_owner": "cm",
+      "reference_name": "run",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/AniImageList",
+      "source_name": "run",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "ct",
+      "reference_name": "<init>",
+      "reference_desc": "(Lbs;I)V",
+      "source_owner": "jimm/comm/UpdateContactListAction",
+      "source_name": "<init>",
+      "source_desc": "(Ljimm/ContactListItem;I)V"
+    },
+    {
+      "reference_owner": "ct",
+      "reference_name": "<init>",
+      "reference_desc": "(Lz;Lbb;Lbb;)V",
+      "source_owner": "jimm/comm/UpdateContactListAction",
+      "source_name": "<init>",
+      "source_desc": "(Ljimm/ContactItem;Ljimm/GroupItem;Ljimm/GroupItem;)V"
+    },
+    {
+      "reference_owner": "cu",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactList$1",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cu",
+      "reference_name": "run",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactList$1",
+      "source_name": "run",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "cv",
+      "reference_name": "<init>",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "jimm/SplashCanvas",
+      "source_name": "<init>",
+      "source_desc": "(Ljava/lang/String;)V"
+    },
+    {
+      "reference_owner": "cv",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/SplashCanvas",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "e",
+      "reference_name": "<init>",
+      "reference_desc": "(Ljavax/microedition/lcdui/Image;IIII)V",
+      "source_owner": "DrawControls/Icon",
+      "source_name": "<init>",
+      "source_desc": "(Ljavax/microedition/lcdui/Image;IIII)V"
+    },
+    {
+      "reference_owner": "e",
+      "reference_name": "a",
+      "reference_desc": "()Ljavax/microedition/lcdui/Image;",
+      "source_owner": "DrawControls/Icon",
+      "source_name": "getImage",
+      "source_desc": "()Ljavax/microedition/lcdui/Image;"
+    },
+    {
+      "reference_owner": "e",
+      "reference_name": "a",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/Icon",
+      "source_name": "getWidth",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "e",
+      "reference_name": "b",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/Icon",
+      "source_name": "getHeight",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "e",
+      "reference_name": "b",
+      "reference_desc": "(Ljavax/microedition/lcdui/Graphics;II)V",
+      "source_owner": "DrawControls/Icon",
+      "source_name": "drawImage",
+      "source_desc": "(Ljavax/microedition/lcdui/Graphics;II)V"
+    },
+    {
+      "reference_owner": "e",
+      "reference_name": "a",
+      "reference_desc": "(Ljavax/microedition/lcdui/Graphics;II)V",
+      "source_owner": "DrawControls/Icon",
+      "source_name": "drawByLeft",
+      "source_desc": "(Ljavax/microedition/lcdui/Graphics;II)V"
+    },
+    {
+      "reference_owner": "e",
+      "reference_name": "c",
+      "reference_desc": "(Ljavax/microedition/lcdui/Graphics;II)V",
+      "source_owner": "DrawControls/Icon",
+      "source_name": "drawByRight",
+      "source_desc": "(Ljavax/microedition/lcdui/Graphics;II)V"
+    },
+    {
+      "reference_owner": "e",
+      "reference_name": "d",
+      "reference_desc": "(Ljavax/microedition/lcdui/Graphics;II)V",
+      "source_owner": "DrawControls/Icon",
+      "source_name": "drawInCenter",
+      "source_desc": "(Ljavax/microedition/lcdui/Graphics;II)V"
+    },
+    {
+      "reference_owner": "f",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/ImageList",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "f",
+      "reference_name": "a",
+      "reference_desc": "(I)Le;",
+      "source_owner": "DrawControls/ImageList",
+      "source_name": "elementAt",
+      "source_desc": "(I)LDrawControls/Icon;"
+    },
+    {
+      "reference_owner": "f",
+      "reference_name": "a",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/ImageList",
+      "source_name": "size",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "f",
+      "reference_name": "b",
+      "reference_desc": "()I",
+      "source_owner": "DrawControls/ImageList",
+      "source_name": "getHeight",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "f",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;I)V",
+      "source_owner": "DrawControls/ImageList",
+      "source_name": "load",
+      "source_desc": "(Ljava/lang/String;I)V"
+    },
+    {
+      "reference_owner": "f",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;II)V",
+      "source_owner": "DrawControls/ImageList",
+      "source_name": "load",
+      "source_desc": "(Ljava/lang/String;II)V"
+    },
+    {
+      "reference_owner": "f",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)Lf;",
+      "source_owner": "DrawControls/ImageList",
+      "source_name": "load",
+      "source_desc": "(Ljava/lang/String;)LDrawControls/ImageList;"
+    },
+    {
+      "reference_owner": "g",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/JimmUI$GetVersionInfoTimerTask",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "jimm/Jimm",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/Jimm",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "jimm/Jimm",
+      "reference_name": "pauseApp",
+      "reference_desc": "()V",
+      "source_owner": "jimm/Jimm",
+      "source_name": "pauseApp",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "jimm/Jimm",
+      "reference_name": "destroyApp",
+      "reference_desc": "(Z)V",
+      "source_owner": "jimm/Jimm",
+      "source_name": "destroyApp",
+      "source_desc": "(Z)V"
+    },
+    {
+      "reference_owner": "jimm/Jimm",
+      "reference_name": "a",
+      "reference_desc": "()Ljava/util/Timer;",
+      "source_owner": "jimm/Jimm",
+      "source_name": "getTimerRef",
+      "source_desc": "()Ljava/util/Timer;"
+    },
+    {
+      "reference_owner": "jimm/Jimm",
+      "reference_name": "a",
+      "reference_desc": "(Z)V",
+      "source_owner": "jimm/Jimm",
+      "source_name": "setMinimized",
+      "source_desc": "(Z)V"
+    },
+    {
+      "reference_owner": "jimm/Jimm",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/Jimm",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "k",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "jimm/FileBrowserListener",
+      "source_name": "onFileSelect",
+      "source_desc": "(Ljava/lang/String;)V"
+    },
+    {
+      "reference_owner": "k",
+      "reference_name": "b",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "jimm/FileBrowserListener",
+      "source_name": "onDirectorySelect",
+      "source_desc": "(Ljava/lang/String;)V"
+    },
+    {
+      "reference_owner": "k",
+      "reference_name": "a",
+      "reference_desc": "()Lz;",
+      "source_owner": "jimm/FileBrowserListener",
+      "source_name": "getCItem",
+      "source_desc": "()Ljimm/ContactItem;"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "c",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactList",
+      "source_name": "getSize",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "a",
+      "reference_desc": "(I)Lz;",
+      "source_owner": "jimm/ContactList",
+      "source_name": "getCItem",
+      "source_desc": "(I)Ljimm/ContactItem;"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "b",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "save",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "f",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "safeSave",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "a$505cff1c",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "update$505cff1c",
+      "source_desc": "(Ljava/lang/String;)V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "a",
+      "reference_desc": "(I)V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "updateTitle",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "b",
+      "reference_desc": "(Ljava/lang/String;)Lz;",
+      "source_owner": "jimm/ContactList",
+      "source_name": "createTempContact",
+      "source_desc": "(Ljava/lang/String;)Ljimm/ContactItem;"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "a",
+      "reference_desc": "(Lac;Z)V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "addMessage",
+      "source_desc": "(Ljimm/comm/Message;Z)V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "playerUpdate",
+      "reference_desc": "(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "playerUpdate",
+      "source_desc": "(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "g",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "repaintTree",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;Z)V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "BeginTyping",
+      "source_desc": "(Ljava/lang/String;Z)V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "b",
+      "reference_desc": "(I)V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "playSoundNotification",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "m",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactList",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "n",
+      "reference_name": "<init>",
+      "reference_desc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+      "source_owner": "jimm/comm/ConnectAction",
+      "source_name": "<init>",
+      "source_desc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+      "reference_owner": "n",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/ConnectAction",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "r",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "r",
+      "reference_name": "a",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq",
+      "source_name": "nextSrvHost",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "r",
+      "reference_name": "b",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq",
+      "source_name": "connect",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "r",
+      "reference_name": "c",
+      "reference_desc": "()Z",
+      "source_owner": "jimm/comm/Icq",
+      "source_name": "isConnected",
+      "source_desc": "()Z"
+    },
+    {
+      "reference_owner": "r",
+      "reference_name": "run",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq",
+      "source_name": "run",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "r",
+      "reference_name": "a",
+      "reference_desc": "(I)V",
+      "source_owner": "jimm/comm/Icq",
+      "source_name": "setOnlineStatus",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "r",
+      "reference_name": "a",
+      "reference_desc": "()Ljava/lang/Object;",
+      "source_owner": "jimm/comm/Icq",
+      "source_name": "access$0",
+      "source_desc": "()Ljava/lang/Object;"
+    },
+    {
+      "reference_owner": "r",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/comm/Icq",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "t",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/LightControl$1",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "t",
+      "reference_name": "run",
+      "reference_desc": "()V",
+      "source_owner": "DrawControls/LightControl$1",
+      "source_name": "run",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "w",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/FileSystem",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(ILjava/lang/String;)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "setStringValue",
+      "source_desc": "(ILjava/lang/String;)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(I)Ljava/lang/String;",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getStringValue",
+      "source_desc": "(I)Ljava/lang/String;"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getSortText",
+      "source_desc": "()Ljava/lang/String;"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(II)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "setIntValue",
+      "source_desc": "(II)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "b",
+      "reference_desc": "(I)I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getIntValue",
+      "source_desc": "(I)I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(IZ)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "setBooleanValue",
+      "source_desc": "(IZ)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(I)Z",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getBooleanValue",
+      "source_desc": "(I)Z"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "b",
+      "reference_desc": "(I)[B",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "longIPToByteAray",
+      "source_desc": "(I)[B"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "([B)I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "arrayToLongIP",
+      "source_desc": "([B)I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "<init>",
+      "reference_desc": "(IILjava/lang/String;Ljava/lang/String;ZZ)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "<init>",
+      "source_desc": "(IILjava/lang/String;Ljava/lang/String;ZZ)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "<init>",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "b",
+      "reference_desc": "(I)Z",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "hasCapability",
+      "source_desc": "(I)Z"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "d",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getImageIndex",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "c",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getText",
+      "source_desc": "()Ljava/lang/String;"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "()Lab;",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getFTM",
+      "source_desc": "()Ljimm/comm/FileTransferMessage;"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "()Z",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "mustBeShownAnyWay",
+      "source_desc": "()Z"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "c",
+      "reference_desc": "(I)Z",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "isMessageAvailable",
+      "source_desc": "(I)Z"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "b",
+      "reference_desc": "(I)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "increaseMessageCount",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "resetUnreadMessages",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "equals",
+      "reference_desc": "(Ljava/lang/Object;)Z",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "equals",
+      "source_desc": "(Ljava/lang/Object;)Z"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(Z)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "BeginTyping",
+      "source_desc": "(Z)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "f",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getBirthDayImageIndex",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "g",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getHappyImageIndex",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "h",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getAuthImageIndex",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "i",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getClientImageIndex",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "j",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getVisibilityImageIndex",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "k",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getIgnoreImageIndex",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "rename",
+      "source_desc": "(Ljava/lang/String;)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "e",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "activate",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "f",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "setStatusImage",
+      "source_desc": "()V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "c",
+      "reference_desc": "(I)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "setHappyFlag",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "m",
+      "reference_desc": "()I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "getVisibleId",
+      "source_desc": "()I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "e",
+      "reference_desc": "(I)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "setVisibleId",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "f",
+      "reference_desc": "(I)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "setInvisibleId",
+      "source_desc": "(I)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(Lz;)Z",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "access$2",
+      "source_desc": "(Ljimm/ContactItem;)Z"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "b",
+      "reference_desc": "(Lz;)Z",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "access$3",
+      "source_desc": "(Ljimm/ContactItem;)Z"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "c",
+      "reference_desc": "(Lz;)Z",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "access$5",
+      "source_desc": "(Ljimm/ContactItem;)Z"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "b",
+      "reference_desc": "(Lz;)I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "access$0",
+      "source_desc": "(Ljimm/ContactItem;)I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "c",
+      "reference_desc": "(Lz;)I",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "access$7",
+      "source_desc": "(Ljimm/ContactItem;)I"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(Lz;)Ljava/util/TimerTask;",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "access$8",
+      "source_desc": "(Ljimm/ContactItem;)Ljava/util/TimerTask;"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "a",
+      "reference_desc": "(Lz;)V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "access$9",
+      "source_desc": "(Ljimm/ContactItem;)V"
+    },
+    {
+      "reference_owner": "z",
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_owner": "jimm/ContactItem",
+      "source_name": "<clinit>",
+      "source_desc": "()V"
+    }
+  ],
+  "contact_method_inventory": [
+    {
+      "reference_name": "a",
+      "reference_desc": "(ILjava/lang/String;)V",
+      "source_name": "setStringValue",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(I)Ljava/lang/String;",
+      "source_name": "getStringValue",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_name": "getSortText",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(I)I",
+      "source_name": "getSortWeight",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(II)V",
+      "source_name": "setIntValue",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(I)I",
+      "source_name": "getIntValue",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(IZ)V",
+      "source_name": "setBooleanValue",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(I)Z",
+      "source_name": "getBooleanValue",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(I)[B",
+      "source_name": "longIPToByteAray",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B)I",
+      "source_name": "arrayToLongIP",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(I[B)V",
+      "source_name": "setIPValue",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(I)[B",
+      "source_name": "getIPValue",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/io/DataOutputStream;)V",
+      "source_name": "saveToStream",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/io/DataInputStream;)V",
+      "source_name": "loadFromStream",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "<init>",
+      "reference_desc": "(IILjava/lang/String;Ljava/lang/String;ZZ)V",
+      "source_name": "<init>",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_name": "<init>",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(I)Z",
+      "source_name": "hasCapability",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a$13462e",
+      "reference_desc": "()V",
+      "source_name": "addCapability",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "()I",
+      "source_name": "getTextColor",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "()I",
+      "source_name": "getFontStyle",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "()I",
+      "source_name": "getUIN",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_name": "getUinString",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "d",
+      "reference_desc": "()I",
+      "source_name": "getImageIndex",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_name": "getText",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Lab;)V",
+      "source_name": "setFTM",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "()Lab;",
+      "source_name": "getFTM",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "()Z",
+      "source_name": "mustBeShownAnyWay",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "e",
+      "reference_desc": "()I",
+      "source_name": "getUnreadMessCount",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "(I)Z",
+      "source_name": "isMessageAvailable",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(I)V",
+      "source_name": "increaseMessageCount",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "()V",
+      "source_name": "resetUnreadMessages",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "equals",
+      "reference_desc": "(Ljava/lang/Object;)Z",
+      "source_name": "equals",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "()V",
+      "source_name": "showHistory",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Z)V",
+      "source_name": "BeginTyping",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "()V",
+      "source_name": "prepareToBlink",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(Z)V",
+      "source_name": "startBlinking",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "d",
+      "reference_desc": "()V",
+      "source_name": "setOfflineStatus",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "f",
+      "reference_desc": "()I",
+      "source_name": "getBirthDayImageIndex",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "g",
+      "reference_desc": "()I",
+      "source_name": "getHappyImageIndex",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "h",
+      "reference_desc": "()I",
+      "source_name": "getAuthImageIndex",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "i",
+      "reference_desc": "()I",
+      "source_name": "getClientImageIndex",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "j",
+      "reference_desc": "()I",
+      "source_name": "getVisibilityImageIndex",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "k",
+      "reference_desc": "()I",
+      "source_name": "getIgnoreImageIndex",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)V",
+      "source_name": "rename",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "e",
+      "reference_desc": "()V",
+      "source_name": "activate",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "f",
+      "reference_desc": "()V",
+      "source_name": "setStatusImage",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B)V",
+      "source_name": "setXStatus",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "()Lbj;",
+      "source_name": "getXStatus",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "(I)V",
+      "source_name": "setHappyFlag",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "l",
+      "reference_desc": "()I",
+      "source_name": "getIgnoreId",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "d",
+      "reference_desc": "(I)V",
+      "source_name": "setIgnoreId",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "m",
+      "reference_desc": "()I",
+      "source_name": "getVisibleId",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "e",
+      "reference_desc": "(I)V",
+      "source_name": "setVisibleId",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "n",
+      "reference_desc": "()I",
+      "source_name": "getInvisibleId",
+      "compiler_expression": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "f",
+      "reference_desc": "(I)V",
+      "source_name": "setInvisibleId",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Lz;)I",
+      "source_name": null,
+      "compiler_expression": "javac post-increment of blinkingNumber; ECJ uses access$0 and access$1",
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Lz;)Z",
+      "source_name": "access$2",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Lz;Z)Z",
+      "source_name": null,
+      "compiler_expression": "javac value-returning blinkingOnline setter; ECJ uses void access$4",
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(Lz;)Z",
+      "source_name": "access$3",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(Lz;Z)Z",
+      "source_name": null,
+      "compiler_expression": "javac value-returning blinkingOffline setter; ECJ uses void access$6",
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "(Lz;)Z",
+      "source_name": "access$5",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(Lz;)I",
+      "source_name": "access$0",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "(Lz;)I",
+      "source_name": "access$7",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Lz;)Ljava/util/TimerTask;",
+      "source_name": "access$8",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Lz;)V",
+      "source_name": "access$9",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_name": "<clinit>",
+      "compiler_expression": null,
+      "same_optimized_signature": true
+    }
+  ]
+}
