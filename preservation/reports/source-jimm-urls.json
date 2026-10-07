@@ -15,8 +15,8 @@
   "fixture_proofs": [
     {
       "mode": "reference",
-      "base_fixture_sha256": "031a23793312ec58e1e4cbde93959a89a4d3086b806c96bc4f1acc13da0cedf8",
-      "fixture_sha256": "cd234fa37fd002d60289eb6ce52f5926d3a92ddd95cf4c40be61b5e57d31d6fe",
+      "base_fixture_sha256": "76132ef2f5edbb626683139d5b95f748c867a1f3581d3c9705fda7d44ec6697d",
+      "fixture_sha256": "bd0ec73ed907aa88906a853a29254e3d5ed710fff7d1f668b8d6a316ffa0bb17",
       "terminal_call_sites": 3,
       "unchanged_controller_before_capture": true,
       "only_terminal_invocations_changed": true,
@@ -25,8 +25,8 @@
     },
     {
       "mode": "source",
-      "base_fixture_sha256": "183c47a215c5f1df51b983d62600272f801265d96f3de428e422ba93c1334276",
-      "fixture_sha256": "57a82dd2b89af76c3479a71393f748187129b8b0ca8a3ee2dab1036358fe2efe",
+      "base_fixture_sha256": "48d3b27ce1d303dd49a8b8732a9c276d50b2092b2f3d6422b2604a2673dd17ec",
+      "fixture_sha256": "560efb1bf73a86d7ba8a40d302580a099e8b45bc234cb7fa0e5c22a4292d2996",
       "terminal_call_sites": 3,
       "unchanged_controller_before_capture": true,
       "only_terminal_invocations_changed": true,

@@ -55,7 +55,7 @@
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
       "source_unoptimized_class_jar_sha256": "5dca65664317c7a1a3a87e960a0b0cc9ebab93397a99d834c014563b70bf240a",
-      "source_optimized_class_jar_sha256": "a71cb1f25ed44ad35a59c4ca2a9fac7e9eaa58850c56ccdda5aacebbaf77567e",
+      "source_optimized_class_jar_sha256": "afee2345c1d841486ce7f4e33144119afaea1873e9ef436853a7d39920d0fef0",
       "command_roles": {
         "cmdQuote": "l",
         "cmdPaste": "m",
@@ -105,7 +105,7 @@
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
       "source_unoptimized_class_jar_sha256": "c85146f8e42bab21dd4d5e274b38b6cafed3fbf1618a27536c68aa808c34f743",
-      "source_optimized_class_jar_sha256": "c1518dd7ae0839bd70b601e15df44fcbd5fcb6589a134053ed64dfba4baed123",
+      "source_optimized_class_jar_sha256": "d0f0fdc100aa2a34c6ea3fb2cb86e2911f16fb6fbb051b48bc716774e8af2392",
       "command_roles": {
         "cmdQuote": "l",
         "cmdPaste": "m",

@@ -2316,6 +2316,20 @@ SYMBOLS.update({
 })
 
 
+# Complete controller declarations, including compiler accessors with incompatible
+# return types recorded separately. Introduce these names after the frozen graph base.
+UI_SYMBOLS = json.loads((ROOT / 'tools/source/ui-symbols.json').read_text(encoding='utf-8'))
+for _key, _value in {**UI_SYMBOLS['fields'], **UI_SYMBOLS['method_symbols']}.items():
+    assert _key not in SYMBOLS or SYMBOLS[_key] == _value, (_key, SYMBOLS.get(_key), _value)
+    SYMBOLS[_key] = _value
+_ui_audited = {(owner, name, desc) for owner, name, desc, source in METHODS}
+for _member in UI_SYMBOLS['methods']:
+    _identity = ('cf', _member['reference_name'], _member['reference_desc'])
+    if _member['same_optimized_signature'] and _identity not in _ui_audited:
+        METHODS.append((*_identity, _member['source_optimized_name']))
+        _ui_audited.add(_identity)
+
+
 def normalized(code):
     result = []
     for instruction in code:

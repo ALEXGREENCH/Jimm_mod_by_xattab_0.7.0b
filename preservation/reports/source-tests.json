@@ -47,6 +47,7 @@
   "send_text": "PASS sender/typing: 3601 observations, 316 sends, 300 typing calls, 2 class monitors; delivered optimized application matches",
   "editor": "PASS editor: 19948 observations, [320, 180, 1578] title/page/open calls; optimized application matches",
   "editor_commands": "PASS editor commands: 17281 observations, 4320 calls; raw and optimized actual handlers match",
+  "jimm_ui_state": "PASS JimmUI state: 13416 observations, 864 selectors, 47 statuses, 16 info lists, 108 formats; unchanged actual controllers",
   "profile_reference": "PASS probe: 684 login/roster observations",
   "profile_source": "PASS probe: 684 login/roster observations",
   "profile_observations": 684,

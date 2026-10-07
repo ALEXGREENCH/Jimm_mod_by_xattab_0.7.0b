@@ -128,7 +128,7 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_class_jar_sha256": "a71cb1f25ed44ad35a59c4ca2a9fac7e9eaa58850c56ccdda5aacebbaf77567e",
+      "source_class_jar_sha256": "afee2345c1d841486ce7f4e33144119afaea1873e9ef436853a7d39920d0fef0",
       "methods": [
         {
           "reference": "aj.<clinit>()V",

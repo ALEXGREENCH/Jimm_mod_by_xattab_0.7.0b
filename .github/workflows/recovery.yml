@@ -16,6 +16,7 @@ jobs:
       - run: python tools/test_tariffs.py
       - run: python tools/test_contact_core.py --skip-build
       - run: python tools/audit_source.py
+      - run: python tools/audit_jimm_ui.py
       - run: python tools/audit_util.py
       - run: python tools/audit_members.py
       - run: python tools/audit_inheritance.py
@@ -65,6 +66,8 @@ jobs:
             preservation/reports/source-hotkeys.json
             preservation/reports/source-editor-commands.json
             preservation/reports/source-editor-commands-bytecode.json
+            preservation/reports/source-jimm-ui-bytecode.json
+            preservation/reports/source-jimm-ui-state.json
   verify:
     runs-on: ubuntu-latest
     steps:
