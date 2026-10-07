@@ -257,5 +257,9 @@
   "filesystems": "PASS filesystems: 4 device paths, 1224 observations\nPASS filesystems bytecode: 32 signatures, 20 identical normalized instructions/handlers",
   "light": "PASS light: 2 platforms, 6696 observations\nPASS light bytecode: 12 signatures, 8 identical normalized instructions/handlers",
   "packets": "PASS packets: 45331 observations, 15642 successful parses",
-  "matrix_reused_for_unchanged_source": true
+  "matrix_reused_for_unchanged_source": true,
+  "server_actions_reference": "PASS probe: 4494 login/roster observations",
+  "server_actions_source": "PASS probe: 4494 login/roster observations",
+  "server_actions_observations": 4494,
+  "server_actions_differences": 0
 }

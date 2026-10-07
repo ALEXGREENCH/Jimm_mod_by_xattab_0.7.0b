@@ -1052,6 +1052,54 @@ SYMBOLS.update({
     'ck.a([BII)Lan;': 'jimm/comm/FromIcqSrvPacket.parse([BII)Ljimm/comm/Packet;',
 })
 
+
+# SSI lists, removal and authorization actions, verified against real action execution.
+CLASSES.update({'cq': 'jimm/comm/ServerListsAction', 'al': 'jimm/comm/RemoveMeAction', 'v': 'jimm/comm/SysNoticeAction', 's': 'jimm/comm/SystemNotice'})
+SYMBOLS.update({
+    'cq.a I': 'jimm/comm/ServerListsAction.subaction I',
+    'cq.b I': 'jimm/comm/ServerListsAction.list I',
+    'cq.a Lz;': 'jimm/comm/ServerListsAction.item Ljimm/ContactItem;',
+    'cq.a Ljava/util/Date;': 'jimm/comm/ServerListsAction.init Ljava/util/Date;',
+    'cq.c I': 'jimm/comm/ServerListsAction.id I',
+    'cq.d I': 'jimm/comm/ServerListsAction.packetCounter I',
+    'cq.<init>(ILz;)V': 'jimm/comm/ServerListsAction.<init>(ILjimm/ContactItem;)V',
+    'cq.a()V': 'jimm/comm/ServerListsAction.init()V',
+    'cq.a(Lan;)Z': 'jimm/comm/ServerListsAction.forward(Ljimm/comm/Packet;)Z',
+    'cq.a()Z': 'jimm/comm/ServerListsAction.isCompleted()Z',
+    'cq.b()Z': 'jimm/comm/ServerListsAction.isError()Z',
+    'cq.a()I': 'jimm/comm/ServerListsAction.getProgress()I',
+    'al.a Ljava/lang/String;': 'jimm/comm/RemoveMeAction.uin Ljava/lang/String;',
+    'al.<init>(Ljava/lang/String;)V': 'jimm/comm/RemoveMeAction.<init>(Ljava/lang/String;)V',
+    'al.a()V': 'jimm/comm/RemoveMeAction.init()V',
+    'al.a(Lan;)Z': 'jimm/comm/RemoveMeAction.forward(Ljimm/comm/Packet;)Z',
+    'al.a()Z': 'jimm/comm/RemoveMeAction.isCompleted()Z',
+    'al.b()Z': 'jimm/comm/RemoveMeAction.isError()Z',
+    'v.a Ls;': 'jimm/comm/SysNoticeAction.notice Ljimm/comm/SystemNotice;',
+    'v.<init>(Ls;)V': 'jimm/comm/SysNoticeAction.<init>(Ljimm/comm/SystemNotice;)V',
+    'v.a()V': 'jimm/comm/SysNoticeAction.init()V',
+    'v.a(Lan;)Z': 'jimm/comm/SysNoticeAction.forward(Ljimm/comm/Packet;)Z',
+    'v.a()Z': 'jimm/comm/SysNoticeAction.isCompleted()Z',
+    'v.b()Z': 'jimm/comm/SysNoticeAction.isError()Z',
+    's.a I': 'jimm/comm/SystemNotice.sysnotetype I',
+    's.a Z': 'jimm/comm/SystemNotice.AUTH_granted Z',
+    's.a Ljava/lang/String;': 'jimm/comm/SystemNotice.reason Ljava/lang/String;',
+    's.<init>(ILjava/lang/String;ZLjava/lang/String;)V': 'jimm/comm/SystemNotice.<init>(ILjava/lang/String;ZLjava/lang/String;)V',
+    'z.m()I': 'jimm/ContactItem.getVisibleId()I',
+    'z.n()I': 'jimm/ContactItem.getInvisibleId()I',
+    'z.l()I': 'jimm/ContactItem.getIgnoreId()I',
+    'z.e(I)V': 'jimm/ContactItem.setVisibleId(I)V',
+    'z.f(I)V': 'jimm/ContactItem.setInvisibleId(I)V',
+    'z.d(I)V': 'jimm/ContactItem.setIgnoreId(I)V',
+    'z.c()I': 'jimm/ContactItem.getUIN()I',
+    'co.a(Ljava/io/ByteArrayOutputStream;IZ)V': 'jimm/comm/Util.writeWord(Ljava/io/ByteArrayOutputStream;IZ)V',
+    'co.a(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V': 'jimm/comm/Util.writeLenAndString(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V',
+    'co.a(Ljava/lang/String;Z)[B': 'jimm/comm/Util.stringToByteArray(Ljava/lang/String;Z)[B',
+    'co.a$1385f3()J': 'jimm/comm/Util.createCurrentDate$1385f3()J',
+    'ac.c Ljava/lang/String;': 'jimm/comm/Message.sndrUin Ljava/lang/String;',
+    'ac.a Ljava/lang/String;': 'jimm/comm/Message.rcvrUin Ljava/lang/String;',
+    'ac.a J': 'jimm/comm/Message.newDate J',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1664,6 +1712,35 @@ METHODS.extend([
     ('ck', '<init>', '(IJIILjava/lang/String;I[B[B)V', '<init>'),
     ('ck', 'a', '()[B', 'toByteArray'),
 ])
+
+
+METHODS.extend([
+    ('cq', '<init>', '(ILz;)V', '<init>'),
+    ('cq', 'a', '()V', 'init'),
+    ('cq', 'a', '(Lan;)Z', 'forward'),
+    ('cq', 'a', '()Z', 'isCompleted'),
+    ('cq', 'b', '()Z', 'isError'),
+    ('cq', 'a', '()I', 'getProgress'),
+    ('al', '<init>', '(Ljava/lang/String;)V', '<init>'),
+    ('al', 'a', '()V', 'init'),
+    ('al', 'a', '(Lan;)Z', 'forward'),
+    ('al', 'a', '()Z', 'isCompleted'),
+    ('al', 'b', '()Z', 'isError'),
+    ('v', '<init>', '(Ls;)V', '<init>'),
+    ('v', 'a', '()V', 'init'),
+    ('v', 'a', '(Lan;)Z', 'forward'),
+    ('v', 'a', '()Z', 'isCompleted'),
+    ('v', 'b', '()Z', 'isError'),
+    ('s', '<init>', '(ILjava/lang/String;ZLjava/lang/String;)V', '<init>'),
+    ('co', 'a', '(Ljava/io/ByteArrayOutputStream;IZ)V', 'writeWord'),
+    ('co', 'a', '(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V', 'writeLenAndString'),
+    ('co', 'a', '(Ljava/lang/String;Z)[B', 'stringToByteArray'),
+    ('co', 'a$1385f3', '()J', 'createCurrentDate$1385f3'),
+])
+
+
+SYMBOLS.update({'r.a Lap;': 'jimm/comm/Icq.c Ljimm/comm/Icq$Connection;', 'ap.a(Lan;)V': 'jimm/comm/Icq$Connection.sendPacket(Ljimm/comm/Packet;)V', 'cj.a(I)Ljava/lang/String;': 'jimm/Options.getString(I)Ljava/lang/String;', 'co.a([BIZ)I': 'jimm/comm/Util.getWord([BIZ)I'})
+METHODS.extend([('cj', 'a', '(I)Ljava/lang/String;', 'getString'), ('co', 'a', '([BIZ)I', 'getWord')])
 
 
 def normalized(code):
