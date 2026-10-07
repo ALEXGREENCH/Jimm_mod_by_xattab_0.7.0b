@@ -6078,7 +6078,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "36d2fc10ff9ee57d44783371cd047094b5c99cb68ea7a447e6917d6f4b1c29ea",
+      "reference_normalized_sha256": "5126abc4e3872722691392ff4f43f8d654fdefc567945b91508152973c219b5c",
       "source_normalized_sha256": "b9d8002c8100e514b9330933fa26f319f1c8cade2f615eef9de7878caf053fbe"
     },
     {
@@ -6135,7 +6135,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "2c03491a8537f1dc279311a710e6cb51048521d7d73be0533362ef4ad2faadc5",
+      "reference_normalized_sha256": "9cc0372100515389ea4837b6faf26891653893e8204d458e10745adf505e27e1",
       "source_normalized_sha256": "646c94bbe750b3818e17014a330c985ea6017f4a16684cb51f0c3d79edad5066"
     },
     {
@@ -6401,7 +6401,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "074eb2382206ee4fbf49bd6e41a094526b30e3144abe93a48a2fa8e3d9fdfbac",
+      "reference_normalized_sha256": "07f1da7638413d21f5e46c7baf694f6f535d1030ac876a99adc4d20717a15c32",
       "source_normalized_sha256": "d91b611aac45afea1fc67ed717b2fd4a50a382b7e9b1125bfff1653c3994cc34"
     },
     {
@@ -6553,7 +6553,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "d08956313e321c3659870af7fed454a24b11e9b8233eb542232e25085d4059c2",
+      "reference_normalized_sha256": "40846549510385ce60bce7a6aa8ca1c532b34e6b4123b894554d320440a9a0c4",
       "source_normalized_sha256": "b90498e8477c850eb2cd0e7c466944f6aae13c8aa1bf1ec7a26f1c85a70fc938"
     },
     {
@@ -6952,7 +6952,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "bbbc0269a611b13eeaa9ae2a9bf7f0ad6ed553e6b9ed97ce39e335b13998e311",
+      "reference_normalized_sha256": "4a74395dd40ee346468290699fc7d4e0fb570d7d53113c8b99bb3006116874d0",
       "source_normalized_sha256": "c7ebb788e29828d2470f6cf0d3b10c987dd436fe1240a10362cc7b16cb8c7246"
     },
     {

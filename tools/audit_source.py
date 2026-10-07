@@ -2542,6 +2542,50 @@ SYMBOLS.update({
 })
 
 
+# Raw/removed VirtualList helper bodies and explicit ABI differences are kept in
+# audit_vlist_helpers.py. Only the three surviving matching signatures join METHODS.
+METHODS.extend([
+    ('cd', 'a', '(I)Ljavax/microedition/lcdui/Font;', 'getQuickFont'),
+    ('cd', 'a', '(Lf;)V', 'setImageList'),
+    ('cd', 'a', '(Ljavax/microedition/lcdui/Command;)Z', 'executeCommand'),
+])
+SYMBOLS.update({
+    'cd.a(I)Ljavax/microedition/lcdui/Font;': 'DrawControls/VirtualList.getQuickFont(I)Ljavax/microedition/lcdui/Font;',
+    'cd.b$1385ff()V': 'DrawControls/VirtualList.setCyclingCursor()V',
+    'cd.c(Le;)V': 'DrawControls/VirtualList.setCapPrivateImage(LDrawControls/Icon;)V',
+    'cd.e(Le;)V': 'DrawControls/VirtualList.setCapSoundImage(LDrawControls/Icon;)V',
+    'cd.a()V': 'DrawControls/VirtualList.createSetOfFonts()V',
+    'cd.a(Lf;)V': 'DrawControls/VirtualList.setImageList(LDrawControls/ImageList;)V',
+    'cd.a(Ljavax/microedition/lcdui/Command;)Z': 'DrawControls/VirtualList.executeCommand(Ljavax/microedition/lcdui/Command;)Z',
+    'cd.b()Ljava/lang/String;': 'DrawControls/VirtualList.getCaption()Ljava/lang/String;',
+    'cd.c()Z': 'DrawControls/VirtualList.getLocked()Z',
+    'cd.a Ljavax/microedition/lcdui/Font;': 'DrawControls/VirtualList.normalFont Ljavax/microedition/lcdui/Font;',
+    'cd.b Ljavax/microedition/lcdui/Font;': 'DrawControls/VirtualList.boldFont Ljavax/microedition/lcdui/Font;',
+    'cd.c Ljavax/microedition/lcdui/Font;': 'DrawControls/VirtualList.italicFont Ljavax/microedition/lcdui/Font;',
+    'cd.u I': 'DrawControls/VirtualList.fontSize I',
+    'cd.w I': 'DrawControls/VirtualList.cursorMode I',
+    'cd.b Z': 'DrawControls/VirtualList.dontRepaint Z',
+    'cd.c Z': 'DrawControls/VirtualList.cyclingCursor Z',
+    'cd.a Ljavax/microedition/lcdui/CommandListener;': 'DrawControls/VirtualList.commandListener Ljavax/microedition/lcdui/CommandListener;',
+    'cd.a Lf;': 'DrawControls/VirtualList.imageList LDrawControls/ImageList;',
+    'cd.H I': 'DrawControls/VirtualList.forcedWidth I',
+    'cd.I I': 'DrawControls/VirtualList.forcedHeight I',
+})
+
+
+# Contact helpers survive in authoring source but are inlined in the modern JAR.
+# Their full bodies/compiler expressions are retained by audit_contact_helpers.py.
+SYMBOLS.update({
+    'z.a(Ljava/io/DataOutputStream;)V': 'jimm/ContactItem.saveToStream(Ljava/io/DataOutputStream;)V',
+    'z.a(Ljava/io/DataInputStream;)V': 'jimm/ContactItem.loadFromStream(Ljava/io/DataInputStream;)V',
+    'z.a$13462e()V': 'jimm/ContactItem.addCapability()V',
+    'z.b()Ljava/lang/String;': 'jimm/ContactItem.getUinString()Ljava/lang/String;',
+    'z.a(Lab;)V': 'jimm/ContactItem.setFTM(Ljimm/comm/FileTransferMessage;)V',
+    'z.b()V': 'jimm/ContactItem.showHistory()V',
+    'z.d()V': 'jimm/ContactItem.setOfflineStatus()V',
+})
+
+
 def normalized(code):
     result = []
     for instruction in code:
