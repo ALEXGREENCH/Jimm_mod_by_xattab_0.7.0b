@@ -1198,6 +1198,27 @@ SYMBOLS.update({
     'z.b()Ljava/lang/String;': 'jimm/ContactItem.getUinString()Ljava/lang/String;',
 })
 
+# Verified socket members. The close body is confirmed in all three May platforms.
+CLASSES.update({'bf': 'jimm/comm/Icq$SOCKETConnection'})
+SYMBOLS.update({
+    'bf.a Ljavax/microedition/io/SocketConnection;': 'jimm/comm/Icq$SOCKETConnection.sc Ljavax/microedition/io/SocketConnection;',
+    'bf.a Ljava/io/InputStream;': 'jimm/comm/Icq$SOCKETConnection.is Ljava/io/InputStream;',
+    'bf.a Ljava/io/OutputStream;': 'jimm/comm/Icq$SOCKETConnection.os Ljava/io/OutputStream;',
+    'bf.a I': 'jimm/comm/Icq$SOCKETConnection.nextIcqSequence I',
+    'bf.a(Ljava/lang/String;)V': 'jimm/comm/Icq$SOCKETConnection.connect(Ljava/lang/String;)V',
+    'bf.a(Lan;)V': 'jimm/comm/Icq$SOCKETConnection.sendPacket(Ljimm/comm/Packet;)V',
+    'bf.a()V': 'jimm/comm/Icq$SOCKETConnection.close()V',
+    'bf.b()I': 'jimm/comm/Icq$SOCKETConnection.getLocalPort()I',
+    'bf.a()[B': 'jimm/comm/Icq$SOCKETConnection.getLocalIP()[B',
+    'bf.run()V': 'jimm/comm/Icq$SOCKETConnection.run()V',
+    'ap.a Ljava/lang/Thread;': 'jimm/comm/Icq$Connection.rcvThread Ljava/lang/Thread;',
+    'ap.a Ljava/util/Vector;': 'jimm/comm/Icq$Connection.rcvdPackets Ljava/util/Vector;',
+    'r.a()I': 'jimm/comm/Icq.getFlapSequence()I',
+    'r.b()I': 'jimm/comm/Icq.getInitialFlapSequence()I',
+    'r.a()Ljava/lang/Object;': 'jimm/comm/Icq.access$0()Ljava/lang/Object;',
+    'co.c(Ljava/lang/String;)[B': 'jimm/comm/Util.ipToByteArray(Ljava/lang/String;)[B',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1896,6 +1917,17 @@ METHODS.extend([
     ('co', 'a', '(IIIIII)J', 'createLongTime'),
     ('co', 'b', '(I)I', 'convertDateMonToSimpleMon'),
     ('co', 'a', '(J)J', 'gmtTimeToLocalTime'),
+])
+
+
+METHODS.extend([
+    ('bf', '<init>', '(Lr;)V', '<init>'),
+    ('bf', 'a', '(Ljava/lang/String;)V', 'connect'),
+    ('bf', 'a', '(Lan;)V', 'sendPacket'),
+    ('bf', 'b', '()I', 'getLocalPort'),
+    ('bf', 'a', '()[B', 'getLocalIP'),
+    ('bf', 'run', '()V', 'run'),
+    ('bf', 'a', '()V', 'close'),
 ])
 
 

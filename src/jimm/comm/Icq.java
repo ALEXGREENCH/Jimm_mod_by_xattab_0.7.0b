@@ -1096,33 +1096,25 @@ public class Icq implements Runnable
 				is.close();
 			} catch (Exception e)
 			{ /* Do nothing */
-			} finally
-			{
-				is = null;
 			}
+			is = null;
 
 			try
 			{
 				os.close();
 			} catch (Exception e)
 			{ /* Do nothing */
-			} finally
-			{
-				os = null;
 			}
+			os = null;
 
 			try
 			{
 				sc.close();
 			} catch (Exception e)
 			{ /* Do nothing */
-			} finally
-			{
-				sc = null;
 			}
-			
-			Thread.yield();
-		}
+			sc = null;
+	}
 
         // Sends the specified packet
         public void sendPacket(Packet packet) throws JimmException

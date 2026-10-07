@@ -1,0 +1,41 @@
+{
+  "scope": "Only SOCKETConnection.close: real optimized signature, static/synchronized modifiers, complete normalized instructions and exception handlers in each May platform. Other socket methods are audited for MIDP2 in audit_source.py.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_class_jar_sha256": "483150b475443d2f56682326a6991cbdae236c0f0d13d9aa7a9579b6c2015ceb",
+      "reference": "bf.a()V",
+      "source": "jimm/comm/Icq$SOCKETConnection.close()V",
+      "signature_verified": true,
+      "static_and_synchronized_modifiers_verified": true,
+      "instructions": 28,
+      "same_normalized_bytecode": true,
+      "normalized_sha256": "df5bc8ccfd4d7e8f28a2aae35bd7efa54d5d23e78fa9cb1111522871bff26bb1"
+    },
+    {
+      "target": "MOTOROLA",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_class_jar_sha256": "9343adba7f5e2d71c32e46aafbe28b767a2c9f3e6262ea433ff24e8c3c499d76",
+      "reference": "be.a()V",
+      "source": "jimm/comm/Icq$SOCKETConnection.close()V",
+      "signature_verified": true,
+      "static_and_synchronized_modifiers_verified": true,
+      "instructions": 28,
+      "same_normalized_bytecode": true,
+      "normalized_sha256": "df5bc8ccfd4d7e8f28a2aae35bd7efa54d5d23e78fa9cb1111522871bff26bb1"
+    },
+    {
+      "target": "SIEMENS2",
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "source_class_jar_sha256": "72f3283897eea2a65b27c4643c3b660e11e307c069d5e517e5e8aa375ef10265",
+      "reference": "bd.a()V",
+      "source": "jimm/comm/Icq$SOCKETConnection.close()V",
+      "signature_verified": true,
+      "static_and_synchronized_modifiers_verified": true,
+      "instructions": 28,
+      "same_normalized_bytecode": true,
+      "normalized_sha256": "df5bc8ccfd4d7e8f28a2aae35bd7efa54d5d23e78fa9cb1111522871bff26bb1"
+    }
+  ]
+}

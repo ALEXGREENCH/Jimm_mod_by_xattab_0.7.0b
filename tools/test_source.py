@@ -41,7 +41,7 @@ def main(matrix=False, skip_build=False):
          '-d', TEST, *helpers], 'compile-tests')
     # No invokedynamic in the fixture classes loaded by MicroEmulator's legacy ASM.
     run([os.environ.get('JAVAC', 'javac'), '-source', '7', '-target', '7', '-encoding', 'UTF-8',
-         '-cp', recover.cp([TEST, *runtime]), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java', ROOT / 'tools/source/FileSystemIO.java', ROOT / 'tools/source/CameraIO.java', ROOT / 'tools/source/BlinkIO.java', ROOT / 'tools/source/OptionsIO.java', ROOT / 'tools/source/TimerIO.java', ROOT / 'tools/source/MenuIO.java', ROOT / 'tools/source/ResourceIO.java', ROOT / 'tools/source/EmotionsIO.java', ROOT / 'tools/source/ServerActionIO.java', ROOT / 'tools/source/RunnableIO.java', ROOT / 'tools/source/BirthdayIO.java'], 'compile-transport-io')
+         '-cp', recover.cp([TEST, *runtime]), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java', ROOT / 'tools/source/FileSystemIO.java', ROOT / 'tools/source/CameraIO.java', ROOT / 'tools/source/BlinkIO.java', ROOT / 'tools/source/OptionsIO.java', ROOT / 'tools/source/TimerIO.java', ROOT / 'tools/source/MenuIO.java', ROOT / 'tools/source/ResourceIO.java', ROOT / 'tools/source/EmotionsIO.java', ROOT / 'tools/source/ServerActionIO.java', ROOT / 'tools/source/RunnableIO.java', ROOT / 'tools/source/BirthdayIO.java', ROOT / 'tools/source/SocketIO.java'], 'compile-transport-io')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
     original = ROOT / 'preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar'
@@ -103,6 +103,31 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('Transport mismatch: compare build/source-tests/transport-reference.txt and transport-source.txt')
     report['transport_observations'] = len(transport_ref.read_text().splitlines())
     report['transport_differences'] = 0
+    socket_outputs = []
+    for mode in ['reference', 'source']:
+        fixture, output = TEST / ('socket-' + mode + '.jar'), TEST / ('socket-' + mode + '.txt')
+        run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']), 'SocketFixture',
+             TEST / ('network-' + mode + '.jar'), fixture, mode, TEST], 'socket-fixture-' + mode)
+        report['socket_' + mode] = run([*java, 'SocketProbe', fixture, mode, output], 'socket-' + mode)
+        socket_outputs.append(output.read_bytes())
+    if socket_outputs[0] != socket_outputs[1]:
+        raise AssertionError('Socket mismatch: compare build/source-tests/socket-{reference,source}.txt')
+    report['socket_observations'] = len(socket_outputs[0].splitlines())
+    report['socket_differences'] = 0
+    guard = socket_outputs[0].decode('utf-8').splitlines()[-1]
+    connects, closes, sends, receives = [int(part.split(':')[1]) for part in guard.split('/')]
+    socket_report = {'scope': 'Actual MIDP2 SOCKETConnection connect/close/send/run/local-address methods. '
+                     'Scripted Connector and streams, fixed initial-sequence clock, captured Thread.start/sleep/yield '
+                     'and terminal JimmException delivery. Actual locks, Object.notify, receiver queue, packet '
+                     'serialization, sequence assignment and Traffic counters execute. The start boundary does not '
+                     'launch a thread; run is invoked directly. Physical scheduling, a live ICQ server, and device '
+                     'network APIs are not claimed. Existing NetworkFixture replaces the separate Icq.connect entry point.',
+                     'reference_sha256': recover.sha(original), 'source_jar_sha256': recover.sha(built),
+                     'source_unoptimized_class_jar_sha256': recover.sha(source / 'classes.jar'),
+                     'observations': report['socket_observations'], 'connect_calls': connects,
+                     'close_calls': closes, 'send_calls': sends, 'receiver_calls': receives, 'differences': 0}
+    (ROOT / 'preservation/reports/source-socket.json').write_text(
+        json.dumps(socket_report, indent=2) + '\n', encoding='utf-8', newline='\n')
     login_ref, login_src = TEST / 'login-reference.txt', TEST / 'login-source.txt'
     for path, mode, output in [(original, 'reference', login_ref), (test_jar, 'source', login_src)]:
         fixture = TEST / ('login-' + mode + '.jar')
@@ -303,6 +328,7 @@ def main(matrix=False, skip_build=False):
         report['graphics'] = run([sys.executable, ROOT / 'tools/test_graphics.py', '--skip-build'], 'graphics-audit')
         report['filesystems'] = run([sys.executable, ROOT / 'tools/test_filesystems.py', '--skip-build'], 'filesystems-audit')
         report['light'] = run([sys.executable, ROOT / 'tools/test_light.py', '--skip-build'], 'light-audit')
+        report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False, indent=2))
 

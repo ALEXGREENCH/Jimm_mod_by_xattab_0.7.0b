@@ -30,6 +30,8 @@ jobs:
             preservation/reports/source-xtraz.json
             preservation/reports/source-convertor.json
             preservation/reports/source-birthday.json
+            preservation/reports/source-socket.json
+            preservation/reports/source-socket-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:
