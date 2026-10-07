@@ -1277,7 +1277,7 @@ public class ContactList implements CommandListener, VirtualTreeCommands, Virtua
 	
 			Class cls = new Object().getClass();
 			InputStream is = cls.getResourceAsStream(source);
-			if (is == null) is = cls.getResourceAsStream("/" + source);
+			if (is == null) is = cls.getResourceAsStream(new StringBuffer().append("/").append(source).toString());
 			if (is != null)
 			{
 				player = Manager.createPlayer(is, mediaType);

@@ -78,6 +78,9 @@ jobs:
             preservation/reports/source-options-settings-before.json
             preservation/reports/source-options-settings-bytecode.json
             preservation/reports/source-contact-store.json
+            preservation/reports/source-sound.json
+            preservation/reports/source-sound-bytecode.json
+            preservation/reports/source-sound-before.json
   verify:
     runs-on: ubuntu-latest
     steps:

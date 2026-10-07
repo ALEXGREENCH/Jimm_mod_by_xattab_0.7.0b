@@ -2360,6 +2360,24 @@ SYMBOLS.update({
     'jimm/Jimm.e Z': 'jimm/Jimm.is_phone_NOKIA Z',
 })
 
+# Whole three-platform MMAPI executions establish these private helpers and the player field.
+# Preserve the frozen dependency-graph inventory above; no compiler differences are removed.
+METHODS.extend([
+    ('m', 'a', '(Ljava/lang/String;)Z', 'testSoundFile'),
+    ('m', 'a', '(Ljava/lang/String;)Ljavax/microedition/media/Player;', 'createPlayer'),
+    ('m', 'k', '()V', 'closePlayer'),
+    ('m', 'c', '(I)V', 'setVolume'),
+    ('cj', 'a', '(Ljava/lang/String;I)V', 'selectSoundType'),
+])
+SYMBOLS.update({
+    'm.a(Ljava/lang/String;)Z': 'jimm/ContactList.testSoundFile(Ljava/lang/String;)Z',
+    'm.a(Ljava/lang/String;)Ljavax/microedition/media/Player;': 'jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;',
+    'm.k()V': 'jimm/ContactList.closePlayer()V',
+    'm.c(I)V': 'jimm/ContactList.setVolume(I)V',
+    'cj.a(Ljava/lang/String;I)V': 'jimm/Options.selectSoundType(Ljava/lang/String;I)V',
+    'm.a Ljavax/microedition/media/Player;': 'jimm/ContactList.player Ljavax/microedition/media/Player;',
+})
+
 
 def normalized(code):
     result = []

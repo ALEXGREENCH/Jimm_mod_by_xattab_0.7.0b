@@ -836,7 +836,7 @@ public class Options
 		String[] exts = Util.explode("wav|mp3", '|');
 		for (int i = 0; i < exts.length; i++)
 		{
-			String testFile = name+exts[i];
+			String testFile = new StringBuffer().append(name).append(exts[i]).toString();
 			ok = ContactList.testSoundFile(testFile);
 			if (ok)
 			{

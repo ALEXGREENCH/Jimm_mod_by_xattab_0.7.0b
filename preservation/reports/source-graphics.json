@@ -4,9 +4,9 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_jar_sha256": "4221be879d437fff33791cdb86090fa3a4d68b78db3c6169c947f033d18eca29",
-      "source_unoptimized_class_jar_sha256": "ef19ad559aa26154eaad370b10439b1485c1b8ac46c092c136e7542a8a85ecd6",
-      "source_unoptimized_with_resources_sha256": "88914bdfb30de74d1acc662fcb173749f3d05f3d358ec2376f3e941e0aecd739",
+      "source_jar_sha256": "790fb87a68ddcafa90180d3e831d8fd64a59448be8a33edef4f961683690ab51",
+      "source_unoptimized_class_jar_sha256": "be807b86a6d745dfbaac735d659b1feab51b75851eb1106f06fb7716cfb3621b",
+      "source_unoptimized_with_resources_sha256": "67b1e1287b14f0aa62dc63afe0afe52bdd345e36206c19c05cdb68f7da0e6789",
       "observations": 2181,
       "raster_frames": 869,
       "differences": 0
@@ -14,9 +14,9 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_jar_sha256": "dba29b065d5c3c554cb4aa0746ee543897a2f917f56b742f6211bb79fb1f9cae",
-      "source_unoptimized_class_jar_sha256": "9eab13b4d5f549234869bee609b67e594bdb68039dadd3b94931e0bc10aa46c8",
-      "source_unoptimized_with_resources_sha256": "aedb3aae67c69dda1aebaecbe04c4990d17a504cca1a04930284a823974df75e",
+      "source_jar_sha256": "75538b7a2f896c0bb2fd66d4fb9f30325e7f2612f9a6080eda89d07a93263ca5",
+      "source_unoptimized_class_jar_sha256": "169bea68d21d6363087e06a3f56e5efedd7fda88e76613d93bbb38073da9abab",
+      "source_unoptimized_with_resources_sha256": "50522b85f7c8444f044e2101936af8233180203f396469ae28e2a93469237e3b",
       "observations": 71612,
       "raster_frames": 2813,
       "differences": 0
@@ -24,9 +24,9 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_jar_sha256": "0dec958fa42e188a0c77f511c5ca4466b34b62203dd9cb541af3adb7b2033393",
-      "source_unoptimized_class_jar_sha256": "51b6845721c5366c8a58ce3500013a2a6134fb899b299fcf49b79dcc50429ecb",
-      "source_unoptimized_with_resources_sha256": "c752c266f731b59848bff6f7a2a37585b0e3c78bd38a2200212cd9e00c34061d",
+      "source_jar_sha256": "3ed4d1ae2f69c7ef1c77869c565a756cd125c19400de523599e13a0cd6f0b27b",
+      "source_unoptimized_class_jar_sha256": "a0d18d2d9e7c05d0f5ec73a26ea77ea1ef08f306c9f61aa09c6cf8b1a7775013",
+      "source_unoptimized_with_resources_sha256": "5a0d9bd4a0c19b3ba37d4c60cea7dad824b46342801a3e4ef9b83c6bcca7cef6",
       "observations": 2181,
       "raster_frames": 869,
       "differences": 0

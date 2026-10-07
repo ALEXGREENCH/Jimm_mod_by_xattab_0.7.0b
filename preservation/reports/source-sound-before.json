@@ -1,0 +1,721 @@
+{
+  "source_ref": "eae427515d38451ce5659ead5e760cd4bf004cdd",
+  "scope": "Actual frozen before-source and artifacts. Runtime behavior already matches the original in the scripted sound observations; there is no invented failing functional result. The twelve before raw/optimized string-buffer paths differ in constructor/append operations from the actual May methods. The source expressions and ProGuard string simplification are restored to preserve the native operations. Full compiler branch/local/handler equality is not inferred from these operation counts.",
+  "observations": 93936,
+  "runtime_differences": 0,
+  "constructor_mismatches": [
+    {
+      "target": "MIDP2",
+      "mode": "raw",
+      "role": "create",
+      "method": "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+      "input_sha256": "ef19ad559aa26154eaad370b10439b1485c1b8ac46c092c136e7542a8a85ecd6",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 0
+      }
+    },
+    {
+      "target": "MIDP2",
+      "mode": "raw",
+      "role": "select",
+      "method": "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+      "input_sha256": "ef19ad559aa26154eaad370b10439b1485c1b8ac46c092c136e7542a8a85ecd6",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 1
+      }
+    },
+    {
+      "target": "MIDP2",
+      "mode": "optimized",
+      "role": "create",
+      "method": "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+      "input_sha256": "16f4317d9c95e0507211b8613771925ba1af93f11a0ccd1a54bf33ca92f9de3e",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 0
+      }
+    },
+    {
+      "target": "MIDP2",
+      "mode": "optimized",
+      "role": "select",
+      "method": "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+      "input_sha256": "16f4317d9c95e0507211b8613771925ba1af93f11a0ccd1a54bf33ca92f9de3e",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 1
+      }
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "raw",
+      "role": "create",
+      "method": "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+      "input_sha256": "9eab13b4d5f549234869bee609b67e594bdb68039dadd3b94931e0bc10aa46c8",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 0
+      }
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "raw",
+      "role": "select",
+      "method": "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+      "input_sha256": "9eab13b4d5f549234869bee609b67e594bdb68039dadd3b94931e0bc10aa46c8",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 1
+      }
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "optimized",
+      "role": "create",
+      "method": "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+      "input_sha256": "99f33c3351c27725d902c584e50357ffe488a35b6d255edcf459cd82bdd89948",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 0
+      }
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "optimized",
+      "role": "select",
+      "method": "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+      "input_sha256": "99f33c3351c27725d902c584e50357ffe488a35b6d255edcf459cd82bdd89948",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 1
+      }
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "raw",
+      "role": "create",
+      "method": "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+      "input_sha256": "51b6845721c5366c8a58ce3500013a2a6134fb899b299fcf49b79dcc50429ecb",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 0
+      }
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "raw",
+      "role": "select",
+      "method": "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+      "input_sha256": "51b6845721c5366c8a58ce3500013a2a6134fb899b299fcf49b79dcc50429ecb",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 1
+      }
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "optimized",
+      "role": "create",
+      "method": "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+      "input_sha256": "7b8007341c97dcf9895b8dbe47d5546ef0508dce9d401c567ad2298cca1fc962",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 0
+      }
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "optimized",
+      "role": "select",
+      "method": "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+      "input_sha256": "7b8007341c97dcf9895b8dbe47d5546ef0508dce9d401c567ad2298cca1fc962",
+      "reference_operation_counts": {
+        "empty_constructor": 1,
+        "string_constructor": 0,
+        "string_append": 2,
+        "string_value_of": 0
+      },
+      "before_operation_counts": {
+        "empty_constructor": 0,
+        "string_constructor": 1,
+        "string_append": 1,
+        "string_value_of": 1
+      }
+    }
+  ],
+  "frozen_artifact_manifest": {
+    "source_ref": "eae427515d38451ce5659ead5e760cd4bf004cdd",
+    "files": [
+      {
+        "file": "src/jimm/ContactList.java",
+        "sha256": "fd77724a89de15cae5af67127e2f8842704de9320a3fe677022ac1cabf917d29"
+      },
+      {
+        "file": "src/jimm/Options.java",
+        "sha256": "9f64bff41f3211f76ff4c3c1d80b9934393bea4d955d1d73f85624fe126c4f45"
+      },
+      {
+        "file": "MIDP2/classes.jar",
+        "sha256": "ef19ad559aa26154eaad370b10439b1485c1b8ac46c092c136e7542a8a85ecd6"
+      },
+      {
+        "file": "MIDP2/source.jar",
+        "sha256": "16f4317d9c95e0507211b8613771925ba1af93f11a0ccd1a54bf33ca92f9de3e"
+      },
+      {
+        "file": "witness/sound-MIDP2-reference.jar",
+        "sha256": "a08a97ec5220f8ca9807d43a80583064b4ab10b36691960599f4ed8665fc97a9"
+      },
+      {
+        "file": "witness/sound-MIDP2-reference.txt",
+        "sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1"
+      },
+      {
+        "file": "witness/sound-MIDP2-reference.properties",
+        "sha256": "bb80a64127cd81aa6526d475a0adda56c1cdfff2cb8f595a6ac09b24ac15624c"
+      },
+      {
+        "file": "witness/sound-MIDP2-raw.jar",
+        "sha256": "38b7d67e6eb6bd894069c7f665e072c5eceac06e7a00da2de3ece6b8a7ebf21b"
+      },
+      {
+        "file": "witness/sound-MIDP2-raw.txt",
+        "sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1"
+      },
+      {
+        "file": "witness/sound-MIDP2-raw.properties",
+        "sha256": "9f36cdccb214f20d1433591d62480c3da85869d624934fc72435da0d1e4cab8c"
+      },
+      {
+        "file": "witness/sound-MIDP2-optimized.jar",
+        "sha256": "2a128272c002cfdb61a8ad57a040479667e4318baf807bc4e4ee0c4afeee3073"
+      },
+      {
+        "file": "witness/sound-MIDP2-optimized.txt",
+        "sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1"
+      },
+      {
+        "file": "witness/sound-MIDP2-optimized.properties",
+        "sha256": "9f36cdccb214f20d1433591d62480c3da85869d624934fc72435da0d1e4cab8c"
+      },
+      {
+        "file": "MOTOROLA/classes.jar",
+        "sha256": "9eab13b4d5f549234869bee609b67e594bdb68039dadd3b94931e0bc10aa46c8"
+      },
+      {
+        "file": "MOTOROLA/source.jar",
+        "sha256": "99f33c3351c27725d902c584e50357ffe488a35b6d255edcf459cd82bdd89948"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-reference.jar",
+        "sha256": "1a6b6e11b0fd89375826b2f59b1f9428a32fdef9d93dc114bc694c762c937aa5"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-reference.txt",
+        "sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-reference.properties",
+        "sha256": "d5cbb9cc94a91be5ca1b63f1fa7fbd9cf4f39079b044d419bc1a3f11752a1cfd"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-raw.jar",
+        "sha256": "4d6801f9ac45b79a0ea8409ff3feb37551a8f6b060b4d81ca0645470dadd532a"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-raw.txt",
+        "sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-raw.properties",
+        "sha256": "10c406eeb2ca25541137d1f94a3b96093dcdc810756a01e6dabf0387ff0b7b0a"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-optimized.jar",
+        "sha256": "7120ba6c3de589deae0082b83d7eab219f095da6195fa17f6040822525a71d65"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-optimized.txt",
+        "sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1"
+      },
+      {
+        "file": "witness/sound-MOTOROLA-optimized.properties",
+        "sha256": "10c406eeb2ca25541137d1f94a3b96093dcdc810756a01e6dabf0387ff0b7b0a"
+      },
+      {
+        "file": "SIEMENS2/classes.jar",
+        "sha256": "51b6845721c5366c8a58ce3500013a2a6134fb899b299fcf49b79dcc50429ecb"
+      },
+      {
+        "file": "SIEMENS2/source.jar",
+        "sha256": "7b8007341c97dcf9895b8dbe47d5546ef0508dce9d401c567ad2298cca1fc962"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-reference.jar",
+        "sha256": "1dc6cc49dd83be7ed76c7afa24853213607241723484ab7633ba03a2c585666e"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-reference.txt",
+        "sha256": "c09c8c8a629aea2df7ddcd9577b791cd54c2b539ed420f05aa4ba96b740dab4d"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-reference.properties",
+        "sha256": "cd01a18ecc5146f1a1934615945c69586f3108874176be59a36919b691ba8096"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-raw.jar",
+        "sha256": "d4c5931de194e3518f79ed184d8403b9500de364610166f4b1b53c06062a2782"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-raw.txt",
+        "sha256": "c09c8c8a629aea2df7ddcd9577b791cd54c2b539ed420f05aa4ba96b740dab4d"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-raw.properties",
+        "sha256": "9f36cdccb214f20d1433591d62480c3da85869d624934fc72435da0d1e4cab8c"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-optimized.jar",
+        "sha256": "185cfa19ca616e8af5127b49492837d3ba4a8046c258eb3e4de2e352e8dc1add"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-optimized.txt",
+        "sha256": "c09c8c8a629aea2df7ddcd9577b791cd54c2b539ed420f05aa4ba96b740dab4d"
+      },
+      {
+        "file": "witness/sound-SIEMENS2-optimized.properties",
+        "sha256": "9f36cdccb214f20d1433591d62480c3da85869d624934fc72435da0d1e4cab8c"
+      },
+      {
+        "file": "reports/source-sound.json",
+        "sha256": "9ae662ecb8adcfbf56ee0e516a73574e1515794d4329ce261439158d70f89932"
+      },
+      {
+        "file": "reports/source-sound-bytecode.json",
+        "sha256": "31cdbd9c25e98489c8fbc302a5316d43a3cb55632fac0ebc47dcd88c652b8fbe"
+      },
+      {
+        "file": "reports/source-bytecode-comparison.json",
+        "sha256": "ff535f0e839a484e0328407d76addac798056a5eceef9e53934daceb61277823"
+      }
+    ]
+  },
+  "runtime_witnesses": [
+    {
+      "target": "MIDP2",
+      "observations": 31312,
+      "coverage": {
+        "create": 7395,
+        "test_file": 7395,
+        "close": 49,
+        "volume": 936,
+        "callback": 45,
+        "select": 4352,
+        "notify": 11140
+      },
+      "differences": 0,
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+          "fixture_sha256": "a08a97ec5220f8ca9807d43a80583064b4ab10b36691960599f4ed8665fc97a9",
+          "output_sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "a(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "a(Ljava/lang/String;)Z",
+            "close": "k()V",
+            "volume": "c(I)V",
+            "notify": "b(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "a(Ljava/lang/String;I)V"
+          }
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "a2f993145165050e62db5c29968d1eeb553ebea45b5419f7b60c42f824fb23ed",
+          "fixture_sha256": "38b7d67e6eb6bd894069c7f665e072c5eceac06e7a00da2de3ece6b8a7ebf21b",
+          "output_sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "testSoundFile(Ljava/lang/String;)Z",
+            "close": "closePlayer()V",
+            "volume": "setVolume(I)V",
+            "notify": "playSoundNotification(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "selectSoundType(Ljava/lang/String;I)V"
+          }
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "16f4317d9c95e0507211b8613771925ba1af93f11a0ccd1a54bf33ca92f9de3e",
+          "fixture_sha256": "2a128272c002cfdb61a8ad57a040479667e4318baf807bc4e4ee0c4afeee3073",
+          "output_sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "testSoundFile(Ljava/lang/String;)Z",
+            "close": "closePlayer()V",
+            "volume": "setVolume(I)V",
+            "notify": "playSoundNotification(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "selectSoundType(Ljava/lang/String;I)V"
+          }
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "observations": 31312,
+      "coverage": {
+        "create": 7395,
+        "test_file": 7395,
+        "close": 49,
+        "volume": 936,
+        "callback": 45,
+        "select": 4352,
+        "notify": 11140
+      },
+      "differences": 0,
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+          "fixture_sha256": "1a6b6e11b0fd89375826b2f59b1f9428a32fdef9d93dc114bc694c762c937aa5",
+          "output_sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "a(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "a(Ljava/lang/String;)Z",
+            "close": "k()V",
+            "volume": "c(I)V",
+            "notify": "b(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "a(Ljava/lang/String;I)V"
+          }
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "2b063832ea2231ec00c524d3d112282cda1c5d1103eccb0e8a7396df24fa2e77",
+          "fixture_sha256": "4d6801f9ac45b79a0ea8409ff3feb37551a8f6b060b4d81ca0645470dadd532a",
+          "output_sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "testSoundFile(Ljava/lang/String;)Z",
+            "close": "closePlayer()V",
+            "volume": "setVolume(I)V",
+            "notify": "playSoundNotification(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "selectSoundType(Ljava/lang/String;I)V"
+          }
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "99f33c3351c27725d902c584e50357ffe488a35b6d255edcf459cd82bdd89948",
+          "fixture_sha256": "7120ba6c3de589deae0082b83d7eab219f095da6195fa17f6040822525a71d65",
+          "output_sha256": "8e6ae229d2208ff95812b29eda6182b84af9a7f1accb0885ca2a458f3546aef1",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "testSoundFile(Ljava/lang/String;)Z",
+            "close": "closePlayer()V",
+            "volume": "setVolume(I)V",
+            "notify": "playSoundNotification(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "selectSoundType(Ljava/lang/String;I)V"
+          }
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "observations": 31312,
+      "coverage": {
+        "create": 7395,
+        "test_file": 7395,
+        "close": 49,
+        "volume": 936,
+        "callback": 45,
+        "select": 4352,
+        "notify": 11140
+      },
+      "differences": 0,
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+          "fixture_sha256": "1dc6cc49dd83be7ed76c7afa24853213607241723484ab7633ba03a2c585666e",
+          "output_sha256": "c09c8c8a629aea2df7ddcd9577b791cd54c2b539ed420f05aa4ba96b740dab4d",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "a(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "a(Ljava/lang/String;)Z",
+            "close": "k()V",
+            "volume": "c(I)V",
+            "notify": "b(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "a(Ljava/lang/String;I)V"
+          }
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "dcfc600fe49e4f2ce85867966830f000735d0635bddb509b3c010627d766b3a9",
+          "fixture_sha256": "d4c5931de194e3518f79ed184d8403b9500de364610166f4b1b53c06062a2782",
+          "output_sha256": "c09c8c8a629aea2df7ddcd9577b791cd54c2b539ed420f05aa4ba96b740dab4d",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "testSoundFile(Ljava/lang/String;)Z",
+            "close": "closePlayer()V",
+            "volume": "setVolume(I)V",
+            "notify": "playSoundNotification(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "selectSoundType(Ljava/lang/String;I)V"
+          }
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "7b8007341c97dcf9895b8dbe47d5546ef0508dce9d401c567ad2298cca1fc962",
+          "fixture_sha256": "185cfa19ca616e8af5127b49492837d3ba4a8046c258eb3e4de2e352e8dc1add",
+          "output_sha256": "c09c8c8a629aea2df7ddcd9577b791cd54c2b539ed420f05aa4ba96b740dab4d",
+          "observations": 31312,
+          "coverage": {
+            "create": 7395,
+            "test_file": 7395,
+            "close": 49,
+            "volume": 936,
+            "callback": 45,
+            "select": 4352,
+            "notify": 11140
+          },
+          "enumerated_external_call_sites": 8,
+          "other_application_bytes_unchanged": true,
+          "subject_other_instructions_metadata_and_handlers_unchanged": true,
+          "methods": {
+            "create": "createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+            "test": "testSoundFile(Ljava/lang/String;)Z",
+            "close": "closePlayer()V",
+            "volume": "setVolume(I)V",
+            "notify": "playSoundNotification(I)V",
+            "event": "playerUpdate(Ljavax/microedition/media/Player;Ljava/lang/String;Ljava/lang/Object;)V",
+            "select": "selectSoundType(Ljava/lang/String;I)V"
+          }
+        }
+      ]
+    }
+  ],
+  "optimized_method_changes_after_fix": [
+    {
+      "target": "MIDP2",
+      "changed_optimized_methods": [
+        "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+        "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+        "jimm/comm/ActionListener.isSpam(Ljimm/comm/Message;)Z"
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "changed_optimized_methods": [
+        "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+        "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+        "jimm/comm/ActionListener.isSpam(Ljimm/comm/Message;)Z"
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "changed_optimized_methods": [
+        "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+        "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+        "jimm/comm/ActionListener.isSpam(Ljimm/comm/Message;)Z"
+      ]
+    }
+  ]
+}

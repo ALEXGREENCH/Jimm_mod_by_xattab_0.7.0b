@@ -469,6 +469,8 @@ def main(matrix=False, skip_build=False):
         report['options_settings'] = run([sys.executable, ROOT / 'tools/test_options_settings.py'], 'options-settings-audit')
         report['options_settings_bytecode'] = run([sys.executable, ROOT / 'tools/audit_options_settings.py'], 'options-settings-bytecode-audit')
         report['contact_store'] = run([sys.executable, ROOT / 'tools/test_contact_store.py'], 'contact-store-audit')
+        report['sound'] = run([sys.executable, ROOT / 'tools/test_sound.py', '--skip-build'], 'sound-audit')
+        report['sound_bytecode'] = run([sys.executable, ROOT / 'tools/audit_sound.py'], 'sound-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')

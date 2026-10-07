@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "bafe61ae49ba675231da704b0a82b6098385ca890d96bbf9adbc77a5aad5647d",
+  "rebuilt_sha256": "22b61d82b75f5fc77dfa96affd5b9918a49a663c4ae63e411fc442cf9909b8c6",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -7677,12 +7677,12 @@
       "abstract_modifier_verified": true,
       "abstract_method": false,
       "reference_instructions": 192,
-      "source_instructions": 181,
+      "source_instructions": 182,
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "71fa8464937410a4cbed1534c3650e7a7237a97e2ac0be7f5f44e8c7111c3f3b",
-      "source_normalized_sha256": "a7cdeef2e21ad791da5ac8d12fe4cfc27c776bee8fce74515f8ea038ada20712"
+      "source_normalized_sha256": "fc5e1b3469ef1b80835f20f864a97545dff253189d1fc36d9f678887873f672f"
     },
     {
       "reference": "co.b()I",
@@ -14465,7 +14465,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "6304220b7956c1a3cbb42cf9614f3b91034165bb32724ed5f66309aae5358f1b",
+      "reference_normalized_sha256": "86c60ea3ada4d107016c541da6b8d8bcd12e5e545fe619e7d355b6f87d0da98e",
       "source_normalized_sha256": "e8cf6c74a9842039d25764b95ea44081926b2db65415a22379b16922bb56971d"
     },
     {
@@ -17185,7 +17185,7 @@
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
-      "reference_normalized_sha256": "fc8d48b8446fd73c279dc72d064d003675996059c26a7cbade7dc46e2854c2d6",
+      "reference_normalized_sha256": "edca99de50c3ae40a8c7109bc587bf9016c455620aad1e4edec5f3c4ab8b4046",
       "source_normalized_sha256": "e0cd93b0a7974e5bf320e03ace7a1d968789cc7b11f876815703a4950d7d4c75"
     },
     {
@@ -17203,9 +17203,89 @@
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "23591f599ff9d43b8f94a44bebb1c286790e9008d196f3dc7a2c652d7652086f",
       "source_normalized_sha256": "d7f4ead013942b8393a8461a57f66b269be6b8d34ff6e83f6d2a06115b0d0173"
+    },
+    {
+      "reference": "m.a(Ljava/lang/String;)Z",
+      "source": "jimm/ContactList.testSoundFile(Ljava/lang/String;)Z",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 12,
+      "source_instructions": 12,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "f8f46734913c65d5bb2fa36ecc2aa16d7e8a9e44a6f4941b58551f4044efaea2",
+      "source_normalized_sha256": "f8f46734913c65d5bb2fa36ecc2aa16d7e8a9e44a6f4941b58551f4044efaea2"
+    },
+    {
+      "reference": "m.a(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+      "source": "jimm/ContactList.createPlayer(Ljava/lang/String;)Ljavax/microedition/media/Player;",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 81,
+      "source_instructions": 81,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "d7094c14f96f4fb0f80bd273f9f1d44fe2d3f544e114feefea76bdeac3c8a0b9",
+      "source_normalized_sha256": "9522ddb7d856890e8d4c54016ca68a9c17a37e043375afec37bab80f1b386fcb"
+    },
+    {
+      "reference": "m.k()V",
+      "source": "jimm/ContactList.closePlayer()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 15,
+      "source_instructions": 15,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "9dd851c457b86283f0ff1fbe0a805a60ab568ea14d3ffacd4c10e637a94aa55a",
+      "source_normalized_sha256": "9dd851c457b86283f0ff1fbe0a805a60ab568ea14d3ffacd4c10e637a94aa55a"
+    },
+    {
+      "reference": "m.c(I)V",
+      "source": "jimm/ContactList.setVolume(I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 18,
+      "source_instructions": 18,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "f20321ded92ec936644de8df62cdf7ea862524003ce33087b71efdfd02085606",
+      "source_normalized_sha256": "f20321ded92ec936644de8df62cdf7ea862524003ce33087b71efdfd02085606"
+    },
+    {
+      "reference": "cj.a(Ljava/lang/String;I)V",
+      "source": "jimm/Options.selectSoundType(Ljava/lang/String;I)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "abstract_modifier_verified": true,
+      "abstract_method": false,
+      "reference_instructions": 36,
+      "source_instructions": 36,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "9a12ee6cb1fc80c8086b93c3c7544dd707b66072ed2706ea5ab61c990ef8b353",
+      "source_normalized_sha256": "490aa5767440f9dfc5c02ab61b5661e804ea3413266b5d9919f4849028c01e3e"
     }
   ],
   "abstract_declarations": 34,
-  "same_normalized_executable_method_bodies": 590,
+  "same_normalized_executable_method_bodies": 593,
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."
 }

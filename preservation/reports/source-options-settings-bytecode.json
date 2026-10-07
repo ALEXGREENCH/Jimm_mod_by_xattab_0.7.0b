@@ -54,7 +54,7 @@
         },
         {
           "mode": "authoring",
-          "jar_sha256": "ef19ad559aa26154eaad370b10439b1485c1b8ac46c092c136e7542a8a85ecd6",
+          "jar_sha256": "be807b86a6d745dfbaac735d659b1feab51b75851eb1106f06fb7716cfb3621b",
           "owner": "jimm/Options",
           "alpha": "updateAlpha()V",
           "complete_instructions": [
@@ -101,7 +101,7 @@
         },
         {
           "mode": "optimized",
-          "jar_sha256": "4221be879d437fff33791cdb86090fa3a4d68b78db3c6169c947f033d18eca29",
+          "jar_sha256": "790fb87a68ddcafa90180d3e831d8fd64a59448be8a33edef4f961683690ab51",
           "owner": "jimm/Options",
           "alpha": "updateAlpha()V",
           "complete_instructions": [
@@ -198,7 +198,7 @@
         },
         {
           "mode": "authoring",
-          "jar_sha256": "9eab13b4d5f549234869bee609b67e594bdb68039dadd3b94931e0bc10aa46c8",
+          "jar_sha256": "169bea68d21d6363087e06a3f56e5efedd7fda88e76613d93bbb38073da9abab",
           "owner": "jimm/Options",
           "alpha": "updateAlpha()V",
           "complete_instructions": [
@@ -242,7 +242,7 @@
         },
         {
           "mode": "optimized",
-          "jar_sha256": "dba29b065d5c3c554cb4aa0746ee543897a2f917f56b742f6211bb79fb1f9cae",
+          "jar_sha256": "75538b7a2f896c0bb2fd66d4fb9f30325e7f2612f9a6080eda89d07a93263ca5",
           "owner": "jimm/Options",
           "alpha": "updateAlpha()V",
           "complete_instructions": [
@@ -338,7 +338,7 @@
         },
         {
           "mode": "authoring",
-          "jar_sha256": "51b6845721c5366c8a58ce3500013a2a6134fb899b299fcf49b79dcc50429ecb",
+          "jar_sha256": "a0d18d2d9e7c05d0f5ec73a26ea77ea1ef08f306c9f61aa09c6cf8b1a7775013",
           "owner": "jimm/Options",
           "alpha": "updateAlpha()V",
           "complete_instructions": [
@@ -384,7 +384,7 @@
         },
         {
           "mode": "optimized",
-          "jar_sha256": "0dec958fa42e188a0c77f511c5ca4466b34b62203dd9cb541af3adb7b2033393",
+          "jar_sha256": "3ed4d1ae2f69c7ef1c77869c565a756cd125c19400de523599e13a0cd6f0b27b",
           "owner": "jimm/Options",
           "alpha": "updateAlpha()V",
           "complete_instructions": [

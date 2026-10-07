@@ -70,6 +70,8 @@ def build(target='MIDP2', language='RU', modules=MODULES, compile_only=False, sm
     config += ['-libraryjars "' + p.as_posix() + '"' for p in libs + [dest / 'api-stubs.jar']]
     config += ['-keep public class * extends javax.microedition.midlet.MIDlet',
                '-allowaccessmodification', '-dontobfuscate', '-optimizationpasses 2',
+               # Retain explicit empty-buffer append sequences seen in the May release.
+               '-optimizations !code/simplification/string',
                '-microedition', '-target 1.1', '-dontnote']
     (dest / 'build.pro').write_text('\n'.join(config) + '\n')
     recovery.run([recovery.java(), '-jar', CACHE / 'proguard.jar', '@' + str(dest / 'build.pro')])
