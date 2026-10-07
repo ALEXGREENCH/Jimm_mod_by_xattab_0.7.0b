@@ -91,6 +91,9 @@ jobs:
             preservation/reports/source-other-status-bytecode.json
             preservation/reports/source-ui-helper-bytecode.json
             preservation/reports/source-ui-helper-replay.json
+            preservation/reports/source-resolver.json
+            preservation/reports/source-resolver-negative.json
+            preservation/reports/source-network-helper-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

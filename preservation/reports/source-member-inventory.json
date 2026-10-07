@@ -1,8 +1,8 @@
 {
   "scope": "Verified typed members from existing name mappings, canonical JVM callbacks/constructors, graphics/light audits and contact property access. Instruction order, compiler accessors, optimizer specialization and exception regions are not simplified. Canonical names continue the inherited source; they do not prove lost author spellings. All original classes have an authoring-class identity; hierarchy differences are recorded rather than suppressed. Contact synthetic expressions and removed/specialized signatures remain explicit. Member naming is not whole-program equivalence.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_optimized_class_jar_sha256": "f3a71abacb4dcd3a417fa9b8dd36d64bdfb35ac5af1a435965876c829da0bb12",
-  "source_unoptimized_class_jar_sha256": "55d2c31f9aef9dd12cf0e419730caf6cd1d7e18350b191bf1e5d54c5f7937f56",
+  "source_optimized_class_jar_sha256": "40e8c86512c0a1d5000743b2dd4139b8cf8ee6c46428dffd466c7533148b36dc",
+  "source_unoptimized_class_jar_sha256": "63d0ed1e8d0cdc2c684696a86ffb66caec7b42da2f11af3c3c57fe8184dfb57f",
   "original_classes_named": 101,
   "new_signatures_verified": 181,
   "new_field_declarations_verified": 61,
@@ -2752,7 +2752,7 @@
       "signature_and_modifiers_verified": true,
       "reference_instructions": 2,
       "source_instructions": 2,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {
@@ -4175,7 +4175,7 @@
       "reference_owner": "z",
       "reference_name": "b",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_optimized_class_jar_sha256": "f3a71abacb4dcd3a417fa9b8dd36d64bdfb35ac5af1a435965876c829da0bb12",
+      "source_optimized_class_jar_sha256": "40e8c86512c0a1d5000743b2dd4139b8cf8ee6c46428dffd466c7533148b36dc",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9
@@ -4185,7 +4185,7 @@
       "reference_owner": "z",
       "reference_name": "b",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_optimized_class_jar_sha256": "52fcb92a91d2c8d6b8cb7ded7f1fac8465fef2d15f8139000aa9edfafe6058f0",
+      "source_optimized_class_jar_sha256": "1ca44839b91585f86d4a8ada9dbab6388d0f6ca672c409794f21f2a72443a731",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9
@@ -4195,7 +4195,7 @@
       "reference_owner": "y",
       "reference_name": "b",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_optimized_class_jar_sha256": "7e25dea4fbe12e62bc53f043e1f6169371f28f9a0df54a331af2d7c03f32d4ab",
+      "source_optimized_class_jar_sha256": "ba95b5892d7392dab3a18a41d467c8b3e34f9cfe18dd7c89a57bc1d58d6a3ef8",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9

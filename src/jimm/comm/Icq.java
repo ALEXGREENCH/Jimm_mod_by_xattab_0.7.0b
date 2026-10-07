@@ -1252,36 +1252,45 @@ public class Icq implements Runnable
     	private int nextIcqSequence;
     	
         // Tries to resolve given host IP
-    	private synchronized String ResolveIP(String host, String port)
+        private String ResolveIP(String host, String port)
         {
-            if (Util.isIP(host)) return host;
-            // #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
-            SocketConnection c;
-            
+            Class connectionClass;
             try
             {
-                c = (SocketConnection) Connector.open("socket://" + host + ":" + port, Connector.READ_WRITE);
-                String ip = c.getAddress();
+                connectionClass = Class.forName("jimm.comm.Icq$SOCKSConnection");
+            }
+            catch (ClassNotFoundException e) { return "0.0.0.0"; }
+            synchronized (connectionClass)
+            {
+                if (Util.isIP(host)) return host;
+                // #sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
+                SocketConnection c;
 
                 try
                 {
-                    c.close();
-                } catch (Exception e)
-                { /* Do nothing */
-                } finally
-                {
-                    c = null;
-                }
+                    c = (SocketConnection) Connector.open("socket://" + host + ":" + port, Connector.READ_WRITE);
+                    String ip = c.getAddress();
 
-                return ip;
+                    try
+                    {
+                        c.close();
+                    } catch (Exception e)
+                    { /* Do nothing */
+                    } finally
+                    {
+                        c = null;
+                    }
+
+                    return ip;
+                }
+                catch (Exception e)
+                {
+                    return "0.0.0.0";
+                }
+                // #sijapp cond.else#
+                    return "0.0.0.0";
+                // #sijapp cond.end#
             }
-            catch (Exception e)
-            {
-                return "0.0.0.0";
-            }
-            // #sijapp cond.else#
-            	return "0.0.0.0";
-            // #sijapp cond.end#
         }
 
 

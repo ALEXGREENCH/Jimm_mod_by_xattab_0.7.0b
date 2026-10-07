@@ -2512,6 +2512,36 @@ SYMBOLS.update({
 })
 
 
+# Remaining packet, roster and MIDlet wrappers retain whole raw/optimized bodies
+# in audit_network_helpers.py. ResolveIP has an explicit class-monitor report.
+NETWORK_HELPERS = [
+    ('ap', 'a', '()Lan;', 'getPacket'),
+    ('cb', 'a', '(Lan;)V', 'sendPacket'),
+    ('ct', 'c', '()V', 'sendGroupsList'),
+    ('ct', 'a', '(Lbb;)V', 'sendGroup'),
+    ('ct', 'a', '(I)V', 'onEvent'),
+    ('ct', 'a', '(Lbb;)[B', 'packRosterItem'),
+    ('ct', 'a', '()[B', 'packGroups'),
+    ('n', 'a', '(Ljava/lang/String;)V', 'connect'),
+    ('n', 'a', '()Ljava/lang/String;', 'getProgressMsg'),
+    ('n', 'a', '(I)V', 'onEvent'),
+    ('jimm/Jimm', 'a', '()V', 'cancelTimer'),
+    ('jimm/Jimm', 'a', '()Lcv;', 'getSplashCanvasRef'),
+    ('jimm/Jimm', 'b', '()V', 'showWorkScreen'),
+    ('bv', 'a', '(II)Ljava/lang/String;', 'getErrDesc'),
+]
+METHODS.extend(NETWORK_HELPERS)
+for _owner, _name, _desc, _source in NETWORK_HELPERS:
+    _translated_desc = _desc
+    for _before, _after in CLASSES.items():
+        _translated_desc = _translated_desc.replace('L' + _before + ';', 'L' + _after + ';')
+    SYMBOLS[_owner + '.' + _name + _desc] = CLASSES[_owner] + '.' + _source + _translated_desc
+SYMBOLS.update({
+    'jimm/Jimm.a Lcv;': 'jimm/Jimm.sc Ljimm/SplashCanvas;',
+    'jimm/Jimm.a Ljava/util/Timer;': 'jimm/Jimm.timer Ljava/util/Timer;',
+})
+
+
 def normalized(code):
     result = []
     for instruction in code:

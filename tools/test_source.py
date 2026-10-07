@@ -480,6 +480,8 @@ def main(matrix=False, skip_build=False):
         report['other_status_bytecode'] = run([sys.executable, ROOT / 'tools/audit_other_status.py'], 'other-status-bytecode-audit')
         report['ui_helper_bytecode'] = run([sys.executable, ROOT / 'tools/audit_ui_helpers.py'], 'ui-helper-bytecode-audit')
         report['ui_helper_replay'] = run([sys.executable, ROOT / 'tools/replay_ui_helpers.py'], 'ui-helper-replay-audit')
+        report['resolver'] = run([sys.executable, ROOT / 'tools/test_resolver.py'], 'resolver-audit')
+        report['network_helper_bytecode'] = run([sys.executable, ROOT / 'tools/audit_network_helpers.py'], 'network-helper-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')
