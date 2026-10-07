@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Test maintained src against the original May 12 release; no network login."""
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -41,7 +42,7 @@ def main(matrix=False, skip_build=False):
          '-d', TEST, *helpers], 'compile-tests')
     # No invokedynamic in the fixture classes loaded by MicroEmulator's legacy ASM.
     run([os.environ.get('JAVAC', 'javac'), '-source', '7', '-target', '7', '-encoding', 'UTF-8',
-         '-cp', recover.cp([TEST, *runtime]), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java', ROOT / 'tools/source/FileSystemIO.java', ROOT / 'tools/source/CameraIO.java', ROOT / 'tools/source/BlinkIO.java', ROOT / 'tools/source/OptionsIO.java', ROOT / 'tools/source/TimerIO.java', ROOT / 'tools/source/MenuIO.java', ROOT / 'tools/source/ResourceIO.java', ROOT / 'tools/source/EmotionsIO.java', ROOT / 'tools/source/ServerActionIO.java', ROOT / 'tools/source/RunnableIO.java', ROOT / 'tools/source/BirthdayIO.java', ROOT / 'tools/source/SocketIO.java', ROOT / 'tools/source/RequestInfoIO.java', ROOT / 'tools/source/PasswordIO.java'], 'compile-transport-io')
+         '-cp', recover.cp([TEST, *runtime]), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java', ROOT / 'tools/source/FileSystemIO.java', ROOT / 'tools/source/CameraIO.java', ROOT / 'tools/source/BlinkIO.java', ROOT / 'tools/source/OptionsIO.java', ROOT / 'tools/source/TimerIO.java', ROOT / 'tools/source/MenuIO.java', ROOT / 'tools/source/ResourceIO.java', ROOT / 'tools/source/EmotionsIO.java', ROOT / 'tools/source/ServerActionIO.java', ROOT / 'tools/source/RunnableIO.java', ROOT / 'tools/source/BirthdayIO.java', ROOT / 'tools/source/SocketIO.java', ROOT / 'tools/source/RequestInfoIO.java', ROOT / 'tools/source/PasswordIO.java', ROOT / 'tools/source/PhoneBookIO.java'], 'compile-transport-io')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
     original = ROOT / 'preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar'
@@ -216,7 +217,7 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('File transfer mismatch: compare build/source-tests/file-transfer-reference.txt and file-transfer-source.txt')
     report['file_transfer_observations'] = len(file_ref.read_text().splitlines())
     report['file_transfer_differences'] = 0
-    for prefix, fixture_class, probe in [('password', 'PasswordFixture', 'PasswordProbe'), ('birthday', 'BirthdayFixture', 'BirthdayProbe'), ('request_info', 'RequestInfoFixture', 'RequestInfoProbe'), ('xtraz', 'XtrazFixture', 'XtrazProbe'), ('runnable', 'RunnableFixture', 'RunnableProbe'), ('server_actions', 'ServerActionFixture', 'ServerActionProbe'), ('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe'), ('list_menu', 'ListMenuFixture', 'ListMenuProbe'), ('list_menu_italic', 'ListMenuFixture', 'ListMenuProbe'), ('contact_tree', 'ContactTreeFixture', 'ContactTreeProbe'), ('tree', 'VirtualListFixture', 'TreeProbe'), ('form', 'FormFixture', 'FormProbe'), ('text_list', 'VirtualListFixture', 'TextListProbe'), ('alert', 'VirtualListFixture', 'AlertProbe'), ('templates', 'TemplatesFixture', 'TemplatesProbe'), ('templates_smart', 'TemplatesFixture', 'TemplatesProbe'), ('selector', 'SelectorFixture', 'SelectorProbe'), ('file_browser', 'VirtualListFixture', 'FileBrowserProbe'), ('emotions', 'EmotionsFixture', 'EmotionsProbe')]:
+    for prefix, fixture_class, probe in [('phone_book', 'PhoneBookFixture', 'PhoneBookProbe'), ('password', 'PasswordFixture', 'PasswordProbe'), ('birthday', 'BirthdayFixture', 'BirthdayProbe'), ('request_info', 'RequestInfoFixture', 'RequestInfoProbe'), ('xtraz', 'XtrazFixture', 'XtrazProbe'), ('runnable', 'RunnableFixture', 'RunnableProbe'), ('server_actions', 'ServerActionFixture', 'ServerActionProbe'), ('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe'), ('list_menu', 'ListMenuFixture', 'ListMenuProbe'), ('list_menu_italic', 'ListMenuFixture', 'ListMenuProbe'), ('contact_tree', 'ContactTreeFixture', 'ContactTreeProbe'), ('tree', 'VirtualListFixture', 'TreeProbe'), ('form', 'FormFixture', 'FormProbe'), ('text_list', 'VirtualListFixture', 'TextListProbe'), ('alert', 'VirtualListFixture', 'AlertProbe'), ('templates', 'TemplatesFixture', 'TemplatesProbe'), ('templates_smart', 'TemplatesFixture', 'TemplatesProbe'), ('selector', 'SelectorFixture', 'SelectorProbe'), ('file_browser', 'VirtualListFixture', 'FileBrowserProbe'), ('emotions', 'EmotionsFixture', 'EmotionsProbe')]:
         reference_output, source_output = TEST / (prefix + '-reference.txt'), TEST / (prefix + '-source.txt')
         for mode, output in [('reference', reference_output), ('source', source_output)]:
             fixture = TEST / (prefix + '-' + mode + '.jar')
@@ -230,6 +231,40 @@ def main(matrix=False, skip_build=False):
             raise AssertionError(prefix + ' mismatch: compare build/source-tests/' + prefix + '-{reference,source}.txt')
         report[prefix + '_observations'] = len(reference_output.read_text().splitlines())
         report[prefix + '_differences'] = 0
+        if prefix == 'phone_book':
+            optimized_fixture = TEST / 'phone-book-optimized-source.jar'
+            optimized_output = TEST / 'phone-book-optimized-source.txt'
+            run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']), 'PhoneBookFixture',
+                 TEST / 'file-transfer-source.jar', optimized_fixture, 'source', TEST, built], 'phone-book-optimized-fixture')
+            report['phone_book_optimized'] = run([*java, 'PhoneBookProbe', optimized_fixture, 'source', optimized_output], 'phone-book-optimized')
+            if optimized_output.read_bytes() != reference_output.read_bytes():
+                raise AssertionError('Delivered optimized PhoneBook differs from reference/unoptimized source')
+            report['phone_book_optimized_observations'] = len(optimized_output.read_text().splitlines())
+            guard = reference_output.read_text(encoding='utf-8').splitlines()[-1]
+            activations, commands, destinations = [int(part.split(':')[1]) for part in guard.split('/')]
+            def controller_sha(path, name):
+                with zipfile.ZipFile(path) as jar:
+                    return hashlib.sha256(jar.read(name + '.class')).hexdigest()
+            phone_report = {'scope': 'Actual MIDP2 PhoneBook activation/singleton, native TextBox fields, title/content/size/constraints, '
+                            'commands and listener, exact command identity, repeated forms/old SMS state and send/call exception paths. '
+                            'Reference and unoptimized authored controller execute against the inherited file-transfer host fixture. '
+                            'A second run substitutes only the delivered optimized source PhoneBook class in that source host fixture; '
+                            'its observations must also match. Only six PhoneBook call sites to Display.setCurrent, '
+                            'MIDlet.platformRequest, Connector.open and MainMenu.activate are captured (2/1/1/2). '
+                            'SMS connection/messages are scripted implementations of the real JSR120 interfaces, with actual '
+                            'casts, method dispatch/order and controller catches. IOException/runtime/Error failures, null/wrong '
+                            'types, null native fields/receivers, command aliases/null and native text validation are covered. '
+                            'Existing file-transfer boundaries remain. No physical call/SMS, display or complete main-menu effect claim.',
+                            'reference_sha256': recover.sha(original), 'source_jar_sha256': recover.sha(built),
+                            'source_unoptimized_class_jar_sha256': recover.sha(source / 'classes.jar'),
+                            'reference_controller_sha256': controller_sha(original, 'bd'),
+                            'source_unoptimized_controller_sha256': controller_sha(source / 'classes.jar', 'jimm/util/PhoneBook'),
+                            'source_optimized_controller_sha256': controller_sha(built, 'jimm/util/PhoneBook'),
+                            'observations': report[prefix + '_observations'], 'optimized_observations': report['phone_book_optimized_observations'],
+                            'activation_calls_per_run': activations, 'command_calls_per_run': commands, 'destination_attempts_per_run': destinations,
+                            'differences': 0}
+            (ROOT / 'preservation/reports/source-phone-book.json').write_text(
+                json.dumps(phone_report, indent=2) + '\n', encoding='utf-8', newline='\n')
         if prefix == 'password':
             guard = reference_output.read_text(encoding='utf-8').splitlines()[-1]
             activations, commands, destinations = [int(part.split(':')[1]) for part in guard.split('/')]
@@ -366,6 +401,7 @@ def main(matrix=False, skip_build=False):
         report['filesystems'] = run([sys.executable, ROOT / 'tools/test_filesystems.py', '--skip-build'], 'filesystems-audit')
         report['light'] = run([sys.executable, ROOT / 'tools/test_light.py', '--skip-build'], 'light-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
+        report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
     report['request_info_categories'] = run([sys.executable, ROOT / 'tools/test_request_info_categories.py',
                                             *(['--all-languages'] if matrix else []), '--skip-build'],
                                            'request-info-category-audit')

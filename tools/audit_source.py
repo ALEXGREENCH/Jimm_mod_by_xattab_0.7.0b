@@ -2080,6 +2080,24 @@ METHODS.extend([
 ])
 
 
+CLASSES['bd'] = 'jimm/util/PhoneBook'
+SYMBOLS.update({
+    'bd.a Lbd;': 'jimm/util/PhoneBook.instance Ljimm/util/PhoneBook;',
+    'bd.a Ljavax/microedition/lcdui/TextBox;': 'jimm/util/PhoneBook.SmsTextBox Ljavax/microedition/lcdui/TextBox;',
+    'bd.b Ljavax/microedition/lcdui/TextBox;': 'jimm/util/PhoneBook.inputNumber Ljavax/microedition/lcdui/TextBox;',
+    'bd.a Ljavax/microedition/lcdui/Command;': 'jimm/util/PhoneBook.cmdBack Ljavax/microedition/lcdui/Command;',
+    'bd.b Ljavax/microedition/lcdui/Command;': 'jimm/util/PhoneBook.cmdSms Ljavax/microedition/lcdui/Command;',
+    'bd.c Ljavax/microedition/lcdui/Command;': 'jimm/util/PhoneBook.cmdCall Ljavax/microedition/lcdui/Command;',
+    'bd.d Ljavax/microedition/lcdui/Command;': 'jimm/util/PhoneBook.cmdSend Ljavax/microedition/lcdui/Command;',
+})
+METHODS.extend([
+    ('bd', '<init>', '()V', '<init>'),
+    ('bd', '<clinit>', '()V', '<clinit>'),
+    ('bd', 'a', '()V', 'activate'),
+    ('bd', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
+])
+
+
 def normalized(code):
     result = []
     for instruction in code:

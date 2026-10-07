@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "70e398e09b8d4a76cd4bc49865b5a90e9c9a0596714d03cc1f5f004e09875569",
+  "rebuilt_sha256": "7a84b0ca4da54a6d0bb3e6191ad0f8a1b1dda2d6d7af19d095f06fa5bae6631f",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -9663,6 +9663,62 @@
       "same_normalized_bytecode": true,
       "reference_normalized_sha256": "406bcaecc86b3b88dc391f0a86101f48a9e23b334a2fd6412507a5963b5364f9",
       "source_normalized_sha256": "406bcaecc86b3b88dc391f0a86101f48a9e23b334a2fd6412507a5963b5364f9"
+    },
+    {
+      "reference": "bd.<init>()V",
+      "source": "jimm/util/PhoneBook.<init>()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 3,
+      "source_instructions": 3,
+      "same_normalized_instructions": true,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": true,
+      "reference_normalized_sha256": "e7ad489abbe4dafff964c49b1d120bb5ad38f5fe445fe1ea324f956d3850bea5",
+      "source_normalized_sha256": "e7ad489abbe4dafff964c49b1d120bb5ad38f5fe445fe1ea324f956d3850bea5"
+    },
+    {
+      "reference": "bd.<clinit>()V",
+      "source": "jimm/util/PhoneBook.<clinit>()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 33,
+      "source_instructions": 33,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "9b7ef97bc01c2bd4665f02a84b448731c042a0802aa77c606c245a529b7cd9bd",
+      "source_normalized_sha256": "a0be20febddf74593a86a866d9b3640aba994f213e0c95e5d14d8d0781814c9e"
+    },
+    {
+      "reference": "bd.a()V",
+      "source": "jimm/util/PhoneBook.activate()V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 39,
+      "source_instructions": 39,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": true,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "91085233bcaee6e7dd30bc520fa7a6d624d845d48f3ad972131029787407bb05",
+      "source_normalized_sha256": "8ed65c741e446779d182db2ee4890420505ebf01c6fc340678f4978ab4d1afef"
+    },
+    {
+      "reference": "bd.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "source": "jimm/util/PhoneBook.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+      "signature_verified": true,
+      "static_modifier_verified": true,
+      "synchronized_modifier_verified": true,
+      "reference_instructions": 123,
+      "source_instructions": 120,
+      "same_normalized_instructions": false,
+      "same_normalized_handlers": false,
+      "same_normalized_bytecode": false,
+      "reference_normalized_sha256": "de3892b1a8e7cbade1a4d78363a064ff355a255e2e7e1ef0866b6f37074d7fce",
+      "source_normalized_sha256": "b6b6299e91f10eca1bbbf7208a8a0f888e5b4e69f76953dca8d6402a96a9b9fc"
     }
   ],
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."

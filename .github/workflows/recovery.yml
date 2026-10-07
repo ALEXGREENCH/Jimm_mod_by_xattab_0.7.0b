@@ -37,6 +37,8 @@ jobs:
             preservation/reports/source-xstatus-catalog.json
             preservation/reports/source-xstatus-bytecode.json
             preservation/reports/source-password.json
+            preservation/reports/source-phone-book.json
+            preservation/reports/source-phone-book-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:
