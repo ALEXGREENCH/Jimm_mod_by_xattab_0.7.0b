@@ -1,0 +1,50 @@
+{
+  "scope": "Actual optimized MIDP2 RequestInfoAction category methods, all native key/code/name entries, signed/unsigned 16-bit lookups and extreme indices; mutated private arrays exercise first-match, bounds and partial setter writes. Literal native keys are compared without normalization, as well as translations through each JAR own ResourceBundle. MicroEmulator initializes each real JAR; no category/parser/resource substitutions.",
+  "builds": [
+    {
+      "language": "RU",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_jar_sha256": "bab36172ea052e9296478e82ac7c3680495c75a0d28572c1e097c0bae18b9a75",
+      "observations": 98398,
+      "native_entries": 51,
+      "lookup_codes": 98304,
+      "differences": 0
+    },
+    {
+      "language": "UA",
+      "reference_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
+      "source_jar_sha256": "b9b8e429473ad42ac0f8bfd9c5c9c5eae03fbb90aa7196b4d46dfbd89ef20368",
+      "observations": 98398,
+      "native_entries": 51,
+      "lookup_codes": 98304,
+      "differences": 0
+    },
+    {
+      "language": "RO",
+      "reference_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
+      "source_jar_sha256": "7c61f847e6ec755dae26a5d4e7b0f9bc3cf070cf029c9ee8a74ff24d108cf79c",
+      "observations": 98398,
+      "native_entries": 51,
+      "lookup_codes": 98304,
+      "differences": 0
+    },
+    {
+      "language": "EN",
+      "reference_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
+      "source_jar_sha256": "6ebd77650f9a7d8fa6fe3d90a6c140cc9789a3ac8c194352a49e7d61a3c86373",
+      "observations": 98398,
+      "native_entries": 51,
+      "lookup_codes": 98304,
+      "differences": 0
+    },
+    {
+      "language": "CZ",
+      "reference_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
+      "source_jar_sha256": "3c24d54c32f0429b5509afa3630e762507e60778001fb0b2b1dcf1194c37253c",
+      "observations": 98398,
+      "native_entries": 51,
+      "lookup_codes": 98304,
+      "differences": 0
+    }
+  ]
+}

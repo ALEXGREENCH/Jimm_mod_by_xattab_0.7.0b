@@ -1,3 +1,13 @@
+  // Backlight controls
+  //#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
+  "backlight_timeout"           "Durata iluminării (secunde)"
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_manual"            "Iluminare manuală (*)"
+  //#sijapp cond.else#
+  "backlight_manual"            "Iluminare manuală"
+  //#sijapp cond.end#
+  //#sijapp cond.end#
+
   // Labels
   // MOTOROLA formatted buttons
   // #sijapp cond.if target is "MOTOROLA"#
@@ -715,9 +725,11 @@
   "xstatus_right" "Ext. status on right"
   "from_file"                     "Din fişier"
   "font_plain_desc"               "Normal"
+  //#sijapp cond.if target is "SIEMENS2"#
   "backlight_timeout"           "Durata iluminării (secunde)"
   //#sijapp cond.if target is "MOTOROLA"#
   "backlight_manual"            "Iluminare manuală (*)"
   //#sijapp cond.else#
   "backlight_manual"            "Iluminare manuală"
+  //#sijapp cond.end#
   //#sijapp cond.end#

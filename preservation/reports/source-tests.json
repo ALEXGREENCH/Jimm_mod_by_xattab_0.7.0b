@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "66fd02c51a7fc95e017bef80c64741f848bf967b87fa0291dc3eb4cf618bc552",
+  "source_jar_sha256": "bab36172ea052e9296478e82ac7c3680495c75a0d28572c1e097c0bae18b9a75",
   "pure_logic": "PASS: 75837 May-reference differential checks (client versions, outgoing statuses, options streams)",
   "packets": "PASS packets: 45331 observations, 15642 successful parses",
   "convertor": "PASS converter: 204659 observations, 5234 conversions, 364 parsed tables",
@@ -66,6 +66,10 @@
   "birthday_source": "PASS probe: 7409 login/roster observations",
   "birthday_observations": 7409,
   "birthday_differences": 0,
+  "request_info_reference": "PASS probe: 16048 login/roster observations",
+  "request_info_source": "PASS probe: 16048 login/roster observations",
+  "request_info_observations": 16048,
+  "request_info_differences": 0,
   "xtraz_reference": "PASS probe: 4861 login/roster observations",
   "xtraz_source": "PASS probe: 4861 login/roster observations",
   "xtraz_observations": 4861,
@@ -195,17 +199,17 @@
     {
       "target": "MIDP2",
       "language": "RU",
-      "sha256": "66fd02c51a7fc95e017bef80c64741f848bf967b87fa0291dc3eb4cf618bc552"
+      "sha256": "bab36172ea052e9296478e82ac7c3680495c75a0d28572c1e097c0bae18b9a75"
     },
     {
       "target": "MIDP2",
       "language": "UA",
-      "sha256": "9ddcf595b22134b96db44650e1de4ef37a1e9b1ec3fd13ddc4839d4d3c658bef"
+      "sha256": "b9b8e429473ad42ac0f8bfd9c5c9c5eae03fbb90aa7196b4d46dfbd89ef20368"
     },
     {
       "target": "MIDP2",
       "language": "RO",
-      "sha256": "e69517483c5a606b8438507515ac69bd9a20dff002099684a3d156b000003f5b"
+      "sha256": "7c61f847e6ec755dae26a5d4e7b0f9bc3cf070cf029c9ee8a74ff24d108cf79c"
     },
     {
       "target": "MIDP2",
@@ -220,17 +224,17 @@
     {
       "target": "MOTOROLA",
       "language": "RU",
-      "sha256": "ecf531ac8764dea8ef8dfaa1b8f2026d2f1fc610e7b1fb5b6c6a390bb1f15545"
+      "sha256": "929f4981a837e0597ad69a3208c3eca559bfe821231310a5adc615adc08b6fc4"
     },
     {
       "target": "MOTOROLA",
       "language": "UA",
-      "sha256": "80d9f9b4c604afbb1fdac00ef9847a85b50acb75d4d2e9bba7b151423bf995ba"
+      "sha256": "439a53434a160602d3a451d9d45ce8c9fc0361abee92f18764b89dfdfe8c81d4"
     },
     {
       "target": "MOTOROLA",
       "language": "RO",
-      "sha256": "c74b78616faf28ec7ca774ddf3ffcee76dbaf839897d83580120a6d5ab830d94"
+      "sha256": "45b0083b90c35d13f8a59caf276b4f0951263c0796cb85e4a010b5e8f97c0d41"
     },
     {
       "target": "MOTOROLA",
@@ -278,5 +282,6 @@
   "graphics": "PASS graphics: 3 platforms, 75974 observations, 4551 frames\nPASS graphics bytecode: 73 signatures, 58 identical normalized instructions/handlers",
   "filesystems": "PASS filesystems: 4 device paths, 1224 observations\nPASS filesystems bytecode: 32 signatures, 20 identical normalized instructions/handlers",
   "light": "PASS light: 2 platforms, 6696 observations\nPASS light bytecode: 12 signatures, 8 identical normalized instructions/handlers",
-  "socket_bytecode": "PASS socket close: all 3 platforms match 28 normalized instructions and all exception handlers"
+  "socket_bytecode": "PASS socket close: all 3 platforms match 28 normalized instructions and all exception handlers",
+  "request_info_categories": "PASS request-info categories: 5 locales, 491990 observations"
 }

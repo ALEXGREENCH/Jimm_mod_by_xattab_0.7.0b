@@ -1219,6 +1219,39 @@ SYMBOLS.update({
     'co.c(Ljava/lang/String;)[B': 'jimm/comm/Util.ipToByteArray(Ljava/lang/String;)[B',
 })
 
+# Request-info state and all retained methods, confirmed by actual reply/clock execution.
+SYMBOLS.update({
+    'ce.c Z': 'jimm/comm/RequestInfoAction.infoShown Z',
+    'ce.b Z': 'jimm/comm/RequestInfoAction.StartMainRequestInfo Z',
+    'ce.d Z': 'jimm/comm/RequestInfoAction.showInfoText Z',
+    'ce.a [I': 'jimm/comm/RequestInfoAction.indexCategories [I',
+    'ce.b [I': 'jimm/comm/RequestInfoAction.codeIndexes [I',
+    'ce.a [Ljava/lang/String;': 'jimm/comm/RequestInfoAction.interestNames [Ljava/lang/String;',
+    'ce.b [Ljava/lang/String;': 'jimm/comm/RequestInfoAction.strData [Ljava/lang/String;',
+    'ce.a Ljava/util/Date;': 'jimm/comm/RequestInfoAction.init Ljava/util/Date;',
+    'ce.a I': 'jimm/comm/RequestInfoAction.packetCounter I',
+    'ce.e Z': 'jimm/comm/RequestInfoAction.notFound Z',
+    'ce.a Ljava/lang/String;': 'jimm/comm/RequestInfoAction.existingNick Ljava/lang/String;',
+    'ce.b Ljava/lang/String;': 'jimm/comm/RequestInfoAction.uin_bDay Ljava/lang/String;',
+    'ce.b I': 'jimm/comm/RequestInfoAction.day_bDay I',
+    'ce.c I': 'jimm/comm/RequestInfoAction.month_bDay I',
+    'ce.a()V': 'jimm/comm/RequestInfoAction.init()V',
+    'ce.a(Lan;)Z': 'jimm/comm/RequestInfoAction.forward(Ljimm/comm/Packet;)Z',
+    'ce.a(Ljava/lang/String;II)V': 'jimm/comm/RequestInfoAction.initInterestsDataItem(Ljava/lang/String;II)V',
+    'ce.b(I)Ljava/lang/String;': 'jimm/comm/RequestInfoAction.getCategoriesString(I)Ljava/lang/String;',
+    'ce.a(I)I': 'jimm/comm/RequestInfoAction.getSelectIndex(I)I',
+    'ce.b(I)I': 'jimm/comm/RequestInfoAction.getCategoriesCode(I)I',
+    'ce.a(I)Ljava/lang/String;': 'jimm/comm/RequestInfoAction.getCategoriesName(I)Ljava/lang/String;',
+    'ce.a()Z': 'jimm/comm/RequestInfoAction.isCompleted()Z',
+    'ce.b()Z': 'jimm/comm/RequestInfoAction.isError()Z',
+    'r.a Z': 'jimm/comm/Icq.setPoint Z',
+    'z.a(Ljava/lang/String;)V': 'jimm/ContactItem.rename(Ljava/lang/String;)V',
+    'co.a$175c50c1(Ljava/io/DataInputStream;)I': 'jimm/comm/Util.getWord$175c50c1(Ljava/io/DataInputStream;)I',
+    'co.a$6f0c2d54([B)Ljava/io/DataInputStream;': 'jimm/comm/Util.getDataInputStream$6f0c2d54([B)Ljava/io/DataInputStream;',
+    'co.a(Ljava/io/DataInputStream;)Ljava/lang/String;': 'jimm/comm/Util.readAsciiz(Ljava/io/DataInputStream;)Ljava/lang/String;',
+    'co.c(I)Ljava/lang/String;': 'jimm/comm/Util.genderToString(I)Ljava/lang/String;',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1928,6 +1961,21 @@ METHODS.extend([
     ('bf', 'a', '()[B', 'getLocalIP'),
     ('bf', 'run', '()V', 'run'),
     ('bf', 'a', '()V', 'close'),
+])
+
+
+METHODS.extend([
+    ('ce', '<init>', '(Ljava/lang/String;Ljava/lang/String;)V', '<init>'),
+    ('ce', 'a', '()V', 'init'),
+    ('ce', 'a', '(Lan;)Z', 'forward'),
+    ('ce', 'a', '(Ljava/lang/String;II)V', 'initInterestsDataItem'),
+    ('ce', 'b', '(I)Ljava/lang/String;', 'getCategoriesString'),
+    ('ce', 'a', '(I)I', 'getSelectIndex'),
+    ('ce', 'b', '(I)I', 'getCategoriesCode'),
+    ('ce', 'a', '(I)Ljava/lang/String;', 'getCategoriesName'),
+    ('ce', 'a', '()Z', 'isCompleted'),
+    ('ce', 'b', '()Z', 'isError'),
+    ('ce', '<clinit>', '()V', '<clinit>'),
 ])
 
 

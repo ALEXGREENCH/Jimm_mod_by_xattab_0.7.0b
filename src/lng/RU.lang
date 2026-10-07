@@ -1,3 +1,13 @@
+  // Backlight controls
+  //#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
+  "backlight_timeout"           "Время подсветки (сек)"
+  //#sijapp cond.if target is "MOTOROLA"#
+  "backlight_manual"            "Ручная подсветка (*)"
+  //#sijapp cond.else#
+  "backlight_manual"            "Ручная подсветка"
+  //#sijapp cond.end#
+  //#sijapp cond.end#
+
   // Labels
   // MOTOROLA formatted buttons
   // #sijapp cond.if target is "MOTOROLA"#
@@ -714,9 +724,11 @@
 
   "font_plain_desc"               "Обычное"
   "from_file"                     "Из файла"
+  //#sijapp cond.if target is "SIEMENS2"#
   "backlight_timeout"           "Время подсветки (сек)"
   //#sijapp cond.if target is "MOTOROLA"#
   "backlight_manual"            "Ручная подсветка (*)"
   //#sijapp cond.else#
   "backlight_manual"            "Ручная подсветка"
+  //#sijapp cond.end#
   //#sijapp cond.end#

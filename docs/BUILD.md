@@ -60,6 +60,7 @@ python tools/audit_filesystems.py
 python tools/test_light.py
 python tools/audit_light.py
 python tools/test_convertor.py
+python tools/test_request_info_categories.py --all-languages --skip-build
 ```
 
 Первая команда собирает 15 сочетаний платформ и языков, проверяет конфигурации без модулей, выполняет сравнения поведения с майским JAR, сверку ресурсов и графических компонентов трёх платформ. Вторая сравнивает выбранные сигнатуры и инструкции байткода. Третья позволяет отдельно повторить проверку ресурсов уже собранных 15 JAR: файлы сравниваются побайтово, локализации — по восстановленным именам и декодированным значениям. `test_graphics.py` собирает три русских варианта и сравнивает значки, анимации и шрифт Motorola; `--skip-build` использует уже собранные полные RU-варианты. `audit_graphics.py` повторяет отдельную сверку их сигнатур и инструкций.
@@ -69,6 +70,8 @@ python tools/test_convertor.py
 Дни рождения, календарные расчёты, контактные поля и реальные RMS-записи эмулятора проверяются серией `birthday`: [отчёт](../preservation/reports/source-birthday.json). Фиксируются часы и границы запуска/ожидания рабочего потока; физическая многопоточность не моделируется.
 
 Сокетное соединение проверяется серией `socket`: [отчёт](../preservation/reports/source-socket.json). Настоящие чтение FLAP, очередь, счётчики и закрытие исполняются на сценарных потоках. `python tools/audit_socket.py` дополнительно сверяет все инструкции и обработчики `close()` на трёх платформах; [отчёт](../preservation/reports/source-socket-bytecode.json).
+
+Запрос профиля и накопление ответов сервера проверяются серией `request_info`: [отчёт](../preservation/reports/source-request-info.json). Исполняются настоящий парсер, таймауты, обновление контактных полей и RMS. `test_request_info_categories.py --all-languages --skip-build` отдельно сравнивает собственные ключи, коды и подписи интересов пяти полных MIDP2-сборок; [отчёт](../preservation/reports/source-request-info-categories.json). Обе проверки входят в `--matrix`.
 
 Запросы/ответы Xtraz, XML-преобразования, приватность и доставка ответа в чат проверяются серией `xtraz`: [отчёт](../preservation/reports/source-xtraz.json). Пакеты исполняются настоящим `ActionListener`; соединение и назначения чата/журнала наблюдаются на тестовых границах.
 

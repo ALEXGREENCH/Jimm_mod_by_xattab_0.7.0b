@@ -41,7 +41,7 @@ def main(matrix=False, skip_build=False):
          '-d', TEST, *helpers], 'compile-tests')
     # No invokedynamic in the fixture classes loaded by MicroEmulator's legacy ASM.
     run([os.environ.get('JAVAC', 'javac'), '-source', '7', '-target', '7', '-encoding', 'UTF-8',
-         '-cp', recover.cp([TEST, *runtime]), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java', ROOT / 'tools/source/FileSystemIO.java', ROOT / 'tools/source/CameraIO.java', ROOT / 'tools/source/BlinkIO.java', ROOT / 'tools/source/OptionsIO.java', ROOT / 'tools/source/TimerIO.java', ROOT / 'tools/source/MenuIO.java', ROOT / 'tools/source/ResourceIO.java', ROOT / 'tools/source/EmotionsIO.java', ROOT / 'tools/source/ServerActionIO.java', ROOT / 'tools/source/RunnableIO.java', ROOT / 'tools/source/BirthdayIO.java', ROOT / 'tools/source/SocketIO.java'], 'compile-transport-io')
+         '-cp', recover.cp([TEST, *runtime]), '-d', TEST, ROOT / 'tools/source/TransportIO.java', ROOT / 'tools/source/LoginIO.java', ROOT / 'tools/source/MessageIO.java', ROOT / 'tools/source/AboutIO.java', ROOT / 'tools/source/FileTransferIO.java', ROOT / 'tools/source/FileSystemIO.java', ROOT / 'tools/source/CameraIO.java', ROOT / 'tools/source/BlinkIO.java', ROOT / 'tools/source/OptionsIO.java', ROOT / 'tools/source/TimerIO.java', ROOT / 'tools/source/MenuIO.java', ROOT / 'tools/source/ResourceIO.java', ROOT / 'tools/source/EmotionsIO.java', ROOT / 'tools/source/ServerActionIO.java', ROOT / 'tools/source/RunnableIO.java', ROOT / 'tools/source/BirthdayIO.java', ROOT / 'tools/source/SocketIO.java', ROOT / 'tools/source/RequestInfoIO.java'], 'compile-transport-io')
     java = [recover.java(), '-Djava.awt.headless=true',
             '-Dsun.reflect.inflationThreshold=2147483647', '-cp', recover.cp([TEST, *runtime])]
     original = ROOT / 'preservation/wayback-originals/Jimm_MIDP2_RU/Jimm.jar'
@@ -216,19 +216,38 @@ def main(matrix=False, skip_build=False):
         raise AssertionError('File transfer mismatch: compare build/source-tests/file-transfer-reference.txt and file-transfer-source.txt')
     report['file_transfer_observations'] = len(file_ref.read_text().splitlines())
     report['file_transfer_differences'] = 0
-    for prefix, fixture_class, probe in [('birthday', 'BirthdayFixture', 'BirthdayProbe'), ('xtraz', 'XtrazFixture', 'XtrazProbe'), ('runnable', 'RunnableFixture', 'RunnableProbe'), ('server_actions', 'ServerActionFixture', 'ServerActionProbe'), ('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe'), ('list_menu', 'ListMenuFixture', 'ListMenuProbe'), ('list_menu_italic', 'ListMenuFixture', 'ListMenuProbe'), ('contact_tree', 'ContactTreeFixture', 'ContactTreeProbe'), ('tree', 'VirtualListFixture', 'TreeProbe'), ('form', 'FormFixture', 'FormProbe'), ('text_list', 'VirtualListFixture', 'TextListProbe'), ('alert', 'VirtualListFixture', 'AlertProbe'), ('templates', 'TemplatesFixture', 'TemplatesProbe'), ('templates_smart', 'TemplatesFixture', 'TemplatesProbe'), ('selector', 'SelectorFixture', 'SelectorProbe'), ('file_browser', 'VirtualListFixture', 'FileBrowserProbe'), ('emotions', 'EmotionsFixture', 'EmotionsProbe')]:
+    for prefix, fixture_class, probe in [('birthday', 'BirthdayFixture', 'BirthdayProbe'), ('request_info', 'RequestInfoFixture', 'RequestInfoProbe'), ('xtraz', 'XtrazFixture', 'XtrazProbe'), ('runnable', 'RunnableFixture', 'RunnableProbe'), ('server_actions', 'ServerActionFixture', 'ServerActionProbe'), ('camera', 'CameraFixture', 'CameraProbe'), ('direct', 'DirectFixture', 'DirectProbe'), ('outgoing', 'OutgoingFixture', 'OutgoingProbe'), ('traffic', 'TrafficFixture', 'TrafficProbe'), ('xstatus', 'XStatusFixture', 'XStatusProbe'), ('chat', 'ChatFixture', 'ChatProbe'), ('history', 'HistoryFixture', 'HistoryProbe'), ('blink', 'BlinkFixture', 'BlinkProbe'), ('options', 'OptionsFixture', 'OptionsProbe'), ('timer', 'TimerFixture', 'TimerProbe'), ('menu', 'MenuFixture', 'MenuProbe'), ('vlist', 'VirtualListFixture', 'VirtualListProbe'), ('list_menu', 'ListMenuFixture', 'ListMenuProbe'), ('list_menu_italic', 'ListMenuFixture', 'ListMenuProbe'), ('contact_tree', 'ContactTreeFixture', 'ContactTreeProbe'), ('tree', 'VirtualListFixture', 'TreeProbe'), ('form', 'FormFixture', 'FormProbe'), ('text_list', 'VirtualListFixture', 'TextListProbe'), ('alert', 'VirtualListFixture', 'AlertProbe'), ('templates', 'TemplatesFixture', 'TemplatesProbe'), ('templates_smart', 'TemplatesFixture', 'TemplatesProbe'), ('selector', 'SelectorFixture', 'SelectorProbe'), ('file_browser', 'VirtualListFixture', 'FileBrowserProbe'), ('emotions', 'EmotionsFixture', 'EmotionsProbe')]:
         reference_output, source_output = TEST / (prefix + '-reference.txt'), TEST / (prefix + '-source.txt')
         for mode, output in [('reference', reference_output), ('source', source_output)]:
             fixture = TEST / (prefix + '-' + mode + '.jar')
             extra = [original if mode == 'reference' else test_jar] if prefix in ['runnable', 'chat', 'options', 'list_menu', 'list_menu_italic', 'contact_tree'] else []
             if prefix.startswith('list_menu'): extra.append('2' if prefix.endswith('italic') else '0')
+            parent = 'birthday' if prefix == 'request_info' else 'file-transfer'
             run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']), fixture_class,
-                 TEST / ('file-transfer-' + mode + '.jar'), fixture, mode, TEST, *extra], prefix + '-fixture-' + mode)
+                 TEST / (parent + '-' + mode + '.jar'), fixture, mode, TEST, *extra], prefix + '-fixture-' + mode)
             report[prefix + '_' + mode] = run([*java, *(['-Djimm.templates.smart=true'] if prefix == 'templates_smart' else []), probe, fixture, mode, output], prefix + '-' + mode)
         if reference_output.read_bytes() != source_output.read_bytes():
             raise AssertionError(prefix + ' mismatch: compare build/source-tests/' + prefix + '-{reference,source}.txt')
         report[prefix + '_observations'] = len(reference_output.read_text().splitlines())
         report[prefix + '_differences'] = 0
+        if prefix == 'request_info':
+            guard = reference_output.read_text(encoding='utf-8').splitlines()[-1]
+            initializations, forwards, accepted, deliveries = [int(part.split(':')[1]) for part in guard.split('/')]
+            request_report = {'scope': 'Actual MIDP2 RequestInfoAction initialization, response parsing, '
+                              'partial fields, completion/timeout state and repeated delivery. Real contact '
+                              'rename/save, UpdateContactListAction construction, birthday tables/RMS and '
+                              'request serialization execute. Clock and UI/contact-list/chat notification '
+                              'destinations are captured; inherited birthday/file-transfer fixture boundaries '
+                              'remain. Only category fields 40-43 are translated through each real ResourceBundle; '
+                              'all other fields retain literal UTF-16 data, including overflow into field 44. '
+                              'No live server, physical event queue or complete downstream notification claim.',
+                              'reference_sha256': recover.sha(original), 'source_jar_sha256': recover.sha(built),
+                              'source_unoptimized_class_jar_sha256': recover.sha(source / 'classes.jar'),
+                              'observations': report[prefix + '_observations'], 'initializations': initializations,
+                              'forward_calls': forwards, 'accepted_responses': accepted,
+                              'delivery_attempts': deliveries, 'differences': 0}
+            (ROOT / 'preservation/reports/source-request-info.json').write_text(
+                json.dumps(request_report, indent=2) + '\n', encoding='utf-8', newline='\n')
         if prefix == 'birthday':
             guard = reference_output.read_text(encoding='utf-8').splitlines()[-1]
             dates, loads, saves, adds = [int(part.split(':')[1]) for part in guard.split('/')]
@@ -329,6 +348,9 @@ def main(matrix=False, skip_build=False):
         report['filesystems'] = run([sys.executable, ROOT / 'tools/test_filesystems.py', '--skip-build'], 'filesystems-audit')
         report['light'] = run([sys.executable, ROOT / 'tools/test_light.py', '--skip-build'], 'light-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
+    report['request_info_categories'] = run([sys.executable, ROOT / 'tools/test_request_info_categories.py',
+                                            *(['--all-languages'] if matrix else []), '--skip-build'],
+                                           'request-info-category-audit')
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False, indent=2))
 

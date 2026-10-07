@@ -32,6 +32,8 @@ jobs:
             preservation/reports/source-birthday.json
             preservation/reports/source-socket.json
             preservation/reports/source-socket-bytecode.json
+            preservation/reports/source-request-info.json
+            preservation/reports/source-request-info-categories.json
   verify:
     runs-on: ubuntu-latest
     steps:
