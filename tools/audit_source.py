@@ -1173,6 +1173,31 @@ SYMBOLS.update({
     'co.a([BII)Z': 'jimm/comm/Util.isDataUTF8([BII)Z',
 })
 
+# Verified birthday worker/RMS methods and their real calendar helpers.
+CLASSES.update({'cs': 'jimm/util/NoticeOnBirthDay'})
+SYMBOLS.update({
+    'cs.a()V': 'jimm/util/NoticeOnBirthDay.refreshBday()V',
+    'cs.run()V': 'jimm/util/NoticeOnBirthDay.run()V',
+    'cs.a(Ljava/lang/String;II)V': 'jimm/util/NoticeOnBirthDay.additemB(Ljava/lang/String;II)V',
+    'cs.a(Ljava/lang/String;)V': 'jimm/util/NoticeOnBirthDay.deleteBitem(Ljava/lang/String;)V',
+    'cs.a(Ljava/lang/String;)I': 'jimm/util/NoticeOnBirthDay.checkDatacurrData(Ljava/lang/String;)I',
+    'cs.b()V': 'jimm/util/NoticeOnBirthDay.load()V',
+    'cs.c()V': 'jimm/util/NoticeOnBirthDay.save()V',
+    'cs.a Lcs;': 'jimm/util/NoticeOnBirthDay._this Ljimm/util/NoticeOnBirthDay;',
+    'cs.a Ljava/util/Vector;': 'jimm/util/NoticeOnBirthDay.a0 Ljava/util/Vector;',
+    'cs.b Ljava/util/Vector;': 'jimm/util/NoticeOnBirthDay.a1 Ljava/util/Vector;',
+    'cs.c Ljava/util/Vector;': 'jimm/util/NoticeOnBirthDay.a2 Ljava/util/Vector;',
+    'cs.a J': 'jimm/util/NoticeOnBirthDay.bData1 J',
+    'co.a(ZZ)J': 'jimm/comm/Util.createCurrentDate(ZZ)J',
+    'co.a(J)[I': 'jimm/comm/Util.createDate(J)[I',
+    'co.a(IIIIII)J': 'jimm/comm/Util.createLongTime(IIIIII)J',
+    'co.b(I)I': 'jimm/comm/Util.convertDateMonToSimpleMon(I)I',
+    'co.a(J)J': 'jimm/comm/Util.gmtTimeToLocalTime(J)J',
+    'co.ab [B': 'jimm/comm/Util.dayCounts [B',
+    'co.a [I': 'jimm/comm/Util.monthIndexes [I',
+    'z.b()Ljava/lang/String;': 'jimm/ContactItem.getUinString()Ljava/lang/String;',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1853,6 +1878,24 @@ METHODS.extend([
     ('bp', 'a', '(Ljava/lang/String;)Ljava/lang/String;', 'detransliterate'),
     ('bp', 'b', '(Ljava/lang/String;)Ljava/lang/String;', 'transliterate'),
     ('bp', '<clinit>', '()V', '<clinit>'),
+])
+
+
+METHODS.extend([
+    ('cs', '<init>', '()V', '<init>'),
+    ('cs', 'a', '()V', 'refreshBday'),
+    ('cs', 'run', '()V', 'run'),
+    ('cs', 'a', '(Ljava/lang/String;II)V', 'additemB'),
+    ('cs', 'a', '(Ljava/lang/String;)V', 'deleteBitem'),
+    ('cs', 'a', '(Ljava/lang/String;)I', 'checkDatacurrData'),
+    ('cs', 'b', '()V', 'load'),
+    ('cs', 'c', '()V', 'save'),
+    ('cs', '<clinit>', '()V', '<clinit>'),
+    ('co', 'a', '(ZZ)J', 'createCurrentDate'),
+    ('co', 'a', '(J)[I', 'createDate'),
+    ('co', 'a', '(IIIIII)J', 'createLongTime'),
+    ('co', 'b', '(I)I', 'convertDateMonToSimpleMon'),
+    ('co', 'a', '(J)J', 'gmtTimeToLocalTime'),
 ])
 
 

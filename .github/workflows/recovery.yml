@@ -29,6 +29,7 @@ jobs:
             preservation/reports/source-runnable.json
             preservation/reports/source-xtraz.json
             preservation/reports/source-convertor.json
+            preservation/reports/source-birthday.json
   verify:
     runs-on: ubuntu-latest
     steps:
