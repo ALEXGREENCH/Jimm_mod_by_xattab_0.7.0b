@@ -62,6 +62,12 @@
   "file_transfer_source": "PASS probe: 826 login/roster observations",
   "file_transfer_observations": 826,
   "file_transfer_differences": 0,
+  "save_info_reference": "PASS probe: 10767 login/roster observations",
+  "save_info_source": "PASS probe: 10767 login/roster observations",
+  "save_info_observations": 10767,
+  "save_info_differences": 0,
+  "save_info_optimized": "PASS probe: 10767 login/roster observations",
+  "save_info_optimized_observations": 10767,
   "phone_book_reference": "PASS probe: 15748 login/roster observations",
   "phone_book_source": "PASS probe: 15748 login/roster observations",
   "phone_book_observations": 15748,
@@ -205,6 +211,9 @@
     "MicroEmulator does not play all original sound formats.",
     "No live ICQ login, real-device or complete bytecode-equivalence claim."
   ],
+  "request_info_categories": "PASS request-info categories: 5 locales, 491990 observations",
+  "xstatus_catalog": "PASS XStatus bytecode: 3 native GUID initializers, 36 signatures, 21 instruction/handler matches\nPASS XStatus catalog: 5 locales, 781540 observations",
+  "save_info_locales": "PASS SaveInfo locales: 5 locales, 53835 observations",
   "builds": [
     {
       "target": "MIDP2",
@@ -294,6 +303,5 @@
   "light": "PASS light: 2 platforms, 6696 observations\nPASS light bytecode: 12 signatures, 8 identical normalized instructions/handlers",
   "socket_bytecode": "PASS socket close: all 3 platforms match 28 normalized instructions and all exception handlers",
   "phone_book_bytecode": "PASS PhoneBook: 8 optimized signatures in MIDP2/Siemens2, 15 platform/language presence checks",
-  "request_info_categories": "PASS request-info categories: 5 locales, 491990 observations",
-  "xstatus_catalog": "PASS XStatus bytecode: 3 native GUID initializers, 36 signatures, 21 instruction/handler matches\nPASS XStatus catalog: 5 locales, 781540 observations"
+  "matrix_reused_for_unchanged_source": true
 }

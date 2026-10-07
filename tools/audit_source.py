@@ -2098,6 +2098,20 @@ METHODS.extend([
 ])
 
 
+SYMBOLS['as.a [Ljava/lang/String;'] = 'jimm/comm/SaveInfoAction.strData [Ljava/lang/String;'
+METHODS.append(('as', '<init>', '([Ljava/lang/String;)V', '<init>'))
+SYMBOLS.update({
+    'co.a(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V': 'jimm/comm/Util.writeAsciizTLV(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V',
+    'co.a(Ljava/io/ByteArrayOutputStream;I)V': 'jimm/comm/Util.writeByte(Ljava/io/ByteArrayOutputStream;I)V',
+    'co.b(Ljava/lang/String;)I': 'jimm/comm/Util.stringToGender(Ljava/lang/String;)I',
+})
+METHODS.extend([
+    ('co', 'a', '(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V', 'writeAsciizTLV'),
+    ('co', 'a', '(Ljava/io/ByteArrayOutputStream;I)V', 'writeByte'),
+    ('co', 'b', '(Ljava/lang/String;)I', 'stringToGender'),
+])
+
+
 def normalized(code):
     result = []
     for instruction in code:

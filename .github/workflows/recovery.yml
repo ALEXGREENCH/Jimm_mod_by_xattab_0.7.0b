@@ -39,6 +39,8 @@ jobs:
             preservation/reports/source-password.json
             preservation/reports/source-phone-book.json
             preservation/reports/source-phone-book-bytecode.json
+            preservation/reports/source-save-info.json
+            preservation/reports/source-save-info-locales.json
   verify:
     runs-on: ubuntu-latest
     steps:
