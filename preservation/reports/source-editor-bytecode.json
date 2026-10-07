@@ -4,8 +4,8 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_optimized_class_jar_sha256": "7ce63e9894af46e92ef699bece9bf5b9e447bca39ef6745c2b126b86285cef2a",
-      "source_unoptimized_class_jar_sha256": "c84f814945d4f376590407a3e73b248993f6c1dae2d9bfc7c3f2eb1525a669b1",
+      "source_optimized_class_jar_sha256": "7a874c00dadabcdcc726ec8973b5ddfccc81b99d6f67d2d52d08b67fed7bf0fe",
+      "source_unoptimized_class_jar_sha256": "f89b2f927e72ce67ba70193f82cc2d4a53e14949b6813f0320897b71c8bb2440",
       "reference_editor": "cf.a(Lz;Ljava/lang/String;)V",
       "creation_command_names": [
         "cmdSend",
@@ -40,8 +40,8 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_optimized_class_jar_sha256": "c4c76b57c05843fa1659809086095305910e7bc02489a013057cab4c93612b82",
-      "source_unoptimized_class_jar_sha256": "7c2d292eeeafe1bf3bede519a8b6858a5c54874fab6eddb790af041135b13bc4",
+      "source_optimized_class_jar_sha256": "d9bfb9e24da120b3de80797ccc0a63f6127d08eb2b53d06db1675c4487995957",
+      "source_unoptimized_class_jar_sha256": "f60cd25eea0f129bde957574dcbf72dadefde13012a4adb0e1460c32cfc76db2",
       "reference_editor": "cd.a(Lz;Ljava/lang/String;)V",
       "creation_command_names": [
         "cmdSend",
@@ -76,8 +76,8 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_optimized_class_jar_sha256": "18d95c7551c06441af22e4ef87fe0214ddfb85b68e1963d45e4d162f3d6daf66",
-      "source_unoptimized_class_jar_sha256": "b9f5e8d29fe2d997a8511350b9cadeb054c1ca93f7ec1e1eea31402c48a4a57d",
+      "source_optimized_class_jar_sha256": "d2528c90124699276303db9f93733681045e6dc7ce5307fa13c56d182eda626a",
+      "source_unoptimized_class_jar_sha256": "19cafa98be747957373cd05e67f95a7d874319bdc4731e2780e6f3861b3a52f3",
       "reference_editor": "cd.a(Ly;Ljava/lang/String;)V",
       "creation_command_names": [
         "cmdSend",

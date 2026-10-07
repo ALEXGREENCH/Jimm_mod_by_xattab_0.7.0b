@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2-RU JimmUI private caption, pagination, insertion, save/get/current-page and public writeMessage creation/reuse. Actual TextBox state, constraints, commands and listener are used. Add/listener/constraints call captures delegate to the real API; display switch, gc, light and typing terminal calls are recorded with scripted failures. Complete controller declarations, flags, instructions and handlers are verified before and after interception. No physical display, gc scheduling, backlight or typing packet claim; real typing/SNAC is independently tested by test_send_text.py. Existing login/date host initialization boundaries apply. Unoptimized and delivered optimized classes both run.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "2c64e6d6dd651fdae41afe001f832ba7997a8b77bc0e38f5b2e0eabec2697363",
-  "source_unoptimized_class_jar_sha256": "c84f814945d4f376590407a3e73b248993f6c1dae2d9bfc7c3f2eb1525a669b1",
+  "source_jar_sha256": "e3bcc3e3caa9a1390c96ff139ea4a533a55eba967da7b47e9cea39043b595100",
+  "source_unoptimized_class_jar_sha256": "f89b2f927e72ce67ba70193f82cc2d4a53e14949b6813f0320897b71c8bb2440",
   "observations": 19948,
   "title_calls": 320,
   "pagination_scenarios": 180,
@@ -16,8 +16,8 @@
   "fixture_proofs": [
     {
       "mode": "reference",
-      "base_sha256": "29bf4b8cf03d1cf75f3ea1f029089c7ad6d8d36fef92e9495c588cf2544d4255",
-      "fixture_sha256": "b8c008e704a9afa01732d31d8daeeab7166df585b582c31b20755785eef127ae",
+      "base_sha256": "3bf0c49e775f6b1d7402a45e4bdbfd01a81e6ebec143f72932acd5c462d06c3c",
+      "fixture_sha256": "1a8921f62cfb9ca2011e60f892ab8660f2c5c9aabe752102e30143c245e381e1",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 aj.a(Z)V": 4,
@@ -32,8 +32,8 @@
     },
     {
       "mode": "source",
-      "base_sha256": "8ba807fca7c7d9299f433a5a0fa88d94fe9a007aec47cae347a07cf06a5bac20",
-      "fixture_sha256": "1b319e3f613e7bf5cc98b559882c5efb9f266d89a9658f219e2f7eb357fdbb48",
+      "base_sha256": "6e2053d13acb8259b9daa5219459e9c6e573b0af90bece9c86db813930a2b56e",
+      "fixture_sha256": "5ede96180a516e1042a34fdf36874ed5373c40b30b1d2ce85cd76ef14a24e0a4",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 DrawControls/LightControl.flash(Z)V": 3,
@@ -48,8 +48,8 @@
     },
     {
       "mode": "optimized-source",
-      "base_sha256": "5d3e3c11229c0b4ed14268c7f4e45440c07b2753f7f8c3ac8bc908623673f6b6",
-      "fixture_sha256": "c4c5a79e9ba86423817e29e8c3a8b1ec634e20f19de262958def861a30268dcb",
+      "base_sha256": "56eac97b5d3a5e684f1a61237ba9f32abf58d4879e762b53b210883234a068e8",
+      "fixture_sha256": "53fd3d4f7c0c6dd478f2fb1c9375dab6397375d1cc2df7ff0a545fa1a4043176",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 DrawControls/LightControl.flash(Z)V": 3,

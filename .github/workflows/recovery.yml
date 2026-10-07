@@ -108,6 +108,10 @@ jobs:
             preservation/reports/source-packet-parsers.json
             preservation/reports/source-packet-root.json
             preservation/reports/source-packet-parsers-bytecode.json
+            preservation/reports/source-auxiliary-helper-bytecode.json
+            preservation/reports/source-auxiliary-helper-replay.json
+            preservation/reports/source-form-fit-before.json
+            preservation/reports/source-form-fit-delta.json
   verify:
     runs-on: ubuntu-latest
     steps:

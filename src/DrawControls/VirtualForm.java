@@ -321,8 +321,9 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
     {
         String text = fieldText(field);
         int width = getNonScrollerArea() - font.stringWidth("...");
+        int length = text.length();
         StringBuffer result = new StringBuffer();
-        for (int i = 0; i < text.length(); i++)
+        for (int i = 0; i < length; i++)
         {
             char ch = text.charAt(i);
             result.append(ch == '\n' ? ' ' : ch);
