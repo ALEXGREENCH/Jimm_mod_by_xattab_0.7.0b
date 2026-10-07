@@ -1,0 +1,79 @@
+{
+  "scope": "Genuine pre-fix authored classes at 91104f5 on each RU platform, compared using the same complete hotkey probes/call captures as the positive check. Counts compare whole calls including all event rows and state. No expected output is generated from restored source.",
+  "prior_commit": "91104f5",
+  "source_ui_sha256": "90745b8792282898de161bb1b379448eee585aa8ebc7c2b71dbfb43706f21fd1",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "calls": 10164,
+      "different_calls": 272,
+      "different_calls_by_kind": {
+        "action": 80,
+        "lock-bound": 0,
+        "fault": 120,
+        "single": 33,
+        "double": 36,
+        "bad-actions": 3
+      },
+      "reference_observations": 11995,
+      "source_observations": 11991,
+      "reference_guard": "coverage:10164:4999:2280:2885:1830:96:142",
+      "source_guard": "coverage:10164:4999:2280:2885:1826:0:142",
+      "source_unoptimized_class_jar_sha256": "3ddb63f034af35fbea936d5ae179c8842a1ffece898407d8954ed3d7a661f423",
+      "source_jar_sha256": "d7d94c08266ea891f766b5272b93a28487c9f125511562f6ff7c83498a045b80",
+      "source_host_sha256": "18b3422715761ece10bc0a1f45e68c7800f063da3ee6c03e42214921f66f3df6",
+      "reference_fixture_sha256": "3237ae28f5670a51074f7244dba80fa9991a0bb952a5eb823ae80d61ca390a77",
+      "source_fixture_sha256": "0cdb301a56a36204646acb70f8d579552f19f92569aaab09cb09b0961bbf78ef",
+      "reference_output_sha256": "302439cf780460416d6f19e607bb41a9dcdd5a36e0939b083fa1b9e9164e8e60",
+      "source_output_sha256": "b16b6f51b04602917de84aec355a15e4de3297028fb10988a205a73cfb8f4244"
+    },
+    {
+      "target": "MOTOROLA",
+      "calls": 10164,
+      "different_calls": 172,
+      "different_calls_by_kind": {
+        "action": 48,
+        "lock-bound": 0,
+        "fault": 80,
+        "single": 18,
+        "double": 24,
+        "bad-actions": 2
+      },
+      "reference_observations": 11625,
+      "source_observations": 11715,
+      "reference_guard": "coverage:10164:4999:2280:2885:1460:0:89",
+      "source_guard": "coverage:10164:4999:2280:2885:1550:0:89",
+      "source_unoptimized_class_jar_sha256": "67206ecfb448355439c57cf34a455611ff22e8d03afea35063bfd9fcd23e6dca",
+      "source_jar_sha256": "ba15aabcae9d399c0077dc9c74f98332e1dd26da23c1b7151afa2c8f37c40ef3",
+      "source_host_sha256": "3639c1432b21c22dcd6aab75b43628ae526343730585fee158b53d6a86e261d0",
+      "reference_fixture_sha256": "af38e6892291f3750682db6f62db622c7f29386dc9b4a8988e257a4e94f06cff",
+      "source_fixture_sha256": "e9b4c65412c7999169553f523b6e0eb0ab4b8eaf63cd4fd98b71b356a91bc71f",
+      "reference_output_sha256": "925be5afb747addca631a7a7ea4847b334eab2b144e1084317160fdf29723b2e",
+      "source_output_sha256": "3d2182b7155643b84cb87cc59f03ca6e1e168d14545f2bf1d6a9645ac4823f91"
+    },
+    {
+      "target": "SIEMENS2",
+      "calls": 10164,
+      "different_calls": 176,
+      "different_calls_by_kind": {
+        "action": 48,
+        "lock-bound": 0,
+        "fault": 80,
+        "single": 22,
+        "double": 24,
+        "bad-actions": 2
+      },
+      "reference_observations": 11898,
+      "source_observations": 11990,
+      "reference_guard": "coverage:10164:4999:2280:2885:1733:0:142",
+      "source_guard": "coverage:10164:4999:2280:2885:1825:0:142",
+      "source_unoptimized_class_jar_sha256": "11bcf892f15f4530639858fe9fdc387f5056393dbfea05b963f6a54bcd5e3f09",
+      "source_jar_sha256": "9030abefd20a21db44aefcf817d31e821fec5d0a1bfd7fa3318e9ed071e31f64",
+      "source_host_sha256": "7ec26459221762ecd209bf78494664c052ec8ea4ebdf5f43d920c4eafe65121f",
+      "reference_fixture_sha256": "b148c9fdd3f478c94e4607c7595c26db46e2dcaef619c6592523a7aa5a4305d3",
+      "source_fixture_sha256": "7e01656b6abe72df3b219eb2e4b73b58cec42297ab38c086b9bc52b521b1ac2c",
+      "reference_output_sha256": "7339bef93b1b08f2ec76675258386e556b20616f2d83832cdff4f981945bd831",
+      "source_output_sha256": "e1864711a4b6a292ced86f994d1070491f72bd13865f2dddf2cf3da6286436a9"
+    }
+  ]
+}

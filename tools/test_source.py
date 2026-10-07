@@ -464,6 +464,7 @@ def main(matrix=False, skip_build=False):
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')
         report['editor_bytecode'] = run([sys.executable, ROOT / 'tools/audit_editor.py'], 'editor-bytecode')
+        report['hotkeys'] = run([sys.executable, ROOT / 'tools/test_hotkeys.py'], 'hotkey-audit')
     report['request_info_categories'] = run([sys.executable, ROOT / 'tools/test_request_info_categories.py',
                                             *(['--all-languages'] if matrix else []), '--skip-build'],
                                            'request-info-category-audit')

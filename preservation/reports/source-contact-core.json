@@ -1,9 +1,9 @@
 {
   "scope": "Genuine May optimized ContactItem and source unoptimized methods in isolated loaders, without bytecode rewriting. Constructor results, exception classes, packed properties, capabilities, privacy IDs, counters, cached names, IP/roster arrays and input aliases are compared. addCapability is observed as the original specialized constant 256 only. Static/synchronized modifiers are verified for every method pair; hasCapability is also invoked while another thread holds the actual receiver monitor, once for each JAR. Options use explicit real-table values; a sentinel birthday entry prevents external RMS loading. Save/load calls compare output prefixes, read/write calls, input positions and partial contact states, including signed roster lengths and short reads. No whole contact/UI equivalence, physical persistence, concurrency or J2ME charset implementation claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "d7d94c08266ea891f766b5272b93a28487c9f125511562f6ff7c83498a045b80",
-  "source_unoptimized_class_jar_sha256": "3ddb63f034af35fbea936d5ae179c8842a1ffece898407d8954ed3d7a661f423",
-  "source_probe_jar_sha256": "18b3422715761ece10bc0a1f45e68c7800f063da3ee6c03e42214921f66f3df6",
+  "source_jar_sha256": "ff81a1de93bef0df55deea3eb6f90fa26f9899be88d4ba894eac64ea6536f5d5",
+  "source_unoptimized_class_jar_sha256": "2e1f296758de13fb0e02d700e930c1e0e1c04200945847e104172ec668f92677",
+  "source_probe_jar_sha256": "5b266ff613ea7f48de3020007d21d0ff5e156c841d717b596b82a61669d8598f",
   "observations": 197245,
   "method_pairs": 25,
   "constructor_pairs": 1009,

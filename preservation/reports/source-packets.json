@@ -1,7 +1,7 @@
 {
   "scope": "Real MIDP2 Packet/SnacPacket/ConnectPacket/DisconnectPacket/ToIcqSrvPacket/FromIcqSrvPacket parsers, constructors, stored fields, copy/alias behavior and serializers. Only Class.getResourceAsStream in ResourceBundle is captured; real JimmException formats error and extended error codes. Synthetic error dictionary; option 133 exercises both actual CP1251 and default encoding paths. Source classes are unoptimized to retain parser entry points. Two original specialized ToIcqSrvPacket constructors are called with equivalent constant arguments restored at the source call boundary. No network connection or server compatibility claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "3ddb63f034af35fbea936d5ae179c8842a1ffece898407d8954ed3d7a661f423",
+  "source_unoptimized_class_jar_sha256": "2e1f296758de13fb0e02d700e930c1e0e1c04200945847e104172ec668f92677",
   "observations": 45331,
   "successful_parses": 15642,
   "differences": 0

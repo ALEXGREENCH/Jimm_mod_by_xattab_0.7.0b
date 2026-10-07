@@ -1,10 +1,10 @@
 {
-  "scope": "Executable optimized backlight signatures, static/synchronized modifiers and exact normalized instructions/handlers. The source optimizer removes constructor, MIDP2 changeState/On and lightOn; these are compared behaviorally on unoptimized source, not claimed as matching optimized signatures.",
+  "scope": "Executable optimized backlight signatures, static/synchronized modifiers and exact normalized instructions/handlers. The constructor may be removed by optimization. MIDP2 changeState/On and lightOn are now retained through the restored hotkey route and are audited as optimized declarations too.",
   "builds": [
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_class_jar_sha256": "d7901734679b5710788700f3ded4330f93180c75a0de4f5ff899302892c3cefc",
+      "source_class_jar_sha256": "bf91189bfc416b8f96a4a5f803d6659cc0bfab0609170dc44e2bad8f40e30699",
       "methods": [
         {
           "reference": "aj.<clinit>()V",
@@ -12,12 +12,12 @@
           "signature_verified": true,
           "static_and_synchronized_modifiers_verified": true,
           "reference_instructions": 8,
-          "source_instructions": 6,
-          "same_normalized_instructions": false,
+          "source_instructions": 8,
+          "same_normalized_instructions": true,
           "same_normalized_handlers": true,
-          "same_normalized_bytecode": false,
+          "same_normalized_bytecode": true,
           "reference_normalized_sha256": "a33e996919be36f4e1fe13e59b9a53c68ee01079ded3825d2a24d3d132aee261",
-          "source_normalized_sha256": "53c30752a06212d28a1cf8bebac26628fea85f8b466ac9020cab21ddc40ad5a6"
+          "source_normalized_sha256": "a33e996919be36f4e1fe13e59b9a53c68ee01079ded3825d2a24d3d132aee261"
         },
         {
           "reference": "aj.a(Z)V",
@@ -38,12 +38,12 @@
           "signature_verified": true,
           "static_and_synchronized_modifiers_verified": true,
           "reference_instructions": 9,
-          "source_instructions": 12,
-          "same_normalized_instructions": false,
+          "source_instructions": 9,
+          "same_normalized_instructions": true,
           "same_normalized_handlers": true,
-          "same_normalized_bytecode": false,
+          "same_normalized_bytecode": true,
           "reference_normalized_sha256": "59e4dc37be64e3fe9d18ca4a55834f7b9b190d00c16c17670db838ffe11f4f8a",
-          "source_normalized_sha256": "f56c8e440f407fee56de0aa3d1e65896374db9858ba7727f1db047ef813ca91f"
+          "source_normalized_sha256": "59e4dc37be64e3fe9d18ca4a55834f7b9b190d00c16c17670db838ffe11f4f8a"
         },
         {
           "reference": "aj.a()V",
@@ -64,12 +64,38 @@
           "signature_verified": true,
           "static_and_synchronized_modifiers_verified": true,
           "reference_instructions": 6,
-          "source_instructions": 4,
-          "same_normalized_instructions": false,
+          "source_instructions": 6,
+          "same_normalized_instructions": true,
           "same_normalized_handlers": true,
-          "same_normalized_bytecode": false,
+          "same_normalized_bytecode": true,
           "reference_normalized_sha256": "577ffcc72968b552419bd83f415e5be08cf403b7c198622cbe9cbed651cb190e",
-          "source_normalized_sha256": "04c923a9a98ca386e3906a7df5d7477fae7e9cbd9939972acba3262bbc6da158"
+          "source_normalized_sha256": "577ffcc72968b552419bd83f415e5be08cf403b7c198622cbe9cbed651cb190e"
+        },
+        {
+          "reference": "aj.b()V",
+          "source": "DrawControls/LightControl.changeState()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 6,
+          "source_instructions": 6,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "0cb9d60788cb654bd5baa9396e3a1c52f5ee33f3bcd0efa8625ec4c66ae01602",
+          "source_normalized_sha256": "0cb9d60788cb654bd5baa9396e3a1c52f5ee33f3bcd0efa8625ec4c66ae01602"
+        },
+        {
+          "reference": "aj.e()V",
+          "source": "DrawControls/LightControl.On()V",
+          "signature_verified": true,
+          "static_and_synchronized_modifiers_verified": true,
+          "reference_instructions": 7,
+          "source_instructions": 7,
+          "same_normalized_instructions": true,
+          "same_normalized_handlers": true,
+          "same_normalized_bytecode": true,
+          "reference_normalized_sha256": "fec7a5190c01c4d007aa0724fcd32684e25598904eed720a071c154e12ca5744",
+          "source_normalized_sha256": "fec7a5190c01c4d007aa0724fcd32684e25598904eed720a071c154e12ca5744"
         },
         {
           "reference": "t.<init>()V",
@@ -102,7 +128,7 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_class_jar_sha256": "611eb4427bfaf483c54df0ba0951161491d6bc8d845bc677c7d28949aa8d4cab",
+      "source_class_jar_sha256": "bfbc264b037569cca32ea0c8604d5eb63e02d23a535a764289a0a32e9550182a",
       "methods": [
         {
           "reference": "aj.<clinit>()V",

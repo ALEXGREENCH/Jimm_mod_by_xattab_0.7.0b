@@ -1,8 +1,8 @@
 {
   "scope": "Verified typed members from existing name mappings, canonical JVM callbacks/constructors, graphics/light audits and contact property access. Instruction order, compiler accessors, optimizer specialization and exception regions are not simplified. Canonical names continue the inherited source; they do not prove lost author spellings. All original classes have an authoring-class identity; hierarchy differences are recorded rather than suppressed. Contact synthetic expressions and removed/specialized signatures remain explicit. Member naming is not whole-program equivalence.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_optimized_class_jar_sha256": "d7901734679b5710788700f3ded4330f93180c75a0de4f5ff899302892c3cefc",
-  "source_unoptimized_class_jar_sha256": "3ddb63f034af35fbea936d5ae179c8842a1ffece898407d8954ed3d7a661f423",
+  "source_optimized_class_jar_sha256": "bf91189bfc416b8f96a4a5f803d6659cc0bfab0609170dc44e2bad8f40e30699",
+  "source_unoptimized_class_jar_sha256": "2e1f296758de13fb0e02d700e930c1e0e1c04200945847e104172ec668f92677",
   "original_classes_named": 101,
   "new_signatures_verified": 181,
   "new_field_declarations_verified": 61,
@@ -1333,7 +1333,7 @@
       "source": "DrawControls/LightControl.lightOn Z",
       "authoring_declaration_verified": true,
       "static_and_volatile_modifiers_verified": true,
-      "source_optimized_field_present": false
+      "source_optimized_field_present": true
     },
     {
       "reference": "aj.a I",
@@ -1425,8 +1425,8 @@
       "source_desc": "()V",
       "signature_and_modifiers_verified": true,
       "reference_instructions": 9,
-      "source_instructions": 12,
-      "same_normalized_bytecode": false,
+      "source_instructions": 9,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {
@@ -1451,8 +1451,8 @@
       "source_desc": "()V",
       "signature_and_modifiers_verified": true,
       "reference_instructions": 6,
-      "source_instructions": 4,
-      "same_normalized_bytecode": false,
+      "source_instructions": 6,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {
@@ -1464,8 +1464,8 @@
       "source_desc": "()V",
       "signature_and_modifiers_verified": true,
       "reference_instructions": 8,
-      "source_instructions": 6,
-      "same_normalized_bytecode": false,
+      "source_instructions": 8,
+      "same_normalized_bytecode": true,
       "abstract_declaration": false
     },
     {
@@ -4175,7 +4175,7 @@
       "reference_owner": "z",
       "reference_name": "b",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_optimized_class_jar_sha256": "d7901734679b5710788700f3ded4330f93180c75a0de4f5ff899302892c3cefc",
+      "source_optimized_class_jar_sha256": "bf91189bfc416b8f96a4a5f803d6659cc0bfab0609170dc44e2bad8f40e30699",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9
@@ -4185,7 +4185,7 @@
       "reference_owner": "z",
       "reference_name": "b",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_optimized_class_jar_sha256": "611eb4427bfaf483c54df0ba0951161491d6bc8d845bc677c7d28949aa8d4cab",
+      "source_optimized_class_jar_sha256": "bfbc264b037569cca32ea0c8604d5eb63e02d23a535a764289a0a32e9550182a",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9
@@ -4195,7 +4195,7 @@
       "reference_owner": "y",
       "reference_name": "b",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_optimized_class_jar_sha256": "8e2992ab89e18f5515d6e8b5ae32f188794f38244ada34aa3705cb4cb8900aeb",
+      "source_optimized_class_jar_sha256": "82ded8f7212298b3425b81cef88aa3bf6d39cd18fbba1f19651b7bc502800bbb",
       "synchronized_modifier_verified": true,
       "same_normalized_bytecode": true,
       "instructions": 9

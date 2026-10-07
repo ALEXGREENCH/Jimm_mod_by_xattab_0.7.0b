@@ -19,8 +19,8 @@ def main():
         return {c['name']: c for c in json.loads(recover.run([recover.java(), '-cp', recover.cp([audit.OUT, cp]), 'BytecodeDump', path], capture=True))}
 
     report = {'scope': 'Executable optimized backlight signatures, static/synchronized modifiers and exact normalized instructions/handlers. '
-                       'The source optimizer removes constructor, MIDP2 changeState/On and lightOn; these are compared behaviorally on unoptimized source, '
-                       'not claimed as matching optimized signatures.', 'builds': []}
+                       'The constructor may be removed by optimization. MIDP2 changeState/On and lightOn are now '
+                       'retained through the restored hotkey route and are audited as optimized declarations too.', 'builds': []}
     for target, old, opt in [('MIDP2', 'MIDP2', 'cj'), ('MOTOROLA', 'Moto', 'ci')]:
         audit.CLASSES = {'aj': 'DrawControls/LightControl', opt: 'jimm/Options'}
         audit.SYMBOLS = {'aj.a Z': 'DrawControls/LightControl.lightOn Z', 'aj.a I': 'DrawControls/LightControl.TIMEOUT I',
@@ -32,6 +32,7 @@ def main():
         if target == 'MIDP2':
             audit.CLASSES['t'] = 'DrawControls/LightControl$1'
             methods += [('aj', 'd', '()V', 'cancelTimeout'), ('aj', 'a', '()V', 'reset'), ('aj', 'c', '()V', 'Off'),
+                        ('aj', 'b', '()V', 'changeState'), ('aj', 'e', '()V', 'On'),
                         ('t', '<init>', '()V', '<init>'), ('t', 'run', '()V', 'run')]
             audit.SYMBOLS.update({'aj.e()V': 'DrawControls/LightControl.On()V', 'aj.b()V': 'DrawControls/LightControl.changeState()V'})
         else:

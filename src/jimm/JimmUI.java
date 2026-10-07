@@ -945,7 +945,10 @@ public class JimmUI implements CommandListener, VirtualListCommands
 
 			case Options.HOTKEY_INFO:
 				if (item != null)
+				{
+					clciContactMenu = item;
 					requiestUserInfo(item.getUinString(), item.name);
+				}
 				break;
 
 			case Options.HOTKEY_NEWMSG:
@@ -992,17 +995,21 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
 
 			case Options.HOTKEY_FULLSCR:
-				boolean fsValue = !Options.getBoolean(Options.OPTION_FULL_SCREEN);
-				VirtualList.setFullScreenForCurrent(fsValue);
-				Options.setBoolean(Options.OPTION_FULL_SCREEN, fsValue);
+				Options.setBoolean(Options.OPTION_FULL_SCREEN, !Options.getBoolean(Options.OPTION_FULL_SCREEN));
+				setColorScheme(true);
 				Options.safe_save();
-				ContactList.activate();
 				break;
 			//#sijapp cond.end#
 
 			//#sijapp cond.if target isnot "DEFAULT"#
 			case Options.HOTKEY_SOUNDOFF:
 				ContactList.changeSoundMode(true);
+				break;
+			//#sijapp cond.end#
+
+			//#sijapp cond.if target is "MIDP2"#
+			case Options.HOTKEY_ADJLIGHT:
+				LightControl.changeState();
 				break;
 			//#sijapp cond.end#
 

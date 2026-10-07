@@ -2292,6 +2292,29 @@ SYMBOLS.update({
     'cf.a(Lz;Ljava/lang/String;)V': 'jimm/JimmUI.writeMessage(Ljimm/ContactItem;Ljava/lang/String;)V',
 })
 
+# Genuine three-platform hotkey execution establishes these dispatcher/facade roles.
+# The MIDP2 light toggle keeps changeState/On in the optimized application again.
+METHODS.extend([
+    ('cf', 'a', '(ILz;I)V', 'execHotKeyAction'),
+    ('cf', 'a', '(Lz;II)V', 'execHotKey'),
+    ('cf', 'a', '(Lz;II)Z', 'execDoubleHotKey'),
+    ('aj', 'b', '()V', 'changeState'),
+    ('aj', 'e', '()V', 'On'),
+])
+SYMBOLS.update({
+    'cf.a J': 'jimm/JimmUI.lockPressedTime J',
+    'cd.a Z': 'DrawControls/VirtualList.zeroWasPressed Z',
+    'cj.a I': 'jimm/Options.EXT_KEY_COUNT I',
+    'cj.a [I': 'jimm/Options.EXT_KEY_CODES [I',
+    'cj.d()V': 'jimm/Options.safe_save()V',
+    'cj.e()V': 'jimm/Options.editOptions()V',
+    'cf.a(ILz;I)V': 'jimm/JimmUI.execHotKeyAction(ILjimm/ContactItem;I)V',
+    'cf.a(Lz;II)V': 'jimm/JimmUI.execHotKey(Ljimm/ContactItem;II)V',
+    'cf.a(Lz;II)Z': 'jimm/JimmUI.execDoubleHotKey(Ljimm/ContactItem;II)Z',
+    'aj.b()V': 'DrawControls/LightControl.changeState()V',
+    'aj.e()V': 'DrawControls/LightControl.On()V',
+})
+
 
 def normalized(code):
     result = []

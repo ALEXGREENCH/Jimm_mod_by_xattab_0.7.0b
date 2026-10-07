@@ -1,36 +1,36 @@
 {
   "scope": "Real ResourceBundle initialization, lazy loading, language switching and FLAG_ELLIPSIS specialization. Scripted resource bytes/read/close failures; real DataInputStream modified-UTF parser. All five actual MIDP2 dictionaries are queried by verified reference/source keys. A five-language list is provided for switching tests; historical individual releases contain one language each.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "3ddb63f034af35fbea936d5ae179c8842a1ffece898407d8954ed3d7a661f423",
+  "source_unoptimized_class_jar_sha256": "2e1f296758de13fb0e02d700e930c1e0e1c04200945847e104172ec668f92677",
   "dictionaries": [
     {
       "language": "RU",
       "reference_jar_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_jar_sha256": "d7d94c08266ea891f766b5272b93a28487c9f125511562f6ff7c83498a045b80",
+      "source_jar_sha256": "ff81a1de93bef0df55deea3eb6f90fa26f9899be88d4ba894eac64ea6536f5d5",
       "entries": 561
     },
     {
       "language": "UA",
       "reference_jar_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-      "source_jar_sha256": "281b9751263065895107e3544d7c47482316552d7c0248ea63269edaba3103c5",
+      "source_jar_sha256": "c173b7dd437e102206b07d15dbd3ad67a788a36c0d6171a704cdac464f5f98ba",
       "entries": 561
     },
     {
       "language": "RO",
       "reference_jar_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-      "source_jar_sha256": "aa887e0b234690ccbeffe4b80b672ae6161ae9e43302a8de7a4be17723209b88",
+      "source_jar_sha256": "a67ac2621322274baa84960a45a23f998aa4838bf5ecc100baf574bdf6c5e831",
       "entries": 561
     },
     {
       "language": "EN",
       "reference_jar_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-      "source_jar_sha256": "baa5b7add6bdddb01726ea1be3c5d8a7197bb5f5a8a4ae2a358a3ec4cea4a6b9",
+      "source_jar_sha256": "a676111ca8c4f9fe99d636a47e5c260d6a674e1d4413868b50126c0e078e9fea",
       "entries": 561
     },
     {
       "language": "CZ",
       "reference_jar_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-      "source_jar_sha256": "18eb70337119ec26b136c8fdf912a0fe1f05367a16a745a058189b3be7496f13",
+      "source_jar_sha256": "8c7c05e7a9436d45aa8acbb99c9464cfbed64511fad095655426fd179ef0c090",
       "entries": 562
     }
   ],

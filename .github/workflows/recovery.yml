@@ -62,6 +62,7 @@ jobs:
             preservation/reports/source-send-text-bytecode.json
             preservation/reports/source-editor.json
             preservation/reports/source-editor-bytecode.json
+            preservation/reports/source-hotkeys.json
   verify:
     runs-on: ubuntu-latest
     steps:
