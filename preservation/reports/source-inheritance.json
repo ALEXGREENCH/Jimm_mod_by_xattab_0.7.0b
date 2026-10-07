@@ -1,8 +1,8 @@
 {
   "scope": "Typed calls already verified by the main audit, and every original abstract declaration with real descendant override witnesses. GroupItem image accessors use ContactListItem override identity rather than identical return -1 bodies. Names continue the inherited source; no instruction, branch, handler or synthetic-expression simplification. Abstract declarations are counted separately from executable bodies. This is a complete abstract-member inventory for MIDP2/RU, without claiming whole-program behavior or original author spellings.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_optimized_class_jar_sha256": "bf91189bfc416b8f96a4a5f803d6659cc0bfab0609170dc44e2bad8f40e30699",
-  "source_unoptimized_class_jar_sha256": "2e1f296758de13fb0e02d700e930c1e0e1c04200945847e104172ec668f92677",
+  "source_optimized_class_jar_sha256": "4083e7388c483a65872d55fa6f8b8a4f4569d4790f9f9e1c6677fba043c8e3d2",
+  "source_unoptimized_class_jar_sha256": "879680de6d5c4271d7a6b0d101467ddfe2623b2844a26f7296daa7a1f690a518",
   "typed_call_aliases_verified": 239,
   "original_abstract_declarations": 35,
   "abstract_optimized_signatures_verified": 34,

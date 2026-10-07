@@ -1,0 +1,155 @@
+{
+  "scope": "Enumerated editor command properties in actual native/raw/optimized classes: unique command constructor keys, exact six-instruction null-clipboard predicate, its branch skipping caret read/insertion, absent history paging commands and platform caret API. This is not whole-handler equivalence or runtime evidence for Motorola/Siemens.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_unoptimized_class_jar_sha256": "879680de6d5c4271d7a6b0d101467ddfe2623b2844a26f7296daa7a1f690a518",
+      "source_optimized_class_jar_sha256": "4083e7388c483a65872d55fa6f8b8a4f4569d4790f9f9e1c6677fba043c8e3d2",
+      "command_roles": {
+        "cmdQuote": "l",
+        "cmdPaste": "m",
+        "nextCmd": "p",
+        "prevCmd": "q",
+        "cmdClearText": "r",
+        "transCmd": "w",
+        "detransCmd": "x"
+      },
+      "command_label_keys": {
+        "cmdQuote": "O4",
+        "cmdPaste": "y4",
+        "nextCmd": "c",
+        "prevCmd": "F4",
+        "cmdClearText": "f1",
+        "transCmd": "d0",
+        "detransCmd": "c0"
+      },
+      "checks": [
+        {
+          "handler": "cf.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "cf.a()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": false
+        },
+        {
+          "handler": "jimm/JimmUI.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "jimm/JimmUI.clipBoardIsEmpty()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": false
+        },
+        {
+          "handler": "jimm/JimmUI.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "jimm/JimmUI.clipBoardIsEmpty()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": false
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_unoptimized_class_jar_sha256": "5dca65664317c7a1a3a87e960a0b0cc9ebab93397a99d834c014563b70bf240a",
+      "source_optimized_class_jar_sha256": "a71cb1f25ed44ad35a59c4ca2a9fac7e9eaa58850c56ccdda5aacebbaf77567e",
+      "command_roles": {
+        "cmdQuote": "l",
+        "cmdPaste": "m",
+        "nextCmd": "p",
+        "prevCmd": "q",
+        "cmdClearText": "r",
+        "transCmd": "w",
+        "detransCmd": "x"
+      },
+      "command_label_keys": {
+        "cmdQuote": "R4",
+        "cmdPaste": "B4",
+        "nextCmd": "f",
+        "prevCmd": "I4",
+        "cmdClearText": "i1",
+        "transCmd": "g0",
+        "detransCmd": "f0"
+      },
+      "checks": [
+        {
+          "handler": "cd.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "cd.a()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": true
+        },
+        {
+          "handler": "jimm/JimmUI.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "jimm/JimmUI.clipBoardIsEmpty()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": true
+        },
+        {
+          "handler": "jimm/JimmUI.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "jimm/JimmUI.clipBoardIsEmpty()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": true
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "source_unoptimized_class_jar_sha256": "c85146f8e42bab21dd4d5e274b38b6cafed3fbf1618a27536c68aa808c34f743",
+      "source_optimized_class_jar_sha256": "c1518dd7ae0839bd70b601e15df44fcbd5fcb6589a134053ed64dfba4baed123",
+      "command_roles": {
+        "cmdQuote": "l",
+        "cmdPaste": "m",
+        "nextCmd": "p",
+        "prevCmd": "q",
+        "cmdClearText": "r",
+        "transCmd": "w",
+        "detransCmd": "x"
+      },
+      "command_label_keys": {
+        "cmdQuote": "M4",
+        "cmdPaste": "w4",
+        "nextCmd": "a",
+        "prevCmd": "D4",
+        "cmdClearText": "d1",
+        "transCmd": "b0",
+        "detransCmd": "a0"
+      },
+      "checks": [
+        {
+          "handler": "cd.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "cd.a()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": false
+        },
+        {
+          "handler": "jimm/JimmUI.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "jimm/JimmUI.clipBoardIsEmpty()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": false
+        },
+        {
+          "handler": "jimm/JimmUI.commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "empty_predicate": "jimm/JimmUI.clipBoardIsEmpty()Z",
+          "predicate_instructions": 6,
+          "guarded_quote_paste_insert": true,
+          "history_paging_commands_absent_from_editor_handler": true,
+          "caret_uses_end_of_string": false
+        }
+      ]
+    }
+  ]
+}

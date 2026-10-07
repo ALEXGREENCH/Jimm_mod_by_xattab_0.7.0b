@@ -38,14 +38,14 @@ def call_map(ref):
     return result
 
 
-def execute(runtime, cp, mode, base, untouched):
+def execute(runtime, cp, mode, base, untouched, probe='EditorProbe', prefix='editor'):
     ref = mode == 'reference'
     owner = 'cf' if ref else 'jimm/JimmUI'
     before = dump(untouched, owner, cp)
     assert dump(base, owner, cp) == before, ('Prepared host changed controller', mode)
-    fixture, output = TEST / ('editor-' + mode + '.jar'), TEST / ('editor-' + mode + '.txt')
+    fixture, output = TEST / (prefix + '-' + mode + '.jar'), TEST / (prefix + '-' + mode + '.txt')
     run([recover.java(), '-cp', recover.cp([TEST, CACHE / 'asm.jar']), 'EditorFixture',
-         base, fixture, 'reference' if ref else 'source', TEST], 'editor-fixture-' + mode)
+         base, fixture, 'reference' if ref else 'source', TEST], prefix + '-fixture-' + mode)
     after = dump(fixture, owner, cp)
     assert {k: v for k, v in before.items() if k != 'methods'} == {k: v for k, v in after.items() if k != 'methods'}
     assert len(before['methods']) == len(after['methods'])
@@ -62,8 +62,8 @@ def execute(runtime, cp, mode, base, untouched):
         assert expected == right['code'], ('Unexpected editor rewrite', mode, left['name'], left['desc'])
         assert right['refs'] == [s for s in expected if 178 <= int(s.split(' ', 1)[0]) <= 185]
     run([recover.java(), '-Djava.awt.headless=true', '-Dsun.reflect.inflationThreshold=2147483647',
-         '-cp', recover.cp([TEST, *runtime]), 'EditorProbe', fixture,
-         'reference' if ref else 'source', output], 'editor-' + mode)
+         '-cp', recover.cp([TEST, *runtime]), probe, fixture,
+         'reference' if ref else 'source', output], prefix + '-' + mode)
     return output.read_bytes(), {'mode': mode, 'base_sha256': recover.sha(base),
                                'fixture_sha256': recover.sha(fixture), 'captures': captures,
                                'whole_controller_unchanged_before_capture': True,

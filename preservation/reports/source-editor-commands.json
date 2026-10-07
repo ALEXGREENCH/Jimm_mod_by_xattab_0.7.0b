@@ -1,23 +1,19 @@
 {
-  "scope": "Actual MIDP2-RU JimmUI private caption, pagination, insertion, save/get/current-page and public writeMessage creation/reuse. Actual TextBox state, constraints, commands and listener are used. Add/listener/constraints call captures delegate to the real API; display switch, gc, light and typing terminal calls are recorded with scripted failures. Complete controller declarations, flags, instructions and handlers are verified before and after interception. No physical display, gc scheduling, backlight or typing packet claim; real typing/SNAC is independently tested by test_send_text.py. Existing login/date host initialization boundaries apply. Unoptimized and delivered optimized classes both run.",
+  "scope": "Actual MIDP2 editor commandAction, real TextBox, clipboard, page vector, insertion and transliteration. Quote/paste/next/previous/clear/transliterate/detransliterate/unknown/null commands are compared. The real command objects are identified by their original constructor keys. Existing login/date startup boundaries apply. Complete controller declarations, instructions and handlers are unchanged except enumerated EditorIO terminal/API captures, which delegate command/listener/constraint operations. No send/cancel/network, complete controller, full startup or physical device claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
   "source_jar_sha256": "87fb61a73a8aae294d2acb9d6a1e5628f120505462c7a30e3410305ee1bb2541",
   "source_unoptimized_class_jar_sha256": "879680de6d5c4271d7a6b0d101467ddfe2623b2844a26f7296daa7a1f690a518",
-  "observations": 19948,
-  "title_calls": 320,
-  "pagination_scenarios": 180,
-  "write_message_calls": 1578,
-  "command_add_calls": 6309,
-  "typing_calls": 285,
-  "gc_calls": 598,
-  "light_calls": 1019,
-  "optimized_observations": 19948,
+  "observations": 17281,
+  "command_calls": 4320,
+  "quote_paste_calls": 960,
+  "history_paging_command_calls": 960,
+  "optimized_observations": 17281,
   "differences": 0,
   "fixture_proofs": [
     {
       "mode": "reference",
       "base_sha256": "031a23793312ec58e1e4cbde93959a89a4d3086b806c96bc4f1acc13da0cedf8",
-      "fixture_sha256": "3d0fa3957a6cab7ecd0fe70b0b8ea68c22d16851acf886b57cd776e3a0540c10",
+      "fixture_sha256": "c529ddaf4243834a39f24ada19b74331d530d6aba763122d4e1c7cc64317cc77",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 aj.a(Z)V": 4,
@@ -33,7 +29,7 @@
     {
       "mode": "source",
       "base_sha256": "183c47a215c5f1df51b983d62600272f801265d96f3de428e422ba93c1334276",
-      "fixture_sha256": "f87382e3412d3ee2f7ec2f182aba07ac43e6b457251bc01e067ee5441080f67b",
+      "fixture_sha256": "5d07ec81669213fb62d5ed4781fcb20a86bd08395ac84782e8f89a95b916655d",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 DrawControls/LightControl.flash(Z)V": 3,
@@ -48,8 +44,8 @@
     },
     {
       "mode": "optimized-source",
-      "base_sha256": "144b274c7f1fc1e31e3911d22c3ac9cd863a7de9c77a36f435c810d760bc4818",
-      "fixture_sha256": "ad3309293be4ad9aa4fe889bc6ba337aabbb1b43e942db8af414b5c37e736c7f",
+      "base_sha256": "19b4af617d79354dc892b864d122c8ea0b6b5db752a6edb39188d1d81fe1e30b",
+      "fixture_sha256": "af6c9de57ed965d15acefaadc7ba71771fac4457e45e13f49df2d1976b25c79a",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 DrawControls/LightControl.flash(Z)V": 3,

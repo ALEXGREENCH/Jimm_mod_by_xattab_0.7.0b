@@ -398,12 +398,15 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			/* Reply with quotation */
 			else if ((c == cmdQuote) || (c == cmdPaste))
 			{
-				//#sijapp cond.if target is "MOTOROLA"#
-				int caretPos = messageTextbox.getString().length();
-				//#sijapp cond.else#
-				int caretPos = messageTextbox.getCaretPosition();
-				//#sijapp cond.end#
-				insert(getClipBoardText(c == cmdQuote), caretPos);
+				if (!clipBoardIsEmpty())
+				{
+					//#sijapp cond.if target is "MOTOROLA"#
+					int caretPos = messageTextbox.getString().length();
+					//#sijapp cond.else#
+					int caretPos = messageTextbox.getCaretPosition();
+					//#sijapp cond.end#
+					insert(getClipBoardText(c == cmdQuote), caretPos);
+				}
 			}
 
 			else if (c == detransCmd)
@@ -414,16 +417,6 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			else if (c == transCmd)
 			{
 				messageTextbox.setString(StringConvertor.transliterate(messageTextbox.getString()));
-			}
-
-			else if (c == nextCmd)
-			{
-				switchText(current + 1);
-			}
-
-			else if (c == prevCmd)
-			{
-				switchText(current - 1);
 			}
 		}
 

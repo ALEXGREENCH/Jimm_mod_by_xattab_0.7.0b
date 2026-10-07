@@ -171,6 +171,7 @@ def main(matrix=False, skip_build=False):
     report['jimm_urls'] = run([sys.executable, ROOT / 'tools/test_jimm_urls.py', '--prepared'], 'jimm-urls-audit')
     report['send_text'] = run([sys.executable, ROOT / 'tools/test_send_text.py', '--prepared'], 'send-text-audit')
     report['editor'] = run([sys.executable, ROOT / 'tools/test_editor.py', '--prepared'], 'editor-audit')
+    report['editor_commands'] = run([sys.executable, ROOT / 'tools/test_editor_commands.py'], 'editor-command-audit')
     profile_ref, profile_src = TEST / 'profile-reference.txt', TEST / 'profile-source.txt'
     for mode, output in [('reference', profile_ref), ('source', profile_src)]:
         fixture = TEST / ('profile-' + mode + '.jar')
@@ -464,6 +465,7 @@ def main(matrix=False, skip_build=False):
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')
         report['editor_bytecode'] = run([sys.executable, ROOT / 'tools/audit_editor.py'], 'editor-bytecode')
+        report['editor_command_bytecode'] = run([sys.executable, ROOT / 'tools/audit_editor_commands.py'], 'editor-command-bytecode')
         report['hotkeys'] = run([sys.executable, ROOT / 'tools/test_hotkeys.py'], 'hotkey-audit')
     report['request_info_categories'] = run([sys.executable, ROOT / 'tools/test_request_info_categories.py',
                                             *(['--all-languages'] if matrix else []), '--skip-build'],

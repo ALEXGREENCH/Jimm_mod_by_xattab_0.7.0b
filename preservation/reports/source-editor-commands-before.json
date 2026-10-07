@@ -1,0 +1,36 @@
+{
+  "scope": "Genuine c9d203c authored MIDP2 classes, compared against original May application with the same actual command handler probe and full-call state/clipboard observations. No generated expected output.",
+  "prior_commit": "c9d203c",
+  "calls": 4320,
+  "different_calls": 960,
+  "different_calls_by_command": {
+    "0": 0,
+    "1": 0,
+    "2": 480,
+    "3": 480,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0
+  },
+  "command_order": [
+    "quote",
+    "paste",
+    "next",
+    "previous",
+    "clear",
+    "transliterate",
+    "detransliterate",
+    "unknown",
+    "null"
+  ],
+  "source_ui_sha256": "fc061ff7f8d3e043b68769c5f11f477f170bc15220be85fc78aaa79e302babde",
+  "source_unoptimized_class_jar_sha256": "2e1f296758de13fb0e02d700e930c1e0e1c04200945847e104172ec668f92677",
+  "source_jar_sha256": "ff81a1de93bef0df55deea3eb6f90fa26f9899be88d4ba894eac64ea6536f5d5",
+  "source_host_sha256": "80bcbdd6804441840180d68f2076a9b1a787e452b36c7ea51476c68f4a9b80b9",
+  "reference_fixture_sha256": "1e85df16f20a9ab08d45ff037ede09854e5ded93969e95154f01de5c690866f2",
+  "source_fixture_sha256": "2f9e86d00b76db4746b676a583780d57bcb5d1eacad6c4ddcd07501d04ceefee",
+  "reference_output_sha256": "adca9eed7813fae7028742c897e7b10e72b50d51ceaeab4bf101bd246d4fe392",
+  "source_output_sha256": "839c306111045e02c07369cc29285712aecf69094649c8ae2566620f6e9c78b0"
+}
