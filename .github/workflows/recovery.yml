@@ -36,6 +36,7 @@ jobs:
             preservation/reports/source-request-info-categories.json
             preservation/reports/source-xstatus-catalog.json
             preservation/reports/source-xstatus-bytecode.json
+            preservation/reports/source-password.json
   verify:
     runs-on: ubuntu-latest
     steps:

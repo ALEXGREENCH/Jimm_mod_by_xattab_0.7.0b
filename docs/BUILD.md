@@ -69,6 +69,8 @@ python tools/audit_xstatus.py
 
 Серверные списки, удаление себя из списка и авторизация проверяются в общей функциональной серии `server_actions`: [отчёт](../preservation/reports/source-server-actions.json).
 
+Native окно ввода пароля, его singleton, команды и ветки подключения/отмены проверяются серией `password`: [отчёт](../preservation/reports/source-password.json). Настоящий `TextBox` сохранён; конечные вызовы UI, подсветки, соединения и выхода наблюдаются на границе контроллера.
+
 Дни рождения, календарные расчёты, контактные поля и реальные RMS-записи эмулятора проверяются серией `birthday`: [отчёт](../preservation/reports/source-birthday.json). Фиксируются часы и границы запуска/ожидания рабочего потока; физическая многопоточность не моделируется.
 
 Сокетное соединение проверяется серией `socket`: [отчёт](../preservation/reports/source-socket.json). Настоящие чтение FLAP, очередь, счётчики и закрытие исполняются на сценарных потоках. `python tools/audit_socket.py` дополнительно сверяет все инструкции и обработчики `close()` на трёх платформах; [отчёт](../preservation/reports/source-socket-bytecode.json).

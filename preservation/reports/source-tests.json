@@ -62,6 +62,10 @@
   "file_transfer_source": "PASS probe: 826 login/roster observations",
   "file_transfer_observations": 826,
   "file_transfer_differences": 0,
+  "password_reference": "PASS probe: 16111 login/roster observations",
+  "password_source": "PASS probe: 16111 login/roster observations",
+  "password_observations": 16111,
+  "password_differences": 0,
   "birthday_reference": "PASS probe: 7409 login/roster observations",
   "birthday_source": "PASS probe: 7409 login/roster observations",
   "birthday_observations": 7409,
@@ -195,6 +199,8 @@
     "MicroEmulator does not play all original sound formats.",
     "No live ICQ login, real-device or complete bytecode-equivalence claim."
   ],
+  "request_info_categories": "PASS request-info categories: 5 locales, 491990 observations",
+  "xstatus_catalog": "PASS XStatus bytecode: 3 native GUID initializers, 36 signatures, 21 instruction/handler matches\nPASS XStatus catalog: 5 locales, 781540 observations",
   "builds": [
     {
       "target": "MIDP2",
@@ -283,6 +289,5 @@
   "filesystems": "PASS filesystems: 4 device paths, 1224 observations\nPASS filesystems bytecode: 32 signatures, 20 identical normalized instructions/handlers",
   "light": "PASS light: 2 platforms, 6696 observations\nPASS light bytecode: 12 signatures, 8 identical normalized instructions/handlers",
   "socket_bytecode": "PASS socket close: all 3 platforms match 28 normalized instructions and all exception handlers",
-  "request_info_categories": "PASS request-info categories: 5 locales, 491990 observations",
-  "xstatus_catalog": "PASS XStatus bytecode: 3 native GUID initializers, 36 signatures, 21 instruction/handler matches\nPASS XStatus catalog: 5 locales, 781540 observations"
+  "matrix_reused_for_unchanged_source": true
 }

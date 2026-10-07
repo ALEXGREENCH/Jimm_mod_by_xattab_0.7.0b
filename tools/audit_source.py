@@ -1269,6 +1269,47 @@ SYMBOLS.update({
     'z.a()Lbj;': 'jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;',
 })
 
+# Concrete base action/message bodies; four abstract Action declarations have no instructions.
+CLASSES['bk'] = 'jimm/comm/UrlMessage'
+SYMBOLS.update({
+    'aa.a Lr;': 'jimm/comm/Action.icq Ljimm/comm/Icq;',
+    'aa.a Z': 'jimm/comm/Action.exclusive Z',
+    'aa.b Z': 'jimm/comm/Action.executableConnected Z',
+    'aa.a()Z': 'jimm/comm/Action.isCompleted()Z',
+    'aa.a()I': 'jimm/comm/Action.getProgress()I',
+    'aa.a()Ljava/lang/String;': 'jimm/comm/Action.getProgressMsg()Ljava/lang/String;',
+    'aa.a(Lr;)V': 'jimm/comm/Action.setIcq(Ljimm/comm/Icq;)V',
+    'aa.c()Z': 'jimm/comm/Action.isExecutable()Z',
+    'r.b()Z': 'jimm/comm/Icq.isNotConnected()Z',
+    'ac.b I': 'jimm/comm/Message.messageType I',
+    'ac.b Z': 'jimm/comm/Message.offline Z',
+    'ac.a Lz;': 'jimm/comm/Message.rcvr Ljimm/ContactItem;',
+    'ac.a()Ljava/lang/String;': 'jimm/comm/Message.getRcvrUin()Ljava/lang/String;',
+    'ac.a()Lz;': 'jimm/comm/Message.getRcvr()Ljimm/ContactItem;',
+    'ac.a()Z': 'jimm/comm/Message.getOffline()Z',
+    'av.a Ljava/lang/String;': 'jimm/comm/PlainMessage.text Ljava/lang/String;',
+    'bk.a Ljava/lang/String;': 'jimm/comm/UrlMessage.url Ljava/lang/String;',
+    'bk.b Ljava/lang/String;': 'jimm/comm/UrlMessage.text Ljava/lang/String;',
+})
+
+# Native password controller fields/calls, confirmed by real TextBox and failure-path execution.
+CLASSES['by'] = 'jimm/EnterPassword'
+SYMBOLS.update({
+    'by.a Ljavax/microedition/lcdui/TextBox;': 'jimm/EnterPassword.passwordTextField Ljavax/microedition/lcdui/TextBox;',
+    'by.a Ljavax/microedition/lcdui/Displayable;': 'jimm/EnterPassword._PreviousForm Ljavax/microedition/lcdui/Displayable;',
+    'by.a Lby;': 'jimm/EnterPassword.instance Ljimm/EnterPassword;',
+    'by.a(Ljavax/microedition/lcdui/Displayable;)V': 'jimm/EnterPassword.activate(Ljavax/microedition/lcdui/Displayable;)V',
+    'by.a()V': 'jimm/EnterPassword.autoConnect()V',
+    'cf.a Ljavax/microedition/lcdui/Command;': 'jimm/JimmUI.cmdOk Ljavax/microedition/lcdui/Command;',
+    'cf.b Ljavax/microedition/lcdui/Command;': 'jimm/JimmUI.cmdCancel Ljavax/microedition/lcdui/Command;',
+    'cv.d(Z)V': 'jimm/SplashCanvas.unlock(Z)V',
+    'cv.d()Z': 'jimm/SplashCanvas.locked()Z',
+    'cv.c Z': 'jimm/SplashCanvas.isLocked Z',
+    'cv.a J': 'jimm/SplashCanvas.poundPressTime J',
+    'jimm/Jimm.h Z': 'jimm/Jimm.isPasswordProtected Z',
+    'jimm/Jimm.a Ljimm/Jimm;': 'jimm/Jimm.jimm Ljimm/Jimm;',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -2009,6 +2050,33 @@ METHODS.extend([
     ('bj', '<clinit>', '()V', '<clinit>'),
     ('z', 'a', '([B)V', 'setXStatus'),
     ('z', 'a', '()Lbj;', 'getXStatus'),
+])
+
+
+METHODS.extend([
+    ('aa', '<init>', '(ZZ)V', '<init>'),
+    ('aa', 'a', '(Lr;)V', 'setIcq'),
+    ('aa', 'c', '()Z', 'isExecutable'),
+    ('aa', 'a', '()I', 'getProgress'),
+    ('aa', 'a', '()Ljava/lang/String;', 'getProgressMsg'),
+    ('aa', 'a', '(I)V', 'onEvent'),
+    ('ac', '<init>', '(JLjava/lang/String;Ljava/lang/String;I)V', '<init>'),
+    ('ac', 'a', '()Ljava/lang/String;', 'getRcvrUin'),
+    ('ac', 'a', '()Lz;', 'getRcvr'),
+    ('ac', 'a', '()Z', 'getOffline'),
+    ('av', '<init>', '(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Z)V', '<init>'),
+    ('av', '<init>', '(Ljava/lang/String;Lz;IJLjava/lang/String;)V', '<init>'),
+    ('bk', '<init>', '(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V', '<init>'),
+    ('bz', '<init>', '()V', '<init>'),
+    ('r', 'b', '()Z', 'isNotConnected'),
+])
+
+
+METHODS.extend([
+    ('by', '<init>', '(Ljavax/microedition/lcdui/Displayable;)V', '<init>'),
+    ('by', 'a', '(Ljavax/microedition/lcdui/Displayable;)V', 'activate'),
+    ('by', 'a', '()V', 'autoConnect'),
+    ('by', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
 ])
 
 
