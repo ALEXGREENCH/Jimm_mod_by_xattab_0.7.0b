@@ -101,6 +101,8 @@ Native телефонная книга, команды звонка/SMS и ош�
 
 Отчёты: [функциональные проверки](../preservation/reports/source-tests.json), [сравнение байткода](../preservation/reports/source-bytecode-comparison.json), [ресурсы/локализации](../preservation/reports/source-resources.json), [загрузчик языков](../preservation/reports/source-language-loader.json), [графические компоненты](../preservation/reports/source-graphics.json) и [их байткод](../preservation/reports/source-graphics-bytecode.json), [файловые адаптеры](../preservation/reports/source-filesystems.json) и [их байткод](../preservation/reports/source-filesystems-bytecode.json), [подсветка](../preservation/reports/source-light.json) и [её байткод](../preservation/reports/source-light-bytecode.json). Область проверок и ограничения приведены в [описании восстановления](SOURCE-RECOVERY.md). Все сочетания модулей и поведение на реальных телефонах не проверены.
 
+Журнал действий, его текст/теги/цвета, меню, буфер обмена, счётчик, клавиши и частичные ошибки перехода проверяются общей серией `magic_eye`: [отчёт](../preservation/reports/source-magic-eye.json). Исполняются реальные методы MagicEye/TextList, контактный lookup и создание временного контакта; конечные маршруты и часы захватываются на тестовой границе.
+
 ## Историческая сборка Ant
 
 В корне сохранён `build.xml`, а в [BUILD-0.6.md](BUILD-0.6.md) — инструкция исходного репозитория для JDK 6, Ant и Wireless Toolkit. Она относится к базе 0.6.0a; актуальная проверенная сборка 0.7.0b описана выше.

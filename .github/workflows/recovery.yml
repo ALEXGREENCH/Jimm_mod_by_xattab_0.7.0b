@@ -41,6 +41,7 @@ jobs:
             preservation/reports/source-phone-book-bytecode.json
             preservation/reports/source-save-info.json
             preservation/reports/source-save-info-locales.json
+            preservation/reports/source-magic-eye.json
   verify:
     runs-on: ubuntu-latest
     steps:

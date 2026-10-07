@@ -2112,6 +2112,54 @@ METHODS.extend([
 ])
 
 
+SYMBOLS.update({
+    'ah.a Lah;': 'jimm/util/MagicEye.instance Ljimm/util/MagicEye;',
+    'ah.b Lah;': 'jimm/util/MagicEye._this Ljimm/util/MagicEye;',
+    'ah.a Lbi;': 'jimm/util/MagicEye.list LDrawControls/TextList;',
+    'ah.a Ljava/util/Vector;': 'jimm/util/MagicEye.uins Ljava/util/Vector;',
+    'ah.a I': 'jimm/util/MagicEye.counter I',
+    'ah.a Ljavax/microedition/lcdui/Command;': 'jimm/util/MagicEye.cmdContactMenu Ljavax/microedition/lcdui/Command;',
+    'ah.a()V': 'jimm/util/MagicEye.activate()V',
+    'ah.b()V': 'jimm/util/MagicEye.removeCommands()V',
+    'ah.a(Z)V': 'jimm/util/MagicEye.copyText(Z)V',
+    'ah.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V': 'jimm/util/MagicEye.registerAction(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V',
+    'ah.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V': 'jimm/util/MagicEye.addAction(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V',
+    'ah.a(Ljava/lang/String;Ljava/lang/String;Z)V': 'jimm/util/MagicEye.addAction(Ljava/lang/String;Ljava/lang/String;Z)V',
+    'cf.i Ljavax/microedition/lcdui/Command;': 'jimm/JimmUI.cmdMenu Ljavax/microedition/lcdui/Command;',
+    'cf.f Ljavax/microedition/lcdui/Command;': 'jimm/JimmUI.cmdCopyText Ljavax/microedition/lcdui/Command;',
+    'cf.g Ljavax/microedition/lcdui/Command;': 'jimm/JimmUI.cmdCopyAppend Ljavax/microedition/lcdui/Command;',
+    'cf.h Ljavax/microedition/lcdui/Command;': 'jimm/JimmUI.cmdCopyAll Ljavax/microedition/lcdui/Command;',
+    'cf.r Ljavax/microedition/lcdui/Command;': 'jimm/JimmUI.cmdClearText Ljavax/microedition/lcdui/Command;',
+    'cf.a Ljava/lang/Object;': 'jimm/JimmUI.lastScreen Ljava/lang/Object;',
+    'cf.a()Z': 'jimm/JimmUI.clipBoardIsEmpty()Z',
+    'cf.c()V': 'jimm/JimmUI.clearClipBoardText()V',
+    'cf.a(Ljava/lang/Object;)Ljava/lang/String;': 'jimm/JimmUI.getCaption(Ljava/lang/Object;)Ljava/lang/String;',
+    'cf.a(Z)Ljava/lang/String;': 'jimm/JimmUI.getClipBoardText(Z)Ljava/lang/String;',
+    'cf.a(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V': 'jimm/JimmUI.setClipBoardText(ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V',
+    'cf.a(Lz;)V': 'jimm/JimmUI.showContactMenu(Ljimm/ContactItem;)V',
+    'm.b(Ljava/lang/String;)Lz;': 'jimm/ContactList.createTempContact(Ljava/lang/String;)Ljimm/ContactItem;',
+    'cd.k I': 'DrawControls/VirtualList.MENU_LEFT_BAR I',
+    'cd.m I': 'DrawControls/VirtualList.MENU_LEFT I',
+    'cd.m()V': 'DrawControls/VirtualList.removeAllCommands()V',
+    'cd.j(I)V': 'DrawControls/VirtualList.setTopItem(I)V',
+    'cd.a(Lbx;)V': 'DrawControls/VirtualList.setVLCommands(LDrawControls/VirtualListCommands;)V',
+    'cd.c$13462e()V': 'DrawControls/VirtualList.setMode$13462e()V',
+    'z.a Ljava/lang/String;': 'jimm/ContactItem.name Ljava/lang/String;',
+    'co.a(ZZ)Ljava/lang/String;': 'jimm/comm/Util.getDateString(ZZ)Ljava/lang/String;',
+})
+METHODS.extend([
+    ('ah', '<init>', '()V', '<init>'),
+    ('ah', '<clinit>', '()V', '<clinit>'),
+    ('ah', 'a', '()V', 'activate'),
+    ('ah', 'b', '()V', 'removeCommands'),
+    ('ah', 'commandAction', '(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V', 'commandAction'),
+    ('ah', 'a', '(Z)V', 'copyText'),
+    ('ah', 'b', '(Lcd;)V', 'vlItemClicked'),
+    ('ah', 'a', '(Lcd;)V', 'vlCursorMoved'),
+    ('ah', 'a', '(Lcd;II)V', 'vlKeyPress'),
+])
+
+
 def normalized(code):
     result = []
     for instruction in code:
