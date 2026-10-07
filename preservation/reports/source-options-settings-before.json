@@ -1,0 +1,806 @@
+{
+  "scope": "Full 256-slot defaults from null and typed sentinel tables in all 15 localized artifacts, including all combinations of the genuine Nokia/SE and Siemens SGold static flags read by defaults; 40 genuine font-style updates per flavor, and alpha/cache transitions with absent/real Display, integer boundaries, malformed option types and gradient sentinels. Device archives preserve every application byte. Scripted RU archives change only one Display.numAlphaLevels instruction and add a device-input helper, retaining every declaration, instruction, branch, local slot, exception handler and all other class/resource bytes. Null invocation, device levels/errors, complete alpha fields, gradient and call traces are actual observations, not expected application calculations. Minimal host/explicit Options seed isolate startup. No whole Options UI, physical display or complete program equivalence claim.",
+  "negative_before_fix": true,
+  "builds": [
+    {
+      "target": "MIDP2",
+      "language": "RU",
+      "source_raw_build_language": "RU",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "raw_sha256": "c6b6e23f1e38d4e40e5fa020738987d30afdf188a335e76c87b08c125bcca3ad",
+      "delivered_sha256": "792c4c27e0a2868ad057fbf6d95d62d2130559d5a4455e43ae5c7f8ba609dea5",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 2481,
+          "different_observations": 192,
+          "default_differences": 0,
+          "font_differences": 0,
+          "alpha_differences": 192
+        },
+        {
+          "flavor": "scripted",
+          "observations": 11313,
+          "different_observations": 5248,
+          "default_differences": 0,
+          "font_differences": 0,
+          "alpha_differences": 5248
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+              "fixture_sha256": "c08889d330df51c18c10ae5ba1d87ed89c8d1dd52ad5e3630f3985466ceac34a",
+              "output_sha256": "381010e83a1787e04d5ee73773b289ba57d3bad4c1a0c06d9deda8400169133c",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+              "fixture_sha256": "7f2443e29b134c259d059454435d4c5db84707688ea49d8efdeb7de41471438b",
+              "output_sha256": "189e903fa5d2b214add7ec81a3edc0c73aed27d41e050664cf8765daa94ce333",
+              "all_input_application_bytes_unchanged": false,
+              "only_one_enumerated_display_call_changed": true,
+              "coverage": "coverage:8:40:9216"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "f69a302c451679ed579545132b1f4198843dcfcb34e702535488039785e0f3e7",
+              "fixture_sha256": "060dc6db70427b47c784124b527bc21fe3ebf1d4d672a3fec3387e220956c168",
+              "output_sha256": "d868c56276dd0d9d77ba34920965854240bf240c0d1dc5fae459e4222ca8b6cf",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "f69a302c451679ed579545132b1f4198843dcfcb34e702535488039785e0f3e7",
+              "fixture_sha256": "83774ce14f8dc3771c9ec747f632953e9de5468b673674445b851c12cdd3a314",
+              "output_sha256": "00059d2cd8ba2d6d9a783d0c3e0874bd64195b00107fd5f29c9a9994e3be5272",
+              "all_input_application_bytes_unchanged": false,
+              "only_one_enumerated_display_call_changed": true,
+              "coverage": "coverage:8:40:9216"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MIDP2",
+      "language": "UA",
+      "source_raw_build_language": "UA",
+      "reference_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
+      "raw_sha256": "c6b6e23f1e38d4e40e5fa020738987d30afdf188a335e76c87b08c125bcca3ad",
+      "delivered_sha256": "8a7152a513728063ba3465cbb47e53e6cd9b0665b04c804c711744f06bbaa995",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 2481,
+          "different_observations": 192,
+          "default_differences": 0,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
+              "fixture_sha256": "34ddd98fd71615ac09f1aec37b2fc9f65263c23e008cde151343052c85e0995a",
+              "output_sha256": "9bd1ddf86832fd9c83dd0e12e166f350db3d2b6ac9b962db8a31c913f87e7228",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "b1d4a97b15e2e474eb459028e43dc1057ed8dd5250edbbe6251fec1dbaff2c62",
+              "fixture_sha256": "3f1ee777d559d77d668fa7a0a60b7a803c9300f2a1bb3aa09d6154888f6ba244",
+              "output_sha256": "a5baa6c37a45bd6f19ffdf9d0163c862e2dea61b092a5aeced8749e7608ba3b5",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MIDP2",
+      "language": "RO",
+      "source_raw_build_language": "RO",
+      "reference_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
+      "raw_sha256": "c6b6e23f1e38d4e40e5fa020738987d30afdf188a335e76c87b08c125bcca3ad",
+      "delivered_sha256": "60de0e6255c052f796618aaadf0e8cb05853f983f20855de8dbf5908acaafcfd",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 2481,
+          "different_observations": 192,
+          "default_differences": 0,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
+              "fixture_sha256": "6bc5c0301541b0fb8e79cc9bb0030362daded887e80c400d15257f55ffd3056e",
+              "output_sha256": "274d1b305dd677972cc0ff4621feb11199518fb0e8544d226cc5c2c194bae777",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "dc59dbc723c26895c5f4444a8d492a358d027b4d0fe828180979842d4ba36ea0",
+              "fixture_sha256": "88c8e41a798842105a1fc5b60851bdc5aaed68236668112171ed3adba803cf4f",
+              "output_sha256": "0a7ad663937c229a3f719d0c6bef2bf542d3f584afd5cf97e4339888cb77a350",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MIDP2",
+      "language": "EN",
+      "source_raw_build_language": "RU",
+      "reference_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
+      "raw_sha256": "c6b6e23f1e38d4e40e5fa020738987d30afdf188a335e76c87b08c125bcca3ad",
+      "delivered_sha256": "fde40dc735d2521fb3a84c33da678e4e2e480d76b50f98d775cb378f11410d3c",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 2481,
+          "different_observations": 192,
+          "default_differences": 0,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
+              "fixture_sha256": "23b04cf68b42c6b1d9f5c5cf2267fd8a0b1208209bc273aaf3ac4e50b28b9c0e",
+              "output_sha256": "1042279aa9c1ea7e8686b8496c8ed937c72d46e6daa991ec07c770d4a0ca4cde",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "511a43ae8a5e17264acd63043d03c2575eb5d5f1c656fdaca7a9ed52065e66e2",
+              "fixture_sha256": "9220a8a2e6fff5d59eace0a664a8e77c92e25076cb92e3c24c11f71c452cd8a8",
+              "output_sha256": "671f005efaa8a6402ec53c2da786bad285fd9fb105dbf1fbc0a96706a558b094",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MIDP2",
+      "language": "CZ",
+      "source_raw_build_language": "CZ",
+      "reference_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
+      "raw_sha256": "0f8c64cfdc44bd1223335c83be94fba20e048eef25938062b9cb5bba0c0cb4e0",
+      "delivered_sha256": "ac0b5a45b3b08080d123771479b109521e0680796d448ea8f60258826f75f651",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 2481,
+          "different_observations": 192,
+          "default_differences": 0,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
+              "fixture_sha256": "59b3fbe6858d82286fe45c650eab4882d5b2719b5537505f7fc46271e1676cc2",
+              "output_sha256": "7bf71503676f74eff62cd67d78af5eb721f20b59d96cf8488d503c3e49cf6bc7",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "48dec0212e71578334ac4fbe7031a700d95e60c62965668857a3a1f6737a551e",
+              "fixture_sha256": "eebd6580b0255c3f744a58ed1c47fefd04e0505b66198b3a3d70012fb58baba8",
+              "output_sha256": "ffc087cc014a186167d0bb39cbaa91e39f5a86dd9e92ae81a44f54abaa132139",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:8:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RU",
+      "source_raw_build_language": "RU",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "raw_sha256": "e3cd8e467bec8288f1fb48f383177902318f984aecaf711bb4779d884c590d1c",
+      "delivered_sha256": "2f797056c0e6e0fdd1fc1bc91046babbda9530fe9735c60808b2ce5f68939af2",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 939,
+          "different_observations": 194,
+          "default_differences": 2,
+          "font_differences": 0,
+          "alpha_differences": 192
+        },
+        {
+          "flavor": "scripted",
+          "observations": 9771,
+          "different_observations": 5250,
+          "default_differences": 2,
+          "font_differences": 0,
+          "alpha_differences": 5248
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+              "fixture_sha256": "f210d316b32179f8bbadfa05b83bf856b03f7eaf3b07ea6c0a13f30be5aba319",
+              "output_sha256": "78e87f0c6df02e4818adc96ff87b691364cee7aa473f3f3a2b5c7dc394f33218",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+              "fixture_sha256": "66d3ec636551687c659a2e659d848eb65e56973a65fc84737e376ddebd97d7f2",
+              "output_sha256": "076417b58dc405129387d54a48b48d3778007670140d9379fea0199c5cf79ef6",
+              "all_input_application_bytes_unchanged": false,
+              "only_one_enumerated_display_call_changed": true,
+              "coverage": "coverage:2:40:9216"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "4b110ad282f308d98b1baf24ac07a938c2e4228522a24f43f92941118f7eb1d3",
+              "fixture_sha256": "44376d51909b44dfddb534e41d16fb701e85e16dbfd85090c53bc34bceb0be79",
+              "output_sha256": "5a7e14dfb1fb30112867f25bba1c0a254895d22670db7d754c5caffb70f4562e",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "4b110ad282f308d98b1baf24ac07a938c2e4228522a24f43f92941118f7eb1d3",
+              "fixture_sha256": "68fb7699e5cca4bec0b5ca84551d0bf01629b6af2987ae859f8520df1e7eb536",
+              "output_sha256": "80120b6119de895d1f25e4993c7d8bd51df85312ab9971bbdf1438de9923220f",
+              "all_input_application_bytes_unchanged": false,
+              "only_one_enumerated_display_call_changed": true,
+              "coverage": "coverage:2:40:9216"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "UA",
+      "source_raw_build_language": "UA",
+      "reference_sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
+      "raw_sha256": "e3cd8e467bec8288f1fb48f383177902318f984aecaf711bb4779d884c590d1c",
+      "delivered_sha256": "cc8b63321c3c38cfc222d66b91f908aebb235ef5a9422d44f3d96148c65868c3",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 939,
+          "different_observations": 194,
+          "default_differences": 2,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
+              "fixture_sha256": "e9db2bda3fa7762e311b8f3827fbcfbf98e510836d3ace32671c82a3e11233d5",
+              "output_sha256": "d6930f6f37aa3d7c0cde15f71a0c4198c278935c08c95c956ac7a915d3e25f35",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "19bcf2ad9b016384a1616cc97df7e097f8cd96ab0f1831718c94afd41e968d0e",
+              "fixture_sha256": "4c0c0081265f7fab76e992ae7844393ba81ebfb2e4e73941164ee4daf910a704",
+              "output_sha256": "f5ba40f33fa51ffc71fa62509376c3f7897899ecb464a474bd106b6b715f289d",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RO",
+      "source_raw_build_language": "RO",
+      "reference_sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
+      "raw_sha256": "e3cd8e467bec8288f1fb48f383177902318f984aecaf711bb4779d884c590d1c",
+      "delivered_sha256": "9d219ad00788ba6d073d3058e59dedf8f26b3e19160bf11cd786e98d1ca0fd25",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 939,
+          "different_observations": 194,
+          "default_differences": 2,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
+              "fixture_sha256": "c1284b5e184948e5d615c9f6a613e27ea5ea32835a80bd2f7a1eb5578e0007e3",
+              "output_sha256": "3e51189de3ed9a9d4296a5aad47294ace63bd5004d4c8cf378af63e09cc164cd",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "d8eac67e25861e98d325ad345f22cf353852632ced1f08eacfe1946dde67af91",
+              "fixture_sha256": "9943eac5f5f3f1be93751fd09129e661eda0f2506b27ab5be21027232f463ec8",
+              "output_sha256": "046767cd7fcc161ae0ae3ad145c2cf39a8245681910d9d7b4e813d5a6e991022",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "EN",
+      "source_raw_build_language": "RU",
+      "reference_sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
+      "raw_sha256": "e3cd8e467bec8288f1fb48f383177902318f984aecaf711bb4779d884c590d1c",
+      "delivered_sha256": "8d676f99fe00fa06c0520d3e146a06382efb7890ab1da452f1525f64682255bb",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 939,
+          "different_observations": 194,
+          "default_differences": 2,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
+              "fixture_sha256": "00e0f9895339bcab667f75a88d5daec99acb400ec6f298a587a0a8bf8f2854ac",
+              "output_sha256": "3229483cee180947427364dd891ea46961ff843a179096a52ed46f7053b1dba3",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "0c390add56f57f7c0a9086dc2c72a6f55924d9d03d96112c5f7c6b5473f0c07a",
+              "fixture_sha256": "81062bbcdaa5a54eed9378163e72945cc41cb318ede9ad3db3fa7e04b751d266",
+              "output_sha256": "330bdd74dc1810b1829f8f230fe84998fe51eeb6a2139faac69001b90767990a",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "CZ",
+      "source_raw_build_language": "CZ",
+      "reference_sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
+      "raw_sha256": "bc7be71e11bf0715869b3619d8ccf60b17c9030f3fe103b7e2c13912e2112112",
+      "delivered_sha256": "b6a9422cbc61a852bec80b795eea1d203f684ca432fb5cbdb9ad789ede95cb19",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 939,
+          "different_observations": 194,
+          "default_differences": 2,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
+              "fixture_sha256": "901f1c500d2a032ef2fb7011ea5815faa767ba5c4648a15183ce5e6b37b83353",
+              "output_sha256": "06ffea25fbe4fccbe4730c79d0b398ea1c22db2aedb2796ba5ad66275ed926cf",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "38b7a63de5b77e71737d7ca00037b51bfca5c7b9e6de12674b1dfad21ba07ce5",
+              "fixture_sha256": "3a978032883f0e431ec945d802c4a34bc3ec415474483aa936b1a79f6215563b",
+              "output_sha256": "66b604789ba7b92f1b0b516adbd8b9bba41b9bf014214a23bad8516c60990eed",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:2:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RU",
+      "source_raw_build_language": "RU",
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "raw_sha256": "e8d183701c3f5e2a585bc52beb1198caf7ded9b5fd9a968a2075083b87ba9a9b",
+      "delivered_sha256": "ddd7787e9dd4749bec578ecd7217179ce177f602ce05a5eef04f6a38d46d0517",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 1453,
+          "different_observations": 196,
+          "default_differences": 4,
+          "font_differences": 0,
+          "alpha_differences": 192
+        },
+        {
+          "flavor": "scripted",
+          "observations": 10285,
+          "different_observations": 5252,
+          "default_differences": 4,
+          "font_differences": 0,
+          "alpha_differences": 5248
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+              "fixture_sha256": "f2bbd10ae94e3cbf971a1194717bd0b4574da943d9fe5a9e82d0f828fe370e6d",
+              "output_sha256": "adb10b168a793f4c6d563cbb4aeeeee6d15cd8b5e55fc739129dbc56a6b48d14",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+              "fixture_sha256": "17fc828208b9bec49ec39e0824b84aaae293c3853eb8d8b2321892f3aebab82e",
+              "output_sha256": "3511d4c08b00a7ab973dc98e32af2dcdbc915b3aff6536e2f6a9260cba405481",
+              "all_input_application_bytes_unchanged": false,
+              "only_one_enumerated_display_call_changed": true,
+              "coverage": "coverage:4:40:9216"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "9976b647efceac93f67260111720cbf5ef269035dd302179a396d6a4bb12e52d",
+              "fixture_sha256": "d3e21510ebce5e09abe13f0fd39c39f2be0f4178eff55b6010ae4ce4eeb69963",
+              "output_sha256": "5d69490a163fd019993998fb8a02e665f8eddd74538e0fb00220cf99d4e6d109",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            },
+            {
+              "flavor": "scripted",
+              "input_sha256": "9976b647efceac93f67260111720cbf5ef269035dd302179a396d6a4bb12e52d",
+              "fixture_sha256": "c78121def3284fc1a08c784e342d1205bb3d4efcab52b87a31845f70a02228c4",
+              "output_sha256": "ee4497cc6c636169e94b1bee51f24b21450f84fbacf675c7a697deee83dcade5",
+              "all_input_application_bytes_unchanged": false,
+              "only_one_enumerated_display_call_changed": true,
+              "coverage": "coverage:4:40:9216"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "UA",
+      "source_raw_build_language": "UA",
+      "reference_sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
+      "raw_sha256": "e8d183701c3f5e2a585bc52beb1198caf7ded9b5fd9a968a2075083b87ba9a9b",
+      "delivered_sha256": "e53a50899d1801171dfef9893a50e1d72459898b63d3b96f6eb7991064e455be",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 1453,
+          "different_observations": 196,
+          "default_differences": 4,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
+              "fixture_sha256": "14269ac5bad51014977b28995be3fc536de4b704dc3c8f9aebfda462d754d5c2",
+              "output_sha256": "991bc01e8bf97a8114a510187efa341bb37dcaef1cc8091a0dfeaea286b74638",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "85fe3ca5e62f03ac550e4b0ac3abbb98ab3dc7c2307b3501f610157e71cf8385",
+              "fixture_sha256": "f630be439b0492b61f6848b3b9739dbaffb928092d8b5835736f0459619cdb8c",
+              "output_sha256": "198fe0cbd4dcb8f85b8360f5ffc31017104271b22bfe74dff7a768e474dbae17",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RO",
+      "source_raw_build_language": "RO",
+      "reference_sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
+      "raw_sha256": "e8d183701c3f5e2a585bc52beb1198caf7ded9b5fd9a968a2075083b87ba9a9b",
+      "delivered_sha256": "586d59434752d602b55f1040242b5cdf1bbddbe8519904928c6592779de130e9",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 1453,
+          "different_observations": 196,
+          "default_differences": 4,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
+              "fixture_sha256": "5bf3439e77b3bfee7cbc1b7e4d281d87eebaafc5e8bb42e88443a1a99bf10627",
+              "output_sha256": "e4bafcd18d487519d342e610a14b82b65b2627b6d3113bcdf405472980a83ed2",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "1cc04399d914c4b8147a5bedb21cf27004387514ecd755a62743d65168082817",
+              "fixture_sha256": "f187ce3a904e98595ddee57cb5fe42b2a941e7695d7613c3e96316379caa7618",
+              "output_sha256": "2c51d9e1568faa0b31a143e158c7f0faab6f36ded4de18ba426018a6bb5f47ba",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "EN",
+      "source_raw_build_language": "RU",
+      "reference_sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
+      "raw_sha256": "e8d183701c3f5e2a585bc52beb1198caf7ded9b5fd9a968a2075083b87ba9a9b",
+      "delivered_sha256": "62e2157f0a948fe06c191ce99cb6d3359d37951a369b32b9f5f97a28c79c08cb",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 1453,
+          "different_observations": 196,
+          "default_differences": 4,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
+              "fixture_sha256": "7bed0bbecb63b69eafcfb7b06cc517af1938fcf2c6b4551939e43ee9832a62ab",
+              "output_sha256": "8cda8ba90398d435efe71c4032ac229587d63b27a14ffe961ecb208a35ca5cbe",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "6e803bfd7a9d129086bc6b17a4bc000bbf442e8a9d40a258f24c0583c5caf980",
+              "fixture_sha256": "30b79309922973c75d6a3d2597b63b24f5f1519cfd73cf862557b03aa3dbe16f",
+              "output_sha256": "3bf7279d7ab0cae562a74a1070ec9e33d190592f0f16a8bda961b7817e3ee463",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "CZ",
+      "source_raw_build_language": "CZ",
+      "reference_sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
+      "raw_sha256": "909c96de51941239aae3fe050a1f11b2bae336c317b6183361bc8f25f6882a29",
+      "delivered_sha256": "4a14123d0596e4d101aaf49b1fa0a8cdf76bd818050417b9ff8288e356f9c1be",
+      "comparisons": [
+        {
+          "flavor": "device",
+          "observations": 1453,
+          "different_observations": 196,
+          "default_differences": 4,
+          "font_differences": 0,
+          "alpha_differences": 192
+        }
+      ],
+      "fixture_proofs": [
+        {
+          "mode": "reference",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
+              "fixture_sha256": "1fbd98de3d947e921a1af63d6c323031fee36c67f2b115b5fe8afedf62e394b1",
+              "output_sha256": "ca80cc7e9ee88d2d5737f9ec01a87a120233a829bf5d80195a20dad45474eba8",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            }
+          ]
+        },
+        {
+          "mode": "source",
+          "flavors": [
+            {
+              "flavor": "device",
+              "input_sha256": "1560aabee9a3a47cc859fd95e962496d481eaa2412b3d202e74a0631ab2e422a",
+              "fixture_sha256": "53771fb116e4737b3de0e1f1de8fdbaa36f0a35abaa2a9aba4c20e6618debb08",
+              "output_sha256": "3b868d5321e4d61d8ba1aed7587b5f82da322cf5cfdb1df974cc260e87a41bdb",
+              "all_input_application_bytes_unchanged": true,
+              "only_one_enumerated_display_call_changed": false,
+              "coverage": "coverage:4:40:384"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source_ref": "2dab13e",
+  "source_options_sha256": "5d17bda9eb64df9b56099c2dc78b572e11a61f7b8b697251d338dd881b47b31d"
+}

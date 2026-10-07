@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "792c4c27e0a2868ad057fbf6d95d62d2130559d5a4455e43ae5c7f8ba609dea5",
+  "source_jar_sha256": "4221be879d437fff33791cdb86090fa3a4d68b78db3c6169c947f033d18eca29",
   "pure_logic": "PASS: 75837 May-reference differential checks (client versions, outgoing statuses, options streams)",
   "packets": "PASS packets: 45331 observations, 15642 successful parses",
   "convertor": "PASS converter: 204659 observations, 5234 conversions, 364 parsed tables",
@@ -225,77 +225,77 @@
     {
       "target": "MIDP2",
       "language": "RU",
-      "sha256": "792c4c27e0a2868ad057fbf6d95d62d2130559d5a4455e43ae5c7f8ba609dea5"
+      "sha256": "4221be879d437fff33791cdb86090fa3a4d68b78db3c6169c947f033d18eca29"
     },
     {
       "target": "MIDP2",
       "language": "UA",
-      "sha256": "8a7152a513728063ba3465cbb47e53e6cd9b0665b04c804c711744f06bbaa995"
+      "sha256": "f5abed08ca5bc91cc8c3a923d713266369c93e8810e471dee132a27b16007b68"
     },
     {
       "target": "MIDP2",
       "language": "RO",
-      "sha256": "60de0e6255c052f796618aaadf0e8cb05853f983f20855de8dbf5908acaafcfd"
+      "sha256": "6c61136e8a0d949ee62aa4655bf14814f53427266dbd2c9ba0a33f0c02d8a403"
     },
     {
       "target": "MIDP2",
       "language": "EN",
-      "sha256": "fde40dc735d2521fb3a84c33da678e4e2e480d76b50f98d775cb378f11410d3c"
+      "sha256": "8a2e24ccd4d27d258f0890551ea18ec290a3769d43dd20d32c62bf11d27fbcea"
     },
     {
       "target": "MIDP2",
       "language": "CZ",
-      "sha256": "ac0b5a45b3b08080d123771479b109521e0680796d448ea8f60258826f75f651"
+      "sha256": "dd99f47e9dc66bbe51ec32d77c3759c5a27b40d6d3b4711904371e68a438526c"
     },
     {
       "target": "MOTOROLA",
       "language": "RU",
-      "sha256": "2f797056c0e6e0fdd1fc1bc91046babbda9530fe9735c60808b2ce5f68939af2"
+      "sha256": "dba29b065d5c3c554cb4aa0746ee543897a2f917f56b742f6211bb79fb1f9cae"
     },
     {
       "target": "MOTOROLA",
       "language": "UA",
-      "sha256": "cc8b63321c3c38cfc222d66b91f908aebb235ef5a9422d44f3d96148c65868c3"
+      "sha256": "73b13d5b0f86efb6d6c196cc15e7860ed65285d4bf25fb524b449abf8add2e9d"
     },
     {
       "target": "MOTOROLA",
       "language": "RO",
-      "sha256": "9d219ad00788ba6d073d3058e59dedf8f26b3e19160bf11cd786e98d1ca0fd25"
+      "sha256": "c08a79da7420feb7f6e5ef797174309ed211784330967d1306a581f517be789c"
     },
     {
       "target": "MOTOROLA",
       "language": "EN",
-      "sha256": "8d676f99fe00fa06c0520d3e146a06382efb7890ab1da452f1525f64682255bb"
+      "sha256": "4e16234acef4632ce050706929bd878f0d0b4118e8d235658f8a7da8933e266a"
     },
     {
       "target": "MOTOROLA",
       "language": "CZ",
-      "sha256": "b6a9422cbc61a852bec80b795eea1d203f684ca432fb5cbdb9ad789ede95cb19"
+      "sha256": "58de5b6a421570b03af87a14fbbc822716a3d4b3f3b699c65fa4854cb5f06b42"
     },
     {
       "target": "SIEMENS2",
       "language": "RU",
-      "sha256": "ddd7787e9dd4749bec578ecd7217179ce177f602ce05a5eef04f6a38d46d0517"
+      "sha256": "0dec958fa42e188a0c77f511c5ca4466b34b62203dd9cb541af3adb7b2033393"
     },
     {
       "target": "SIEMENS2",
       "language": "UA",
-      "sha256": "e53a50899d1801171dfef9893a50e1d72459898b63d3b96f6eb7991064e455be"
+      "sha256": "447aff5f171e75bd657fcb5c0f198f0cee5a9fb1aac3a8b5d852475508699481"
     },
     {
       "target": "SIEMENS2",
       "language": "RO",
-      "sha256": "586d59434752d602b55f1040242b5cdf1bbddbe8519904928c6592779de130e9"
+      "sha256": "658391e71d4b66d66ce2cb7f30f93f8ed5b381c92aee31380db0bd5ac04b3660"
     },
     {
       "target": "SIEMENS2",
       "language": "EN",
-      "sha256": "62e2157f0a948fe06c191ce99cb6d3359d37951a369b32b9f5f97a28c79c08cb"
+      "sha256": "e6a68d9b15d9276dda8e2cdda9b5f684ba6e681352edd7fdc54296d39dd9c8c7"
     },
     {
       "target": "SIEMENS2",
       "language": "CZ",
-      "sha256": "4a14123d0596e4d101aaf49b1fa0a8cdf76bd818050417b9ff8288e356f9c1be"
+      "sha256": "d07c60a2387442cb24b41cbd697e2c78e23ea8811e1704a34cac6a658f2ec3ac"
     }
   ],
   "minimal_modules": [
@@ -313,6 +313,9 @@
   "extended_key_bytecode": "PASS extended key bytecode: 3 platform switches, original argument fallback, positive game action, exception routes and default SMALL_FONT",
   "options_cache": "PASS settings cache: 4608 actual opens; 4611 observations; original/raw/optimized match",
   "options_cache_bytecode": "PASS settings entry bytecode: complete 9 instructions and cache declarations on all 3 native/raw/optimized targets",
+  "options_settings": "PASS settings defaults/font/alpha: 15 localized targets; 55734 observations; original/raw/optimized match",
+  "options_settings_bytecode": "PASS settings alpha bytecode: complete native/raw/optimized paths on three targets, explicit helper boundary and typed device/default/font declarations",
+  "contact_store": "PASS contact RMS: 3 targets; 6603 observations; original/raw/optimized match",
   "socket_bytecode": "PASS socket close: all 3 platforms match 28 normalized instructions and all exception handlers",
   "phone_book_bytecode": "PASS PhoneBook: 8 optimized signatures in MIDP2/Siemens2, 15 platform/language presence checks",
   "send_text_bytecode": "PASS sender/typing platform audit: 3 original identities, 1024 bounds/increment, light guard and static class monitor",

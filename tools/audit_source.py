@@ -2341,6 +2341,25 @@ SYMBOLS.update({
     'cg.c()V': 'jimm/OptionsForm.activate()V',
 })
 
+# Actual settings tables/device branches and complete RMS load replay establish these roles.
+# Keep this after the frozen graph inventory so previous independent proofs retain their inputs.
+METHODS.extend([
+    ('cj', 'a', '()V', 'updateAlpha'),
+    ('cj', 'b', '()V', 'updateFontStyle'),
+    ('cj', 'f', '()V', 'setDefaults'),
+    ('m', 'h', '()V', 'load'),
+])
+SYMBOLS.update({
+    'cj.a()V': 'jimm/Options.updateAlpha()V',
+    'cj.b()V': 'jimm/Options.updateFontStyle()V',
+    'cj.f()V': 'jimm/Options.setDefaults()V',
+    'cj.a Ljava/lang/String;': 'jimm/Options.emptyString Ljava/lang/String;',
+    'cd.j I': 'DrawControls/VirtualList.gradientHeight I',
+    'm.h()V': 'jimm/ContactList.load()V',
+    'jimm/Jimm.a Ljava/lang/String;': 'jimm/Jimm.VERSION Ljava/lang/String;',
+    'jimm/Jimm.e Z': 'jimm/Jimm.is_phone_NOKIA Z',
+})
+
 
 def normalized(code):
     result = []

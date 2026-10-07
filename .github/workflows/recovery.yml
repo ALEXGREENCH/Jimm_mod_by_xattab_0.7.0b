@@ -74,6 +74,10 @@ jobs:
             preservation/reports/source-options-cache.json
             preservation/reports/source-options-cache-before.json
             preservation/reports/source-options-cache-bytecode.json
+            preservation/reports/source-options-settings.json
+            preservation/reports/source-options-settings-before.json
+            preservation/reports/source-options-settings-bytecode.json
+            preservation/reports/source-contact-store.json
   verify:
     runs-on: ubuntu-latest
     steps:

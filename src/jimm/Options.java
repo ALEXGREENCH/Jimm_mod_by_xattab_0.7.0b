@@ -75,14 +75,15 @@ public class Options
 
     public static void updateAlpha()
     {
-        if (Jimm.display != null && Jimm.display.numAlphaLevels() > 1)
+        if (Jimm.display.numAlphaLevels() > 1)
         {
             cursorAlpha = 255 - getInt(OPTION_CURSOR_ALPHA);
             captionAlpha = 255 - getInt(OPTION_CAPTION_ALPHA);
             softbarAlpha = 255 - getInt(OPTION_SOFTBAR_ALPHA);
+            VirtualList.resetGradient();
+            return;
         }
-        else cursorAlpha = captionAlpha = softbarAlpha = 255;
-        VirtualList.resetGradient();
+        cursorAlpha = captionAlpha = softbarAlpha = 255;
     }
 	/* Option keys */
 	static final int OPTION_UIN1                              =   0; /* String  */
@@ -364,7 +365,9 @@ public class Options
 	static private void setDefaults()
 	{
         setInt(OPTION_RECONNECT_DELAY, 10);
+        //#sijapp cond.if target is "MIDP2"#
         setInt(OPTION_LIGHT_LEVEL, 70);
+        //#sijapp cond.end#
         //#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
         setInt(OPTION_LIGHT_TIMEOUT, 15);
         setBoolean(OPTION_LIGHT_MANUAL, false);
