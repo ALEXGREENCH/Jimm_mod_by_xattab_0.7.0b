@@ -20,6 +20,14 @@ public class LoginFixture implements Opcodes {
         String packet=ref?"an":"jimm/comm/Packet",http=ref?"ay":"jimm/comm/Icq$HTTPConnection",runnable=ref?"l":"jimm/RunnableImpl",message=ref?"ac":"jimm/comm/Message";
         String roster=ref?"ct":"jimm/comm/UpdateContactListAction",util=ref?"co":"jimm/comm/Util";
         try(JarFile in=new JarFile(args[0]);JarOutputStream out=new JarOutputStream(Files.newOutputStream(Paths.get(args[1])))){
+            // ProGuard removes the unused Icq argument from the optimized parent constructor.
+            // Generate the test-only connection against the actual input ABI, retaining its public helper signature.
+            Set<String> parentConstructors=new HashSet<>();
+            new ClassReader(in.getInputStream(in.getJarEntry(base+".class")).readAllBytes()).accept(new ClassVisitor(ASM9){
+                public MethodVisitor visitMethod(int a,String n,String d,String s,String[] ex){if(n.equals("<init>"))parentConstructors.add(d);return null;}
+            },ClassReader.SKIP_CODE);
+            String parentDesc=parentConstructors.contains("(L"+icq+";)V")?"(L"+icq+";)V":"()V";
+            if(!parentConstructors.contains(parentDesc))throw new AssertionError("Unsupported connection constructor ABI: "+parentConstructors);
             Enumeration<JarEntry> entries=in.entries();
             while(entries.hasMoreElements()){
                 JarEntry entry=entries.nextElement();byte[] bytes=in.getInputStream(entry).readAllBytes();
@@ -56,7 +64,7 @@ public class LoginFixture implements Opcodes {
             }
             ClassWriter w=new ClassWriter(0);w.visit(V1_5,ACC_PUBLIC,"LoginConnection",null,base,null);
             MethodVisitor m=w.visitMethod(ACC_PUBLIC,"<init>","(L"+icq+";)V",null,null);m.visitCode();m.visitVarInsn(ALOAD,0);
-            if(!ref)m.visitVarInsn(ALOAD,1);m.visitMethodInsn(INVOKESPECIAL,base,"<init>",ref?"()V":"(L"+icq+";)V",false);m.visitInsn(RETURN);m.visitMaxs(2,2);m.visitEnd();
+            if(!parentDesc.equals("()V"))m.visitVarInsn(ALOAD,1);m.visitMethodInsn(INVOKESPECIAL,base,"<init>",parentDesc,false);m.visitInsn(RETURN);m.visitMaxs(2,2);m.visitEnd();
             connectionBody(w.visitMethod(ACC_PUBLIC,ref?"a":"connect","(Ljava/lang/String;)V",null,null),0);
             connectionBody(w.visitMethod(ACC_PUBLIC,ref?"a":"sendPacket","(L"+packet+";)V",null,null),1);
             connectionBody(w.visitMethod(ACC_PUBLIC,ref?"a":"close","()V",null,null),2);

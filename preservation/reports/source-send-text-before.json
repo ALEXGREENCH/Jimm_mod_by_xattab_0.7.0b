@@ -1,0 +1,32 @@
+{
+  "scope": "Actual pre-fix source build at 0f9f3e2; same complete sender/typing probe and terminal capture as the positive check. Different sender cases are whole scenarios, not individual log lines.",
+  "prior_commit": "0f9f3e2",
+  "send_cases": 316,
+  "different_sender_cases": 290,
+  "typing_differences": [
+    [
+      "typing-modifiers:40",
+      "typing-modifiers:32"
+    ],
+    [
+      "typing-monitor-false:true:null",
+      "typing-monitor-false:false:null"
+    ],
+    [
+      "typing-monitor-true:true:exception:JimmException/120/true/38/3rRlx2MtA2jua9QORkELTbZa7zJaeYsjA94lCCI/bYA=",
+      "typing-monitor-true:false:exception:JimmException/120/true/38/3rRlx2MtA2jua9QORkELTbZa7zJaeYsjA94lCCI/bYA="
+    ]
+  ],
+  "reference_observations": 3601,
+  "source_observations": 2333,
+  "reference_guard": "coverage:316:898:802:380:596:179:300:96:2",
+  "source_guard": "coverage:316:583:493:236:279:0:300:96:2",
+  "source_ui_sha256": "88fa10faa6c4fc89e019434bdfaf776c43fa5547821e9f29d046e72a0d596ad2",
+  "source_icq_sha256": "e75f130e9fcd02b54f73363ec0a65cd07832067bc71730ad83cffa3bdb6371b1",
+  "source_unoptimized_class_jar_sha256": "454b2ee93cd6850a730e9494b039ebbfe56c71aa8152e60a40904972e7df66f3",
+  "source_jar_sha256": "0c5f84fcef8db860da68a699d2131133ec00f69638efdfb99f485b1366960243",
+  "source_host_sha256": "baba9f1338047ff58314e4d2d7a194997fd68528999f38160656fb869e8ffeca",
+  "reference_output_sha256": "a706cd1ad6b1a6b48e65941a7dbac0055ed66407dec98abafa93dbeebc970342",
+  "source_output_sha256": "2b4d266d5fb96f4e1702504cc1957e642f8df8d652b21546ed9b46b1882f8cca",
+  "fixed_clock_boundary": "SendMessageAction currentTimeMillis and Util.createCurrentDate default Date constructor. Actual Calendar conversion and IDs run."
+}

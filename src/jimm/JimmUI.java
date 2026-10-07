@@ -340,7 +340,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 				{
 					try
 					{
-						Jimm.jimm.getIcqRef().beginTyping(textMessReceiver.getUinString(), false);
+						Icq.beginTyping(textMessReceiver.getUinString(), false);
 					}
 					catch (JimmException e) {}
 				}
@@ -1715,7 +1715,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		{
 			try
 			{
-				Jimm.jimm.getIcqRef().beginTyping(textMessReceiver.getUinString(), true);
+				Icq.beginTyping(textMessReceiver.getUinString(), true);
 			}
 			catch (JimmException e){}
 		}
@@ -1735,9 +1735,9 @@ public class JimmUI implements CommandListener, VirtualListCommands
 		}
 
 		PlainMessage plainMsg;
-		for (int pos = 0; pos < text.length(); pos += 2048) // 2048 - лимит на одно сообщение. на всяк случай разбивка сделана...
+		for (int pos = 0; pos < text.length(); pos += 1024) // 1024 - лимит на одно сообщение. на всяк случай разбивка сделана...
 		{
-			String messageText = text.substring(pos, Math.min(pos + 2048, text.length()));
+			String messageText = text.substring(pos, Math.min(pos + 1024, text.length()));
 			plainMsg = new PlainMessage(Options.getString(Options.OPTION_UIN), textMessReceiver, Message.MESSAGE_TYPE_NORM, Util.createCurrentDate(false), messageText);
 
 			SendMessageAction sendMsgAct = new SendMessageAction(plainMsg);
@@ -1759,7 +1759,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 				HistoryStorage.addText(textMessReceiver.getUinString(), text, (byte) 1, Icq.myNick, plainMsg.getNewDate());
 			//#sijapp cond.end#
 
-			if ((pos + 2048) < text.length())
+			if ((pos + 1024) < text.length())
 			{
 				try
 				{
@@ -1769,7 +1769,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 			}
 		}
 
-		//#sijapp cond.if target is "MOTOROLA"#
+		//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA"#
 		LightControl.flash(false);
 		//#sijapp cond.end#
 	}

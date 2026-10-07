@@ -58,6 +58,8 @@ jobs:
             preservation/reports/source-save-info-locales.json
             preservation/reports/source-magic-eye.json
             preservation/reports/source-jimm-urls.json
+            preservation/reports/source-send-text.json
+            preservation/reports/source-send-text-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

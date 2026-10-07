@@ -2261,10 +2261,12 @@ for member in EXACT_METHODS['methods']:
         member['source_owner'] + '.' + member['source_name'] + member['source_desc'])
 
 
-# Public String/Object URL entry point; the differential probe also verifies its
-# actual parsing, list fields, command route and terminal exception boundary.
+# Public URL/sender/typing entry points, exercised by the corresponding runtime
+# probes. The typing declaration must retain its static synchronized contract.
 assert ('cf', 'a', '(Ljava/lang/String;Ljava/lang/Object;)V') not in _audited_signatures
 METHODS.append(('cf', 'a', '(Ljava/lang/String;Ljava/lang/Object;)V', 'gotoURL'))
+METHODS.append(('cf', 'a', '(Ljava/lang/String;Lz;)V', 'sendMessage'))
+METHODS.append(('r', 'a', '(Ljava/lang/String;Z)V', 'beginTyping'))
 
 
 def normalized(code):
