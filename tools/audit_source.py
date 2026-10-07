@@ -2201,6 +2201,23 @@ METHODS.extend([
 ])
 
 
+# Util has overloaded obfuscated names, including methods distinguished only by
+# their return type. Keep typed identities and optimizer specializations explicit.
+UTIL_SYMBOLS = json.loads((ROOT / 'tools/source/util-symbols.json').read_text(encoding='utf-8'))
+for member in UTIL_SYMBOLS['fields']:
+    SYMBOLS['co.' + member['reference_name'] + ' ' + member['desc']] = (
+        'jimm/comm/Util.' + member['source_name'] + ' ' + member['desc'])
+_audited_signatures = {(owner, name, desc) for owner, name, desc, source in METHODS}
+for member in UTIL_SYMBOLS['methods']:
+    name, desc = member['reference_name'], member['reference_desc']
+    if member['source_optimized_name'] is not None:
+        SYMBOLS['co.' + name + desc] = ('jimm/comm/Util.' + member['source_optimized_name']
+                                      + member['source_optimized_desc'])
+    if member['same_optimized_signature'] and ('co', name, desc) not in _audited_signatures:
+        METHODS.append(('co', name, desc, member['source_optimized_name']))
+        _audited_signatures.add(('co', name, desc))
+
+
 def normalized(code):
     result = []
     for instruction in code:

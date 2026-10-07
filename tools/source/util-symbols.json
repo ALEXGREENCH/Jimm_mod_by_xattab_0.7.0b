@@ -1,0 +1,1286 @@
+{
+  "scope": "Canonical inherited Util names, verified declarations and observed optimized signatures. All 87 reference methods and 62 fields are inventoried. Three parameter-specialized methods and the removed constructor are recorded separately; their signatures are not declared identical. Assigned-value initializer matching identifies members only; unused preceding parse calls and the omitted default-zero array store remain in whole-method instruction audits.",
+  "methods": [
+    {
+      "reference_name": "<init>",
+      "reference_desc": "()V",
+      "source_name": "<init>",
+      "source_declaration_desc": "()V",
+      "source_optimized_name": null,
+      "source_optimized_desc": null,
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;III[BIZ)V",
+      "source_name": "detectUserClient",
+      "source_declaration_desc": "(Ljava/lang/String;III[BIZ)V",
+      "source_optimized_name": "detectUserClient",
+      "source_optimized_desc": "(Ljava/lang/String;III[BIZ)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(B)Ljava/lang/String;",
+      "source_name": "getClientString",
+      "source_declaration_desc": "(B)Ljava/lang/String;",
+      "source_optimized_name": "getClientString",
+      "source_optimized_desc": "(B)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "([BII)Ljava/lang/String;",
+      "source_name": "detectClientVersion",
+      "source_declaration_desc": "([BII)Ljava/lang/String;",
+      "source_optimized_name": "detectClientVersion",
+      "source_optimized_desc": "([BII)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "()I",
+      "source_name": "getCounter",
+      "source_declaration_desc": "()I",
+      "source_optimized_name": "getCounter",
+      "source_optimized_desc": "()I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BI)I",
+      "source_name": "getByte",
+      "source_declaration_desc": "([BI)I",
+      "source_optimized_name": "getByte",
+      "source_optimized_desc": "([BI)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BII)V",
+      "source_name": "putByte",
+      "source_declaration_desc": "([BII)V",
+      "source_optimized_name": "putByte",
+      "source_optimized_desc": "([BII)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BIZ)I",
+      "source_name": "getWord",
+      "source_declaration_desc": "([BIZ)I",
+      "source_optimized_name": "getWord",
+      "source_optimized_desc": "([BIZ)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a$6f0c2d54",
+      "reference_desc": "([B)Ljava/io/DataInputStream;",
+      "source_name": "getDataInputStream",
+      "source_declaration_desc": "([BI)Ljava/io/DataInputStream;",
+      "source_optimized_name": "getDataInputStream$6f0c2d54",
+      "source_optimized_desc": "([B)Ljava/io/DataInputStream;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a$175c50c1",
+      "reference_desc": "(Ljava/io/DataInputStream;)I",
+      "source_name": "getWord",
+      "source_declaration_desc": "(Ljava/io/DataInputStream;Z)I",
+      "source_optimized_name": "getWord$175c50c1",
+      "source_optimized_desc": "(Ljava/io/DataInputStream;)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/io/DataInputStream;)Ljava/lang/String;",
+      "source_name": "readAsciiz",
+      "source_declaration_desc": "(Ljava/io/DataInputStream;)Ljava/lang/String;",
+      "source_optimized_name": "readAsciiz",
+      "source_optimized_desc": "(Ljava/io/DataInputStream;)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/io/ByteArrayOutputStream;IZ)V",
+      "source_name": "writeWord",
+      "source_declaration_desc": "(Ljava/io/ByteArrayOutputStream;IZ)V",
+      "source_optimized_name": "writeWord",
+      "source_optimized_desc": "(Ljava/io/ByteArrayOutputStream;IZ)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/io/ByteArrayOutputStream;[B)V",
+      "source_name": "writeByteArray",
+      "source_declaration_desc": "(Ljava/io/ByteArrayOutputStream;[B)V",
+      "source_optimized_name": "writeByteArray",
+      "source_optimized_desc": "(Ljava/io/ByteArrayOutputStream;[B)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b$559c4327",
+      "reference_desc": "(Ljava/io/ByteArrayOutputStream;I)V",
+      "source_name": "writeDWord",
+      "source_declaration_desc": "(Ljava/io/ByteArrayOutputStream;IZ)V",
+      "source_optimized_name": "writeDWord$559c4327",
+      "source_optimized_desc": "(Ljava/io/ByteArrayOutputStream;I)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/io/ByteArrayOutputStream;I)V",
+      "source_name": "writeByte",
+      "source_declaration_desc": "(Ljava/io/ByteArrayOutputStream;I)V",
+      "source_optimized_name": "writeByte",
+      "source_optimized_desc": "(Ljava/io/ByteArrayOutputStream;I)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V",
+      "source_name": "writeLenAndString",
+      "source_declaration_desc": "(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V",
+      "source_optimized_name": "writeLenAndString",
+      "source_optimized_desc": "(Ljava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V",
+      "source_name": "writeAsciizTLV",
+      "source_declaration_desc": "(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V",
+      "source_optimized_name": "writeAsciizTLV",
+      "source_optimized_desc": "(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;Z)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;)V",
+      "source_name": "writeAsciizTLV",
+      "source_declaration_desc": "(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;)V",
+      "source_optimized_name": "writeAsciizTLV",
+      "source_optimized_desc": "(ILjava/io/ByteArrayOutputStream;Ljava/lang/String;)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(ILjava/io/ByteArrayOutputStream;ILjava/lang/String;)V",
+      "source_name": "writeAsciizTLVInterest",
+      "source_declaration_desc": "(ILjava/io/ByteArrayOutputStream;ILjava/lang/String;)V",
+      "source_optimized_name": "writeAsciizTLVInterest$361b6bb0",
+      "source_optimized_desc": "(Ljava/io/ByteArrayOutputStream;ILjava/lang/String;)V",
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "([BI)I",
+      "source_name": "getWord",
+      "source_declaration_desc": "([BI)I",
+      "source_optimized_name": "getWord",
+      "source_optimized_desc": "([BI)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BIIZ)V",
+      "source_name": "putWord",
+      "source_declaration_desc": "([BIIZ)V",
+      "source_optimized_name": "putWord",
+      "source_optimized_desc": "([BIIZ)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "([BII)V",
+      "source_name": "putWord",
+      "source_declaration_desc": "([BII)V",
+      "source_optimized_name": "putWord",
+      "source_optimized_desc": "([BII)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BIZ)J",
+      "source_name": "getDWord",
+      "source_declaration_desc": "([BIZ)J",
+      "source_optimized_name": "getDWord",
+      "source_optimized_desc": "([BIZ)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BI)J",
+      "source_name": "getDWord",
+      "source_declaration_desc": "([BI)J",
+      "source_optimized_name": "getDWord",
+      "source_optimized_desc": "([BI)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BIJZ)V",
+      "source_name": "putDWord",
+      "source_declaration_desc": "([BIJZ)V",
+      "source_optimized_name": "putDWord",
+      "source_optimized_desc": "([BIJZ)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BIJ)V",
+      "source_name": "putDWord",
+      "source_declaration_desc": "([BIJ)V",
+      "source_optimized_name": "putDWord",
+      "source_optimized_desc": "([BIJ)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BI)[B",
+      "source_name": "getTlv",
+      "source_declaration_desc": "([BI)[B",
+      "source_optimized_name": "getTlv",
+      "source_optimized_desc": "([BI)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BIIZ)Ljava/lang/String;",
+      "source_name": "byteArrayToString",
+      "source_declaration_desc": "([BIIZ)Ljava/lang/String;",
+      "source_optimized_name": "byteArrayToString",
+      "source_optimized_desc": "([BIIZ)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BII)Ljava/lang/String;",
+      "source_name": "byteArrayToString",
+      "source_declaration_desc": "([BII)Ljava/lang/String;",
+      "source_optimized_name": "byteArrayToString",
+      "source_optimized_desc": "([BII)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BZ)Ljava/lang/String;",
+      "source_name": "byteArrayToString",
+      "source_declaration_desc": "([BZ)Ljava/lang/String;",
+      "source_optimized_name": "byteArrayToString",
+      "source_optimized_desc": "([BZ)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B)Ljava/lang/String;",
+      "source_name": "byteArrayToString",
+      "source_declaration_desc": "([B)Ljava/lang/String;",
+      "source_optimized_name": "byteArrayToString",
+      "source_optimized_desc": "([B)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B)J",
+      "source_name": "byteArrayToLong",
+      "source_declaration_desc": "([B)J",
+      "source_optimized_name": "byteArrayToLong",
+      "source_optimized_desc": "([B)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "([B)Ljava/lang/String;",
+      "source_name": "byteArrayToHexString",
+      "source_declaration_desc": "([B)Ljava/lang/String;",
+      "source_optimized_name": "byteArrayToHexString",
+      "source_optimized_desc": "([B)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;Z)[B",
+      "source_name": "stringToByteArray",
+      "source_declaration_desc": "(Ljava/lang/String;Z)[B",
+      "source_optimized_name": "stringToByteArray",
+      "source_optimized_desc": "(Ljava/lang/String;Z)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)[B",
+      "source_name": "stringToByteArray",
+      "source_declaration_desc": "(Ljava/lang/String;)[B",
+      "source_optimized_name": "stringToByteArray",
+      "source_optimized_desc": "(Ljava/lang/String;)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(Ljava/lang/String;)[B",
+      "source_name": "stringToUcs2beByteArray",
+      "source_declaration_desc": "(Ljava/lang/String;)[B",
+      "source_optimized_name": "stringToUcs2beByteArray",
+      "source_optimized_desc": "(Ljava/lang/String;)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "([BII)Ljava/lang/String;",
+      "source_name": "ucs2beByteArrayToString",
+      "source_declaration_desc": "([BII)Ljava/lang/String;",
+      "source_optimized_name": "ucs2beByteArrayToString",
+      "source_optimized_desc": "([BII)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_name": "removeCr",
+      "source_declaration_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_optimized_name": "removeCr",
+      "source_optimized_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_name": "restoreCrLf",
+      "source_declaration_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_optimized_name": "restoreCrLf",
+      "source_optimized_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BI[BII)Z",
+      "source_name": "byteArrayEquals",
+      "source_declaration_desc": "([BI[BII)Z",
+      "source_optimized_name": "byteArrayEquals$5c8eef72",
+      "source_optimized_desc": "([BI[BI)Z",
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B)[B",
+      "source_name": "decipherPassword",
+      "source_declaration_desc": "([B)[B",
+      "source_optimized_name": "decipherPassword",
+      "source_optimized_desc": "([B)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(ILz;)I",
+      "source_name": "translateStatusReceived",
+      "source_declaration_desc": "(ILjimm/ContactItem;)I",
+      "source_optimized_name": "translateStatusReceived",
+      "source_optimized_desc": "(ILjimm/ContactItem;)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(I)I",
+      "source_name": "translateStatusSend",
+      "source_declaration_desc": "(I)I",
+      "source_optimized_name": "translateStatusSend",
+      "source_optimized_desc": "(I)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(I)Ljava/lang/String;",
+      "source_name": "makeTwo",
+      "source_declaration_desc": "(I)Ljava/lang/String;",
+      "source_optimized_name": "makeTwo",
+      "source_optimized_desc": "(I)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "([B)Ljava/lang/String;",
+      "source_name": "ipToString",
+      "source_declaration_desc": "([B)Ljava/lang/String;",
+      "source_optimized_name": "ipToString",
+      "source_optimized_desc": "([B)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "(Ljava/lang/String;)[B",
+      "source_name": "ipToByteArray",
+      "source_declaration_desc": "(Ljava/lang/String;)[B",
+      "source_optimized_name": "ipToByteArray",
+      "source_optimized_desc": "(Ljava/lang/String;)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)Z",
+      "source_name": "isIP",
+      "source_declaration_desc": "(Ljava/lang/String;)Z",
+      "source_optimized_name": "isIP",
+      "source_optimized_desc": "(Ljava/lang/String;)Z",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "()I",
+      "source_name": "createRandomId",
+      "source_declaration_desc": "()I",
+      "source_optimized_name": "createRandomId",
+      "source_optimized_desc": "()I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BII)Z",
+      "source_name": "isDataUTF8",
+      "source_declaration_desc": "([BII)Z",
+      "source_optimized_name": "isDataUTF8",
+      "source_optimized_desc": "([BII)Z",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(I)Ljava/lang/String;",
+      "source_name": "intToDecimal",
+      "source_declaration_desc": "(I)Ljava/lang/String;",
+      "source_optimized_name": "intToDecimal",
+      "source_optimized_desc": "(I)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)I",
+      "source_name": "decimalToInt",
+      "source_declaration_desc": "(Ljava/lang/String;)I",
+      "source_optimized_name": "decimalToInt",
+      "source_optimized_desc": "(Ljava/lang/String;)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "(I)Ljava/lang/String;",
+      "source_name": "genderToString",
+      "source_declaration_desc": "(I)Ljava/lang/String;",
+      "source_optimized_name": "genderToString",
+      "source_optimized_desc": "(I)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(Ljava/lang/String;)I",
+      "source_name": "stringToGender",
+      "source_declaration_desc": "(Ljava/lang/String;)I",
+      "source_optimized_name": "stringToGender",
+      "source_optimized_desc": "(Ljava/lang/String;)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "d",
+      "reference_desc": "(Ljava/lang/String;)[B",
+      "source_name": "stringToByteArray1251",
+      "source_declaration_desc": "(Ljava/lang/String;)[B",
+      "source_optimized_name": "stringToByteArray1251",
+      "source_optimized_desc": "(Ljava/lang/String;)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "d",
+      "reference_desc": "([BII)Ljava/lang/String;",
+      "source_name": "byteArray1251ToString",
+      "source_declaration_desc": "([BII)Ljava/lang/String;",
+      "source_optimized_name": "byteArray1251ToString",
+      "source_optimized_desc": "([BII)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(I)I",
+      "source_name": "convertDateMonToSimpleMon",
+      "source_declaration_desc": "(I)I",
+      "source_optimized_name": "convertDateMonToSimpleMon",
+      "source_optimized_desc": "(I)I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a$1385f3",
+      "reference_desc": "()J",
+      "source_name": "createCurrentDate",
+      "source_declaration_desc": "(Z)J",
+      "source_optimized_name": "createCurrentDate$1385f3",
+      "source_optimized_desc": "()J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(ZZ)J",
+      "source_name": "createCurrentDate",
+      "source_declaration_desc": "(ZZ)J",
+      "source_optimized_name": "createCurrentDate",
+      "source_optimized_desc": "(ZZ)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(ZZJ)Ljava/lang/String;",
+      "source_name": "getDateString",
+      "source_declaration_desc": "(ZZJ)Ljava/lang/String;",
+      "source_optimized_name": "getDateString",
+      "source_optimized_desc": "(ZZJ)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(IIIIII)J",
+      "source_name": "createLongTime",
+      "source_declaration_desc": "(IIIIII)J",
+      "source_optimized_name": "createLongTime",
+      "source_optimized_desc": "(IIIIII)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(J)[I",
+      "source_name": "createDate",
+      "source_declaration_desc": "(J)[I",
+      "source_optimized_name": "createDate",
+      "source_optimized_desc": "(J)[I",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(ZZ)Ljava/lang/String;",
+      "source_name": "getDateString",
+      "source_declaration_desc": "(ZZ)Ljava/lang/String;",
+      "source_optimized_name": "getDateString",
+      "source_optimized_desc": "(ZZ)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(J)J",
+      "source_name": "gmtTimeToLocalTime",
+      "source_declaration_desc": "(J)J",
+      "source_optimized_name": "gmtTimeToLocalTime",
+      "source_optimized_desc": "(J)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(J)Ljava/lang/String;",
+      "source_name": "longitudeToString",
+      "source_declaration_desc": "(J)Ljava/lang/String;",
+      "source_optimized_name": "longitudeToString",
+      "source_optimized_desc": "(J)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "([B)[B",
+      "source_name": "calculateMD5",
+      "source_declaration_desc": "([B)[B",
+      "source_optimized_name": "calculateMD5",
+      "source_optimized_desc": "([B)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(JJJJJJJ)J",
+      "source_name": "FF",
+      "source_declaration_desc": "(JJJJJJJ)J",
+      "source_optimized_name": "FF",
+      "source_optimized_desc": "(JJJJJJJ)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "b",
+      "reference_desc": "(JJJJJJJ)J",
+      "source_name": "GG",
+      "source_declaration_desc": "(JJJJJJJ)J",
+      "source_optimized_name": "GG",
+      "source_optimized_desc": "(JJJJJJJ)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "(JJJJJJJ)J",
+      "source_name": "HH",
+      "source_declaration_desc": "(JJJJJJJ)J",
+      "source_optimized_name": "HH",
+      "source_optimized_desc": "(JJJJJJJ)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "d",
+      "reference_desc": "(JJJJJJJ)J",
+      "source_name": "II",
+      "source_declaration_desc": "(JJJJJJJ)J",
+      "source_optimized_name": "II",
+      "source_optimized_desc": "(JJJJJJJ)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([BI)V",
+      "source_name": "md5Update",
+      "source_declaration_desc": "([BI)V",
+      "source_optimized_name": "md5Update",
+      "source_optimized_desc": "([BI)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B[BIII)V",
+      "source_name": "md5Memcpy",
+      "source_declaration_desc": "([B[BIII)V",
+      "source_optimized_name": "md5Memcpy",
+      "source_optimized_desc": "([B[BIII)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B)V",
+      "source_name": "md5Transform",
+      "source_declaration_desc": "([B)V",
+      "source_optimized_name": "md5Transform",
+      "source_optimized_desc": "([B)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B[JI)V",
+      "source_name": "Encode",
+      "source_declaration_desc": "([B[JI)V",
+      "source_optimized_name": "Encode",
+      "source_optimized_desc": "([B[JI)V",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(B)J",
+      "source_name": "b2iu",
+      "source_declaration_desc": "(B)J",
+      "source_optimized_name": "b2iu",
+      "source_optimized_desc": "(B)J",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "()Ljava/lang/String;",
+      "source_name": "getCurrentDay",
+      "source_declaration_desc": "()Ljava/lang/String;",
+      "source_optimized_name": "getCurrentDay",
+      "source_optimized_desc": "()Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(CZ)Z",
+      "source_name": "isURLChar",
+      "source_declaration_desc": "(CZ)Z",
+      "source_optimized_name": "isURLChar",
+      "source_optimized_desc": "(CZ)Z",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;)Ljava/util/Vector;",
+      "source_name": "parseMessageForURL",
+      "source_declaration_desc": "(Ljava/lang/String;)Ljava/util/Vector;",
+      "source_optimized_name": "parseMessageForURL",
+      "source_optimized_desc": "(Ljava/lang/String;)Ljava/util/Vector;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;I)I",
+      "source_name": "strToIntDef",
+      "source_declaration_desc": "(Ljava/lang/String;I)I",
+      "source_optimized_name": "strToIntDef$505cff29",
+      "source_optimized_desc": "(Ljava/lang/String;)I",
+      "same_optimized_signature": false
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;",
+      "source_name": "replaceStr",
+      "source_declaration_desc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;",
+      "source_optimized_name": "replaceStr",
+      "source_optimized_desc": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;CI)[B",
+      "source_name": "explodeToBytes",
+      "source_declaration_desc": "(Ljava/lang/String;CI)[B",
+      "source_optimized_name": "explodeToBytes",
+      "source_optimized_desc": "(Ljava/lang/String;CI)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljava/lang/String;C)[Ljava/lang/String;",
+      "source_name": "explode",
+      "source_declaration_desc": "(Ljava/lang/String;C)[Ljava/lang/String;",
+      "source_optimized_name": "explode",
+      "source_optimized_desc": "(Ljava/lang/String;C)[Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "([B[B)[B",
+      "source_name": "mergeCapabilities",
+      "source_declaration_desc": "([B[B)[B",
+      "source_optimized_name": "mergeCapabilities",
+      "source_optimized_desc": "([B[B)[B",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "c",
+      "reference_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_name": "DeMangleXml",
+      "source_declaration_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_optimized_name": "DeMangleXml",
+      "source_optimized_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "d",
+      "reference_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_name": "MangleXml",
+      "source_declaration_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_optimized_name": "MangleXml",
+      "source_optimized_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "a",
+      "reference_desc": "(Ljavax/microedition/lcdui/Image;II)Ljavax/microedition/lcdui/Image;",
+      "source_name": "createThumbnail",
+      "source_declaration_desc": "(Ljavax/microedition/lcdui/Image;II)Ljavax/microedition/lcdui/Image;",
+      "source_optimized_name": "createThumbnail",
+      "source_optimized_desc": "(Ljavax/microedition/lcdui/Image;II)Ljavax/microedition/lcdui/Image;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "e",
+      "reference_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_name": "DecodeRTF",
+      "source_declaration_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "source_optimized_name": "DecodeRTF",
+      "source_optimized_desc": "(Ljava/lang/String;)Ljava/lang/String;",
+      "same_optimized_signature": true
+    },
+    {
+      "reference_name": "<clinit>",
+      "reference_desc": "()V",
+      "source_name": "<clinit>",
+      "source_declaration_desc": "()V",
+      "source_optimized_name": "<clinit>",
+      "source_optimized_desc": "()V",
+      "same_optimized_signature": true
+    }
+  ],
+  "fields": [
+    {
+      "reference_name": "a",
+      "desc": "[B",
+      "source_name": "CAP_AIM_SERVERRELAY",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "b",
+      "desc": "[B",
+      "source_name": "CAP_UTF8",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "c",
+      "desc": "[B",
+      "source_name": "CAP_UTF8_GUID",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "z",
+      "desc": "[B",
+      "source_name": "CAP_MSGTYPE2",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "d",
+      "desc": "[B",
+      "source_name": "CAP_MIRANDAIM",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "A",
+      "desc": "[B",
+      "source_name": "CAP_TRILLIAN",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "B",
+      "desc": "[B",
+      "source_name": "CAP_SIM",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 9
+    },
+    {
+      "reference_name": "C",
+      "desc": "[B",
+      "source_name": "CAP_LICQ",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 9
+    },
+    {
+      "reference_name": "e",
+      "desc": "[B",
+      "source_name": "CAP_KOPETE",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "f",
+      "desc": "[B",
+      "source_name": "CAP_ANDRQ",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "g",
+      "desc": "[B",
+      "source_name": "CAP_QIP",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "h",
+      "desc": "[B",
+      "source_name": "CAP_QIPPDAWIN",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "i",
+      "desc": "[B",
+      "source_name": "CAP_QIPPDASYM",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "j",
+      "desc": "[B",
+      "source_name": "CAP_QIPINFIUM",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "k",
+      "desc": "[B",
+      "source_name": "CAP_VMICQ",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "D",
+      "desc": "[B",
+      "source_name": "CAP_IM2",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "l",
+      "desc": "[B",
+      "source_name": "CAP_MACICQ",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "m",
+      "desc": "[B",
+      "source_name": "CAP_RICHTEXT",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "n",
+      "desc": "[B",
+      "source_name": "CAP_ICQ6",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "o",
+      "desc": "[B",
+      "source_name": "URL_VERSION",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "p",
+      "desc": "[B",
+      "source_name": "URL_HOME",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "q",
+      "desc": "[B",
+      "source_name": "URL_ADVERTISEMENT",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "E",
+      "desc": "[B",
+      "source_name": "CAP_STR20012",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "F",
+      "desc": "[B",
+      "source_name": "CAP_AIMCHAT",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 14
+    },
+    {
+      "reference_name": "G",
+      "desc": "[B",
+      "source_name": "CAP_MIP",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "H",
+      "desc": "[B",
+      "source_name": "CAP_YAPP",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "I",
+      "desc": "[B",
+      "source_name": "CAP_SMAPER",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "r",
+      "desc": "[B",
+      "source_name": "CAP_XTRAZ",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "s",
+      "desc": "[B",
+      "source_name": "CAP_AIMFILE",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "t",
+      "desc": "[B",
+      "source_name": "CAP_DIRECT",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "u",
+      "desc": "[B",
+      "source_name": "CAP_JIMM",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "v",
+      "desc": "[B",
+      "source_name": "CAP_AVATAR",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "w",
+      "desc": "[B",
+      "source_name": "CAP_TYPING",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "x",
+      "desc": "[B",
+      "source_name": "CAP_MCHAT",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "J",
+      "desc": "[B",
+      "source_name": "CAP_FILE_SHARING",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "K",
+      "desc": "[B",
+      "source_name": "CAP_NAT_ICQ",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "L",
+      "desc": "[B",
+      "source_name": "CAP_BAYAN",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 19
+    },
+    {
+      "reference_name": "M",
+      "desc": "[B",
+      "source_name": "CAP_DICHAT",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "N",
+      "desc": "[B",
+      "source_name": "CAP_QUTIM",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "O",
+      "desc": "[B",
+      "source_name": "CAP_PIGEON",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "P",
+      "desc": "[B",
+      "source_name": "CAP_PIGEON_VERSION",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "Q",
+      "desc": "[B",
+      "source_name": "CAP_HTML",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "R",
+      "desc": "[B",
+      "source_name": "CAP_XTRAZ_VIDEO",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "S",
+      "desc": "[B",
+      "source_name": "CAP_WJIMM",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "T",
+      "desc": "[B",
+      "source_name": "CAP_LOCID",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "U",
+      "desc": "[B",
+      "source_name": "CAP_ICQ7",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "V",
+      "desc": "[B",
+      "source_name": "CAP_MIRANDA_ICQ",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "W",
+      "desc": "[B",
+      "source_name": "CAP_DIM",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "X",
+      "desc": "[B",
+      "source_name": "CAP_QIP_STATUS",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "Y",
+      "desc": "[B",
+      "source_name": "CAP_OLD_HEAD",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "Z",
+      "desc": "[B",
+      "source_name": "CAP_OLD_TAIL",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "a",
+      "desc": "[Ljava/lang/String;",
+      "source_name": "clientNames",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 3,
+      "source_initializer_block_instructions": 3
+    },
+    {
+      "reference_name": "aa",
+      "desc": "[B",
+      "source_name": "PASSENC_KEY",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "a",
+      "desc": "I",
+      "source_name": "counter",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 1,
+      "source_initializer_block_instructions": 1
+    },
+    {
+      "reference_name": "ab",
+      "desc": "[B",
+      "source_name": "dayCounts",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 69,
+      "source_initializer_block_instructions": 69
+    },
+    {
+      "reference_name": "a",
+      "desc": "[I",
+      "source_name": "monthIndexes",
+      "identity_evidence": "inherited Calendar month table; optimized initializer skips its default-zero first element",
+      "reference_initializer_instructions": 50,
+      "source_initializer_block_instructions": 46
+    },
+    {
+      "reference_name": "y",
+      "desc": "[B",
+      "source_name": "AIM_MD5_STRING",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "ac",
+      "desc": "[B",
+      "source_name": "PADDING",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 4,
+      "source_initializer_block_instructions": 4
+    },
+    {
+      "reference_name": "a",
+      "desc": "[J",
+      "source_name": "state",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 2,
+      "source_initializer_block_instructions": 2
+    },
+    {
+      "reference_name": "b",
+      "desc": "[J",
+      "source_name": "count",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 2,
+      "source_initializer_block_instructions": 2
+    },
+    {
+      "reference_name": "ad",
+      "desc": "[B",
+      "source_name": "buffer",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 2,
+      "source_initializer_block_instructions": 2
+    },
+    {
+      "reference_name": "ae",
+      "desc": "[B",
+      "source_name": "digest",
+      "identity_evidence": "exact assigned-value initializer instructions",
+      "reference_initializer_instructions": 2,
+      "source_initializer_block_instructions": 2
+    }
+  ]
+}

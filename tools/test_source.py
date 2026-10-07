@@ -59,6 +59,7 @@ def main(matrix=False, skip_build=False):
     report['pure_logic'] = run([*java, 'SourceDifferentialTest', original, source / 'classes', CACHE], 'differential')
     report['packets'] = run([sys.executable, ROOT / 'tools/test_packets.py'], 'packets-audit')
     report['convertor'] = run([sys.executable, ROOT / 'tools/test_convertor.py'], 'convertor-audit')
+    report['util_core'] = run([sys.executable, ROOT / 'tools/test_util_core.py', '--skip-build'], 'util-core-audit')
     fixtures = TEST / 'capabilities.bin'
     ref_output, src_output = TEST / 'reference.txt', TEST / 'source.txt'
     run([*java, 'DetectorProbe', original, 'reference', fixtures, ref_output], 'detector-reference')
