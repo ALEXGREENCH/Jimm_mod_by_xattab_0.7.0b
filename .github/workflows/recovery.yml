@@ -34,6 +34,8 @@ jobs:
             preservation/reports/source-socket-bytecode.json
             preservation/reports/source-request-info.json
             preservation/reports/source-request-info-categories.json
+            preservation/reports/source-xstatus-catalog.json
+            preservation/reports/source-xstatus-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

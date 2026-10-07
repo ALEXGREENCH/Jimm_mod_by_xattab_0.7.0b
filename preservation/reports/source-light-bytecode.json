@@ -4,7 +4,7 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_class_jar_sha256": "cdd462e2c1c9cc1173737c6737df97d0e92f0948202a4b48fdee264ac881987a",
+      "source_class_jar_sha256": "70e398e09b8d4a76cd4bc49865b5a90e9c9a0596714d03cc1f5f004e09875569",
       "methods": [
         {
           "reference": "aj.<clinit>()V",
@@ -102,7 +102,7 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_class_jar_sha256": "9c80af017f75ae3c009579050ec383ef5255dc670b91d5badb44fa8160c21553",
+      "source_class_jar_sha256": "2e9604eee5573b38d22488be15165ee0fd75ddeb780c077bbfdf794d4f3145c2",
       "methods": [
         {
           "reference": "aj.<clinit>()V",

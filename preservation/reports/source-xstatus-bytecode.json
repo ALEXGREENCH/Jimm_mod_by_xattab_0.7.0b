@@ -1,0 +1,326 @@
+{
+  "scope": "All instructions of native 37-GUID array construction, through its actual field store, and 12 comparable retained catalog/GUID/contact signatures per platform. Normalization maps confirmed owners and members, retaining local slots and branches. The full catalog initializer also contains different locale keys and is not declared identical. MIDP2 functional catalog comparisons are recorded separately; this audit does not establish full Motorola/Siemens parser or physical-device equivalence.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "source_class_jar_sha256": "70e398e09b8d4a76cd4bc49865b5a90e9c9a0596714d03cc1f5f004e09875569",
+      "guid_entries": 37,
+      "guid_initialization_instructions": 373,
+      "same_guid_initialization_bytecode": true,
+      "guid_initialization_sha256": "05f4fecd3e7e9ebb4b6d5691f8fc6752e2dacc09de6d76f4aca73557ce26103a",
+      "methods": [
+        {
+          "reference": "bh.<init>([B)V",
+          "source": "jimm/comm/GUID.<init>([B)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bj.<init>()V",
+          "source": "jimm/comm/XStatus.<init>()V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bj.a(I)V",
+          "source": "jimm/comm/XStatus.setStatusIndex(I)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bj.a(I)Lbh;",
+          "source": "jimm/comm/XStatus.getStatusGUID(I)Ljimm/comm/GUID;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bj.a(I)Le;",
+          "source": "jimm/comm/XStatus.getStatusImage(I)LDrawControls/Icon;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bj.a(I)Ljava/lang/String;",
+          "source": "jimm/comm/XStatus.getStatusAsString(I)Ljava/lang/String;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bj.a()I",
+          "source": "jimm/comm/XStatus.getXStatusCount()I",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bj.b()I",
+          "source": "jimm/comm/XStatus.getStatusIndex()I",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bj.a()Lf;",
+          "source": "jimm/comm/XStatus.getXStatusImageList()LDrawControls/ImageList;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bj.<clinit>()V",
+          "source": "jimm/comm/XStatus.<clinit>()V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "z.a([B)V",
+          "source": "jimm/ContactItem.setXStatus([B)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "z.a()Lbj;",
+          "source": "jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "source_class_jar_sha256": "2e9604eee5573b38d22488be15165ee0fd75ddeb780c077bbfdf794d4f3145c2",
+      "guid_entries": 37,
+      "guid_initialization_instructions": 373,
+      "same_guid_initialization_bytecode": true,
+      "guid_initialization_sha256": "05f4fecd3e7e9ebb4b6d5691f8fc6752e2dacc09de6d76f4aca73557ce26103a",
+      "methods": [
+        {
+          "reference": "bg.<init>([B)V",
+          "source": "jimm/comm/GUID.<init>([B)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bi.<init>()V",
+          "source": "jimm/comm/XStatus.<init>()V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bi.a(I)V",
+          "source": "jimm/comm/XStatus.setStatusIndex(I)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bi.a(I)Lbg;",
+          "source": "jimm/comm/XStatus.getStatusGUID(I)Ljimm/comm/GUID;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bi.a(I)Le;",
+          "source": "jimm/comm/XStatus.getStatusImage(I)LDrawControls/Icon;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bi.a(I)Ljava/lang/String;",
+          "source": "jimm/comm/XStatus.getStatusAsString(I)Ljava/lang/String;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bi.a()I",
+          "source": "jimm/comm/XStatus.getXStatusCount()I",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bi.b()I",
+          "source": "jimm/comm/XStatus.getStatusIndex()I",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bi.a()Lf;",
+          "source": "jimm/comm/XStatus.getXStatusImageList()LDrawControls/ImageList;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bi.<clinit>()V",
+          "source": "jimm/comm/XStatus.<clinit>()V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "z.a([B)V",
+          "source": "jimm/ContactItem.setXStatus([B)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "z.a()Lbi;",
+          "source": "jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "source_class_jar_sha256": "31737e9e3c9da54de0495be604a5a23e85b89a9a6ec3bb3f6ec92d77c2252fbf",
+      "guid_entries": 37,
+      "guid_initialization_instructions": 373,
+      "same_guid_initialization_bytecode": true,
+      "guid_initialization_sha256": "05f4fecd3e7e9ebb4b6d5691f8fc6752e2dacc09de6d76f4aca73557ce26103a",
+      "methods": [
+        {
+          "reference": "bf.<init>([B)V",
+          "source": "jimm/comm/GUID.<init>([B)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bh.<init>()V",
+          "source": "jimm/comm/XStatus.<init>()V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bh.a(I)V",
+          "source": "jimm/comm/XStatus.setStatusIndex(I)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bh.a(I)Lbf;",
+          "source": "jimm/comm/XStatus.getStatusGUID(I)Ljimm/comm/GUID;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bh.a(I)Le;",
+          "source": "jimm/comm/XStatus.getStatusImage(I)LDrawControls/Icon;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bh.a(I)Ljava/lang/String;",
+          "source": "jimm/comm/XStatus.getStatusAsString(I)Ljava/lang/String;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bh.a()I",
+          "source": "jimm/comm/XStatus.getXStatusCount()I",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bh.b()I",
+          "source": "jimm/comm/XStatus.getStatusIndex()I",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "bh.a()Lf;",
+          "source": "jimm/comm/XStatus.getXStatusImageList()LDrawControls/ImageList;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        },
+        {
+          "reference": "bh.<clinit>()V",
+          "source": "jimm/comm/XStatus.<clinit>()V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "y.a([B)V",
+          "source": "jimm/ContactItem.setXStatus([B)V",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": false
+        },
+        {
+          "reference": "y.a()Lbh;",
+          "source": "jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+          "signature_verified": true,
+          "static_modifier_verified": true,
+          "synchronized_modifier_verified": true,
+          "same_normalized_bytecode": true
+        }
+      ]
+    }
+  ]
+}

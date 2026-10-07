@@ -61,6 +61,8 @@ python tools/test_light.py
 python tools/audit_light.py
 python tools/test_convertor.py
 python tools/test_request_info_categories.py --all-languages --skip-build
+python tools/test_xstatus_catalog.py --all-languages --skip-build
+python tools/audit_xstatus.py
 ```
 
 Первая команда собирает 15 сочетаний платформ и языков, проверяет конфигурации без модулей, выполняет сравнения поведения с майским JAR, сверку ресурсов и графических компонентов трёх платформ. Вторая сравнивает выбранные сигнатуры и инструкции байткода. Третья позволяет отдельно повторить проверку ресурсов уже собранных 15 JAR: файлы сравниваются побайтово, локализации — по восстановленным именам и декодированным значениям. `test_graphics.py` собирает три русских варианта и сравнивает значки, анимации и шрифт Motorola; `--skip-build` использует уже собранные полные RU-варианты. `audit_graphics.py` повторяет отдельную сверку их сигнатур и инструкций.
@@ -74,6 +76,8 @@ python tools/test_request_info_categories.py --all-languages --skip-build
 Запрос профиля и накопление ответов сервера проверяются серией `request_info`: [отчёт](../preservation/reports/source-request-info.json). Исполняются настоящий парсер, таймауты, обновление контактных полей и RMS. `test_request_info_categories.py --all-languages --skip-build` отдельно сравнивает собственные ключи, коды и подписи интересов пяти полных MIDP2-сборок; [отчёт](../preservation/reports/source-request-info-categories.json). Обе проверки входят в `--matrix`.
 
 Запросы/ответы Xtraz, XML-преобразования, приватность и доставка ответа в чат проверяются серией `xtraz`: [отчёт](../preservation/reports/source-xtraz.json). Пакеты исполняются настоящим `ActionListener`; соединение и назначения чата/журнала наблюдаются на тестовых границах.
+
+`test_xstatus_catalog.py --all-languages --skip-build` исполняет настоящий `ContactItem.setXStatus`, каталог GUID, подписи и значки пяти MIDP2-сборок. Проверяет совместимый GUID статуса «Сердце», повреждённые capabilities, порядок совпадений и реальные алиасы массивов; [отчёт каталога](../preservation/reports/source-xstatus-catalog.json). Эта проверка также входит в `--matrix` и вызывает `audit_xstatus.py`: [байткод каталога трёх платформ](../preservation/reports/source-xstatus-bytecode.json).
 
 Диспетчер UI, упаковка аргументов, постановка задач в очередь, уведомления и ветки переподключения проверяются настоящим `RunnableImpl` в серии `runnable`: [отчёт](../preservation/reports/source-runnable.json). Системная очередь, ожидание и вызовы следующих компонентов перехватываются на границе этой серии.
 

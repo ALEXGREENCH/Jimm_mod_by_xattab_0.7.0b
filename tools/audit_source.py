@@ -1252,6 +1252,23 @@ SYMBOLS.update({
     'co.c(I)Ljava/lang/String;': 'jimm/comm/Util.genderToString(I)Ljava/lang/String;',
 })
 
+# Native XStatus catalog, GUID aliases and the real synchronized ContactItem caller.
+CLASSES['bh'] = 'jimm/comm/GUID'
+SYMBOLS.update({
+    'bh.a [B': 'jimm/comm/GUID.guid [B',
+    'co.a(Ljava/lang/String;CI)[B': 'jimm/comm/Util.explodeToBytes(Ljava/lang/String;CI)[B',
+    'bj.a [Lbh;': 'jimm/comm/XStatus.xguids [Ljimm/comm/GUID;',
+    'bj.a [Ljava/lang/String;': 'jimm/comm/XStatus.xstatus [Ljava/lang/String;',
+    'bj.a Lf;': 'jimm/comm/XStatus.imageList LDrawControls/ImageList;',
+    'bj.a I': 'jimm/comm/XStatus.index I',
+    'bj.a(I)V': 'jimm/comm/XStatus.setStatusIndex(I)V',
+    'bj.a(I)Lbh;': 'jimm/comm/XStatus.getStatusGUID(I)Ljimm/comm/GUID;',
+    'bj.b()I': 'jimm/comm/XStatus.getStatusIndex()I',
+    'z.a Lbj;': 'jimm/ContactItem.xstatus Ljimm/comm/XStatus;',
+    'z.a([B)V': 'jimm/ContactItem.setXStatus([B)V',
+    'z.a()Lbj;': 'jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;',
+})
+
 METHODS = [
     ('u', '<init>', '()V', '<init>'),
     ('u', 'b', '()V', 'reset'),
@@ -1976,6 +1993,22 @@ METHODS.extend([
     ('ce', 'a', '()Z', 'isCompleted'),
     ('ce', 'b', '()Z', 'isError'),
     ('ce', '<clinit>', '()V', '<clinit>'),
+])
+
+
+METHODS.extend([
+    ('bh', '<init>', '([B)V', '<init>'),
+    ('bj', '<init>', '()V', '<init>'),
+    ('bj', 'a', '(I)V', 'setStatusIndex'),
+    ('bj', 'a', '(I)Lbh;', 'getStatusGUID'),
+    ('bj', 'a', '(I)Le;', 'getStatusImage'),
+    ('bj', 'a', '(I)Ljava/lang/String;', 'getStatusAsString'),
+    ('bj', 'a', '()I', 'getXStatusCount'),
+    ('bj', 'b', '()I', 'getStatusIndex'),
+    ('bj', 'a', '()Lf;', 'getXStatusImageList'),
+    ('bj', '<clinit>', '()V', '<clinit>'),
+    ('z', 'a', '([B)V', 'setXStatus'),
+    ('z', 'a', '()Lbj;', 'getXStatus'),
 ])
 
 

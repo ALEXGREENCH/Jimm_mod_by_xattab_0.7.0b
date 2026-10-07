@@ -351,6 +351,9 @@ def main(matrix=False, skip_build=False):
     report['request_info_categories'] = run([sys.executable, ROOT / 'tools/test_request_info_categories.py',
                                             *(['--all-languages'] if matrix else []), '--skip-build'],
                                            'request-info-category-audit')
+    report['xstatus_catalog'] = run([sys.executable, ROOT / 'tools/test_xstatus_catalog.py',
+                                   *(['--all-languages'] if matrix else []), '--skip-build'],
+                                  'xstatus-catalog-audit')
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False, indent=2))
 

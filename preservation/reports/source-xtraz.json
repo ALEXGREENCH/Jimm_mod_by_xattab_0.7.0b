@@ -1,7 +1,7 @@
 {
   "scope": "Actual MIDP2 XtrazSM serializers and Util XML helpers. Queries use transaction ID zero, as all actual callers do and the optimized reference specializes. Real ActionListener parses incoming requests/responses and retains privacy gates, response construction, open-chat state and failures. Only the Xtraz clock, new-chat destination and MagicEye log destination are additionally captured; existing file-transfer fixture I/O/chat/UI boundaries remain. Log resource keys are normalized through each real ResourceBundle dictionary. No live server, native queue or complete downstream chat/log side-effect claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "8bc0e9aad72a47a9bf6f7d282fd7cada7cd0fa24164968fe79b273fcaf2e2e3b",
+  "source_unoptimized_class_jar_sha256": "871d594a144a711d857bb55c8e0757dc851507473f4c76b8d52bc908991fe4f2",
   "observations": 4861,
   "packet_send_attempts": 259,
   "chat_appends": 28,

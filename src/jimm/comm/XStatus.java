@@ -70,7 +70,8 @@ public class XStatus
 		new GUID(Util.explodeToBytes("3F,B0,BD,36,AF,3B,4A,60,9E,EF,CF,19,0F,6A,5A,7E", ',', 16)), // CIGARETTE
 		new GUID(Util.explodeToBytes("E6,01,E4,1C,33,73,4B,D1,BC,06,81,1D,6C,32,3D,82", ',', 16)), // SEX
 		new GUID(Util.explodeToBytes("D4,E2,B0,BA,33,4E,4F,A5,98,D0,11,7D,BF,4D,3C,C8", ',', 16)), // SEARCH
-		new GUID(Util.explodeToBytes("00,72,D9,08,4A,D1,43,DD,91,99,6F,02,69,66,02,6F", ',', 16))  // DIARY
+		new GUID(Util.explodeToBytes("00,72,D9,08,4A,D1,43,DD,91,99,6F,02,69,66,02,6F", ',', 16)), // DIARY
+		new GUID(Util.explodeToBytes("CD,56,43,A2,C9,4C,47,24,B5,2C,DC,01,24,A1,D0,CD", ',', 16))  // HEART (compatibility)
 	};
 
 	private static final String[] xstatus =
@@ -123,7 +124,7 @@ public class XStatus
 		{
 			if (xguids[i].equals(guid))
 			{
-				return i;
+				return (i == 36) ? 31 : i;
 			}
 		}
 		return -1;
@@ -201,7 +202,7 @@ public class XStatus
 
 	public static int getXStatusCount()
 	{
-		return xguids.length;
+		return xguids.length - 1;
 	}
 
 	public GUID getStatusGUID()
