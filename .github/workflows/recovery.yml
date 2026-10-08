@@ -114,6 +114,9 @@ jobs:
             preservation/reports/source-form-fit-delta.json
             preservation/reports/source-xstatus-platforms.json
             preservation/reports/source-xstatus-helper-bytecode.json
+            preservation/reports/source-exception-constructor-bytecode.json
+            preservation/reports/source-exception-constructors.json
+            preservation/reports/source-unused-constructor-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

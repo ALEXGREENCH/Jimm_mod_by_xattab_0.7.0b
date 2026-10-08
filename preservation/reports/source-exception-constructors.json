@@ -1,0 +1,281 @@
+{
+  "scope": "Real native/raw/optimized RU error constructors of three platforms, real localized descriptions and complete code/critical/display/peer/message state. 1035 error codes (0..1024 plus negative/boundary values) times 15 extension values per platform; ordinary critical and noncritical false/true constructors and actual peer true,true domain compare byte-for-byte. Separate output asserts all four native bool combinations are ignored, raw bool flags remain generic, and five optimized unused dummy-byte values are ignored. Those out-of-domain outputs are intentionally not compared as equivalent. Native/delivered JARs are direct inputs; raw byte entries plus delivered resources/manifest are preserved exactly. No application algorithm, resource, clock, network or device predicate fixture is added. Host MicroEmulator/memory RMS and normal external-API load-time rewriting remain; unchanged input JAR bytes do not imply unchanged loaded JVM code. Siemens uses the separate test-host Light provider, with actual child-loader call counts/hashes, never embedded in the application. No physical phone, full startup, exception handler dispatch, live network, all-five-locales or whole-program equivalence is claimed. No product source/JAR change is made.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+          "configuration": {
+            "error": "bv",
+            "description": "a",
+            "resource": "ai",
+            "resourceGetter": "a",
+            "code": "a",
+            "critical": "a",
+            "display": "b",
+            "peer": "c"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 62100,
+          "actual_total_constructor_calls": 124200,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "e011d42ab3599b474415e412c5bad7acbffe71f318a4af3480949a1c9385cd41",
+          "raw_class_jar_sha256": null,
+          "raw_resource_jar_sha256": null,
+          "exact_raw_class_and_resource_entry_dictionary_preserved": false,
+          "external_siemens_light_provider": null,
+          "no_application_class_or_resource_substitution": true
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "b9d1a01d6fb86dad6b963930bcf599892b13bd1e3da61acb89b8c44a217164d3",
+          "configuration": {
+            "error": "jimm/JimmException",
+            "description": "getErrDesc",
+            "resource": "jimm/util/ResourceBundle",
+            "resourceGetter": "getString",
+            "code": "_ErrCode",
+            "critical": "critical",
+            "display": "displayMsg",
+            "peer": "peer"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 62100,
+          "actual_total_constructor_calls": 124200,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "78a51b7be86265e9c010ede19d7bae227796a920a5cd6a766b16adf20999e1a7",
+          "raw_class_jar_sha256": "f89b2f927e72ce67ba70193f82cc2d4a53e14949b6813f0320897b71c8bb2440",
+          "raw_resource_jar_sha256": "e3bcc3e3caa9a1390c96ff139ea4a533a55eba967da7b47e9cea39043b595100",
+          "exact_raw_class_and_resource_entry_dictionary_preserved": true,
+          "external_siemens_light_provider": null,
+          "no_application_class_or_resource_substitution": true
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "e3bcc3e3caa9a1390c96ff139ea4a533a55eba967da7b47e9cea39043b595100",
+          "configuration": {
+            "error": "jimm/JimmException",
+            "description": "getErrDesc",
+            "resource": "jimm/util/ResourceBundle",
+            "resourceGetter": "getString",
+            "code": "_ErrCode",
+            "critical": "critical",
+            "display": "displayMsg",
+            "peer": "peer"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 77625,
+          "actual_total_constructor_calls": 139725,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "20e041617eb2949b9b21918eb225e46fa45980204b1fa02314f8acfcc1186017",
+          "raw_class_jar_sha256": null,
+          "raw_resource_jar_sha256": null,
+          "exact_raw_class_and_resource_entry_dictionary_preserved": false,
+          "external_siemens_light_provider": null,
+          "no_application_class_or_resource_substitution": true
+        }
+      ],
+      "common_domain_different_observations": 0
+    },
+    {
+      "target": "MOTOROLA",
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+          "configuration": {
+            "error": "bu",
+            "description": "a",
+            "resource": "ai",
+            "resourceGetter": "a",
+            "code": "a",
+            "critical": "a",
+            "display": "b",
+            "peer": "c"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 62100,
+          "actual_total_constructor_calls": 124200,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "e011d42ab3599b474415e412c5bad7acbffe71f318a4af3480949a1c9385cd41",
+          "raw_class_jar_sha256": null,
+          "raw_resource_jar_sha256": null,
+          "exact_raw_class_and_resource_entry_dictionary_preserved": false,
+          "external_siemens_light_provider": null,
+          "no_application_class_or_resource_substitution": true
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "02f6e0ee191d89cc10643985b36ce0e5cfa6c04bfe2566ced82d5c86585ab6ac",
+          "configuration": {
+            "error": "jimm/JimmException",
+            "description": "getErrDesc",
+            "resource": "jimm/util/ResourceBundle",
+            "resourceGetter": "getString",
+            "code": "_ErrCode",
+            "critical": "critical",
+            "display": "displayMsg",
+            "peer": "peer"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 62100,
+          "actual_total_constructor_calls": 124200,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "78a51b7be86265e9c010ede19d7bae227796a920a5cd6a766b16adf20999e1a7",
+          "raw_class_jar_sha256": "f60cd25eea0f129bde957574dcbf72dadefde13012a4adb0e1460c32cfc76db2",
+          "raw_resource_jar_sha256": "4fed74c761fda7091bbc02870eb8470524fc107a2d0b08f0cfbb0bf08e14a1fa",
+          "exact_raw_class_and_resource_entry_dictionary_preserved": true,
+          "external_siemens_light_provider": null,
+          "no_application_class_or_resource_substitution": true
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "4fed74c761fda7091bbc02870eb8470524fc107a2d0b08f0cfbb0bf08e14a1fa",
+          "configuration": {
+            "error": "jimm/JimmException",
+            "description": "getErrDesc",
+            "resource": "jimm/util/ResourceBundle",
+            "resourceGetter": "getString",
+            "code": "_ErrCode",
+            "critical": "critical",
+            "display": "displayMsg",
+            "peer": "peer"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 77625,
+          "actual_total_constructor_calls": 139725,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "20e041617eb2949b9b21918eb225e46fa45980204b1fa02314f8acfcc1186017",
+          "raw_class_jar_sha256": null,
+          "raw_resource_jar_sha256": null,
+          "exact_raw_class_and_resource_entry_dictionary_preserved": false,
+          "external_siemens_light_provider": null,
+          "no_application_class_or_resource_substitution": true
+        }
+      ],
+      "common_domain_different_observations": 0
+    },
+    {
+      "target": "SIEMENS2",
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+          "configuration": {
+            "error": "bt",
+            "description": "a",
+            "resource": "ah",
+            "resourceGetter": "a",
+            "code": "a",
+            "critical": "a",
+            "display": "b",
+            "peer": "c",
+            "vendorLight": "com.siemens.mp.game.Light"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 62100,
+          "actual_total_constructor_calls": 124200,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "e011d42ab3599b474415e412c5bad7acbffe71f318a4af3480949a1c9385cd41",
+          "raw_class_jar_sha256": null,
+          "raw_resource_jar_sha256": null,
+          "exact_raw_class_and_resource_entry_dictionary_preserved": false,
+          "external_siemens_light_provider": {
+            "source_sha256": "1efc3fa4a5fb628f45e23d915035c9eb2b347902259b1a1887b9e7f8aee56402",
+            "class_sha256": "361fa6353bbfa285e69a6b39cebcfb5df5cbe81e96f5a9b73e0f06b91f392021",
+            "actual_on_off_calls": [
+              1,
+              0
+            ]
+          },
+          "no_application_class_or_resource_substitution": true
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "f1e0d2d4566188063e05c71d2cb6224598774e568a351b97914ada1c3695b168",
+          "configuration": {
+            "error": "jimm/JimmException",
+            "description": "getErrDesc",
+            "resource": "jimm/util/ResourceBundle",
+            "resourceGetter": "getString",
+            "code": "_ErrCode",
+            "critical": "critical",
+            "display": "displayMsg",
+            "peer": "peer",
+            "vendorLight": "com.siemens.mp.game.Light"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 62100,
+          "actual_total_constructor_calls": 124200,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "78a51b7be86265e9c010ede19d7bae227796a920a5cd6a766b16adf20999e1a7",
+          "raw_class_jar_sha256": "19cafa98be747957373cd05e67f95a7d874319bdc4731e2780e6f3861b3a52f3",
+          "raw_resource_jar_sha256": "bada01c1539ab109230bf9eb61d1137d66664087ce3dc905705528842859c776",
+          "exact_raw_class_and_resource_entry_dictionary_preserved": true,
+          "external_siemens_light_provider": {
+            "source_sha256": "1efc3fa4a5fb628f45e23d915035c9eb2b347902259b1a1887b9e7f8aee56402",
+            "class_sha256": "361fa6353bbfa285e69a6b39cebcfb5df5cbe81e96f5a9b73e0f06b91f392021",
+            "actual_on_off_calls": [
+              1,
+              0
+            ]
+          },
+          "no_application_class_or_resource_substitution": true
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "bada01c1539ab109230bf9eb61d1137d66664087ce3dc905705528842859c776",
+          "configuration": {
+            "error": "jimm/JimmException",
+            "description": "getErrDesc",
+            "resource": "jimm/util/ResourceBundle",
+            "resourceGetter": "getString",
+            "code": "_ErrCode",
+            "critical": "critical",
+            "display": "displayMsg",
+            "peer": "peer",
+            "vendorLight": "com.siemens.mp.game.Light"
+          },
+          "observations": 77626,
+          "code_extension_pairs": 15525,
+          "actual_common_constructor_calls": 62100,
+          "separately_asserted_boundary_observations": 77625,
+          "actual_total_constructor_calls": 139725,
+          "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
+          "boundary_output_sha256": "20e041617eb2949b9b21918eb225e46fa45980204b1fa02314f8acfcc1186017",
+          "raw_class_jar_sha256": null,
+          "raw_resource_jar_sha256": null,
+          "exact_raw_class_and_resource_entry_dictionary_preserved": false,
+          "external_siemens_light_provider": {
+            "source_sha256": "1efc3fa4a5fb628f45e23d915035c9eb2b347902259b1a1887b9e7f8aee56402",
+            "class_sha256": "361fa6353bbfa285e69a6b39cebcfb5df5cbe81e96f5a9b73e0f06b91f392021",
+            "actual_on_off_calls": [
+              1,
+              0
+            ]
+          },
+          "no_application_class_or_resource_substitution": true
+        }
+      ],
+      "common_domain_different_observations": 0
+    }
+  ]
+}
