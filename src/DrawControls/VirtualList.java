@@ -1988,9 +1988,9 @@ public abstract class VirtualList
 
 	public void removeAllCommands()
 	{
-		defaultCommand = null;
 		leftMenu = null;
 		rightMenu = null;
+		defaultCommand = null;
 		leftMenuItems.removeAllElements();
 		rightMenuItems.removeAllElements();
 	}

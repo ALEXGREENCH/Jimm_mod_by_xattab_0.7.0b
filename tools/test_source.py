@@ -505,6 +505,7 @@ def main(matrix=False, skip_build=False):
         report['remaining_helper_replay'] = run([sys.executable, ROOT / 'tools/replay_remaining_helpers.py'], 'remaining-helper-replay-audit')
         report['specialized_util_version_bytecode'] = run([sys.executable, ROOT / 'tools/audit_specialized_util_version.py'], 'specialized-util-version-bytecode-audit')
         report['specialized_util_version_replay'] = run([sys.executable, ROOT / 'tools/test_specialized_util_version.py'], 'specialized-util-version-replay-audit')
+        report['menu_reset_bytecode'] = run([sys.executable, ROOT / 'tools/audit_menu_reset.py'], 'menu-reset-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')
@@ -523,7 +524,7 @@ def main(matrix=False, skip_build=False):
     if matrix:
         report['method_accounting'] = run([sys.executable, ROOT / 'tools/audit_method_accounting.py', '--skip-build'],
                                           'method-accounting-audit')
-    REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
 

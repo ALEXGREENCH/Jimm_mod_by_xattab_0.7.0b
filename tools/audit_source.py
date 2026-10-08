@@ -2570,6 +2570,13 @@ SYMBOLS.update({
     'cd.a Lf;': 'DrawControls/VirtualList.imageList LDrawControls/ImageList;',
     'cd.H I': 'DrawControls/VirtualList.forcedWidth I',
     'cd.I I': 'DrawControls/VirtualList.forcedHeight I',
+    # Actual addCommandEx cases bind these five identities on all platforms;
+    # audit_menu_reset.py retains full fields, switch witnesses and reset bodies.
+    'cd.a Ljavax/microedition/lcdui/Command;': 'DrawControls/VirtualList.leftMenu Ljavax/microedition/lcdui/Command;',
+    'cd.b Ljavax/microedition/lcdui/Command;': 'DrawControls/VirtualList.rightMenu Ljavax/microedition/lcdui/Command;',
+    'cd.c Ljavax/microedition/lcdui/Command;': 'DrawControls/VirtualList.defaultCommand Ljavax/microedition/lcdui/Command;',
+    'cd.a Ljava/util/Vector;': 'DrawControls/VirtualList.leftMenuItems Ljava/util/Vector;',
+    'cd.b Ljava/util/Vector;': 'DrawControls/VirtualList.rightMenuItems Ljava/util/Vector;',
 })
 
 

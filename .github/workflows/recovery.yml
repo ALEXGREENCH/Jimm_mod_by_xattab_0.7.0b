@@ -29,6 +29,9 @@ jobs:
             preservation/reports/source-tests.json
             preservation/reports/source-bytecode-comparison.json
             preservation/reports/source-method-accounting.json
+            preservation/reports/source-menu-reset-before.json
+            preservation/reports/source-menu-reset-bytecode.json
+            preservation/reports/source-menu-reset-delta.json
             preservation/reports/source-resources.json
             preservation/reports/source-key-routing.json
             preservation/reports/source-util-core.json
