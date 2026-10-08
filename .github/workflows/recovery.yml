@@ -112,6 +112,8 @@ jobs:
             preservation/reports/source-auxiliary-helper-replay.json
             preservation/reports/source-form-fit-before.json
             preservation/reports/source-form-fit-delta.json
+            preservation/reports/source-xstatus-platforms.json
+            preservation/reports/source-xstatus-helper-bytecode.json
   verify:
     runs-on: ubuntu-latest
     steps:

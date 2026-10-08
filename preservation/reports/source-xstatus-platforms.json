@@ -1,0 +1,944 @@
+{
+  "scope": "Existing complete XStatusCatalogProbe dataset executes on untouched May native/raw/optimized RU application classes of all three platforms. Raw packaging combines each unchanged raw class byte entry with its unchanged delivered resource/manifest entries, checked as an exact entry dictionary; no additional application fixture transformation, resource, clock, network callback or device predicate substitution is made. The MicroEmulator host, its normal external-API classloader rewrites and memory RMS are explicit; unchanged input bytes do not imply unchanged loaded JVM code. Actual ContactItem parser/getter executes, Siemens startup additionally needs a test-host com.siemens.mp.game.Light provider that records setLightOn/off calls without physical control; it is on the external host classpath only, never inserted in any application JAR, and its source/class hashes remain explicit. including the two XStatus helpers removed/inlined by modern optimization. All single-byte GUID mutations, null/reset/partial/multiple caps, first-match/compatibility GUID, mutated real GUID arrays/aliases/captions/image arrays and returned identities/raster hashes retain the original dataset. Actual language loading and icon drawing remain real. The existing MIDP2 RU output is preserved exactly. Three RU artifacts do not establish all five locales on three platforms, live server/device/scheduler behavior or whole-program equivalence.",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+          "source_raw_class_jar_sha256": null,
+          "source_resource_jar_sha256": null,
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": false,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "bj",
+            "guid": "bh",
+            "contact": "z",
+            "icon": "e",
+            "images": "f"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "z",
+              "complete_method": {
+                "name": "a",
+                "desc": "([B)V",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "182 z.a()Lbj;",
+                  "25 1",
+                  "182 bj.a([B)V",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 z.a()Lbj;",
+                  "182 bj.a([B)V"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "z",
+              "complete_method": {
+                "name": "a",
+                "desc": "()Lbj;",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "180 z.a Lbj;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 z.a Lbj;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "bj",
+              "complete_method": {
+                "name": "a",
+                "desc": "(I)Le;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 bj.a Lf;",
+                  "21 0",
+                  "182 f.a(I)Le;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 bj.a Lf;",
+                  "182 f.a(I)Le;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": null,
+          "application_methods_and_resource_bytes_not_substituted": true
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "b9d1a01d6fb86dad6b963930bcf599892b13bd1e3da61acb89b8c44a217164d3",
+          "source_raw_class_jar_sha256": "f89b2f927e72ce67ba70193f82cc2d4a53e14949b6813f0320897b71c8bb2440",
+          "source_resource_jar_sha256": "e3bcc3e3caa9a1390c96ff139ea4a533a55eba967da7b47e9cea39043b595100",
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": true,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "jimm/comm/XStatus",
+            "guid": "jimm/comm/GUID",
+            "contact": "jimm/ContactItem",
+            "icon": "DrawControls/Icon",
+            "images": "DrawControls/ImageList"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "setXStatus",
+                "desc": "([B)V",
+                "access": 33,
+                "code": [
+                  "25 0",
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "25 1",
+                  "182 jimm/comm/XStatus.setXStatus([B)V",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "182 jimm/comm/XStatus.setXStatus([B)V"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "getXStatus",
+                "desc": "()Ljimm/comm/XStatus;",
+                "access": 33,
+                "code": [
+                  "25 0",
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "jimm/comm/XStatus",
+              "complete_method": {
+                "name": "getStatusImage",
+                "desc": "(I)LDrawControls/Icon;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "21 0",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": null,
+          "application_methods_and_resource_bytes_not_substituted": true
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "e3bcc3e3caa9a1390c96ff139ea4a533a55eba967da7b47e9cea39043b595100",
+          "source_raw_class_jar_sha256": null,
+          "source_resource_jar_sha256": null,
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": false,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "jimm/comm/XStatus",
+            "guid": "jimm/comm/GUID",
+            "contact": "jimm/ContactItem",
+            "icon": "DrawControls/Icon",
+            "images": "DrawControls/ImageList"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "setXStatus",
+                "desc": "([B)V",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "25 1",
+                  "58 2",
+                  "89",
+                  "58 1",
+                  "2",
+                  "181 jimm/comm/XStatus.index I",
+                  "25 2",
+                  "198 35",
+                  "16 16",
+                  "188 8",
+                  "58 3",
+                  "3",
+                  "54 4",
+                  "167 27",
+                  "25 2",
+                  "21 4",
+                  "25 3",
+                  "3",
+                  "16 16",
+                  "184 java/lang/System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V",
+                  "25 1",
+                  "25 3",
+                  "184 jimm/comm/XStatus.getXStatus([B)I",
+                  "181 jimm/comm/XStatus.index I",
+                  "132 4 16",
+                  "21 4",
+                  "25 2",
+                  "190",
+                  "162 35",
+                  "25 1",
+                  "180 jimm/comm/XStatus.index I",
+                  "2",
+                  "159 16",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "181 jimm/comm/XStatus.index I",
+                  "184 java/lang/System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V",
+                  "184 jimm/comm/XStatus.getXStatus([B)I",
+                  "181 jimm/comm/XStatus.index I",
+                  "180 jimm/comm/XStatus.index I"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "getXStatus",
+                "desc": "()Ljimm/comm/XStatus;",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "jimm/comm/XStatus",
+              "complete_method": {
+                "name": "getStatusImage",
+                "desc": "(I)LDrawControls/Icon;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "21 0",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": null,
+          "application_methods_and_resource_bytes_not_substituted": true
+        }
+      ],
+      "different_observations": 0
+    },
+    {
+      "target": "MOTOROLA",
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+          "source_raw_class_jar_sha256": null,
+          "source_resource_jar_sha256": null,
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": false,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "bi",
+            "guid": "bg",
+            "contact": "z",
+            "icon": "e",
+            "images": "f"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "z",
+              "complete_method": {
+                "name": "a",
+                "desc": "([B)V",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "182 z.a()Lbi;",
+                  "25 1",
+                  "182 bi.a([B)V",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 z.a()Lbi;",
+                  "182 bi.a([B)V"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "z",
+              "complete_method": {
+                "name": "a",
+                "desc": "()Lbi;",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "180 z.a Lbi;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 z.a Lbi;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "bi",
+              "complete_method": {
+                "name": "a",
+                "desc": "(I)Le;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 bi.a Lf;",
+                  "21 0",
+                  "182 f.a(I)Le;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 bi.a Lf;",
+                  "182 f.a(I)Le;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": null,
+          "application_methods_and_resource_bytes_not_substituted": true
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "02f6e0ee191d89cc10643985b36ce0e5cfa6c04bfe2566ced82d5c86585ab6ac",
+          "source_raw_class_jar_sha256": "f60cd25eea0f129bde957574dcbf72dadefde13012a4adb0e1460c32cfc76db2",
+          "source_resource_jar_sha256": "4fed74c761fda7091bbc02870eb8470524fc107a2d0b08f0cfbb0bf08e14a1fa",
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": true,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "jimm/comm/XStatus",
+            "guid": "jimm/comm/GUID",
+            "contact": "jimm/ContactItem",
+            "icon": "DrawControls/Icon",
+            "images": "DrawControls/ImageList"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "setXStatus",
+                "desc": "([B)V",
+                "access": 33,
+                "code": [
+                  "25 0",
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "25 1",
+                  "182 jimm/comm/XStatus.setXStatus([B)V",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "182 jimm/comm/XStatus.setXStatus([B)V"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "getXStatus",
+                "desc": "()Ljimm/comm/XStatus;",
+                "access": 33,
+                "code": [
+                  "25 0",
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "jimm/comm/XStatus",
+              "complete_method": {
+                "name": "getStatusImage",
+                "desc": "(I)LDrawControls/Icon;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "21 0",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": null,
+          "application_methods_and_resource_bytes_not_substituted": true
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "4fed74c761fda7091bbc02870eb8470524fc107a2d0b08f0cfbb0bf08e14a1fa",
+          "source_raw_class_jar_sha256": null,
+          "source_resource_jar_sha256": null,
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": false,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "jimm/comm/XStatus",
+            "guid": "jimm/comm/GUID",
+            "contact": "jimm/ContactItem",
+            "icon": "DrawControls/Icon",
+            "images": "DrawControls/ImageList"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "setXStatus",
+                "desc": "([B)V",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "25 1",
+                  "58 2",
+                  "89",
+                  "58 1",
+                  "2",
+                  "181 jimm/comm/XStatus.index I",
+                  "25 2",
+                  "198 35",
+                  "16 16",
+                  "188 8",
+                  "58 3",
+                  "3",
+                  "54 4",
+                  "167 27",
+                  "25 2",
+                  "21 4",
+                  "25 3",
+                  "3",
+                  "16 16",
+                  "184 java/lang/System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V",
+                  "25 1",
+                  "25 3",
+                  "184 jimm/comm/XStatus.getXStatus([B)I",
+                  "181 jimm/comm/XStatus.index I",
+                  "132 4 16",
+                  "21 4",
+                  "25 2",
+                  "190",
+                  "162 35",
+                  "25 1",
+                  "180 jimm/comm/XStatus.index I",
+                  "2",
+                  "159 16",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "181 jimm/comm/XStatus.index I",
+                  "184 java/lang/System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V",
+                  "184 jimm/comm/XStatus.getXStatus([B)I",
+                  "181 jimm/comm/XStatus.index I",
+                  "180 jimm/comm/XStatus.index I"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "getXStatus",
+                "desc": "()Ljimm/comm/XStatus;",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "jimm/comm/XStatus",
+              "complete_method": {
+                "name": "getStatusImage",
+                "desc": "(I)LDrawControls/Icon;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "21 0",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": null,
+          "application_methods_and_resource_bytes_not_substituted": true
+        }
+      ],
+      "different_observations": 0
+    },
+    {
+      "target": "SIEMENS2",
+      "proofs": [
+        {
+          "mode": "reference",
+          "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+          "source_raw_class_jar_sha256": null,
+          "source_resource_jar_sha256": null,
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": false,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "bh",
+            "guid": "bf",
+            "contact": "y",
+            "icon": "e",
+            "images": "f",
+            "vendorLight": "com/siemens/mp/game/Light"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "y",
+              "complete_method": {
+                "name": "a",
+                "desc": "([B)V",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "182 y.a()Lbh;",
+                  "25 1",
+                  "182 bh.a([B)V",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 y.a()Lbh;",
+                  "182 bh.a([B)V"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "y",
+              "complete_method": {
+                "name": "a",
+                "desc": "()Lbh;",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "180 y.a Lbh;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 y.a Lbh;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "bh",
+              "complete_method": {
+                "name": "a",
+                "desc": "(I)Le;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 bh.a Lf;",
+                  "21 0",
+                  "182 f.a(I)Le;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 bh.a Lf;",
+                  "182 f.a(I)Le;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": {
+            "source_sha256": "1efc3fa4a5fb628f45e23d915035c9eb2b347902259b1a1887b9e7f8aee56402",
+            "class_sha256": "361fa6353bbfa285e69a6b39cebcfb5df5cbe81e96f5a9b73e0f06b91f392021",
+            "actual_on_off_calls": [
+              1,
+              0
+            ]
+          },
+          "application_methods_and_resource_bytes_not_substituted": true
+        },
+        {
+          "mode": "raw",
+          "input_sha256": "f1e0d2d4566188063e05c71d2cb6224598774e568a351b97914ada1c3695b168",
+          "source_raw_class_jar_sha256": "19cafa98be747957373cd05e67f95a7d874319bdc4731e2780e6f3861b3a52f3",
+          "source_resource_jar_sha256": "bada01c1539ab109230bf9eb61d1137d66664087ce3dc905705528842859c776",
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": true,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "jimm/comm/XStatus",
+            "guid": "jimm/comm/GUID",
+            "contact": "jimm/ContactItem",
+            "icon": "DrawControls/Icon",
+            "images": "DrawControls/ImageList",
+            "vendorLight": "com/siemens/mp/game/Light"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "setXStatus",
+                "desc": "([B)V",
+                "access": 33,
+                "code": [
+                  "25 0",
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "25 1",
+                  "182 jimm/comm/XStatus.setXStatus([B)V",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "182 jimm/comm/XStatus.setXStatus([B)V"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "getXStatus",
+                "desc": "()Ljimm/comm/XStatus;",
+                "access": 33,
+                "code": [
+                  "25 0",
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "jimm/comm/XStatus",
+              "complete_method": {
+                "name": "getStatusImage",
+                "desc": "(I)LDrawControls/Icon;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "21 0",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": {
+            "source_sha256": "1efc3fa4a5fb628f45e23d915035c9eb2b347902259b1a1887b9e7f8aee56402",
+            "class_sha256": "361fa6353bbfa285e69a6b39cebcfb5df5cbe81e96f5a9b73e0f06b91f392021",
+            "actual_on_off_calls": [
+              1,
+              0
+            ]
+          },
+          "application_methods_and_resource_bytes_not_substituted": true
+        },
+        {
+          "mode": "optimized",
+          "input_sha256": "bada01c1539ab109230bf9eb61d1137d66664087ce3dc905705528842859c776",
+          "source_raw_class_jar_sha256": null,
+          "source_resource_jar_sha256": null,
+          "raw_class_and_delivered_resource_bytes_preserved_exactly": false,
+          "output_sha256": "6be88be824f9961715f9947d984e686a0ade3ef909cf06264e82ea6983321896",
+          "guid_fixture_sha256": "17bea3f84840fa4414d3d5a61a53e7f91a05d15bce2a0287ae377469e35a0191",
+          "observations": 156308,
+          "parser_calls": 156047,
+          "configuration": {
+            "status": "jimm/comm/XStatus",
+            "guid": "jimm/comm/GUID",
+            "contact": "jimm/ContactItem",
+            "icon": "DrawControls/Icon",
+            "images": "DrawControls/ImageList",
+            "vendorLight": "com/siemens/mp/game/Light"
+          },
+          "whole_actual_parser_and_getters": [
+            {
+              "role": "contact_capability_parser",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "setXStatus",
+                "desc": "([B)V",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "25 1",
+                  "58 2",
+                  "89",
+                  "58 1",
+                  "2",
+                  "181 jimm/comm/XStatus.index I",
+                  "25 2",
+                  "198 35",
+                  "16 16",
+                  "188 8",
+                  "58 3",
+                  "3",
+                  "54 4",
+                  "167 27",
+                  "25 2",
+                  "21 4",
+                  "25 3",
+                  "3",
+                  "16 16",
+                  "184 java/lang/System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V",
+                  "25 1",
+                  "25 3",
+                  "184 jimm/comm/XStatus.getXStatus([B)I",
+                  "181 jimm/comm/XStatus.index I",
+                  "132 4 16",
+                  "21 4",
+                  "25 2",
+                  "190",
+                  "162 35",
+                  "25 1",
+                  "180 jimm/comm/XStatus.index I",
+                  "2",
+                  "159 16",
+                  "177"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "182 jimm/ContactItem.getXStatus()Ljimm/comm/XStatus;",
+                  "181 jimm/comm/XStatus.index I",
+                  "184 java/lang/System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V",
+                  "184 jimm/comm/XStatus.getXStatus([B)I",
+                  "181 jimm/comm/XStatus.index I",
+                  "180 jimm/comm/XStatus.index I"
+                ]
+              }
+            },
+            {
+              "role": "contact_status_getter",
+              "owner": "jimm/ContactItem",
+              "complete_method": {
+                "name": "getXStatus",
+                "desc": "()Ljimm/comm/XStatus;",
+                "access": 49,
+                "code": [
+                  "25 0",
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "180 jimm/ContactItem.xstatus Ljimm/comm/XStatus;"
+                ]
+              }
+            },
+            {
+              "role": "static_image_getter",
+              "owner": "jimm/comm/XStatus",
+              "complete_method": {
+                "name": "getStatusImage",
+                "desc": "(I)LDrawControls/Icon;",
+                "access": 9,
+                "code": [
+                  "21 0",
+                  "155 6",
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "21 0",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;",
+                  "176",
+                  "1",
+                  "176"
+                ],
+                "handlers": [],
+                "strings": [],
+                "refs": [
+                  "178 jimm/comm/XStatus.imageList LDrawControls/ImageList;",
+                  "182 DrawControls/ImageList.elementAt(I)LDrawControls/Icon;"
+                ]
+              }
+            }
+          ],
+          "external_siemens_light_provider": {
+            "source_sha256": "1efc3fa4a5fb628f45e23d915035c9eb2b347902259b1a1887b9e7f8aee56402",
+            "class_sha256": "361fa6353bbfa285e69a6b39cebcfb5df5cbe81e96f5a9b73e0f06b91f392021",
+            "actual_on_off_calls": [
+              1,
+              0
+            ]
+          },
+          "application_methods_and_resource_bytes_not_substituted": true
+        }
+      ],
+      "different_observations": 0
+    }
+  ]
+}

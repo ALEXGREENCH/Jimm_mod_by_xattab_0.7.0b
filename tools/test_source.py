@@ -496,6 +496,8 @@ def main(matrix=False, skip_build=False):
         report['packet_parsers_bytecode'] = run([sys.executable, ROOT / 'tools/audit_packet_parsers.py'], 'packet-parsers-bytecode-audit')
         report['auxiliary_helpers_bytecode'] = run([sys.executable, ROOT / 'tools/audit_auxiliary_helpers.py'], 'auxiliary-helpers-bytecode-audit')
         report['auxiliary_helpers_replay'] = run([sys.executable, ROOT / 'tools/replay_auxiliary_helpers.py'], 'auxiliary-helpers-replay-audit')
+        report['xstatus_platforms'] = run([sys.executable, ROOT / 'tools/test_xstatus_platforms.py'], 'xstatus-platforms-audit')
+        report['xstatus_helpers_bytecode'] = run([sys.executable, ROOT / 'tools/audit_xstatus_helpers.py'], 'xstatus-helpers-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')

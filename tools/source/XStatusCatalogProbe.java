@@ -8,7 +8,7 @@ import org.microemu.app.*;
 import org.microemu.app.util.*;
 import org.microemu.device.j2se.*;
 
-/** Untouched optimized XStatus/GUID methods, real native tables, language loader and icons. */
+/** Actual XStatus/GUID methods, native tables, language loader and icons. */
 public class XStatusCatalogProbe {
     static boolean ref;
     static int observations, parses;
@@ -18,6 +18,8 @@ public class XStatusCatalogProbe {
     static Method parse, set, getIndex, getGUID, getImage, getName, count, images, draw;
     static Object value, list, contactValue;
     static byte[][] fixtures;
+    static Properties configuration=new Properties();
+    static String type(String key,String original,String source) { return ref?configuration.getProperty(key,original):source; }
     static String n(String a, String b) { return ref ? a : b; }
     static Field f(Class<?> c, String a, String b, Class<?> type) throws Exception {
         for (Field f : c.getDeclaredFields()) if (f.getName().equals(n(a,b)) && f.getType()==type) { f.setAccessible(true); return f; }
@@ -132,15 +134,16 @@ public class XStatusCatalogProbe {
         imageTable.set(list,originalIcons);
     }
     static void run(String[] args) throws Exception {
-        ref=args[1].equals("reference");Headless h=new Headless();Field ef=Headless.class.getDeclaredField("emulator");ef.setAccessible(true);Common emulator=(Common)ef.get(h);
-        ArrayList<String> params=new ArrayList<String>();Collections.addAll(params,"--rms","memory",args[0]);emulator.initParams(params,new DeviceEntry("Default",null,"org/microemu/device/default/device.xml",true,false),J2SEDevice.class);emulator.initMIDlet(true);
-        ClassLoader loader=MIDletBridge.getCurrentMIDlet().getClass().getClassLoader();status=Class.forName(n("bj","jimm.comm.XStatus"),true,loader);guid=Class.forName(n("bh","jimm.comm.GUID"),true,loader);icon=Class.forName(n("e","DrawControls.Icon"),true,loader);imageList=Class.forName(n("f","DrawControls.ImageList"),true,loader);
+        ref=args[1].equals("reference");if(args.length>4)try(InputStream in=new FileInputStream(args[4])){configuration.load(in);}Headless h=new Headless();Field ef=Headless.class.getDeclaredField("emulator");ef.setAccessible(true);Common emulator=(Common)ef.get(h);
+        ArrayList<String> params=new ArrayList<String>();Collections.addAll(params,"--rms","memory",args[0]);if(configuration.containsKey("vendorLight"))Collections.addAll(params,"--appclass",configuration.getProperty("vendorLight"));emulator.initParams(params,new DeviceEntry("Default",null,"org/microemu/device/default/device.xml",true,false),J2SEDevice.class);emulator.initMIDlet(true);
+        ClassLoader loader=MIDletBridge.getCurrentMIDlet().getClass().getClassLoader();status=Class.forName(type("status","bj","jimm.comm.XStatus"),true,loader);guid=Class.forName(type("guid","bh","jimm.comm.GUID"),true,loader);icon=Class.forName(type("icon","e","DrawControls.Icon"),true,loader);imageList=Class.forName(type("images","f","DrawControls.ImageList"),true,loader);
         index=f(status,"a","index",int.class);bytes=f(guid,"a","guid",byte[].class);guidTable=f(status,"a","xguids",Array.newInstance(guid,0).getClass());names=f(status,"a","xstatus",String[].class);
-        Class<?> contact=Class.forName(n("z","jimm.ContactItem"),true,loader);parse=m(contact,"a","setXStatus",void.class,byte[].class);set=m(status,"a","setStatusIndex",void.class,int.class);getIndex=m(status,"b","getStatusIndex",int.class);getGUID=m(status,"a","getStatusGUID",guid,int.class);getImage=m(status,"a","getStatusImage",icon,int.class);getName=m(status,"a","getStatusAsString",String.class,int.class);count=m(status,"a","getXStatusCount",int.class);images=m(status,"a","getXStatusImageList",imageList);draw=m(icon,"b","drawImage",void.class,Graphics.class,int.class,int.class);
+        Class<?> contact=Class.forName(type("contact","z","jimm.ContactItem"),true,loader);parse=m(contact,"a","setXStatus",void.class,byte[].class);set=m(status,"a","setStatusIndex",void.class,int.class);getIndex=m(status,"b","getStatusIndex",int.class);getGUID=m(status,"a","getStatusGUID",guid,int.class);getImage=m(status,"a","getStatusImage",icon,int.class);getName=m(status,"a","getStatusAsString",String.class,int.class);count=m(status,"a","getXStatusCount",int.class);images=m(status,"a","getXStatusImageList",imageList);draw=m(icon,"b","drawImage",void.class,Graphics.class,int.class,int.class);
         list=call(images,null);imageTable=f(imageList,"a","icons",Array.newInstance(icon,0).getClass());contactValue=contact.getDeclaredConstructor().newInstance();value=m(contact,"a","getXStatus",status).invoke(contactValue);
         if(ref) {Object[] table=(Object[])guidTable.get(null);try(DataOutputStream file=new DataOutputStream(new FileOutputStream(args[2]))) {file.writeInt(table.length);for(Object obj:table){byte[] b=(byte[])bytes.get(obj);file.writeInt(b.length);file.write(b);}}}
         try(DataInputStream file=new DataInputStream(new FileInputStream(args[2]))) { fixtures=new byte[file.readInt()][];for(int i=0;i<fixtures.length;i++) { fixtures[i]=new byte[file.readInt()];file.readFully(fixtures[i]); } }
         out=new PrintWriter(new OutputStreamWriter(new FileOutputStream(args[3]),"UTF-8"));nativeData();parsing();mutations();row("parse-calls:"+parses);out.close();System.out.println("PASS XStatus catalog: "+observations+" observations, "+parses+" parser calls");
+        if(configuration.containsKey("vendorLight")){Class<?> provider=Class.forName(configuration.getProperty("vendorLight"),true,loader);System.out.println("VENDOR-LIGHT:"+provider.getField("onCalls").getInt(null)+":"+provider.getField("offCalls").getInt(null));}
     }
     public static void main(String[] args) {try {run(args);System.exit(0);}catch(Throwable e){e.printStackTrace();System.exit(1);}}
 }
