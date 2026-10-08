@@ -1756,8 +1756,6 @@ public abstract class VirtualList
 	public static void assignSoftKeys()
 	{
 		setCaptionOffsets();
-		xStatusOnRight = Options.getBoolean(Options.OPTION_XSTATUS_RIGHT);
-		fontView = Options.getInt(Options.OPTION_FONT_VIEW);
 		if (Options.getBoolean(Options.OPTION_SWAP_SOFT_KEY))
 		{
 			MENU_LEFT_BAR  = MENU_TYPE_RIGHT_BAR;
@@ -1772,6 +1770,8 @@ public abstract class VirtualList
 			MENU_LEFT      = MENU_TYPE_LEFT;
 			MENU_RIGHT     = MENU_TYPE_RIGHT;
 		}
+		xStatusOnRight = Options.getBoolean(Options.OPTION_XSTATUS_RIGHT);
+		fontView = Options.getInt(Options.OPTION_FONT_VIEW);
 	
 	}
 

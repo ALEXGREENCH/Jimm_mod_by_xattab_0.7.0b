@@ -131,6 +131,10 @@ jobs:
             preservation/reports/source-minimize-bytecode.json
             preservation/reports/source-minimize-replay.json
             preservation/reports/source-minimize-delta.json
+            preservation/reports/source-softkeys-before.json
+            preservation/reports/source-softkeys-bytecode.json
+            preservation/reports/source-softkeys-replay.json
+            preservation/reports/source-softkeys-delta.json
   verify:
     runs-on: ubuntu-latest
     steps:

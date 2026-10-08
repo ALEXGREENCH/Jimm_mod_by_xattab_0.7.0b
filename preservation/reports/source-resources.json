@@ -5,7 +5,7 @@
       "target": "MIDP2",
       "language": "RU",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
+      "source_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -26,7 +26,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MIDP2-RU.jar",
-        "jad_size": "322188",
+        "jad_size": "322195",
         "differences": []
       },
       "resource_files_matched": 27,
@@ -5260,7 +5260,7 @@
       "target": "MIDP2",
       "language": "UA",
       "reference_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-      "source_sha256": "9fcdec65571c8d4bdae729367783635bb5011f813541522151eb12f2019d3341",
+      "source_sha256": "6a40b923fcf41cd9ba47c84d29bbb28147d5a34345be654c02644ed846992574",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -5281,7 +5281,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MIDP2-UA.jar",
-        "jad_size": "322221",
+        "jad_size": "322228",
         "differences": []
       },
       "resource_files_matched": 27,
@@ -10505,7 +10505,7 @@
       "target": "MIDP2",
       "language": "RO",
       "reference_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-      "source_sha256": "52666cd1e2f9fdbebcadfe82319eb2728013cae3ae267ff4db6b685097701bec",
+      "source_sha256": "163e56aa0cb3dee5f9c9b4d4a96780983126547ea4e54651f392c05d5ae12b8d",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -10526,7 +10526,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MIDP2-RO.jar",
-        "jad_size": "321214",
+        "jad_size": "321221",
         "differences": []
       },
       "resource_files_matched": 27,
@@ -15760,7 +15760,7 @@
       "target": "MIDP2",
       "language": "EN",
       "reference_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-      "source_sha256": "227014f9567dd22850823b5b556d2e444fe1f7e6473e76227203c39f13339d91",
+      "source_sha256": "abab335dbe6aff34339f896477cbb306bbcaca7c45005e35751974e5d30ac0fc",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -15781,7 +15781,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MIDP2-EN.jar",
-        "jad_size": "320207",
+        "jad_size": "320214",
         "differences": []
       },
       "resource_files_matched": 27,
@@ -21015,7 +21015,7 @@
       "target": "MIDP2",
       "language": "CZ",
       "reference_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-      "source_sha256": "1f4f4aa13198a73ef5dd39b5bdc4d6890c1ab105518fff7cda45d107a50bb5e1",
+      "source_sha256": "7be0a38ddbf8dc985c4f00f3ac862bf2f325784b7f20cba3970a866e9d6bdc9d",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -21036,7 +21036,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MIDP2-CZ.jar",
-        "jad_size": "320918",
+        "jad_size": "320925",
         "differences": []
       },
       "resource_files_matched": 27,
@@ -26297,7 +26297,7 @@
       "target": "MOTOROLA",
       "language": "RU",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_sha256": "84190c8543c8e6313681b98aecb0481a86f0efc99aa2c1e3c4544cddad7b4c58",
+      "source_sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -26318,7 +26318,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MOTOROLA-RU.jar",
-        "jad_size": "306626",
+        "jad_size": "306628",
         "differences": []
       },
       "resource_files_matched": 24,
@@ -31418,7 +31418,7 @@
       "target": "MOTOROLA",
       "language": "UA",
       "reference_sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
-      "source_sha256": "e2435ed06c8a57a21f9a9ba6d50a138bbeccf49242aea132556d687130f85bc7",
+      "source_sha256": "1efbeaa59402badbebda7e547a7595eb0d66c76572654dfddb8b65b2cc409912",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -31439,7 +31439,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MOTOROLA-UA.jar",
-        "jad_size": "306637",
+        "jad_size": "306639",
         "differences": []
       },
       "resource_files_matched": 24,
@@ -36531,7 +36531,7 @@
       "target": "MOTOROLA",
       "language": "RO",
       "reference_sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
-      "source_sha256": "a501efe1e05d2469e9c8e7d2b3a2a9e26924c78e5906c232e65d3664baad403d",
+      "source_sha256": "6d53801918c00e3a8fc7e9af80795a77f1ff023d2889d0ab4609c4eaa9901de9",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -36552,7 +36552,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MOTOROLA-RO.jar",
-        "jad_size": "305637",
+        "jad_size": "305639",
         "differences": []
       },
       "resource_files_matched": 24,
@@ -41652,7 +41652,7 @@
       "target": "MOTOROLA",
       "language": "EN",
       "reference_sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
-      "source_sha256": "aea3e74068754b0797d4f5b4e64c2f1b99fb09051b105ee29c39b5eb2b6dc863",
+      "source_sha256": "f0974a21987b3b023ad5da06755515c8cfa087d7f257e3cf9d39af5850e597b1",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -41673,7 +41673,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MOTOROLA-EN.jar",
-        "jad_size": "304655",
+        "jad_size": "304657",
         "differences": []
       },
       "resource_files_matched": 24,
@@ -46775,7 +46775,7 @@
       "target": "MOTOROLA",
       "language": "CZ",
       "reference_sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
-      "source_sha256": "efd090000406a0957affc7b09da0901e04e1a4fd04426b224e36f824dd40cc75",
+      "source_sha256": "96fc16195bae1df323856108d786b4245ee401ee528af68709df27212ebf7d96",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -46796,7 +46796,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-MOTOROLA-CZ.jar",
-        "jad_size": "305369",
+        "jad_size": "305371",
         "differences": []
       },
       "resource_files_matched": 24,
@@ -51923,7 +51923,7 @@
       "target": "SIEMENS2",
       "language": "RU",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_sha256": "10717a141b6b93c697886695eb70b07049fe5db8c6e230a216c02700dc582e0f",
+      "source_sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -51944,7 +51944,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-SIEMENS2-RU.jar",
-        "jad_size": "309636",
+        "jad_size": "309640",
         "differences": []
       },
       "resource_files_matched": 25,
@@ -57150,7 +57150,7 @@
       "target": "SIEMENS2",
       "language": "UA",
       "reference_sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
-      "source_sha256": "dd9b6ff89388bfbd9bdce07b0aed33aaefdae4a5c2eb4f57692e554c599152ea",
+      "source_sha256": "077980efd16013a8a0d8904e6d3091c876ce9ee5222d7066d069724778794f75",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -57171,7 +57171,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-SIEMENS2-UA.jar",
-        "jad_size": "309673",
+        "jad_size": "309677",
         "differences": []
       },
       "resource_files_matched": 25,
@@ -62367,7 +62367,7 @@
       "target": "SIEMENS2",
       "language": "RO",
       "reference_sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
-      "source_sha256": "b40b0182d7cf5d80c6733bd4bd2ef52c766746a0a63c112308973330a540e0d6",
+      "source_sha256": "8afd6efbabd7027fe004ddec9681df13bd7f97bfba31d80cda822cdec4d8b199",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -62388,7 +62388,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-SIEMENS2-RO.jar",
-        "jad_size": "308666",
+        "jad_size": "308670",
         "differences": []
       },
       "resource_files_matched": 25,
@@ -67594,7 +67594,7 @@
       "target": "SIEMENS2",
       "language": "EN",
       "reference_sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
-      "source_sha256": "98b08ab54d288dda742beda07737046abb2f11700010925a5ea44a71fd18aae1",
+      "source_sha256": "11e2db4c85fe2f1179b69c109e2b290427514b331f75811220bea498a5dc88ad",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -67615,7 +67615,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-SIEMENS2-EN.jar",
-        "jad_size": "307681",
+        "jad_size": "307685",
         "differences": []
       },
       "resource_files_matched": 25,
@@ -72821,7 +72821,7 @@
       "target": "SIEMENS2",
       "language": "CZ",
       "reference_sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
-      "source_sha256": "1beb2437192da3b5704ff4ca708f223239a2837d1fb9f7535c652e68907efe6e",
+      "source_sha256": "ea50af6c09420d422228d85446f3252a94df32db3b3cb90b36f6f6ffef7a7898",
       "metadata": {
         "historical_attributes_checked": 15,
         "attributes": {
@@ -72842,7 +72842,7 @@
           "Nokia-MIDlet-No-Exit": "true"
         },
         "jad_url": "Jimm-SIEMENS2-CZ.jar",
-        "jad_size": "308401",
+        "jad_size": "308405",
         "differences": []
       },
       "resource_files_matched": 25,

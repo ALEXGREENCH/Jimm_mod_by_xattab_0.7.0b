@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
+  "source_jar_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
   "pure_logic": "PASS: 75837 May-reference differential checks (client versions, outgoing statuses, options streams)",
   "packets": "PASS packets: 45331 observations, 15642 successful parses",
   "convertor": "PASS converter: 204659 observations, 5234 conversions, 364 parsed tables",
@@ -225,77 +225,77 @@
     {
       "target": "MIDP2",
       "language": "RU",
-      "sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27"
+      "sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f"
     },
     {
       "target": "MIDP2",
       "language": "UA",
-      "sha256": "9fcdec65571c8d4bdae729367783635bb5011f813541522151eb12f2019d3341"
+      "sha256": "6a40b923fcf41cd9ba47c84d29bbb28147d5a34345be654c02644ed846992574"
     },
     {
       "target": "MIDP2",
       "language": "RO",
-      "sha256": "52666cd1e2f9fdbebcadfe82319eb2728013cae3ae267ff4db6b685097701bec"
+      "sha256": "163e56aa0cb3dee5f9c9b4d4a96780983126547ea4e54651f392c05d5ae12b8d"
     },
     {
       "target": "MIDP2",
       "language": "EN",
-      "sha256": "227014f9567dd22850823b5b556d2e444fe1f7e6473e76227203c39f13339d91"
+      "sha256": "abab335dbe6aff34339f896477cbb306bbcaca7c45005e35751974e5d30ac0fc"
     },
     {
       "target": "MIDP2",
       "language": "CZ",
-      "sha256": "1f4f4aa13198a73ef5dd39b5bdc4d6890c1ab105518fff7cda45d107a50bb5e1"
+      "sha256": "7be0a38ddbf8dc985c4f00f3ac862bf2f325784b7f20cba3970a866e9d6bdc9d"
     },
     {
       "target": "MOTOROLA",
       "language": "RU",
-      "sha256": "84190c8543c8e6313681b98aecb0481a86f0efc99aa2c1e3c4544cddad7b4c58"
+      "sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023"
     },
     {
       "target": "MOTOROLA",
       "language": "UA",
-      "sha256": "e2435ed06c8a57a21f9a9ba6d50a138bbeccf49242aea132556d687130f85bc7"
+      "sha256": "1efbeaa59402badbebda7e547a7595eb0d66c76572654dfddb8b65b2cc409912"
     },
     {
       "target": "MOTOROLA",
       "language": "RO",
-      "sha256": "a501efe1e05d2469e9c8e7d2b3a2a9e26924c78e5906c232e65d3664baad403d"
+      "sha256": "6d53801918c00e3a8fc7e9af80795a77f1ff023d2889d0ab4609c4eaa9901de9"
     },
     {
       "target": "MOTOROLA",
       "language": "EN",
-      "sha256": "aea3e74068754b0797d4f5b4e64c2f1b99fb09051b105ee29c39b5eb2b6dc863"
+      "sha256": "f0974a21987b3b023ad5da06755515c8cfa087d7f257e3cf9d39af5850e597b1"
     },
     {
       "target": "MOTOROLA",
       "language": "CZ",
-      "sha256": "efd090000406a0957affc7b09da0901e04e1a4fd04426b224e36f824dd40cc75"
+      "sha256": "96fc16195bae1df323856108d786b4245ee401ee528af68709df27212ebf7d96"
     },
     {
       "target": "SIEMENS2",
       "language": "RU",
-      "sha256": "10717a141b6b93c697886695eb70b07049fe5db8c6e230a216c02700dc582e0f"
+      "sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672"
     },
     {
       "target": "SIEMENS2",
       "language": "UA",
-      "sha256": "dd9b6ff89388bfbd9bdce07b0aed33aaefdae4a5c2eb4f57692e554c599152ea"
+      "sha256": "077980efd16013a8a0d8904e6d3091c876ce9ee5222d7066d069724778794f75"
     },
     {
       "target": "SIEMENS2",
       "language": "RO",
-      "sha256": "b40b0182d7cf5d80c6733bd4bd2ef52c766746a0a63c112308973330a540e0d6"
+      "sha256": "8afd6efbabd7027fe004ddec9681df13bd7f97bfba31d80cda822cdec4d8b199"
     },
     {
       "target": "SIEMENS2",
       "language": "EN",
-      "sha256": "98b08ab54d288dda742beda07737046abb2f11700010925a5ea44a71fd18aae1"
+      "sha256": "11e2db4c85fe2f1179b69c109e2b290427514b331f75811220bea498a5dc88ad"
     },
     {
       "target": "SIEMENS2",
       "language": "CZ",
-      "sha256": "1beb2437192da3b5704ff4ca708f223239a2837d1fb9f7535c652e68907efe6e"
+      "sha256": "ea50af6c09420d422228d85446f3252a94df32db3b3cb90b36f6f6ffef7a7898"
     }
   ],
   "minimal_modules": [
@@ -356,6 +356,8 @@
   "util_abi_replay": "PASS Util ABI replay: all nine artifacts agree on complete stream/date outputs; unchanged stream bodies and exactly two date captures",
   "minimize_bytecode": "PASS minimize bytecode: all five MIDP2 complete 19-instruction bodies/handlers; original platform boundary retained in ten other builds",
   "minimize_replay": "PASS minimize current: complete fixture bindings; all 6144 native/raw/optimized observations match",
+  "softkeys_bytecode": "PASS soft-key bytecode: all three whole May 41/27-instruction bodies match after explicit caption/device helper expansion and raw dead-field removal",
+  "softkeys_replay": "PASS soft keys current: whole subjects and real getters; all 24624 native/raw/optimized observations match",
   "menu_reset_bytecode": "PASS menu reset: complete native/raw/optimized instruction and handler equality on all three May RU platforms; five fields bound through actual menu-type cases",
   "socket_bytecode": "PASS socket close: all 3 platforms match 28 normalized instructions and all exception handlers",
   "phone_book_bytecode": "PASS PhoneBook: 8 optimized signatures in MIDP2/Siemens2, 15 platform/language presence checks",

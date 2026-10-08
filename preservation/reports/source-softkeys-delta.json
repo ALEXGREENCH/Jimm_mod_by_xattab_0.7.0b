@@ -1,0 +1,1876 @@
+{
+  "scope": "Genuine c8bddc0 pre-edit source/raw/delivered/whole runtime snapshots versus the full current 15+3 matrix. Only two existing assignments in VirtualList.assignSoftKeys move after the menu branches; every other src byte is preserved. Only assignSoftKeys changes in each complete raw VirtualList inventory and only VirtualList.class changes in all 15 delivered JARs. Every other raw class/method/metadata and every delivered class/resource/manifest entry is byte-identical. All nine fixtures retain every original application/resource byte; only manifest and minimal host MIDlet are added. The actual whole methods and actual Options getters produce 672/168/168 differing observations per source version before, zero after, with exactly those source rows changed and all native output bytes preserved. No arbitrary scripted predicate/getter or whole-program equivalence claim. Full 15 standard + 3 minimal source matrix and all eight additional CI checks pass; main 1129/675 preserves every previous exact body.",
+  "baseline_commit": "c8bddc05d4f27570c12581b538516d6dc5d877bd",
+  "preserved_files": [
+    {
+      "path": "src/DrawControls/VirtualList.java",
+      "sha256": "754663044e9bf79f09898ebe6855413632610d5bcba84d68feebdfc56951bb11"
+    },
+    {
+      "path": "preservation/reports/source-bytecode-comparison.json",
+      "sha256": "bb02fbb80e3b8ac58a12356663c53e417ddf5f12bef1d8bb75ff0589f84d37f7"
+    },
+    {
+      "path": "preservation/reports/source-method-accounting.json",
+      "sha256": "194b80eb1d0b54b7ebcb5ae72113c00e562ce944432d3b66d13f3edcc8299eff"
+    },
+    {
+      "path": "preservation/reports/source-tests.json",
+      "sha256": "61c02322bb4a276ef37f15d0bba772ccaad464055b253682348a05bd351565b9"
+    },
+    {
+      "path": "preservation/reports/source-softkeys-before.json",
+      "sha256": "158b3375e21bbb0197854339ff45a9245fe53d1ab72ddc3ba994d151db10d0c8"
+    },
+    {
+      "path": "build/source/MIDP2-RU/classes.jar",
+      "sha256": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6"
+    },
+    {
+      "path": "build/source/MIDP2-RU/preverified.jar",
+      "sha256": "a2a76082fb010b165dc1795ddc7eac094c15acb474c460c76dadee2ed55c84ff"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-RU.jar",
+      "sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-UA.jar",
+      "sha256": "9fcdec65571c8d4bdae729367783635bb5011f813541522151eb12f2019d3341"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-RO.jar",
+      "sha256": "52666cd1e2f9fdbebcadfe82319eb2728013cae3ae267ff4db6b685097701bec"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-EN.jar",
+      "sha256": "227014f9567dd22850823b5b556d2e444fe1f7e6473e76227203c39f13339d91"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-CZ.jar",
+      "sha256": "1f4f4aa13198a73ef5dd39b5bdc4d6890c1ab105518fff7cda45d107a50bb5e1"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-reference.jar",
+      "sha256": "416a52145f031c0d721429243453e4c1393930f6df4fa2a3c0d6d2ee079af5db"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-reference.txt",
+      "sha256": "4bb93546001d5c6267e4af0565631a05be44c506ee8c40a2a37c784abe83625d"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-reference.properties",
+      "sha256": "4815f0b16da3165f6109b9c4289a1fbda5bb0eda2002ffc45b68f910eacc78ed"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-raw.jar",
+      "sha256": "b8c9c39894432d4fbdf04ddf71ef49bb7f1618b0ada018a2f0984b90740d87ad"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-raw.txt",
+      "sha256": "8527ef67aaf428d79682a822d654e4248944b9545a5ed62e3c321e19831a72da"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-raw.properties",
+      "sha256": "be0d06db9adf4b1c08c4eaac4c674312d02a8c6d9646fca023eedf16651eba82"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-optimized.jar",
+      "sha256": "99dc0e3345a7d45429d2dfe8b1e7663a00d149e03cf3ea94817d9eccf3023b17"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-optimized.txt",
+      "sha256": "8527ef67aaf428d79682a822d654e4248944b9545a5ed62e3c321e19831a72da"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MIDP2-optimized.properties",
+      "sha256": "be0d06db9adf4b1c08c4eaac4c674312d02a8c6d9646fca023eedf16651eba82"
+    },
+    {
+      "path": "build/source/MOTOROLA-RU/classes.jar",
+      "sha256": "7ad9fd6b4948dc6778b210146812e4073def0f01b92ece0f1c35570a7f1e26a4"
+    },
+    {
+      "path": "build/source/MOTOROLA-RU/preverified.jar",
+      "sha256": "76917f8325fad5433bbf0e12cebadeb7fb3286c4989c20c57a4622b97cae0c8c"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-RU.jar",
+      "sha256": "84190c8543c8e6313681b98aecb0481a86f0efc99aa2c1e3c4544cddad7b4c58"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-UA.jar",
+      "sha256": "e2435ed06c8a57a21f9a9ba6d50a138bbeccf49242aea132556d687130f85bc7"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-RO.jar",
+      "sha256": "a501efe1e05d2469e9c8e7d2b3a2a9e26924c78e5906c232e65d3664baad403d"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-EN.jar",
+      "sha256": "aea3e74068754b0797d4f5b4e64c2f1b99fb09051b105ee29c39b5eb2b6dc863"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-CZ.jar",
+      "sha256": "efd090000406a0957affc7b09da0901e04e1a4fd04426b224e36f824dd40cc75"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-reference.jar",
+      "sha256": "02859af8fb019c82e10a339f926f3f442142ae0a9edaf01794103a20f32b1ac0"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-reference.txt",
+      "sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-reference.properties",
+      "sha256": "53940218987b0dca2d828a4ca6a90a3ebe12885f7abce3994ff30058b3832bf2"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-raw.jar",
+      "sha256": "6c25fd8bfd904b0f0d0650e96409041f544d7813c449d7ecda89653068db3f02"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-raw.txt",
+      "sha256": "b5548e8407a2f4d24a28181ad0698b8e7d19ac420cd54680b037211a181a966b"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-raw.properties",
+      "sha256": "5af46e37e65e02526cb0670cf93742ae2fd25344ac3c15d29038146b55d8d932"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-optimized.jar",
+      "sha256": "25e49684d2953f8201a1b4477388fb5c1ba4f3cc348482713073af463a8f22c0"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-optimized.txt",
+      "sha256": "b5548e8407a2f4d24a28181ad0698b8e7d19ac420cd54680b037211a181a966b"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-MOTOROLA-optimized.properties",
+      "sha256": "5af46e37e65e02526cb0670cf93742ae2fd25344ac3c15d29038146b55d8d932"
+    },
+    {
+      "path": "build/source/SIEMENS2-RU/classes.jar",
+      "sha256": "bd5048d973bb5e2ee3acd0da70be760adb629081c41aedb145dbb59032b3e49a"
+    },
+    {
+      "path": "build/source/SIEMENS2-RU/preverified.jar",
+      "sha256": "54efa0403249ac604176fc6fdfa46dfe5c036d1d013c84e248f1f8c2c93b6cd7"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-RU.jar",
+      "sha256": "10717a141b6b93c697886695eb70b07049fe5db8c6e230a216c02700dc582e0f"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-UA.jar",
+      "sha256": "dd9b6ff89388bfbd9bdce07b0aed33aaefdae4a5c2eb4f57692e554c599152ea"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-RO.jar",
+      "sha256": "b40b0182d7cf5d80c6733bd4bd2ef52c766746a0a63c112308973330a540e0d6"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-EN.jar",
+      "sha256": "98b08ab54d288dda742beda07737046abb2f11700010925a5ea44a71fd18aae1"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-CZ.jar",
+      "sha256": "1beb2437192da3b5704ff4ca708f223239a2837d1fb9f7535c652e68907efe6e"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-reference.jar",
+      "sha256": "2830cef30161e212bebd4fecf0c1f9a71bc1898ba11b372bd8860641ce62179e"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-reference.txt",
+      "sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-reference.properties",
+      "sha256": "2fad28866a6b2bcf9094878f586d4e22b5046addee67ed4cfb5ff75a38eb57ed"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-raw.jar",
+      "sha256": "4b076fce01abfdcafebeff64a679a397c76e137c2ef67bd2d67b26a318bd8eae"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-raw.txt",
+      "sha256": "b5548e8407a2f4d24a28181ad0698b8e7d19ac420cd54680b037211a181a966b"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-raw.properties",
+      "sha256": "5af46e37e65e02526cb0670cf93742ae2fd25344ac3c15d29038146b55d8d932"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-optimized.jar",
+      "sha256": "7e56889c587d69438f4a3b6471d497e3eb2a530c9f109bc795d6fcd4c4ed739e"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-optimized.txt",
+      "sha256": "b5548e8407a2f4d24a28181ad0698b8e7d19ac420cd54680b037211a181a966b"
+    },
+    {
+      "path": "build/source-tests/softkeys-before-SIEMENS2-optimized.properties",
+      "sha256": "5af46e37e65e02526cb0670cf93742ae2fd25344ac3c15d29038146b55d8d932"
+    }
+  ],
+  "source_file": "src/DrawControls/VirtualList.java",
+  "before_source_sha256": "754663044e9bf79f09898ebe6855413632610d5bcba84d68feebdfc56951bb11",
+  "after_source_sha256": "c6fce374c799f5f8b8f07cfae8867b893a34c68cc73e91d5b6c6e0e8e23d595a",
+  "before_report_sha256": "158b3375e21bbb0197854339ff45a9245fe53d1ab72ddc3ba994d151db10d0c8",
+  "bytecode_report_sha256": "312d31896698303819a214271141c0dcf8f62c89d1c891a498aaea866b7045ea",
+  "replay_report_sha256": "e803e5537da5ca7e7ff96299c6d547e65616e01324f60426d298a5fe960935f8",
+  "full_matrix_report_sha256": "99db04ff4d198022bd42b5804f723b011822630ec78e950eac1e60b172624343",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "before_sha256": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6",
+      "after_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
+      "changed_raw_class_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_raw_class_metadata_and_methods_equal": true,
+      "changed_whole_methods": [
+        {
+          "before": {
+            "name": "assignSoftKeys",
+            "desc": "()V",
+            "access": 9,
+            "code": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "17 185",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "16 118",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "17 143",
+              "184 jimm/Options.getBoolean(I)Z",
+              "153 19",
+              "5",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "4",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "167 27",
+              "4",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "5",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I"
+            ]
+          },
+          "after": {
+            "name": "assignSoftKeys",
+            "desc": "()V",
+            "access": 9,
+            "code": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "17 143",
+              "184 jimm/Options.getBoolean(I)Z",
+              "153 13",
+              "5",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "4",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "167 21",
+              "4",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "5",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "17 185",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "16 118",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "target": "MOTOROLA",
+      "before_sha256": "7ad9fd6b4948dc6778b210146812e4073def0f01b92ece0f1c35570a7f1e26a4",
+      "after_sha256": "5ecd2d0a242b63926770652f64e3b1a35da87bd54eddae3f00eaef969e369cd0",
+      "changed_raw_class_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_raw_class_metadata_and_methods_equal": true,
+      "changed_whole_methods": [
+        {
+          "before": {
+            "name": "assignSoftKeys",
+            "desc": "()V",
+            "access": 9,
+            "code": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "17 185",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "16 118",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "17 143",
+              "184 jimm/Options.getBoolean(I)Z",
+              "153 19",
+              "5",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "4",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "167 27",
+              "4",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "5",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I"
+            ]
+          },
+          "after": {
+            "name": "assignSoftKeys",
+            "desc": "()V",
+            "access": 9,
+            "code": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "17 143",
+              "184 jimm/Options.getBoolean(I)Z",
+              "153 13",
+              "5",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "4",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "167 21",
+              "4",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "5",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "17 185",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "16 118",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "target": "SIEMENS2",
+      "before_sha256": "bd5048d973bb5e2ee3acd0da70be760adb629081c41aedb145dbb59032b3e49a",
+      "after_sha256": "88f358fd92308a9065b6c1b479d4c7bf0762c9a6a600907cc172102273e1c781",
+      "changed_raw_class_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_raw_class_metadata_and_methods_equal": true,
+      "changed_whole_methods": [
+        {
+          "before": {
+            "name": "assignSoftKeys",
+            "desc": "()V",
+            "access": 9,
+            "code": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "17 185",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "16 118",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "17 143",
+              "184 jimm/Options.getBoolean(I)Z",
+              "153 19",
+              "5",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "4",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "167 27",
+              "4",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "5",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I"
+            ]
+          },
+          "after": {
+            "name": "assignSoftKeys",
+            "desc": "()V",
+            "access": 9,
+            "code": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "17 143",
+              "184 jimm/Options.getBoolean(I)Z",
+              "153 13",
+              "5",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "4",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "167 21",
+              "4",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "5",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "6",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "7",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "17 185",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "16 118",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I",
+              "177"
+            ],
+            "handlers": [],
+            "strings": [],
+            "refs": [
+              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+              "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+              "179 DrawControls/VirtualList.MENU_LEFT I",
+              "179 DrawControls/VirtualList.MENU_RIGHT I",
+              "184 jimm/Options.getBoolean(I)Z",
+              "179 DrawControls/VirtualList.xStatusOnRight Z",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.fontView I"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "delivered": [
+    {
+      "target": "MIDP2",
+      "language": "RU",
+      "before_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
+      "after_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MIDP2",
+      "language": "UA",
+      "before_sha256": "9fcdec65571c8d4bdae729367783635bb5011f813541522151eb12f2019d3341",
+      "after_sha256": "6a40b923fcf41cd9ba47c84d29bbb28147d5a34345be654c02644ed846992574",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MIDP2",
+      "language": "RO",
+      "before_sha256": "52666cd1e2f9fdbebcadfe82319eb2728013cae3ae267ff4db6b685097701bec",
+      "after_sha256": "163e56aa0cb3dee5f9c9b4d4a96780983126547ea4e54651f392c05d5ae12b8d",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MIDP2",
+      "language": "EN",
+      "before_sha256": "227014f9567dd22850823b5b556d2e444fe1f7e6473e76227203c39f13339d91",
+      "after_sha256": "abab335dbe6aff34339f896477cbb306bbcaca7c45005e35751974e5d30ac0fc",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MIDP2",
+      "language": "CZ",
+      "before_sha256": "1f4f4aa13198a73ef5dd39b5bdc4d6890c1ab105518fff7cda45d107a50bb5e1",
+      "after_sha256": "7be0a38ddbf8dc985c4f00f3ac862bf2f325784b7f20cba3970a866e9d6bdc9d",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RU",
+      "before_sha256": "84190c8543c8e6313681b98aecb0481a86f0efc99aa2c1e3c4544cddad7b4c58",
+      "after_sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "UA",
+      "before_sha256": "e2435ed06c8a57a21f9a9ba6d50a138bbeccf49242aea132556d687130f85bc7",
+      "after_sha256": "1efbeaa59402badbebda7e547a7595eb0d66c76572654dfddb8b65b2cc409912",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RO",
+      "before_sha256": "a501efe1e05d2469e9c8e7d2b3a2a9e26924c78e5906c232e65d3664baad403d",
+      "after_sha256": "6d53801918c00e3a8fc7e9af80795a77f1ff023d2889d0ab4609c4eaa9901de9",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "EN",
+      "before_sha256": "aea3e74068754b0797d4f5b4e64c2f1b99fb09051b105ee29c39b5eb2b6dc863",
+      "after_sha256": "f0974a21987b3b023ad5da06755515c8cfa087d7f257e3cf9d39af5850e597b1",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "CZ",
+      "before_sha256": "efd090000406a0957affc7b09da0901e04e1a4fd04426b224e36f824dd40cc75",
+      "after_sha256": "96fc16195bae1df323856108d786b4245ee401ee528af68709df27212ebf7d96",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RU",
+      "before_sha256": "10717a141b6b93c697886695eb70b07049fe5db8c6e230a216c02700dc582e0f",
+      "after_sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "UA",
+      "before_sha256": "dd9b6ff89388bfbd9bdce07b0aed33aaefdae4a5c2eb4f57692e554c599152ea",
+      "after_sha256": "077980efd16013a8a0d8904e6d3091c876ce9ee5222d7066d069724778794f75",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RO",
+      "before_sha256": "b40b0182d7cf5d80c6733bd4bd2ef52c766746a0a63c112308973330a540e0d6",
+      "after_sha256": "8afd6efbabd7027fe004ddec9681df13bd7f97bfba31d80cda822cdec4d8b199",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "EN",
+      "before_sha256": "98b08ab54d288dda742beda07737046abb2f11700010925a5ea44a71fd18aae1",
+      "after_sha256": "11e2db4c85fe2f1179b69c109e2b290427514b331f75811220bea498a5dc88ad",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "CZ",
+      "before_sha256": "1beb2437192da3b5704ff4ca708f223239a2837d1fb9f7535c652e68907efe6e",
+      "after_sha256": "ea50af6c09420d422228d85446f3252a94df32db3b3cb90b36f6f6ffef7a7898",
+      "changed_entries": [
+        "DrawControls/VirtualList.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    }
+  ],
+  "actual_replay_bindings": [
+    {
+      "target": "MIDP2",
+      "mode": "reference",
+      "before_fixture_sha256": "416a52145f031c0d721429243453e4c1393930f6df4fa2a3c0d6d2ee079af5db",
+      "after_fixture_sha256": "604a2f5bb8f9b5a1932b116828b55a4d6ac28cd37f663e2e7edfd6753718e2a5",
+      "before_output_sha256": "4bb93546001d5c6267e4af0565631a05be44c506ee8c40a2a37c784abe83625d",
+      "after_output_sha256": "4bb93546001d5c6267e4af0565631a05be44c506ee8c40a2a37c784abe83625d",
+      "observations": 5472,
+      "changed_observations": 0,
+      "complete_before_method": {
+        "name": "d",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "178 jimm/Jimm.e Z",
+          "153 7",
+          "16 95",
+          "184 cj.a(I)I",
+          "5",
+          "96",
+          "167 8",
+          "5",
+          "179 cd.q I",
+          "178 jimm/Jimm.b Z",
+          "153 16",
+          "16 96",
+          "184 cj.a(I)I",
+          "5",
+          "96",
+          "167 17",
+          "5",
+          "179 cd.r I",
+          "17 143",
+          "184 cj.a(I)Z",
+          "153 28",
+          "5",
+          "179 cd.k I",
+          "4",
+          "179 cd.l I",
+          "7",
+          "179 cd.m I",
+          "167 34",
+          "4",
+          "179 cd.k I",
+          "5",
+          "179 cd.l I",
+          "6",
+          "179 cd.m I",
+          "17 185",
+          "184 cj.a(I)Z",
+          "179 cd.e Z",
+          "16 118",
+          "184 cj.a(I)I",
+          "179 cd.t I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "178 jimm/Jimm.e Z",
+          "184 cj.a(I)I",
+          "179 cd.q I",
+          "178 jimm/Jimm.b Z",
+          "184 cj.a(I)I",
+          "179 cd.r I",
+          "184 cj.a(I)Z",
+          "179 cd.k I",
+          "179 cd.l I",
+          "179 cd.m I",
+          "179 cd.k I",
+          "179 cd.l I",
+          "179 cd.m I",
+          "184 cj.a(I)Z",
+          "179 cd.e Z",
+          "184 cj.a(I)I",
+          "179 cd.t I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "d",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "178 jimm/Jimm.e Z",
+          "153 7",
+          "16 95",
+          "184 cj.a(I)I",
+          "5",
+          "96",
+          "167 8",
+          "5",
+          "179 cd.q I",
+          "178 jimm/Jimm.b Z",
+          "153 16",
+          "16 96",
+          "184 cj.a(I)I",
+          "5",
+          "96",
+          "167 17",
+          "5",
+          "179 cd.r I",
+          "17 143",
+          "184 cj.a(I)Z",
+          "153 28",
+          "5",
+          "179 cd.k I",
+          "4",
+          "179 cd.l I",
+          "7",
+          "179 cd.m I",
+          "167 34",
+          "4",
+          "179 cd.k I",
+          "5",
+          "179 cd.l I",
+          "6",
+          "179 cd.m I",
+          "17 185",
+          "184 cj.a(I)Z",
+          "179 cd.e Z",
+          "16 118",
+          "184 cj.a(I)I",
+          "179 cd.t I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "178 jimm/Jimm.e Z",
+          "184 cj.a(I)I",
+          "179 cd.q I",
+          "178 jimm/Jimm.b Z",
+          "184 cj.a(I)I",
+          "179 cd.r I",
+          "184 cj.a(I)Z",
+          "179 cd.k I",
+          "179 cd.l I",
+          "179 cd.m I",
+          "179 cd.k I",
+          "179 cd.l I",
+          "179 cd.m I",
+          "184 cj.a(I)Z",
+          "179 cd.e Z",
+          "184 cj.a(I)I",
+          "179 cd.t I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    },
+    {
+      "target": "MIDP2",
+      "mode": "raw",
+      "before_fixture_sha256": "b8c9c39894432d4fbdf04ddf71ef49bb7f1618b0ada018a2f0984b90740d87ad",
+      "after_fixture_sha256": "45dd2906f61b157d69aee75bf94f3e750f96e0cd198427763ef9c6c999d2712b",
+      "before_output_sha256": "8527ef67aaf428d79682a822d654e4248944b9545a5ed62e3c321e19831a72da",
+      "after_output_sha256": "4bb93546001d5c6267e4af0565631a05be44c506ee8c40a2a37c784abe83625d",
+      "observations": 5472,
+      "changed_observations": 672,
+      "complete_before_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 19",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "167 27",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 13",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "167 21",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    },
+    {
+      "target": "MIDP2",
+      "mode": "optimized",
+      "before_fixture_sha256": "99dc0e3345a7d45429d2dfe8b1e7663a00d149e03cf3ea94817d9eccf3023b17",
+      "after_fixture_sha256": "a3ec893500843d20a782753109f79bc1e0452bd60a8fe7107d0ba280d0114bc9",
+      "before_output_sha256": "8527ef67aaf428d79682a822d654e4248944b9545a5ed62e3c321e19831a72da",
+      "after_output_sha256": "4bb93546001d5c6267e4af0565631a05be44c506ee8c40a2a37c784abe83625d",
+      "observations": 5472,
+      "changed_observations": 672,
+      "complete_before_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 17",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "177",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 11",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "167 17",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "reference",
+      "before_fixture_sha256": "02859af8fb019c82e10a339f926f3f442142ae0a9edaf01794103a20f32b1ac0",
+      "after_fixture_sha256": "1182ddcbefd63646730f1a0d9d944bb77dca22bc1247a7c51d88c9819baa00d0",
+      "before_output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
+      "after_output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
+      "observations": 1368,
+      "changed_observations": 0,
+      "complete_before_method": {
+        "name": "d",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "5",
+          "89",
+          "179 cb.p I",
+          "179 cb.o I",
+          "17 143",
+          "184 ci.a(I)Z",
+          "153 14",
+          "5",
+          "179 cb.i I",
+          "4",
+          "179 cb.j I",
+          "7",
+          "179 cb.k I",
+          "167 20",
+          "4",
+          "179 cb.i I",
+          "5",
+          "179 cb.j I",
+          "6",
+          "179 cb.k I",
+          "17 185",
+          "184 ci.a(I)Z",
+          "179 cb.e Z",
+          "16 118",
+          "184 ci.a(I)I",
+          "179 cb.r I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "179 cb.p I",
+          "179 cb.o I",
+          "184 ci.a(I)Z",
+          "179 cb.i I",
+          "179 cb.j I",
+          "179 cb.k I",
+          "179 cb.i I",
+          "179 cb.j I",
+          "179 cb.k I",
+          "184 ci.a(I)Z",
+          "179 cb.e Z",
+          "184 ci.a(I)I",
+          "179 cb.r I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "d",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "5",
+          "89",
+          "179 cb.p I",
+          "179 cb.o I",
+          "17 143",
+          "184 ci.a(I)Z",
+          "153 14",
+          "5",
+          "179 cb.i I",
+          "4",
+          "179 cb.j I",
+          "7",
+          "179 cb.k I",
+          "167 20",
+          "4",
+          "179 cb.i I",
+          "5",
+          "179 cb.j I",
+          "6",
+          "179 cb.k I",
+          "17 185",
+          "184 ci.a(I)Z",
+          "179 cb.e Z",
+          "16 118",
+          "184 ci.a(I)I",
+          "179 cb.r I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "179 cb.p I",
+          "179 cb.o I",
+          "184 ci.a(I)Z",
+          "179 cb.i I",
+          "179 cb.j I",
+          "179 cb.k I",
+          "179 cb.i I",
+          "179 cb.j I",
+          "179 cb.k I",
+          "184 ci.a(I)Z",
+          "179 cb.e Z",
+          "184 ci.a(I)I",
+          "179 cb.r I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "raw",
+      "before_fixture_sha256": "6c25fd8bfd904b0f0d0650e96409041f544d7813c449d7ecda89653068db3f02",
+      "after_fixture_sha256": "777d29c2a9e0fe3e55e85d2ece002df29a63db919a7299d515a4242045db6c80",
+      "before_output_sha256": "b5548e8407a2f4d24a28181ad0698b8e7d19ac420cd54680b037211a181a966b",
+      "after_output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
+      "observations": 1368,
+      "changed_observations": 168,
+      "complete_before_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 19",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "167 27",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 13",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "167 21",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "optimized",
+      "before_fixture_sha256": "25e49684d2953f8201a1b4477388fb5c1ba4f3cc348482713073af463a8f22c0",
+      "after_fixture_sha256": "ed456bbda5aee916835396498ea97c47531b8a89b07377651bf6219a5bb67888",
+      "before_output_sha256": "b5548e8407a2f4d24a28181ad0698b8e7d19ac420cd54680b037211a181a966b",
+      "after_output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
+      "observations": 1368,
+      "changed_observations": 168,
+      "complete_before_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 17",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "177",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 11",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "167 17",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "reference",
+      "before_fixture_sha256": "2830cef30161e212bebd4fecf0c1f9a71bc1898ba11b372bd8860641ce62179e",
+      "after_fixture_sha256": "1bc23165531a8b5df74c8e62928d54e46573e88730b09cf3c613b18ec19b5e5a",
+      "before_output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
+      "after_output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
+      "observations": 1368,
+      "changed_observations": 0,
+      "complete_before_method": {
+        "name": "d",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "5",
+          "89",
+          "179 cb.p I",
+          "179 cb.o I",
+          "17 143",
+          "184 ch.a(I)Z",
+          "153 14",
+          "5",
+          "179 cb.i I",
+          "4",
+          "179 cb.j I",
+          "7",
+          "179 cb.k I",
+          "167 20",
+          "4",
+          "179 cb.i I",
+          "5",
+          "179 cb.j I",
+          "6",
+          "179 cb.k I",
+          "17 185",
+          "184 ch.a(I)Z",
+          "179 cb.e Z",
+          "16 118",
+          "184 ch.a(I)I",
+          "179 cb.r I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "179 cb.p I",
+          "179 cb.o I",
+          "184 ch.a(I)Z",
+          "179 cb.i I",
+          "179 cb.j I",
+          "179 cb.k I",
+          "179 cb.i I",
+          "179 cb.j I",
+          "179 cb.k I",
+          "184 ch.a(I)Z",
+          "179 cb.e Z",
+          "184 ch.a(I)I",
+          "179 cb.r I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "d",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "5",
+          "89",
+          "179 cb.p I",
+          "179 cb.o I",
+          "17 143",
+          "184 ch.a(I)Z",
+          "153 14",
+          "5",
+          "179 cb.i I",
+          "4",
+          "179 cb.j I",
+          "7",
+          "179 cb.k I",
+          "167 20",
+          "4",
+          "179 cb.i I",
+          "5",
+          "179 cb.j I",
+          "6",
+          "179 cb.k I",
+          "17 185",
+          "184 ch.a(I)Z",
+          "179 cb.e Z",
+          "16 118",
+          "184 ch.a(I)I",
+          "179 cb.r I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "179 cb.p I",
+          "179 cb.o I",
+          "184 ch.a(I)Z",
+          "179 cb.i I",
+          "179 cb.j I",
+          "179 cb.k I",
+          "179 cb.i I",
+          "179 cb.j I",
+          "179 cb.k I",
+          "184 ch.a(I)Z",
+          "179 cb.e Z",
+          "184 ch.a(I)I",
+          "179 cb.r I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "raw",
+      "before_fixture_sha256": "4b076fce01abfdcafebeff64a679a397c76e137c2ef67bd2d67b26a318bd8eae",
+      "after_fixture_sha256": "728768559e6d2f0f5f7706f1784eedc9f8c72f4122c77888f5e95b58cea863c9",
+      "before_output_sha256": "b5548e8407a2f4d24a28181ad0698b8e7d19ac420cd54680b037211a181a966b",
+      "after_output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
+      "observations": 1368,
+      "changed_observations": 168,
+      "complete_before_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 19",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "167 27",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 13",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "167 21",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_RIGHT I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "optimized",
+      "before_fixture_sha256": "7e56889c587d69438f4a3b6471d497e3eb2a530c9f109bc795d6fcd4c4ed739e",
+      "after_fixture_sha256": "9b8b392c0282e2eca40580326ffe1751c055c78eb8b703cf19e8503eb8e4e873",
+      "before_output_sha256": "b5548e8407a2f4d24a28181ad0698b8e7d19ac420cd54680b037211a181a966b",
+      "after_output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
+      "observations": 1368,
+      "changed_observations": 168,
+      "complete_before_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 17",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "177",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I"
+        ]
+      },
+      "complete_after_method": {
+        "name": "assignSoftKeys",
+        "desc": "()V",
+        "access": 9,
+        "code": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "17 143",
+          "184 jimm/Options.getBoolean(I)Z",
+          "153 11",
+          "5",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "4",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "7",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "167 17",
+          "4",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "5",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "6",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "17 185",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "16 118",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "184 DrawControls/VirtualList.setCaptionOffsets()V",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
+          "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
+          "179 DrawControls/VirtualList.MENU_LEFT I",
+          "184 jimm/Options.getBoolean(I)Z",
+          "179 DrawControls/VirtualList.xStatusOnRight Z",
+          "184 jimm/Options.getInt(I)I",
+          "179 DrawControls/VirtualList.fontView I"
+        ]
+      },
+      "all_original_application_resource_bytes_unchanged_in_each_fixture": true,
+      "complete_actual_getter_and_field_bindings_unchanged": true
+    }
+  ],
+  "full_matrix_and_eight_additional_CI_checks": [
+    {
+      "command": "python tools/test_source.py --matrix",
+      "returncode": 0,
+      "result": [
+        "PASS build: MIDP2 RU",
+        "PASS build: MIDP2 UA",
+        "PASS build: MIDP2 RO",
+        "PASS build: MIDP2 EN",
+        "PASS build: MIDP2 CZ",
+        "PASS build: MOTOROLA RU",
+        "PASS build: MOTOROLA UA",
+        "PASS build: MOTOROLA RO",
+        "PASS build: MOTOROLA EN",
+        "PASS build: MOTOROLA CZ",
+        "PASS build: SIEMENS2 RU",
+        "PASS build: SIEMENS2 UA",
+        "PASS build: SIEMENS2 RO",
+        "PASS build: SIEMENS2 EN",
+        "PASS build: SIEMENS2 CZ"
+      ]
+    },
+    {
+      "command": "python tools/test_tariffs.py",
+      "returncode": 0,
+      "result": [
+        "PASS tariff forms: 1661 observations, 260 openings, 120 saves"
+      ]
+    },
+    {
+      "command": "python tools/test_contact_core.py --skip-build",
+      "returncode": 0,
+      "result": [
+        "PASS contact core: 197245 observations, 25 real method pairs, 1009 constructor pairs"
+      ]
+    },
+    {
+      "command": "python tools/audit_source.py",
+      "returncode": 0,
+      "result": [
+        "Audited 1129 method signatures; 675 identical normalized instruction sequences; 675 also match exception tables"
+      ]
+    },
+    {
+      "command": "python tools/audit_jimm_ui.py",
+      "returncode": 0,
+      "result": [
+        "PASS JimmUI inventory: 67 fields, 71 native methods, 69 optimized signatures, 38 exact bodies; two incompatible compiler writers explicitly witnessed"
+      ]
+    },
+    {
+      "command": "python tools/audit_util.py",
+      "returncode": 0,
+      "result": [
+        "PASS Util inventory: 87 methods, 62 fields; 83 same optimized signatures; 37 exact instruction/handler sequences"
+      ]
+    },
+    {
+      "command": "python tools/audit_members.py",
+      "returncode": 0,
+      "result": [
+        "PASS member inventory: 101 original classes named; 181 additional signatures; ContactItem 66 methods / 42 fields / 51 same optimized signatures"
+      ]
+    },
+    {
+      "command": "python tools/audit_inheritance.py",
+      "returncode": 0,
+      "result": [
+        "PASS inheritance: 35 original abstract declarations; 34 optimized signatures; 239 typed call aliases; 7 GroupItem override identities"
+      ]
+    },
+    {
+      "command": "python tools/audit_method_graph.py",
+      "returncode": 0,
+      "result": [
+        "PASS method graph: 46 unique complete bodies; 435 instructions; 2 dependency rounds; 2 parameter specializations / 1 private helper staticizations"
+      ]
+    }
+  ],
+  "main_before": {
+    "signatures": 1129,
+    "exact": 675
+  },
+  "main_after": {
+    "signatures": 1129,
+    "exact": 675
+  },
+  "all_previous_exact_methods_retained": true
+}

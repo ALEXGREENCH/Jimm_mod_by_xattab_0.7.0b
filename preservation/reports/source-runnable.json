@@ -1,7 +1,7 @@
 {
   "scope": "Actual MIDP2 RunnableImpl restored from the untouched class JAR before instrumentation. Real dispatch, argument boxing, array aliases, queue wrappers, message filtering and reconnect decisions. Only Display.callSerially, System.gc, Thread.sleep and 15 downstream UI/network callbacks are captured here; actual Display.getDisplay is retained. Spam cases include both scripted predicate outcomes and the real ActionListener predicate. Presence packets reach the real ActionListener and real queued task. No native event-queue implementation, physical waiting or complete callback side-effect equivalence claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6",
+  "source_unoptimized_class_jar_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
   "observations": 2211,
   "downstream_callbacks": 441,
   "queue_attempts": 71,

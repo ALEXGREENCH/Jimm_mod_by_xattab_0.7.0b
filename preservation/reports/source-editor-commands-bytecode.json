@@ -4,8 +4,8 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_unoptimized_class_jar_sha256": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6",
-      "source_optimized_class_jar_sha256": "a2a76082fb010b165dc1795ddc7eac094c15acb474c460c76dadee2ed55c84ff",
+      "source_unoptimized_class_jar_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
+      "source_optimized_class_jar_sha256": "e74ff2e576c5e51c892f8be4a22fb50b63f85acf8918f93d4a40cfea11d7cb54",
       "command_roles": {
         "cmdQuote": "l",
         "cmdPaste": "m",
@@ -54,8 +54,8 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_unoptimized_class_jar_sha256": "7ad9fd6b4948dc6778b210146812e4073def0f01b92ece0f1c35570a7f1e26a4",
-      "source_optimized_class_jar_sha256": "76917f8325fad5433bbf0e12cebadeb7fb3286c4989c20c57a4622b97cae0c8c",
+      "source_unoptimized_class_jar_sha256": "5ecd2d0a242b63926770652f64e3b1a35da87bd54eddae3f00eaef969e369cd0",
+      "source_optimized_class_jar_sha256": "477243e1f7e0650e47009f78d8d226e83ac37667b0f4cd796c18e8efe732f426",
       "command_roles": {
         "cmdQuote": "l",
         "cmdPaste": "m",
@@ -104,8 +104,8 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_unoptimized_class_jar_sha256": "bd5048d973bb5e2ee3acd0da70be760adb629081c41aedb145dbb59032b3e49a",
-      "source_optimized_class_jar_sha256": "54efa0403249ac604176fc6fdfa46dfe5c036d1d013c84e248f1f8c2c93b6cd7",
+      "source_unoptimized_class_jar_sha256": "88f358fd92308a9065b6c1b479d4c7bf0762c9a6a600907cc172102273e1c781",
+      "source_optimized_class_jar_sha256": "b63a177da92be7c439240e488996ccfb1694e3444a39bd8e051754350e43eba1",
       "command_roles": {
         "cmdQuote": "l",
         "cmdPaste": "m",

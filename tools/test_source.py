@@ -509,6 +509,8 @@ def main(matrix=False, skip_build=False):
         report['util_abi_replay'] = run([sys.executable, ROOT / 'tools/test_util_abi.py'], 'util-abi-replay-audit')
         report['minimize_bytecode'] = run([sys.executable, ROOT / 'tools/audit_minimize.py'], 'minimize-bytecode-audit')
         report['minimize_replay'] = run([sys.executable, ROOT / 'tools/test_minimize.py'], 'minimize-replay-audit')
+        report['softkeys_bytecode'] = run([sys.executable, ROOT / 'tools/audit_softkeys.py'], 'softkeys-bytecode-audit')
+        report['softkeys_replay'] = run([sys.executable, ROOT / 'tools/test_softkeys.py'], 'softkeys-replay-audit')
         report['menu_reset_bytecode'] = run([sys.executable, ROOT / 'tools/audit_menu_reset.py'], 'menu-reset-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')

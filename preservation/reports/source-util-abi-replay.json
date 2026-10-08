@@ -1,6 +1,6 @@
 {
   "scope": "The four actual Util helpers execute in all nine native/raw/optimized RU artifacts. Stream factory retains zero offset and observes array alias mutations, empty/null arrays and unread bytes. Word reads retain the false domain and record exact InputStream read calls, scripted IOException/EOF/null, cursor and remaining bytes. Dword writes retain false and observe full integer write arguments/order, before/after unchecked failures at all four writes, prefix/partial bytes and null. All stream subjects are completely unchanged. Only two Date allocation/constructor instructions in one real date core/wrapper are captured; all remaining classes, methods, metadata/handlers and original entries match exactly, with only two explicit provider classes added. Date wrapper false executes in all nine artifacts, core false/true in six MIDP2/Siemens artifacts. Motorola optimized core is absent, and no direct core comparison is invented there. Controlled JVM Calendar/Locale/TimeZone inputs, 11 epochs including extreme longs, four zones, ten GMT offsets and ten local offsets establish this host dataset only. Every date call reads the external clock exactly once. No generic true GMT/big-endian/nonzero offset, physical J2ME calendar or whole-program equivalence claim.",
-  "bytecode_report_sha256": "fff8abca4c014f27a48259f2048d1fef4c339ca3d93d6bd764130556c109d408",
+  "bytecode_report_sha256": "b241f40784c3947c95c2e06897d006e9383a8ee0294120850b5cb60327b24eb1",
   "builds": [
     {
       "target": "MIDP2",
@@ -9,7 +9,7 @@
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "5bb951c4c032cf04cd9c696aae334b11390bcf0232007c824e6a4da3561aaa2e",
+          "fixture_sha256": "37f49c585605a344b2972e621f1456e6806d9f83c9ce8214d01d516e08b373cf",
           "configuration": {
             "mode": "reference",
             "target": "MIDP2",
@@ -1065,9 +1065,9 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6",
-          "raw_with_resources_input_sha256": "cf62892065ae39e4199d0322ac4d36c014c735d52a003121f7340160ebe4ce47",
-          "fixture_sha256": "4512c58354d62fe11030eff1af471a191b0e3b41e6cc521ffa953ad6ee4bcc0a",
+          "input_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
+          "raw_with_resources_input_sha256": "9566c578e5612a395cf52c8695a446ed1bdf490af516ee906b2376a55490dd8a",
+          "fixture_sha256": "47384c77dd678c000c8ff1a387d280329163dc79a56414834b14bcc5065a22ea",
           "configuration": {
             "mode": "raw",
             "target": "MIDP2",
@@ -1659,9 +1659,9 @@
             },
             {
               "owner": "DrawControls/VirtualList",
-              "original_whole_class_sha256": "e0cdc733b89a36e0ecc0ffef38d2575a37e47d59849d6dbef28246dedd4e8ef5",
-              "expected_whole_class_sha256": "e0cdc733b89a36e0ecc0ffef38d2575a37e47d59849d6dbef28246dedd4e8ef5",
-              "actual_whole_class_sha256": "e0cdc733b89a36e0ecc0ffef38d2575a37e47d59849d6dbef28246dedd4e8ef5"
+              "original_whole_class_sha256": "24a5acb7a5d2d6d408f6d359d92e7b95281cf342d6e500470bee6b92dfd72397",
+              "expected_whole_class_sha256": "24a5acb7a5d2d6d408f6d359d92e7b95281cf342d6e500470bee6b92dfd72397",
+              "actual_whole_class_sha256": "24a5acb7a5d2d6d408f6d359d92e7b95281cf342d6e500470bee6b92dfd72397"
             },
             {
               "owner": "DrawControls/VirtualListCommands",
@@ -2198,9 +2198,9 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
+          "input_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "93d1d1f284a373e3123cc01640b300cc121fdc369cc767fd870802ce03e88e1c",
+          "fixture_sha256": "48cc691cfd0b21fa93de2d69b2518a34d1aa75e332fe9811040bfd2b39130107",
           "configuration": {
             "mode": "optimized",
             "target": "MIDP2",
@@ -2729,9 +2729,9 @@
             },
             {
               "owner": "DrawControls/VirtualList",
-              "original_whole_class_sha256": "8bc10581cd6d63111097c228a9b764fcb96cef37039b3e82f20e618fc1c0b0cd",
-              "expected_whole_class_sha256": "8bc10581cd6d63111097c228a9b764fcb96cef37039b3e82f20e618fc1c0b0cd",
-              "actual_whole_class_sha256": "8bc10581cd6d63111097c228a9b764fcb96cef37039b3e82f20e618fc1c0b0cd"
+              "original_whole_class_sha256": "aaf3b42b2ee4d467709a3f489ba1145d4c390d493befdf1bbb7d73ac49ed0687",
+              "expected_whole_class_sha256": "aaf3b42b2ee4d467709a3f489ba1145d4c390d493befdf1bbb7d73ac49ed0687",
+              "actual_whole_class_sha256": "aaf3b42b2ee4d467709a3f489ba1145d4c390d493befdf1bbb7d73ac49ed0687"
             },
             {
               "owner": "DrawControls/VirtualListCommands",
@@ -3258,7 +3258,7 @@
           "mode": "reference",
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "171fa87f743ab994405fffad893297e73383f03fc6402098fd2d1807aed2c7bb",
+          "fixture_sha256": "47b07470fee8aca7a298333930107268744bcea36cd6909ce7326ae9cc15ecf3",
           "configuration": {
             "mode": "reference",
             "target": "MOTOROLA",
@@ -4298,9 +4298,9 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "7ad9fd6b4948dc6778b210146812e4073def0f01b92ece0f1c35570a7f1e26a4",
-          "raw_with_resources_input_sha256": "216758fb5281a0c2c6a7c62a179c776faeb2ffc2ccb617ddbaa062d946595e32",
-          "fixture_sha256": "8f8f1d2aebb74f20f2500f377e049f182b09b52f8bf61176c3fff5d2e5c7a65a",
+          "input_sha256": "5ecd2d0a242b63926770652f64e3b1a35da87bd54eddae3f00eaef969e369cd0",
+          "raw_with_resources_input_sha256": "5e16af5dd93d7f320232394794b8d2d1941ddd25022742f2195f29d86548e181",
+          "fixture_sha256": "8d30ff1b8b26d1f7521116c06863e58f1a8654494ec6e158df5680be7d88c53f",
           "configuration": {
             "mode": "raw",
             "target": "MOTOROLA",
@@ -4892,9 +4892,9 @@
             },
             {
               "owner": "DrawControls/VirtualList",
-              "original_whole_class_sha256": "9b1153e57fb16a275196dbabcb751c3587cbcc2f04351339d162bed69baf5b79",
-              "expected_whole_class_sha256": "9b1153e57fb16a275196dbabcb751c3587cbcc2f04351339d162bed69baf5b79",
-              "actual_whole_class_sha256": "9b1153e57fb16a275196dbabcb751c3587cbcc2f04351339d162bed69baf5b79"
+              "original_whole_class_sha256": "d1bfdee57ccd794194282ed53d2a079c0ae166051e74e535efbae7ed075383a9",
+              "expected_whole_class_sha256": "d1bfdee57ccd794194282ed53d2a079c0ae166051e74e535efbae7ed075383a9",
+              "actual_whole_class_sha256": "d1bfdee57ccd794194282ed53d2a079c0ae166051e74e535efbae7ed075383a9"
             },
             {
               "owner": "DrawControls/VirtualListCommands",
@@ -5415,9 +5415,9 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "84190c8543c8e6313681b98aecb0481a86f0efc99aa2c1e3c4544cddad7b4c58",
+          "input_sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "a03b20037f79e03dbc054d21905ed46e61aea8c134b1b301002fd119c409ace8",
+          "fixture_sha256": "c7de1317928fbee746f10795250de2b5578b2116942b98cae6b724d3370835ac",
           "configuration": {
             "mode": "optimized",
             "target": "MOTOROLA",
@@ -5926,9 +5926,9 @@
             },
             {
               "owner": "DrawControls/VirtualList",
-              "original_whole_class_sha256": "136bc6a64a81436b79c801dfcc1b01975f6a6c5960dea23dd837f7a6941a4840",
-              "expected_whole_class_sha256": "136bc6a64a81436b79c801dfcc1b01975f6a6c5960dea23dd837f7a6941a4840",
-              "actual_whole_class_sha256": "136bc6a64a81436b79c801dfcc1b01975f6a6c5960dea23dd837f7a6941a4840"
+              "original_whole_class_sha256": "1ab1cd4b634b7e46cdfff6d01b5af7ed2ec8a33b0f4524099bdce2e076844d51",
+              "expected_whole_class_sha256": "1ab1cd4b634b7e46cdfff6d01b5af7ed2ec8a33b0f4524099bdce2e076844d51",
+              "actual_whole_class_sha256": "1ab1cd4b634b7e46cdfff6d01b5af7ed2ec8a33b0f4524099bdce2e076844d51"
             },
             {
               "owner": "DrawControls/VirtualListCommands",
@@ -6439,7 +6439,7 @@
           "mode": "reference",
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "7e10152a1d4fddd90dd49bd65953a692df64fba5aaf8dd4a5ca102f5d12c0bdf",
+          "fixture_sha256": "f96721174a1d612e49bf79d29596f96050d5bd46e74d9e3388e92baa30ceba4a",
           "configuration": {
             "mode": "reference",
             "target": "SIEMENS2",
@@ -7483,9 +7483,9 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "bd5048d973bb5e2ee3acd0da70be760adb629081c41aedb145dbb59032b3e49a",
-          "raw_with_resources_input_sha256": "cefad63ad51f2d135d6b24760e6b35b318fb5fc660f5703e5fd29cc905da5a33",
-          "fixture_sha256": "01439ea194b124c5c493658d6db01ac376b79e79cf27d91623a3171708e508d8",
+          "input_sha256": "88f358fd92308a9065b6c1b479d4c7bf0762c9a6a600907cc172102273e1c781",
+          "raw_with_resources_input_sha256": "6315445844b81da58c3f2bb61f2c1421a8d0c4d04248b54fc7a8847968c8ed52",
+          "fixture_sha256": "a99143350f34e890e5e35bb16b92145a794079a0121d3523c85347d72658f760",
           "configuration": {
             "mode": "raw",
             "target": "SIEMENS2",
@@ -8065,9 +8065,9 @@
             },
             {
               "owner": "DrawControls/VirtualList",
-              "original_whole_class_sha256": "c66e5d86e0a8be95c23b2d7807b0cb8db34d468ffe03ffd2f19df48c60f27886",
-              "expected_whole_class_sha256": "c66e5d86e0a8be95c23b2d7807b0cb8db34d468ffe03ffd2f19df48c60f27886",
-              "actual_whole_class_sha256": "c66e5d86e0a8be95c23b2d7807b0cb8db34d468ffe03ffd2f19df48c60f27886"
+              "original_whole_class_sha256": "89296b4ad61772ec01457c2c161da1d031961717f32f10f75c961e2a62b5561d",
+              "expected_whole_class_sha256": "89296b4ad61772ec01457c2c161da1d031961717f32f10f75c961e2a62b5561d",
+              "actual_whole_class_sha256": "89296b4ad61772ec01457c2c161da1d031961717f32f10f75c961e2a62b5561d"
             },
             {
               "owner": "DrawControls/VirtualListCommands",
@@ -8604,9 +8604,9 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "10717a141b6b93c697886695eb70b07049fe5db8c6e230a216c02700dc582e0f",
+          "input_sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "31b7654756542ddb320bc2a4a61af2abc923d08819b01ea13bd946bf40884be0",
+          "fixture_sha256": "75e69d7a30b6f0fd95b2103053e2de041ba4e11b84661dc5a71184e3635d8e9e",
           "configuration": {
             "mode": "optimized",
             "target": "SIEMENS2",
@@ -9123,9 +9123,9 @@
             },
             {
               "owner": "DrawControls/VirtualList",
-              "original_whole_class_sha256": "9b8617a705c19d15a5f74136f556b94e2abf6029077fdd7e59df18057f649cdf",
-              "expected_whole_class_sha256": "9b8617a705c19d15a5f74136f556b94e2abf6029077fdd7e59df18057f649cdf",
-              "actual_whole_class_sha256": "9b8617a705c19d15a5f74136f556b94e2abf6029077fdd7e59df18057f649cdf"
+              "original_whole_class_sha256": "d049b9dbf97683d0d07fa7d427d0bbcb053f229923545a88d348abd9f6a5ebe6",
+              "expected_whole_class_sha256": "d049b9dbf97683d0d07fa7d427d0bbcb053f229923545a88d348abd9f6a5ebe6",
+              "actual_whole_class_sha256": "d049b9dbf97683d0d07fa7d427d0bbcb053f229923545a88d348abd9f6a5ebe6"
             },
             {
               "owner": "DrawControls/VirtualListCommands",
