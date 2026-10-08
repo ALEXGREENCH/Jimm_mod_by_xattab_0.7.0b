@@ -117,6 +117,8 @@ jobs:
             preservation/reports/source-exception-constructor-bytecode.json
             preservation/reports/source-exception-constructors.json
             preservation/reports/source-unused-constructor-bytecode.json
+            preservation/reports/source-remaining-helper-bytecode.json
+            preservation/reports/source-remaining-helper-replay.json
   verify:
     runs-on: ubuntu-latest
     steps:

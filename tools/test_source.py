@@ -501,6 +501,8 @@ def main(matrix=False, skip_build=False):
         report['exception_constructor_bytecode'] = run([sys.executable, ROOT / 'tools/audit_exception_constructors.py'], 'exception-constructor-bytecode-audit')
         report['exception_constructors'] = run([sys.executable, ROOT / 'tools/test_exception_constructors.py'], 'exception-constructors-audit')
         report['unused_constructor_bytecode'] = run([sys.executable, ROOT / 'tools/audit_unused_constructors.py'], 'unused-constructor-bytecode-audit')
+        report['remaining_helper_bytecode'] = run([sys.executable, ROOT / 'tools/audit_remaining_helpers.py'], 'remaining-helper-bytecode-audit')
+        report['remaining_helper_replay'] = run([sys.executable, ROOT / 'tools/replay_remaining_helpers.py'], 'remaining-helper-replay-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')
         report['send_text_bytecode'] = run([sys.executable, ROOT / 'tools/audit_send_text.py'], 'send-text-bytecode')
