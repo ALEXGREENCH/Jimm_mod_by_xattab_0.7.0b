@@ -8,6 +8,7 @@ import java.util.*;
 /** Run real protocol/encoding helpers from May and authoring bytecode, including partial writes and MD5 state. */
 public final class UtilCoreDifferentialTest {
     static Class<?> oldUtil, newUtil;
+    static String nativeUtilName="co",nativeOptionsName="cj";
     static int checks;
     static final Map<String, Integer> covered = new TreeMap<String, Integer>();
 
@@ -143,7 +144,7 @@ public final class UtilCoreDifferentialTest {
         String[] values={null,"","ASCII","a\u0000b","\r\n\t","\u0410\u044f\u0401\u0451\u0490\u0456\u010d","\ud800","\udfff","\ud83d\ude00","a\ud800b",new String(new char[65535]).replace('\0','a'),new String(new char[65536]).replace('\0','a'),new String(new char[22000]).replace('\0','\u0800')};
         Random random=new Random(700);
         for(boolean cp:new boolean[]{false,true}){
-            options(oldLoader,"cj",cp);options(newLoader,"jimm.Options",cp);
+            options(oldLoader,nativeOptionsName,cp);options(newLoader,"jimm.Options",cp);
             for(String value:values){encodeDefault.call(value);for(boolean utf8:new boolean[]{false,true})encode.call(value,utf8);}
             for(int sample=0;sample<1600;sample++){
                 byte[] bytes=sample==0?null:new byte[sample<260?sample%18:random.nextInt(40)];if(bytes!=null)random.nextBytes(bytes);
@@ -254,9 +255,10 @@ public final class UtilCoreDifferentialTest {
         }
     }
     public static void main(String[] args)throws Exception {
+        if(args.length>4){Properties configuration=new Properties();try(InputStream input=new FileInputStream(args[4])){configuration.load(input);}nativeUtilName=configuration.getProperty("util",nativeUtilName);nativeOptionsName=configuration.getProperty("options",nativeOptionsName);}
         ClassLoader oldLoader=loader(Paths.get(args[0]),Paths.get(args[2])),newLoader=loader(Paths.get(args[1]),Paths.get(args[2]));
-        oldUtil=Class.forName("co",true,oldLoader);newUtil=Class.forName("jimm.comm.Util",true,newLoader);
-        options(oldLoader,"cj",true);options(newLoader,"jimm.Options",true);
+        oldUtil=Class.forName(nativeUtilName,true,oldLoader);newUtil=Class.forName("jimm.comm.Util",true,newLoader);
+        options(oldLoader,nativeOptionsName,true);options(newLoader,"jimm.Options",true);
         binary();strings(oldLoader,newLoader);text();md5();streams();
         List<String> inventory=new ArrayList<String>();for(Map.Entry<String,Integer> entry:covered.entrySet())inventory.add(entry.getValue()+" "+entry.getKey());Files.write(Paths.get(args[3]),inventory,java.nio.charset.StandardCharsets.UTF_8);
         System.out.println("PASS utility core: "+checks+" observations, "+covered.size()+" real method pairs");System.exit(0);
