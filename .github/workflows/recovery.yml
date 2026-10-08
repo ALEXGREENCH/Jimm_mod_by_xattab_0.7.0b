@@ -28,6 +28,7 @@ jobs:
             dist/source/
             preservation/reports/source-tests.json
             preservation/reports/source-bytecode-comparison.json
+            preservation/reports/source-method-accounting.json
             preservation/reports/source-resources.json
             preservation/reports/source-key-routing.json
             preservation/reports/source-util-core.json

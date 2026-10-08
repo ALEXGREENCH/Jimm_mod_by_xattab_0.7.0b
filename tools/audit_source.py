@@ -2693,7 +2693,7 @@ def main():
               'scope': 'Verified subset only. Instruction equality includes local slots and branch layout; '
                        'compiler and optimizer differences remain. Functional checks are recorded separately.'}
     path = ROOT / 'preservation/reports/source-bytecode-comparison.json'
-    path.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+    path.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8', newline='\n')
     print('Audited', len(methods), 'method signatures;', sum(m['same_normalized_instructions'] for m in methods),
           'identical normalized instruction sequences;', sum(m['same_normalized_bytecode'] for m in methods),
           'also match exception tables')

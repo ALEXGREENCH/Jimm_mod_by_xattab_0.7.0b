@@ -520,6 +520,9 @@ def main(matrix=False, skip_build=False):
     report['save_info_locales'] = run([sys.executable, ROOT / 'tools/test_save_info_locales.py',
                                       *(['--all-languages'] if matrix else []), '--skip-build'],
                                      'save-info-locales-audit')
+    if matrix:
+        report['method_accounting'] = run([sys.executable, ROOT / 'tools/audit_method_accounting.py', '--skip-build'],
+                                          'method-accounting-audit')
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
