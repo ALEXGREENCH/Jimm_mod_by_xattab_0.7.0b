@@ -38,6 +38,7 @@ import javax.microedition.lcdui.Display;
 import javax.microedition.midlet.MIDlet;
 import javax.microedition.midlet.MIDletStateChangeException;
 import javax.microedition.lcdui.Displayable;
+import javax.microedition.lcdui.TextBox;
 import java.io.*;
 
 public class Jimm extends MIDlet
@@ -428,7 +429,7 @@ public class Jimm extends MIDlet
 		else
 		{
 			Displayable disp = Jimm.display.getCurrent();
-			if ((disp == null) || !disp.isShown())
+			if (((disp == null) || !disp.isShown()) && !(disp instanceof TextBox))
 			{
 				showWorkScreen();
 			}

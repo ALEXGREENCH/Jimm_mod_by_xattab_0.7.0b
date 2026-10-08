@@ -3,8 +3,8 @@
   "build_boundary": "Existing supplied artifacts (--skip-build); source snapshot recorded, no fresh compilation claimed.",
   "input_sha256": {
     "reference": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-    "raw": "c5a0cdfa0aa06515c5d73ca5a31a885fb67dc9ec5c1483cd8036397ed4736f3e",
-    "optimized": "314dab4a2a79e5dadbfdb892419199de46571c289fd8f18bce2cbf827c9de355"
+    "raw": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6",
+    "optimized": "a2a76082fb010b165dc1795ddc7eac094c15acb474c460c76dadee2ed55c84ff"
   },
   "source_snapshot": {
     "src/DrawControls/AniIcon.java": "36efce15cca4da8a5363b8c89cf6223ab476e604c0a74be53596d5e1d2d646bc",
@@ -71,7 +71,7 @@
     "src/jimm/FileTransfer.java": "c9cc194093f989f6110ac9b5e327befb1c62b2f4fcfc8eadc341e58018b28394",
     "src/jimm/GroupItem.java": "71146b34d97d9609e3f65b1df4563f84ca31971b0d109b200bebd22abab865c3",
     "src/jimm/HistoryStorage.java": "4a4a5d8ff6be087ccf7ad78b2ecb13777321ff447e4d5bddc3bdeee502706eaf",
-    "src/jimm/Jimm.java": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+    "src/jimm/Jimm.java": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
     "src/jimm/JimmException.java": "4a4eb929930d6bfc543794a30b3b66ba1c327c007d30309a4df93ec2695d2113",
     "src/jimm/JimmUI.java": "494b9af5e0dcfb65482f8ad3a2d2a7c43583c316afbb23c1d43ce67ab4fd82a9",
     "src/jimm/MainMenu.java": "20de61aa42a4027164361902ec98e435fff963273b559f3d7d126ab7241e19ae",
@@ -92,11 +92,11 @@
   },
   "main_evidence": {
     "file": "source-bytecode-comparison.json",
-    "sha256": "8a6c04198054266d7dd70b99df8905f3fbd9e82e9c08f4e5c67a3aede9114aee"
+    "sha256": "bb02fbb80e3b8ac58a12356663c53e417ddf5f12bef1d8bb75ff0589f84d37f7"
   },
   "evidence_reports": {
     "source-vlist-helper-bytecode.json": {
-      "sha256": "9deb77b140aa6d80b74f847fa76556f96dd60db000d17fb9439ee7a8f94db1ea",
+      "sha256": "72bc6366bbdd606cc52f1de4c80c57d387cf14349073de0e772c9381cc284a65",
       "scope": "Eighteen complete May MIDP2 RU native/raw VirtualList helpers, three surviving optimized methods and fifteen explicitly absent raw helper signatures. Sixteen native/raw complete instruction/handler sequences match; the true cycling argument specialization is separate and all actual raw callers are checked. The font-creation integer and dimension instance receivers are unused and kept explicit. showNotify retains its distinct Java Canvas/Displayable invocation owners rather than hiding the difference. Whole raw callers and every same-name optimized body remain recorded without declaring them equal. The surviving two-argument moveCursor is not invented as the removed one-argument wrapper. This inventory alone does not prove runtime/whole-program equivalence.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -371,7 +371,7 @@
       }
     },
     "source-contact-helper-bytecode.json": {
-      "sha256": "3e90826ad8ea2f0823f65805c5a09a5d83a96fd5d627a276a8c02e276065f8db",
+      "sha256": "6bc2115fabd784288086d065794bbd6be7ac252951138cb5c33c4c82cfa7f1a4",
       "scope": "Fifteen complete remaining May MIDP2 RU ContactItem native methods: twelve raw authoring helpers and three compiler expressions represented by four actual raw/optimized accessors. Nine native/raw complete bodies match; addCapability is separately proven at constant 256 in every actual raw caller. Serialization/compiler layout differences stay in full. All twelve helper methods are absent in modern optimization, with whole callers retained without declaring their bodies equal. Native post-increment and value-returning setters are not invented as modern methods: full native instructions, modern read/write accessors and complete timer callers stay explicit; native expression return values are discarded in every actual caller. This inventory alone does not claim runtime, physical timing, concurrency or whole-program equivalence.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -668,7 +668,7 @@
       }
     },
     "source-ui-helper-bytecode.json": {
-      "sha256": "29e6847442581dcdae2284b9f9ccf8e1d73e5abe1371e878b11e984702652ecc",
+      "sha256": "fa8201761627862ca0ea07bcf00e4c12c8ef7f94cea6c186c05b402405631cb8",
       "scope": "Fourteen complete May MIDP2 RU splash/chat native and raw bodies; seven splash optimized bodies and seven explicitly absent optimized chat helpers. Only typed names are normalized; every instruction, local, jump, handler, descriptor and access flag is retained. Five native/raw chat helpers match completely; BeginTyping retains its unused raw boolean explicitly. Two width/height helpers have equal native/raw code, unused raw receivers, native static methods and absent/inlined modern methods. Whole raw/optimized callers with direct helper calls before optimization are recorded as witnesses; their differing bodies are not declared equal. This inventory alone does not prove behavior equivalence or complete rendering; legacy replay scope is source-ui-helper-replay.json.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -936,7 +936,7 @@
       }
     },
     "source-static-text-bytecode.json": {
-      "sha256": "c913906f05ae972cae0199216ef085a25ca2f80c6aa1be322b299e9363da4cde",
+      "sha256": "ef239eb15a803461597b048e942e765e42637df6946fb8394af7480dd4fedb7e",
       "scope": "Two complete May static text helpers on three RU platforms: native/raw/optimized showText and getLineNumbers. The showText height traversal and its discarded results precede painting in all current artifacts. Complete instructions/handlers and all actual callers remain recorded, without deleting local slots, branches or ABI differences. Native retains an unused font-size argument; modern optimization removes it. The generic raw helpers keep their inherited arguments; no equivalence for arbitrary parameters outside actual native callers is claimed. Structural checks alone do not establish runtime or whole-program equivalence.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -1035,7 +1035,7 @@
       }
     },
     "source-unused-constructor-bytecode.json": {
-      "sha256": "1e07d866c520388fc2355b86a4b50bd5e3886a036e4a7c8cbe95b29ed1c1e463",
+      "sha256": "ab424937d0168e019161abfb9b9acf49d84f9f8de752fdce25efdc70cad3dfd0",
       "scope": "Fourteen complete native/raw empty public constructors on three May RU platforms: ResourceBundle, OtherAction, Util, XtrazSM and MIDP2/Motorola LightControl. Every three-instruction body, empty handler list and public access match exactly. Full declared fields/method inventory confirms all other members are static. All application methods are scanned for direct NEW and constructor invocations, and all direct subclasses are scanned; none exists on native/raw/optimized. Modern optimized matching constructor entries are genuinely absent. XtrazSM itself is merged away; Icon constructors are not substituted for it. Siemens has no corresponding native LightControl candidate and no raw/optimized class, consistent with its actual outer SiJaPP directive. No general reachability/reflective-instantiation, class initialization behavior, static helper equivalence or physical device runtime claim is made by this constructor inventory. There is no product source or delivered JAR change.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -1101,7 +1101,7 @@
       }
     },
     "source-packet-parsers-bytecode.json": {
-      "sha256": "61605a191ee57ef5771b0b0fc6719c30b4872b07079f2c3ee6cafa440d64abbb",
+      "sha256": "2af33fd257d138a670e7b59b3bdba1445672d0cfc55ed2a73e79cdaca0352554",
       "scope": "Seven complete native/raw parsers on each of three May RU platforms, plus each actual modern two-argument combined root parser (790 instructions) and complete actual callers. Six subclass parsers are absent from modern optimized classes; no matching helpers are invented. Whole literal instructions, branches, locals, handlers, declarations and full differences remain. Typed aliases bind actual members with full declarations. Three constructor pairs per platform preserve generic raw ABIs and explicit constant/slot adapters; all seven raw call sites per platform prove the specialized argument domain. Modern meta constructor also removes constant long reference 2; its full body/ABI is retained rather than asserted equal for arbitrary reference values. These adapters are not normalization of generic parser behavior. Complete body equality is asserted only where explicitly recorded. Runtime evidence and external capture boundaries are in source-packet-parsers.json and source-packet-root.json. No product source changes or whole-program equivalence are claimed.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -1591,7 +1591,7 @@
       }
     },
     "source-xtraz-queries.json": {
-      "sha256": "8c8b7378e6fa0c1c2fec9469723529a2efc2eb94cf6c784e978532a0f07f6a63",
+      "sha256": "01187ad2131b47d5db8e7c195c87758ab20a074dda423dc3850502807dd251ef",
       "scope": "Complete Xtraz outgoing queries on three May RU platforms, native/raw/optimized. Actual XML escape, Options account lookup, counter, request builder, SnacPacket, SOCKETConnection.sendPacket, Traffic and close/error handling execute. Only one external System clock instruction changes; every other dumped declaration/instruction/handler in its class and every other class/resource byte stay unchanged. MIDlet host/manifest, typed option table, counters and natural observing/faulting output streams are explicit inputs. All three actual native/raw callers pass ID zero; the native XML append uses constant zero before slot 1 is overwritten, and modern optimization removes that argument and relocates the helper to Icon. The identical three-instruction native/raw Xtraz constructor and removal of the authoring class stay explicit; Icon constructors are not treated as Xtraz constructors. These descriptors/owners and complete callers remain explicit, without claiming an unused local after optimizer slot reuse. Seven targets, five clock values, four counters, three FLAP sequences, both CP1251 modes and seven stream/channel states cover writes/flush IOExceptions, unchecked/Error failures, null stream/channel and malformed UIN with partial state/bytes and stream-monitor ownership. Four account strings add XML/Unicode/null coverage. Arbitrary nonzero transaction IDs, incoming Xtraz, UI/scheduling, live network/server, physical devices and whole-program equivalence are outside scope.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -1710,7 +1710,7 @@
       }
     },
     "source-xstatus-helper-bytecode.json": {
-      "sha256": "c412573732cff9196a61e81893facc3b6fff2329371397c1b9d1f916b1c46b47",
+      "sha256": "8595e96d6a0ac967fa9c08d4b811ff8c5436aa7f90f089b2dcfc3e44c4af87b0",
       "scope": "Two remaining complete XStatus helpers on native/raw May RU classes of three platforms. All three four-instruction image wrappers and handlers match exactly. Native capability parser contains inlined GUID comparison/lookup; raw retains complete getXStatus and GUID.equals helpers. Full literal branch/local/handler/ABI differences remain. Modern optimized XStatus has neither matching helper ABI; its real ContactItem parser and surviving getXStatus helper are retained. The modern helper embeds lengths 16 and 37: its one actual caller allocates a fresh 16-byte buffer in a proven unreassigned local, and the sole actual table writer creates 37 entries in clinit. No arbitrary-length private-helper reflection or replacement of the final GUID table is declared equivalent to that specialized domain. Whole actual callers and field writer remain explicit. Native final/raw nonfinal access differences are retained. Runtime and host/provider boundaries are in source-xstatus-platforms.json; whole-program equivalence is not claimed.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -1941,7 +1941,7 @@
       }
     },
     "source-specialized-util-version-bytecode.json": {
-      "sha256": "18de5ebb0601161fa16d55eb4b787b350c47902b1c9a0ae32c8d6b823c258cec",
+      "sha256": "7b23a05d57fff1c78a4279a3ee3c158e8f2aa7e22e385115494f7e6b95dc3fe8",
       "scope": "Fifteen full native/raw helper pairs across three May RU platforms: specialized Util interest TLV, array comparison, integer default, and compiler-generated JimmUI version/aboutNotice setters. Actual raw callers all pass TLV tag 490, second-array offset zero and integer default zero; complete callers and constant expression positions are retained. The full integer helper matches native/optimized after the explicit two zero substitutions and result-local rebase. Array loop rotation/offset folding and TLV wrapper/string-buffer/local differences remain in full literal diffs. All three actual optimized helpers survive under changed ABI, and their whole callers remain. No arbitrary raw defaults/offsets/tags are declared equivalent to specialization. Native four-instruction setters assign and return the same String; ECJ three-instruction synthetic setters assign and return void. All actual native task callers discard the result with POP; real raw/optimized task callers and typed field declarations are retained. No absent String-returning raw accessor is invented. No product source/JAR change, live version HTTP/device or whole-program equivalence claim is made.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -2196,7 +2196,7 @@
       }
     },
     "source-icq-state-bytecode.json": {
-      "sha256": "a5f6a7f0ab59cc10aa8a875ae170ec8421103e9d962458cc833f8a6507a7fdb8",
+      "sha256": "0bb2ad56e00ddb659e33158270d473fd8e3277d13e14683eff1c79e420abbc84",
       "scope": "Eleven complete May MIDP2 RU Icq methods and raw source bodies; ten optimized bodies and one explicitly removed getter. Only typed name aliases are normalized. Instructions, jumps, locals, exception regions and access flags are retained. No product source changes, network execution, threading equivalence or whole-program equivalence claim. The raw instance privacy setter has an unused receiver and becomes static in both optimized artifacts. The packet constructor in setPoint is specialized differently by the two optimizers; descriptors remain explicit.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -2465,7 +2465,7 @@
       }
     },
     "source-resolver.json": {
-      "sha256": "de8f2e47a6ee81c56e12ee78c37c682358911775404b442f05c7d19f6ccebee6",
+      "sha256": "2ca17e31b3f077cb884686c1f4b1ecdadf7c9fac69e5a0d83fd7b8404650642d",
       "scope": "Complete three-platform May RU SOCKS ResolveIP with actual Util.isIP. Exactly one external Connector.open instruction per artifact is captured; every other declaration, instruction, handler, class and resource stays unchanged. Natural SocketConnection callbacks observe actual class and receiver monitors during open/getAddress/close. Twelve hosts, five ports, twelve faults and null/non-null addresses cover early returns, exceptions/Error and cleanup; two real threads test class-lock contention on literal-IP and resolving branches. The historical static synchronized method and the source explicit class monitor retain their distinct declarations. Physical DNS/network, full SOCKS handshake and whole-program equivalence are outside this test.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -2517,7 +2517,7 @@
       }
     },
     "source-auxiliary-helper-bytecode.json": {
-      "sha256": "7e5f60f07cefa4006b90f3b842350d6aef1337c2e4b113eb9e1909264e87115f",
+      "sha256": "1c09574ff80852e759a4ac2f0da05c3f4dd9a7b7a451ac6d79000494de914e2d",
       "scope": "Five complete May RU helpers on each native/raw platform; three timer bodies match exactly including handlers. Full template selection and text fitting compiler/optimizer differences remain, with typed aliases bound to whole actual declarations. Raw selection reads its receiver for getTemlate and sort; receiver removal follows inlining/staticization rather than an assertion that the raw receiver is unused. The real modern static selection body and remaining getTemlate body are retained. Three timer helpers and fitField are absent after optimization; all actual raw callers and whole same-name optimized callers witness their eliminated invocations. No invented optimized helper, three-platform runtime proof or whole-program equivalence is claimed. The restored cached character-loop bound is checked in native/raw fitField and actual optimized getItemText on all platforms; no string length call remains inside that loop. Existing MIDP2 replay is recorded separately.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -2781,7 +2781,7 @@
       }
     },
     "source-exception-constructor-bytecode.json": {
-      "sha256": "3d0b3f33ba115aac44c687bae8a8d17c780db8712987445d1c54543e4befa5b8",
+      "sha256": "d36a1965cfa19c7ba83fbdb24ae03f2929e8be196f3eb067317a8269b10bee82",
       "scope": "Nine complete native/raw constructor pairs on three May RU platforms, actual whole callers and error description helpers. The two ordinary 18-instruction constructors match exactly. The native four-argument peer constructor ignores its two bool inputs; the raw generic constructor retains them. Exactly replacing its two ILOAD instructions with ICONST_1 gives the complete native body/handlers. All six actual native and raw call sites per platform pass true,true, and remain explicit. Modern optimized code has an (IIB)V constructor with the same complete specialized body and an unused dummy byte; all six actual callers pass byte zero. No surviving four-argument optimized ABI is invented. Full description-helper/compiler and access differences are retained. This proves that specialization domain, not equivalence for direct reflection calls with false flags or exception dispatch/network behavior. The generic source is retained; no application source or delivered JAR changes are made.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -3824,7 +3824,7 @@
       }
     },
     "source-remaining-helper-bytecode.json": {
-      "sha256": "faa0a79692b0a2a98e3b4f9d44e92f7391633d00cd4445861cea7de87e7b7099",
+      "sha256": "9a547a2e019eac8f000cc7314502f8c1f8b8b7f0880d9c79c261503150b51ea2",
       "scope": "Twelve complete native/raw helper pairs across three May RU platforms. Complete FileSystem directory wrappers, SendMessageAction message-ID getters and ContactListItem abstract equals declarations match exactly; native final/raw nonfinal access is retained. Traffic update has two actual true call sites per version/platform; its full generic raw predicate/byte-field accesses and whole session helper are retained, together with the actual optimized no-arg method and full differences. Both session calls remain with discarded results; they are not treated as pure or removed. Direct update(false) is outside the proven specialized domain. MIDP2/Siemens directory wrappers are inlined away, whereas Motorola keeps its full ten-instruction JSR75/vendor dispatch wrapper. All whole real raw/optimized callers remain. Modern message getter is removed; its actual sendMessage caller contains the exact signed I2L, left-shift-32 and long addition with a proven duplicated receiver/local. The optimized interface equals declaration is removed, while actual ContactItem/GroupItem equals overrides remain. Absence of a direct interface call does not imply absence of Object.equals virtual dispatch. The body/access/hierarchy inventory does not claim full behavioral equivalence of override implementations, arbitrary reflection inputs or whole-program behavior. No product source/JAR change is made.",
       "current_source_context": {
         "scope": "Every extracted owner-qualified raw/optimized whole body occurrence in this MIDP2 report, including caller witnesses, is bound to current classes. Duplicate occurrences are counted separately. Unqualified body lists, other report metadata, absence/reachability statements and runtime fixtures are outside this generic context check.",
@@ -4032,7 +4032,7 @@
     "compiler_expression_groups": 3,
     "main_raw_optimized_modifier_difference_methods": 14,
     "rebound_source_context_body_occurrences": 308,
-    "main_normalized_equal": 674
+    "main_normalized_equal": 675
   },
   "groups": [
     {
@@ -40292,7 +40292,7 @@
           "complete_dumped_method_sha256": "d234dc140ca436bc0a841f677531411e67650e345a4b42bfdf611d9eea2b6a05",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40332,7 +40332,7 @@
           "complete_dumped_method_sha256": "3840b446f9eff2efd1649e95ea2fb858c106b12c3a52611aea09df2c88569c10",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40370,7 +40370,7 @@
           "complete_dumped_method_sha256": "3537b2354061b3581bd33ed743fa95cc331930ebc1ee545cdbea2b0d4097eddb",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40408,7 +40408,7 @@
           "complete_dumped_method_sha256": "585d0ea1be1faea1e79e6950af0e9d39e799af1266e9f1d34fb5376c840fa502",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40450,7 +40450,7 @@
           "complete_dumped_method_sha256": "8532a694cfd42dd7b3f9c1ade28a1c65ba29a41e7bfb3aea71ce62a2572d4f08",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40489,13 +40489,13 @@
         {
           "member": "jimm/Jimm.setMinimized(Z)V",
           "access": 9,
-          "instructions": 16,
+          "instructions": 19,
           "handlers": [],
-          "literal_instruction_sha256": "86f92564ef67fce6bd26804db36574648418a0a65032ddff85304a153a7d11b1",
-          "complete_dumped_method_sha256": "45b2e423ad17f987bdac7ba83030cdc1aa6d53fdb68de609f127ed160afdb5e4",
+          "literal_instruction_sha256": "aaa2b889e6fd27a89c21635725eda72b77cd6bc78c1dd109fa33e819c9cd02f2",
+          "complete_dumped_method_sha256": "59b2b14795557821f00f35e6d1626fb1744fcacb07b3671edbec3de63c85fd45",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40503,16 +40503,16 @@
       "optimized": {
         "member": "jimm/Jimm.setMinimized(Z)V",
         "access": 9,
-        "instructions": 16,
+        "instructions": 19,
         "handlers": [],
-        "literal_instruction_sha256": "82f19c3a3c5c23c381ecdc7e83205b3bc7bdec1ac0e5777d1c50963874bc197c",
-        "complete_dumped_method_sha256": "7fbbd037759a370e6c84b12c675ec415d1a171a35fdce61ea7e0e878bcb5c90b"
+        "literal_instruction_sha256": "3562315783081137c487fbd1dc4cf266dc8b0d85dd5ad1958e15bbbb1fb86710",
+        "complete_dumped_method_sha256": "2fbf5ddf91d050edfdee4723ea53cf2cf995101972027679997b4b3cf2985b93"
       },
       "group": "main",
       "raw_boundary": "same owner and descriptor; optimizer name suffix removed where present",
       "raw_optimized_modifier_differences": {},
       "main_evidence_pointer": "/methods/887",
-      "whole_native_optimized_normalized_equal": false
+      "whole_native_optimized_normalized_equal": true
     },
     {
       "native": {
@@ -40533,7 +40533,7 @@
           "complete_dumped_method_sha256": "14dc167bb2bc0d4750883437e09bff85ff5cf57ba2a4101079d6a94f566ac251",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40575,7 +40575,7 @@
           "complete_dumped_method_sha256": "7efa366d2846df3b0d707262b27a4b3f1f9fc69fd01af4409c356de9a294a80d",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40615,7 +40615,7 @@
           "complete_dumped_method_sha256": "cda91d04ee13f027b70b62a24b9207b920fdd12f0e3da54af1a8e1571ab1953f",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }
@@ -40659,7 +40659,7 @@
           "complete_dumped_method_sha256": "2169327d21d3a489eeca46b07cd5679db1973a7a83debea3ef5d33b32aff4a7f",
           "declaring_source": {
             "file": "src/jimm/Jimm.java",
-            "sha256": "c533cdb188cf63a4ccd821abc7a9238ea8f0fbbe8c9eca42d45025eef7370651",
+            "sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
             "scope": "Declaring source file/type, including compiler-generated accessors; original method spelling is not inferred from this binding."
           }
         }

@@ -32,7 +32,7 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "93c2e25bc050995c231ea98ce5d88354a9d1c7a7322d6b77f655a5a3575346c5",
+          "input_sha256": "cf62892065ae39e4199d0322ac4d36c014c735d52a003121f7340160ebe4ce47",
           "configuration": {
             "error": "jimm/JimmException",
             "description": "getErrDesc",
@@ -50,15 +50,15 @@
           "actual_total_constructor_calls": 124200,
           "common_output_sha256": "b9c9e8b7ef6381c9f2799813093492f33bcace615abe975278aa1d2877d4d23f",
           "boundary_output_sha256": "78a51b7be86265e9c010ede19d7bae227796a920a5cd6a766b16adf20999e1a7",
-          "raw_class_jar_sha256": "c5a0cdfa0aa06515c5d73ca5a31a885fb67dc9ec5c1483cd8036397ed4736f3e",
-          "raw_resource_jar_sha256": "e2e75f7ea92b51f5137d8a039691a248eede6b2c7346fdd63b3114d594f658e5",
+          "raw_class_jar_sha256": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6",
+          "raw_resource_jar_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
           "exact_raw_class_and_resource_entry_dictionary_preserved": true,
           "external_siemens_light_provider": null,
           "no_application_class_or_resource_substitution": true
         },
         {
           "mode": "optimized",
-          "input_sha256": "e2e75f7ea92b51f5137d8a039691a248eede6b2c7346fdd63b3114d594f658e5",
+          "input_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
           "configuration": {
             "error": "jimm/JimmException",
             "description": "getErrDesc",

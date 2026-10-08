@@ -1,9 +1,9 @@
 {
   "scope": "Genuine May optimized and source unoptimized Util methods in isolated loaders, without body rewriting. Explicit option-table inputs control CP1251. Returns, exception classes, input array mutations and MD5 state/return aliasing are compared. The original optimizer fixes byteArrayEquals second offset and strToIntDef default to zero and the interest TLV tag to 490; stream word/dword endian and stream-factory offset are observed as false/zero. Only those observed values are tested. Large negative tariff remainders are excluded because the historical padding loop does not terminate. No whole Util equivalence, concurrency, physical J2ME charset or display claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "e2e75f7ea92b51f5137d8a039691a248eede6b2c7346fdd63b3114d594f658e5",
-  "source_unoptimized_class_jar_sha256": "c5a0cdfa0aa06515c5d73ca5a31a885fb67dc9ec5c1483cd8036397ed4736f3e",
-  "source_probe_jar_sha256": "93c2e25bc050995c231ea98ce5d88354a9d1c7a7322d6b77f655a5a3575346c5",
+  "source_jar_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
+  "source_unoptimized_class_jar_sha256": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6",
+  "source_probe_jar_sha256": "cf62892065ae39e4199d0322ac4d36c014c735d52a003121f7340160ebe4ce47",
   "observations": 1595742,
   "method_pairs": 60,
   "differences": 0,

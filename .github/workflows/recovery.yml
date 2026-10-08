@@ -127,6 +127,10 @@ jobs:
             preservation/reports/source-specialized-util-version-replay.json
             preservation/reports/source-util-abi-bytecode.json
             preservation/reports/source-util-abi-replay.json
+            preservation/reports/source-minimize-before.json
+            preservation/reports/source-minimize-bytecode.json
+            preservation/reports/source-minimize-replay.json
+            preservation/reports/source-minimize-delta.json
   verify:
     runs-on: ubuntu-latest
     steps:

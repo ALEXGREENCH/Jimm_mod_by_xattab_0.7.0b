@@ -4,8 +4,8 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_jar_sha256": "e2e75f7ea92b51f5137d8a039691a248eede6b2c7346fdd63b3114d594f658e5",
-      "source_unoptimized_class_jar_sha256": "c5a0cdfa0aa06515c5d73ca5a31a885fb67dc9ec5c1483cd8036397ed4736f3e",
+      "source_jar_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
+      "source_unoptimized_class_jar_sha256": "7a38ebbc7da9c686759eb850878a4be062c43f3984ca3ff95bbd1d17f78b0cb6",
       "observations": 11995,
       "calls": 10164,
       "action_calls": 4999,
@@ -19,7 +19,7 @@
         {
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "47cd2974659655159fe3d9ca46e7b83f60bff538311c9cff1c09cbcc53082b3a",
+          "fixture_sha256": "815aa54c40c7e00e2e9b9817f6b084c2b849c37ee58b8655a5b6b1902e9fcdff",
           "captures": {
             "184 com/nokia/mid/ui/DeviceControl.setLights(II)V": 2,
             "184 java/lang/System.currentTimeMillis()J": 2,
@@ -47,8 +47,8 @@
         },
         {
           "mode": "source",
-          "input_sha256": "93c2e25bc050995c231ea98ce5d88354a9d1c7a7322d6b77f655a5a3575346c5",
-          "fixture_sha256": "1376f694f5b4c1ee9b64520da966e29b28309cdd893892c50be04ba48e82cbfa",
+          "input_sha256": "cf62892065ae39e4199d0322ac4d36c014c735d52a003121f7340160ebe4ce47",
+          "fixture_sha256": "c6812ec44f80b254a1fc721fbbd8d212a05dbfbaa181082540ed0c6c84406528",
           "captures": {
             "184 com/nokia/mid/ui/DeviceControl.setLights(II)V": 2,
             "184 jimm/HistoryStorage.showHistoryList(Ljava/lang/String;Ljava/lang/String;)V": 1,
@@ -76,8 +76,8 @@
         },
         {
           "mode": "optimized-source",
-          "input_sha256": "e2e75f7ea92b51f5137d8a039691a248eede6b2c7346fdd63b3114d594f658e5",
-          "fixture_sha256": "6b3798c937de2312fe5ae83114f1eb38da7152e44d8e4fc25933367d30eb3f32",
+          "input_sha256": "96b59018cd4c3dda5792fae51b32567cc25cf3f573a28e4ee29d8e539792ce27",
+          "fixture_sha256": "85b53a390b643473449eb352b05e77521069e83e75bc86a787e7dc912765317b",
           "captures": {
             "184 com/nokia/mid/ui/DeviceControl.setLights(II)V": 2,
             "184 java/lang/System.currentTimeMillis()J": 2,
@@ -123,7 +123,7 @@
         {
           "mode": "reference",
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-          "fixture_sha256": "0dce53d925415ad9acbb5ea8f71f3fa3ece9d5c12a8419cd6e49fc67577cdcef",
+          "fixture_sha256": "902674c954624a4538636fd6a09f52b4e3f2e2825c52d805e7c6d1b92a10cc0e",
           "captures": {
             "182 javax/microedition/lcdui/Display.flashBacklight(I)Z": 4,
             "184 java/lang/System.currentTimeMillis()J": 2,
@@ -150,7 +150,7 @@
         {
           "mode": "source",
           "input_sha256": "216758fb5281a0c2c6a7c62a179c776faeb2ffc2ccb617ddbaa062d946595e32",
-          "fixture_sha256": "c61dcefa3b699567f0bcb6a2ffc94f22a7c876306d7e01151940bdd185aa12b5",
+          "fixture_sha256": "4b4584f1bb90359100d2f9028faf896903d1c04c6c178238c12acff3a7d778ab",
           "captures": {
             "182 javax/microedition/lcdui/Display.flashBacklight(I)Z": 3,
             "184 jimm/HistoryStorage.showHistoryList(Ljava/lang/String;Ljava/lang/String;)V": 1,
@@ -177,7 +177,7 @@
         {
           "mode": "optimized-source",
           "input_sha256": "84190c8543c8e6313681b98aecb0481a86f0efc99aa2c1e3c4544cddad7b4c58",
-          "fixture_sha256": "fcfbf9677571db0169d2881684247381a4fca6f343eb85e1aa83f0da0ec1f258",
+          "fixture_sha256": "b27a2ad26e1cc87707142297a22608d1b48b1d1175337c8b0929fe023a6f4cae",
           "captures": {
             "182 javax/microedition/lcdui/Display.flashBacklight(I)Z": 3,
             "184 java/lang/System.currentTimeMillis()J": 2,
@@ -221,7 +221,7 @@
         {
           "mode": "reference",
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-          "fixture_sha256": "2cf9005d410ca3118cd469fd78c9957dc1bc284801224f5a7ccdd88c63d24b19",
+          "fixture_sha256": "c7c9d3f8a5114b607b01be681781577c8c687c8dc6f40d568a24052b12a59425",
           "captures": {
             "184 java/lang/System.currentTimeMillis()J": 2,
             "184 cd.a(Ljava/lang/String;Ljava/lang/String;)V": 1,
@@ -248,7 +248,7 @@
         {
           "mode": "source",
           "input_sha256": "cefad63ad51f2d135d6b24760e6b35b318fb5fc660f5703e5fd29cc905da5a33",
-          "fixture_sha256": "136f05dab9f9bdff6a63c4b1d95aec1c05a60085213a21d394fdc91ec9866aaf",
+          "fixture_sha256": "3af5747abd8ab650f51784d874319de2bb3b923303647d28a88a1951ccc75cf9",
           "captures": {
             "184 jimm/HistoryStorage.showHistoryList(Ljava/lang/String;Ljava/lang/String;)V": 1,
             "184 java/lang/System.currentTimeMillis()J": 2,
@@ -275,7 +275,7 @@
         {
           "mode": "optimized-source",
           "input_sha256": "10717a141b6b93c697886695eb70b07049fe5db8c6e230a216c02700dc582e0f",
-          "fixture_sha256": "4e99f7036c9126694f36a1aad9d6c8e51bb8748778d54fc29ee6a39793a1b407",
+          "fixture_sha256": "fdd6e603f532145259ce92e000d4b80b796b9537bb5a773757f7bff30e13e368",
           "captures": {
             "184 java/lang/System.currentTimeMillis()J": 2,
             "184 jimm/HistoryStorage.showHistoryList(Ljava/lang/String;Ljava/lang/String;)V": 1,
