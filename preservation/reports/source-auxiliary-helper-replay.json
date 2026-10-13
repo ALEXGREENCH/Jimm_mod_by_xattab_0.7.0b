@@ -7,7 +7,7 @@
         {
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "1fd1600daf8db056698e29a6aa05c00d24a3c8b2c077d84f42a4d6509742c044",
+          "fixture_sha256": "88e702696372a9fcec0d604491e55b9b9decaec991f9e3614d1106e31b98a996",
           "output_sha256": "f1e7f4875e2502b8cb9e25575f639246e89f042f58bbe4a6586d5c08a814a14d",
           "observations": 1211,
           "raster_frames": 76,
@@ -264,8 +264,8 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
-          "fixture_sha256": "a9e472b8b95916a59e42c9ed0823cf431fe7f1db2127310cd7a4b8f1745f36cb",
+          "input_sha256": "a0c483df63e7f05ad9d6a9028723cdb6b26c7edd544b65a7d21bc67dc8971071",
+          "fixture_sha256": "93d3ce92bd2e4f97e2320263c3faa3a10c106ca3f5058240304ef2da03f50e70",
           "output_sha256": "f1e7f4875e2502b8cb9e25575f639246e89f042f58bbe4a6586d5c08a814a14d",
           "observations": 1211,
           "raster_frames": 76,
@@ -594,7 +594,7 @@
         {
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "e6165f01fc0254e3a2425154b049e2841d739fa4c169fafb914a448c6782066a",
+          "fixture_sha256": "088c8d0afa74637525e266513b8e0d9a12ca389c0d39926b5572ad27463bccba",
           "output_sha256": "ec509e27bfe5723c16cfe6bf4be7aa6a3e62b3dd9ee65c8e47f22cba7d9e751d",
           "observations": 1211,
           "raster_frames": 76,
@@ -851,8 +851,8 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
-          "fixture_sha256": "c486ea1861df9f40807490cd247d2e7afd5474e3e4e1ee1ad3a0d8bef8a396e5",
+          "input_sha256": "a0c483df63e7f05ad9d6a9028723cdb6b26c7edd544b65a7d21bc67dc8971071",
+          "fixture_sha256": "5074b3e818b80002f3f96cc3ec88102c8a0a27755d426d89735c8cc530530150",
           "output_sha256": "ec509e27bfe5723c16cfe6bf4be7aa6a3e62b3dd9ee65c8e47f22cba7d9e751d",
           "observations": 1211,
           "raster_frames": 76,
@@ -1181,7 +1181,7 @@
         {
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "4abcc4e1c5efda348a73749a31860d85f0dd6eb0fc97a68dae842912378fb154",
+          "fixture_sha256": "a84232beb27cb675fd119a5926eb135b5718be71eb1790fb14db9a38b59bb4a3",
           "output_sha256": "eb410cd2926048d0f406e64ac51f947b15d1cf13419033fe5fc598e50e3b4e20",
           "observations": 8941,
           "raster_frames": null,
@@ -1343,8 +1343,8 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
-          "fixture_sha256": "472353a7ecccac1950f2f700f20a29212ce74fca602f137c736213dcc2af46af",
+          "input_sha256": "a0c483df63e7f05ad9d6a9028723cdb6b26c7edd544b65a7d21bc67dc8971071",
+          "fixture_sha256": "de523a1ae8673543f6cfaa25e1243854011399d7ccf4bd439df58a11206064a7",
           "output_sha256": "eb410cd2926048d0f406e64ac51f947b15d1cf13419033fe5fc598e50e3b4e20",
           "observations": 8941,
           "raster_frames": null,
@@ -1542,7 +1542,7 @@
         {
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "759391a71738b3375344a39b25c3c7de20980a0f83d99b57e0450a669e673ce0",
+          "fixture_sha256": "d77068bd1babc524504cb1f40f7d1ae0e74a7b9049d69b451a086002d58dfd25",
           "output_sha256": "bc3adee7c44ae2f6b093c144f956368ae4885d8769fa728065bca2469280fc65",
           "observations": 6149,
           "raster_frames": 2562,
@@ -1870,8 +1870,8 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
-          "fixture_sha256": "60c8f7f130cc658ce74338ea5b3de1646d111c193bc67942e3150bc7a42186e9",
+          "input_sha256": "a0c483df63e7f05ad9d6a9028723cdb6b26c7edd544b65a7d21bc67dc8971071",
+          "fixture_sha256": "425726d3b6365379497e192f84f1d3c65ed2568de11f4ba5f6d41041afeb3592",
           "output_sha256": "bc3adee7c44ae2f6b093c144f956368ae4885d8769fa728065bca2469280fc65",
           "observations": 6149,
           "raster_frames": 2562,

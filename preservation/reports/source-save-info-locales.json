@@ -4,7 +4,7 @@
     {
       "language": "RU",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_jar_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+      "source_jar_sha256": "7b3b9315eed9018f9bb4e77eca25891f658cad4a820e8b37c785e40f1fe1d21b",
       "observations": 10767,
       "initializations": 1103,
       "forward_calls": 9030,
@@ -17,7 +17,7 @@
     {
       "language": "UA",
       "reference_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-      "source_jar_sha256": "44e1d7198ec18795687bd674b7e402159ddfbe2ae99a59e6b0d3415c5b4a97d8",
+      "source_jar_sha256": "d77b21abd664a5539d2c99c6472149d4e9d3e0a9d8f4fe2de78fc49784ed5970",
       "observations": 10767,
       "initializations": 1103,
       "forward_calls": 9030,
@@ -30,7 +30,7 @@
     {
       "language": "RO",
       "reference_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-      "source_jar_sha256": "81011616594ef037a5a3d3f326e8f6008c86968589bd489ffa65656efab9e053",
+      "source_jar_sha256": "f4b608c76f32197d965156646338dec9fb93f34d9b07938f532d9dee7ce1a62e",
       "observations": 10767,
       "initializations": 1103,
       "forward_calls": 9030,
@@ -43,7 +43,7 @@
     {
       "language": "EN",
       "reference_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-      "source_jar_sha256": "a17d0df17ab35f9510813b9373b0c12a09e55a2dc22c01481590fe04eb060b96",
+      "source_jar_sha256": "10d17cf1eecb7ee9d9cf1c95c2ef33812d5c12f9b1157aea9fb9f060b2869550",
       "observations": 10767,
       "initializations": 1103,
       "forward_calls": 9030,
@@ -56,7 +56,7 @@
     {
       "language": "CZ",
       "reference_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-      "source_jar_sha256": "679cadaa84416366c4ff3f18ef6e3900af548887afbe4f6a6eb01c685b530fff",
+      "source_jar_sha256": "578557f8354b4fc794f263a712fac8da5cba8c76e8c7ad2639f9248891ee0fe8",
       "observations": 10767,
       "initializations": 1103,
       "forward_calls": 9030,

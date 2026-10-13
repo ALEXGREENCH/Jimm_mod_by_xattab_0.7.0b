@@ -1,6 +1,6 @@
 {
   "scope": "The four actual Util helpers execute in all nine native/raw/optimized RU artifacts. Stream factory retains zero offset and observes array alias mutations, empty/null arrays and unread bytes. Word reads retain the false domain and record exact InputStream read calls, scripted IOException/EOF/null, cursor and remaining bytes. Dword writes retain false and observe full integer write arguments/order, before/after unchecked failures at all four writes, prefix/partial bytes and null. All stream subjects are completely unchanged. Only two Date allocation/constructor instructions in one real date core/wrapper are captured; all remaining classes, methods, metadata/handlers and original entries match exactly, with only two explicit provider classes added. Date wrapper false executes in all nine artifacts, core false/true in six MIDP2/Siemens artifacts. Motorola optimized core is absent, and no direct core comparison is invented there. Controlled JVM Calendar/Locale/TimeZone inputs, 11 epochs including extreme longs, four zones, ten GMT offsets and ten local offsets establish this host dataset only. Every date call reads the external clock exactly once. No generic true GMT/big-endian/nonzero offset, physical J2ME calendar or whole-program equivalence claim.",
-  "bytecode_report_sha256": "c95c5d593d8cdde23ccb407d47456feb6771d1065a717503b2ada2f1e04f1717",
+  "bytecode_report_sha256": "986b1db9ed4ddced606b39999e64b1aa464ec5184a86a840c4608c97b9c0f6bd",
   "builds": [
     {
       "target": "MIDP2",
@@ -9,7 +9,7 @@
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "f3adadf469da6a98819e27ae5d74d30f92fa4e6213f965a726a83341b5113528",
+          "fixture_sha256": "1f61008c33fdf6ac49d2ff3b1cdd8a86eed220b2d77bcea6e0df648101a35669",
           "configuration": {
             "mode": "reference",
             "target": "MIDP2",
@@ -1065,9 +1065,9 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
-          "raw_with_resources_input_sha256": "b6f81d0c4206afabb2d664743ffa93915e6ee6b19a6e56e6610e9a36fd61aaa6",
-          "fixture_sha256": "7261476262c94d089fff58d021388d23d0aee4eb9b864dcb9d4919de98eba834",
+          "input_sha256": "a0c483df63e7f05ad9d6a9028723cdb6b26c7edd544b65a7d21bc67dc8971071",
+          "raw_with_resources_input_sha256": "de864cc14ba48896dfb3a12ff35b37dbdcb842394a0030e22b790333783d1d3a",
+          "fixture_sha256": "41596d8dec8b88aa12a03461b070d322d1fa750eaec89f1b580ae84318245be5",
           "configuration": {
             "mode": "raw",
             "target": "MIDP2",
@@ -1857,9 +1857,9 @@
             },
             {
               "owner": "jimm/OptionsForm",
-              "original_whole_class_sha256": "1f630e4b7e5729ed525991470d75c783fdd8fc393cc8075e224cf6cb3f207922",
-              "expected_whole_class_sha256": "1f630e4b7e5729ed525991470d75c783fdd8fc393cc8075e224cf6cb3f207922",
-              "actual_whole_class_sha256": "1f630e4b7e5729ed525991470d75c783fdd8fc393cc8075e224cf6cb3f207922"
+              "original_whole_class_sha256": "b5533efc731227a179b684f103e7687c0dd579478a82ab04064ad887815b9fd6",
+              "expected_whole_class_sha256": "b5533efc731227a179b684f103e7687c0dd579478a82ab04064ad887815b9fd6",
+              "actual_whole_class_sha256": "b5533efc731227a179b684f103e7687c0dd579478a82ab04064ad887815b9fd6"
             },
             {
               "owner": "jimm/RunnableImpl",
@@ -2198,9 +2198,9 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+          "input_sha256": "7b3b9315eed9018f9bb4e77eca25891f658cad4a820e8b37c785e40f1fe1d21b",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "8de267ebb4e0f3f37f375c770197afe78936773d5ad9061f311b30cbc7c2a39c",
+          "fixture_sha256": "ec41b6f4e4cc967708b936c0fba8e580a4602e3e0464ffe11bde4ba756190e62",
           "configuration": {
             "mode": "optimized",
             "target": "MIDP2",
@@ -2921,9 +2921,9 @@
             },
             {
               "owner": "jimm/OptionsForm",
-              "original_whole_class_sha256": "ab9217c1b5765673aa19b64d1e434f2cc27be1637cd83971349a9d1276efc543",
-              "expected_whole_class_sha256": "ab9217c1b5765673aa19b64d1e434f2cc27be1637cd83971349a9d1276efc543",
-              "actual_whole_class_sha256": "ab9217c1b5765673aa19b64d1e434f2cc27be1637cd83971349a9d1276efc543"
+              "original_whole_class_sha256": "bb60fab2cb643d1a3ec3240f236ea80ebaf2874ab1e658f5928d3c984ea3d0a5",
+              "expected_whole_class_sha256": "bb60fab2cb643d1a3ec3240f236ea80ebaf2874ab1e658f5928d3c984ea3d0a5",
+              "actual_whole_class_sha256": "bb60fab2cb643d1a3ec3240f236ea80ebaf2874ab1e658f5928d3c984ea3d0a5"
             },
             {
               "owner": "jimm/RunnableImpl",
@@ -3258,7 +3258,7 @@
           "mode": "reference",
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "4271d7a82b1e1516addc0df8a240fe8d2f18e3c1d95e7720e6f86035add78407",
+          "fixture_sha256": "51478884a6f3a3dccde5bc78c8b48ddf7cd3a8b1e579e788aef90e72a420cb35",
           "configuration": {
             "mode": "reference",
             "target": "MOTOROLA",
@@ -4298,9 +4298,9 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "e0b41c86b9bcb6b6a5037260016b6abc017b8e6ad7cf48acd390cac95bc72d3c",
-          "raw_with_resources_input_sha256": "149fe9599c4b508d0f0f2a79cf0e43dba9df9a1781d61f421b66a5aeec153ca2",
-          "fixture_sha256": "a3cbd4fd0a34df23441e5db3f2b6459427ca5cd4bd3d049272e9e4916f1d1d48",
+          "input_sha256": "f02f1feca7981ec2341ac394bf858c34ebbb541ac565cf1a8872a71069a4f1d9",
+          "raw_with_resources_input_sha256": "3bedac9f6bca9417ac49a1481ff87ed57abbc48883590e5f00bed01152992f9c",
+          "fixture_sha256": "1f78732c3d0974273246b85ff383c95f91c9a5594e6d12659c3fa59c548c82c0",
           "configuration": {
             "mode": "raw",
             "target": "MOTOROLA",
@@ -5090,9 +5090,9 @@
             },
             {
               "owner": "jimm/OptionsForm",
-              "original_whole_class_sha256": "1c2ee0825ba2c1689dffd9886d070d29c152b3bd998d128cfc7b3aad8e07b9f5",
-              "expected_whole_class_sha256": "1c2ee0825ba2c1689dffd9886d070d29c152b3bd998d128cfc7b3aad8e07b9f5",
-              "actual_whole_class_sha256": "1c2ee0825ba2c1689dffd9886d070d29c152b3bd998d128cfc7b3aad8e07b9f5"
+              "original_whole_class_sha256": "021621d63b53c20396271f8c2c939023c14b756ddbcc3a918bfd24bdac100efc",
+              "expected_whole_class_sha256": "021621d63b53c20396271f8c2c939023c14b756ddbcc3a918bfd24bdac100efc",
+              "actual_whole_class_sha256": "021621d63b53c20396271f8c2c939023c14b756ddbcc3a918bfd24bdac100efc"
             },
             {
               "owner": "jimm/RunnableImpl",
@@ -5415,9 +5415,9 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
+          "input_sha256": "37b45a792524ea046b68be020309a83dc520c74171c772ca953ddda05ca9a44f",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "1f88adda18bfa0c3634b5958fadda6322f2f8a96599602058004907725d4943f",
+          "fixture_sha256": "c90d15f2db0431412a2b1108c27d42bc1f9f075c0ab6c0f4c877d0cad848ea3c",
           "configuration": {
             "mode": "optimized",
             "target": "MOTOROLA",
@@ -6118,9 +6118,9 @@
             },
             {
               "owner": "jimm/OptionsForm",
-              "original_whole_class_sha256": "b12d6e4ecbe9cba6c6b3fba0abd30ceb2297de3bd6bf6506a68d09536ca5ece6",
-              "expected_whole_class_sha256": "b12d6e4ecbe9cba6c6b3fba0abd30ceb2297de3bd6bf6506a68d09536ca5ece6",
-              "actual_whole_class_sha256": "b12d6e4ecbe9cba6c6b3fba0abd30ceb2297de3bd6bf6506a68d09536ca5ece6"
+              "original_whole_class_sha256": "653eb6e627f3ae3b6c444894ee683744f5191e70468d4cbad4a7591fa9e3c766",
+              "expected_whole_class_sha256": "653eb6e627f3ae3b6c444894ee683744f5191e70468d4cbad4a7591fa9e3c766",
+              "actual_whole_class_sha256": "653eb6e627f3ae3b6c444894ee683744f5191e70468d4cbad4a7591fa9e3c766"
             },
             {
               "owner": "jimm/RunnableImpl",
@@ -6439,7 +6439,7 @@
           "mode": "reference",
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "88c0a2b3ef16cc74cb8755a8f226260da02d552722aaf4631a7472df05214080",
+          "fixture_sha256": "50e60abb23556729d22846c9628c43f6989cfa7e059a59b3b2b2b19a5bd4def7",
           "configuration": {
             "mode": "reference",
             "target": "SIEMENS2",
@@ -7483,9 +7483,9 @@
         },
         {
           "mode": "raw",
-          "input_sha256": "349d1b211d5ad89c05b8f6a07399e78249215356634abde83dd4d9f22f3091dd",
-          "raw_with_resources_input_sha256": "7ce77cf1356a61f330eb4fa117ad67dc799fb5c9e51bdd5fe4f4f8250c45fdaf",
-          "fixture_sha256": "c946e059d81b9749718fd15e653cae30beb3f3a13ffa585d64e33be4dfe5c6c1",
+          "input_sha256": "d0cce02b65a6cbf28b5d856b4aef12cb93c4f1939d692b0f849904a1ff07695c",
+          "raw_with_resources_input_sha256": "56908b84dab55ab3c46624838ed8880239d36f7ebadc2ce37c397de0fe3c63d2",
+          "fixture_sha256": "e50f6602950807388fe0c77d3a0ea3d809ee0c283d8f9b231256d572fcf1f47f",
           "configuration": {
             "mode": "raw",
             "target": "SIEMENS2",
@@ -8263,9 +8263,9 @@
             },
             {
               "owner": "jimm/OptionsForm",
-              "original_whole_class_sha256": "b78304f220c0944a37270c7b6128fb4f544ef775032f40a116f703ed95ef981d",
-              "expected_whole_class_sha256": "b78304f220c0944a37270c7b6128fb4f544ef775032f40a116f703ed95ef981d",
-              "actual_whole_class_sha256": "b78304f220c0944a37270c7b6128fb4f544ef775032f40a116f703ed95ef981d"
+              "original_whole_class_sha256": "e1a4ce57c158de0cf53b4477552d9f75b8be3c360ef90ead039640eec0ab9f41",
+              "expected_whole_class_sha256": "e1a4ce57c158de0cf53b4477552d9f75b8be3c360ef90ead039640eec0ab9f41",
+              "actual_whole_class_sha256": "e1a4ce57c158de0cf53b4477552d9f75b8be3c360ef90ead039640eec0ab9f41"
             },
             {
               "owner": "jimm/RunnableImpl",
@@ -8604,9 +8604,9 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
+          "input_sha256": "0f11c97668fd527b93e73e44e1325c546f2f28cf1172ae579b745e8e0e2c790a",
           "raw_with_resources_input_sha256": null,
-          "fixture_sha256": "1c7ccfa19087e84b1d7429dea0d4733a95d1ae0e761fe200f8c43612e463d3f5",
+          "fixture_sha256": "829307afc3eb6b5150ce5937225464df5fca81dc7fc0dd6649fade7d957c1558",
           "configuration": {
             "mode": "optimized",
             "target": "SIEMENS2",
@@ -9315,9 +9315,9 @@
             },
             {
               "owner": "jimm/OptionsForm",
-              "original_whole_class_sha256": "a3c9b3cfd089782849782b207e1ed0b393490fa2e5a331f58a930f35a4299d1c",
-              "expected_whole_class_sha256": "a3c9b3cfd089782849782b207e1ed0b393490fa2e5a331f58a930f35a4299d1c",
-              "actual_whole_class_sha256": "a3c9b3cfd089782849782b207e1ed0b393490fa2e5a331f58a930f35a4299d1c"
+              "original_whole_class_sha256": "58e6f0538e2bae2b24de22da4c356a6e394849b6e530910e8db82e10b4ffce2a",
+              "expected_whole_class_sha256": "58e6f0538e2bae2b24de22da4c356a6e394849b6e530910e8db82e10b4ffce2a",
+              "actual_whole_class_sha256": "58e6f0538e2bae2b24de22da4c356a6e394849b6e530910e8db82e10b4ffce2a"
             },
             {
               "owner": "jimm/RunnableImpl",

@@ -4,12 +4,12 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "raw_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
-      "delivered_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+      "raw_sha256": "a0c483df63e7f05ad9d6a9028723cdb6b26c7edd544b65a7d21bc67dc8971071",
+      "delivered_sha256": "7b3b9315eed9018f9bb4e77eca25891f658cad4a820e8b37c785e40f1fe1d21b",
       "proofs": [
         {
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "8f08cb0f5192382c52d9f61bf78c943d85741ab2072dd7c5b7709d1c4d2ba07f",
+          "fixture_sha256": "72ae09ef3dec6a1dcbf9529ee4c7d8882f970016588d30cbe9c6a2b08b814d38",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -109,7 +109,7 @@
         },
         {
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "ebbd2656ddd5e466b5a9744bcf807fab6281d1a0f5c3049723a38ce80fc54e94",
+          "fixture_sha256": "25a10108b9d98c906d7314d1a17643fe44dd07659e65929ce0c4b22b15ddfa5d",
           "changed_application_entries": [
             "cl.class",
             "co.class"
@@ -524,8 +524,8 @@
           "journal_entry_snapshot_observations": 638
         },
         {
-          "input_sha256": "b6f81d0c4206afabb2d664743ffa93915e6ee6b19a6e56e6610e9a36fd61aaa6",
-          "fixture_sha256": "1713e0953ad698dfbdc4b712d185291d5d50743294e8819331479fe94c2cfcac",
+          "input_sha256": "de864cc14ba48896dfb3a12ff35b37dbdcb842394a0030e22b790333783d1d3a",
+          "fixture_sha256": "6ff7252e2695c4cf79ac6d5230975356e54ac2b1aa546c0139094b55ee2ba631",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -624,8 +624,8 @@
           "journal_entry_snapshot_observations": 0
         },
         {
-          "input_sha256": "b6f81d0c4206afabb2d664743ffa93915e6ee6b19a6e56e6610e9a36fd61aaa6",
-          "fixture_sha256": "49ed7376084ed3518dd0e8d8483f8e5c7ee398f4311190105c036014eba38309",
+          "input_sha256": "de864cc14ba48896dfb3a12ff35b37dbdcb842394a0030e22b790333783d1d3a",
+          "fixture_sha256": "90caa87f2fb75bd89608c915b92d64824c95a36f7452db68153e489d9edb4174",
           "changed_application_entries": [
             "jimm/comm/SendMessageAction.class",
             "jimm/comm/Util.class"
@@ -1048,8 +1048,8 @@
           "journal_entry_snapshot_observations": 638
         },
         {
-          "input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
-          "fixture_sha256": "397d28ccc4c8d1764e0bb0739151b0165efa4c7040d6aa3120b9be562b998e41",
+          "input_sha256": "7b3b9315eed9018f9bb4e77eca25891f658cad4a820e8b37c785e40f1fe1d21b",
+          "fixture_sha256": "deaa98ec4bbafa4bbe14234cfe8252c43c1c72936f6ce7c21cd9b7f13d2845a8",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -1148,8 +1148,8 @@
           "journal_entry_snapshot_observations": 0
         },
         {
-          "input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
-          "fixture_sha256": "614dbb62565cc598c5d537e977400dc80c6ac480326146524aa7f69ef4ebe420",
+          "input_sha256": "7b3b9315eed9018f9bb4e77eca25891f658cad4a820e8b37c785e40f1fe1d21b",
+          "fixture_sha256": "9f819b41183d9e0d6cddb40ae5a0dc49a4f5b05686cece0701f48dff38f3655c",
           "changed_application_entries": [
             "jimm/comm/SendMessageAction.class",
             "jimm/comm/Util.class"
@@ -1590,12 +1590,12 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "raw_sha256": "e0b41c86b9bcb6b6a5037260016b6abc017b8e6ad7cf48acd390cac95bc72d3c",
-      "delivered_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
+      "raw_sha256": "f02f1feca7981ec2341ac394bf858c34ebbb541ac565cf1a8872a71069a4f1d9",
+      "delivered_sha256": "37b45a792524ea046b68be020309a83dc520c74171c772ca953ddda05ca9a44f",
       "proofs": [
         {
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-          "fixture_sha256": "6d89356a1d47df703c5c97218678126b8885f744285623a624931743bc69a037",
+          "fixture_sha256": "75af7b6271fda0eb1017e6d0818965c523b725e28db7136a2dfcbb1e06898a4b",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -1697,7 +1697,7 @@
         },
         {
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-          "fixture_sha256": "cbd12b0394e0c28baece69e2996a722088aa505b1100755565bd16fc0eb717b3",
+          "fixture_sha256": "b85963611782d3e9cd74d868bd1c2a934de39fbbd686a8e1100dfe4f60e3d7f4",
           "changed_application_entries": [
             "ck.class",
             "cn.class"
@@ -2114,8 +2114,8 @@
           "journal_entry_snapshot_observations": 638
         },
         {
-          "input_sha256": "149fe9599c4b508d0f0f2a79cf0e43dba9df9a1781d61f421b66a5aeec153ca2",
-          "fixture_sha256": "a8708a9f6611b9a5ea073bed7eda16c12d69d9bf58c210eafe44fb9d1bdfd817",
+          "input_sha256": "3bedac9f6bca9417ac49a1481ff87ed57abbc48883590e5f00bed01152992f9c",
+          "fixture_sha256": "46059dcea8dc28f84f93640a67f581fda8302fb4b7d473564c9339f191daf38f",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -2216,8 +2216,8 @@
           "journal_entry_snapshot_observations": 0
         },
         {
-          "input_sha256": "149fe9599c4b508d0f0f2a79cf0e43dba9df9a1781d61f421b66a5aeec153ca2",
-          "fixture_sha256": "3d2d028806f09a4548552b8e1057c5e2c57ce3b3c7902c58ac753f84ee660667",
+          "input_sha256": "3bedac9f6bca9417ac49a1481ff87ed57abbc48883590e5f00bed01152992f9c",
+          "fixture_sha256": "de0a657bcfe61edab1422165d1a469d0ffd2a444e035c764b74e8ea37e21051f",
           "changed_application_entries": [
             "jimm/comm/SendMessageAction.class",
             "jimm/comm/Util.class"
@@ -2642,8 +2642,8 @@
           "journal_entry_snapshot_observations": 638
         },
         {
-          "input_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
-          "fixture_sha256": "bd20af4622236421e2973cbd88b0d6c63d723ddd3e68e8dda0256c933fa6c9cb",
+          "input_sha256": "37b45a792524ea046b68be020309a83dc520c74171c772ca953ddda05ca9a44f",
+          "fixture_sha256": "c43c74caf31cb5028e778cc88d2209652a461d81ebd8a8d4a4bbda05aa178d82",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -2744,8 +2744,8 @@
           "journal_entry_snapshot_observations": 0
         },
         {
-          "input_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
-          "fixture_sha256": "cf05d72824cfe910ed05b9c952d066fbf425ce875e06723f19888162079feaf4",
+          "input_sha256": "37b45a792524ea046b68be020309a83dc520c74171c772ca953ddda05ca9a44f",
+          "fixture_sha256": "0e15a693bd012a9725e76f21c8c3ddf9f923c34dc9a88db0a3b4c5936a5ce02c",
           "changed_application_entries": [
             "jimm/comm/SendMessageAction.class",
             "jimm/comm/Util.class"
@@ -3142,12 +3142,12 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "raw_sha256": "349d1b211d5ad89c05b8f6a07399e78249215356634abde83dd4d9f22f3091dd",
-      "delivered_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
+      "raw_sha256": "d0cce02b65a6cbf28b5d856b4aef12cb93c4f1939d692b0f849904a1ff07695c",
+      "delivered_sha256": "0f11c97668fd527b93e73e44e1325c546f2f28cf1172ae579b745e8e0e2c790a",
       "proofs": [
         {
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-          "fixture_sha256": "6e8360545ac2c426413e289da806db7c073db8c259111f5234576ff77131772b",
+          "fixture_sha256": "d271b742342715db748de7de95738b777c84d775274dc1203e1f5a818a913a4f",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -3247,7 +3247,7 @@
         },
         {
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-          "fixture_sha256": "64da74a3527472a3adc21c43cfb476a350e7bb905b70700218c8fd0ba5d95146",
+          "fixture_sha256": "5a25c1d62026296db7469a2542fd454f775e3d5c11ba12ecd673d2af0be54d26",
           "changed_application_entries": [
             "cj.class",
             "cm.class"
@@ -3662,8 +3662,8 @@
           "journal_entry_snapshot_observations": 638
         },
         {
-          "input_sha256": "7ce77cf1356a61f330eb4fa117ad67dc799fb5c9e51bdd5fe4f4f8250c45fdaf",
-          "fixture_sha256": "6c8640ff403312a95197ecbb2bedae234db27459f1144919bebf8aea82a55c98",
+          "input_sha256": "56908b84dab55ab3c46624838ed8880239d36f7ebadc2ce37c397de0fe3c63d2",
+          "fixture_sha256": "36355ab400d904e1a03fd52b44b7ba196c580b9a09b0d60b747852e439627064",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -3762,8 +3762,8 @@
           "journal_entry_snapshot_observations": 0
         },
         {
-          "input_sha256": "7ce77cf1356a61f330eb4fa117ad67dc799fb5c9e51bdd5fe4f4f8250c45fdaf",
-          "fixture_sha256": "479da73bd4ebabd302852e63abeea38843565f7d408960815e07b3e3206952a6",
+          "input_sha256": "56908b84dab55ab3c46624838ed8880239d36f7ebadc2ce37c397de0fe3c63d2",
+          "fixture_sha256": "60864b464939fb54b5f41a910c00b7c436bd089f124212549730f04c8f2e65d3",
           "changed_application_entries": [
             "jimm/comm/SendMessageAction.class",
             "jimm/comm/Util.class"
@@ -4186,8 +4186,8 @@
           "journal_entry_snapshot_observations": 638
         },
         {
-          "input_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
-          "fixture_sha256": "e132d33ab3384f8aff667479eaab96410e173991ef9825345f510d2ce81a859f",
+          "input_sha256": "0f11c97668fd527b93e73e44e1325c546f2f28cf1172ae579b745e8e0e2c790a",
+          "fixture_sha256": "b539ee9dc2e5046c3d231c799fa8ffa27e3584fd25e02158252983342c954074",
           "changed_application_entries": [],
           "added_entries": [
             "AntispamIO$Clock.class",
@@ -4286,8 +4286,8 @@
           "journal_entry_snapshot_observations": 0
         },
         {
-          "input_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
-          "fixture_sha256": "e614d4a68441ae0e5499863ab7a2b1a56886a0c17b5b7e7527049e987d314f91",
+          "input_sha256": "0f11c97668fd527b93e73e44e1325c546f2f28cf1172ae579b745e8e0e2c790a",
+          "fixture_sha256": "8e77d626cc5db6b844a2c7c741c2b02b128a7f29c625f006f342493e0386af30",
           "changed_application_entries": [
             "jimm/comm/SendMessageAction.class",
             "jimm/comm/Util.class"

@@ -1442,6 +1442,7 @@ class OptionsForm implements CommandListener, ItemStateListener
 	{
 		if (uinTextField != null)
 		{
+			JimmUI.setLastScreen(optionsForm);
 			int accCount = uinTextField.length;
 			if (accCount != 1)
 			{
@@ -1456,7 +1457,7 @@ class OptionsForm implements CommandListener, ItemStateListener
 		//select file for background
 		if (item == bgImgChoiceGroup && bgImgChoiceGroup.isSelected(2))
 		{
-			Options.setInt(Options.OPTION_BACKGROUND_MODE, 2);
+			Options.setInt(Options.OPTION_BACKGROUND_MODE, bgImgChoiceGroup.getSelectedIndex());
 			//#sijapp cond.if modules_FILES is "true"#
 			FileTransfer ft = new FileTransfer(FileTransfer.FT_TYPE_FILE_BY_NAME, null);
 			ft.startFT();
