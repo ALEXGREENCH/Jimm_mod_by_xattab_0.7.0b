@@ -1,9 +1,9 @@
 {
   "scope": "All five May/optimized MIDP2 localization pairs match complete 19-instruction editor-preserving minimize bodies and empty handlers. Actual display-field and work-screen-method declarations and whole direct callers are retained. Raw keeps its full local/branch compiler difference. All ten Motorola/Siemens native/delivered Jimm inventories lack static boolean methods; their actual raw sources also lack setMinimized. The guard remains inside the original MIDP2 SiJaPP block, with only the necessary TextBox import added. No arbitrary all-platform minimize API or whole-program equivalence claim.",
   "source_file": "src/jimm/Jimm.java",
-  "source_sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
+  "source_sha256": "7b7a584a77ccb0b3127a442458b17b3e1c05b0a1dd013bedace363086579efbb",
   "raw_midp2": {
-    "input_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
+    "input_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
     "complete_method": {
       "name": "setMinimized",
       "desc": "(Z)V",
@@ -2381,7 +2381,7 @@
         ]
       },
       "optimized": {
-        "input_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
+        "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
         "complete_method": {
           "name": "setMinimized",
           "desc": "(Z)V",
@@ -5171,7 +5171,7 @@
         ]
       },
       "optimized": {
-        "input_sha256": "6a40b923fcf41cd9ba47c84d29bbb28147d5a34345be654c02644ed846992574",
+        "input_sha256": "94b9b4a8359b6b552f20a65afa808b3549e40c057c9cbfeed2470e9b23608ca8",
         "complete_method": {
           "name": "setMinimized",
           "desc": "(Z)V",
@@ -7961,7 +7961,7 @@
         ]
       },
       "optimized": {
-        "input_sha256": "163e56aa0cb3dee5f9c9b4d4a96780983126547ea4e54651f392c05d5ae12b8d",
+        "input_sha256": "e7b5158f92a2c0b90efdda87ee36e816bacc1c437e65ae1cdff0d36b2fd58477",
         "complete_method": {
           "name": "setMinimized",
           "desc": "(Z)V",
@@ -10751,7 +10751,7 @@
         ]
       },
       "optimized": {
-        "input_sha256": "abab335dbe6aff34339f896477cbb306bbcaca7c45005e35751974e5d30ac0fc",
+        "input_sha256": "0bfb65054235723fc640a85ae4f3353674cc2afe611baf21506da76ba2112168",
         "complete_method": {
           "name": "setMinimized",
           "desc": "(Z)V",
@@ -13541,7 +13541,7 @@
         ]
       },
       "optimized": {
-        "input_sha256": "7be0a38ddbf8dc985c4f00f3ac862bf2f325784b7f20cba3970a866e9d6bdc9d",
+        "input_sha256": "96591ded940ff413581e3a368f06b2b03c74d30e92336f41281d451f0f2bba77",
         "complete_method": {
           "name": "setMinimized",
           "desc": "(Z)V",
@@ -15005,7 +15005,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023",
+          "input_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15106,7 +15106,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "1efbeaa59402badbebda7e547a7595eb0d66c76572654dfddb8b65b2cc409912",
+          "input_sha256": "7599bf000f4bcdd7c52a5c41ce62dce3aff7e62bf943e1178fe38c322d6dad0e",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15207,7 +15207,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "6d53801918c00e3a8fc7e9af80795a77f1ff023d2889d0ab4609c4eaa9901de9",
+          "input_sha256": "5acb3cf704589994650e5f07408d9ed76c50ce579b66e2d9c41824f6081b0ebf",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15308,7 +15308,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "f0974a21987b3b023ad5da06755515c8cfa087d7f257e3cf9d39af5850e597b1",
+          "input_sha256": "ca5a61b64e2f2d0ebaf498969d5745a4d03aa168ee85a0ae8c89b66f61458243",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15409,7 +15409,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "96fc16195bae1df323856108d786b4245ee401ee528af68709df27212ebf7d96",
+          "input_sha256": "6fd023500cd4b9f445ed7ef6724f197d9595680518aeb52c3f8a1c7691cce94a",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15510,7 +15510,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672",
+          "input_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15616,7 +15616,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "077980efd16013a8a0d8904e6d3091c876ce9ee5222d7066d069724778794f75",
+          "input_sha256": "9bcb33255ea7011643172872966ede84b23930c8c312df98393de3f37c5f0f7f",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15722,7 +15722,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "8afd6efbabd7027fe004ddec9681df13bd7f97bfba31d80cda822cdec4d8b199",
+          "input_sha256": "a26191f17c5295344d543cfb2163e2f2c0843911a7f1e2cc7d79840ccbac51ee",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15828,7 +15828,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "11e2db4c85fe2f1179b69c109e2b290427514b331f75811220bea498a5dc88ad",
+          "input_sha256": "530df328799074c448612bc0f136b2d6db382478998024de66dbe26be960e8cb",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {
@@ -15934,7 +15934,7 @@
         },
         {
           "mode": "optimized",
-          "input_sha256": "ea50af6c09420d422228d85446f3252a94df32db3b3cb90b36f6f6ffef7a7898",
+          "input_sha256": "db4b55f25de0533dba472a9fbce1133da1c0d70e49cdc18d32e7fa7bcd843ba0",
           "actual_static_boolean_declarations": [],
           "all_jimm_method_declarations": [
             {

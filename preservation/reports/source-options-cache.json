@@ -5,8 +5,8 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "raw_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
-      "delivered_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
+      "raw_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
+      "delivered_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
       "opens": 1536,
       "observations": 1537,
       "different_observations": 0,
@@ -14,7 +14,7 @@
         {
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "cb73e4361492caebb0a4f5e629d68327f1e33058b90bdeb4fe6840f48338b62c",
+          "fixture_sha256": "bf864671b30f30ceb9746ad7767b5a29155282bfafba36b1a996b7edcc41e65e",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [
@@ -38,8 +38,8 @@
         },
         {
           "mode": "source",
-          "input_sha256": "9566c578e5612a395cf52c8695a446ed1bdf490af516ee906b2376a55490dd8a",
-          "fixture_sha256": "40f3b1ca75445158e11ee42f18ace4add4ac57b146dd77c2b3b09eff74013b37",
+          "input_sha256": "6364a227a33412e294fbfe3e157149ad4b73e22686cc759ecb73c299c43fac6d",
+          "fixture_sha256": "81c0a8b70619318e2ab9f5aa1ab8730330818ab63e595589bd771a476173a423",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [
@@ -63,8 +63,8 @@
         },
         {
           "mode": "optimized-source",
-          "input_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
-          "fixture_sha256": "390109fe2387410fca49d78e91551e5783e535fc73e00ccbde14903130657d58",
+          "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+          "fixture_sha256": "340c3d2dff78e81d35621ca18eb2ab08aefea7bc7178a3417aec10f7b87b109b",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [
@@ -91,8 +91,8 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "raw_sha256": "5ecd2d0a242b63926770652f64e3b1a35da87bd54eddae3f00eaef969e369cd0",
-      "delivered_sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023",
+      "raw_sha256": "2d3eff726a66e53cd05f453711044e4699425711f01b486d330219d3d280363b",
+      "delivered_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
       "opens": 1536,
       "observations": 1537,
       "different_observations": 0,
@@ -100,7 +100,7 @@
         {
           "mode": "reference",
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-          "fixture_sha256": "7521dc6909abeca64b62957fbab0c3557559afc995c0645a6787b2deb003813a",
+          "fixture_sha256": "f15d3cc2dcd8fe935b2b9167ab48662a6072ef5385c8795739136c5559434f7d",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [
@@ -124,8 +124,8 @@
         },
         {
           "mode": "source",
-          "input_sha256": "5e16af5dd93d7f320232394794b8d2d1941ddd25022742f2195f29d86548e181",
-          "fixture_sha256": "e26dfc9c810a4fdfc4102c09db8ef7789bb7c9b0436e4ab844698cdd3752d0e2",
+          "input_sha256": "70b7ef85e5b8c0617f0b74b2a75f6885a45ec4bf8b9ea324a81dbb0960d2c785",
+          "fixture_sha256": "3c05ef750b78adff437b4a2b907ed320d4a5c815f8239b0a390223db4731748c",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [
@@ -149,8 +149,8 @@
         },
         {
           "mode": "optimized-source",
-          "input_sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023",
-          "fixture_sha256": "465947abb8f478ef297c4fa2cb1268a3103b65cbce833518cac8481a434897c8",
+          "input_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
+          "fixture_sha256": "88447a6e4e9197caa13d781f39fb34e6b65e0b3e495c9df5bcafadbc69ab4c73",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [
@@ -177,8 +177,8 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "raw_sha256": "88f358fd92308a9065b6c1b479d4c7bf0762c9a6a600907cc172102273e1c781",
-      "delivered_sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672",
+      "raw_sha256": "73edbe780c41b00b310e8958d64a1f74e0e13bd0561a517cb33c76c8464b8bd6",
+      "delivered_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
       "opens": 1536,
       "observations": 1537,
       "different_observations": 0,
@@ -186,7 +186,7 @@
         {
           "mode": "reference",
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-          "fixture_sha256": "d77ba0e3eea0494da15a3d4a4b7c05b167a9736eafb8a384dc0c273dbeaf2d52",
+          "fixture_sha256": "52cdc3b295a2af3948c0af4bec5ddbe49e986b9cfdc4abd8d5550d4f5ea4bde2",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [
@@ -210,8 +210,8 @@
         },
         {
           "mode": "source",
-          "input_sha256": "6315445844b81da58c3f2bb61f2c1421a8d0c4d04248b54fc7a8847968c8ed52",
-          "fixture_sha256": "d39358908bdf2e06ced519cc8318ecaced915135d06d9e5b80580a3520ad510b",
+          "input_sha256": "bcabff7a5f684beb79bcbcf30a3e7f7aeacaf37f802ed0e2ff24b8ae7cf1f9b4",
+          "fixture_sha256": "eabb5c4af4fc2755e03dc67ff58933bb8169743bb8b84d00a8d3411ad056fee7",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [
@@ -235,8 +235,8 @@
         },
         {
           "mode": "optimized-source",
-          "input_sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672",
-          "fixture_sha256": "14c8eb24d382b4f596d26d77be65ed0d7fc31683981885dc974d164b13b1a894",
+          "input_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
+          "fixture_sha256": "9e4fbe9b16e4258a1852cd99f96ab3de3da1bf050dd698a8d15f965fc7a24cd0",
           "output_sha256": "41697681c80c6817422b3b60eda341e8a342552ad6fe90d072b51392613e6be4",
           "all_input_application_bytes_unchanged": true,
           "entry_instructions": [

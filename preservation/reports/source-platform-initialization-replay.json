@@ -1,0 +1,1318 @@
+{
+  "scope": "The genuine complete MIDP2 Jimm static initializer executes directly from each original input JAR in 1400 fresh isolated JVM class loaders per version. No application/API class, instruction, method or resource is rewritten and no fixture artifact is substituted. A real custom java.util.Properties installed in each probe process observes actual System.getProperty callbacks, returns explicit platform/profile/Sony strings, or throws actual SecurityException/AssertionError at one of three properties. US/Turkish default Locale, ten platforms, two profile values, five Sony values and seven failure cases are covered. Unsafe reads the actual partially initialized static fields without recursively initializing the class, including after uncaught initializer failure. Actual Timer instances are cancelled, System properties/Locale restored and loaders closed. Full property-read traces, eight shared bound scalar/string fields, Timer presence and actual completion/error classes are recorded. Actual retained JP8 fields have a separate matching 1400-row observation series. The genuine pre-edit optimized field was absent; after restoration of its editor consumer the field is actually retained and compared in all three versions. No pre-seeding static fields, synthetic predicate or physical-device/whole-program equivalence claim.",
+  "source_file": "src/jimm/Jimm.java",
+  "source_sha256": "7b7a584a77ccb0b3127a442458b17b3e1c05b0a1dd013bedace363086579efbb",
+  "evidence": [
+    {
+      "complete_initializer": {
+        "name": "<clinit>",
+        "desc": "()V",
+        "access": 8,
+        "code": [
+          "187 java/util/Timer",
+          "89",
+          "183 java/util/Timer.<init>()V",
+          "179 jimm/Jimm.a Ljava/util/Timer;",
+          "18 String:microedition.platform",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.b Ljava/lang/String;",
+          "18 String:microedition.profiles",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.c Ljava/lang/String;",
+          "1",
+          "179 jimm/Jimm.d Ljava/lang/String;",
+          "3",
+          "179 jimm/Jimm.g Z",
+          "4",
+          "179 jimm/Jimm.h Z",
+          "178 jimm/Jimm.b Ljava/lang/String;",
+          "198 74",
+          "178 jimm/Jimm.b Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "89",
+          "58 0",
+          "18 String:fly",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 28",
+          "4",
+          "167 29",
+          "3",
+          "179 jimm/Jimm.a Z",
+          "25 0",
+          "18 String:ericsson",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 37",
+          "4",
+          "167 38",
+          "3",
+          "179 jimm/Jimm.b Z",
+          "25 0",
+          "18 String:nokia",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 46",
+          "4",
+          "167 47",
+          "3",
+          "179 jimm/Jimm.e Z",
+          "178 jimm/Jimm.b Z",
+          "153 74",
+          "18 String:com.sonyericsson.java.platform",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "89",
+          "179 jimm/Jimm.d Ljava/lang/String;",
+          "18 String:jp-8",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 61",
+          "4",
+          "167 62",
+          "3",
+          "179 jimm/Jimm.c Z",
+          "178 jimm/Jimm.d Ljava/lang/String;",
+          "18 String:sjp",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 70",
+          "4",
+          "167 71",
+          "3",
+          "179 jimm/Jimm.d Z",
+          "167 74",
+          "87",
+          "178 jimm/Jimm.e Z",
+          "179 jimm/Jimm.f Z",
+          "177"
+        ],
+        "handlers": [
+          "50 72 73 java/lang/Exception"
+        ],
+        "strings": [
+          "microedition.platform",
+          "microedition.profiles",
+          "fly",
+          "ericsson",
+          "nokia",
+          "com.sonyericsson.java.platform",
+          "jp-8",
+          "sjp"
+        ],
+        "refs": [
+          "183 java/util/Timer.<init>()V",
+          "179 jimm/Jimm.a Ljava/util/Timer;",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.b Ljava/lang/String;",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.c Ljava/lang/String;",
+          "179 jimm/Jimm.d Ljava/lang/String;",
+          "179 jimm/Jimm.g Z",
+          "179 jimm/Jimm.h Z",
+          "178 jimm/Jimm.b Ljava/lang/String;",
+          "178 jimm/Jimm.b Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.a Z",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.b Z",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.e Z",
+          "178 jimm/Jimm.b Z",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "179 jimm/Jimm.d Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.c Z",
+          "178 jimm/Jimm.d Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.d Z",
+          "178 jimm/Jimm.e Z",
+          "179 jimm/Jimm.f Z"
+        ]
+      },
+      "complete_bound_field_declarations": {
+        "microeditionPlatform": {
+          "name": "b",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        "microeditionProfiles": {
+          "name": "c",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        "sonyEricssonPlatform": {
+          "name": "d",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        "is_phone_FLY": {
+          "name": "a",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        "is_phone_SE": {
+          "name": "b",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        "is_phone_NOKIA": {
+          "name": "e",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        "is_smart_SE": {
+          "name": "d",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        "supportsNokiaLight": {
+          "name": "f",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        "timer": {
+          "name": "a",
+          "desc": "Ljava/util/Timer;",
+          "access": 10,
+          "value": "null"
+        },
+        "is_JP8": {
+          "name": "c",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        }
+      },
+      "typed_instructions": [
+        "187 java/util/Timer",
+        "89",
+        "183 java/util/Timer.<init>()V",
+        "179 jimm/Jimm.timer Ljava/util/Timer;",
+        "18 String:microedition.platform",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "179 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "18 String:microedition.profiles",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "179 jimm/Jimm.microeditionProfiles Ljava/lang/String;",
+        "1",
+        "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "3",
+        "179 jimm/Jimm.g Z",
+        "4",
+        "179 jimm/Jimm.h Z",
+        "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "198 74",
+        "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+        "89",
+        "58 0",
+        "18 String:fly",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 28",
+        "4",
+        "167 29",
+        "3",
+        "179 jimm/Jimm.is_phone_FLY Z",
+        "25 0",
+        "18 String:ericsson",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 37",
+        "4",
+        "167 38",
+        "3",
+        "179 jimm/Jimm.is_phone_SE Z",
+        "25 0",
+        "18 String:nokia",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 46",
+        "4",
+        "167 47",
+        "3",
+        "179 jimm/Jimm.is_phone_NOKIA Z",
+        "178 jimm/Jimm.is_phone_SE Z",
+        "153 74",
+        "18 String:com.sonyericsson.java.platform",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+        "89",
+        "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "18 String:jp-8",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 61",
+        "4",
+        "167 62",
+        "3",
+        "179 jimm/Jimm.is_JP8 Z",
+        "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "18 String:sjp",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 70",
+        "4",
+        "167 71",
+        "3",
+        "179 jimm/Jimm.is_smart_SE Z",
+        "167 74",
+        "87",
+        "178 jimm/Jimm.is_phone_NOKIA Z",
+        "179 jimm/Jimm.supportsNokiaLight Z",
+        "177"
+      ],
+      "actual_jp8_field": {
+        "name": "c",
+        "desc": "Z",
+        "access": 9,
+        "value": "null"
+      },
+      "complete_jimm_field_inventory": [
+        {
+          "name": "a",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "a",
+          "desc": "Ljimm/Jimm;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "a",
+          "desc": "Ljavax/microedition/lcdui/Display;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "a",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "b",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "c",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "d",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "e",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "f",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "a",
+          "desc": "Ljava/util/Timer;",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "a",
+          "desc": "Lcv;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "a",
+          "desc": "Lw;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "a",
+          "desc": "Ljava/io/InputStream;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "b",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        {
+          "name": "c",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        {
+          "name": "d",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "g",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "h",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        }
+      ],
+      "lowercase_instruction_positions": [
+        19,
+        52
+      ],
+      "actual_jp8_output_sha256": "520edf6c4a429538c665490f7d927c96298715ab24de25e3fd737b1f67f42bf8",
+      "mode": "reference",
+      "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "output_sha256": "c854dff4e0339f9ed13f907f6aefef10915bce6cf4c711480235ef5b518eeed6",
+      "observations": 1400,
+      "all_original_artifact_bytes_unchanged": true,
+      "result": "PASS platform initializer: 1400 observations of complete unmodified classes, real System property callbacks and partial state"
+    },
+    {
+      "complete_initializer": {
+        "name": "<clinit>",
+        "desc": "()V",
+        "access": 8,
+        "code": [
+          "187 java/util/Timer",
+          "89",
+          "183 java/util/Timer.<init>()V",
+          "179 jimm/Jimm.timer Ljava/util/Timer;",
+          "18 String:microedition.platform",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "18 String:microedition.profiles",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.microeditionProfiles Ljava/lang/String;",
+          "1",
+          "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "3",
+          "179 jimm/Jimm.supportsCamCapture Z",
+          "4",
+          "179 jimm/Jimm.isPasswordProtected Z",
+          "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "198 74",
+          "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "58 0",
+          "25 0",
+          "18 String:fly",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 28",
+          "4",
+          "167 29",
+          "3",
+          "179 jimm/Jimm.is_phone_FLY Z",
+          "25 0",
+          "18 String:ericsson",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 37",
+          "4",
+          "167 38",
+          "3",
+          "179 jimm/Jimm.is_phone_SE Z",
+          "25 0",
+          "18 String:nokia",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 46",
+          "4",
+          "167 47",
+          "3",
+          "179 jimm/Jimm.is_phone_NOKIA Z",
+          "178 jimm/Jimm.is_phone_SE Z",
+          "153 74",
+          "18 String:com.sonyericsson.java.platform",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "18 String:jp-8",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 61",
+          "4",
+          "167 62",
+          "3",
+          "179 jimm/Jimm.is_JP8 Z",
+          "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "18 String:sjp",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 70",
+          "4",
+          "167 71",
+          "3",
+          "179 jimm/Jimm.is_smart_SE Z",
+          "167 74",
+          "87",
+          "178 jimm/Jimm.is_phone_NOKIA Z",
+          "179 jimm/Jimm.supportsNokiaLight Z",
+          "177"
+        ],
+        "handlers": [
+          "50 72 73 java/lang/Exception"
+        ],
+        "strings": [
+          "microedition.platform",
+          "microedition.profiles",
+          "fly",
+          "ericsson",
+          "nokia",
+          "com.sonyericsson.java.platform",
+          "jp-8",
+          "sjp"
+        ],
+        "refs": [
+          "183 java/util/Timer.<init>()V",
+          "179 jimm/Jimm.timer Ljava/util/Timer;",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.microeditionProfiles Ljava/lang/String;",
+          "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "179 jimm/Jimm.supportsCamCapture Z",
+          "179 jimm/Jimm.isPasswordProtected Z",
+          "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_phone_FLY Z",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_phone_SE Z",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_phone_NOKIA Z",
+          "178 jimm/Jimm.is_phone_SE Z",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_JP8 Z",
+          "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_smart_SE Z",
+          "178 jimm/Jimm.is_phone_NOKIA Z",
+          "179 jimm/Jimm.supportsNokiaLight Z"
+        ]
+      },
+      "complete_bound_field_declarations": {
+        "microeditionPlatform": {
+          "name": "microeditionPlatform",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        "microeditionProfiles": {
+          "name": "microeditionProfiles",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        "sonyEricssonPlatform": {
+          "name": "sonyEricssonPlatform",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        "is_phone_FLY": {
+          "name": "is_phone_FLY",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        "is_phone_SE": {
+          "name": "is_phone_SE",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        "is_phone_NOKIA": {
+          "name": "is_phone_NOKIA",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        "is_smart_SE": {
+          "name": "is_smart_SE",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        "supportsNokiaLight": {
+          "name": "supportsNokiaLight",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        "timer": {
+          "name": "timer",
+          "desc": "Ljava/util/Timer;",
+          "access": 10,
+          "value": "null"
+        },
+        "is_JP8": {
+          "name": "is_JP8",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        }
+      },
+      "typed_instructions": [
+        "187 java/util/Timer",
+        "89",
+        "183 java/util/Timer.<init>()V",
+        "179 jimm/Jimm.timer Ljava/util/Timer;",
+        "18 String:microedition.platform",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "179 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "18 String:microedition.profiles",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "179 jimm/Jimm.microeditionProfiles Ljava/lang/String;",
+        "1",
+        "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "3",
+        "179 jimm/Jimm.supportsCamCapture Z",
+        "4",
+        "179 jimm/Jimm.isPasswordProtected Z",
+        "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "198 74",
+        "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+        "58 0",
+        "25 0",
+        "18 String:fly",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 28",
+        "4",
+        "167 29",
+        "3",
+        "179 jimm/Jimm.is_phone_FLY Z",
+        "25 0",
+        "18 String:ericsson",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 37",
+        "4",
+        "167 38",
+        "3",
+        "179 jimm/Jimm.is_phone_SE Z",
+        "25 0",
+        "18 String:nokia",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 46",
+        "4",
+        "167 47",
+        "3",
+        "179 jimm/Jimm.is_phone_NOKIA Z",
+        "178 jimm/Jimm.is_phone_SE Z",
+        "153 74",
+        "18 String:com.sonyericsson.java.platform",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+        "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "18 String:jp-8",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 61",
+        "4",
+        "167 62",
+        "3",
+        "179 jimm/Jimm.is_JP8 Z",
+        "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "18 String:sjp",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 70",
+        "4",
+        "167 71",
+        "3",
+        "179 jimm/Jimm.is_smart_SE Z",
+        "167 74",
+        "87",
+        "178 jimm/Jimm.is_phone_NOKIA Z",
+        "179 jimm/Jimm.supportsNokiaLight Z",
+        "177"
+      ],
+      "actual_jp8_field": {
+        "name": "is_JP8",
+        "desc": "Z",
+        "access": 9,
+        "value": "null"
+      },
+      "complete_jimm_field_inventory": [
+        {
+          "name": "VERSION",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "jimm",
+          "desc": "Ljimm/Jimm;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "display",
+          "desc": "Ljavax/microedition/lcdui/Display;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "icq",
+          "desc": "Ljimm/comm/Icq;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "o",
+          "desc": "Ljimm/Options;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "mm",
+          "desc": "Ljimm/MainMenu;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "cl",
+          "desc": "Ljimm/ContactList;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "ch",
+          "desc": "Ljimm/ChatHistory;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "is_phone_FLY",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "is_phone_SE",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "is_smart_SE",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "is_phone_NOKIA",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "is_JP8",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "supportsNokiaLight",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "timer",
+          "desc": "Ljava/util/Timer;",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "traffic",
+          "desc": "Ljimm/Traffic;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "sc",
+          "desc": "Ljimm/SplashCanvas;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "history",
+          "desc": "Ljimm/HistoryStorage;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "fs",
+          "desc": "Ljimm/FileSystem;",
+          "access": 0,
+          "value": "null"
+        },
+        {
+          "name": "InStr",
+          "desc": "Ljava/io/InputStream;",
+          "access": 1,
+          "value": "null"
+        },
+        {
+          "name": "ui",
+          "desc": "Ljimm/JimmUI;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "microeditionPlatform",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        {
+          "name": "microeditionProfiles",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        {
+          "name": "sonyEricssonPlatform",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "supportsCamCapture",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "isPasswordProtected",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        }
+      ],
+      "lowercase_instruction_positions": [
+        19,
+        52
+      ],
+      "actual_jp8_output_sha256": "520edf6c4a429538c665490f7d927c96298715ab24de25e3fd737b1f67f42bf8",
+      "mode": "raw",
+      "input_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
+      "output_sha256": "c854dff4e0339f9ed13f907f6aefef10915bce6cf4c711480235ef5b518eeed6",
+      "observations": 1400,
+      "all_original_artifact_bytes_unchanged": true,
+      "result": "PASS platform initializer: 1400 observations of complete unmodified classes, real System property callbacks and partial state"
+    },
+    {
+      "complete_initializer": {
+        "name": "<clinit>",
+        "desc": "()V",
+        "access": 8,
+        "code": [
+          "187 java/util/Timer",
+          "89",
+          "183 java/util/Timer.<init>()V",
+          "179 jimm/Jimm.timer Ljava/util/Timer;",
+          "18 String:microedition.platform",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "18 String:microedition.profiles",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.microeditionProfiles Ljava/lang/String;",
+          "1",
+          "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "3",
+          "179 jimm/Jimm.supportsCamCapture Z",
+          "4",
+          "179 jimm/Jimm.isPasswordProtected Z",
+          "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "198 74",
+          "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "89",
+          "58 0",
+          "18 String:fly",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 28",
+          "4",
+          "167 29",
+          "3",
+          "179 jimm/Jimm.is_phone_FLY Z",
+          "25 0",
+          "18 String:ericsson",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 37",
+          "4",
+          "167 38",
+          "3",
+          "179 jimm/Jimm.is_phone_SE Z",
+          "25 0",
+          "18 String:nokia",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 46",
+          "4",
+          "167 47",
+          "3",
+          "179 jimm/Jimm.is_phone_NOKIA Z",
+          "178 jimm/Jimm.is_phone_SE Z",
+          "153 74",
+          "18 String:com.sonyericsson.java.platform",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "89",
+          "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "18 String:jp-8",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 61",
+          "4",
+          "167 62",
+          "3",
+          "179 jimm/Jimm.is_JP8 Z",
+          "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "18 String:sjp",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "2",
+          "159 70",
+          "4",
+          "167 71",
+          "3",
+          "179 jimm/Jimm.is_smart_SE Z",
+          "167 74",
+          "87",
+          "178 jimm/Jimm.is_phone_NOKIA Z",
+          "179 jimm/Jimm.supportsNokiaLight Z",
+          "177"
+        ],
+        "handlers": [
+          "50 72 73 java/lang/Exception"
+        ],
+        "strings": [
+          "microedition.platform",
+          "microedition.profiles",
+          "fly",
+          "ericsson",
+          "nokia",
+          "com.sonyericsson.java.platform",
+          "jp-8",
+          "sjp"
+        ],
+        "refs": [
+          "183 java/util/Timer.<init>()V",
+          "179 jimm/Jimm.timer Ljava/util/Timer;",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "179 jimm/Jimm.microeditionProfiles Ljava/lang/String;",
+          "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "179 jimm/Jimm.supportsCamCapture Z",
+          "179 jimm/Jimm.isPasswordProtected Z",
+          "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_phone_FLY Z",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_phone_SE Z",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_phone_NOKIA Z",
+          "178 jimm/Jimm.is_phone_SE Z",
+          "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+          "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+          "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_JP8 Z",
+          "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+          "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+          "179 jimm/Jimm.is_smart_SE Z",
+          "178 jimm/Jimm.is_phone_NOKIA Z",
+          "179 jimm/Jimm.supportsNokiaLight Z"
+        ]
+      },
+      "complete_bound_field_declarations": {
+        "microeditionPlatform": {
+          "name": "microeditionPlatform",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        "microeditionProfiles": {
+          "name": "microeditionProfiles",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        "sonyEricssonPlatform": {
+          "name": "sonyEricssonPlatform",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        "is_phone_FLY": {
+          "name": "is_phone_FLY",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        "is_phone_SE": {
+          "name": "is_phone_SE",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        "is_phone_NOKIA": {
+          "name": "is_phone_NOKIA",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        "is_smart_SE": {
+          "name": "is_smart_SE",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        "supportsNokiaLight": {
+          "name": "supportsNokiaLight",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        "timer": {
+          "name": "timer",
+          "desc": "Ljava/util/Timer;",
+          "access": 10,
+          "value": "null"
+        },
+        "is_JP8": {
+          "name": "is_JP8",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        }
+      },
+      "typed_instructions": [
+        "187 java/util/Timer",
+        "89",
+        "183 java/util/Timer.<init>()V",
+        "179 jimm/Jimm.timer Ljava/util/Timer;",
+        "18 String:microedition.platform",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "179 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "18 String:microedition.profiles",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "179 jimm/Jimm.microeditionProfiles Ljava/lang/String;",
+        "1",
+        "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "3",
+        "179 jimm/Jimm.supportsCamCapture Z",
+        "4",
+        "179 jimm/Jimm.isPasswordProtected Z",
+        "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "198 74",
+        "178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+        "89",
+        "58 0",
+        "18 String:fly",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 28",
+        "4",
+        "167 29",
+        "3",
+        "179 jimm/Jimm.is_phone_FLY Z",
+        "25 0",
+        "18 String:ericsson",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 37",
+        "4",
+        "167 38",
+        "3",
+        "179 jimm/Jimm.is_phone_SE Z",
+        "25 0",
+        "18 String:nokia",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 46",
+        "4",
+        "167 47",
+        "3",
+        "179 jimm/Jimm.is_phone_NOKIA Z",
+        "178 jimm/Jimm.is_phone_SE Z",
+        "153 74",
+        "18 String:com.sonyericsson.java.platform",
+        "184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        "182 java/lang/String.toLowerCase()Ljava/lang/String;",
+        "89",
+        "179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "18 String:jp-8",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 61",
+        "4",
+        "167 62",
+        "3",
+        "179 jimm/Jimm.is_JP8 Z",
+        "178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "18 String:sjp",
+        "182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        "2",
+        "159 70",
+        "4",
+        "167 71",
+        "3",
+        "179 jimm/Jimm.is_smart_SE Z",
+        "167 74",
+        "87",
+        "178 jimm/Jimm.is_phone_NOKIA Z",
+        "179 jimm/Jimm.supportsNokiaLight Z",
+        "177"
+      ],
+      "actual_jp8_field": {
+        "name": "is_JP8",
+        "desc": "Z",
+        "access": 9,
+        "value": "null"
+      },
+      "complete_jimm_field_inventory": [
+        {
+          "name": "VERSION",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "jimm",
+          "desc": "Ljimm/Jimm;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "display",
+          "desc": "Ljavax/microedition/lcdui/Display;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "is_phone_FLY",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "is_phone_SE",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "is_smart_SE",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "is_phone_NOKIA",
+          "desc": "Z",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "is_JP8",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "supportsNokiaLight",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "timer",
+          "desc": "Ljava/util/Timer;",
+          "access": 10,
+          "value": "null"
+        },
+        {
+          "name": "sc",
+          "desc": "Ljimm/SplashCanvas;",
+          "access": 0,
+          "value": "null"
+        },
+        {
+          "name": "fs",
+          "desc": "Ljimm/FileSystem;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "InStr",
+          "desc": "Ljava/io/InputStream;",
+          "access": 2,
+          "value": "null"
+        },
+        {
+          "name": "microeditionPlatform",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        {
+          "name": "microeditionProfiles",
+          "desc": "Ljava/lang/String;",
+          "access": 25,
+          "value": "null"
+        },
+        {
+          "name": "sonyEricssonPlatform",
+          "desc": "Ljava/lang/String;",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "supportsCamCapture",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        },
+        {
+          "name": "isPasswordProtected",
+          "desc": "Z",
+          "access": 9,
+          "value": "null"
+        }
+      ],
+      "lowercase_instruction_positions": [
+        19,
+        52
+      ],
+      "actual_jp8_output_sha256": "520edf6c4a429538c665490f7d927c96298715ab24de25e3fd737b1f67f42bf8",
+      "mode": "optimized",
+      "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+      "output_sha256": "c854dff4e0339f9ed13f907f6aefef10915bce6cf4c711480235ef5b518eeed6",
+      "observations": 1400,
+      "all_original_artifact_bytes_unchanged": true,
+      "result": "PASS platform initializer: 1400 observations of complete unmodified classes, real System property callbacks and partial state"
+    }
+  ],
+  "comparisons": [
+    {
+      "mode": "raw",
+      "complete_output_bytes_equal": true,
+      "differing_observations": 0,
+      "all_actual_differing_rows": [],
+      "whole_typed_instruction_diff": [
+        "--- ",
+        "+++ ",
+        "@@ -11,15 +11,15 @@",
+        " 1",
+        " 179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        " 3",
+        "-179 jimm/Jimm.g Z",
+        "+179 jimm/Jimm.supportsCamCapture Z",
+        " 4",
+        "-179 jimm/Jimm.h Z",
+        "+179 jimm/Jimm.isPasswordProtected Z",
+        " 178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        " 198 74",
+        " 178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        " 182 java/lang/String.toLowerCase()Ljava/lang/String;",
+        "-89",
+        " 58 0",
+        "+25 0",
+        " 18 String:fly",
+        " 182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        " 2",
+        "@@ -51,8 +51,8 @@",
+        " 18 String:com.sonyericsson.java.platform",
+        " 184 java/lang/System.getProperty(Ljava/lang/String;)Ljava/lang/String;",
+        " 182 java/lang/String.toLowerCase()Ljava/lang/String;",
+        "-89",
+        " 179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        "+178 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        " 18 String:jp-8",
+        " 182 java/lang/String.indexOf(Ljava/lang/String;)I",
+        " 2"
+      ]
+    },
+    {
+      "mode": "optimized",
+      "complete_output_bytes_equal": true,
+      "differing_observations": 0,
+      "all_actual_differing_rows": [],
+      "whole_typed_instruction_diff": [
+        "--- ",
+        "+++ ",
+        "@@ -11,9 +11,9 @@",
+        " 1",
+        " 179 jimm/Jimm.sonyEricssonPlatform Ljava/lang/String;",
+        " 3",
+        "-179 jimm/Jimm.g Z",
+        "+179 jimm/Jimm.supportsCamCapture Z",
+        " 4",
+        "-179 jimm/Jimm.h Z",
+        "+179 jimm/Jimm.isPasswordProtected Z",
+        " 178 jimm/Jimm.microeditionPlatform Ljava/lang/String;",
+        " 198 74",
+        " 178 jimm/Jimm.microeditionPlatform Ljava/lang/String;"
+      ]
+    }
+  ],
+  "before_report_sha256": "f3d9fce5c2d2d0fbe869aefe492b5fbd2e01d3993556d170ad8406eb2e6f46bd",
+  "genuine_before_differences": {
+    "raw": 150,
+    "optimized": 150
+  }
+}

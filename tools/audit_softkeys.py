@@ -33,7 +33,7 @@ def expanded(proof, native):
     for i,s in enumerate(code):
         labels[('subject',i)] = ordinal
         if i in removed: continue
-        if not native and i == 0:
+        if proof['complete_caption_offset_helper'] is not None and i == 0:
             for j,t in enumerate(proof['whole_caption_offset_prefix']):
                 labels[('caption',j)] = ordinal; records.append(('caption',t)); ordinal += 1
         else: records.append(('subject',s)); ordinal += 1
@@ -44,7 +44,7 @@ def expanded(proof, native):
             operand = str(labels[(region,int(operand))])
         result.append(op + sep + operand)
     assert len(removed) in [0,4]
-    return result, dict(expanded_real_static_caption_helper=not native,
+    return result, dict(expanded_real_static_caption_helper=proof['complete_caption_offset_helper'] is not None,
                        expanded_actual_two_instruction_device_getters=len(flag_getters),
                        removed_only_raw_dead_right_menu_instruction_positions=sorted(removed), actual_typed_aliases=aliases)
 
@@ -89,7 +89,7 @@ def main():
     source = recover.ROOT/'src/DrawControls/VirtualList.java'
     report = dict(scope='Whole three-platform native/raw/optimized bodies and empty handlers, all actual shared field declarations, '
                   'getter bodies/table and every direct caller retained. All bodies read swap key 143 before XStatus key 185 before font key 118. '
-                  'The full raw/optimized caption-offset helper is expanded at its sole leading call, as are actual two-instruction device getters; '
+                  'An available full source caption-offset helper is expanded at its sole leading call; an already inlined prefix is retained as actual code. Actual two-instruction device getters are expanded; '
                   'branch coordinates are explicitly rebased. Only the two raw dead MENU_RIGHT assignment pairs are excluded, matching its actual absence '
                   'from all native/optimized declarations; source ABI and all raw writes remain in the whole evidence. '
                   'After these enumerated compiler operations all six source bodies equal their complete native 41/27-instruction counterparts. '

@@ -364,7 +364,7 @@ public class JimmUI implements CommandListener, VirtualListCommands
 						sendMessage(messText, textMessReceiver);
 						//#sijapp cond.if target is "MIDP2"#
 						setString(null);
-						if (Jimm.is_phone_SE()) messageTextbox = null;
+						if (Jimm.is_phone_SE() && !Jimm.is_JP8) messageTextbox = null;
 						//#sijapp cond.else#
 						setString(null);
 						//#sijapp cond.end#

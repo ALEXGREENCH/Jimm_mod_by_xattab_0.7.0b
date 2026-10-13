@@ -1,7 +1,7 @@
 {
   "scope": "The whole genuine assignSoftKeys methods, actual raw caption helper and actual Options getInt/getBoolean bodies execute without any instruction or declaration edits. A headless MicroEmulator device and minimal MIDlet initialize host APIs; each fixture changes only the manifest and adds that host class. Every original application/resource byte and whole dumped class remains unchanged. Seven shared mutable fields are bound to actual typed writes: left/right caption offsets, three surviving menu directions, XStatus placement and font view. The raw fourth MENU_RIGHT field/write is preserved and explicitly excluded from native/optimized observations because optimization removes it. All four real Nokia/SE flag combinations on MIDP2 and no invented device flags on Motorola/Siemens, both swap and XStatus values, three font integers and two offset pairs include signed-overflow edges. Nineteen actual option-table states include valid/null tables, seven truncated lengths and null/wrong-type values at five consumed keys. Three consecutive broken/repaired/broken calls observe real exception class, every shared field and unchanged table contents. 5472 observations/version on MIDP2 and 1368/version on each other RU platform; no scripted getter, fake subject or whole-program/concurrency/physical-key claim.",
   "source_file": "src/DrawControls/VirtualList.java",
-  "source_sha256": "c6fce374c799f5f8b8f07cfae8867b893a34c68cc73e91d5b6c6e0e8e23d595a",
+  "source_sha256": "67d13416c7f04ddd00085e670e547d314d8b8672653f069769463179b4a3805d",
   "builds": [
     {
       "target": "MIDP2",
@@ -5228,7 +5228,7 @@
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
           "assembled_input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "604a2f5bb8f9b5a1932b116828b55a4d6ac28cd37f663e2e7edfd6753718e2a5",
+          "fixture_sha256": "6acc6df76db2588cfd093df8b55f4e901f1513bd69c35465c977860b684d663a",
           "output_sha256": "4bb93546001d5c6267e4af0565631a05be44c506ee8c40a2a37c784abe83625d",
           "observations": 5472,
           "all_original_application_and_resource_bytes_unchanged": true,
@@ -5655,7 +5655,6 @@
                   "89",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "3",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
@@ -5667,6 +5666,8 @@
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "2",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "1",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "1",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "16 64",
@@ -5694,13 +5695,13 @@
                   "179 DrawControls/VirtualList.scrollerWidth I",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
                   "179 DrawControls/VirtualList.lastPointerYCrd I",
                   "179 DrawControls/VirtualList.lastPointerTopItem I",
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "178 jimm/Options.fontStyle I",
                   "184 javax/microedition/lcdui/Font.getFont(III)Ljavax/microedition/lcdui/Font;",
@@ -5711,7 +5712,7 @@
                 ]
               },
               "positions": [
-                18
+                17
               ]
             },
             {
@@ -10298,9 +10299,9 @@
             "16 118"
           ],
           "mode": "raw",
-          "input_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
-          "assembled_input_sha256": "9566c578e5612a395cf52c8695a446ed1bdf490af516ee906b2376a55490dd8a",
-          "fixture_sha256": "45dd2906f61b157d69aee75bf94f3e750f96e0cd198427763ef9c6c999d2712b",
+          "input_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
+          "assembled_input_sha256": "6364a227a33412e294fbfe3e157149ad4b73e22686cc759ecb73c299c43fac6d",
+          "fixture_sha256": "dd3a2d1258241961f8eb4a7ecf766c053c3e77ce2a36d1ebacc1f7d082b84432",
           "output_sha256": "4bb93546001d5c6267e4af0565631a05be44c506ee8c40a2a37c784abe83625d",
           "observations": 5472,
           "all_original_application_and_resource_bytes_unchanged": true,
@@ -10316,17 +10317,34 @@
             "desc": "()V",
             "access": 9,
             "code": [
-              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "184 jimm/Jimm.is_phone_NOKIA()Z",
+              "153 7",
+              "16 95",
+              "184 jimm/Options.getInt(I)I",
+              "5",
+              "96",
+              "167 8",
+              "5",
+              "179 DrawControls/VirtualList.leftOffset I",
+              "184 jimm/Jimm.is_phone_SE()Z",
+              "153 16",
+              "16 96",
+              "184 jimm/Options.getInt(I)I",
+              "5",
+              "96",
+              "167 17",
+              "5",
+              "179 DrawControls/VirtualList.rightOffset I",
               "17 143",
               "184 jimm/Options.getBoolean(I)Z",
-              "153 11",
+              "153 28",
               "5",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "4",
               "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
               "7",
               "179 DrawControls/VirtualList.MENU_LEFT I",
-              "167 17",
+              "167 34",
               "4",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "5",
@@ -10344,7 +10362,12 @@
             "handlers": [],
             "strings": [],
             "refs": [
-              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "184 jimm/Jimm.is_phone_NOKIA()Z",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.leftOffset I",
+              "184 jimm/Jimm.is_phone_SE()Z",
+              "184 jimm/Options.getInt(I)I",
+              "179 DrawControls/VirtualList.rightOffset I",
               "184 jimm/Options.getBoolean(I)Z",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
@@ -10504,42 +10527,7 @@
               }
             }
           ],
-          "complete_caption_offset_helper": {
-            "name": "setCaptionOffsets",
-            "desc": "()V",
-            "access": 10,
-            "code": [
-              "184 jimm/Jimm.is_phone_NOKIA()Z",
-              "153 7",
-              "16 95",
-              "184 jimm/Options.getInt(I)I",
-              "5",
-              "96",
-              "167 8",
-              "5",
-              "179 DrawControls/VirtualList.leftOffset I",
-              "184 jimm/Jimm.is_phone_SE()Z",
-              "153 16",
-              "16 96",
-              "184 jimm/Options.getInt(I)I",
-              "5",
-              "96",
-              "167 17",
-              "5",
-              "179 DrawControls/VirtualList.rightOffset I",
-              "177"
-            ],
-            "handlers": [],
-            "strings": [],
-            "refs": [
-              "184 jimm/Jimm.is_phone_NOKIA()Z",
-              "184 jimm/Options.getInt(I)I",
-              "179 DrawControls/VirtualList.leftOffset I",
-              "184 jimm/Jimm.is_phone_SE()Z",
-              "184 jimm/Options.getInt(I)I",
-              "179 DrawControls/VirtualList.rightOffset I"
-            ]
-          },
+          "complete_caption_offset_helper": null,
           "whole_caption_offset_prefix": [
             "184 jimm/Jimm.is_phone_NOKIA()Z",
             "153 7",
@@ -10652,7 +10640,7 @@
           },
           "complete_menu_arms": [
             {
-              "start": 4,
+              "start": 21,
               "complete_assignment_pairs": [
                 [
                   "5",
@@ -10668,10 +10656,10 @@
                 ]
               ],
               "source_only_unused_right_menu_write": [],
-              "terminator": "167 17"
+              "terminator": "167 34"
             },
             {
-              "start": 11,
+              "start": 28,
               "complete_assignment_pairs": [
                 [
                   "4",
@@ -10713,7 +10701,6 @@
                   "89",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "3",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
@@ -10725,6 +10712,8 @@
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "2",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "1",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "1",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "16 64",
@@ -10751,13 +10740,13 @@
                   "179 DrawControls/VirtualList.capFont Ljavax/microedition/lcdui/Font;",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
                   "179 DrawControls/VirtualList.lastPointerYCrd I",
                   "179 DrawControls/VirtualList.lastPointerTopItem I",
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "178 jimm/Options.fontStyle I",
                   "184 javax/microedition/lcdui/Font.getFont(III)Ljavax/microedition/lcdui/Font;",
@@ -10768,7 +10757,7 @@
                 ]
               },
               "positions": [
-                16
+                15
               ]
             },
             {
@@ -15307,9 +15296,9 @@
             "16 118"
           ],
           "mode": "optimized",
-          "input_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
-          "assembled_input_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
-          "fixture_sha256": "a3ec893500843d20a782753109f79bc1e0452bd60a8fe7107d0ba280d0114bc9",
+          "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+          "assembled_input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+          "fixture_sha256": "7cd2661680a2610ec8503b3d2afa9e0b2f18d90d7c79c5f24ed16c7ba685407c",
           "output_sha256": "4bb93546001d5c6267e4af0565631a05be44c506ee8c40a2a37c784abe83625d",
           "observations": 5472,
           "all_original_application_and_resource_bytes_unchanged": true,
@@ -20322,7 +20311,7 @@
           "mode": "reference",
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
           "assembled_input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-          "fixture_sha256": "1182ddcbefd63646730f1a0d9d944bb77dca22bc1247a7c51d88c9819baa00d0",
+          "fixture_sha256": "9cd13c8829b648dfe4d7c7c59bf8bde49400ab84633759ae643921d672b455a5",
           "output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
           "observations": 1368,
           "all_original_application_and_resource_bytes_unchanged": true,
@@ -20673,7 +20662,6 @@
                   "89",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "3",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
@@ -20681,6 +20669,8 @@
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "2",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "1",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "1",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "16 64",
@@ -20708,11 +20698,11 @@
                   "179 DrawControls/VirtualList.scrollerWidth I",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "178 jimm/Options.fontStyle I",
                   "184 javax/microedition/lcdui/Font.getFont(III)Ljavax/microedition/lcdui/Font;",
@@ -20723,7 +20713,7 @@
                 ]
               },
               "positions": [
-                16
+                15
               ]
             },
             {
@@ -25133,9 +25123,9 @@
             "16 118"
           ],
           "mode": "raw",
-          "input_sha256": "5ecd2d0a242b63926770652f64e3b1a35da87bd54eddae3f00eaef969e369cd0",
-          "assembled_input_sha256": "5e16af5dd93d7f320232394794b8d2d1941ddd25022742f2195f29d86548e181",
-          "fixture_sha256": "777d29c2a9e0fe3e55e85d2ece002df29a63db919a7299d515a4242045db6c80",
+          "input_sha256": "2d3eff726a66e53cd05f453711044e4699425711f01b486d330219d3d280363b",
+          "assembled_input_sha256": "70b7ef85e5b8c0617f0b74b2a75f6885a45ec4bf8b9ea324a81dbb0960d2c785",
+          "fixture_sha256": "625110d7125e88da0574fbbd5af07c8599efe19138106494565a8bc71d5c334b",
           "output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
           "observations": 1368,
           "all_original_application_and_resource_bytes_unchanged": true,
@@ -25151,17 +25141,20 @@
             "desc": "()V",
             "access": 9,
             "code": [
-              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "5",
+              "89",
+              "179 DrawControls/VirtualList.rightOffset I",
+              "179 DrawControls/VirtualList.leftOffset I",
               "17 143",
               "184 jimm/Options.getBoolean(I)Z",
-              "153 11",
+              "153 14",
               "5",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "4",
               "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
               "7",
               "179 DrawControls/VirtualList.MENU_LEFT I",
-              "167 17",
+              "167 20",
               "4",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "5",
@@ -25179,7 +25172,8 @@
             "handlers": [],
             "strings": [],
             "refs": [
-              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "179 DrawControls/VirtualList.rightOffset I",
+              "179 DrawControls/VirtualList.leftOffset I",
               "184 jimm/Options.getBoolean(I)Z",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
@@ -25339,24 +25333,7 @@
               }
             }
           ],
-          "complete_caption_offset_helper": {
-            "name": "setCaptionOffsets",
-            "desc": "()V",
-            "access": 10,
-            "code": [
-              "5",
-              "89",
-              "179 DrawControls/VirtualList.rightOffset I",
-              "179 DrawControls/VirtualList.leftOffset I",
-              "177"
-            ],
-            "handlers": [],
-            "strings": [],
-            "refs": [
-              "179 DrawControls/VirtualList.rightOffset I",
-              "179 DrawControls/VirtualList.leftOffset I"
-            ]
-          },
+          "complete_caption_offset_helper": null,
           "whole_caption_offset_prefix": [
             "5",
             "89",
@@ -25413,7 +25390,7 @@
           },
           "complete_menu_arms": [
             {
-              "start": 4,
+              "start": 7,
               "complete_assignment_pairs": [
                 [
                   "5",
@@ -25429,10 +25406,10 @@
                 ]
               ],
               "source_only_unused_right_menu_write": [],
-              "terminator": "167 17"
+              "terminator": "167 20"
             },
             {
-              "start": 11,
+              "start": 14,
               "complete_assignment_pairs": [
                 [
                   "4",
@@ -25472,7 +25449,6 @@
                   "89",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "3",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
@@ -25480,6 +25456,8 @@
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "2",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "1",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "1",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "16 64",
@@ -25506,11 +25484,11 @@
                   "179 DrawControls/VirtualList.capFont Ljavax/microedition/lcdui/Font;",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "178 jimm/Options.fontStyle I",
                   "184 javax/microedition/lcdui/Font.getFont(III)Ljavax/microedition/lcdui/Font;",
@@ -25521,7 +25499,7 @@
                 ]
               },
               "positions": [
-                14
+                13
               ]
             },
             {
@@ -29868,9 +29846,9 @@
             "16 118"
           ],
           "mode": "optimized",
-          "input_sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023",
-          "assembled_input_sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023",
-          "fixture_sha256": "ed456bbda5aee916835396498ea97c47531b8a89b07377651bf6219a5bb67888",
+          "input_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
+          "assembled_input_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
+          "fixture_sha256": "2d8b5fdd05e01ac9d88f4b4735d553fa058518e4d749c7b724e5b5dda2946e02",
           "output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
           "observations": 1368,
           "all_original_application_and_resource_bytes_unchanged": true,
@@ -34905,7 +34883,7 @@
           "mode": "reference",
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
           "assembled_input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-          "fixture_sha256": "1bc23165531a8b5df74c8e62928d54e46573e88730b09cf3c613b18ec19b5e5a",
+          "fixture_sha256": "3a0182a02bf54fb63ad3d335f8200133c91b8d932caecc9ab55ff6ddcce8f420",
           "output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
           "observations": 1368,
           "all_original_application_and_resource_bytes_unchanged": true,
@@ -35258,7 +35236,6 @@
                   "89",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "3",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
@@ -35266,6 +35243,8 @@
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "2",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "1",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "1",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "16 64",
@@ -35293,11 +35272,11 @@
                   "179 DrawControls/VirtualList.scrollerWidth I",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "178 jimm/Options.fontStyle I",
                   "184 javax/microedition/lcdui/Font.getFont(III)Ljavax/microedition/lcdui/Font;",
@@ -35308,7 +35287,7 @@
                 ]
               },
               "positions": [
-                18
+                17
               ]
             },
             {
@@ -39737,9 +39716,9 @@
             "16 118"
           ],
           "mode": "raw",
-          "input_sha256": "88f358fd92308a9065b6c1b479d4c7bf0762c9a6a600907cc172102273e1c781",
-          "assembled_input_sha256": "6315445844b81da58c3f2bb61f2c1421a8d0c4d04248b54fc7a8847968c8ed52",
-          "fixture_sha256": "728768559e6d2f0f5f7706f1784eedc9f8c72f4122c77888f5e95b58cea863c9",
+          "input_sha256": "73edbe780c41b00b310e8958d64a1f74e0e13bd0561a517cb33c76c8464b8bd6",
+          "assembled_input_sha256": "bcabff7a5f684beb79bcbcf30a3e7f7aeacaf37f802ed0e2ff24b8ae7cf1f9b4",
+          "fixture_sha256": "d65c0aa3b67b4f3d8f9fa5fe7f0ff2facfe8816fe5b6490eca26175529928d98",
           "output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
           "observations": 1368,
           "all_original_application_and_resource_bytes_unchanged": true,
@@ -39755,17 +39734,20 @@
             "desc": "()V",
             "access": 9,
             "code": [
-              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "5",
+              "89",
+              "179 DrawControls/VirtualList.rightOffset I",
+              "179 DrawControls/VirtualList.leftOffset I",
               "17 143",
               "184 jimm/Options.getBoolean(I)Z",
-              "153 11",
+              "153 14",
               "5",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "4",
               "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
               "7",
               "179 DrawControls/VirtualList.MENU_LEFT I",
-              "167 17",
+              "167 20",
               "4",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "5",
@@ -39783,7 +39765,8 @@
             "handlers": [],
             "strings": [],
             "refs": [
-              "184 DrawControls/VirtualList.setCaptionOffsets()V",
+              "179 DrawControls/VirtualList.rightOffset I",
+              "179 DrawControls/VirtualList.leftOffset I",
               "184 jimm/Options.getBoolean(I)Z",
               "179 DrawControls/VirtualList.MENU_LEFT_BAR I",
               "179 DrawControls/VirtualList.MENU_RIGHT_BAR I",
@@ -39943,24 +39926,7 @@
               }
             }
           ],
-          "complete_caption_offset_helper": {
-            "name": "setCaptionOffsets",
-            "desc": "()V",
-            "access": 10,
-            "code": [
-              "5",
-              "89",
-              "179 DrawControls/VirtualList.rightOffset I",
-              "179 DrawControls/VirtualList.leftOffset I",
-              "177"
-            ],
-            "handlers": [],
-            "strings": [],
-            "refs": [
-              "179 DrawControls/VirtualList.rightOffset I",
-              "179 DrawControls/VirtualList.leftOffset I"
-            ]
-          },
+          "complete_caption_offset_helper": null,
           "whole_caption_offset_prefix": [
             "5",
             "89",
@@ -40017,7 +39983,7 @@
           },
           "complete_menu_arms": [
             {
-              "start": 4,
+              "start": 7,
               "complete_assignment_pairs": [
                 [
                   "5",
@@ -40033,10 +39999,10 @@
                 ]
               ],
               "source_only_unused_right_menu_write": [],
-              "terminator": "167 17"
+              "terminator": "167 20"
             },
             {
-              "start": 11,
+              "start": 14,
               "complete_assignment_pairs": [
                 [
                   "4",
@@ -40078,7 +40044,6 @@
                   "89",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "3",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
@@ -40086,6 +40051,8 @@
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "2",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "1",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "1",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "16 64",
@@ -40112,11 +40079,11 @@
                   "179 DrawControls/VirtualList.capFont Ljavax/microedition/lcdui/Font;",
                   "183 DrawControls/ListItem.<init>()V",
                   "179 DrawControls/VirtualList.paintedItem LDrawControls/ListItem;",
-                  "184 DrawControls/VirtualList.setCaptionOffsets()V",
                   "184 DrawControls/VirtualList.assignSoftKeys()V",
                   "179 DrawControls/VirtualList.zeroWasPressed Z",
                   "179 DrawControls/VirtualList.srcollerY1 I",
                   "179 DrawControls/VirtualList.srcollerY2 I",
+                  "179 DrawControls/VirtualList.gradientPixels [I",
                   "179 DrawControls/VirtualList.bDIimage Ljavax/microedition/lcdui/Image;",
                   "178 jimm/Options.fontStyle I",
                   "184 javax/microedition/lcdui/Font.getFont(III)Ljavax/microedition/lcdui/Font;",
@@ -40127,7 +40094,7 @@
                 ]
               },
               "positions": [
-                16
+                15
               ]
             },
             {
@@ -44494,9 +44461,9 @@
             "16 118"
           ],
           "mode": "optimized",
-          "input_sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672",
-          "assembled_input_sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672",
-          "fixture_sha256": "9b8b392c0282e2eca40580326ffe1751c055c78eb8b703cf19e8503eb8e4e873",
+          "input_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
+          "assembled_input_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
+          "fixture_sha256": "a3a848bb0d46f3041c7ea663c0d7813ddd1825bfed21e8f8084af5c6b164ef8e",
           "output_sha256": "d069fdf8eee9d691b819a215a55af2557f4904eac3b198e695c06d9e372f49f6",
           "observations": 1368,
           "all_original_application_and_resource_bytes_unchanged": true,

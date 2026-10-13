@@ -1,8 +1,8 @@
 {
   "scope": "Complete May MIDP2 JimmUI typed inventory, preserving inherited canonical source names. The exact lost author spelling is not claimed. Command constructor keys and actual state reads/writes, existing differential controllers and explicit accessor/specialization witnesses anchor roles. Naming declarations is not complete controller or program equivalence. Complete original MIDP2 declarations and all their actual controller access sites are inventoried; constructor label keys, static/volatile and optimized visibility flags, authoring parameter specializations, exact compiler getter/writer operations, discarded native writer results, controller constructor, auth state inputs and dead null-control tag branches are independently checked. Field access enumeration alone is not semantic identity proof. Functional evidence is recorded in the focused runtime reports; whole-controller behavior is not claimed.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
-  "source_optimized_class_jar_sha256": "e74ff2e576c5e51c892f8be4a22fb50b63f85acf8918f93d4a40cfea11d7cb54",
+  "source_unoptimized_class_jar_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
+  "source_optimized_class_jar_sha256": "86f635b8e645ff237efa8b28b9a6420cef06510e945be01679517024e61958e7",
   "field_declarations": 67,
   "native_methods": 71,
   "same_optimized_signatures": 69,
@@ -107,7 +107,7 @@
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
               30,
-              393
+              395
             ]
           },
           {
@@ -135,8 +135,8 @@
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
               39,
-              297,
-              701
+              299,
+              703
             ]
           },
           {
@@ -222,8 +222,8 @@
             "instructions": [
               179,
               193,
-              334,
-              387
+              336,
+              389
             ]
           },
           {
@@ -275,11 +275,11 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              300,
+              302,
               485,
               502,
-              642,
-              695
+              644,
+              697
             ]
           },
           {
@@ -383,8 +383,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              291,
-              337
+              293,
+              339
             ]
           },
           {
@@ -435,8 +435,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              599,
-              645
+              601,
+              647
             ]
           },
           {
@@ -531,8 +531,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              253,
-              279
+              255,
+              281
             ]
           }
         ]
@@ -662,7 +662,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              347
+              349
             ]
           },
           {
@@ -688,7 +688,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              655
+              657
             ]
           },
           {
@@ -759,8 +759,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              361,
-              366
+              363,
+              368
             ]
           },
           {
@@ -792,8 +792,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              669,
-              674
+              671,
+              676
             ]
           },
           {
@@ -864,8 +864,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              350,
-              354
+              352,
+              356
             ]
           },
           {
@@ -891,8 +891,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              658,
-              662
+              660,
+              664
             ]
           },
           {
@@ -950,7 +950,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              341
+              343
             ]
           },
           {
@@ -970,7 +970,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              649
+              651
             ]
           },
           {
@@ -1113,7 +1113,7 @@
               4,
               42,
               152,
-              298
+              300
             ]
           },
           {
@@ -1154,7 +1154,7 @@
               4,
               66,
               458,
-              606
+              608
             ]
           },
           {
@@ -1263,7 +1263,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              358,
+              360,
               488,
               507
             ]
@@ -1324,8 +1324,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              248,
-              260
+              250,
+              262
             ]
           },
           {
@@ -1345,8 +1345,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              556,
-              568
+              558,
+              570
             ]
           },
           {
@@ -1398,7 +1398,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              251
+              253
             ]
           },
           {
@@ -1418,7 +1418,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              559
+              561
             ]
           },
           {
@@ -1470,7 +1470,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              227
+              229
             ]
           },
           {
@@ -1490,7 +1490,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              536
+              538
             ]
           },
           {
@@ -1542,7 +1542,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              234
+              236
             ]
           },
           {
@@ -1562,7 +1562,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              543
+              545
             ]
           },
           {
@@ -1650,7 +1650,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              279
+              281
             ]
           },
           {
@@ -1670,7 +1670,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              587
+              589
             ]
           },
           {
@@ -1722,7 +1722,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              270
+              272
             ]
           },
           {
@@ -1742,7 +1742,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              578
+              580
             ]
           },
           {
@@ -1866,7 +1866,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              241
+              243
             ]
           },
           {
@@ -1886,7 +1886,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              550
+              552
             ]
           },
           {
@@ -1974,7 +1974,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              372
+              374
             ]
           },
           {
@@ -1994,7 +1994,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              680
+              682
             ]
           },
           {
@@ -2041,7 +2041,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              430
+              432
             ]
           },
           {
@@ -2061,7 +2061,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              736
+              738
             ]
           },
           {
@@ -2321,8 +2321,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              224,
-              303
+              226,
+              305
             ]
           },
           {
@@ -2414,7 +2414,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              402
+              404
             ]
           },
           {
@@ -2428,8 +2428,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              230,
-              710
+              232,
+              712
             ]
           }
         ]
@@ -2495,7 +2495,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              395
+              397
             ]
           },
           {
@@ -2533,7 +2533,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              703
+              705
             ]
           },
           {
@@ -2616,9 +2616,9 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              287,
-              295,
-              302
+              289,
+              297,
+              304
             ]
           },
           {
@@ -2656,9 +2656,9 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              595,
-              603,
-              610
+              597,
+              605,
+              612
             ]
           },
           {
@@ -3542,8 +3542,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              330,
-              360
+              332,
+              362
             ]
           },
           {
@@ -3617,8 +3617,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              638,
-              668
+              640,
+              670
             ]
           },
           {
@@ -3710,8 +3710,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              343,
-              375
+              345,
+              377
             ]
           },
           {
@@ -3725,8 +3725,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              651,
-              683
+              653,
+              685
             ]
           },
           {
@@ -3821,8 +3821,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              380,
-              383
+              382,
+              385
             ]
           },
           {
@@ -3857,8 +3857,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              688,
-              691
+              690,
+              693
             ]
           },
           {
@@ -3918,7 +3918,7 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              385
+              387
             ]
           },
           {
@@ -3932,8 +3932,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              693,
-              711
+              695,
+              713
             ]
           },
           {
@@ -4226,16 +4226,16 @@
             "instructions": [
               170,
               173,
-              217,
-              229,
-              230,
-              236,
-              237,
-              255,
-              272,
-              273,
-              281,
-              282
+              219,
+              231,
+              232,
+              238,
+              239,
+              257,
+              274,
+              275,
+              283,
+              284
             ]
           },
           {
@@ -4331,16 +4331,16 @@
             "instructions": [
               476,
               479,
-              525,
-              538,
-              539,
-              545,
-              546,
-              563,
-              580,
-              581,
-              589,
-              590
+              527,
+              540,
+              541,
+              547,
+              548,
+              565,
+              582,
+              583,
+              591,
+              592
             ]
           },
           {
@@ -4926,7 +4926,7 @@
             "instructions": [
               186,
               209,
-              219
+              221
             ]
           },
           {
@@ -4963,7 +4963,7 @@
             "instructions": [
               492,
               518,
-              526
+              528
             ]
           },
           {
@@ -5216,8 +5216,8 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              374,
-              430
+              376,
+              432
             ]
           },
           {
@@ -5283,9 +5283,9 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              352,
-              355,
-              362,
+              354,
+              357,
+              364,
               450
             ]
           },
@@ -5358,14 +5358,14 @@
           {
             "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
             "instructions": [
-              379,
-              392,
-              408,
-              414,
-              432,
-              436,
-              439,
-              443,
+              381,
+              394,
+              410,
+              416,
+              434,
+              438,
+              441,
+              445,
               452
             ]
           },
@@ -5474,7 +5474,7 @@
             "instructions": [
               62,
               68,
-              348
+              350
             ]
           },
           {
@@ -5594,9 +5594,9 @@
             "instructions": [
               10,
               52,
-              374,
-              398,
-              414
+              376,
+              400,
+              416
             ]
           },
           {
@@ -5685,24 +5685,24 @@
               163,
               170,
               194,
-              200,
-              203,
-              211,
-              218,
-              226,
-              243,
-              269,
-              290,
-              309,
-              314,
-              318,
-              321,
-              326,
-              334,
-              350,
-              682,
-              706,
-              722
+              202,
+              205,
+              213,
+              220,
+              228,
+              245,
+              271,
+              292,
+              311,
+              316,
+              320,
+              323,
+              328,
+              336,
+              352,
+              684,
+              708,
+              724
             ]
           },
           {
@@ -5809,10 +5809,10 @@
               41,
               53,
               60,
-              296,
-              299,
-              302,
-              306
+              298,
+              301,
+              304,
+              308
             ]
           }
         ]
@@ -6074,12 +6074,12 @@
       "authoring_method_present": true,
       "signature_and_modifiers_verified": true,
       "reference_instructions": 862,
-      "source_instructions": 742,
+      "source_instructions": 744,
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "5126abc4e3872722691392ff4f43f8d654fdefc567945b91508152973c219b5c",
-      "source_normalized_sha256": "b9d8002c8100e514b9330933fa26f319f1c8cade2f615eef9de7878caf053fbe"
+      "source_normalized_sha256": "4122109e97d8d8490f97339e51faa8af6608a3be558db7c7e4b2eadaa3f06a59"
     },
     {
       "reference_name": "g",

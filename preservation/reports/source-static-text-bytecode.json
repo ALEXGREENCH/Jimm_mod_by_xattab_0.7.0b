@@ -10,11 +10,11 @@
         },
         "raw": {
           "path": "build/source/MIDP2-RU/classes.jar",
-          "sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90"
+          "sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de"
         },
         "optimized": {
           "path": "dist/source/Jimm-MIDP2-RU.jar",
-          "sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f"
+          "sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd"
         }
       },
       "methods": [
@@ -3655,11 +3655,11 @@
         },
         "raw": {
           "path": "build/source/MOTOROLA-RU/classes.jar",
-          "sha256": "5ecd2d0a242b63926770652f64e3b1a35da87bd54eddae3f00eaef969e369cd0"
+          "sha256": "2d3eff726a66e53cd05f453711044e4699425711f01b486d330219d3d280363b"
         },
         "optimized": {
           "path": "dist/source/Jimm-MOTOROLA-RU.jar",
-          "sha256": "9c65bcf21792d9a1692c54f6d52ea5e4dc9b0c0040d2e462ff726c68cfce6023"
+          "sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113"
         }
       },
       "methods": [
@@ -7300,11 +7300,11 @@
         },
         "raw": {
           "path": "build/source/SIEMENS2-RU/classes.jar",
-          "sha256": "88f358fd92308a9065b6c1b479d4c7bf0762c9a6a600907cc172102273e1c781"
+          "sha256": "73edbe780c41b00b310e8958d64a1f74e0e13bd0561a517cb33c76c8464b8bd6"
         },
         "optimized": {
           "path": "dist/source/Jimm-SIEMENS2-RU.jar",
-          "sha256": "6d54a4332b337a7c13c037fd08f67bda35f9d34fbbc913422bba70be75f62672"
+          "sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4"
         }
       },
       "methods": [

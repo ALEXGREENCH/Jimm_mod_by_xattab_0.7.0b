@@ -64,10 +64,12 @@ def configuration(data, native, target):
     offsets = None; devices = []; device_getters = []
     if native:
         end = 18 if target == 'MIDP2' else 4; prefix = code[:end]
-    else:
-        assert code[0] == '184 ' + owner + '.setCaptionOffsets()V'
+    elif code[0] == '184 ' + owner + '.setCaptionOffsets()V':
         offsets = next(n for n in c['methods'] if n['name'] == 'setCaptionOffsets' and n['desc'] == '()V')
         assert not offsets['handlers'] and offsets['code'][-1] == '177'; prefix = offsets['code'][:-1]
+    else:
+        assert not any(m['name'] == 'setCaptionOffsets' for m in c['methods'])
+        prefix = code[:swap]
     if target == 'MIDP2':
         assert len(prefix) == 18
         for start, key, role in [(0, 95, 'leftOffset'), (9, 96, 'rightOffset')]:

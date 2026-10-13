@@ -1,13 +1,13 @@
 {
   "scope": "Complete MIDP2 setMinimized bodies execute unchanged except exactly three display call-site captures and one explicit application showWorkScreen destination capture. All branch/local/instanceof instructions and handlers remain, the actual javax TextBox class and its real subclass determine the predicate. Unsafe allocates actual host API objects without physical/emulator constructors; display/current/shown state and work-screen destination are explicitly scripted. 6144 observations/version record repeated true/false minimize sequences, null/current/other/TextBox/subclass, shown/not shown, null display receivers, exact ordered effects/counters and before/after runtime/Error failures at four destinations and two call ordinals. The real Jimm initializer and Timer run unmodified and its Timer is cancelled at test exit. No complete showWorkScreen/password downstream, physical display or all-platform minimize claim.",
   "source_file": "src/jimm/Jimm.java",
-  "source_sha256": "345d55d8923ddc520fbd68e9d0cc8a1c56e784d9818b14cc91c32c7cac090f62",
+  "source_sha256": "7b7a584a77ccb0b3127a442458b17b3e1c05b0a1dd013bedace363086579efbb",
   "evidence": [
     {
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
       "assembled_input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "b6449123aa27381551f0d363d611c902cd58810004b0ee02985b9a63d44d008f",
+      "fixture_sha256": "8f184471fa77d0c6e90ac9e39e68c53c5b04735674053df36515d5f38a9256a2",
       "complete_original_method": {
         "name": "a",
         "desc": "(Z)V",
@@ -2103,9 +2103,9 @@
     },
     {
       "mode": "raw",
-      "input_sha256": "1a8f9653ae2e68cbc5b810a250948d4d281547dafc6b42954d983ede1f51ee90",
-      "assembled_input_sha256": "9566c578e5612a395cf52c8695a446ed1bdf490af516ee906b2376a55490dd8a",
-      "fixture_sha256": "49f833a9c905e180bd776168bec953307e888a8c33c9f2303636364d777527c9",
+      "input_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
+      "assembled_input_sha256": "6364a227a33412e294fbfe3e157149ad4b73e22686cc759ecb73c299c43fac6d",
+      "fixture_sha256": "1fabd1852e02ef31f5f6950e9d04532aeac6324e1c31e4f84ff51a17867c8577",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -3306,9 +3306,9 @@
         },
         {
           "owner": "DrawControls/VirtualList",
-          "original_sha256": "24a5acb7a5d2d6d408f6d359d92e7b95281cf342d6e500470bee6b92dfd72397",
-          "expected_sha256": "24a5acb7a5d2d6d408f6d359d92e7b95281cf342d6e500470bee6b92dfd72397",
-          "fixture_sha256": "24a5acb7a5d2d6d408f6d359d92e7b95281cf342d6e500470bee6b92dfd72397"
+          "original_sha256": "034c2a276b496e86d972f27a7c71752a31095d68af4539908cbd417cc07c1184",
+          "expected_sha256": "034c2a276b496e86d972f27a7c71752a31095d68af4539908cbd417cc07c1184",
+          "fixture_sha256": "034c2a276b496e86d972f27a7c71752a31095d68af4539908cbd417cc07c1184"
         },
         {
           "owner": "DrawControls/VirtualListCommands",
@@ -3462,9 +3462,9 @@
         },
         {
           "owner": "jimm/Jimm",
-          "original_sha256": "d8c8b7c25bb5405b4313c62f6eebe804fab2fefdbf854e8fa89d330652fd521b",
-          "expected_sha256": "a76323302f3db328e7893992aa143ebc083b6696d2634c664a1d77135c211fc4",
-          "fixture_sha256": "a76323302f3db328e7893992aa143ebc083b6696d2634c664a1d77135c211fc4"
+          "original_sha256": "dd5eca9a2822968d0e498cc8c0e95ab8df4a5c3fb855a9aa49d537c9b745719d",
+          "expected_sha256": "4726ca8ef9450cb28a186d6e956957a421864c0402f5e1bad483465b9ca6d75e",
+          "fixture_sha256": "4726ca8ef9450cb28a186d6e956957a421864c0402f5e1bad483465b9ca6d75e"
         },
         {
           "owner": "jimm/JimmException",
@@ -3480,9 +3480,9 @@
         },
         {
           "owner": "jimm/JimmUI",
-          "original_sha256": "3e8d50bc3738be5a1b7ca3524beba1bdc25061f8768a81acb0f7934fb03596b9",
-          "expected_sha256": "3e8d50bc3738be5a1b7ca3524beba1bdc25061f8768a81acb0f7934fb03596b9",
-          "fixture_sha256": "3e8d50bc3738be5a1b7ca3524beba1bdc25061f8768a81acb0f7934fb03596b9"
+          "original_sha256": "ed35b7f0d3fa98d6cc239b73acbfdf9bb3e3c181be0d193e877a6470c0d34c6e",
+          "expected_sha256": "ed35b7f0d3fa98d6cc239b73acbfdf9bb3e3c181be0d193e877a6470c0d34c6e",
+          "fixture_sha256": "ed35b7f0d3fa98d6cc239b73acbfdf9bb3e3c181be0d193e877a6470c0d34c6e"
         },
         {
           "owner": "jimm/MainMenu",
@@ -3835,9 +3835,9 @@
     },
     {
       "mode": "optimized",
-      "input_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
-      "assembled_input_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
-      "fixture_sha256": "e94ec3a325c4be9bf8100ff900a6bf7d47ede01f58de06f684aff9a961c77a93",
+      "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+      "assembled_input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+      "fixture_sha256": "34f7601d0334dd352fb3e3548e39023316fbefd5ef0602cd77d8ff5e7aefe8fd",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -5423,9 +5423,9 @@
         },
         {
           "owner": "DrawControls/VirtualList",
-          "original_sha256": "aaf3b42b2ee4d467709a3f489ba1145d4c390d493befdf1bbb7d73ac49ed0687",
-          "expected_sha256": "aaf3b42b2ee4d467709a3f489ba1145d4c390d493befdf1bbb7d73ac49ed0687",
-          "fixture_sha256": "aaf3b42b2ee4d467709a3f489ba1145d4c390d493befdf1bbb7d73ac49ed0687"
+          "original_sha256": "10e2392807b0cc5b1529c528b7d367595968349f92f727b73c55e1d344e1f691",
+          "expected_sha256": "10e2392807b0cc5b1529c528b7d367595968349f92f727b73c55e1d344e1f691",
+          "fixture_sha256": "10e2392807b0cc5b1529c528b7d367595968349f92f727b73c55e1d344e1f691"
         },
         {
           "owner": "DrawControls/VirtualListCommands",
@@ -5573,9 +5573,9 @@
         },
         {
           "owner": "jimm/Jimm",
-          "original_sha256": "9c3ab78ad6657cec40c253433049134191209f25ee2fe4343d043f6a2fac58c3",
-          "expected_sha256": "6e860dd99ec9867a112e48eb1f7f256eff240d4daf93a431f4da3c88f6181579",
-          "fixture_sha256": "6e860dd99ec9867a112e48eb1f7f256eff240d4daf93a431f4da3c88f6181579"
+          "original_sha256": "30e975be4c8725d0f2180c0245a8bcfabcd0e0273447cdfcd9af8b5458d2fa64",
+          "expected_sha256": "7106491efcc5d20fda92080e254df7a3983c72446d2cc4fd0da44782b5c04cba",
+          "fixture_sha256": "7106491efcc5d20fda92080e254df7a3983c72446d2cc4fd0da44782b5c04cba"
         },
         {
           "owner": "jimm/JimmException",
@@ -5591,9 +5591,9 @@
         },
         {
           "owner": "jimm/JimmUI",
-          "original_sha256": "3659c889f42b367ff1033e4b9b2b39f318be5f28d3a2f6a4372c1c93b79b7895",
-          "expected_sha256": "3659c889f42b367ff1033e4b9b2b39f318be5f28d3a2f6a4372c1c93b79b7895",
-          "fixture_sha256": "3659c889f42b367ff1033e4b9b2b39f318be5f28d3a2f6a4372c1c93b79b7895"
+          "original_sha256": "020125870cca484388845dd493fd05b555f92e2035439593d86b739d3251f944",
+          "expected_sha256": "020125870cca484388845dd493fd05b555f92e2035439593d86b739d3251f944",
+          "fixture_sha256": "020125870cca484388845dd493fd05b555f92e2035439593d86b739d3251f944"
         },
         {
           "owner": "jimm/MainMenu",

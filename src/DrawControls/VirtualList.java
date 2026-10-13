@@ -242,7 +242,6 @@ public abstract class VirtualList
 		scrollerWidth = 4;
 		paintedItem = new ListItem();
 //		clientImgWidth = (ContactList.clientIcons.elementAt(0) != null) ? ContactList.clientIcons.elementAt(0).getWidth() : 0;
-		setCaptionOffsets();
 		assignSoftKeys();
 	}
 
@@ -1434,7 +1433,7 @@ public abstract class VirtualList
 		return false;
 	}
 
-    private static int[] gradientPixels;
+    private static int[] gradientPixels = null;
     private static int gradientHeight, gradientStart, gradientEnd;
 
     public static void resetGradient() { gradientHeight = 0; }

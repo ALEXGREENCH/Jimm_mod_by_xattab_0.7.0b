@@ -4,7 +4,7 @@
     {
       "language": "RU",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_jar_sha256": "dcec5f95136396ebe495e064699ac397c24fada12aefd28fd2626a1ad882d42f",
+      "source_jar_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
       "observations": 98398,
       "native_entries": 51,
       "lookup_codes": 98304,
@@ -13,7 +13,7 @@
     {
       "language": "UA",
       "reference_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-      "source_jar_sha256": "6a40b923fcf41cd9ba47c84d29bbb28147d5a34345be654c02644ed846992574",
+      "source_jar_sha256": "94b9b4a8359b6b552f20a65afa808b3549e40c057c9cbfeed2470e9b23608ca8",
       "observations": 98398,
       "native_entries": 51,
       "lookup_codes": 98304,
@@ -22,7 +22,7 @@
     {
       "language": "RO",
       "reference_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-      "source_jar_sha256": "163e56aa0cb3dee5f9c9b4d4a96780983126547ea4e54651f392c05d5ae12b8d",
+      "source_jar_sha256": "e7b5158f92a2c0b90efdda87ee36e816bacc1c437e65ae1cdff0d36b2fd58477",
       "observations": 98398,
       "native_entries": 51,
       "lookup_codes": 98304,
@@ -31,7 +31,7 @@
     {
       "language": "EN",
       "reference_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-      "source_jar_sha256": "abab335dbe6aff34339f896477cbb306bbcaca7c45005e35751974e5d30ac0fc",
+      "source_jar_sha256": "0bfb65054235723fc640a85ae4f3353674cc2afe611baf21506da76ba2112168",
       "observations": 98398,
       "native_entries": 51,
       "lookup_codes": 98304,
@@ -40,7 +40,7 @@
     {
       "language": "CZ",
       "reference_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-      "source_jar_sha256": "7be0a38ddbf8dc985c4f00f3ac862bf2f325784b7f20cba3970a866e9d6bdc9d",
+      "source_jar_sha256": "96591ded940ff413581e3a368f06b2b03c74d30e92336f41281d451f0f2bba77",
       "observations": 98398,
       "native_entries": 51,
       "lookup_codes": 98304,

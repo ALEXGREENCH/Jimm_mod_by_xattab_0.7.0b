@@ -76,7 +76,6 @@ public class Jimm extends MIDlet
 	static private boolean is_phone_NOKIA;
     public static boolean is_JP8;
     public static boolean supportsNokiaLight;
-    public static String sonyEricssonPlatform;
 	//#sijapp cond.end#
 
 	//#sijapp cond.if target is "SIEMENS2"#
@@ -120,6 +119,9 @@ public class Jimm extends MIDlet
 
 	public static final String microeditionPlatform = System.getProperty("microedition.platform");
 	public static final String microeditionProfiles = System.getProperty("microedition.profiles");
+	//#sijapp cond.if target is "MIDP2"#
+    public static String sonyEricssonPlatform = null;
+	//#sijapp cond.end#
 	//#sijapp cond.if target isnot "MOTOROLA"#
 	public static boolean supportsCamCapture = false;
 	//#sijapp cond.end#
@@ -133,8 +135,9 @@ public class Jimm extends MIDlet
 		{
 			String platform = microeditionPlatform.toLowerCase();
 
-			is_phone_FLY = (platform.toLowerCase().indexOf("fly") != -1);
-			is_phone_SE = (platform.toLowerCase().indexOf("ericsson") != -1);
+			is_phone_FLY = (platform.indexOf("fly") != -1);
+			is_phone_SE = (platform.indexOf("ericsson") != -1);
+			is_phone_NOKIA = (platform.indexOf("nokia") != -1);
             if (is_phone_SE)
             {
                 try
@@ -145,9 +148,8 @@ public class Jimm extends MIDlet
                 }
                 catch (Exception e) { }
             }
-			is_phone_NOKIA = (platform.toLowerCase().indexOf("nokia") != -1);
-            supportsNokiaLight = is_phone_NOKIA;
 		}
+        supportsNokiaLight = is_phone_NOKIA;
 		//#sijapp cond.end#
 
 		//#sijapp cond.if target is "SIEMENS2"#
