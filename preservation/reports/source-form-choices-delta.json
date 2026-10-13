@@ -1,0 +1,2039 @@
+{
+  "scope": "Genuine c027638 pre-edit source/JARs/fixtures/outputs versus the full current 15+3 matrix. Only the source appendChoices loop bound is restored to the native cached size. Only that raw method changes on each platform, with all other metadata/methods/classes preserved. Only VirtualForm.class changes in fifteen delivered JARs; all other class/resource/manifest bytes remain exact. Actual real-model getter-boundary replay changes exactly 126 rows per raw/optimized platform series, all other source rows and every native row remain exact; 9774 current observations match. The former ordinary MIDP2 FormProbe retains all 6149 observations/2562 raster frames per version. All 15+3 builds and eight additional CI checks pass; previous main exact methods remain. Full native/raw/optimized compiler differences remain explicit; no full instruction equality, concurrency or whole-program equivalence claim.",
+  "baseline_commit": "c02763829ef9279f6b1b321568e8699519eeff3f",
+  "preserved_files": [
+    {
+      "path": "src/DrawControls/VirtualForm.java",
+      "sha256": "170a33629e78d0d1978ebc86245c8cbfea45c45da5329d183c4c5bf069d75889"
+    },
+    {
+      "path": "preservation/reports/source-tests.json",
+      "sha256": "dce0fb67f780fdd74b195bf74146e9a0dbcbece5e97d1bc05068808d001dee27"
+    },
+    {
+      "path": "preservation/reports/source-bytecode-comparison.json",
+      "sha256": "d8584e1f26472d1623ffc60238a13fd630a59a9e63dbcd6c15706fa64e173c9f"
+    },
+    {
+      "path": "preservation/reports/source-method-accounting.json",
+      "sha256": "b1215f44bc02633b035bd983874c4e19d6e10b798d4e41c62ca9089c7a5093a7"
+    },
+    {
+      "path": "preservation/reports/source-form-choices-before.json",
+      "sha256": "8ac09480ebf2b6c5c572cd1f85293641ec55f5af422ba1732108bca30ef84da6"
+    },
+    {
+      "path": "preservation/reports/source-auxiliary-helper-bytecode.json",
+      "sha256": "627d8f67dd97871a0a3e438fea69fe34f4174752b23d55c3770c48231ad9f6ea"
+    },
+    {
+      "path": "preservation/reports/source-auxiliary-helper-replay.json",
+      "sha256": "fe8ccb9f6f354a7531b8878ecce11c93c1560d4637e7a11d8b2ce3ddd21747de"
+    },
+    {
+      "path": "build/source/MIDP2-RU/classes.jar",
+      "sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de"
+    },
+    {
+      "path": "build/source/MIDP2-RU/preverified.jar",
+      "sha256": "86f635b8e645ff237efa8b28b9a6420cef06510e945be01679517024e61958e7"
+    },
+    {
+      "path": "build/source/MOTOROLA-RU/classes.jar",
+      "sha256": "2d3eff726a66e53cd05f453711044e4699425711f01b486d330219d3d280363b"
+    },
+    {
+      "path": "build/source/MOTOROLA-RU/preverified.jar",
+      "sha256": "5f8f42b30fe85fd5c4832f284cdd6dd50120cf99ef8efcdcb567fbfc7f05951f"
+    },
+    {
+      "path": "build/source/SIEMENS2-RU/classes.jar",
+      "sha256": "73edbe780c41b00b310e8958d64a1f74e0e13bd0561a517cb33c76c8464b8bd6"
+    },
+    {
+      "path": "build/source/SIEMENS2-RU/preverified.jar",
+      "sha256": "8ddb186d0a2e0dddc2452c339908739253f13f3a953505684af83b059717a2bf"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-RU.jar",
+      "sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-UA.jar",
+      "sha256": "94b9b4a8359b6b552f20a65afa808b3549e40c057c9cbfeed2470e9b23608ca8"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-RO.jar",
+      "sha256": "e7b5158f92a2c0b90efdda87ee36e816bacc1c437e65ae1cdff0d36b2fd58477"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-EN.jar",
+      "sha256": "0bfb65054235723fc640a85ae4f3353674cc2afe611baf21506da76ba2112168"
+    },
+    {
+      "path": "dist/source/Jimm-MIDP2-CZ.jar",
+      "sha256": "96591ded940ff413581e3a368f06b2b03c74d30e92336f41281d451f0f2bba77"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-RU.jar",
+      "sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-UA.jar",
+      "sha256": "7599bf000f4bcdd7c52a5c41ce62dce3aff7e62bf943e1178fe38c322d6dad0e"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-RO.jar",
+      "sha256": "5acb3cf704589994650e5f07408d9ed76c50ce579b66e2d9c41824f6081b0ebf"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-EN.jar",
+      "sha256": "ca5a61b64e2f2d0ebaf498969d5745a4d03aa168ee85a0ae8c89b66f61458243"
+    },
+    {
+      "path": "dist/source/Jimm-MOTOROLA-CZ.jar",
+      "sha256": "6fd023500cd4b9f445ed7ef6724f197d9595680518aeb52c3f8a1c7691cce94a"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-RU.jar",
+      "sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-UA.jar",
+      "sha256": "9bcb33255ea7011643172872966ede84b23930c8c312df98393de3f37c5f0f7f"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-RO.jar",
+      "sha256": "a26191f17c5295344d543cfb2163e2f2c0843911a7f1e2cc7d79840ccbac51ee"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-EN.jar",
+      "sha256": "530df328799074c448612bc0f136b2d6db382478998024de66dbe26be960e8cb"
+    },
+    {
+      "path": "dist/source/Jimm-SIEMENS2-CZ.jar",
+      "sha256": "db4b55f25de0533dba472a9fbce1133da1c0d70e49cdc18d32e7fa7bcd843ba0"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-optimized-host.jar",
+      "sha256": "537bffacc2d11f4a80503aa3e14e8a26a9b10a229f962f2a9c1b8946112c262a"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-optimized.jar",
+      "sha256": "e992cf416a0e9ba131e9c8f3be205da9478e23a85f8069671953de8966b999a3"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-optimized.properties",
+      "sha256": "cd643971029ccd17618490364c5c1206cd3f81539b685ef48daf40b6b3b53259"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-optimized.txt",
+      "sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-raw-host.jar",
+      "sha256": "08465e59f1c50b39279f2c2be225edd6fc6ee85d62910e2e4c08402d0f0b9301"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-raw-input.jar",
+      "sha256": "6364a227a33412e294fbfe3e157149ad4b73e22686cc759ecb73c299c43fac6d"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-raw.jar",
+      "sha256": "c31449cd5931efb07f421b8345f71410318be0516ba39f189429e2f23a65c278"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-raw.properties",
+      "sha256": "cd643971029ccd17618490364c5c1206cd3f81539b685ef48daf40b6b3b53259"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-raw.txt",
+      "sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-reference-host.jar",
+      "sha256": "1ed0cd3db5719a26e7d1261feb1c8d01ac4bf86c50e66d8118335c457f581a58"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-reference.jar",
+      "sha256": "405e1940eb643f0933c7bdffe1cc0fd70591e522ff425613b787b8c674ae787c"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-reference.properties",
+      "sha256": "4c3ee7fd94944c0755dcda2745b149f8b701c49b826f04c87762a56f4eee5425"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MIDP2-reference.txt",
+      "sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-optimized-host.jar",
+      "sha256": "1503c356f4bc6087a2d27169b3d319d4d845875607ee36bcf6071001c82d7837"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-optimized.jar",
+      "sha256": "3af7a1b73320b5315f54e8c5a7a89537a2ffaf48e668b5d77779e2b9f773bbf6"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-optimized.properties",
+      "sha256": "791685b22b93b62fe0420b26077561690010604a89167701159cea9ac18b290d"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-optimized.txt",
+      "sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-raw-host.jar",
+      "sha256": "d9cd47805a322dc769c420c800ea4fb66d428f5c7fd8741932a2ccbaeac19687"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-raw-input.jar",
+      "sha256": "70b7ef85e5b8c0617f0b74b2a75f6885a45ec4bf8b9ea324a81dbb0960d2c785"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-raw.jar",
+      "sha256": "3dce576fa56e9eb7f5907e531058ebc1dd7917cf7bfd83d42294aae3b34f1fcb"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-raw.properties",
+      "sha256": "791685b22b93b62fe0420b26077561690010604a89167701159cea9ac18b290d"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-raw.txt",
+      "sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-reference-host.jar",
+      "sha256": "b996f1a3e8d7d50822531c2bfc90b0cfe7e75a7921e020242db0e7c06b3ae8d3"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-reference.jar",
+      "sha256": "b0b1ed61437f0410bef78980d896667a72dfae7dac7a3bc5f413508a2afc4221"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-reference.properties",
+      "sha256": "f775f2b8bec0f199da1ce8803737a241d5fc2abe2e1ba6237873d00db89c53c4"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-MOTOROLA-reference.txt",
+      "sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-optimized-host.jar",
+      "sha256": "d4adcc92090ed3ba876364881243537981eec490895cde91d014ed45217f85e3"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-optimized.jar",
+      "sha256": "f73d98548d61fffc22e2c8da4e04f5518a39960ae685eea13653bd8fcaab16ef"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-optimized.properties",
+      "sha256": "791685b22b93b62fe0420b26077561690010604a89167701159cea9ac18b290d"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-optimized.txt",
+      "sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-raw-host.jar",
+      "sha256": "147ca9b0972190fadabd0f81236ccf39d8037b2ad98a07f31e745aac64ef74a1"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-raw-input.jar",
+      "sha256": "bcabff7a5f684beb79bcbcf30a3e7f7aeacaf37f802ed0e2ff24b8ae7cf1f9b4"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-raw.jar",
+      "sha256": "1dd24e96360c4284abbc9851550fc3e4cba617453f377103022d31d58f24331c"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-raw.properties",
+      "sha256": "791685b22b93b62fe0420b26077561690010604a89167701159cea9ac18b290d"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-raw.txt",
+      "sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-reference-host.jar",
+      "sha256": "7a351f79ed24e50fe70650c1b33a9fb6186385dd9afb97e2c3810208c94d2c29"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-reference.jar",
+      "sha256": "0153355f8f22fd9831a7c88badd0b38df3dded9e3386da12e8bfe6e148cf4877"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-reference.properties",
+      "sha256": "3c88726d57208669a6eb12a67b63d21fa28ce6198a5d84d70b46a1a773796476"
+    },
+    {
+      "path": "build/source-tests/form-choices-before-SIEMENS2-reference.txt",
+      "sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81"
+    },
+    {
+      "path": "build/source-tests/form-reference.jar",
+      "sha256": "00c3b3eeb4da7ca660e9a6f2d5bbf8a547d8774626d3bc43ef531fc65f67c621"
+    },
+    {
+      "path": "build/source-tests/form-reference.txt",
+      "sha256": "bc3adee7c44ae2f6b093c144f956368ae4885d8769fa728065bca2469280fc65"
+    },
+    {
+      "path": "build/source-tests/form-source.jar",
+      "sha256": "222617ce130d99ee5eb612daf82c4b20565f79d9932f59f737722d17ca4d5c9e"
+    },
+    {
+      "path": "build/source-tests/form-source.txt",
+      "sha256": "bc3adee7c44ae2f6b093c144f956368ae4885d8769fa728065bca2469280fc65"
+    }
+  ],
+  "source_file": "src/DrawControls/VirtualForm.java",
+  "git_source_line_endings": "LF",
+  "local_checkout_line_endings": "CRLF",
+  "canonical_lf_before_source_sha256": "de8c8e9f36bd5d7acea3be72a1f024ecaa74c7f322467091f0c8bf54bf091079",
+  "canonical_lf_after_source_sha256": "b466dc6d868da294feb485f74097ff046930aa61453dbf3896a0b52e2c33c296",
+  "before_source_sha256": "170a33629e78d0d1978ebc86245c8cbfea45c45da5329d183c4c5bf069d75889",
+  "after_source_sha256": "acba4b8938fa3b83217fdf19d0027a34a48cf69d8b113d1480da4dc1c13103a4",
+  "before_report_sha256": "8ac09480ebf2b6c5c572cd1f85293641ec55f5af422ba1732108bca30ef84da6",
+  "replay_report_sha256": "4422187c629554048fc58fe9913d37332e3352cea8a9cc007356dcf6d9fe5152",
+  "bytecode_report_sha256": "3d4423971b11a24af25d951f45dbea2f26ca49b395de96a0fe8e539fbd43eaaf",
+  "full_matrix_report_sha256": "280f2dad00cf7ae508961776745d9cea987f1b81dace95ceecfe1f170fdb6927",
+  "builds": [
+    {
+      "target": "MIDP2",
+      "before_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
+      "after_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
+      "changed_raw_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "whole_only_changed_method": {
+        "before": {
+          "name": "appendChoices",
+          "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+          "access": 2,
+          "code": [
+            "25 2",
+            "193 DrawControls/FormChoiceGroup",
+            "154 4",
+            "177",
+            "25 2",
+            "192 DrawControls/FormChoiceGroup",
+            "58 3",
+            "3",
+            "54 4",
+            "167 33",
+            "25 0",
+            "25 1",
+            "187 DrawControls/FormItem",
+            "89",
+            "25 2",
+            "25 3",
+            "21 4",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "21 4",
+            "25 0",
+            "25 3",
+            "21 4",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "58 5",
+            "25 0",
+            "25 5",
+            "25 3",
+            "21 4",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "132 4 1",
+            "21 4",
+            "25 3",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "161 10",
+            "177"
+          ],
+          "handlers": [],
+          "strings": [],
+          "refs": [
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+          ]
+        },
+        "after": {
+          "name": "appendChoices",
+          "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+          "access": 2,
+          "code": [
+            "25 2",
+            "193 DrawControls/FormChoiceGroup",
+            "154 4",
+            "177",
+            "25 2",
+            "192 DrawControls/FormChoiceGroup",
+            "58 3",
+            "25 3",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "54 4",
+            "3",
+            "54 5",
+            "167 36",
+            "25 0",
+            "25 1",
+            "187 DrawControls/FormItem",
+            "89",
+            "25 2",
+            "25 3",
+            "21 5",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "21 5",
+            "25 0",
+            "25 3",
+            "21 5",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "58 6",
+            "25 0",
+            "25 6",
+            "25 3",
+            "21 5",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "132 5 1",
+            "21 5",
+            "21 4",
+            "161 13",
+            "177"
+          ],
+          "handlers": [],
+          "strings": [],
+          "refs": [
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+          ]
+        }
+      },
+      "all_other_methods_metadata_and_class_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "before_sha256": "2d3eff726a66e53cd05f453711044e4699425711f01b486d330219d3d280363b",
+      "after_sha256": "e0b41c86b9bcb6b6a5037260016b6abc017b8e6ad7cf48acd390cac95bc72d3c",
+      "changed_raw_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "whole_only_changed_method": {
+        "before": {
+          "name": "appendChoices",
+          "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+          "access": 2,
+          "code": [
+            "25 2",
+            "193 DrawControls/FormChoiceGroup",
+            "154 4",
+            "177",
+            "25 2",
+            "192 DrawControls/FormChoiceGroup",
+            "58 3",
+            "3",
+            "54 4",
+            "167 33",
+            "25 0",
+            "25 1",
+            "187 DrawControls/FormItem",
+            "89",
+            "25 2",
+            "25 3",
+            "21 4",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "21 4",
+            "25 0",
+            "25 3",
+            "21 4",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "58 5",
+            "25 0",
+            "25 5",
+            "25 3",
+            "21 4",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "132 4 1",
+            "21 4",
+            "25 3",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "161 10",
+            "177"
+          ],
+          "handlers": [],
+          "strings": [],
+          "refs": [
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+          ]
+        },
+        "after": {
+          "name": "appendChoices",
+          "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+          "access": 2,
+          "code": [
+            "25 2",
+            "193 DrawControls/FormChoiceGroup",
+            "154 4",
+            "177",
+            "25 2",
+            "192 DrawControls/FormChoiceGroup",
+            "58 3",
+            "25 3",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "54 4",
+            "3",
+            "54 5",
+            "167 36",
+            "25 0",
+            "25 1",
+            "187 DrawControls/FormItem",
+            "89",
+            "25 2",
+            "25 3",
+            "21 5",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "21 5",
+            "25 0",
+            "25 3",
+            "21 5",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "58 6",
+            "25 0",
+            "25 6",
+            "25 3",
+            "21 5",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "132 5 1",
+            "21 5",
+            "21 4",
+            "161 13",
+            "177"
+          ],
+          "handlers": [],
+          "strings": [],
+          "refs": [
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+          ]
+        }
+      },
+      "all_other_methods_metadata_and_class_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "before_sha256": "73edbe780c41b00b310e8958d64a1f74e0e13bd0561a517cb33c76c8464b8bd6",
+      "after_sha256": "349d1b211d5ad89c05b8f6a07399e78249215356634abde83dd4d9f22f3091dd",
+      "changed_raw_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "whole_only_changed_method": {
+        "before": {
+          "name": "appendChoices",
+          "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+          "access": 2,
+          "code": [
+            "25 2",
+            "193 DrawControls/FormChoiceGroup",
+            "154 4",
+            "177",
+            "25 2",
+            "192 DrawControls/FormChoiceGroup",
+            "58 3",
+            "3",
+            "54 4",
+            "167 33",
+            "25 0",
+            "25 1",
+            "187 DrawControls/FormItem",
+            "89",
+            "25 2",
+            "25 3",
+            "21 4",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "21 4",
+            "25 0",
+            "25 3",
+            "21 4",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "58 5",
+            "25 0",
+            "25 5",
+            "25 3",
+            "21 4",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "132 4 1",
+            "21 4",
+            "25 3",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "161 10",
+            "177"
+          ],
+          "handlers": [],
+          "strings": [],
+          "refs": [
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+          ]
+        },
+        "after": {
+          "name": "appendChoices",
+          "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+          "access": 2,
+          "code": [
+            "25 2",
+            "193 DrawControls/FormChoiceGroup",
+            "154 4",
+            "177",
+            "25 2",
+            "192 DrawControls/FormChoiceGroup",
+            "58 3",
+            "25 3",
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "54 4",
+            "3",
+            "54 5",
+            "167 36",
+            "25 0",
+            "25 1",
+            "187 DrawControls/FormItem",
+            "89",
+            "25 2",
+            "25 3",
+            "21 5",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "21 5",
+            "25 0",
+            "25 3",
+            "21 5",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "58 6",
+            "25 0",
+            "25 6",
+            "25 3",
+            "21 5",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+            "132 5 1",
+            "21 5",
+            "21 4",
+            "161 13",
+            "177"
+          ],
+          "handlers": [],
+          "strings": [],
+          "refs": [
+            "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+            "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+            "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+            "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+            "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+            "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+            "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+          ]
+        }
+      },
+      "all_other_methods_metadata_and_class_bytes_equal": true
+    }
+  ],
+  "delivered": [
+    {
+      "target": "MIDP2",
+      "language": "RU",
+      "before_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+      "after_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MIDP2",
+      "language": "UA",
+      "before_sha256": "94b9b4a8359b6b552f20a65afa808b3549e40c057c9cbfeed2470e9b23608ca8",
+      "after_sha256": "44e1d7198ec18795687bd674b7e402159ddfbe2ae99a59e6b0d3415c5b4a97d8",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MIDP2",
+      "language": "RO",
+      "before_sha256": "e7b5158f92a2c0b90efdda87ee36e816bacc1c437e65ae1cdff0d36b2fd58477",
+      "after_sha256": "81011616594ef037a5a3d3f326e8f6008c86968589bd489ffa65656efab9e053",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MIDP2",
+      "language": "EN",
+      "before_sha256": "0bfb65054235723fc640a85ae4f3353674cc2afe611baf21506da76ba2112168",
+      "after_sha256": "a17d0df17ab35f9510813b9373b0c12a09e55a2dc22c01481590fe04eb060b96",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MIDP2",
+      "language": "CZ",
+      "before_sha256": "96591ded940ff413581e3a368f06b2b03c74d30e92336f41281d451f0f2bba77",
+      "after_sha256": "679cadaa84416366c4ff3f18ef6e3900af548887afbe4f6a6eb01c685b530fff",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RU",
+      "before_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
+      "after_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "UA",
+      "before_sha256": "7599bf000f4bcdd7c52a5c41ce62dce3aff7e62bf943e1178fe38c322d6dad0e",
+      "after_sha256": "2869865d9392ddb5782a0c8d965be3f4e95c03502d4e6e6887c518c2738337de",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "RO",
+      "before_sha256": "5acb3cf704589994650e5f07408d9ed76c50ce579b66e2d9c41824f6081b0ebf",
+      "after_sha256": "a96835c8ccc675b33af635adde3465eb2c6fe34c5a59bacf20f4e5e4a1594683",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "EN",
+      "before_sha256": "ca5a61b64e2f2d0ebaf498969d5745a4d03aa168ee85a0ae8c89b66f61458243",
+      "after_sha256": "1b65892957b59afda33e8239df63ea8c91488c091cc4d168179910960961b338",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "MOTOROLA",
+      "language": "CZ",
+      "before_sha256": "6fd023500cd4b9f445ed7ef6724f197d9595680518aeb52c3f8a1c7691cce94a",
+      "after_sha256": "0316976ba53924e9ad5490909c623ea252d8712bf9f1fdf2e2240257cc020d68",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RU",
+      "before_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
+      "after_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "UA",
+      "before_sha256": "9bcb33255ea7011643172872966ede84b23930c8c312df98393de3f37c5f0f7f",
+      "after_sha256": "83c13d5ee7c26a728f481ea83b9c73da9eae4f22d2c66f1a110a76bb6c53836f",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "RO",
+      "before_sha256": "a26191f17c5295344d543cfb2163e2f2c0843911a7f1e2cc7d79840ccbac51ee",
+      "after_sha256": "e794231bb90794e68c53329304e99b2ac0ec72c076e8002029bcb329046a6905",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "EN",
+      "before_sha256": "530df328799074c448612bc0f136b2d6db382478998024de66dbe26be960e8cb",
+      "after_sha256": "5fb56363a2816907aa5a09555ec399c5d56f65ffc2b7ab2d40c9d9372fa1976c",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    },
+    {
+      "target": "SIEMENS2",
+      "language": "CZ",
+      "before_sha256": "db4b55f25de0533dba472a9fbce1133da1c0d70e49cdc18d32e7fa7bcd843ba0",
+      "after_sha256": "f78d014dc145fd30e188afe5ebfecd270358aafa5a82c01261282462546cd94a",
+      "changed_entries": [
+        "DrawControls/VirtualForm.class"
+      ],
+      "all_other_class_resource_and_manifest_bytes_equal": true
+    }
+  ],
+  "replay_bindings": [
+    {
+      "target": "MIDP2",
+      "mode": "reference",
+      "before_input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "after_input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
+      "before_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 0,
+      "whole_before_subject": {
+        "name": "a",
+        "desc": "(Lax;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 j",
+          "153 36",
+          "25 2",
+          "192 j",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "21 5",
+          "21 4",
+          "162 36",
+          "25 0",
+          "25 0",
+          "25 1",
+          "187 i",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 aw.a(Lax;Ljava/lang/Object;)Lax;",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 aw.a(Lax;Z)V",
+          "132 5 1",
+          "167 11",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 aw.a(Lax;Ljava/lang/Object;)Lax;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 aw.a(Lax;Z)V"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "a",
+        "desc": "(Lax;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 j",
+          "153 36",
+          "25 2",
+          "192 j",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "21 5",
+          "21 4",
+          "162 36",
+          "25 0",
+          "25 0",
+          "25 1",
+          "187 i",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 aw.a(Lax;Ljava/lang/Object;)Lax;",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 aw.a(Lax;Z)V",
+          "132 5 1",
+          "167 11",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 aw.a(Lax;Ljava/lang/Object;)Lax;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 aw.a(Lax;Z)V"
+        ]
+      }
+    },
+    {
+      "target": "MIDP2",
+      "mode": "raw",
+      "before_input_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
+      "after_input_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
+      "before_output_sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 126,
+      "whole_before_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "3",
+          "54 4",
+          "167 33",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 4",
+          "25 0",
+          "25 3",
+          "21 4",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 5",
+          "25 0",
+          "25 5",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 4 1",
+          "21 4",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "161 10",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "167 36",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 6",
+          "25 0",
+          "25 6",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 5 1",
+          "21 5",
+          "21 4",
+          "161 13",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+        ]
+      }
+    },
+    {
+      "target": "MIDP2",
+      "mode": "optimized",
+      "before_input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+      "after_input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+      "before_output_sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 126,
+      "whole_before_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "3",
+          "54 4",
+          "167 33",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 4",
+          "25 0",
+          "25 3",
+          "21 4",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 5",
+          "25 0",
+          "25 5",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 4 1",
+          "21 4",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "161 10",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "167 36",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 6",
+          "25 0",
+          "25 6",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 5 1",
+          "21 5",
+          "21 4",
+          "161 13",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+        ]
+      }
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "reference",
+      "before_input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "after_input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
+      "before_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 0,
+      "whole_before_subject": {
+        "name": "a",
+        "desc": "(Lax;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 j",
+          "153 36",
+          "25 2",
+          "192 j",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "21 5",
+          "21 4",
+          "162 36",
+          "25 0",
+          "25 0",
+          "25 1",
+          "187 i",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 aw.a(Lax;Ljava/lang/Object;)Lax;",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 aw.a(Lax;Z)V",
+          "132 5 1",
+          "167 11",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 aw.a(Lax;Ljava/lang/Object;)Lax;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 aw.a(Lax;Z)V"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "a",
+        "desc": "(Lax;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 j",
+          "153 36",
+          "25 2",
+          "192 j",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "21 5",
+          "21 4",
+          "162 36",
+          "25 0",
+          "25 0",
+          "25 1",
+          "187 i",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 aw.a(Lax;Ljava/lang/Object;)Lax;",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 aw.a(Lax;Z)V",
+          "132 5 1",
+          "167 11",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 aw.a(Lax;Ljava/lang/Object;)Lax;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 aw.a(Lax;Z)V"
+        ]
+      }
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "raw",
+      "before_input_sha256": "2d3eff726a66e53cd05f453711044e4699425711f01b486d330219d3d280363b",
+      "after_input_sha256": "e0b41c86b9bcb6b6a5037260016b6abc017b8e6ad7cf48acd390cac95bc72d3c",
+      "before_output_sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 126,
+      "whole_before_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "3",
+          "54 4",
+          "167 33",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 4",
+          "25 0",
+          "25 3",
+          "21 4",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 5",
+          "25 0",
+          "25 5",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 4 1",
+          "21 4",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "161 10",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "167 36",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 6",
+          "25 0",
+          "25 6",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 5 1",
+          "21 5",
+          "21 4",
+          "161 13",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+        ]
+      }
+    },
+    {
+      "target": "MOTOROLA",
+      "mode": "optimized",
+      "before_input_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
+      "after_input_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
+      "before_output_sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 126,
+      "whole_before_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "3",
+          "54 4",
+          "167 33",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 4",
+          "25 0",
+          "25 3",
+          "21 4",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 5",
+          "25 0",
+          "25 5",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 4 1",
+          "21 4",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "161 10",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "167 36",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 6",
+          "25 0",
+          "25 6",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 5 1",
+          "21 5",
+          "21 4",
+          "161 13",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+        ]
+      }
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "reference",
+      "before_input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "after_input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
+      "before_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 0,
+      "whole_before_subject": {
+        "name": "a",
+        "desc": "(Lav;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 j",
+          "153 36",
+          "25 2",
+          "192 j",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "21 5",
+          "21 4",
+          "162 36",
+          "25 0",
+          "25 0",
+          "25 1",
+          "187 i",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 au.a(Lav;Ljava/lang/Object;)Lav;",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 au.a(Lav;Z)V",
+          "132 5 1",
+          "167 11",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 au.a(Lav;Ljava/lang/Object;)Lav;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 au.a(Lav;Z)V"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "a",
+        "desc": "(Lav;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 j",
+          "153 36",
+          "25 2",
+          "192 j",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "21 5",
+          "21 4",
+          "162 36",
+          "25 0",
+          "25 0",
+          "25 1",
+          "187 i",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 au.a(Lav;Ljava/lang/Object;)Lav;",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 au.a(Lav;Z)V",
+          "132 5 1",
+          "167 11",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 d.a(Lj;I)Le;",
+          "183 i.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILe;)V",
+          "182 au.a(Lav;Ljava/lang/Object;)Lav;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 au.a(Lav;Z)V"
+        ]
+      }
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "raw",
+      "before_input_sha256": "73edbe780c41b00b310e8958d64a1f74e0e13bd0561a517cb33c76c8464b8bd6",
+      "after_input_sha256": "349d1b211d5ad89c05b8f6a07399e78249215356634abde83dd4d9f22f3091dd",
+      "before_output_sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 126,
+      "whole_before_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "3",
+          "54 4",
+          "167 33",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 4",
+          "25 0",
+          "25 3",
+          "21 4",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 5",
+          "25 0",
+          "25 5",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 4 1",
+          "21 4",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "161 10",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "167 36",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 6",
+          "25 0",
+          "25 6",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 5 1",
+          "21 5",
+          "21 4",
+          "161 13",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+        ]
+      }
+    },
+    {
+      "target": "SIEMENS2",
+      "mode": "optimized",
+      "before_input_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
+      "after_input_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
+      "before_output_sha256": "1ea31565e7141393c344efffe491a9c0b347752b79a9d1aa5b2516151ae65eab",
+      "after_output_sha256": "0650bdb05d2d9f7445f127a3548ed3ad3d0d08423adacfc03985f35abef45e81",
+      "observations": 1086,
+      "changed_observations": 126,
+      "whole_before_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "58 3",
+          "3",
+          "54 4",
+          "167 33",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 4",
+          "25 0",
+          "25 3",
+          "21 4",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 5",
+          "25 0",
+          "25 5",
+          "25 3",
+          "21 4",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 4 1",
+          "21 4",
+          "25 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "161 10",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I"
+        ]
+      },
+      "whole_after_subject": {
+        "name": "appendChoices",
+        "desc": "(LDrawControls/TreeNode;Ljavax/microedition/lcdui/Item;)V",
+        "access": 2,
+        "code": [
+          "25 2",
+          "193 DrawControls/FormChoiceGroup",
+          "154 4",
+          "177",
+          "25 2",
+          "192 DrawControls/FormChoiceGroup",
+          "89",
+          "58 3",
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "54 4",
+          "3",
+          "54 5",
+          "167 36",
+          "25 0",
+          "25 1",
+          "187 DrawControls/FormItem",
+          "89",
+          "25 2",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "21 5",
+          "25 0",
+          "25 3",
+          "21 5",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "58 6",
+          "25 0",
+          "25 6",
+          "25 3",
+          "21 5",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V",
+          "132 5 1",
+          "21 5",
+          "21 4",
+          "161 13",
+          "177"
+        ],
+        "handlers": [],
+        "strings": [],
+        "refs": [
+          "182 javax/microedition/lcdui/ChoiceGroup.size()I",
+          "182 javax/microedition/lcdui/ChoiceGroup.getString(I)Ljava/lang/String;",
+          "183 DrawControls/VirtualForm.choiceImage(LDrawControls/FormChoiceGroup;I)LDrawControls/Icon;",
+          "183 DrawControls/FormItem.<init>(Ljavax/microedition/lcdui/Item;Ljava/lang/String;ILDrawControls/Icon;)V",
+          "182 DrawControls/VirtualTree.addNode(LDrawControls/TreeNode;Ljava/lang/Object;)LDrawControls/TreeNode;",
+          "182 javax/microedition/lcdui/ChoiceGroup.isSelected(I)Z",
+          "182 DrawControls/VirtualTree.setExpandFlag(LDrawControls/TreeNode;Z)V"
+        ]
+      }
+    }
+  ],
+  "ordinary_form_replay": [
+    {
+      "mode": "reference",
+      "unchanged_observations": 6149,
+      "unchanged_raster_frames": 2562,
+      "output_sha256": "bc3adee7c44ae2f6b093c144f956368ae4885d8769fa728065bca2469280fc65"
+    },
+    {
+      "mode": "source",
+      "unchanged_observations": 6149,
+      "unchanged_raster_frames": 2562,
+      "output_sha256": "bc3adee7c44ae2f6b093c144f956368ae4885d8769fa728065bca2469280fc65"
+    }
+  ],
+  "full_matrix_and_eight_additional_CI_checks": [
+    {
+      "command": "python tools/test_source.py --matrix",
+      "returncode": 0,
+      "result": [
+        "PASS build: MIDP2 RU",
+        "PASS build: MIDP2 UA",
+        "PASS build: MIDP2 RO",
+        "PASS build: MIDP2 EN",
+        "PASS build: MIDP2 CZ",
+        "PASS build: MOTOROLA RU",
+        "PASS build: MOTOROLA UA",
+        "PASS build: MOTOROLA RO",
+        "PASS build: MOTOROLA EN",
+        "PASS build: MOTOROLA CZ",
+        "PASS build: SIEMENS2 RU",
+        "PASS build: SIEMENS2 UA",
+        "PASS build: SIEMENS2 RO",
+        "PASS build: SIEMENS2 EN",
+        "PASS build: SIEMENS2 CZ"
+      ]
+    },
+    {
+      "command": "python tools/test_tariffs.py",
+      "returncode": 0,
+      "result": [
+        "PASS tariff forms: 1661 observations, 260 openings, 120 saves"
+      ]
+    },
+    {
+      "command": "python tools/test_contact_core.py --skip-build",
+      "returncode": 0,
+      "result": [
+        "PASS contact core: 197245 observations, 25 real method pairs, 1009 constructor pairs"
+      ]
+    },
+    {
+      "command": "python tools/audit_source.py",
+      "returncode": 0,
+      "result": [
+        "Audited 1129 method signatures; 675 identical normalized instruction sequences; 675 also match exception tables"
+      ]
+    },
+    {
+      "command": "python tools/audit_jimm_ui.py",
+      "returncode": 0,
+      "result": [
+        "PASS JimmUI inventory: 67 fields, 71 native methods, 69 optimized signatures, 38 exact bodies; two incompatible compiler writers explicitly witnessed"
+      ]
+    },
+    {
+      "command": "python tools/audit_util.py",
+      "returncode": 0,
+      "result": [
+        "PASS Util inventory: 87 methods, 62 fields; 83 same optimized signatures; 37 exact instruction/handler sequences"
+      ]
+    },
+    {
+      "command": "python tools/audit_members.py",
+      "returncode": 0,
+      "result": [
+        "PASS member inventory: 101 original classes named; 181 additional signatures; ContactItem 66 methods / 42 fields / 51 same optimized signatures"
+      ]
+    },
+    {
+      "command": "python tools/audit_inheritance.py",
+      "returncode": 0,
+      "result": [
+        "PASS inheritance: 35 original abstract declarations; 34 optimized signatures; 239 typed call aliases; 7 GroupItem override identities"
+      ]
+    },
+    {
+      "command": "python tools/audit_method_graph.py",
+      "returncode": 0,
+      "result": [
+        "PASS method graph: 46 unique complete bodies; 435 instructions; 2 dependency rounds; 2 parameter specializations / 1 private helper staticizations"
+      ]
+    }
+  ],
+  "main_before": {
+    "signatures": 1129,
+    "exact": 675
+  },
+  "main_after": {
+    "signatures": 1129,
+    "exact": 675
+  },
+  "all_previous_exact_methods_retained": true,
+  "new_exact_methods": []
+}

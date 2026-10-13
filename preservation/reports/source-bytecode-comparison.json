@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "86f635b8e645ff237efa8b28b9a6420cef06510e945be01679517024e61958e7",
+  "rebuilt_sha256": "85db80da8493ed74f367c7888da90e8b653153a26f463f5e0ec377330e18a325",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -1469,12 +1469,12 @@
       "abstract_modifier_verified": true,
       "abstract_method": false,
       "reference_instructions": 37,
-      "source_instructions": 38,
+      "source_instructions": 40,
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "3ea97392ff325092cca2480e64f21f1e031a83674a6b6a769ee35764e6a7c855",
-      "source_normalized_sha256": "3a727955d8a7cd197da0a09a1ded330e4d01f6b19188e877e34c71899d4decfb"
+      "source_normalized_sha256": "105ab830de096c8b38be0febc1e8f2cb0b04b7849d8c699105c81fae302358f8"
     },
     {
       "reference": "d.a(Lax;Lcn;)V",

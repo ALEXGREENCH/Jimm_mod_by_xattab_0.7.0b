@@ -5,8 +5,8 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_jar_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
-      "source_unoptimized_class_jar_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
+      "source_jar_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+      "source_unoptimized_class_jar_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
       "device_observations": 1095,
       "scripted_observations": 2509,
       "comparisons": {
@@ -32,7 +32,7 @@
             {
               "flavor": "device",
               "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-              "fixture_sha256": "9a3ecf1fedbdaaae7a7d1ce8fb8602f0ba21c5b271520b32d6030db36537975b",
+              "fixture_sha256": "46fe0d6c4c5ef7f966ec8421fe1cb997dfe54c8af49e50aabb9590bac904a792",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -46,7 +46,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-              "fixture_sha256": "e3cd6cf77c2d9c34f3fffb664c6f2bb37ae608524965850d1e14dd43814c8949",
+              "fixture_sha256": "502b0a86d7e93f80a67e321804967ca034c89fe1f308b52fd9120644c7e25ae0",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -64,8 +64,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "6364a227a33412e294fbfe3e157149ad4b73e22686cc759ecb73c299c43fac6d",
-              "fixture_sha256": "1617f423aa06dd704070a795a7392ec12855785bba9102a03cfb453b3d56d094",
+              "input_sha256": "b6f81d0c4206afabb2d664743ffa93915e6ee6b19a6e56e6610e9a36fd61aaa6",
+              "fixture_sha256": "7fe0d8c091492e5472c388a2d520362674153b36a214f2b27827cbc913d558f3",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -78,8 +78,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "6364a227a33412e294fbfe3e157149ad4b73e22686cc759ecb73c299c43fac6d",
-              "fixture_sha256": "601b09173a380a09318a62b08e98d46040ab0f93771c04f3cc649c2a0103835a",
+              "input_sha256": "b6f81d0c4206afabb2d664743ffa93915e6ee6b19a6e56e6610e9a36fd61aaa6",
+              "fixture_sha256": "d92ba7c0cb586366fa7ab27a10b16fc1320c6c049c9b2c44cd85b0c15fdf6634",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -97,8 +97,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
-              "fixture_sha256": "541569e99baf1a1d1730fc13b7d1617beaf3721632cdb5416832be3bbd9c7bc8",
+              "input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+              "fixture_sha256": "992debeaa83cf0b7349fb6f4e74f1c9018ed553bc7787a24731ecad93d586fcc",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -111,8 +111,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
-              "fixture_sha256": "a4f9cb954b9206bd2798efc589f8c4a0f2f29aeca088e5940b0a3d095dd6c80c",
+              "input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+              "fixture_sha256": "83b9e997c82452819ac9a1956ca2f4af4d78e36193d174dbd3c1deded0eae9aa",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -130,8 +130,8 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "source_jar_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
-      "source_unoptimized_class_jar_sha256": "2d3eff726a66e53cd05f453711044e4699425711f01b486d330219d3d280363b",
+      "source_jar_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
+      "source_unoptimized_class_jar_sha256": "e0b41c86b9bcb6b6a5037260016b6abc017b8e6ad7cf48acd390cac95bc72d3c",
       "device_observations": 1095,
       "scripted_observations": 2509,
       "comparisons": {
@@ -157,7 +157,7 @@
             {
               "flavor": "device",
               "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-              "fixture_sha256": "261f64340d2076b85a3fe04bbb859ad17376db7ff163356d66ea3d0e94666df8",
+              "fixture_sha256": "45598ce9f70f9f245abdc8f1ba05a0a7c487f8977e12dd094f3ea7caac2e3867",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -171,7 +171,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-              "fixture_sha256": "c2f782c0b084a95f7ae8ce4f6c18efedf45f92e5d6d1fed69486cad59fd59f64",
+              "fixture_sha256": "657281dc4339ceaf873b7bb73dbc10ffeb44916dc3ee20b4d29d76348b4aeb01",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -189,8 +189,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "70b7ef85e5b8c0617f0b74b2a75f6885a45ec4bf8b9ea324a81dbb0960d2c785",
-              "fixture_sha256": "aae712ea81695f089da1ffe823b22e3815da521128367a9e55e0654fd2d81b27",
+              "input_sha256": "149fe9599c4b508d0f0f2a79cf0e43dba9df9a1781d61f421b66a5aeec153ca2",
+              "fixture_sha256": "ca8abd0ba63de6f66c477cc088b793c22cd40431233634b268c5b5a6c4395ae6",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -203,8 +203,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "70b7ef85e5b8c0617f0b74b2a75f6885a45ec4bf8b9ea324a81dbb0960d2c785",
-              "fixture_sha256": "1b2d5ff997726ecca98caead3c8dd6c1b8aa593f7171e81a7eb65d20d614dbcb",
+              "input_sha256": "149fe9599c4b508d0f0f2a79cf0e43dba9df9a1781d61f421b66a5aeec153ca2",
+              "fixture_sha256": "e9336ad446162270eff81fae8a68920f404ef2e40d29d747db08f032d1d1d389",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -222,8 +222,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
-              "fixture_sha256": "3eb8d1eaaf7cae3bf52a4fa7dd6139bbe21e21a43e7c2809fee6e63b74470742",
+              "input_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
+              "fixture_sha256": "d17719df781b215d437285ccc3509283ac8f4d576e8e7c9c8af411e1147fb374",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -236,8 +236,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
-              "fixture_sha256": "9f1f85dcb5ad7ad2e01b93159f94dc455e4c20f185ef68bcb9a23a97536f2490",
+              "input_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
+              "fixture_sha256": "6a4f219bfc3284ff44dd9de0c3fc36355d72aaebc25e384ebd205fbd1b556391",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -255,8 +255,8 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "source_jar_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
-      "source_unoptimized_class_jar_sha256": "73edbe780c41b00b310e8958d64a1f74e0e13bd0561a517cb33c76c8464b8bd6",
+      "source_jar_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
+      "source_unoptimized_class_jar_sha256": "349d1b211d5ad89c05b8f6a07399e78249215356634abde83dd4d9f22f3091dd",
       "device_observations": 1095,
       "scripted_observations": 2509,
       "comparisons": {
@@ -282,7 +282,7 @@
             {
               "flavor": "device",
               "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-              "fixture_sha256": "3a38af53c74e4a29526c6e17da643536d8db7c442337d8fd819f530fa5cef099",
+              "fixture_sha256": "f034df527a20e2de58f5d77e5195a433122e36b128406a0451eb6b9ae9a8740a",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -296,7 +296,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-              "fixture_sha256": "1350163f0ce4ac816f1d0783038aa5cba9fe55f86115024948999bd0f124c390",
+              "fixture_sha256": "5c2dc48360c3ae08a248357cc4747c57e9df38f9321d1d6c33008e0b0498b4e6",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -314,8 +314,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "bcabff7a5f684beb79bcbcf30a3e7f7aeacaf37f802ed0e2ff24b8ae7cf1f9b4",
-              "fixture_sha256": "90c9cffdbedd620c71e706e6529cf3f369bab82db443b2e52a0edb4ffa3e07b4",
+              "input_sha256": "7ce77cf1356a61f330eb4fa117ad67dc799fb5c9e51bdd5fe4f4f8250c45fdaf",
+              "fixture_sha256": "7c8c14f44a408cf46eecbf09189dd04fe715b70c4be89daa34ace48c0a11dee1",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -328,8 +328,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "bcabff7a5f684beb79bcbcf30a3e7f7aeacaf37f802ed0e2ff24b8ae7cf1f9b4",
-              "fixture_sha256": "bec3f42dfb60443af4846df71ab4cb9681681ea21558834e0ae83ab1665416c6",
+              "input_sha256": "7ce77cf1356a61f330eb4fa117ad67dc799fb5c9e51bdd5fe4f4f8250c45fdaf",
+              "fixture_sha256": "b9dafa573654e68905d7d5c6af700297a6a9dcc9a1431137e175e33f5d0e5745",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {
@@ -347,8 +347,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
-              "fixture_sha256": "497e92dc42edeaa63edf53ed892b140442fb385b6802d437eecf28e7df4ec828",
+              "input_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
+              "fixture_sha256": "2a380b9ac81c8de30cab0920fad453e258a77b76b2ba8166ddd4ca65c0c37320",
               "all_input_class_bytes_unchanged": true,
               "only_two_enumerated_device_calls_changed": false,
               "captures": {},
@@ -361,8 +361,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
-              "fixture_sha256": "448de6ca7c803d3f1433ab686bb916d403f91f8be6cf677ca622a981cc785c35",
+              "input_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
+              "fixture_sha256": "94b817e0f3341cac13ba8192dd893a04bed81e5db0e52fdc5526bc27a3569c88",
               "all_input_class_bytes_unchanged": false,
               "only_two_enumerated_device_calls_changed": true,
               "captures": {

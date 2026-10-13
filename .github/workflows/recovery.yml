@@ -135,6 +135,10 @@ jobs:
             preservation/reports/source-softkeys-bytecode.json
             preservation/reports/source-softkeys-replay.json
             preservation/reports/source-softkeys-delta.json
+            preservation/reports/source-form-choices-before.json
+            preservation/reports/source-form-choices-bytecode.json
+            preservation/reports/source-form-choices-replay.json
+            preservation/reports/source-form-choices-delta.json
             preservation/reports/source-editor-send-before.json
             preservation/reports/source-editor-send-replay.json
             preservation/reports/source-platform-initialization-before.json

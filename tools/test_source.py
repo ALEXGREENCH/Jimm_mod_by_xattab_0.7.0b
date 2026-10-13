@@ -514,6 +514,8 @@ def main(matrix=False, skip_build=False):
         report['startup_initialization_bytecode'] = run([sys.executable, ROOT / 'tools/audit_startup_initialization.py'], 'startup-initialization-bytecode-audit')
         report['platform_initialization_replay'] = run([sys.executable, ROOT / 'tools/test_platform_initialization.py'], 'platform-initialization-replay-audit')
         report['editor_send_replay'] = run([sys.executable, ROOT / 'tools/test_editor_send.py'], 'editor-send-replay-audit')
+        report['form_choices_bytecode'] = run([sys.executable, ROOT / 'tools/audit_form_choices.py'], 'form-choices-bytecode-audit')
+        report['form_choices_replay'] = run([sys.executable, ROOT / 'tools/test_form_choices.py'], 'form-choices-replay-audit')
         report['menu_reset_bytecode'] = run([sys.executable, ROOT / 'tools/audit_menu_reset.py'], 'menu-reset-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')

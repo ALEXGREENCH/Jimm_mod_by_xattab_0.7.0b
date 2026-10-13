@@ -98,7 +98,8 @@ public class VirtualForm extends VirtualTree implements VirtualTreeCommands,
     {
         if (!(item instanceof FormChoiceGroup)) return;
         FormChoiceGroup choices = (FormChoiceGroup)item;
-        for (int i = 0; i < choices.size(); i++)
+        int size = choices.size();
+        for (int i = 0; i < size; i++)
         {
             TreeNode node = addNode(parent, new FormItem(item, choices.getString(i), i, choiceImage(choices, i)));
             setExpandFlag(node, choices.isSelected(i));

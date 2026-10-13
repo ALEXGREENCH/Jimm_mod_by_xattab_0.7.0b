@@ -7,7 +7,7 @@
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
       "assembled_input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "8f184471fa77d0c6e90ac9e39e68c53c5b04735674053df36515d5f38a9256a2",
+      "fixture_sha256": "0b493d76ccccb12273962187d793c8ef62833f202420966d1427a27ff6590b31",
       "complete_original_method": {
         "name": "a",
         "desc": "(Z)V",
@@ -2103,9 +2103,9 @@
     },
     {
       "mode": "raw",
-      "input_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
-      "assembled_input_sha256": "6364a227a33412e294fbfe3e157149ad4b73e22686cc759ecb73c299c43fac6d",
-      "fixture_sha256": "1fabd1852e02ef31f5f6950e9d04532aeac6324e1c31e4f84ff51a17867c8577",
+      "input_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
+      "assembled_input_sha256": "b6f81d0c4206afabb2d664743ffa93915e6ee6b19a6e56e6610e9a36fd61aaa6",
+      "fixture_sha256": "0c0a25f56af2883603fd3da19d72e4be1c96825f193451656a799cab2d297a52",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -3300,9 +3300,9 @@
         },
         {
           "owner": "DrawControls/VirtualForm",
-          "original_sha256": "382fa5f5c79b2902cf1220ab96e92def7d1b939e3f1ef1444de43c4c0a1d1959",
-          "expected_sha256": "382fa5f5c79b2902cf1220ab96e92def7d1b939e3f1ef1444de43c4c0a1d1959",
-          "fixture_sha256": "382fa5f5c79b2902cf1220ab96e92def7d1b939e3f1ef1444de43c4c0a1d1959"
+          "original_sha256": "76f605f8092806055220cf335271c46104443739371416f8d37bc7b74384cd4a",
+          "expected_sha256": "76f605f8092806055220cf335271c46104443739371416f8d37bc7b74384cd4a",
+          "fixture_sha256": "76f605f8092806055220cf335271c46104443739371416f8d37bc7b74384cd4a"
         },
         {
           "owner": "DrawControls/VirtualList",
@@ -3835,9 +3835,9 @@
     },
     {
       "mode": "optimized",
-      "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
-      "assembled_input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
-      "fixture_sha256": "34f7601d0334dd352fb3e3548e39023316fbefd5ef0602cd77d8ff5e7aefe8fd",
+      "input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+      "assembled_input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+      "fixture_sha256": "f88ee63a7c88a924069eb8fd3f5bb30ecfdd47f369cf7fd4934d262218c5bacb",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -5417,9 +5417,9 @@
         },
         {
           "owner": "DrawControls/VirtualForm",
-          "original_sha256": "053212cbe96b0b8b561413299f1e2cf1bdca9ab5ac6762aeb9485b483b2595b9",
-          "expected_sha256": "053212cbe96b0b8b561413299f1e2cf1bdca9ab5ac6762aeb9485b483b2595b9",
-          "fixture_sha256": "053212cbe96b0b8b561413299f1e2cf1bdca9ab5ac6762aeb9485b483b2595b9"
+          "original_sha256": "5ee575ddb3de960674f0fabb7a51fe6d10facd0d4e516a7ba568fa44cd2d6d02",
+          "expected_sha256": "5ee575ddb3de960674f0fabb7a51fe6d10facd0d4e516a7ba568fa44cd2d6d02",
+          "fixture_sha256": "5ee575ddb3de960674f0fabb7a51fe6d10facd0d4e516a7ba568fa44cd2d6d02"
         },
         {
           "owner": "DrawControls/VirtualList",

@@ -4,8 +4,8 @@
     {
       "target": "MIDP2",
       "native_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "raw_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
-      "delivered_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
+      "raw_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
+      "delivered_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
       "proofs": [
         {
           "mode": "reference",
@@ -68,7 +68,7 @@
             "peer": "c"
           },
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "a4e5e7c15c44d5306fe08265fec590ae07cffab69243eb82e44df2af94d163c2",
+          "fixture_sha256": "e8fd6ca3ff8eb07e6b7b80a9a158c116317b6b01cc1af54ea3dfc71c9415da2f",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
@@ -2370,8 +2370,8 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "6364a227a33412e294fbfe3e157149ad4b73e22686cc759ecb73c299c43fac6d",
-          "fixture_sha256": "cd3aa4b89a2ff9eae5d727084a618ce0c12135004237d3308bfa62f9f4d1c898",
+          "input_sha256": "b6f81d0c4206afabb2d664743ffa93915e6ee6b19a6e56e6610e9a36fd61aaa6",
+          "fixture_sha256": "b98307f4ce8f2e9679ed00c1fbebdd2e262e6b83de9f84c8c6f8c8649b8e95e0",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
@@ -3608,8 +3608,8 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "f8717e58db6e59ae26107c6e16e46a309fd20c5dd5f770f554fcfd27c86b84dd",
-          "fixture_sha256": "d63762f7c0d989d07e60fb6c6ec30229b3b2e1a62f04f07c966a00f6decc85d1",
+          "input_sha256": "520497e986e8ff393d07f7b6ff564835a87973882174c44ce611bce4eac97d70",
+          "fixture_sha256": "c5649b0778b9ed5910d580a725fc7bfc82cbf16e5108e6f13d870abb9ea9341a",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
@@ -6636,8 +6636,8 @@
     {
       "target": "MOTOROLA",
       "native_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "raw_sha256": "2d3eff726a66e53cd05f453711044e4699425711f01b486d330219d3d280363b",
-      "delivered_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
+      "raw_sha256": "e0b41c86b9bcb6b6a5037260016b6abc017b8e6ad7cf48acd390cac95bc72d3c",
+      "delivered_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
       "proofs": [
         {
           "mode": "reference",
@@ -6702,7 +6702,7 @@
             "peer": "c"
           },
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-          "fixture_sha256": "285a950467a6a44d7f0c1699bc9d1b7b1ab7dfc16e9a2bb5a7b893a0f26dfc1c",
+          "fixture_sha256": "593cc564b318804b693bd824076dc4ef1160827b7a67845a6148d686d895ee2e",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
@@ -8976,8 +8976,8 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "70b7ef85e5b8c0617f0b74b2a75f6885a45ec4bf8b9ea324a81dbb0960d2c785",
-          "fixture_sha256": "f1fe2d0ce9d80093fd5bb0842095cb76a3ff291f1ba63518b442097a1f419f5a",
+          "input_sha256": "149fe9599c4b508d0f0f2a79cf0e43dba9df9a1781d61f421b66a5aeec153ca2",
+          "fixture_sha256": "16fc2a67f73fa9d13616adfad05df7b4b8b12ccc35720628d6d26bd905c1e20f",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
@@ -10194,8 +10194,8 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "04f516c2a64b1b491ed7e75ac7c89054d2eb4d4a0e4906cbaa3265223d96d113",
-          "fixture_sha256": "551c0fcd41d13909e7dbe6d30d7aa00352d094f67bd3c0f416dea54592ab53b5",
+          "input_sha256": "985d95e041f0d86db028db919df119afe31f5e64b71a18756fa5dc0d29471725",
+          "fixture_sha256": "1a6d66582a30bd8bd255e6044ffe7b9b21ad13b96605362df60025d08189c305",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
@@ -13186,8 +13186,8 @@
     {
       "target": "SIEMENS2",
       "native_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "raw_sha256": "73edbe780c41b00b310e8958d64a1f74e0e13bd0561a517cb33c76c8464b8bd6",
-      "delivered_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
+      "raw_sha256": "349d1b211d5ad89c05b8f6a07399e78249215356634abde83dd4d9f22f3091dd",
+      "delivered_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
       "proofs": [
         {
           "mode": "reference",
@@ -13250,7 +13250,7 @@
             "peer": "c"
           },
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-          "fixture_sha256": "bb9a961da7a35020155672a16055cf0152d80beee8b445cbe0d641f4db242c4b",
+          "fixture_sha256": "67122d05104625e8bfab78dab8cf826baad53aba3e089f72c112c81230dc474f",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
@@ -15552,8 +15552,8 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "bcabff7a5f684beb79bcbcf30a3e7f7aeacaf37f802ed0e2ff24b8ae7cf1f9b4",
-          "fixture_sha256": "ae01b5e311d6c8c642b218fde458739cb7afa66466a427691b2b499edabed2b2",
+          "input_sha256": "7ce77cf1356a61f330eb4fa117ad67dc799fb5c9e51bdd5fe4f4f8250c45fdaf",
+          "fixture_sha256": "adff08534b5055a9915353254c15bc6750e1c837631f6f9018f655911921b205",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
@@ -16802,8 +16802,8 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "13586a6aa6bfd50dd694580f66dd299846d6a63046eda19b18451ee8706b49a4",
-          "fixture_sha256": "7d4bce6dc549457806e33805410606df919d0a43438852d16af7b13c301407f5",
+          "input_sha256": "7ac0a7978ed3c8c6211c29fd5971aecd1a057f1abc666fb1d200130b9be385ee",
+          "fixture_sha256": "4e0d5c39e01e1424332f8bf046dcb649c5eb1e48020b23502e3f8721daefbc00",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,

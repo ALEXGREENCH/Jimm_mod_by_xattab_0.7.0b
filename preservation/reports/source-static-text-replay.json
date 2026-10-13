@@ -4,7 +4,7 @@
     {
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "0440559bb284c7e633c77dffe9ccc09c5d10c9ac1694b8e52bb56ab212bfa84d",
+      "fixture_sha256": "5d75161b205d3fff6861216b8d049ad4c4efad7cd3ed89f1adbb6e42a334d247",
       "output_sha256": "afe13e67a86bb0c7da1068d740abe75defcd8a1748a0d194bd006d83ee5180df",
       "observations": 9775,
       "raster_frames": 930,
@@ -52,8 +52,8 @@
     },
     {
       "mode": "raw",
-      "input_sha256": "62ef913a3332ad119d353b178dbe5d7ebe2a75d99f00dbfef1c577d9d6cc33de",
-      "fixture_sha256": "d3436970c75675abd9dfa452826ddbc7a77b379c1d62f9e2e284fa7b8514ed84",
+      "input_sha256": "72675d9f32b8714b53c4376f44b9c82c6884ff2a0b8f5373d241d0b3ab79d67c",
+      "fixture_sha256": "3efeb328d48944ddcefedfcbe0e1b65462301b6db7442c6fe68144c04ab02e56",
       "output_sha256": "afe13e67a86bb0c7da1068d740abe75defcd8a1748a0d194bd006d83ee5180df",
       "observations": 9775,
       "raster_frames": 930,
