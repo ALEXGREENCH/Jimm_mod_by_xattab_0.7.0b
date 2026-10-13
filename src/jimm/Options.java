@@ -1750,6 +1750,11 @@ class OptionsForm implements CommandListener, ItemStateListener
 					clFontStyleChoiceGroup.append(ResourceBundle.getString("font_italic"), null);
 					clFontStyleChoiceGroup.setSelectedIndex(Options.getInt(Options.OPTION_CL_FONT_STYLE), true);
 
+					fontViewChoiceGroup = new FormChoiceGroup(ResourceBundle.getString("font_view"), Choice.POPUP);
+					fontViewChoiceGroup.append(ResourceBundle.getString("font_plain_desc"), null);
+					fontViewChoiceGroup.append(ResourceBundle.getString("font_shadow"), null);
+					fontViewChoiceGroup.setSelectedIndex(Options.getInt(Options.OPTION_FONT_VIEW), true);
+
 					clSortByChoiceGroup = new FormChoiceGroup(ResourceBundle.getString("sort_by"), Choice.POPUP);
 					clSortByChoiceGroup.append(ResourceBundle.getString("sort_by_name"), null);
 					clSortByChoiceGroup.append(ResourceBundle.getString("sort_by_status"), null);
@@ -1793,25 +1798,19 @@ class OptionsForm implements CommandListener, ItemStateListener
 					setChecked(chrgChat, "swap_send_and_back", Options.OPTION_SWAP_SEND_AND_BACK);
 					//#sijapp cond.end#
 
-					//#sijapp cond.if target is "MOTOROLA" | target is "MIDP2"#
-					//#sijapp cond.if target is "MIDP2"#
-					if (Jimm.supportsNokiaLight)
-					//#sijapp cond.end#
-					{
-						lightTimeout = new TextField(ResourceBundle.getString("backlight_timeout"), String.valueOf(Options.getInt(Options.OPTION_LIGHT_TIMEOUT)), 4, TextField.NUMERIC);
-						lightManual = new FormChoiceGroup(null, Choice.MULTIPLE);
-						setChecked(lightManual, "backlight_manual", Options.OPTION_LIGHT_MANUAL);
-					}
-					//#sijapp cond.end#
 
 					setChecked(chrgChat, "textbox_no_caption", Options.OPTION_TEXTBOX_NO_CAPTION);
 					setChecked(chrgChat, "transliterate", Options.OPTION_TRANSLITERATE);
 					setChecked(chrgChat, "detransliterate", Options.OPTION_DETRANSLITERATE);
 					setChecked(chrgChat, "remember_last_smile", Options.OPTION_REMEMBER_SMILE);
-					fontViewChoiceGroup = new FormChoiceGroup(ResourceBundle.getString("font_view"), Choice.POPUP);
-					fontViewChoiceGroup.append(ResourceBundle.getString("font_plain_desc"), null);
-					fontViewChoiceGroup.append(ResourceBundle.getString("font_shadow"), null);
-					fontViewChoiceGroup.setSelectedIndex(Options.getInt(Options.OPTION_FONT_VIEW), true);
+					//#sijapp cond.if target is "MOTOROLA" | target is "MIDP2"#
+					lightTimeout = new TextField(ResourceBundle.getString("backlight_timeout"), String.valueOf(Options.getInt(Options.OPTION_LIGHT_TIMEOUT)), 4, TextField.NUMERIC);
+					lightManual = new FormChoiceGroup(null, Choice.MULTIPLE);
+					setChecked(lightManual, "backlight_manual", Options.OPTION_LIGHT_MANUAL);
+					//#sijapp cond.end#
+					//#sijapp cond.if target is "MIDP2"#
+					lightLevel = new Gauge(ResourceBundle.getString("light"), true, 10, Options.getInt(Options.OPTION_LIGHT_LEVEL) / 10);
+					//#sijapp cond.end#
 					cursorTransparency = new Gauge(ResourceBundle.getString("cursor_transparency"), true, 10, Options.getInt(Options.OPTION_CURSOR_ALPHA) / 25);
 					captionTransparency = new Gauge(ResourceBundle.getString("caption_transparency"), true, 10, Options.getInt(Options.OPTION_CAPTION_ALPHA) / 25);
 					softbarTransparency = new Gauge(ResourceBundle.getString("softbar_transparency"), true, 10, Options.getInt(Options.OPTION_SOFTBAR_ALPHA) / 25);
@@ -1837,11 +1836,7 @@ class OptionsForm implements CommandListener, ItemStateListener
 					}
 					//#sijapp cond.end#
 					//#sijapp cond.if target is "MIDP2"#
-					if (Jimm.is_phone_NOKIA())
-					{
-						lightLevel = new Gauge(ResourceBundle.getString("light"), true, 10, Options.getInt(Options.OPTION_LIGHT_LEVEL) / 10);
-						optionsForm.append(lightLevel);
-					}
+					if (Jimm.is_phone_NOKIA()) optionsForm.append(lightLevel);
 					//#sijapp cond.end#
 					optionsForm.append(clFontSizeChoiceGroup);
 					optionsForm.append(clFontStyleChoiceGroup);
@@ -2177,10 +2172,12 @@ class OptionsForm implements CommandListener, ItemStateListener
 					Options.setInt(Options.OPTION_CL_FONT_SIZE, clFontSizeChoiceGroup.getSelectedIndex());
 					Options.setInt(Options.OPTION_CL_FONT_STYLE, clFontStyleChoiceGroup.getSelectedIndex());
 					Options.updateFontStyle();
+					Options.setInt(Options.OPTION_FONT_VIEW, fontViewChoiceGroup.getSelectedIndex());
 					Options.setInt(Options.OPTION_CL_SORT_BY, newSortMethod);
 					Options.setBoolean(Options.OPTION_CL_HIDE_OFFLINE, newHideOffline);
 					Options.setBoolean(Options.OPTION_CL_HIDE_OFFLINE_ALL, choiceContactList.isSelected(idx++));
-					Options.setBoolean(Options.OPTION_CL_HIDE_EMPTY, choiceContactList.isSelected(idx++));
+					boolean newHideEmpty = choiceContactList.isSelected(idx++);
+					Options.setBoolean(Options.OPTION_CL_HIDE_EMPTY, newHideEmpty);
 					Options.setBoolean(Options.OPTION_XSTATUS_RIGHT, choiceContactList.isSelected(idx++));
 
 					idx = 0;
@@ -2230,24 +2227,19 @@ class OptionsForm implements CommandListener, ItemStateListener
 					}
 					//#sijapp cond.end#
 					VirtualList.assignSoftKeys();
-
-					Options.setInt(Options.OPTION_FONT_VIEW, fontViewChoiceGroup.getSelectedIndex());
-					Options.setInt(Options.OPTION_CURSOR_ALPHA, cursorTransparency.getValue() * 25);
-					Options.setInt(Options.OPTION_CAPTION_ALPHA, captionTransparency.getValue() * 25);
-					Options.setInt(Options.OPTION_SOFTBAR_ALPHA, softbarTransparency.getValue() * 25);
-					Options.updateAlpha();
-					//#sijapp cond.if target is "MIDP2"#
-					if (Jimm.is_phone_NOKIA()) Options.setInt(Options.OPTION_LIGHT_LEVEL, lightLevel.getValue() * 10);
-					//#sijapp cond.end#
 					Options.setBoolean(Options.OPTION_USER_GROUPS, newUseGroups);
 
 					// Set UI options for real controls
 					ContactList.optionsChanged
 					(
 						(newUseGroups != lastGroupsUsed) || (newHideOffline != lastHideOffline)
-							|| (choiceContactList.isSelected(3) != lastHideEmpty),
+							|| (newHideEmpty != lastHideEmpty),
 						false
 					);
+
+					Options.setInt(Options.OPTION_CURSOR_ALPHA, cursorTransparency.getValue() * 25);
+					Options.setInt(Options.OPTION_CAPTION_ALPHA, captionTransparency.getValue() * 25);
+					Options.setInt(Options.OPTION_SOFTBAR_ALPHA, softbarTransparency.getValue() * 25);
 
 					//#sijapp cond.if target is "MOTOROLA" | target is "MIDP2"#
 					//#sijapp cond.if target is "MIDP2"#
@@ -2257,6 +2249,10 @@ class OptionsForm implements CommandListener, ItemStateListener
 					Options.setInt(Options.OPTION_LIGHT_TIMEOUT, Integer.parseInt(lightTimeout.getString()));
 					Options.setBoolean(Options.OPTION_LIGHT_MANUAL, lightManual.isSelected(0));
 					}
+					//#sijapp cond.end#
+
+					//#sijapp cond.if target is "MIDP2"#
+					if (Jimm.is_phone_NOKIA()) Options.setInt(Options.OPTION_LIGHT_LEVEL, lightLevel.getValue() * 10);
 					//#sijapp cond.end#
 
 					if (!lastUILang.equals(Options.getString(Options.OPTION_UI_LANGUAGE)))

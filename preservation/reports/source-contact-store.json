@@ -4,14 +4,14 @@
     {
       "target": "MIDP2",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "raw_sha256": "06ad0441bd71ab946aa02c8ca7f1dbb6d339c6e3bb2d9f4ade2083d37d5491ea",
-      "delivered_sha256": "0dafb885e16bc850a2597f2eb2d3e1906b00186c507782af676f924d2100f9b8",
+      "raw_sha256": "95d5e77c7aca0db5bce94c712be64c3b8c6478307ef55f5b151ba47e4c225db0",
+      "delivered_sha256": "31745a6fe30ecc007791fd34c784f6c0a011fddd72736e0aacdbff24cb6be8f8",
       "observations": 2201,
       "fixture_proofs": [
         {
           "mode": "reference",
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "46e5ba700fc4c05f5be937d532d582630f489698cd0a171acfe0d010a7c1924d",
+          "fixture_sha256": "a4605b24a19aceead07d1e189a1abf806bce21d0589ec127aa702caa867754c9",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "m",
@@ -56,8 +56,8 @@
         },
         {
           "mode": "source",
-          "input_sha256": "e2adee662f67684280740339b5b81928effe635c5a74d4f75b4a0a302c1de7f1",
-          "fixture_sha256": "9f428ee402f0aff40e899fa4fc53d1861da8bb486b2d7d4d89bae7138ed0d3c2",
+          "input_sha256": "1dbdaffb25cb4c517c9d62c5e5cd38b461223694ddfb891a3ea056eb823c8374",
+          "fixture_sha256": "b5f023c3b55f5803497d9d779dd4b5924522e8feac3612f773885cbf6d44153d",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "jimm/ContactList",
@@ -103,8 +103,8 @@
         },
         {
           "mode": "optimized-source",
-          "input_sha256": "0dafb885e16bc850a2597f2eb2d3e1906b00186c507782af676f924d2100f9b8",
-          "fixture_sha256": "7c159bd5b74119d2d991d9257c5d8c5fef5ff18375eb4e835c4b6a9d1d723900",
+          "input_sha256": "31745a6fe30ecc007791fd34c784f6c0a011fddd72736e0aacdbff24cb6be8f8",
+          "fixture_sha256": "13ab6d1fa8996edfd4d24bf96c39bef04cbfc1ff6ba61b11d9a5bc20874d0bdb",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "jimm/ContactList",
@@ -152,14 +152,14 @@
     {
       "target": "MOTOROLA",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "raw_sha256": "8bf219bcba23c54fa631078850b14b4492b8f50d56eb17d9ebb6e589bbc1d304",
-      "delivered_sha256": "07b216beb530dc871279920b2c823c80181493c2c1f7eb986140faf24b650f55",
+      "raw_sha256": "a17e6b340df7140ed6b21a44ca763203415801b97afc0eae4ea232bed6df7533",
+      "delivered_sha256": "4a4e4e46243a5a9fe8d963c4c42e90677803ab432a439b072bd7f8073041bf35",
       "observations": 2201,
       "fixture_proofs": [
         {
           "mode": "reference",
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-          "fixture_sha256": "876efda2053ac98f3d0415587723dcc6bca3dc5091a58500459d6a4ae879a010",
+          "fixture_sha256": "a4b42273bd326caf3aaee52374d730313610d9a23762301191dce3947034e910",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "m",
@@ -204,8 +204,8 @@
         },
         {
           "mode": "source",
-          "input_sha256": "9de347a3e01ff7156a10f01fb97f1c1019e8a6d4204aa560475399b273710191",
-          "fixture_sha256": "c19b69aa50a407de8d88faa2c4a341ee759fe3abb945b77195b3a80e4361b9fa",
+          "input_sha256": "6ee0ce22221c72aefe0d6f1186e9cac92d320cfd86a0c48da2e2d362bacd50dc",
+          "fixture_sha256": "5997579ca50b86a8f293150ffa02d03239145e0ef5a7c039eca510fc1849aaf1",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "jimm/ContactList",
@@ -251,8 +251,8 @@
         },
         {
           "mode": "optimized-source",
-          "input_sha256": "07b216beb530dc871279920b2c823c80181493c2c1f7eb986140faf24b650f55",
-          "fixture_sha256": "99389cdc196e9c7cf3a9e7dcaaa016d4203e7fb2a659a1bd9b353049b6b1e40b",
+          "input_sha256": "4a4e4e46243a5a9fe8d963c4c42e90677803ab432a439b072bd7f8073041bf35",
+          "fixture_sha256": "1bc070722df1fcdb71faf2fedacffcdabaeccc9f92032a6e4b787827b66b86d7",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "jimm/ContactList",
@@ -300,14 +300,14 @@
     {
       "target": "SIEMENS2",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "raw_sha256": "3f67dacd4e98fc265df82415098e3b7093666b82ce5a578f1b879411bf5820f4",
-      "delivered_sha256": "a75142f3d7f41c071e1c3ab6337acdbe30a4352bc090571a36c5e9f1304dbfea",
+      "raw_sha256": "305a9e18793640df2fedae397706e5d3d939fd0543497349d2a4f626e8945511",
+      "delivered_sha256": "0eab21f26a4339f816af53c893a8159a84deb9b1b4b497a98fa424232102b783",
       "observations": 2201,
       "fixture_proofs": [
         {
           "mode": "reference",
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-          "fixture_sha256": "18a8a35f893f02b5448f17d7503b88e18a3be923a767c83b18b3df95bb3ea9dc",
+          "fixture_sha256": "2b6191ebc5e2385273f320b250b7126f395982d47472c0d5a551cd0b3e724622",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "m",
@@ -352,8 +352,8 @@
         },
         {
           "mode": "source",
-          "input_sha256": "7dd40a3827b0df8aa86b01efaac39cfba9e44730c28606e35bada0419260de24",
-          "fixture_sha256": "821e0a345f9bda7934d2b422fbc234936d1b429254784ac318049cadf1743241",
+          "input_sha256": "ed8861fe08703de1dc77331b60400f6bcf468154c8adac72c35ffc90ee4c875d",
+          "fixture_sha256": "e1be6ee62aadaa5bb90cdbfba58afe09592b31b1964a77d8fbb371fa22792cee",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "jimm/ContactList",
@@ -399,8 +399,8 @@
         },
         {
           "mode": "optimized-source",
-          "input_sha256": "a75142f3d7f41c071e1c3ab6337acdbe30a4352bc090571a36c5e9f1304dbfea",
-          "fixture_sha256": "b6bc0c1a1e1371d6176d36bb685572db5dd7a9b509132c693171df677c3c34dd",
+          "input_sha256": "0eab21f26a4339f816af53c893a8159a84deb9b1b4b497a98fa424232102b783",
+          "fixture_sha256": "508c2327584886d5a38124cf48fbfd78d981d03f2742f6c2214502d0e364fe6a",
           "output_sha256": "08da8c6bac5b3c9727eea4dfa2a4ebd6e887fef1d552a9435815f8bf74862d76",
           "all_input_application_bytes_unchanged": true,
           "owner": "jimm/ContactList",

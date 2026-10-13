@@ -146,6 +146,9 @@ jobs:
             preservation/reports/source-import-cleanup-before.json
             preservation/reports/source-import-cleanup.json
             preservation/reports/source-import-cleanup-delta.json
+            preservation/reports/source-options-interface-before.json
+            preservation/reports/source-options-interface.json
+            preservation/reports/source-options-interface-delta.json
             preservation/reports/source-editor-send-before.json
             preservation/reports/source-editor-send-replay.json
             preservation/reports/source-platform-initialization-before.json

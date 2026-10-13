@@ -7,7 +7,7 @@
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
       "assembled_input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "d6fc6686a40b736790f304689c1b006ac379060e9fcf9b8c15fc2f5e7d6e4549",
+      "fixture_sha256": "6ec5470593b10339310cb59d42bfbcecf2b408f4002ff00899b3de810aae1c61",
       "complete_original_method": {
         "name": "a",
         "desc": "(Z)V",
@@ -2103,9 +2103,9 @@
     },
     {
       "mode": "raw",
-      "input_sha256": "06ad0441bd71ab946aa02c8ca7f1dbb6d339c6e3bb2d9f4ade2083d37d5491ea",
-      "assembled_input_sha256": "e2adee662f67684280740339b5b81928effe635c5a74d4f75b4a0a302c1de7f1",
-      "fixture_sha256": "9596b0e0e5cc4062b1900fb82915e0d3dd2b8fda07992772d87088c8facdd4a5",
+      "input_sha256": "95d5e77c7aca0db5bce94c712be64c3b8c6478307ef55f5b151ba47e4c225db0",
+      "assembled_input_sha256": "1dbdaffb25cb4c517c9d62c5e5cd38b461223694ddfb891a3ea056eb823c8374",
+      "fixture_sha256": "c3641644aa9e7fcc8f20998e3bd65a709fd85393e572731fed0e777745f4ada5",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -3504,9 +3504,9 @@
         },
         {
           "owner": "jimm/OptionsForm",
-          "original_sha256": "5b547c450a5bd3ee3afa6d8ce800707874bd6fbc40538422b154d4db52609fbe",
-          "expected_sha256": "5b547c450a5bd3ee3afa6d8ce800707874bd6fbc40538422b154d4db52609fbe",
-          "fixture_sha256": "5b547c450a5bd3ee3afa6d8ce800707874bd6fbc40538422b154d4db52609fbe"
+          "original_sha256": "0e56f0270134964c1b73b3adfb843bcaad77d959461c5037054df35fb8a072f5",
+          "expected_sha256": "0e56f0270134964c1b73b3adfb843bcaad77d959461c5037054df35fb8a072f5",
+          "fixture_sha256": "0e56f0270134964c1b73b3adfb843bcaad77d959461c5037054df35fb8a072f5"
         },
         {
           "owner": "jimm/RunnableImpl",
@@ -3835,9 +3835,9 @@
     },
     {
       "mode": "optimized",
-      "input_sha256": "0dafb885e16bc850a2597f2eb2d3e1906b00186c507782af676f924d2100f9b8",
-      "assembled_input_sha256": "0dafb885e16bc850a2597f2eb2d3e1906b00186c507782af676f924d2100f9b8",
-      "fixture_sha256": "d9cb9fb6453aeeed46a5799fad7f9459fb41d57a2f8b328144821e6747749002",
+      "input_sha256": "31745a6fe30ecc007791fd34c784f6c0a011fddd72736e0aacdbff24cb6be8f8",
+      "assembled_input_sha256": "31745a6fe30ecc007791fd34c784f6c0a011fddd72736e0aacdbff24cb6be8f8",
+      "fixture_sha256": "4c6f06de7fede5dd929f2acb50b66a1b6ba4da7701fdd0e6b4e9b409d0e70ea5",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -5615,9 +5615,9 @@
         },
         {
           "owner": "jimm/OptionsForm",
-          "original_sha256": "54ed684679fa55743b6ce8fb77ce4dfd265f9157bbcbd81c7c58d94f1483c550",
-          "expected_sha256": "54ed684679fa55743b6ce8fb77ce4dfd265f9157bbcbd81c7c58d94f1483c550",
-          "fixture_sha256": "54ed684679fa55743b6ce8fb77ce4dfd265f9157bbcbd81c7c58d94f1483c550"
+          "original_sha256": "2a80426facae08c591248d8994d5ccc9e93554585422b94f74f0c9c26a87bb70",
+          "expected_sha256": "2a80426facae08c591248d8994d5ccc9e93554585422b94f74f0c9c26a87bb70",
+          "fixture_sha256": "2a80426facae08c591248d8994d5ccc9e93554585422b94f74f0c9c26a87bb70"
         },
         {
           "owner": "jimm/RunnableImpl",
