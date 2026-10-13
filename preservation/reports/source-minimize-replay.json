@@ -7,7 +7,7 @@
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
       "assembled_input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "65c54fb0339368072f33da4af5e1f38663537b2145d79a3137b4093955c4b0fc",
+      "fixture_sha256": "d6fc6686a40b736790f304689c1b006ac379060e9fcf9b8c15fc2f5e7d6e4549",
       "complete_original_method": {
         "name": "a",
         "desc": "(Z)V",
@@ -2103,9 +2103,9 @@
     },
     {
       "mode": "raw",
-      "input_sha256": "a0c483df63e7f05ad9d6a9028723cdb6b26c7edd544b65a7d21bc67dc8971071",
-      "assembled_input_sha256": "de864cc14ba48896dfb3a12ff35b37dbdcb842394a0030e22b790333783d1d3a",
-      "fixture_sha256": "6de21c6df1f8c83c18066119f4e436e7154af6d86d171d0f51ece10e6a6b8027",
+      "input_sha256": "06ad0441bd71ab946aa02c8ca7f1dbb6d339c6e3bb2d9f4ade2083d37d5491ea",
+      "assembled_input_sha256": "e2adee662f67684280740339b5b81928effe635c5a74d4f75b4a0a302c1de7f1",
+      "fixture_sha256": "9596b0e0e5cc4062b1900fb82915e0d3dd2b8fda07992772d87088c8facdd4a5",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -3306,9 +3306,9 @@
         },
         {
           "owner": "DrawControls/VirtualList",
-          "original_sha256": "034c2a276b496e86d972f27a7c71752a31095d68af4539908cbd417cc07c1184",
-          "expected_sha256": "034c2a276b496e86d972f27a7c71752a31095d68af4539908cbd417cc07c1184",
-          "fixture_sha256": "034c2a276b496e86d972f27a7c71752a31095d68af4539908cbd417cc07c1184"
+          "original_sha256": "55b1931116320b04f1cd3f1638807de2ce64191a06228c88045ee6699cf91673",
+          "expected_sha256": "55b1931116320b04f1cd3f1638807de2ce64191a06228c88045ee6699cf91673",
+          "fixture_sha256": "55b1931116320b04f1cd3f1638807de2ce64191a06228c88045ee6699cf91673"
         },
         {
           "owner": "DrawControls/VirtualListCommands",
@@ -3408,9 +3408,9 @@
         },
         {
           "owner": "jimm/FileBrowser",
-          "original_sha256": "65ff36e58a47b8940844b2d14a306c216af4f2eefb9fa359ab70c278eb908ee9",
-          "expected_sha256": "65ff36e58a47b8940844b2d14a306c216af4f2eefb9fa359ab70c278eb908ee9",
-          "fixture_sha256": "65ff36e58a47b8940844b2d14a306c216af4f2eefb9fa359ab70c278eb908ee9"
+          "original_sha256": "bc209bbf22a656f1a2782660e32d4ff239c4bb206d7626314704e39103747c92",
+          "expected_sha256": "bc209bbf22a656f1a2782660e32d4ff239c4bb206d7626314704e39103747c92",
+          "fixture_sha256": "bc209bbf22a656f1a2782660e32d4ff239c4bb206d7626314704e39103747c92"
         },
         {
           "owner": "jimm/FileBrowserListener",
@@ -3498,15 +3498,15 @@
         },
         {
           "owner": "jimm/Options",
-          "original_sha256": "d0ee3d6b790331c307797c691d818196806af101457f5bd1801e631cf658ba38",
-          "expected_sha256": "d0ee3d6b790331c307797c691d818196806af101457f5bd1801e631cf658ba38",
-          "fixture_sha256": "d0ee3d6b790331c307797c691d818196806af101457f5bd1801e631cf658ba38"
+          "original_sha256": "1fea298ac260d1493a45fd94028df91c5f75822c13f4ab7830b34371c1eaeebd",
+          "expected_sha256": "1fea298ac260d1493a45fd94028df91c5f75822c13f4ab7830b34371c1eaeebd",
+          "fixture_sha256": "1fea298ac260d1493a45fd94028df91c5f75822c13f4ab7830b34371c1eaeebd"
         },
         {
           "owner": "jimm/OptionsForm",
-          "original_sha256": "b5533efc731227a179b684f103e7687c0dd579478a82ab04064ad887815b9fd6",
-          "expected_sha256": "b5533efc731227a179b684f103e7687c0dd579478a82ab04064ad887815b9fd6",
-          "fixture_sha256": "b5533efc731227a179b684f103e7687c0dd579478a82ab04064ad887815b9fd6"
+          "original_sha256": "5b547c450a5bd3ee3afa6d8ce800707874bd6fbc40538422b154d4db52609fbe",
+          "expected_sha256": "5b547c450a5bd3ee3afa6d8ce800707874bd6fbc40538422b154d4db52609fbe",
+          "fixture_sha256": "5b547c450a5bd3ee3afa6d8ce800707874bd6fbc40538422b154d4db52609fbe"
         },
         {
           "owner": "jimm/RunnableImpl",
@@ -3835,9 +3835,9 @@
     },
     {
       "mode": "optimized",
-      "input_sha256": "7b3b9315eed9018f9bb4e77eca25891f658cad4a820e8b37c785e40f1fe1d21b",
-      "assembled_input_sha256": "7b3b9315eed9018f9bb4e77eca25891f658cad4a820e8b37c785e40f1fe1d21b",
-      "fixture_sha256": "f34a77b0546082f461eb024f6bff00202fba23a635fce7424e592d31649f6d6d",
+      "input_sha256": "0dafb885e16bc850a2597f2eb2d3e1906b00186c507782af676f924d2100f9b8",
+      "assembled_input_sha256": "0dafb885e16bc850a2597f2eb2d3e1906b00186c507782af676f924d2100f9b8",
+      "fixture_sha256": "d9cb9fb6453aeeed46a5799fad7f9459fb41d57a2f8b328144821e6747749002",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -5423,9 +5423,9 @@
         },
         {
           "owner": "DrawControls/VirtualList",
-          "original_sha256": "10e2392807b0cc5b1529c528b7d367595968349f92f727b73c55e1d344e1f691",
-          "expected_sha256": "10e2392807b0cc5b1529c528b7d367595968349f92f727b73c55e1d344e1f691",
-          "fixture_sha256": "10e2392807b0cc5b1529c528b7d367595968349f92f727b73c55e1d344e1f691"
+          "original_sha256": "68b15a20606de0a69ebc849e4caebc34f85b2bd143f01866c31e72349169132c",
+          "expected_sha256": "68b15a20606de0a69ebc849e4caebc34f85b2bd143f01866c31e72349169132c",
+          "fixture_sha256": "68b15a20606de0a69ebc849e4caebc34f85b2bd143f01866c31e72349169132c"
         },
         {
           "owner": "DrawControls/VirtualListCommands",
@@ -5519,9 +5519,9 @@
         },
         {
           "owner": "jimm/FileBrowser",
-          "original_sha256": "cd9c26b91e12c967c48df87817348a69253cdd4acd043a29d4b5ba766022d227",
-          "expected_sha256": "cd9c26b91e12c967c48df87817348a69253cdd4acd043a29d4b5ba766022d227",
-          "fixture_sha256": "cd9c26b91e12c967c48df87817348a69253cdd4acd043a29d4b5ba766022d227"
+          "original_sha256": "14e703e02171b05084115687358ac2a10ce9524c80f4e02d47d5f003ed7487a5",
+          "expected_sha256": "14e703e02171b05084115687358ac2a10ce9524c80f4e02d47d5f003ed7487a5",
+          "fixture_sha256": "14e703e02171b05084115687358ac2a10ce9524c80f4e02d47d5f003ed7487a5"
         },
         {
           "owner": "jimm/FileBrowserListener",
@@ -5609,15 +5609,15 @@
         },
         {
           "owner": "jimm/Options",
-          "original_sha256": "297801563825e1bac55a0e85d2436ab498e9bf03e12d3d2d543abccd452a6d8f",
-          "expected_sha256": "297801563825e1bac55a0e85d2436ab498e9bf03e12d3d2d543abccd452a6d8f",
-          "fixture_sha256": "297801563825e1bac55a0e85d2436ab498e9bf03e12d3d2d543abccd452a6d8f"
+          "original_sha256": "edeed9e75d47df3c81e38d5178686251218ac568fdf3ac27a80c6f4600e70c08",
+          "expected_sha256": "edeed9e75d47df3c81e38d5178686251218ac568fdf3ac27a80c6f4600e70c08",
+          "fixture_sha256": "edeed9e75d47df3c81e38d5178686251218ac568fdf3ac27a80c6f4600e70c08"
         },
         {
           "owner": "jimm/OptionsForm",
-          "original_sha256": "bb60fab2cb643d1a3ec3240f236ea80ebaf2874ab1e658f5928d3c984ea3d0a5",
-          "expected_sha256": "bb60fab2cb643d1a3ec3240f236ea80ebaf2874ab1e658f5928d3c984ea3d0a5",
-          "fixture_sha256": "bb60fab2cb643d1a3ec3240f236ea80ebaf2874ab1e658f5928d3c984ea3d0a5"
+          "original_sha256": "54ed684679fa55743b6ce8fb77ce4dfd265f9157bbcbd81c7c58d94f1483c550",
+          "expected_sha256": "54ed684679fa55743b6ce8fb77ce4dfd265f9157bbcbd81c7c58d94f1483c550",
+          "fixture_sha256": "54ed684679fa55743b6ce8fb77ce4dfd265f9157bbcbd81c7c58d94f1483c550"
         },
         {
           "owner": "jimm/RunnableImpl",

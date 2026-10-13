@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "dcb249db9a3f2d1de4918282259bea8465c37aadb811223707150728b815371a",
+  "rebuilt_sha256": "ebb4bc800a127d6d3adeceef41dcff701b4b3b5e2b54f6fcf90026d8e70d0420",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -130,7 +130,7 @@
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "1e883c60e9980eb413ee4a70cda2e37419e318bdecb335293c21c87957b843e6",
-      "source_normalized_sha256": "405f3966ce7713d45524dd8a337085f1121a6ef6aefe698728c85b5a4f4a8212"
+      "source_normalized_sha256": "c35e4fe5aa6b3d333349ebae83825c25507169565f6f85207432ad1ee2c487de"
     },
     {
       "reference": "u.a(Lax;Lcn;)V",
@@ -2701,12 +2701,12 @@
       "abstract_modifier_verified": true,
       "abstract_method": false,
       "reference_instructions": 237,
-      "source_instructions": 241,
+      "source_instructions": 237,
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "60fd00559a2f342c3551590eeada87ff87756bb99396fa5655a14a66030926e1",
-      "source_normalized_sha256": "82bf5df3c6c5bc33a628396b6db3f49c20f2d46c28af54ca2722ea684ce52aba"
+      "source_normalized_sha256": "d0d1fe3287b555994b19c5f17982d94bec256f5aaef7584dfb66ba46c9a339cc"
     },
     {
       "reference": "cd.b(Ljavax/microedition/lcdui/Graphics;IIII)Z",
@@ -3469,12 +3469,12 @@
       "abstract_modifier_verified": true,
       "abstract_method": false,
       "reference_instructions": 301,
-      "source_instructions": 251,
+      "source_instructions": 253,
       "same_normalized_instructions": false,
       "same_normalized_handlers": true,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "c33d65f3a0672fa6f4a372982f3a1871ff43269dc66acf9179401ba45cf2136b",
-      "source_normalized_sha256": "a4943fbab334b5ed8b232c7413a5fc453ee8dcaca28b5363a27e6d4e2e59870e"
+      "source_normalized_sha256": "d5784343f6aea1b4a502bb6a3b6f2f321dd20d78feff54d1ae98a9dd8a82d12f"
     },
     {
       "reference": "cd.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIII)V",
@@ -4125,12 +4125,12 @@
       "abstract_modifier_verified": true,
       "abstract_method": false,
       "reference_instructions": 3185,
-      "source_instructions": 3015,
+      "source_instructions": 3006,
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "1ffe0a6869a2cb40758dc8afdf0bdf8b5ec560a78cb6fdeed8f98d5ef082397c",
-      "source_normalized_sha256": "387b375354ab9ac078e2e809062e5ad45dcb3ca02aae765b4eb8e8a73b702e32"
+      "source_normalized_sha256": "ccbe2d0a543c48db74661f358ac5f77778ddfc78482252593e189023a1669ccf"
     },
     {
       "reference": "cg.run()V",
@@ -4141,12 +4141,12 @@
       "abstract_modifier_verified": true,
       "abstract_method": false,
       "reference_instructions": 60,
-      "source_instructions": 57,
+      "source_instructions": 56,
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "d73be0b8010affe201386d7233c2858031db39f681094ea03c528f5d3488553e",
-      "source_normalized_sha256": "6b5556a208bdb4be4bedbee081f55bed6bf3c65eb8459f71ba0553256113c81b"
+      "source_normalized_sha256": "68171e252f78206a3e4f5d3ed4427d214873082a8ff113f3fac053e3bba03c06"
     },
     {
       "reference": "cg.a(Ljava/lang/String;)V",
@@ -13613,12 +13613,12 @@
       "abstract_modifier_verified": true,
       "abstract_method": false,
       "reference_instructions": 69,
-      "source_instructions": 59,
+      "source_instructions": 67,
       "same_normalized_instructions": false,
       "same_normalized_handlers": false,
       "same_normalized_bytecode": false,
       "reference_normalized_sha256": "8e92e455a6329f92be1b9f70f1b8b177b9b3c540347f8167f0e8711e7998730a",
-      "source_normalized_sha256": "b66b127346b184f4655cca407b4035255467a838f1f193e6ad419bf7b930e3dd"
+      "source_normalized_sha256": "1841350751e716e67326676d0b557da17584c17782da2070d18e37534040dacc"
     },
     {
       "reference": "cj.a(ILjava/lang/String;)V",

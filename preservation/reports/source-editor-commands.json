@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2 editor commandAction, real TextBox, clipboard, page vector, insertion and transliteration. Quote/paste/next/previous/clear/transliterate/detransliterate/unknown/null commands are compared. The real command objects are identified by their original constructor keys. Existing login/date startup boundaries apply. Complete controller declarations, instructions and handlers are unchanged except enumerated EditorIO terminal/API captures, which delegate command/listener/constraint operations. No send/cancel/network, complete controller, full startup or physical device claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "7b3b9315eed9018f9bb4e77eca25891f658cad4a820e8b37c785e40f1fe1d21b",
-  "source_unoptimized_class_jar_sha256": "a0c483df63e7f05ad9d6a9028723cdb6b26c7edd544b65a7d21bc67dc8971071",
+  "source_jar_sha256": "0dafb885e16bc850a2597f2eb2d3e1906b00186c507782af676f924d2100f9b8",
+  "source_unoptimized_class_jar_sha256": "06ad0441bd71ab946aa02c8ca7f1dbb6d339c6e3bb2d9f4ade2083d37d5491ea",
   "observations": 17281,
   "command_calls": 4320,
   "quote_paste_calls": 960,
@@ -12,8 +12,8 @@
   "fixture_proofs": [
     {
       "mode": "reference",
-      "base_sha256": "e15cd5306d280de576f44ff4633c3432db264dacf5ca747885569dd4896c76c6",
-      "fixture_sha256": "4532505f038d354d1a21c6a707195a9581a8758672eac140ef8f60f842651c48",
+      "base_sha256": "cab4b66fbe947761ae6099c7c0bba6bfc31453b6be98fb93837bd94f0a8a68f1",
+      "fixture_sha256": "dfca8450e6abd9c2376def4e19fb556f344901137d240e3e1621786025df7cb8",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 aj.a(Z)V": 4,
@@ -28,8 +28,8 @@
     },
     {
       "mode": "source",
-      "base_sha256": "014e4fee7581858e2f5349c209fc2aad95459ea648d4dbb9d3d04646eeafc9e4",
-      "fixture_sha256": "e2f95273da858da4a9b92e1190dcc4c7d854033ed23a33d2460c68d37a96378f",
+      "base_sha256": "7d3fd9f7c84e88e611493977403fc3c2d2345d1711ee8ffd28d33c3aa630af20",
+      "fixture_sha256": "5b373c207c01725fc39d29fca50654d7dd46827d0a1ef8d5a2b2be874c5512e4",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 DrawControls/LightControl.flash(Z)V": 3,
@@ -44,8 +44,8 @@
     },
     {
       "mode": "optimized-source",
-      "base_sha256": "ec1d9976c6ff1994cb52c8ce234b01b21489345c0b73fc305cf564433febafc2",
-      "fixture_sha256": "e1f6c31ea374da9be341fe153f9d5ef3c13d83108171b3224c18ae3b7bcb39b2",
+      "base_sha256": "a89ba1727c2f512c59aef9ea9edf59bc7e21f3adc2d9baf4a529a3a92921255f",
+      "fixture_sha256": "c5af89ea87489293744ec61776d60f33a1e665a4be133d7f5327f4e1dd118325",
       "captures": {
         "184 java/lang/System.gc()V": 3,
         "184 DrawControls/LightControl.flash(Z)V": 3,

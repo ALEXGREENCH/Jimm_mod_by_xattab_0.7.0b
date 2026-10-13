@@ -630,6 +630,12 @@ public class Options
 		bais = new ByteArrayInputStream(buf);
 		dis = new DataInputStream(bais);
 		readOptions(dis);
+		try
+		{
+			bais.close();
+			dis.close();
+		}
+		catch (Exception ignored) { }
 		/* Close record store */
 		account.closeRecordStore();
 	}
@@ -2332,15 +2338,19 @@ class OptionsForm implements CommandListener, ItemStateListener
 					Options.setBoolean(Options.OPTION_CONFIRM_EXIT, miscChoiceGroup.isSelected(idx++));
 
 					//#sijapp cond.if target is "MIDP2" | target is "MOTOROLA" | target is "SIEMENS2"#
-					Options.setInt(Options.OPTION_BACKGROUND_MODE, bgImgChoiceGroup.getSelectedIndex());
-					if (bgImgChoiceGroup.isSelected(0))
+					int backgroundMode = bgImgChoiceGroup.getSelectedIndex();
+					Options.setInt(Options.OPTION_BACKGROUND_MODE, backgroundMode);
+					switch (backgroundMode)
 					{
-						Options.setString(Options.OPTION_IMG_PATH, "/back.png");
-						bgImgPathTextField.setString("/back.png");
-						VirtualList.setBackGroundImage(null, true);
+						case 0:
+							Options.setString(Options.OPTION_IMG_PATH, "/back.png");
+							VirtualList.setBackGroundImage(null, true);
+							break;
+						case 1:
+							Options.setString(Options.OPTION_IMG_PATH, bgImgPathTextField.getString());
+							VirtualList.setBackGroundImage(null, false);
+							break;
 					}
-					Options.setString(Options.OPTION_IMG_PATH, bgImgPathTextField.getString());
-					if (bgImgChoiceGroup.isSelected(1)) VirtualList.setBackGroundImage(null, false);
 					//#sijapp cond.end#
 
 					Options.setString(Options.OPTION_ENTER_PASSWORD, enterPasswordTextField.getString());
@@ -2488,18 +2498,17 @@ class OptionsForm implements CommandListener, ItemStateListener
             if (importingOptions)
             {
                 file.openFile(optionsPath);
-                DataInputStream input = new DataInputStream(file.openInputStream());
-                Options.readOptions(input);
-                input.close();
-                Options.updateAlpha();
+                InputStream input;
+                Options.readOptions(new DataInputStream(input = file.openInputStream()));
                 JimmUI.setColorScheme(false);
                 Options.safe_save();
+                input.close();
             }
             else
             {
                 file.openFile(optionsPath + "jimm_options.sav");
-                DataOutputStream output = new DataOutputStream(file.openOutputStream());
-                Options.writeOptions(output);
+                OutputStream output;
+                Options.writeOptions(new DataOutputStream(output = file.openOutputStream()));
                 output.close();
             }
         }

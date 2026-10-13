@@ -448,7 +448,6 @@ public class FileBrowser implements CommandListener, VirtualTreeCommands, Virtua
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
 			}
 //			if (needToSelectDirectory)
 //			{

@@ -1463,7 +1463,10 @@ public abstract class VirtualList
             int width = x2 - x1;
             if (width <= 0 || height <= 0) return;
             if (gradientPixels == null || gradientPixels.length < (height << 5))
+            {
+                gradientPixels = null;
                 gradientPixels = new int[height << 5];
+            }
             if (gradientHeight != height || gradientStart != first || gradientEnd != last)
             {
                 int offset = 0;
@@ -1646,7 +1649,6 @@ public abstract class VirtualList
 		if (paintedItem.text != null)
 		{
 			g.setFont(getQuickFont(paintedItem.fontStyle));
-			g.setColor(paintedItem.color);
 			drawString(g, paintedItem.text, x, (y1 + y2 - fontHeight) / 2, Graphics.TOP | Graphics.LEFT, paintedItem.color);
 		}
 
