@@ -1,6 +1,6 @@
 {
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "rebuilt_sha256": "f8c1ffbeca4b22383cfdf3b6a288764e2fe6e48bc6f809e21e815b14576cc0e9",
+  "rebuilt_sha256": "ac26a778cd608ab9138d47af69e5a037a736eacd1c9ce253f9d6c9d717eed84e",
   "reference_classes": 101,
   "rebuilt_classes": 100,
   "methods": [
@@ -14605,12 +14605,12 @@
       "abstract_modifier_verified": true,
       "abstract_method": false,
       "reference_instructions": 33,
-      "source_instructions": 35,
-      "same_normalized_instructions": false,
+      "source_instructions": 33,
+      "same_normalized_instructions": true,
       "same_normalized_handlers": true,
-      "same_normalized_bytecode": false,
+      "same_normalized_bytecode": true,
       "reference_normalized_sha256": "c0a64066a62f54cd0c55d08cc098dd2493bbb307fc4b82df69c1aa10c9a36657",
-      "source_normalized_sha256": "58e8c701df4e1248780e7341a0256eb7473aa836d5bd66d6b9253a1195b77a6d"
+      "source_normalized_sha256": "c0a64066a62f54cd0c55d08cc098dd2493bbb307fc4b82df69c1aa10c9a36657"
     },
     {
       "reference": "r.a()Ljava/lang/Object;",
@@ -18070,6 +18070,6 @@
     }
   ],
   "abstract_declarations": 34,
-  "same_normalized_executable_method_bodies": 641,
+  "same_normalized_executable_method_bodies": 642,
   "scope": "Verified subset only. Instruction equality includes local slots and branch layout; compiler and optimizer differences remain. Functional checks are recorded separately."
 }

@@ -4,7 +4,7 @@
     {
       "language": "RU",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "source_jar_sha256": "31745a6fe30ecc007791fd34c784f6c0a011fddd72736e0aacdbff24cb6be8f8",
+      "source_jar_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
       "observations": 156308,
       "parser_calls": 156047,
       "guid_entries": 37,
@@ -15,7 +15,7 @@
     {
       "language": "UA",
       "reference_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-      "source_jar_sha256": "fa4ac3d89410fcc161d9c9a65423ab13a68f2b3fd77633e55aceb1609d72012b",
+      "source_jar_sha256": "725fea065254ce772b2686331d5441a5a8cd7799dd12c677de800ccdf1de7bea",
       "observations": 156308,
       "parser_calls": 156047,
       "guid_entries": 37,
@@ -26,7 +26,7 @@
     {
       "language": "RO",
       "reference_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-      "source_jar_sha256": "5e73ee43303210d6d3feeca2a42ef0745327b23a31a0b8aeb97f34314f1e0002",
+      "source_jar_sha256": "168716d24cd2407f41f6b6d891cae54cdb5b2c5e56ab4ffb0f22bf73e7a4144a",
       "observations": 156308,
       "parser_calls": 156047,
       "guid_entries": 37,
@@ -37,7 +37,7 @@
     {
       "language": "EN",
       "reference_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-      "source_jar_sha256": "2962f1b0b9430e3589ec189ab7d52102aa7f3ed3e1e5364ce48b9ccb997b6aad",
+      "source_jar_sha256": "8757d0a5cec6751a4d569a52b46bb915cb1740f6731f3b68bcd35f406a677ab2",
       "observations": 156308,
       "parser_calls": 156047,
       "guid_entries": 37,
@@ -48,7 +48,7 @@
     {
       "language": "CZ",
       "reference_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-      "source_jar_sha256": "ef89004c73279913f8130ddd44d100a469ab65a996d1c52e785ec4506233c3ef",
+      "source_jar_sha256": "d168f5c187e3f3f6cd678b059f7b0d9f9ad571975ce0b93bed317fd2fc3c67f6",
       "observations": 156308,
       "parser_calls": 156047,
       "guid_entries": 37,

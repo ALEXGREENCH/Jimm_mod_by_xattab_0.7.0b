@@ -172,3 +172,14 @@ Native телефонная книга, команды звонка/SMS и ош�
 
 
 `python tools/test_options_interface.py` проверяет whole interface controllers всех 15 native/delivered пар и трёх raw RU артефактов: construction/save order, cached hide-empty и единственный общий alpha update. Исполняет 290 MIDP2-RU наблюдений с реальными контролами, явными null/corrupt states и stable/changing ChoiceGroup subclass models в ограниченном Options fixture. [Подлинный before](../preservation/reports/source-options-interface-before.json), [байткод и исполнение](../preservation/reports/source-options-interface.json), [изолированная дельта](../preservation/reports/source-options-interface-delta.json). Входит в `--matrix`/CI; `--before` защищён точным commit af0ebf2 и запретом перезаписи. Перечисленные Date/Display/Thread и окружающие app captures не объявляются исполнением всех платформ или физического UI.
+
+Проверка порядка инициализации при смене статуса без соединения (использует уже собранную матрицу):
+
+```sh
+python tools/test_online_status_initialization.py
+```
+
+Она сравнивает оригинальный, авторский и готовый MIDP2-RU JAR, сохраняет полные методы всех 15 вариантов и входит в `test_source.py --matrix`. Наблюдатель меняет только вход в `OtherAction.<clinit>`; полное тело `Icq.setOnlineStatus` остаётся исходным. Сценарная ошибка инициализатора служит проверкой порядка, а не утверждением о естественном сбое приложения.
+
+
+Для сравнений на JDK 17 задайте `JAVA_TOOL_OPTIONS=-XX:-ShowCodeDetailsInExceptionMessages` (в CI это уже настроено). JDK 11 не требует этой настройки. Современные подробные сообщения [сообщения HotSpot NPE](https://docs.oracle.com/en/java/javase/17/docs/specs/man/java.html) содержат имена полей проверяемого байткода: в старом обфусцированном JAR и читаемом `src` они различаются. Проверка на Linux/JDK 17 обнаружила именно такое расхождение в пяти из 673 строк `AboutProbe` ([полные данные сбоя](../preservation/reports/source-ci-about-runtime.json)). Отключается только добавление этих сведений JVM; тип исключения, его обработка и полное сравнение результатов сохраняются. При ошибке CI сохраняет оба полных вывода окна «О программе».

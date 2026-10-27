@@ -7,7 +7,7 @@
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
       "assembled_input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "6ec5470593b10339310cb59d42bfbcecf2b408f4002ff00899b3de810aae1c61",
+      "fixture_sha256": "e28a90eea9f0e1c8c80747da3f3c80ee6e26b5a95bef4587e760c57fec594973",
       "complete_original_method": {
         "name": "a",
         "desc": "(Z)V",
@@ -2103,9 +2103,9 @@
     },
     {
       "mode": "raw",
-      "input_sha256": "95d5e77c7aca0db5bce94c712be64c3b8c6478307ef55f5b151ba47e4c225db0",
-      "assembled_input_sha256": "1dbdaffb25cb4c517c9d62c5e5cd38b461223694ddfb891a3ea056eb823c8374",
-      "fixture_sha256": "c3641644aa9e7fcc8f20998e3bd65a709fd85393e572731fed0e777745f4ada5",
+      "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
+      "assembled_input_sha256": "f2da088602c3f5a48158fa3fc319698b2b329dd643ad0cf984be2ff1e7146464",
+      "fixture_sha256": "b59ad42248b1fa1930f69e06631c95753e39ee7fe67ae9b54ca27044c9264997",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -3660,9 +3660,9 @@
         },
         {
           "owner": "jimm/comm/Icq",
-          "original_sha256": "3468a8262bf5704799cfb75cef101c50febc2abfc5a8011e233770bd1b2b6816",
-          "expected_sha256": "3468a8262bf5704799cfb75cef101c50febc2abfc5a8011e233770bd1b2b6816",
-          "fixture_sha256": "3468a8262bf5704799cfb75cef101c50febc2abfc5a8011e233770bd1b2b6816"
+          "original_sha256": "3dc524d4a55bd7eef9b53da4d5b81ed9d64bdaf3f4e43277ed2869634a652a57",
+          "expected_sha256": "3dc524d4a55bd7eef9b53da4d5b81ed9d64bdaf3f4e43277ed2869634a652a57",
+          "fixture_sha256": "3dc524d4a55bd7eef9b53da4d5b81ed9d64bdaf3f4e43277ed2869634a652a57"
         },
         {
           "owner": "jimm/comm/Message",
@@ -3835,9 +3835,9 @@
     },
     {
       "mode": "optimized",
-      "input_sha256": "31745a6fe30ecc007791fd34c784f6c0a011fddd72736e0aacdbff24cb6be8f8",
-      "assembled_input_sha256": "31745a6fe30ecc007791fd34c784f6c0a011fddd72736e0aacdbff24cb6be8f8",
-      "fixture_sha256": "4c6f06de7fede5dd929f2acb50b66a1b6ba4da7701fdd0e6b4e9b409d0e70ea5",
+      "input_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
+      "assembled_input_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
+      "fixture_sha256": "ed1babc8b28b5d6d4ee5753a11100564f3d4cee8fcfe297e0307636eb66d3156",
       "complete_original_method": {
         "name": "setMinimized",
         "desc": "(Z)V",
@@ -5765,9 +5765,9 @@
         },
         {
           "owner": "jimm/comm/Icq",
-          "original_sha256": "7d301d64217ed73f9972117291934c97d0ce92ff2420cc9c7ce1e8ca9a830b1d",
-          "expected_sha256": "7d301d64217ed73f9972117291934c97d0ce92ff2420cc9c7ce1e8ca9a830b1d",
-          "fixture_sha256": "7d301d64217ed73f9972117291934c97d0ce92ff2420cc9c7ce1e8ca9a830b1d"
+          "original_sha256": "10059ebcaf9d2deaaadb6d223feb8f3f894e1fbe90e23e7ea75dbf20e129c07d",
+          "expected_sha256": "10059ebcaf9d2deaaadb6d223feb8f3f894e1fbe90e23e7ea75dbf20e129c07d",
+          "fixture_sha256": "10059ebcaf9d2deaaadb6d223feb8f3f894e1fbe90e23e7ea75dbf20e129c07d"
         },
         {
           "owner": "jimm/comm/Message",
@@ -5777,9 +5777,9 @@
         },
         {
           "owner": "jimm/comm/OtherAction",
-          "original_sha256": "ffffa502b7ea5cb0685b84f887b307403fcb9ddbef376b53f2c9e5e492354d55",
-          "expected_sha256": "ffffa502b7ea5cb0685b84f887b307403fcb9ddbef376b53f2c9e5e492354d55",
-          "fixture_sha256": "ffffa502b7ea5cb0685b84f887b307403fcb9ddbef376b53f2c9e5e492354d55"
+          "original_sha256": "9a4fb3f83b40e65fb7a080e3c19e157320e52ceed3bf96ebbc96d6b012fbeb22",
+          "expected_sha256": "9a4fb3f83b40e65fb7a080e3c19e157320e52ceed3bf96ebbc96d6b012fbeb22",
+          "fixture_sha256": "9a4fb3f83b40e65fb7a080e3c19e157320e52ceed3bf96ebbc96d6b012fbeb22"
         },
         {
           "owner": "jimm/comm/Packet",

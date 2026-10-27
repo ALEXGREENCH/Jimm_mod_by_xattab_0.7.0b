@@ -1,0 +1,60 @@
+{
+  "scope": "Diagnosis of the failed Linux/Temurin-17 AboutProbe on commit 221584a (same application sources as aa6a468). The 673-line traces differ in five rows. Three version values contain HotSpot helpful-NPE messages differing only by the original versus readable field name; the displayed full text and wrapped rows carry that same message. This report retains the actual failure evidence. It does not claim the next configured CI run passed.",
+  "run_id": 40518883143,
+  "run_url": "https://github.com/ALEXGREENCH/Jimm_mod_by_xattab_0.7.0b/actions/runs/40518883143",
+  "job_id": 122240062799,
+  "artifact_id": 12740029417,
+  "artifact_zip_sha256": "c405df2582a3570d432ab2b36bd9a4a9f817ca600978ebb2b06cf22d24d5c285",
+  "reference_output_sha256": "8b73e504747dd152504a38e7a061d13259e7b2f3e33d9a9fc3e2469c74d5c219",
+  "source_output_sha256": "998722aecca410015262fa40f4d4bc4a1fc4607fbacfda4a9ff48001e6940f71",
+  "reference_rows": 673,
+  "source_rows": 673,
+  "different_rows": [
+    {
+      "index": 514,
+      "reference": "fault-0-9:version=RXJyb3I6IENhbm5vdCBpbnZva2UgImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10sIGludCwgaW50KSIgYmVjYXVzZSAidGhpcy5hIiBpcyBudWxs:notice=T2xkIG5vdGljZQ==:stored=T2xkIG5vdGljZQ==:saves=0:yields=1:priority=1:collections=0:trace=open:http://jimm.im/ver:3;header:X-Jimm-Version=0.7b;:urls=[]",
+      "source": "fault-0-9:version=RXJyb3I6IENhbm5vdCBpbnZva2UgImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10sIGludCwgaW50KSIgYmVjYXVzZSAidGhpcy5pc3RlbXAiIGlzIG51bGw=:notice=T2xkIG5vdGljZQ==:stored=T2xkIG5vdGljZQ==:saves=0:yields=1:priority=1:collections=0:trace=open:http://jimm.im/ver:3;header:X-Jimm-Version=0.7b;:urls=[]"
+    },
+    {
+      "index": 554,
+      "reference": "fault-1-9:version=RXJyb3I6IENhbm5vdCBpbnZva2UgImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10sIGludCwgaW50KSIgYmVjYXVzZSAidGhpcy5hIiBpcyBudWxs:notice=T2xkIG5vdGljZQ==:stored=T2xkIG5vdGljZQ==:saves=1:yields=1:priority=1:collections=1:trace=open:http://jimm.im/ver:3;header:X-Jimm-Version=0.7b;:urls=[]:task=true/2000",
+      "source": "fault-1-9:version=RXJyb3I6IENhbm5vdCBpbnZva2UgImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10sIGludCwgaW50KSIgYmVjYXVzZSAidGhpcy5pc3RlbXAiIGlzIG51bGw=:notice=T2xkIG5vdGljZQ==:stored=T2xkIG5vdGljZQ==:saves=1:yields=1:priority=1:collections=1:trace=open:http://jimm.im/ver:3;header:X-Jimm-Version=0.7b;:urls=[]:task=true/2000"
+    },
+    {
+      "index": 555,
+      "reference": "fault-1-9:text=bnVsbE9sZCBub3RpY2UKIApJQ1Eg0JrQu9C40LXQvdGCINC00LvRjyBKMk1FCgrQktC10YDRgdC40Y86IDAuNy4wYgrQlNCw0YLQsDogMTIuMDUuMjAxMArQktCw0YDQuNCw0L3RgjogTUlEUDIK0JzQvtC00YPQu9C4OiBTTUlMRVMsVFJBRkZJQyxISVNUT1JZLEZJTEVTLFBST1hZLEFOSVNNSUxFUwoKVGhhbmtzIHRvOiAKcm9zc2ksIEFydERlbiwgaXA4MiwgQXJ2aW4sIHRhbWVybGFuMzExLCBQaWxpZ3JpbSwgaG9iYml0MTksIGFzcHJvLCBEaXZsLCBzb2dyaXMsIG1yWFBlcnQsIHdoaXBsYXNoLCBSeF9HCgrQodCw0LnRgtGLINC/0YDQvtC10LrRgtCwOgpudWxsIGh0dHA6Ly93d3cuamltbS5pbQpudWxsIGh0dHA6Ly93YXBsYW5kLm9yZwoKTUlEUCBpbmZvOiAKTWljcm9FbXVsYXRvci0yLjAsIGVuLCBKUC04CgrQn9Cw0LzRj9GC0Ywg0YLQtdC70LXRhNC+0L3QsArQodCy0L7QsdC+0LTQvdC+OiA2NDBrYgrQlNC+0YHRgtGD0L/QvdC+OiAxMDI0a2IKCtCU0LDRgtCwINC/0L7RgdC70LXQtNC90LXQs9C+INC+0LHQvdC+0LLQu9C10L3QuNGPOiAuLi4KRXJyb3I6IENhbm5vdCBpbnZva2UgImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10sIGludCwgaW50KSIgYmVjYXVzZSAidGhpcy5hIiBpcyBudWxs",
+      "source": "fault-1-9:text=bnVsbE9sZCBub3RpY2UKIApJQ1Eg0JrQu9C40LXQvdGCINC00LvRjyBKMk1FCgrQktC10YDRgdC40Y86IDAuNy4wYgrQlNCw0YLQsDogMTIuMDUuMjAxMArQktCw0YDQuNCw0L3RgjogTUlEUDIK0JzQvtC00YPQu9C4OiBTTUlMRVMsVFJBRkZJQyxISVNUT1JZLEZJTEVTLFBST1hZLEFOSVNNSUxFUwoKVGhhbmtzIHRvOiAKcm9zc2ksIEFydERlbiwgaXA4MiwgQXJ2aW4sIHRhbWVybGFuMzExLCBQaWxpZ3JpbSwgaG9iYml0MTksIGFzcHJvLCBEaXZsLCBzb2dyaXMsIG1yWFBlcnQsIHdoaXBsYXNoLCBSeF9HCgrQodCw0LnRgtGLINC/0YDQvtC10LrRgtCwOgpudWxsIGh0dHA6Ly93d3cuamltbS5pbQpudWxsIGh0dHA6Ly93YXBsYW5kLm9yZwoKTUlEUCBpbmZvOiAKTWljcm9FbXVsYXRvci0yLjAsIGVuLCBKUC04CgrQn9Cw0LzRj9GC0Ywg0YLQtdC70LXRhNC+0L3QsArQodCy0L7QsdC+0LTQvdC+OiA2NDBrYgrQlNC+0YHRgtGD0L/QvdC+OiAxMDI0a2IKCtCU0LDRgtCwINC/0L7RgdC70LXQtNC90LXQs9C+INC+0LHQvdC+0LLQu9C10L3QuNGPOiAuLi4KRXJyb3I6IENhbm5vdCBpbnZva2UgImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10sIGludCwgaW50KSIgYmVjYXVzZSAidGhpcy5pc3RlbXAiIGlzIG51bGw="
+    },
+    {
+      "index": 556,
+      "reference": "fault-1-9:rows=1002[null@0/true;T2xkIG5vdGljZQ==@16777216/false;]-1[IA==@33554432/false;]-1[SUNRINCa0LvQuNC10L3RgiDQtNC70Y8gSjJNRQ==@33554432/false;]-1[@33554432/false;]-1[0JLQtdGA0YHQuNGPOiAwLjcuMGI=@33554432/false;]-1[0JTQsNGC0LA6IDEyLjA1LjIwMTA=@33554432/false;]-1[0JLQsNGA0LjQsNC90YI6IE1JRFAy@33554432/false;]-1[0JzQvtC00YPQu9C4Og==@33554432/false;]-1[U01JTEVTLFRSQUZGSUMsSElTVE9SWSxGSUxFUyxQUk8=@33554432/false;]-1[WFksQU5JU01JTEVT@33554432/false;]-1[@33554432/false;]-1[VGhhbmtzIHRvOiA=@33554432/false;]-1[cm9zc2ksIEFydERlbiwgaXA4MiwgQXJ2aW4s@33554432/false;]-1[dGFtZXJsYW4zMTEsIFBpbGlncmltLCBob2JiaXQxOSw=@33554432/false;]-1[YXNwcm8sIERpdmwsIHNvZ3JpcywgbXJYUGVydCw=@33554432/false;]-1[d2hpcGxhc2gsIFJ4X0c=@33554432/false;]-1[@33554432/false;]-1[0KHQsNC50YLRiyDQv9GA0L7QtdC60YLQsDo=@33554432/false;]1000[null@0/true;IGh0dHA6Ly93d3cuamltbS5pbQ==@16777216/false;]1001[null@0/true;IGh0dHA6Ly93YXBsYW5kLm9yZw==@16777216/false;]-1[@33554432/false;]-1[TUlEUCBpbmZvOiA=@33554432/false;]-1[TWljcm9FbXVsYXRvci0yLjAsIGVuLCBKUC04@33554432/false;]-1[@33554432/false;]-1[0J/QsNC80Y/RgtGMINGC0LXQu9C10YTQvtC90LA=@33554432/false;]-1[0KHQstC+0LHQvtC00L3QvjogNjQwa2I=@33554432/false;]-1[0JTQvtGB0YLRg9C/0L3QvjogMTAyNGti@33554432/false;]-1[@33554432/false;]-1[0JTQsNGC0LAg0L/QvtGB0LvQtdC00L3QtdCz0L4g0L7QsdC90L7QstC70LXQvdC40Y86IC4uLg==@33554432/false;]-1[RXJyb3I6IENhbm5vdCBpbnZva2U=@33554432/false;]-1[ImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10s@33554432/false;]-1[aW50LCBpbnQpIiBiZWNhdXNlICJ0aGlzLmEiIGlzIG51bGw=@33554432/false;]",
+      "source": "fault-1-9:rows=1002[null@0/true;T2xkIG5vdGljZQ==@16777216/false;]-1[IA==@33554432/false;]-1[SUNRINCa0LvQuNC10L3RgiDQtNC70Y8gSjJNRQ==@33554432/false;]-1[@33554432/false;]-1[0JLQtdGA0YHQuNGPOiAwLjcuMGI=@33554432/false;]-1[0JTQsNGC0LA6IDEyLjA1LjIwMTA=@33554432/false;]-1[0JLQsNGA0LjQsNC90YI6IE1JRFAy@33554432/false;]-1[0JzQvtC00YPQu9C4Og==@33554432/false;]-1[U01JTEVTLFRSQUZGSUMsSElTVE9SWSxGSUxFUyxQUk8=@33554432/false;]-1[WFksQU5JU01JTEVT@33554432/false;]-1[@33554432/false;]-1[VGhhbmtzIHRvOiA=@33554432/false;]-1[cm9zc2ksIEFydERlbiwgaXA4MiwgQXJ2aW4s@33554432/false;]-1[dGFtZXJsYW4zMTEsIFBpbGlncmltLCBob2JiaXQxOSw=@33554432/false;]-1[YXNwcm8sIERpdmwsIHNvZ3JpcywgbXJYUGVydCw=@33554432/false;]-1[d2hpcGxhc2gsIFJ4X0c=@33554432/false;]-1[@33554432/false;]-1[0KHQsNC50YLRiyDQv9GA0L7QtdC60YLQsDo=@33554432/false;]1000[null@0/true;IGh0dHA6Ly93d3cuamltbS5pbQ==@16777216/false;]1001[null@0/true;IGh0dHA6Ly93YXBsYW5kLm9yZw==@16777216/false;]-1[@33554432/false;]-1[TUlEUCBpbmZvOiA=@33554432/false;]-1[TWljcm9FbXVsYXRvci0yLjAsIGVuLCBKUC04@33554432/false;]-1[@33554432/false;]-1[0J/QsNC80Y/RgtGMINGC0LXQu9C10YTQvtC90LA=@33554432/false;]-1[0KHQstC+0LHQvtC00L3QvjogNjQwa2I=@33554432/false;]-1[0JTQvtGB0YLRg9C/0L3QvjogMTAyNGti@33554432/false;]-1[@33554432/false;]-1[0JTQsNGC0LAg0L/QvtGB0LvQtdC00L3QtdCz0L4g0L7QsdC90L7QstC70LXQvdC40Y86IC4uLg==@33554432/false;]-1[RXJyb3I6IENhbm5vdCBpbnZva2U=@33554432/false;]-1[ImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10s@33554432/false;]-1[aW50LCBpbnQpIiBiZWNhdXNlICJ0aGlzLmlzdGVtcCIgaXM=@33554432/false;]-1[bnVsbA==@33554432/false;]"
+    },
+    {
+      "index": 624,
+      "reference": "fault-2-9:version=RXJyb3I6IENhbm5vdCBpbnZva2UgImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10sIGludCwgaW50KSIgYmVjYXVzZSAidGhpcy5hIiBpcyBudWxs:notice=T2xkIG5vdGljZQ==:stored=T2xkIG5vdGljZQ==:saves=0:yields=1:priority=1:collections=1:trace=open:http://jimm.im/ver:3;header:X-Jimm-Version=0.7b;:urls=[]:task=true/2000",
+      "source": "fault-2-9:version=RXJyb3I6IENhbm5vdCBpbnZva2UgImphdmEuaW8uSW5wdXRTdHJlYW0ucmVhZChieXRlW10sIGludCwgaW50KSIgYmVjYXVzZSAidGhpcy5pc3RlbXAiIGlzIG51bGw=:notice=T2xkIG5vdGljZQ==:stored=T2xkIG5vdGljZQ==:saves=0:yields=1:priority=1:collections=1:trace=open:http://jimm.im/ver:3;header:X-Jimm-Version=0.7b;:urls=[]:task=true/2000"
+    }
+  ],
+  "decoded_version_messages": [
+    {
+      "index": 514,
+      "reference": "Error: Cannot invoke \"java.io.InputStream.read(byte[], int, int)\" because \"this.a\" is null",
+      "source": "Error: Cannot invoke \"java.io.InputStream.read(byte[], int, int)\" because \"this.istemp\" is null"
+    },
+    {
+      "index": 554,
+      "reference": "Error: Cannot invoke \"java.io.InputStream.read(byte[], int, int)\" because \"this.a\" is null",
+      "source": "Error: Cannot invoke \"java.io.InputStream.read(byte[], int, int)\" because \"this.istemp\" is null"
+    },
+    {
+      "index": 624,
+      "reference": "Error: Cannot invoke \"java.io.InputStream.read(byte[], int, int)\" because \"this.a\" is null",
+      "source": "Error: Cannot invoke \"java.io.InputStream.read(byte[], int, int)\" because \"this.istemp\" is null"
+    }
+  ],
+  "all_other_rows_exact": true,
+  "ci_vm_option": "-XX:-ShowCodeDetailsInExceptionMessages",
+  "purpose": "Retain classic VM exception messages for Java ME differential execution without renaming source members or filtering outputs.",
+  "official_option_documentation": "https://docs.oracle.com/en/java/javase/17/docs/specs/man/java.html"
+}

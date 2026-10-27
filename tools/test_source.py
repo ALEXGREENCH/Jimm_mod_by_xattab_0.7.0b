@@ -190,6 +190,10 @@ def main(matrix=False, skip_build=False):
              'AboutFixture', TEST / ('login-' + mode + '.jar'), fixture, mode, TEST], 'about-fixture-' + mode)
         report['about_' + mode] = run([*java, 'AboutProbe', fixture, mode, output], 'about-' + mode)
     if about_ref.read_bytes() != about_src.read_bytes():
+        import difflib
+        difference = difflib.unified_diff(about_ref.read_text().splitlines(), about_src.read_text().splitlines(),
+                                          fromfile='about-reference', tofile='about-source', lineterm='')
+        print('\n'.join(list(difference)[:16]), flush=True)
         raise AssertionError('About/version mismatch: compare build/source-tests/about-reference.txt and about-source.txt')
     report['about_observations'] = len(about_ref.read_text().splitlines())
     report['about_differences'] = 0
@@ -477,6 +481,7 @@ def main(matrix=False, skip_build=False):
         report['roster_state_bytecode'] = run([sys.executable, ROOT / 'tools/audit_roster_state.py'], 'roster-state-bytecode-audit')
         report['icq_state_bytecode'] = run([sys.executable, ROOT / 'tools/audit_icq_state.py'], 'icq-state-bytecode-audit')
         report['other_status'] = run([sys.executable, ROOT / 'tools/test_other_status.py'], 'other-status-audit')
+        report['online_status_initialization'] = run([sys.executable, ROOT / 'tools/test_online_status_initialization.py'], 'online-status-initialization-audit')
         report['other_status_bytecode'] = run([sys.executable, ROOT / 'tools/audit_other_status.py'], 'other-status-bytecode-audit')
         report['ui_helper_bytecode'] = run([sys.executable, ROOT / 'tools/audit_ui_helpers.py'], 'ui-helper-bytecode-audit')
         report['ui_helper_replay'] = run([sys.executable, ROOT / 'tools/replay_ui_helpers.py'], 'ui-helper-replay-audit')

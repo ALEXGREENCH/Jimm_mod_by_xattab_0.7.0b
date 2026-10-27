@@ -2002,8 +2002,6 @@ public class Icq implements Runnable
 
 	static public void setOnlineStatus(int status) throws JimmException
 	{
-		byte[] CLI_SETSTATUS_DATA = OtherAction.CLI_SETSTATUS_DATA;
-
 		// Save new online status
 		Options.setLong(Options.OPTION_ONLINE_STATUS, status);
 		Options.safe_save();
