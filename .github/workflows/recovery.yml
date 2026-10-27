@@ -159,6 +159,10 @@ jobs:
             preservation/reports/source-online-status-initialization.json
             preservation/reports/source-online-status-initialization-delta.json
             preservation/reports/source-ci-about-runtime.json
+            preservation/reports/source-options-activation-before.json
+            preservation/reports/source-options-activation.json
+            preservation/reports/source-options-activation-delta.json
+            preservation/reports/source-xtraz-queries-jdk17.json
             preservation/reports/source-editor-send-before.json
             preservation/reports/source-editor-send-replay.json
             preservation/reports/source-platform-initialization-before.json

@@ -17,12 +17,13 @@ TEST = ROOT / 'build/source-tests'
 REPORT = ROOT / 'preservation/reports/source-tests.json'
 
 
-def run(args, name):
+def run(args, name, timeout=180):
     result = subprocess.run([str(a) for a in args], cwd=ROOT, stdout=subprocess.PIPE,
-                            stderr=subprocess.STDOUT, timeout=180)
+                            stderr=subprocess.STDOUT, timeout=timeout)
     (TEST / (name + '.log')).write_bytes(result.stdout)
     if result.returncode:
-        raise RuntimeError(name + ' failed; see ' + str(TEST / (name + '.log')))
+        tail = result.stdout.decode('utf-8', errors='replace')[-8000:]
+        raise RuntimeError(name + ' failed; see ' + str(TEST / (name + '.log')) + '\n' + tail)
     text = result.stdout.decode('utf-8', errors='replace')
     return '\n'.join(line for line in text.splitlines() if line.startswith('PASS'))
 
@@ -495,7 +496,7 @@ def main(matrix=False, skip_build=False):
         report['static_text_replay'] = run([sys.executable, ROOT / 'tools/replay_static_text.py'], 'static-text-replay-audit')
         report['antispam'] = run([sys.executable, ROOT / 'tools/test_antispam.py'], 'antispam-audit')
         report['antispam_bytecode'] = run([sys.executable, ROOT / 'tools/audit_antispam.py'], 'antispam-bytecode-audit')
-        report['xtraz_queries'] = run([sys.executable, ROOT / 'tools/test_xtraz_queries.py'], 'xtraz-query-audit')
+        report['xtraz_queries'] = run([sys.executable, ROOT / 'tools/test_xtraz_queries.py'], 'xtraz-query-audit', timeout=360)
         report['packet_parsers'] = run([sys.executable, ROOT / 'tools/test_packet_parsers.py'], 'packet-parsers-audit')
         report['packet_root'] = run([sys.executable, ROOT / 'tools/test_packet_root.py'], 'packet-root-audit')
         report['packet_parsers_bytecode'] = run([sys.executable, ROOT / 'tools/audit_packet_parsers.py'], 'packet-parsers-bytecode-audit')
@@ -525,6 +526,7 @@ def main(matrix=False, skip_build=False):
         report['options_item_state_replay'] = run([sys.executable, ROOT / 'tools/test_options_item_state.py'], 'options-item-state-replay-audit')
         report['import_cleanup'] = run([sys.executable, ROOT / 'tools/test_import_cleanup.py'], 'import-cleanup-audit')
         report['options_interface'] = run([sys.executable, ROOT / 'tools/test_options_interface.py'], 'options-interface-audit')
+        report['options_activation'] = run([sys.executable, ROOT / 'tools/test_options_activation.py'], 'options-activation-audit')
         report['menu_reset_bytecode'] = run([sys.executable, ROOT / 'tools/audit_menu_reset.py'], 'menu-reset-bytecode-audit')
         report['socket_bytecode'] = run([sys.executable, ROOT / 'tools/audit_socket.py'], 'socket-bytecode-audit')
         report['phone_book_bytecode'] = run([sys.executable, ROOT / 'tools/audit_phone_book.py'], 'phone-book-bytecode')

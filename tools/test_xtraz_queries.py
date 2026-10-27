@@ -111,7 +111,7 @@ def main():
         with zipfile.ZipFile(optimized) as z: entries = {n: z.read(n) for n in z.namelist() if not n.endswith('.class')}
         with zipfile.ZipFile(raw) as z: entries.update({n: z.read(n) for n in z.namelist()})
         raw_host = TEST / f'xtraz-query-{target}-raw-input.jar'; write_jar(raw_host, entries)
-        outputs, proofs = [], []
+        outputs, utf8_outputs, proofs = [], [], []
         for mode, path in [('reference', native), ('raw', raw_host), ('optimized', optimized)]:
             data = classes(path, cp); spec, evidence = configuration(target, mode == 'reference', data)
             tag = f'xtraz-query-{target}-{mode}'
@@ -135,16 +135,28 @@ def main():
                     m['refs'] = [s for s in m['code'] if 178 <= int(s.partition(' ')[0]) <= 185]
             assert captures == 1 and expected == after, 'Non-enumerated instruction/metadata changes'
             result = run([recover.java(), '-Djava.awt.headless=true', '-Dsun.reflect.inflationThreshold=2147483647',
+                          '-Dfile.encoding=windows-1251',
                           '-cp', recover.cp([TEST, *runtime]), 'XtrazQueryProbe', fixture, output, settings], tag)
             content = output.read_bytes(); outputs.append(content)
             assert len(content.splitlines()) == 5889, (tag, len(content.splitlines()))
-            coverage = list(map(int, content.splitlines()[-1].decode().split(':')[1:])); assert coverage == [5888, 1988]
+            coverage = list(map(int, content.splitlines()[-1].decode().split(':')[1:])); assert coverage == [5888, 1988], (tag, 'windows-1251', coverage)
+            utf8_output = TEST / (tag + '-utf8.txt')
+            run([recover.java(), '-Djava.awt.headless=true', '-Dsun.reflect.inflationThreshold=2147483647',
+                 '-Dfile.encoding=UTF-8', '-cp', recover.cp([TEST, *runtime]),
+                 'XtrazQueryProbe', fixture, utf8_output, settings], tag + '-utf8')
+            utf8_content = utf8_output.read_bytes(); utf8_outputs.append(utf8_content)
+            assert len(utf8_content.splitlines()) == 5889
+            utf8_coverage = list(map(int, utf8_content.splitlines()[-1].decode().split(':')[1:])); assert utf8_coverage == [5888, 2168], (tag, 'UTF-8', utf8_coverage)
             proofs.append({'mode': mode, 'configuration': spec, 'input_sha256': recover.sha(path), 'fixture_sha256': recover.sha(fixture),
                            'output_sha256': recover.sha(output), 'observations': len(content.splitlines()), 'successful_stream_writes': coverage[1],
+                           'jvm_default_encoding': 'windows-1251',
+                           'utf8_runtime': {'output_sha256': recover.sha(utf8_output), 'observations': len(utf8_content.splitlines()),
+                                            'cases': utf8_coverage[0], 'successful_stream_writes': utf8_coverage[1], 'jvm_default_encoding': 'UTF-8'},
                            'external_clock_instructions_changed': 1, 'all_other_application_resource_bytes_unchanged': True,
                            'whole_subject_and_bindings': evidence})
             print(target, mode, result, flush=True)
         assert outputs[0] == outputs[1] == outputs[2], ('Whole request/stream state differs', target)
+        assert utf8_outputs[0] == utf8_outputs[1] == utf8_outputs[2], ('Whole UTF-8 request/stream state differs', target)
         native_method = proofs[0]['whole_subject_and_bindings']['complete_query']
         comparisons = []
         for p in proofs[1:]:
@@ -154,7 +166,7 @@ def main():
                                 'full_literal_handler_diff': list(difflib.unified_diff(native_method['handlers'], other['handlers'], lineterm=''))})
         builds.append({'target': target, 'native_sha256': recover.sha(native), 'raw_sha256': recover.sha(raw),
                        'delivered_sha256': recover.sha(optimized), 'proofs': proofs, 'different_observations': 0,
-                       'complete_query_comparisons': comparisons})
+                       'complete_query_comparisons': comparisons, 'utf8_different_observations': 0})
     report = {'scope': 'Complete Xtraz outgoing queries on three May RU platforms, native/raw/optimized. Actual XML escape, '
                        'Options account lookup, counter, request builder, SnacPacket, SOCKETConnection.sendPacket, Traffic '
                        'and close/error handling execute. Only one external System clock instruction changes; every other '
@@ -171,8 +183,14 @@ def main():
                        'with partial state/bytes and stream-monitor ownership. Four account strings add XML/Unicode/null '
                        'coverage. Arbitrary nonzero transaction IDs, incoming Xtraz, UI/scheduling, live network/server, '
                        'physical devices and whole-program equivalence are outside scope.', 'builds': builds}
+    report['jvm_encoding_profiles'] = {
+        'scope': 'Each original/raw/delivered artifact executes the same complete request cases in separate fresh JVMs with both '
+                 'windows-1251 and UTF-8 defaults. The legacy malformed non-ASCII UIN path uses unqualified String.getBytes; '
+                 'the actual original therefore has different packet/error outcomes and write counts between these host profiles. '
+                 'No output rows are normalized or removed; the complete traces must match within each encoding.',
+        'observations_per_version_per_encoding': 17667, 'expected_successful_writes_per_platform': {'windows-1251': 1988, 'UTF-8': 2168}}
     (ROOT / 'preservation/reports/source-xtraz-queries.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8', newline='\n')
-    print('PASS Xtraz queries: 17667 observations on each native/raw/optimized version; zero differences')
+    print('PASS Xtraz queries: 17667 observations per JVM encoding on each native/raw/optimized version; windows-1251 and UTF-8; zero differences')
     return report
 
 

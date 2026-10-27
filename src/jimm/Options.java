@@ -873,6 +873,7 @@ class OptionsForm implements CommandListener, ItemStateListener
     //#sijapp cond.end#
     private final Command resetOptionsCommand = new Command(ResourceBundle.getString("reset_options"), Command.ITEM, 4);
 	private boolean lastGroupsUsed, lastHideOffline, lastHideEmpty;
+	private int lastSortMethod;
 		private int currentHour;
 	private String lastUILang;
 
@@ -1479,8 +1480,9 @@ class OptionsForm implements CommandListener, ItemStateListener
 		// Store some last values
 		lastUILang = Options.getString(Options.OPTION_UI_LANGUAGE);
 		lastHideOffline = Options.getBoolean(Options.OPTION_CL_HIDE_OFFLINE);
-		lastGroupsUsed = Options.getBoolean(Options.OPTION_USER_GROUPS);
 		lastHideEmpty = Options.getBoolean(Options.OPTION_CL_HIDE_EMPTY);
+		lastGroupsUsed = Options.getBoolean(Options.OPTION_USER_GROUPS);
+		lastSortMethod = Options.getInt(Options.OPTION_CL_SORT_BY);
 
 		initOptionsList();
 		optionsMenu.activate(Jimm.display);

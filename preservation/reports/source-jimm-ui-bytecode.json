@@ -1,8 +1,8 @@
 {
   "scope": "Complete May MIDP2 JimmUI typed inventory, preserving inherited canonical source names. The exact lost author spelling is not claimed. Command constructor keys and actual state reads/writes, existing differential controllers and explicit accessor/specialization witnesses anchor roles. Naming declarations is not complete controller or program equivalence. Complete original MIDP2 declarations and all their actual controller access sites are inventoried; constructor label keys, static/volatile and optimized visibility flags, authoring parameter specializations, exact compiler getter/writer operations, discarded native writer results, controller constructor, auth state inputs and dead null-control tag branches are independently checked. Field access enumeration alone is not semantic identity proof. Functional evidence is recorded in the focused runtime reports; whole-controller behavior is not claimed.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_unoptimized_class_jar_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-  "source_optimized_class_jar_sha256": "ac26a778cd608ab9138d47af69e5a037a736eacd1c9ce253f9d6c9d717eed84e",
+  "source_unoptimized_class_jar_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+  "source_optimized_class_jar_sha256": "d2f13064477de614e89cc94bc052a0291534f8bf189c6ab97b5450dd11944a72",
   "field_declarations": 67,
   "native_methods": 71,
   "same_optimized_signatures": 69,

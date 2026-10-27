@@ -68,6 +68,6 @@ public class XtrazQueryProbe {
             seed("54321",cp,count,seq,now,fault);invoke("query:"+cp+":"+units(uin)+":"+now+":"+count+":"+seq+":"+fault,uin);
         }
         for(String self:new String[]{null,"","<>&'\"","\u041e\u0442\u0432\u0435\u0442"})for(boolean cp:new boolean[]{false,true}){seed(self,cp,0,0,1,0);invoke("account:"+units(self)+":"+cp,"12345");}
-        if(successfulWrites<100)throw new AssertionError("No successful request sends");out.println("coverage:"+cases+":"+successfulWrites);observations++;out.close();System.out.println("PASS Xtraz queries: "+observations+" observations");System.exit(0);
+        if(successfulWrites<100)throw new AssertionError("No successful request sends");out.println("coverage:"+cases+":"+successfulWrites);observations++;out.flush();if(out.checkError())throw new IOException("Failed to write complete Xtraz trace");out.close();System.out.println("PASS Xtraz queries: "+observations+" observations");System.exit(0);
     }catch(Throwable t){t.printStackTrace();System.exit(1);}}
 }

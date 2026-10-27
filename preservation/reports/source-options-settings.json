@@ -7,8 +7,8 @@
       "language": "RU",
       "source_raw_build_language": "RU",
       "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "raw_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-      "delivered_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
+      "raw_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+      "delivered_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
       "comparisons": [
         {
           "flavor": "device",
@@ -34,7 +34,7 @@
             {
               "flavor": "device",
               "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-              "fixture_sha256": "716d9fed807fa6d7d25269ef19578249b4607ec6fa634ee4dd9543233ff8b45a",
+              "fixture_sha256": "1706917f01b5b67b4888a9c729c4fb47dc6b39b61fc72e02b799839a42aec777",
               "output_sha256": "381010e83a1787e04d5ee73773b289ba57d3bad4c1a0c06d9deda8400169133c",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -43,7 +43,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-              "fixture_sha256": "db6b394e2489acb615d774da23e37a2185cb7038cfa5aa03b326307560fff60d",
+              "fixture_sha256": "3818489668e75ec9dcfd0c1fab920e349dff87921396f7cebb24522e449f9603",
               "output_sha256": "189e903fa5d2b214add7ec81a3edc0c73aed27d41e050664cf8765daa94ce333",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -56,8 +56,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "f2da088602c3f5a48158fa3fc319698b2b329dd643ad0cf984be2ff1e7146464",
-              "fixture_sha256": "8766e7f1017ee57764ae52693aaae0aae4e04b02215f88dc2f77ebf82ba1eaee",
+              "input_sha256": "0178be333b86be433df7d66ab9b8f3dee2276d1d1df9a5b48ed88ca69bbec9de",
+              "fixture_sha256": "e913b1c768ab2f3db83b6457dc95ed320b413fe3905ede1a295aa09b8813b6d7",
               "output_sha256": "381010e83a1787e04d5ee73773b289ba57d3bad4c1a0c06d9deda8400169133c",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -65,8 +65,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "f2da088602c3f5a48158fa3fc319698b2b329dd643ad0cf984be2ff1e7146464",
-              "fixture_sha256": "9482593e842679138ba21532f8dbe28b353ee9bb036178b4fa2e5fd3795fc15f",
+              "input_sha256": "0178be333b86be433df7d66ab9b8f3dee2276d1d1df9a5b48ed88ca69bbec9de",
+              "fixture_sha256": "26e97c91350e4d2cef532d960bfae56b286d973fabb9691fe65e3cfce9fac93a",
               "output_sha256": "189e903fa5d2b214add7ec81a3edc0c73aed27d41e050664cf8765daa94ce333",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -79,8 +79,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
-              "fixture_sha256": "bf82cde6c9460891f3546c724c3f857bdc50c675ed956fb2c633c7117e8a22fc",
+              "input_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
+              "fixture_sha256": "938bd9dd7fddc27fd25163a8f5028de6d0a6fee6f719f4371bfc47e16dda62c8",
               "output_sha256": "381010e83a1787e04d5ee73773b289ba57d3bad4c1a0c06d9deda8400169133c",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -88,8 +88,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
-              "fixture_sha256": "371bfcfaf414ef584fd2c4a560f74a949955de4e69f107051d8410dedd4ff1a7",
+              "input_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
+              "fixture_sha256": "7c413f291cc7728f0ad1a374a2360a3cea7b0196cd4f4e6c577e04216fe3d187",
               "output_sha256": "189e903fa5d2b214add7ec81a3edc0c73aed27d41e050664cf8765daa94ce333",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -104,8 +104,8 @@
       "language": "UA",
       "source_raw_build_language": "UA",
       "reference_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-      "raw_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-      "delivered_sha256": "725fea065254ce772b2686331d5441a5a8cd7799dd12c677de800ccdf1de7bea",
+      "raw_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+      "delivered_sha256": "ba8827a315aaadd059f6f636ed47a2802e37010f0a23fdb643240d4370f353e0",
       "comparisons": [
         {
           "flavor": "device",
@@ -123,7 +123,7 @@
             {
               "flavor": "device",
               "input_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-              "fixture_sha256": "991e92dabcacd7f69ec631b0db9793a7d9b28a14f7cd25e288571ead8c41a5bc",
+              "fixture_sha256": "e696ea20aca889c8a4823261212781cd4d0842861c02558f903a77ece2d8c4b4",
               "output_sha256": "9bd1ddf86832fd9c83dd0e12e166f350db3d2b6ac9b962db8a31c913f87e7228",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -136,8 +136,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "a6a5a985e9a4576e8b42d1d3d25ba1eec00d8f26f484afc9374152a5c595d453",
-              "fixture_sha256": "0b3c48fd6f5123c52624d744c6432b9984ed79e2cc0dd048a468ad461c077ce6",
+              "input_sha256": "8544dfc631b405852acc38f9390ff771286be5f47a6c45ea493ae0be568498a8",
+              "fixture_sha256": "c3822a7167b537888c789e25675af80d21256291c26987d946a51253c598f9ab",
               "output_sha256": "9bd1ddf86832fd9c83dd0e12e166f350db3d2b6ac9b962db8a31c913f87e7228",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -150,8 +150,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "725fea065254ce772b2686331d5441a5a8cd7799dd12c677de800ccdf1de7bea",
-              "fixture_sha256": "5337dcb75d20805c8eec4c7358a8f678c3da050be4529330d6af87d5acf58eaa",
+              "input_sha256": "ba8827a315aaadd059f6f636ed47a2802e37010f0a23fdb643240d4370f353e0",
+              "fixture_sha256": "06ac347c1ca69fad29cb6c50875d3d10647cac6ea0b07c6ad22e252db942a16c",
               "output_sha256": "9bd1ddf86832fd9c83dd0e12e166f350db3d2b6ac9b962db8a31c913f87e7228",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -166,8 +166,8 @@
       "language": "RO",
       "source_raw_build_language": "RO",
       "reference_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-      "raw_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-      "delivered_sha256": "168716d24cd2407f41f6b6d891cae54cdb5b2c5e56ab4ffb0f22bf73e7a4144a",
+      "raw_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+      "delivered_sha256": "6bd3ea2bce1152f6fa52fa773d116f75ae505fd48936e4edb8ada98011212c1e",
       "comparisons": [
         {
           "flavor": "device",
@@ -185,7 +185,7 @@
             {
               "flavor": "device",
               "input_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-              "fixture_sha256": "1069c95821b49e1f221383cb4e1b96c4cd0f468da64d1438bb6b9c65ba919d96",
+              "fixture_sha256": "24f456526ba3b648cd34eb7a479a2e8ed340c3d83aa812920b4828fb0d7f1624",
               "output_sha256": "274d1b305dd677972cc0ff4621feb11199518fb0e8544d226cc5c2c194bae777",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -198,8 +198,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "8dbd79fc2cf3e5578efb4ef80f8154c484300dc0aed6bf5687a6672f5c2e6da4",
-              "fixture_sha256": "71fcff253b3c77acc661dff7768bb8d29d8db2f079148070a8192ed664e0a7d1",
+              "input_sha256": "887d7ffdfeb9410b042b939dd687ff99b0c9799cd2ecfa15722ed0f363767489",
+              "fixture_sha256": "485341b11b87c09e2c3c43b9708ef87715ac85a5ff6742f10f0c66b9efe2f975",
               "output_sha256": "274d1b305dd677972cc0ff4621feb11199518fb0e8544d226cc5c2c194bae777",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -212,8 +212,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "168716d24cd2407f41f6b6d891cae54cdb5b2c5e56ab4ffb0f22bf73e7a4144a",
-              "fixture_sha256": "ca4b7fec1164711da1d7c44312b543bd43ba122a173dad858857d27b241bc803",
+              "input_sha256": "6bd3ea2bce1152f6fa52fa773d116f75ae505fd48936e4edb8ada98011212c1e",
+              "fixture_sha256": "5a868ce7bda5ec8f74a14424f251b8867aaef764518fc8312f6638f950bf7eee",
               "output_sha256": "274d1b305dd677972cc0ff4621feb11199518fb0e8544d226cc5c2c194bae777",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -228,8 +228,8 @@
       "language": "EN",
       "source_raw_build_language": "RU",
       "reference_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-      "raw_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-      "delivered_sha256": "8757d0a5cec6751a4d569a52b46bb915cb1740f6731f3b68bcd35f406a677ab2",
+      "raw_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+      "delivered_sha256": "9a40b9c0fdeb487d4ae9d688ae118b17a55f79b16b3a425a6c7cbba683d15772",
       "comparisons": [
         {
           "flavor": "device",
@@ -247,7 +247,7 @@
             {
               "flavor": "device",
               "input_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-              "fixture_sha256": "3fb074482caad2354614293895aebe3627155fce55739a4667ebfdc7cf5b3162",
+              "fixture_sha256": "f107292dff3cdf419d6d898263c4565a24ca2fe9e9c56dc1fe102f5c52aa7088",
               "output_sha256": "1042279aa9c1ea7e8686b8496c8ed937c72d46e6daa991ec07c770d4a0ca4cde",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -260,8 +260,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "2cf2e49e40e09603c934cdc27f5adaa96c415e1e5fe41e2621eed215eb39c7d6",
-              "fixture_sha256": "6e944c0b32db5faec205c391b2445bd49d99a3613d1095fcdf8bd699434e056f",
+              "input_sha256": "f448cb4bc9f7918277bb6a4d1461088b9e5966af6f6c9b5863d49f347274013a",
+              "fixture_sha256": "67468bdc98cd6a55aec47c26c0ada3696ab5127cb2e94ed6aa3131aaec1dc047",
               "output_sha256": "1042279aa9c1ea7e8686b8496c8ed937c72d46e6daa991ec07c770d4a0ca4cde",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -274,8 +274,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "8757d0a5cec6751a4d569a52b46bb915cb1740f6731f3b68bcd35f406a677ab2",
-              "fixture_sha256": "a243b1b61a86296a71dd9f78b0afc152607a762d4e2611d34d504095cd5d5fb2",
+              "input_sha256": "9a40b9c0fdeb487d4ae9d688ae118b17a55f79b16b3a425a6c7cbba683d15772",
+              "fixture_sha256": "795cdcbb9830596b80fc6e90f64e95ba77d5d4c7bf73babcd7a55244f4e3d9e1",
               "output_sha256": "1042279aa9c1ea7e8686b8496c8ed937c72d46e6daa991ec07c770d4a0ca4cde",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -290,8 +290,8 @@
       "language": "CZ",
       "source_raw_build_language": "CZ",
       "reference_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-      "raw_sha256": "4e89eab412d6e48ed6ff0019f7c0d3b3b944b9987868529598bb158c5355cc4b",
-      "delivered_sha256": "d168f5c187e3f3f6cd678b059f7b0d9f9ad571975ce0b93bed317fd2fc3c67f6",
+      "raw_sha256": "9246f5b459129e12eec357b71622c8c463992d85a50e1ff7ecd2d159603d5e57",
+      "delivered_sha256": "4cc4f040e3c6bf074fb7f9e792dda63771e3224fd7e417d5df1322257f6aed75",
       "comparisons": [
         {
           "flavor": "device",
@@ -309,7 +309,7 @@
             {
               "flavor": "device",
               "input_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-              "fixture_sha256": "5a9a3556b3f0a464f4c14bdaa3a9eabed4eb0a7a921b3ffe56742b39a123706c",
+              "fixture_sha256": "e19bc816d78a8c5031fbdbf2bf3741c2ad65e297e159c326bb9a64585f71140a",
               "output_sha256": "7bf71503676f74eff62cd67d78af5eb721f20b59d96cf8488d503c3e49cf6bc7",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -322,8 +322,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "21f5ca1b7f258264a9a8e8e2fbebdfc320c5ab5a93cc1c7d36395110ec69c95a",
-              "fixture_sha256": "dbec7e0e7dfa537d54ea08632d1af33057180d91e9c38370d05caf6a2f17c0e8",
+              "input_sha256": "65826b2dd06ad0e35210dff5e242ff1fd05970b36d2f062278a899a4c78918cb",
+              "fixture_sha256": "70a25c1cc873a6f811917efcb9b7cc90f755071d9afe69f45b2887220ec6f6db",
               "output_sha256": "7bf71503676f74eff62cd67d78af5eb721f20b59d96cf8488d503c3e49cf6bc7",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -336,8 +336,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "d168f5c187e3f3f6cd678b059f7b0d9f9ad571975ce0b93bed317fd2fc3c67f6",
-              "fixture_sha256": "e6d33cc2e1902699394183cfddb34fa62e5eed1006b27ace7afc7251e07f64f3",
+              "input_sha256": "4cc4f040e3c6bf074fb7f9e792dda63771e3224fd7e417d5df1322257f6aed75",
+              "fixture_sha256": "2b7cf953b4eac77988372e45a20c2b66d1430633e56af41faaa687df2f31a5cd",
               "output_sha256": "7bf71503676f74eff62cd67d78af5eb721f20b59d96cf8488d503c3e49cf6bc7",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -352,8 +352,8 @@
       "language": "RU",
       "source_raw_build_language": "RU",
       "reference_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "raw_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
-      "delivered_sha256": "035b2ce7f9ec8f27e1ed810dd14a4c0436e01341a072d7f959d919cf253fa618",
+      "raw_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
+      "delivered_sha256": "bf67c8469e50a9a46f81e83d80ead963d5f65873126bfdb642b47996e3ebb0c7",
       "comparisons": [
         {
           "flavor": "device",
@@ -379,7 +379,7 @@
             {
               "flavor": "device",
               "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-              "fixture_sha256": "e70921aa676593c0f0c95f45461c73d1b2b0167d8e8df64aae8fd4237d8b26fa",
+              "fixture_sha256": "a84248037f380da49542ee06a010c6ae92ada8cab7f1ddabf23fc9c806b26a82",
               "output_sha256": "78e87f0c6df02e4818adc96ff87b691364cee7aa473f3f3a2b5c7dc394f33218",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -388,7 +388,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-              "fixture_sha256": "1c68fcdd9aae83da7fb59f42950a81b80bd6f76bc9b50a0d7f10affa586ec1f5",
+              "fixture_sha256": "d2aafc6d3796844b6c0eeed5c96b073abf14462fe3576a8c78679289dc5e78cd",
               "output_sha256": "076417b58dc405129387d54a48b48d3778007670140d9379fea0199c5cf79ef6",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -401,8 +401,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "0a35a729afe3f2d49acf515e47cd171bf0f7bf748ee1ad278ad12ac56134934c",
-              "fixture_sha256": "dce0f51aff48470b0bb76da1f64d2bece2051b3ca41d5ba2ce3c6c2ebc904bbd",
+              "input_sha256": "d6d94a062a60d562369af35317f376f7c7d08d29266222c6c9464d7938c182b1",
+              "fixture_sha256": "a47cddb599477fa2e76581b56431b8007aec74a23ee3fe94b2f03667b1ad5092",
               "output_sha256": "78e87f0c6df02e4818adc96ff87b691364cee7aa473f3f3a2b5c7dc394f33218",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -410,8 +410,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "0a35a729afe3f2d49acf515e47cd171bf0f7bf748ee1ad278ad12ac56134934c",
-              "fixture_sha256": "a510a3dcac2a6c454e03f323eea09ebb0d4adacd5f757f4ff657560f89c1c8ff",
+              "input_sha256": "d6d94a062a60d562369af35317f376f7c7d08d29266222c6c9464d7938c182b1",
+              "fixture_sha256": "fc9390739fd8a1dcb199973d4231c0798391bcf00ec294c7edd9d3df4a3bf079",
               "output_sha256": "076417b58dc405129387d54a48b48d3778007670140d9379fea0199c5cf79ef6",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -424,8 +424,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "035b2ce7f9ec8f27e1ed810dd14a4c0436e01341a072d7f959d919cf253fa618",
-              "fixture_sha256": "7d062b50461e1d4c946cfd983a16eeedd9de78d36bb24789eee6421d3f4f4f78",
+              "input_sha256": "bf67c8469e50a9a46f81e83d80ead963d5f65873126bfdb642b47996e3ebb0c7",
+              "fixture_sha256": "4632e54b1853beb1a9513ba6a9fc4cdbbbcc9c41a951399519b70d2b7d7ec508",
               "output_sha256": "78e87f0c6df02e4818adc96ff87b691364cee7aa473f3f3a2b5c7dc394f33218",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -433,8 +433,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "035b2ce7f9ec8f27e1ed810dd14a4c0436e01341a072d7f959d919cf253fa618",
-              "fixture_sha256": "12f663f16be4dc7e096a9858916cec57de5c5c0f268e740946042888651a9f41",
+              "input_sha256": "bf67c8469e50a9a46f81e83d80ead963d5f65873126bfdb642b47996e3ebb0c7",
+              "fixture_sha256": "e3491fe406f9fe6281b1bb1f59d739ea5e5caca45662ebc7caf73248630f2379",
               "output_sha256": "076417b58dc405129387d54a48b48d3778007670140d9379fea0199c5cf79ef6",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -449,8 +449,8 @@
       "language": "UA",
       "source_raw_build_language": "UA",
       "reference_sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
-      "raw_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
-      "delivered_sha256": "f94aa74b3db1f1457dc70aee06ffdfcd4c622b0e356b9253ece3a6f7c9fffeef",
+      "raw_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
+      "delivered_sha256": "4311b6ab7c0ae23188929296a7f3510a2ccc2f196b3ae501b2714c54a39280b3",
       "comparisons": [
         {
           "flavor": "device",
@@ -468,7 +468,7 @@
             {
               "flavor": "device",
               "input_sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
-              "fixture_sha256": "a53e742704c8dc22c5740806e0457baedd0215ecdf99e05890d9e0c378891ac2",
+              "fixture_sha256": "d67bd9afb335e35bee8935ed0f20c9cd364f4941e06fbd44ed9fb7c68c852885",
               "output_sha256": "d6930f6f37aa3d7c0cde15f71a0c4198c278935c08c95c956ac7a915d3e25f35",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -481,8 +481,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "ac2a98c25457225aa370233cb08a846eb76a7d17c5b9f9e405164795ee048ff0",
-              "fixture_sha256": "f1a39cb2fc45333f3613a7d58f2598f19a613edeed7b97c02453fb90182c9734",
+              "input_sha256": "fb300c6d1ee90afc968f16fdbc00e136c972c382d6ca47b16df5acabd3723180",
+              "fixture_sha256": "92652abd976c26fae1ac09731b6a37be492c29840fd42c30cbfc6de62417f82f",
               "output_sha256": "d6930f6f37aa3d7c0cde15f71a0c4198c278935c08c95c956ac7a915d3e25f35",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -495,8 +495,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "f94aa74b3db1f1457dc70aee06ffdfcd4c622b0e356b9253ece3a6f7c9fffeef",
-              "fixture_sha256": "b576c0c210d65d80e5d4e1669a33a6110869abd4c595f95c9012a57613764c2d",
+              "input_sha256": "4311b6ab7c0ae23188929296a7f3510a2ccc2f196b3ae501b2714c54a39280b3",
+              "fixture_sha256": "af4e3c3de04b7eea4ec58721a1f8f8dd064fd0f238517ea5988e9c0c49d144cd",
               "output_sha256": "d6930f6f37aa3d7c0cde15f71a0c4198c278935c08c95c956ac7a915d3e25f35",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -511,8 +511,8 @@
       "language": "RO",
       "source_raw_build_language": "RO",
       "reference_sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
-      "raw_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
-      "delivered_sha256": "85dff6a5c75851a6fef90736f9fa15dbce3877db83b8b6cb8eb4155503812d66",
+      "raw_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
+      "delivered_sha256": "da2ca22f63adfb558926ab9fdeb118f4a2294fd25bd9efd5bdd3f71baaf020d7",
       "comparisons": [
         {
           "flavor": "device",
@@ -530,7 +530,7 @@
             {
               "flavor": "device",
               "input_sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
-              "fixture_sha256": "cb351c4ceb4afd459b7e33907c5444acbf40042caf2c3d49b812e0d893eed593",
+              "fixture_sha256": "91db5c19c5e67387ecfbc663afb6aa99cdee9527489a63096ea21c792f264ff6",
               "output_sha256": "3e51189de3ed9a9d4296a5aad47294ace63bd5004d4c8cf378af63e09cc164cd",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -543,8 +543,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "8bacbe3e4a6dbb107081a38ce77011c4da879d562f1372b99fd07cfef465d9e1",
-              "fixture_sha256": "164427ad27090fbb09cecdb3bb57b7de451b954746504edbe6241e0586e36c5e",
+              "input_sha256": "05ea5ccfe43077decea6be06ce1eb908a088583a486d492d9a7cc07527c596be",
+              "fixture_sha256": "23d12589380d43e43339488cb3ca0b00bcfcf5ebc50692043bdb8165e0308b93",
               "output_sha256": "3e51189de3ed9a9d4296a5aad47294ace63bd5004d4c8cf378af63e09cc164cd",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -557,8 +557,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "85dff6a5c75851a6fef90736f9fa15dbce3877db83b8b6cb8eb4155503812d66",
-              "fixture_sha256": "6f0e2e15bc535a64ac2f103755a1feee63938f536b6bc67d8db536611e1de906",
+              "input_sha256": "da2ca22f63adfb558926ab9fdeb118f4a2294fd25bd9efd5bdd3f71baaf020d7",
+              "fixture_sha256": "248ca42670fc5fa419926dd785669d6b1c8da6da4e4637824782df7b10ea8f93",
               "output_sha256": "3e51189de3ed9a9d4296a5aad47294ace63bd5004d4c8cf378af63e09cc164cd",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -573,8 +573,8 @@
       "language": "EN",
       "source_raw_build_language": "RU",
       "reference_sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
-      "raw_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
-      "delivered_sha256": "0b7a5695c42722d5ba2ad1678449c7bb1525870b59562e195c2868f74c839812",
+      "raw_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
+      "delivered_sha256": "b3c87169e6a348bfe340e39f3248a4188c4e35d081990981d4e3d4a21b6f4ba3",
       "comparisons": [
         {
           "flavor": "device",
@@ -592,7 +592,7 @@
             {
               "flavor": "device",
               "input_sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
-              "fixture_sha256": "1d341d4512d0c227874d3e7eabd0aff55832c5cfc18dc961431e8d1b9c2e472e",
+              "fixture_sha256": "dd501d79742afb68dfe9ef616113d9f6f77cdf8823a51b95f5f02d7321d63183",
               "output_sha256": "3229483cee180947427364dd891ea46961ff843a179096a52ed46f7053b1dba3",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -605,8 +605,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "fa3f78a03c5c61fc1a149a151de3996fbce3aaf6dba95851f8cad7772d343ded",
-              "fixture_sha256": "de4c8e570f290c989026fea78adc2badb2ef48ffea93321e9cea2d43784e0754",
+              "input_sha256": "1bd1be11f6ab40b352dd48774e88f66b8740b5c50fc8a3114881bb9f3f241eee",
+              "fixture_sha256": "7d8959eefdeb6871f3b73be9ef8fb7f41add02a80c17c7106713b506ecbe6d7c",
               "output_sha256": "3229483cee180947427364dd891ea46961ff843a179096a52ed46f7053b1dba3",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -619,8 +619,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "0b7a5695c42722d5ba2ad1678449c7bb1525870b59562e195c2868f74c839812",
-              "fixture_sha256": "9d87aeb54edc0bbbf9133b8f549981ab73e8ad0fa4c02390c28a36032ba61c80",
+              "input_sha256": "b3c87169e6a348bfe340e39f3248a4188c4e35d081990981d4e3d4a21b6f4ba3",
+              "fixture_sha256": "1a2afb4367eb5ec02cc265179f809938e3556e5262509b4331be47750895ec94",
               "output_sha256": "3229483cee180947427364dd891ea46961ff843a179096a52ed46f7053b1dba3",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -635,8 +635,8 @@
       "language": "CZ",
       "source_raw_build_language": "CZ",
       "reference_sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
-      "raw_sha256": "bd57c7c6612d11e889b46584ff00f090c6e1ce46ce1e8e4b83e646dabfa020f1",
-      "delivered_sha256": "ba1edbaf05c06edf42cf9069597a60c3d7cf7ae8cda0f077d4b0796a31fbf273",
+      "raw_sha256": "a8789949ff0f0676720461ca5f4a40e5cfa3b4a889c319be925f960cfd1cabd0",
+      "delivered_sha256": "5067d19abcb68409e0f5bfc1b85e00ce0f6c7a2e5aa0f05e85abc78cd1f0fec0",
       "comparisons": [
         {
           "flavor": "device",
@@ -654,7 +654,7 @@
             {
               "flavor": "device",
               "input_sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
-              "fixture_sha256": "dcbc42e8a0db4f50ae7e0e3ff50023858b49487d29a5712ca9b91d5e53a13cb0",
+              "fixture_sha256": "c5afb2b28ecc14a2b353bc326fc6e99dc2efde20571962340a20aeaca479a6d2",
               "output_sha256": "06ffea25fbe4fccbe4730c79d0b398ea1c22db2aedb2796ba5ad66275ed926cf",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -667,8 +667,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "0e6a4dd707263dce48e42541275ba824b88fa2fe9f732a2ef19eeec17e7d6da6",
-              "fixture_sha256": "e9f2ced2bd7574645b1c0bb6e3f47090df9ad9abd3bf0dfc4d691bd36969c63b",
+              "input_sha256": "951d5d0b4894e85df106183e7a983fb01ae00bc21c39958d0036435a90afa0ed",
+              "fixture_sha256": "aa1a055bcc461f2b239777fa23fc2c0b537bffa46228a75868d5e48d7b94908b",
               "output_sha256": "06ffea25fbe4fccbe4730c79d0b398ea1c22db2aedb2796ba5ad66275ed926cf",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -681,8 +681,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "ba1edbaf05c06edf42cf9069597a60c3d7cf7ae8cda0f077d4b0796a31fbf273",
-              "fixture_sha256": "7140963d75e25df4887ee04302e68f3d46926e606bfb167a9acf0d9c18b49883",
+              "input_sha256": "5067d19abcb68409e0f5bfc1b85e00ce0f6c7a2e5aa0f05e85abc78cd1f0fec0",
+              "fixture_sha256": "450ec43a207e7b503ccf13e9a32d62edf43212d4dad0e84f4d9ec21d948a51ca",
               "output_sha256": "06ffea25fbe4fccbe4730c79d0b398ea1c22db2aedb2796ba5ad66275ed926cf",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -697,8 +697,8 @@
       "language": "RU",
       "source_raw_build_language": "RU",
       "reference_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "raw_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
-      "delivered_sha256": "e7d169ecb224f99b17b816ce94fae8cea40a67c187af6d41dde4b5330e006729",
+      "raw_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
+      "delivered_sha256": "9c44d54e6b143a1bd834dc4e0b6506f67d96770d64f1d954ccd6b9254b63fdc7",
       "comparisons": [
         {
           "flavor": "device",
@@ -724,7 +724,7 @@
             {
               "flavor": "device",
               "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-              "fixture_sha256": "a679e0c86eb1d05f6134bc4e77ba18b733e696055af76e757853287dbbc83224",
+              "fixture_sha256": "c36f307529f3dd715d54a2c7bf04899322576d725c6d6c9e86d8761ba7c9da4b",
               "output_sha256": "adb10b168a793f4c6d563cbb4aeeeee6d15cd8b5e55fc739129dbc56a6b48d14",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -733,7 +733,7 @@
             {
               "flavor": "scripted",
               "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-              "fixture_sha256": "69df95e39c3711144475ef11333a5c11c2557984373ff75c3ab62b896953f3e4",
+              "fixture_sha256": "0fe3ec457c23d3cf5825d5b2b30b54d4c38d867e55b8b87cdcff05c4d0eb121c",
               "output_sha256": "3511d4c08b00a7ab973dc98e32af2dcdbc915b3aff6536e2f6a9260cba405481",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -746,8 +746,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "884712b4414a0b73d0ee88a1bf3e0603fb5322b991c4b92f203a605658c51b0a",
-              "fixture_sha256": "2dee9caaf9501f0214977c261deb13afc1c72a9a143ffaae2cc9edf828010bc8",
+              "input_sha256": "bf4c2db6041512d5c47cd21761cc6dd60c73cb3ff7452eddb6077ecbd34d7d4c",
+              "fixture_sha256": "02726bbc2b4accead5d6023215b032c3993de777799d4b89bc749e99e2f0c1a8",
               "output_sha256": "adb10b168a793f4c6d563cbb4aeeeee6d15cd8b5e55fc739129dbc56a6b48d14",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -755,8 +755,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "884712b4414a0b73d0ee88a1bf3e0603fb5322b991c4b92f203a605658c51b0a",
-              "fixture_sha256": "103cbbb4356be8f657bbeeaca4b62f965218b2659d6b9eec0533be17c47e9c54",
+              "input_sha256": "bf4c2db6041512d5c47cd21761cc6dd60c73cb3ff7452eddb6077ecbd34d7d4c",
+              "fixture_sha256": "4819c36d22d9d7a1f1b01db65dc3b7fa43f78406cb2c4d1c4edca9e9fe7a490c",
               "output_sha256": "3511d4c08b00a7ab973dc98e32af2dcdbc915b3aff6536e2f6a9260cba405481",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -769,8 +769,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "e7d169ecb224f99b17b816ce94fae8cea40a67c187af6d41dde4b5330e006729",
-              "fixture_sha256": "8cab6c64921e28baa9b87dc7d017cc5e8f395d19a8928f1e8775d51fd620342e",
+              "input_sha256": "9c44d54e6b143a1bd834dc4e0b6506f67d96770d64f1d954ccd6b9254b63fdc7",
+              "fixture_sha256": "ba87229d744d49f5c2b6630b96573d84e98999e9795a95fbbc78e792299359c3",
               "output_sha256": "adb10b168a793f4c6d563cbb4aeeeee6d15cd8b5e55fc739129dbc56a6b48d14",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -778,8 +778,8 @@
             },
             {
               "flavor": "scripted",
-              "input_sha256": "e7d169ecb224f99b17b816ce94fae8cea40a67c187af6d41dde4b5330e006729",
-              "fixture_sha256": "1443aeb67ba54348d14eabcb4e9cd83c7d6beb009fcc931ee61898adf39829c1",
+              "input_sha256": "9c44d54e6b143a1bd834dc4e0b6506f67d96770d64f1d954ccd6b9254b63fdc7",
+              "fixture_sha256": "17eefe14d0f7174288840bf97809ef56b63f40352603775788933ac15daa7e73",
               "output_sha256": "3511d4c08b00a7ab973dc98e32af2dcdbc915b3aff6536e2f6a9260cba405481",
               "all_input_application_bytes_unchanged": false,
               "only_one_enumerated_display_call_changed": true,
@@ -794,8 +794,8 @@
       "language": "UA",
       "source_raw_build_language": "UA",
       "reference_sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
-      "raw_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
-      "delivered_sha256": "2127989b4eaac16d6cd2221ec7437fae70df039ec4a14e6e1c30de9f8810c599",
+      "raw_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
+      "delivered_sha256": "2ccddff458db9e76ad0aa418756981e0bcc090998c97bb5dd7baad430c6e467e",
       "comparisons": [
         {
           "flavor": "device",
@@ -813,7 +813,7 @@
             {
               "flavor": "device",
               "input_sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
-              "fixture_sha256": "bdd5b8ef729d165e3856f4788892b7136bee087f9eb3f7579ad73f6e4c4fa307",
+              "fixture_sha256": "ff01115b3ddd5411ffa21b0471bf267c7e749418685adc0c3f5cf8676c115543",
               "output_sha256": "991bc01e8bf97a8114a510187efa341bb37dcaef1cc8091a0dfeaea286b74638",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -826,8 +826,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "2eb684dd25165bc7d8d248f6e69db437395b1e65a8268827a5a701bb604e3187",
-              "fixture_sha256": "215c319da7b5e5e68b990c67e94c92535764e59978982e5d1b8e414e898ed0f9",
+              "input_sha256": "c13bd0f25bfc613a4e4bafd0e99b86278484efd3bc2b3bfa672d024d76be9c5c",
+              "fixture_sha256": "39e5e808797a4f64883e88186a37dcdcfb056556069dfb49b6e578d30ac6b57c",
               "output_sha256": "991bc01e8bf97a8114a510187efa341bb37dcaef1cc8091a0dfeaea286b74638",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -840,8 +840,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "2127989b4eaac16d6cd2221ec7437fae70df039ec4a14e6e1c30de9f8810c599",
-              "fixture_sha256": "40b0228f1838de7443254f1022dc6a6f590a851ea65498e1d7881f10c5d283ea",
+              "input_sha256": "2ccddff458db9e76ad0aa418756981e0bcc090998c97bb5dd7baad430c6e467e",
+              "fixture_sha256": "7471be222480fe1ea7c6c543b4d3d246921bf69a31665cc74266e5669189bef4",
               "output_sha256": "991bc01e8bf97a8114a510187efa341bb37dcaef1cc8091a0dfeaea286b74638",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -856,8 +856,8 @@
       "language": "RO",
       "source_raw_build_language": "RO",
       "reference_sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
-      "raw_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
-      "delivered_sha256": "09faaf99eeb305d4daa6c7793efd638cd92e5c6de48d02d38144d91b743978c3",
+      "raw_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
+      "delivered_sha256": "99be901ddd121504422ea350d2a55990cd4490aa56079d0c90ad82f8aca158e9",
       "comparisons": [
         {
           "flavor": "device",
@@ -875,7 +875,7 @@
             {
               "flavor": "device",
               "input_sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
-              "fixture_sha256": "d5bd1bd3b9deb87e131191a15f338a17bd509d33b2499efd8d9235b4731d8b78",
+              "fixture_sha256": "1d0a237e00e45d03fb6043c2b2a7dc8bbe856f9f9178bb6e1d0d134f17598fd6",
               "output_sha256": "e4bafcd18d487519d342e610a14b82b65b2627b6d3113bcdf405472980a83ed2",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -888,8 +888,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "0a4902234a25490c13edef08fd17eb985acc83070b0f97d590bbb7836024144e",
-              "fixture_sha256": "4e112a4f6af622150d686fea564b17969a15d4c6f32b37ffa1ff60ef27c192fb",
+              "input_sha256": "06cf7b15aa1732f6a93f426a090f98c51919d20f5253cbbd5d61fa969469cbc6",
+              "fixture_sha256": "a867f2ffb27eeb9ac0b2a9499369d77ca73ee4417333681bab5e4fae4fd45603",
               "output_sha256": "e4bafcd18d487519d342e610a14b82b65b2627b6d3113bcdf405472980a83ed2",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -902,8 +902,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "09faaf99eeb305d4daa6c7793efd638cd92e5c6de48d02d38144d91b743978c3",
-              "fixture_sha256": "575c3d13425f69fb40810a6bb76fa40eee9aade53ee478cfa34716dc1c027751",
+              "input_sha256": "99be901ddd121504422ea350d2a55990cd4490aa56079d0c90ad82f8aca158e9",
+              "fixture_sha256": "2af40d6be4f3988ae67233d13a7a7d9154a6795e8094ce5c66ff73f001643d8a",
               "output_sha256": "e4bafcd18d487519d342e610a14b82b65b2627b6d3113bcdf405472980a83ed2",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -918,8 +918,8 @@
       "language": "EN",
       "source_raw_build_language": "RU",
       "reference_sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
-      "raw_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
-      "delivered_sha256": "a5d334521a6e071a51a5f2dd8c9f33679d0ef5dc6deb7007b13e888924f17476",
+      "raw_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
+      "delivered_sha256": "d251b7d29183c1e7045b1342f368abcdd03551c43c46ad7463d02a59e6948a07",
       "comparisons": [
         {
           "flavor": "device",
@@ -937,7 +937,7 @@
             {
               "flavor": "device",
               "input_sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
-              "fixture_sha256": "da638e2aca5eff969157192eaef42160e7ac7bf1e95138aab4176d3bc5acd000",
+              "fixture_sha256": "f8a7895ea0b2a6259ad9f23f3dc9fc640e72f3289ea5c1cc72fb16e69b13adfd",
               "output_sha256": "8cda8ba90398d435efe71c4032ac229587d63b27a14ffe961ecb208a35ca5cbe",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -950,8 +950,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "bedd5b4a0352dce08cbd04de54d65bec89c95d895ecf4b1baa3d5eebc167d141",
-              "fixture_sha256": "e827c13850e622758b8801f10259aa35159ae120f696b6b838cced3c08a76698",
+              "input_sha256": "a0bfa9996901741e2b6babb586627e6ca736345605f67d14dc2ac76308a89203",
+              "fixture_sha256": "599c866628364cbc091ae97e9c9f5f602a1a424c21fa0dba70677ebfaa1a8b2c",
               "output_sha256": "8cda8ba90398d435efe71c4032ac229587d63b27a14ffe961ecb208a35ca5cbe",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -964,8 +964,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "a5d334521a6e071a51a5f2dd8c9f33679d0ef5dc6deb7007b13e888924f17476",
-              "fixture_sha256": "ae88a72dad4e96bdde8cc648b1e239acb71f8869438e22998639d041fa528368",
+              "input_sha256": "d251b7d29183c1e7045b1342f368abcdd03551c43c46ad7463d02a59e6948a07",
+              "fixture_sha256": "a69688ce765aaf20056c6eae85e92764758eb604919bf04ad66312fae0819b51",
               "output_sha256": "8cda8ba90398d435efe71c4032ac229587d63b27a14ffe961ecb208a35ca5cbe",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -980,8 +980,8 @@
       "language": "CZ",
       "source_raw_build_language": "CZ",
       "reference_sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
-      "raw_sha256": "61a52cad56511876fe87f7ca0812807ab49cdcdfa3656515c5cd11ffcc787ff6",
-      "delivered_sha256": "e03585f81664e7411598eb047bf44841053d29862bfb29b3ce876b50ed3488a1",
+      "raw_sha256": "7d08d3927668b219c03545bfe6887824cbfee13cd13f33fac8a696d59c4fece7",
+      "delivered_sha256": "a7a9e489ab17cf320fd38a547ffe04a37e51598fd5976d2bc9cd0c26697c9bb4",
       "comparisons": [
         {
           "flavor": "device",
@@ -999,7 +999,7 @@
             {
               "flavor": "device",
               "input_sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
-              "fixture_sha256": "62bb81ddc57313eed77458d90c66490f4e9747abf5d995cd5a3f352fab50f821",
+              "fixture_sha256": "4f34184d9db508cef1d87eb0fb442b98cc5d9033d7ebdfbbd8faed7c62a54890",
               "output_sha256": "ca80cc7e9ee88d2d5737f9ec01a87a120233a829bf5d80195a20dad45474eba8",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -1012,8 +1012,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "3c7b49a8fb0608c7035b4f1e2a1a6bb801085145e40fea03e0f918e8f30c726f",
-              "fixture_sha256": "7b59b6d1a6afae8c9875a330673602ae9324de5c0c66017e8bacba18c82d0297",
+              "input_sha256": "ca69476ba4439844887c5bdde96866d4bc1ad862bd0a67fbdf8c39c7860bc9cb",
+              "fixture_sha256": "e9ada4f9abc3fa84d314a73ad391e961aaf6ece1ab0bc33091332c92d4951c9e",
               "output_sha256": "ca80cc7e9ee88d2d5737f9ec01a87a120233a829bf5d80195a20dad45474eba8",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,
@@ -1026,8 +1026,8 @@
           "flavors": [
             {
               "flavor": "device",
-              "input_sha256": "e03585f81664e7411598eb047bf44841053d29862bfb29b3ce876b50ed3488a1",
-              "fixture_sha256": "b692235ef006d860884a338285be49db4ae29730bbd51c703e33e0bf07072e03",
+              "input_sha256": "a7a9e489ab17cf320fd38a547ffe04a37e51598fd5976d2bc9cd0c26697c9bb4",
+              "fixture_sha256": "395400195871b4c02ac17add10572e8f6215faa1ed84c83b44b0cb9ac59b9bd9",
               "output_sha256": "ca80cc7e9ee88d2d5737f9ec01a87a120233a829bf5d80195a20dad45474eba8",
               "all_input_application_bytes_unchanged": true,
               "only_one_enumerated_display_call_changed": false,

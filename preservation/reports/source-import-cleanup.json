@@ -1,7 +1,7 @@
 {
   "scope": "Whole import/save/controller/load/constructor, item rendering, gradient allocation and directory-caption bodies for all fifteen native/delivered pairs and three raw RU artifacts. Explicit restoration invariants retain all instructions, handlers, original branches/locals, helpers and callers; they are not full instruction/whole-program equality. Native closes the underlying streams, performs colors/save before input close, has no extra import alpha update, catches exceptions only around loading-stream closes, omits the redundant direct item-text color and directory stacktrace, releases the old pixel array before replacement, and saves background modes with a two-case switch preserving the selected file and text field. Actual import runtime is limited to the explicitly captured MIDP2 fixture; other cleanup/error/physical allocator runtime is not claimed.",
   "source_snapshot": {
-    "src/jimm/Options.java": "967dfd907d9e4c2475a3cbcdc94b74fcf8f86a142e8d9a444eaf5ebf1fd68932",
+    "src/jimm/Options.java": "478cd026a3e8030fed1111a83b0d02392f077fb8d976ded4cb1d0c013c3bf902",
     "src/jimm/FileBrowser.java": "f77e62881915110eac374cb638afca2a899f8a585c36ded35ad175c4a7f9f34c",
     "src/DrawControls/VirtualList.java": "923dc9975e17a34cb9fb2add8bcbe432a8b22631230997b3430f3e5c464bd9e3"
   },
@@ -13914,7 +13914,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
+          "input_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -27190,7 +27190,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
+        "input_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -54105,7 +54105,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "725fea065254ce772b2686331d5441a5a8cd7799dd12c677de800ccdf1de7bea",
+          "input_sha256": "ba8827a315aaadd059f6f636ed47a2802e37010f0a23fdb643240d4370f353e0",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -67381,7 +67381,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
+        "input_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -94296,7 +94296,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "168716d24cd2407f41f6b6d891cae54cdb5b2c5e56ab4ffb0f22bf73e7a4144a",
+          "input_sha256": "6bd3ea2bce1152f6fa52fa773d116f75ae505fd48936e4edb8ada98011212c1e",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -107572,7 +107572,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
+        "input_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -134487,7 +134487,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "8757d0a5cec6751a4d569a52b46bb915cb1740f6731f3b68bcd35f406a677ab2",
+          "input_sha256": "9a40b9c0fdeb487d4ae9d688ae118b17a55f79b16b3a425a6c7cbba683d15772",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -147763,7 +147763,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
+        "input_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -174678,7 +174678,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "d168f5c187e3f3f6cd678b059f7b0d9f9ad571975ce0b93bed317fd2fc3c67f6",
+          "input_sha256": "4cc4f040e3c6bf074fb7f9e792dda63771e3224fd7e417d5df1322257f6aed75",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -187954,7 +187954,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
+        "input_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -214731,7 +214731,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "035b2ce7f9ec8f27e1ed810dd14a4c0436e01341a072d7f959d919cf253fa618",
+          "input_sha256": "bf67c8469e50a9a46f81e83d80ead963d5f65873126bfdb642b47996e3ebb0c7",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -227936,7 +227936,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
+        "input_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -254148,7 +254148,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "f94aa74b3db1f1457dc70aee06ffdfcd4c622b0e356b9253ece3a6f7c9fffeef",
+          "input_sha256": "4311b6ab7c0ae23188929296a7f3510a2ccc2f196b3ae501b2714c54a39280b3",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -267353,7 +267353,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
+        "input_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -293565,7 +293565,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "85dff6a5c75851a6fef90736f9fa15dbce3877db83b8b6cb8eb4155503812d66",
+          "input_sha256": "da2ca22f63adfb558926ab9fdeb118f4a2294fd25bd9efd5bdd3f71baaf020d7",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -306770,7 +306770,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
+        "input_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -332982,7 +332982,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "0b7a5695c42722d5ba2ad1678449c7bb1525870b59562e195c2868f74c839812",
+          "input_sha256": "b3c87169e6a348bfe340e39f3248a4188c4e35d081990981d4e3d4a21b6f4ba3",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -346187,7 +346187,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
+        "input_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -372399,7 +372399,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "ba1edbaf05c06edf42cf9069597a60c3d7cf7ae8cda0f077d4b0796a31fbf273",
+          "input_sha256": "5067d19abcb68409e0f5bfc1b85e00ce0f6c7a2e5aa0f05e85abc78cd1f0fec0",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -385604,7 +385604,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
+        "input_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -411976,7 +411976,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "e7d169ecb224f99b17b816ce94fae8cea40a67c187af6d41dde4b5330e006729",
+          "input_sha256": "9c44d54e6b143a1bd834dc4e0b6506f67d96770d64f1d954ccd6b9254b63fdc7",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -425288,7 +425288,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
+        "input_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -451742,7 +451742,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "2127989b4eaac16d6cd2221ec7437fae70df039ec4a14e6e1c30de9f8810c599",
+          "input_sha256": "2ccddff458db9e76ad0aa418756981e0bcc090998c97bb5dd7baad430c6e467e",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -465054,7 +465054,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
+        "input_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -491508,7 +491508,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "09faaf99eeb305d4daa6c7793efd638cd92e5c6de48d02d38144d91b743978c3",
+          "input_sha256": "99be901ddd121504422ea350d2a55990cd4490aa56079d0c90ad82f8aca158e9",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -504820,7 +504820,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
+        "input_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -531274,7 +531274,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "a5d334521a6e071a51a5f2dd8c9f33679d0ef5dc6deb7007b13e888924f17476",
+          "input_sha256": "d251b7d29183c1e7045b1342f368abcdd03551c43c46ad7463d02a59e6948a07",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -544586,7 +544586,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
+        "input_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -571040,7 +571040,7 @@
           "mode": "reference"
         },
         {
-          "input_sha256": "e03585f81664e7411598eb047bf44841053d29862bfb29b3ce876b50ed3488a1",
+          "input_sha256": "a7a9e489ab17cf320fd38a547ffe04a37e51598fd5976d2bc9cd0c26697c9bb4",
           "bodies": {
             "import_options": {
               "owner": "jimm/OptionsForm",
@@ -584352,7 +584352,7 @@
         }
       ],
       "raw_RU_evidence": {
-        "input_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
+        "input_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
         "bodies": {
           "import_options": {
             "owner": "jimm/OptionsForm",
@@ -596884,7 +596884,7 @@
         "mode": "reference",
         "owner": "cg",
         "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-        "fixture_sha256": "c28a13d538c8e735e77f888e7b44f4f51a8be77933d41d763718a5bec0b12088",
+        "fixture_sha256": "903fa4310ca46347ceaa041ac27e359a5a2366b9ac4e207202f689b07dd6149e",
         "output_sha256": "c40c8257631f773a40d3cce07c7ad162543ea45a78168c101d46076daf752d6d",
         "whole_subject": {
           "name": "run",
@@ -606658,8 +606658,8 @@
       {
         "mode": "source",
         "owner": "jimm/OptionsForm",
-        "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-        "fixture_sha256": "f05d49ab8a616e69935d18090a51c5c9d444e7788f6c6dc5ff8bd5cfb40db3e5",
+        "input_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+        "fixture_sha256": "9f8a7bcaec1cff1f0094a0a9d6cb2c9e0eae52bcdff378a9876878984fad8c18",
         "output_sha256": "c40c8257631f773a40d3cce07c7ad162543ea45a78168c101d46076daf752d6d",
         "whole_subject": {
           "name": "run",

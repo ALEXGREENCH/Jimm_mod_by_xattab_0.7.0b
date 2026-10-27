@@ -36,7 +36,7 @@
     {
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "be0480bec7ab3ed2a818ea89fe98c01cf634a87f5199c9e2f767866a08cbad5d",
+      "fixture_sha256": "a9f06f54a2e4c3024dbe0df098b74ecf585f6d249c08fda4e6835a354846bf31",
       "inverse_restores_all_dumped_application_members": true,
       "all_other_application_and_resource_entries_exact": true,
       "whole_icq_class": {
@@ -2080,8 +2080,8 @@
     },
     {
       "mode": "raw",
-      "input_sha256": "f2da088602c3f5a48158fa3fc319698b2b329dd643ad0cf984be2ff1e7146464",
-      "fixture_sha256": "a2bc6681d0ffe2936c3d41e50bdcf2eaf8cfcfbf8116e924b5af58e27496d65a",
+      "input_sha256": "0178be333b86be433df7d66ab9b8f3dee2276d1d1df9a5b48ed88ca69bbec9de",
+      "fixture_sha256": "d0ffc487ac351aeca791d1aa976219f3e3ac1a7e566518d3ecc4ba43d95f51b2",
       "inverse_restores_all_dumped_application_members": true,
       "all_other_application_and_resource_entries_exact": true,
       "whole_icq_class": {
@@ -4073,8 +4073,8 @@
     },
     {
       "mode": "optimized",
-      "input_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
-      "fixture_sha256": "faa34ec8080abb1e53231b2cf8819dab2aabfb0c6336fbf1cbe1ee27d1dfdcb0",
+      "input_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
+      "fixture_sha256": "ce9d95629a4deeffda6f7d9c4141e3d87cdb4a270eb08728405f8ba64ee2063a",
       "inverse_restores_all_dumped_application_members": true,
       "all_other_application_and_resource_entries_exact": true,
       "whole_icq_class": {
@@ -5992,7 +5992,7 @@
       "language": "RU",
       "native_owner": "r",
       "native_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "built_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
+      "built_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -6120,7 +6120,7 @@
       "language": "UA",
       "native_owner": "r",
       "native_sha256": "36f78d9a133fb98aedb7f71310d61ad492078b7fd5190a440763d9db46caff29",
-      "built_sha256": "725fea065254ce772b2686331d5441a5a8cd7799dd12c677de800ccdf1de7bea",
+      "built_sha256": "ba8827a315aaadd059f6f636ed47a2802e37010f0a23fdb643240d4370f353e0",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -6248,7 +6248,7 @@
       "language": "RO",
       "native_owner": "r",
       "native_sha256": "2066dd7d928cb842b1090c30d4791a1bd9ca1d46b8721888595b7af23fdf1967",
-      "built_sha256": "168716d24cd2407f41f6b6d891cae54cdb5b2c5e56ab4ffb0f22bf73e7a4144a",
+      "built_sha256": "6bd3ea2bce1152f6fa52fa773d116f75ae505fd48936e4edb8ada98011212c1e",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -6376,7 +6376,7 @@
       "language": "EN",
       "native_owner": "r",
       "native_sha256": "e2396fa40a110cd1b10ba2ae3015b8eaa699b6236012c38645ec32b4792984bb",
-      "built_sha256": "8757d0a5cec6751a4d569a52b46bb915cb1740f6731f3b68bcd35f406a677ab2",
+      "built_sha256": "9a40b9c0fdeb487d4ae9d688ae118b17a55f79b16b3a425a6c7cbba683d15772",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -6504,7 +6504,7 @@
       "language": "CZ",
       "native_owner": "r",
       "native_sha256": "4f1298c2d493119d6d19164ed0d0fd6ba7de8ea84633bae9ef294734ab6d4df9",
-      "built_sha256": "d168f5c187e3f3f6cd678b059f7b0d9f9ad571975ce0b93bed317fd2fc3c67f6",
+      "built_sha256": "4cc4f040e3c6bf074fb7f9e792dda63771e3224fd7e417d5df1322257f6aed75",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -6632,7 +6632,7 @@
       "language": "RU",
       "native_owner": "s",
       "native_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "built_sha256": "035b2ce7f9ec8f27e1ed810dd14a4c0436e01341a072d7f959d919cf253fa618",
+      "built_sha256": "bf67c8469e50a9a46f81e83d80ead963d5f65873126bfdb642b47996e3ebb0c7",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -6760,7 +6760,7 @@
       "language": "UA",
       "native_owner": "s",
       "native_sha256": "c43396a24423f18fc0259a5c3c440f6061ee483d03b5cdfd441e2d187301c850",
-      "built_sha256": "f94aa74b3db1f1457dc70aee06ffdfcd4c622b0e356b9253ece3a6f7c9fffeef",
+      "built_sha256": "4311b6ab7c0ae23188929296a7f3510a2ccc2f196b3ae501b2714c54a39280b3",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -6888,7 +6888,7 @@
       "language": "RO",
       "native_owner": "s",
       "native_sha256": "5138b1d1284f7b6efc0ada20642ed9061b09817968a7aa0e2fbf8bfc28937843",
-      "built_sha256": "85dff6a5c75851a6fef90736f9fa15dbce3877db83b8b6cb8eb4155503812d66",
+      "built_sha256": "da2ca22f63adfb558926ab9fdeb118f4a2294fd25bd9efd5bdd3f71baaf020d7",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -7016,7 +7016,7 @@
       "language": "EN",
       "native_owner": "s",
       "native_sha256": "32c4fd215e0728b6acea8bdd981c97400be5d2f1fdd7d16d9681b4985c7c501d",
-      "built_sha256": "0b7a5695c42722d5ba2ad1678449c7bb1525870b59562e195c2868f74c839812",
+      "built_sha256": "b3c87169e6a348bfe340e39f3248a4188c4e35d081990981d4e3d4a21b6f4ba3",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -7144,7 +7144,7 @@
       "language": "CZ",
       "native_owner": "s",
       "native_sha256": "bfa3c25ef41fa8c7734db2a90bc9723559d745d4e41a3a9aa0232448e65e6947",
-      "built_sha256": "ba1edbaf05c06edf42cf9069597a60c3d7cf7ae8cda0f077d4b0796a31fbf273",
+      "built_sha256": "5067d19abcb68409e0f5bfc1b85e00ce0f6c7a2e5aa0f05e85abc78cd1f0fec0",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -7272,7 +7272,7 @@
       "language": "RU",
       "native_owner": "r",
       "native_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "built_sha256": "e7d169ecb224f99b17b816ce94fae8cea40a67c187af6d41dde4b5330e006729",
+      "built_sha256": "9c44d54e6b143a1bd834dc4e0b6506f67d96770d64f1d954ccd6b9254b63fdc7",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -7400,7 +7400,7 @@
       "language": "UA",
       "native_owner": "r",
       "native_sha256": "a27b36ccc8e7d14e8595d871caa796877394af0ce34aba5717881d0c562f3d68",
-      "built_sha256": "2127989b4eaac16d6cd2221ec7437fae70df039ec4a14e6e1c30de9f8810c599",
+      "built_sha256": "2ccddff458db9e76ad0aa418756981e0bcc090998c97bb5dd7baad430c6e467e",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -7528,7 +7528,7 @@
       "language": "RO",
       "native_owner": "r",
       "native_sha256": "cfc55d26b475765b917d658c4401c92cd56fc37bc2b8a0c3b96dfaece77fe634",
-      "built_sha256": "09faaf99eeb305d4daa6c7793efd638cd92e5c6de48d02d38144d91b743978c3",
+      "built_sha256": "99be901ddd121504422ea350d2a55990cd4490aa56079d0c90ad82f8aca158e9",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -7656,7 +7656,7 @@
       "language": "EN",
       "native_owner": "r",
       "native_sha256": "452ebeb7aa42027207e7c20a30338711e2fc40f07dbfd3ab8a4f4a532e8cae84",
-      "built_sha256": "a5d334521a6e071a51a5f2dd8c9f33679d0ef5dc6deb7007b13e888924f17476",
+      "built_sha256": "d251b7d29183c1e7045b1342f368abcdd03551c43c46ad7463d02a59e6948a07",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -7784,7 +7784,7 @@
       "language": "CZ",
       "native_owner": "r",
       "native_sha256": "cb7dc8e01121cd51be593c407d307896fb8c82411138807f129836da0b83a38d",
-      "built_sha256": "e03585f81664e7411598eb047bf44841053d29862bfb29b3ce876b50ed3488a1",
+      "built_sha256": "a7a9e489ab17cf320fd38a547ffe04a37e51598fd5976d2bc9cd0c26697c9bb4",
       "native_method": {
         "name": "a",
         "desc": "(I)V",
@@ -7910,8 +7910,8 @@
   ],
   "input_sha256": {
     "original": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-    "raw": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-    "delivered": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4"
+    "raw": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+    "delivered": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025"
   },
   "recording_before": false
 }

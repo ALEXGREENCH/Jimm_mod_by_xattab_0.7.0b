@@ -1,8 +1,8 @@
 {
   "scope": "Actual MIDP2 JimmUI selectors/OK/cancel callbacks and partial failures, active tag/index, all 14 status/label/icon tables, cached information list and both formatter overloads with section/index state, real TextList fragments/font/menu/listeners. All controller declarations, instructions, exception handlers and initializers are wholly unchanged in native/raw/optimized hosts. Existing login/date startup boundaries apply. Group-move callbacks deliberately have no contact and exercise their real early null failure rather than network/RMS. No complete controller/startup, arbitrary device rendering or physical device claim.",
   "reference_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-  "source_jar_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
-  "source_unoptimized_class_jar_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
+  "source_jar_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
+  "source_unoptimized_class_jar_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
   "observations": 13416,
   "selector_calls": 864,
   "status_calls": 47,
@@ -14,19 +14,19 @@
     {
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "host_sha256": "64bf4a41f1ca146c75f96c1e1454cc023ed8f327c2c164aeee6cf6d420d50bb2",
+      "host_sha256": "205d985a3da1590e3b0682d251863e419c891cbdbb7b63aafb6b06bd14f7fca9",
       "whole_controller_unchanged": true
     },
     {
       "mode": "source",
-      "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-      "host_sha256": "218314af1e3ce9bebc2d6be83fc0c20863f4186bf61ccd2d9ae1d6df076defa4",
+      "input_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+      "host_sha256": "400967c192023f199c602de94878f1a533350e3a81a0b47697fb9b85f081ef99",
       "whole_controller_unchanged": true
     },
     {
       "mode": "optimized-source",
-      "input_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
-      "host_sha256": "45b00eb87069965ac46b371ce194c6bbc247dc17de204ac6b28a407438747f6b",
+      "input_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
+      "host_sha256": "18913d44855282eac6e856cb0c2ba710639a53f6e5416b02fb2fa1489039be19",
       "whole_controller_unchanged": true
     }
   ]

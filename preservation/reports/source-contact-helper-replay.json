@@ -4,7 +4,7 @@
     {
       "mode": "reference",
       "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "fixture_sha256": "ab87e1d368c7e793cc8fcb1ab969af4ae5d0c196d7eeaa437c4401c901fb1610",
+      "fixture_sha256": "fbb02be501ba2e6b26c0ad5def8db530be4168e4bc085ee2ca1862c4866ee608",
       "output_sha256": "38fd3fcff4ee5b4c82e7feaebb163cf18b88f36cef56cbbd0868372d304bcd7f",
       "observations": 1816,
       "current_complete_helpers_equal_fixture": [
@@ -576,8 +576,8 @@
     },
     {
       "mode": "raw",
-      "input_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-      "fixture_sha256": "04ef54cd6d82b648a90ca9ed1f7fd729394832a5b73e882359d4f0fa3c80b662",
+      "input_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+      "fixture_sha256": "e3d13e09b1953fa142530dfa17e036f11610f023ad8eb79c6bd3405a0c014475",
       "output_sha256": "38fd3fcff4ee5b4c82e7feaebb163cf18b88f36cef56cbbd0868372d304bcd7f",
       "observations": 1816,
       "current_complete_helpers_equal_fixture": [

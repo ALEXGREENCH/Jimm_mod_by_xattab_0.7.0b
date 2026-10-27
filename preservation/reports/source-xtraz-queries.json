@@ -4,8 +4,8 @@
     {
       "target": "MIDP2",
       "native_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-      "raw_sha256": "88805ab3464f0fb2189a21c77b202c85473c3c15345dcc12812a9e16ecbb1d10",
-      "delivered_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
+      "raw_sha256": "f44bb38edeb36bcd0a3cef1b7fab43607ac9035e53b07192d7abb4f6b868b067",
+      "delivered_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
       "proofs": [
         {
           "mode": "reference",
@@ -68,10 +68,18 @@
             "peer": "c"
           },
           "input_sha256": "b57bc429ef0e1e8b5b5d07604622e668a3473bb266a91cb8a8ba0633183ec443",
-          "fixture_sha256": "4fa78c85c640644915988c149e77a98b1a8970f125a92ff395105cc037cf96b2",
+          "fixture_sha256": "4166c4f27d08aa6a0eff1830ca8f714e11774e56037e310e9bf781af222ca3c5",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -2370,11 +2378,19 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "f2da088602c3f5a48158fa3fc319698b2b329dd643ad0cf984be2ff1e7146464",
-          "fixture_sha256": "3f242d1aa1e907e9f390d2c30765479b7f8b1ba38640b80f23d0b73e55a6b874",
+          "input_sha256": "0178be333b86be433df7d66ab9b8f3dee2276d1d1df9a5b48ed88ca69bbec9de",
+          "fixture_sha256": "40aa4a67edb783e4c420c3ac9a81c4b0f2dc3ab0cb24cdae0c5d74671ccc9975",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -3608,11 +3624,19 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "fa20609ce75c0b98de4cb719aa78d472e867e2864f27e14b0fa085ede98b9aa4",
-          "fixture_sha256": "72ae8f0b6710a30fc73fbc3a1f6202aa3f7ec59402338c45d191a5ac918e6751",
+          "input_sha256": "6e32ba2609708765cde7a285f2144e948cf811b3a5d0acc13185be6313e2d025",
+          "fixture_sha256": "72c0d96f7aa5928cbdf1dae38577c64dbf0a0ef4e9ae79c74e71747b910a9ed0",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -6631,13 +6655,14 @@
           ],
           "full_literal_handler_diff": []
         }
-      ]
+      ],
+      "utf8_different_observations": 0
     },
     {
       "target": "MOTOROLA",
       "native_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-      "raw_sha256": "a193a9484bed5b9ac061606be5400b3bb5c6a12b20c74aaa1d349186b82e595d",
-      "delivered_sha256": "035b2ce7f9ec8f27e1ed810dd14a4c0436e01341a072d7f959d919cf253fa618",
+      "raw_sha256": "d575f0a8838a0785d7ac28d1d7bed0e11ab27a11cae77e5c2d62f99b39cce54e",
+      "delivered_sha256": "bf67c8469e50a9a46f81e83d80ead963d5f65873126bfdb642b47996e3ebb0c7",
       "proofs": [
         {
           "mode": "reference",
@@ -6702,10 +6727,18 @@
             "peer": "c"
           },
           "input_sha256": "63f58b14ec5d891175d8f2d7d397fbc9a4f196b1dc2283231880935c27d73dd1",
-          "fixture_sha256": "56e369f050dddbde03f83d241b1810e2b844aef5804877b60dde0fe37a8128e8",
+          "fixture_sha256": "b2b578ed1d60ca2e8e3d055d4cf642b3d968e39a776798d042d55c1dba26af9d",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -8976,11 +9009,19 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "0a35a729afe3f2d49acf515e47cd171bf0f7bf748ee1ad278ad12ac56134934c",
-          "fixture_sha256": "87310680fb44199e076b14ae5a99111558f5bbb53064bc7af7459348895948ed",
+          "input_sha256": "d6d94a062a60d562369af35317f376f7c7d08d29266222c6c9464d7938c182b1",
+          "fixture_sha256": "51cc9e7f4eb3908a9ae889c5dfc668c035450a32d1155bac53251ae7d2e80ac9",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -10194,11 +10235,19 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "035b2ce7f9ec8f27e1ed810dd14a4c0436e01341a072d7f959d919cf253fa618",
-          "fixture_sha256": "fb8edaa25923d7578bc3338b322c7509e45045b21591587f7b2d545afe08b80e",
+          "input_sha256": "bf67c8469e50a9a46f81e83d80ead963d5f65873126bfdb642b47996e3ebb0c7",
+          "fixture_sha256": "fb1d4be77e91488d817316436f89108da18c59ce0b33b78fd0409602e88c0623",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -13181,13 +13230,14 @@
           ],
           "full_literal_handler_diff": []
         }
-      ]
+      ],
+      "utf8_different_observations": 0
     },
     {
       "target": "SIEMENS2",
       "native_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-      "raw_sha256": "2fcc10961af764a0e0d517e82e38c3c00e4b17f3ae939b47fdb9b86c135a8fb9",
-      "delivered_sha256": "e7d169ecb224f99b17b816ce94fae8cea40a67c187af6d41dde4b5330e006729",
+      "raw_sha256": "f2aa7f7dcb8a7765ecec627ef4b2ee84b7753067daf887fd7a547e1050bfa1ee",
+      "delivered_sha256": "9c44d54e6b143a1bd834dc4e0b6506f67d96770d64f1d954ccd6b9254b63fdc7",
       "proofs": [
         {
           "mode": "reference",
@@ -13250,10 +13300,18 @@
             "peer": "c"
           },
           "input_sha256": "6dc68cc4a017eab76e16264e39357a7cf981e85b6b63b8edf9c87d76ee40b6bc",
-          "fixture_sha256": "243dad32e110d58a2a980ac86ac96db84d02b51513c39240f48ad6d59db45023",
+          "fixture_sha256": "e582be31bee3c81f3a50e5d5656e5fd1b955f05cedfc213afd3b640be6133ecd",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -15552,11 +15610,19 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "884712b4414a0b73d0ee88a1bf3e0603fb5322b991c4b92f203a605658c51b0a",
-          "fixture_sha256": "c9d797e6b3cc5911e4a6710504c3dadb73e8799f4944a363de9a926123187e50",
+          "input_sha256": "bf4c2db6041512d5c47cd21761cc6dd60c73cb3ff7452eddb6077ecbd34d7d4c",
+          "fixture_sha256": "9e4932f1791a872c659c0547648dc5c20277c5fc8c346a413820624aa5584847",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -16802,11 +16868,19 @@
             "displayError": "displayMsg",
             "peer": "peer"
           },
-          "input_sha256": "e7d169ecb224f99b17b816ce94fae8cea40a67c187af6d41dde4b5330e006729",
-          "fixture_sha256": "4b7248944b7f107c6e9828810a4558afc8d6451fad5a24e5506d5d7d5cadfbfc",
+          "input_sha256": "9c44d54e6b143a1bd834dc4e0b6506f67d96770d64f1d954ccd6b9254b63fdc7",
+          "fixture_sha256": "56a9223047a72e92ab8e8b32d08fdc78a6d5ac446c328dfc51fb1fe81dbeb065",
           "output_sha256": "5e75fd0893c3c9db9ce19ab65c15b638bda15fb5beff38504f2272fd43629313",
           "observations": 5889,
           "successful_stream_writes": 1988,
+          "jvm_default_encoding": "windows-1251",
+          "utf8_runtime": {
+            "output_sha256": "57975da03aa842dfe494e7fdba60389bd160c1cde5b7a19f888e97737b67c648",
+            "observations": 5889,
+            "cases": 5888,
+            "successful_stream_writes": 2168,
+            "jvm_default_encoding": "UTF-8"
+          },
           "external_clock_instructions_changed": 1,
           "all_other_application_resource_bytes_unchanged": true,
           "whole_subject_and_bindings": {
@@ -19824,7 +19898,16 @@
           ],
           "full_literal_handler_diff": []
         }
-      ]
+      ],
+      "utf8_different_observations": 0
     }
-  ]
+  ],
+  "jvm_encoding_profiles": {
+    "scope": "Each original/raw/delivered artifact executes the same complete request cases in separate fresh JVMs with both windows-1251 and UTF-8 defaults. The legacy malformed non-ASCII UIN path uses unqualified String.getBytes; the actual original therefore has different packet/error outcomes and write counts between these host profiles. No output rows are normalized or removed; the complete traces must match within each encoding.",
+    "observations_per_version_per_encoding": 17667,
+    "expected_successful_writes_per_platform": {
+      "windows-1251": 1988,
+      "UTF-8": 2168
+    }
+  }
 }
