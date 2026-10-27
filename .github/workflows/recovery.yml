@@ -22,11 +22,14 @@ jobs:
       - run: python tools/audit_inheritance.py
       - run: python tools/audit_method_graph.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: maintained-src-may-reconstruction
           path: |
             dist/source/
             preservation/reports/source-tests.json
+            build/source-tests/about-reference.txt
+            build/source-tests/about-source.txt
             preservation/reports/source-bytecode-comparison.json
             preservation/reports/source-method-accounting.json
             preservation/reports/source-menu-reset-before.json
