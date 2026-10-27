@@ -502,6 +502,9 @@ def main(matrix=False, skip_build=False):
         report['packet_parsers_bytecode'] = run([sys.executable, ROOT / 'tools/audit_packet_parsers.py'], 'packet-parsers-bytecode-audit')
         report['auxiliary_helpers_bytecode'] = run([sys.executable, ROOT / 'tools/audit_auxiliary_helpers.py'], 'auxiliary-helpers-bytecode-audit')
         report['auxiliary_helpers_replay'] = run([sys.executable, ROOT / 'tools/replay_auxiliary_helpers.py'], 'auxiliary-helpers-replay-audit')
+        # The platform replay compares its RU traces to this freshly generated catalog.
+        report['xstatus_catalog'] = run([sys.executable, ROOT / 'tools/test_xstatus_catalog.py',
+                                        '--all-languages', '--skip-build'], 'xstatus-catalog-audit')
         report['xstatus_platforms'] = run([sys.executable, ROOT / 'tools/test_xstatus_platforms.py'], 'xstatus-platforms-audit')
         report['xstatus_helpers_bytecode'] = run([sys.executable, ROOT / 'tools/audit_xstatus_helpers.py'], 'xstatus-helpers-bytecode-audit')
         report['exception_constructor_bytecode'] = run([sys.executable, ROOT / 'tools/audit_exception_constructors.py'], 'exception-constructor-bytecode-audit')
@@ -537,9 +540,9 @@ def main(matrix=False, skip_build=False):
     report['request_info_categories'] = run([sys.executable, ROOT / 'tools/test_request_info_categories.py',
                                             *(['--all-languages'] if matrix else []), '--skip-build'],
                                            'request-info-category-audit')
-    report['xstatus_catalog'] = run([sys.executable, ROOT / 'tools/test_xstatus_catalog.py',
-                                   *(['--all-languages'] if matrix else []), '--skip-build'],
-                                  'xstatus-catalog-audit')
+    if not matrix:
+        report['xstatus_catalog'] = run([sys.executable, ROOT / 'tools/test_xstatus_catalog.py',
+                                       '--skip-build'], 'xstatus-catalog-audit')
     report['save_info_locales'] = run([sys.executable, ROOT / 'tools/test_save_info_locales.py',
                                       *(['--all-languages'] if matrix else []), '--skip-build'],
                                      'save-info-locales-audit')
